@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#2f7d59" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="LV3 Trainer" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <title>telc LV3 Trainer</title>
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="./icons/icon-192.png" />
+    <link rel="icon" href="./icons/icon-192.svg" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <p class="eyebrow">telc C1 Hochschule</p>
+          <h1>LV3 Trainer</h1>
+        </div>
+
+        <section class="panel">
+          <div class="panel-title">
+            <span>Teil</span>
+            <button class="ghost-button" id="toggleAllButton" type="button">全选</button>
+          </div>
+          <div class="teil-list" id="teilList"></div>
+        </section>
+
+        <section class="panel controls">
+          <label>
+            <span>Teil 顺序</span>
+            <select id="teilOrder">
+              <option value="sequential">顺序</option>
+              <option value="random">随机</option>
+            </select>
+          </label>
+          <label>
+            <span>组内题目</span>
+            <select id="questionOrder">
+              <option value="sequential">顺序</option>
+              <option value="random">随机</option>
+            </select>
+          </label>
+          <label>
+            <span>轮次</span>
+            <select id="roundMode">
+              <option value="mistakes">错题轮回</option>
+              <option value="single">单轮</option>
+            </select>
+          </label>
+          <button class="primary-button" id="startButton" type="button">开始</button>
+        </section>
+      </aside>
+
+      <section class="practice">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow" id="sessionMode">未开始</p>
+            <h2 id="sessionTitle">选择 Teil 后开始练习</h2>
+          </div>
+          <div class="stats">
+            <div><strong id="roundNumber">0</strong><span>轮</span></div>
+            <div><strong id="progressText">0/0</strong><span>进度</span></div>
+            <div><strong id="mistakeText">0</strong><span>错题</span></div>
+          </div>
+        </header>
+
+        <div class="card-stage">
+          <article class="question-card" id="questionCard">
+            <div class="card-face front-face" id="frontFace">
+              <div class="card-meta">
+                <span id="teilBadge">Teil</span>
+                <span id="questionBadge">Frage</span>
+              </div>
+              <p class="german-question" id="germanQuestion">Bereit.</p>
+              <div class="answer-grid" id="answerGrid"></div>
+            </div>
+
+            <div class="card-face back-face hidden" id="backFace">
+              <div class="result-line" id="resultLine"></div>
+              <dl class="review-grid">
+                <div>
+                  <dt>Antwort</dt>
+                  <dd id="correctAnswer">-</dd>
+                </div>
+                <div>
+                  <dt>Deutsch</dt>
+                  <dd id="reviewGerman">-</dd>
+                </div>
+                <div>
+                  <dt>中文</dt>
+                  <dd id="reviewChinese">-</dd>
+                </div>
+              </dl>
+              <button class="primary-button next-button" id="nextButton" type="button">下一题</button>
+            </div>
+          </article>
+        </div>
+
+        <footer class="round-strip" id="roundStrip"></footer>
+      </section>
+    </main>
+
+    <script src="./data/lv3_questions.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

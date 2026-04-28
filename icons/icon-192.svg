@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 192 192" role="img" aria-label="LV3 Trainer icon">
+  <rect width="192" height="192" rx="42" fill="#2f7d59"/>
+  <rect x="30" y="28" width="132" height="136" rx="18" fill="#f7f4ed"/>
+  <path d="M54 66h84M54 94h84M54 122h52" stroke="#182026" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="130" cy="124" r="18" fill="#2f7d59"/>
+  <path d="M122 124l6 6 13-17" fill="none" stroke="#f7f4ed" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

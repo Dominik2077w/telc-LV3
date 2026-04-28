@@ -1,0 +1,1551 @@
+window.LV3_QUESTIONS = [
+  {
+    "teil": 1,
+    "title": "Mint-Fächer Nachwuchs",
+    "sourceText": "MINT学科（数学、信息、自然科学、技术）后备人才",
+    "questions": [
+      {
+        "number": 13,
+        "text": "die unternehmen richten ihre messe Aktivitäten auf das alleinige Ziel aus Aufträge zu gewinnen. 企业把他们的展会活动仅仅定位在获取订单的目标上。",
+        "answer": "F",
+        "raw": "die unternehmen richten ihre messe Aktivitäten auf das alleinige Ziel aus Aufträge zu gewinnen.(F) 企业把他们的展会活动仅仅定位在获取订单的目标上。"
+      },
+      {
+        "number": 14,
+        "text": "Deutsche Unternehmen können ihren Bedarf an technischen und naturwissenschaftlichen Fachkräften nicht decken. 德国企业无法满足对技术和自然科学专业人才的需求。",
+        "answer": "R",
+        "raw": "Deutsche unternehmen können ihren Bedarf an technischen und naturwissenschaftlichen Fachkräften nichtdecken.(R)德国企业无法满足对技术和自然科学专业人才的需求。",
+        "corrected": true
+      },
+      {
+        "number": 15,
+        "text": "Die Inhalte von Technikstudien sollen stärker an die Bedürfnisse der Wirtschaft angepasst werden.",
+        "answer": "X",
+        "raw": "Die Inhalte von Technikstudien sollen stärker an die Bedürfnisse der Wirtschaft angepasst werden."
+      },
+      {
+        "number": 16,
+        "text": "Die Forderung in Richtung MINT-Fischer beginnnt bereits im Vorschulalter. 针对 MINT 学科的培养早在学龄前阶段就已经开始。",
+        "answer": "R",
+        "raw": "Die Forderung in Richtung MINT-Fischer beginnnt bereits im Vorschulalter. (R)针对 MINT 学科的培养早在学龄前阶段就已经开始。"
+      },
+      {
+        "number": 17,
+        "text": "Für die MINT-Förderung stehen gut genug Gelder bereit.为MINT学科的培养准备的资金是足够的。",
+        "answer": "R",
+        "raw": "Für die MINT-Förderung stehen gut genug Gelder bereit.(R)为MINT学科的培养准备的资金是足够的。"
+      },
+      {
+        "number": 17,
+        "text": "Fur die MINT-Forderung stehen nicht gut genug Gelder bereit.为",
+        "answer": "F",
+        "raw": "Fur die MINT-Forderung stehen nicht gut genug Gelder bereit.(F)为"
+      },
+      {
+        "number": 18,
+        "text": "In der Vergangenheit gab es in weitere Ländern weniger MINT Studierende als in Deutschland.过去在很多国家的MINT专业学生人数比德国还要少。",
+        "answer": "X",
+        "raw": "In der Vergangenheit gab es in weitere Ländern weniger MINT Studierende als in Deutschland.（X）过去在很多国家的MINT专业学生人数比德国还要少。"
+      },
+      {
+        "number": 19,
+        "text": "Die Fördermaßnahmen sind entscheidend für die zunehmende Zahl an MINT-Studierenden.",
+        "answer": "F",
+        "raw": "Die Fördermaßnahmen sind entscheidend für die zunehmende Zahl an MINT-Studierenden."
+      },
+      {
+        "number": 20,
+        "text": "Die Abbruchquote in den MINT-Fächernde soll nicht durch Kurse vor dem Studium gesenkten werden. MINT学科的退学率不应通过入学前课程来降低。",
+        "answer": "F",
+        "raw": "Die Abbruchquote in den MINT-Fächernde soll nicht durch Kurse vor dem Studium gesenkten werden.(F) MINT学科的退学率不应通过入学前课程来降低。"
+      },
+      {
+        "number": 20,
+        "text": "Die Abbruchquote in den MINT-Fächernde soll durch Kurse vor dem Studium gesenkt werden. MINT学科的退学率应通过入学前课程来降低。",
+        "answer": "R",
+        "raw": "Die Abbruchquote in den MINT-Fächernde soll durch Kurse vor dem Studium gesenkt werden.(R) MINT学科的退学率应通过入学前课程来降低。"
+      },
+      {
+        "number": 21,
+        "text": "Höhere Studentenzahlen führen zu einer niedrigeren Zahl von MINT-Lehringe.更多的大学生人数会导致MINT学徒人数的减少。",
+        "answer": "R",
+        "raw": "Höhere Studentenzahlen führen zu einer niedrigeren Zahl von MINT-Lehringe.(R)更多的大学生人数会导致MINT学徒人数的减少。"
+      },
+      {
+        "number": 22,
+        "text": "Höhere Studentenzahlen führen zu einer niedrigeren Zahl von MINT-Azubis.",
+        "answer": "R",
+        "raw": "Höhere Studentenzahlen führen zu einer niedrigeren Zahl von MINT-Azubis."
+      },
+      {
+        "number": 23,
+        "text": "Schulerinnen befinden reges Interesse an den Informationsveranstaltungen der MINT-Initiative. 女学生们对MINT倡议的信息说明会表现出浓厚的兴趣",
+        "answer": "F",
+        "raw": "Schulerinnen befinden reges Interesse an den Informationsveranstaltungen der MINT-Initiative. (F) 女学生们对MINT倡议的信息说明会表现出浓厚的兴趣"
+      },
+      {
+        "number": 24,
+        "text": "Die Zahl die Studienanfängerinnen an technischen Hochschulen hat jene der mannlichen",
+        "answer": "F",
+        "raw": "Die Zahl die Studienanfängerinnen an technischen Hochschulen hat jene der mannlichen"
+      },
+      {
+        "number": 23,
+        "text": "Die Zahl die Studienanfängerinnen an technischen Hochschulen hat jene der mannlichen Anfänger übersritten.在工科类高校里，女新生的人数已经超过了男新生的人数",
+        "answer": "R",
+        "raw": "Die Zahl die Studienanfängerinnen an technischen Hochschulen hat jene der mannlichen Anfänger übersritten.(R)在工科类高校里，女新生的人数已经超过了男新生的人数"
+      },
+      {
+        "number": 24,
+        "text": "Dürftriger Erfolg im Bemühen um technischen Nachwuchs.",
+        "answer": null,
+        "raw": "Dürftriger Erfolg im Bemühen um technischen Nachwuchs."
+      }
+    ]
+  },
+  {
+    "teil": 2,
+    "title": "Zukunftsperspektiven für die Verpackungsindustrie",
+    "sourceText": "Verbraucher erachten sie als selbstverständlich undnehmen sie oft nicht einmal bewusst wahr :die Verpackung . Sie ist aus Kundensicht nicht nur unerlässlich für einen bequemen und sicheren Transport von Waren aller Art, sondern sie ist auch wesentlich an der Kaufentscheidung beteiligt. Im Unterbewusstsein lenkt die Verpackung)namlich unser Kaufverhalten . Die Verpackung ist das Gesicht Produktes .\n\nDoch die Verpackung ist mehr als eine Verkaufshilfe. Sie ist auch ein bedeutender Wirtschaftsfaktor. Im vergangenen Jahr beschäftigte die deutsche Verpackungsindustrie rund 110.000 Personen und erzielte einen Umsatz von 31,8 Milliarden Euro; die Produktionsmenge lag bei ca. 19 Milliarden Tonen. Wie bereits in den Vorjahren stellen Mengenmöglich Verpackungen aus Papier und pappe mit $48\\%$ den größten Anteil. Am umsatzstärksten sind allerdings Kunststoffverpackungen; auf sie entfallen $41\\%$ des Gesamtumsatzes der Branche. Gegenüber dem Vorjahr musste die deutsche Verpackungsindustriezar einen leichten Rückgang hinnehmen, aber Länder wie Indien und China bieten nach Meinung von Experten in denCOMMenden Jahren noch betrachtliches Potenzial fur Marktzuwachse. Andererseits drängt aus diesen Ländern auch Konkurrenz auf die europäischen Märkte. Um im Wettbewerb mit Ländern bestehen zu konnen, in denen Personalkosten niedrig und Rohstoffe im Überfluss vorhanden sind, muss die deutsche Verpackungsindustrie auf Innovation setzen. Sonst drohen hohe Verlust.\n\nZunächst soll hier jedoch an die ursprünglichen Aufgaben einer Verpackung erinnert werden. An erster Stelle ist die Transportmöglichkeit zu nennen. Damit waren zu den Verkaufsstellen gefleiert, Dort präsentiert und vom Endverbraucher mitgenommen werden können, müssen sie in einer angemessenen Verpackung dargeboten werden. Unmittelbar in Zusammenhang damit steht der Schutz des verpackten Produktes. Je nach der Natur des Produktes gibt es eine ganze Reihe von Schutzanforderungen: Schutz vor Verschmutzung, vor Beschaffenheit, vor Sauerstoff oder vor Licht. Die Verpackung übernimmt heute noch eine weitere wichtige Rolle,)namlich jene der Information. Verpackungen liefern eine Fülle von Hinwiesen über die Beschaffenheit des Produktes seinen Verwendungszweck, seine Herkunft, zu Inhaltsstoffen oder\n\nzu möglichen Risiken. Weiterhin dient die Verpackung der Selfstandardstellung von Marken und damit Werbezwecken. Die Art der Verpackung signalisiert Markenwerte zurückhaltend oder betont auffällig, aufwändig oder einfach nur zweckmäßig. Sie transportiert Firmenlogos und sichert den Erkennungswert der Marke.\n\nAll these Funktionen must die Verpackung auch in Zukunft wahrnehmen. Zusätzlich stellen Verbraucher ständig wachsende Anforderung an Hygiene und Qualität. Das Produkt muss frisch sein, natürlich aussehen undarf gleichzeitig keine Krankheitserreger aufwiesen.Die Verpackung selbstarf natürlich auch keine gesundheitsschädlichen Stoffe an das Produkt abgeben.Leider sieht die Wirklichkeit oft anders aus.So waren etwa Mineralole in Schokoladenverpackungen aus Karton gefunden worden. In Lebensmittelverpackungen gelangen Mineralole in der Regel uber Druckfarben, die entweder zum Bedrucken der Verpackung selbst verwendet werden oder direkt im verwendenten Recyclingpapier stecken.Das lieSe sich vermeiden, wenn Papier verwendet wurde,das kein Mineralole enthalt,oder wenn durch Beschichtungen verhindert wurde,dass Mineralole in Lebensmittel gelangen konnen. Diesstellt die Verpackungsindustrie vor große Herausforderungen.Dabei lassen sich zwei wesentliche Gruppen underscheiden: zum einen die Anforderungen an die Verpackungen selbst und zum anderen die Anforderungen an die Unternehmen, die in der Branche tatie sind. Der groBte Trend heiBt eindeutig Nachhaltigkeit. Die Kunden fordern recyclebare Verpackungen, das heiBt\n\nVerpackungen, die nicht beim Konsumenten bleiben, sondern wiederverwertet werden können. Zudem soll die Produktion sparsam im Energieverbrauch sein und soweit wie möglich auf erneuerbare Rohstoffe setzen. Auch die Einhaltung sozialer Standards bei der Herstellung ist weitere Kunden ein Anliegen. Neue Verpackungen sollen also den Anforderungen und Bedürfnissen der Konsumenten entsprechchen und damit Umweltverschmutzung und Abfall vermeiden, dass sie wirtschaftlich vernünftig bleiben müssen, versteht sich von selbst. Das bedeutet für die Verpackungsindustrie, dass sie biologisch abbaubare oder wiederverwertbare Materialien und eine Optimierung der Herstellungsvprozesse in den Mittelpunkt ihrer Forschungen und Anstrengungen setzen muss.\n\nSolange Kunststoffe auf der Basis von Rohöl nach nicht durch Materialien aus nachwachsenden Rohstoffen ersetzt werden konnen, müssen sie so effizient wie möglich eingesetzt werden. Um weniger Material zu verbrauchen, werden immer dunnere Folien entwickelt, was letztlich Verpackungsmaterial spart. Neue Innenbeschichtungen verhindern das Anhaften, ermöglich ein nahezu restloses Ausleeren der Verpackungen und spare Ressourcen.\n\nDie Verpackung der Zukunft soll jedoch nicht nur sparsam und nachhaltig sein, sondern auch neue Funktionen übernehmen. Die Hälfte alter Kunststoffverpackungen sind Lebensmittelverpackungen. In thisem Bereich wird intensiv an innovativen Produkten geforscht. Folien werden mit speziellen Eigenschaften ausgetestet, um zum Beispiel den Eintritt von Sauerstoff oder Wasserdampf zu blockieren. Aktive Verpackungen sind in der Lage, bestimmte Substanzen, die aus dem Lebensmittel entweichen, aufzunehmen, um die um die Haltbarkeit des Lebensmittels zu verlangern. Künftig wird es auch Folien geben, die anzeigen, ob das Produkt noch genießbar oder bereits verdorben ist. Weit genauer als das bisherige Mindesthaltbarkeitsdatum. Schon jetzt gibt es Bereich genutzt werden. In dem der Innovationsdruck besonderes groß ist: für den Fertiggerichte.\n\nInnovationen gibt es nicht nur in Bezug Bequemlichkeit und Funktionalität. Auch emotional soll die Verpackung den Kunden anspruchen, und zwar über möglichst weitere Sinne. Nicht nur das\n\nSehnen, sondern auch der Tastsinn ist durch besondere Effekte beim Anfassen an der Wahrnehmung des Produktes beseiligt. Den Geruchssinn sprechen Duftetiketten an, die es bereits, wennleich nicht unumstritten, am Markt gibt.Die Verpackung kann sich)sogar an das Gehör wenden: Letztes Jahr wurde von der internationalen Vereinigung von Verpackungsinstituten und verbänden eine sprechende Verpackung ausgezeichnet. Halt der Kunde einen der besonderen Stift an eine bestimmte Stelle der Verpackung, wird die Sprachausgabe gestartet, über die der Verbraucher Informationen zum Produkt besteht. Für Kunden mit eingeschränkter Sehfähigkeit ware dies eine große Hilfe. Nur der Geschmackssinn bleibt noch außer vor.\n\nVerbraucherinformation ist ein weiterer Aspect, der die Verpackungsindustrie vor neue Herausforderungen stellt. Der Gesetzgeber hat nicht nur genau festgelegt, was alles auf dem Etikett stehen muss, sondern auch, wie groß die Buchstaben sein mussen. Auch in dieser Hinsicht gibt es neue Entwicklungen. Ein System, das kürzlich auf der internationalen Verpackungsmesse in Tokio vorgestellt wurde, besteht aus zwei Etiketten. Wenn man das äußere Etikett dreht, erscheint ein durchsichtigiges Fenster, durch das man die Beschriftung des inneren Etikettslesen kann. So wird die für Informationen verfügbar flächte fest verdoppelt. Die Verpackungsindustrie sieht sich also mit zunehmenden Forderungen nach erweiterter Funktionalität und besserer Umweltverträglichkeit der Verpackung konfrontiert. Die Unternehmen müssen sich noch weiteren Herausforderungen stellen. Flexibilität ist hier ein wichtiges Schlagwort. In der Verpackungsindustrie sind relativ large Lieferzeiten üblich. Diese Lieferzeiten beschranken den wirsamen Einsatz der Verpackung als Werbeinstrument. Die Unternehmen müssen für anpassungsfähige Produktionsprozesse sorgen, damit sie zum Beispiel im Rahmen von Sonderaktionen rasch keine Mengen neuer Verpackungen liefern können. Die Branche ist also ein spannendes Tätigheitsfeld: Die Herausforderung besteht darin, umfassenden Produktschutz, Umweltverträglichkeit, Wirtschaftlichkeit, Verbraucherinformation und zdqimmer ein überzeugendes Marketing in der Verpackung der Zukunft zu vereinen.",
+    "questions": [
+      {
+        "number": 13,
+        "text": "Konsumenten nehmen Verpackungen als gegeben hin. 消费者把包装视为理所当然。",
+        "answer": "R",
+        "raw": "KonsumentennehmenVerpackungenalsgegebenbin(R)消费者把包装视为理所当然。",
+        "corrected": true
+      },
+      {
+        "number": 13,
+        "text": "Konsumenten machen sich weniger Gedanken über Verpackungen. 消费者很少会去思考包装的问题。",
+        "answer": "R",
+        "raw": "Konsumen machen sich weniger Gedanken über Verpackungen(R)消费者很少会去思考包装的问题。",
+        "corrected": true
+      },
+      {
+        "number": 14,
+        "text": "Der Umsatz der deutschen Verpackungsindustrie ist bei Papier- und Pappverpackungen am höchsten. 德国包装行业的营业额在纸和纸板包装领域最高。",
+        "answer": "F",
+        "raw": "Der Umsatz deutschen Verpackungsindustrie ist bei Papier und Pappverpackungen am hochsten.(F)德国包装行业的营业额在纸和纸板包装领域最高。",
+        "corrected": true
+      },
+      {
+        "number": 15,
+        "text": "Die Konkurrenz aus Niedriglohnländern bescherte der Verpackungsindustrie milliardenschwere Einbußen. 来自低工资国家的竞争给包装行业带来了数十亿的损失。",
+        "answer": "F",
+        "raw": "Die Konkurrenz aus Niedriglohnlander bescherte der Verpackungsindustriemilliardenschwere Einbußen. (F)来自低工资国家的竞争给包装行业带来了数十亿的损失。",
+        "corrected": true
+      },
+      {
+        "number": 16,
+        "text": "Verpackungen dienen ursprünglich dem Schutz vor Verschmutzung. 包装最初的用途是防止污染。",
+        "answer": "R",
+        "raw": "Verpackungen dieren Ursprünglich dem Schutz vor Verschmutzung. (R)包装最初的用途是防止污染。",
+        "corrected": true
+      },
+      {
+        "number": 17,
+        "text": "Am Anfang sollen Verpackungen es ermöglichen, dass Waren gut befördert werden konnten. 起初，包装应当能使货物得到良好运输。",
+        "answer": "R",
+        "raw": "Am Anfang sollen Verpackungen es ermöglich, dass Waren gut befindert werden konnten. (R) 起初，包装应当能使货物得到良好运输。",
+        "corrected": true
+      },
+      {
+        "number": 17,
+        "text": "Verbraucherverbände warnen vor Mineralöl in Verpackungen. 消费者协会警告包装中含有矿物油。",
+        "answer": "X",
+        "raw": "Verbraucherverbände warnen vor Mineralöl in Verpackungen.(x)消费者协会警告包装中含有矿物油。",
+        "corrected": true
+      },
+      {
+        "number": 17,
+        "text": "Verbraucherverbände lassen regelmäßig den Mineralölgehalt in Verpackungen untersuchen. 消费者协会定期让人检测包装中的矿物油含量。",
+        "answer": "X",
+        "raw": "Verbraucherverbände setzen regelmäßig den Mineralölgehalt in Verpackungen untersuchen.",
+        "corrected": true
+      },
+      {
+        "number": 18,
+        "text": "Die Verpackungsindustrie muss in Zukunft die Forschung in den Mittelpunkt stellen. 包装行业今后必须把研究置于核心位置。",
+        "answer": "F",
+        "raw": "Verpackungsindustrie muss in Zukunft die Forschung in den Mittelpunkt stellen. (F)包装行业今后必须把研究置于核心位置。",
+        "corrected": true
+      },
+      {
+        "number": 18,
+        "text": "Die neu entwickelten ökologischen Materialien schnitten bei Verbraucherumfragen nicht gut ab. 新开发的环保材料在消费者调查中表现不佳。",
+        "answer": "F",
+        "raw": "Die neuen entwickelten ökologischen Materialien schritten bei Verbraucherumfragen nicht gut ab. (F) 新开发的环保材料在消费者调查中表现不佳。",
+        "corrected": true
+      },
+      {
+        "number": 19,
+        "text": "Immer mehr Forscher versuchen, als Alternative zu Plastik Biokunststoffe zu entwickeln. 越来越多的研究人员试图把生物塑料作为塑料的替代品来开发。",
+        "answer": "X",
+        "raw": "Immer mehr Forscher versuchen als Alternative zu Plastik BioKunststoffe zuentwickeln.(X)越来越多的研究人员试图把生物塑料作为塑料的替代品来开发。",
+        "corrected": true
+      },
+      {
+        "number": 20,
+        "text": "Innovative Lebensmittelverpackungen werden die Angabe des Mindesthaltbarkeitsdatums überflüssig machen. 创新的食品包装将使标注最低保质期变得不再必要。",
+        "answer": "F",
+        "raw": "Innovation Lebensmittelverpackungen werden die Angabe des Mindesthaltbarkeitsdatumss überflüssig machen.(F)创新的食品包装将使标注最低保质期变得不再必要。",
+        "corrected": true
+      },
+      {
+        "number": 20,
+        "text": "Innovative Lebensmittelverpackungen werden künftig Auskunft darüber geben, ob ein Produkt schon verdorben ist. 创新的食品包装今后将能告知某产品是否已经变质。",
+        "answer": "R",
+        "raw": "Innovative Lebensmittelverpackungen werden künftig Auskunft darüber geben, ob ein Produkt schon verdorben ist. (R)创新的食品包装今后将能告知某产品是否已经变质。",
+        "corrected": true
+      },
+      {
+        "number": 21,
+        "text": "Um für die Konsumenten attraktiv zu sein, sprechen Verpackungen schon heute alle fünf Sinne an. 为了对消费者有吸引力，包装在今天就已经能调动五种感官。",
+        "answer": "F",
+        "raw": "Um für die Konsumten attraktiv zu sein, sprechen Verpackungen schon heute alle fünf Sinne an. (F) 为了对消费者有吸引力，包装在今天就已经能调动五种感官。",
+        "corrected": true
+      },
+      {
+        "number": 22,
+        "text": "Verbraucherinformationen brauchen in Zukunft fast doppelt so viel Platz auf der Verpackung. 将来包装上的消费信息几乎需要两倍的空间。",
+        "answer": "F",
+        "raw": "Verbraucherinformationen brauchen in Zukunft fast doppeltso viel Platz auf der Verpackung (F)将来包装会为消费信息提供两倍的空间。",
+        "corrected": true
+      },
+      {
+        "number": 22,
+        "text": "Verpackungen bieten in Zukunft zweimal so viel Platz für Konsumenteninformationen. 将来包装会为消费信息提供两倍的空间。",
+        "answer": "R",
+        "raw": "Verpackungenieten in Zukunft zweimal so viel Platz für Konsuminformationen. (R) 将来包装会为消费信息提供两倍的空间。",
+        "corrected": true
+      },
+      {
+        "number": 23,
+        "text": "Die Unternehmen müssen sich an kurzfristigen Bedarf anpassen. 企业必须适应短期需求。",
+        "answer": "R",
+        "raw": "Die Unternehmen müssen an kurzfristigen Bedarf anpassen.(R)企业必须适应短期需求。",
+        "corrected": true
+      },
+      {
+        "number": 23,
+        "text": "Die Unternehmen der Verpackungsindustrie müssen ihre Produktion besser an den kurzfristigen Bedarf anpassen. 包装行业的企业必须把生产更好地调整到短期需求上。",
+        "answer": "R",
+        "raw": "Die Unternehmen der Verpackungsindustrie müssen ihre Produktion better an den kurzfristigen Bedarf anpassen. (R)包装行业的企业必须把生产更好地调整到短期需求上。",
+        "corrected": true
+      },
+      {
+        "number": 24,
+        "text": "Zukunftsperspektiven für die Verpackungsindustrie. 包装行业的未来前景。",
+        "answer": "C",
+        "raw": "Zukunftsperspektiven fur die Verpackungsindustrie. (C)包装行业的未来前景。",
+        "corrected": true
+      }
+    ]
+  },
+  {
+    "teil": 3,
+    "title": "Essen in der Mensa",
+    "sourceText": "",
+    "questions": [
+      {
+        "number": 13,
+        "text": "eine College studenten sind mit dem Essensangebot nicht zufrieden",
+        "answer": "R",
+        "raw": "eine College studenten sind mit dem Essensangebot nicht zufrieden (R)"
+      },
+      {
+        "number": 14,
+        "text": "Es wird immer erst kurzfristig entschieden, welche Gerichte die Mensa anbiete.",
+        "answer": "F",
+        "raw": "Es wird immer erst kurzfristig entschieden, welche Gerichte die Mensa anbiete. (F)"
+      },
+      {
+        "number": 15,
+        "text": "Auch das Studienfach gibt Aufschluss über die bevorzugten Gerichte.",
+        "answer": "R",
+        "raw": "Auch das Studienfach gibt Aufschluss über die bevorzugten Gerichte. (R)"
+      },
+      {
+        "number": 16,
+        "text": "Die Mitarbeiter der Mensa rechnen selbst aus, wie viel sie von jedem Lebensmittel bestellen müssen.",
+        "answer": "F",
+        "raw": "Die Mitarbeiter der Mensa rechnen selbst aus, wie viel sie von jedem lebensmittelbestellen müssen.(F)",
+        "corrected": true
+      },
+      {
+        "number": 17,
+        "text": "Zulieferer von Lebensmittel werden sporadisch überprüf.",
+        "answer": "F",
+        "raw": "Zulieferer von Lebensmittel werden sporadisch überprüf.(F)"
+      },
+      {
+        "number": 17,
+        "text": "Zulieferer von Lebensmittel werden gelegentlich überprüf.",
+        "answer": "F",
+        "raw": "Zulieferer von Lebensmittel werden gelegentlich überprüf.(F)"
+      },
+      {
+        "number": 18,
+        "text": "alle Produkte können in der unmittelbaren Umgebung gekauft werden.",
+        "answer": "F",
+        "raw": "alle Produkte können in der unmittelbaren Umgebung gekauft werden.(F)"
+      },
+      {
+        "number": 18,
+        "text": "nicht alle Produkte konnen in der unmittelbaren Umgebung gekauft werden.",
+        "answer": "R",
+        "raw": "nicht alle Produkte konnen in der unmittelbaren Umgebung gekauft werden.(R)"
+      },
+      {
+        "number": 19,
+        "text": "die Bedeutung von Bio-Baumann als Mensa Lieferanten wachst.",
+        "answer": "X",
+        "raw": "die Bedeutung von Bio-Baumann als Mensa Lieferanten wachst.(X)"
+      },
+      {
+        "number": 20,
+        "text": "Die Mensa der Universität Hamburg wird mit Zuschüssen Unterstützung.",
+        "answer": "R",
+        "raw": "Die Mensa der Universität Hamburg wird mit Zuschüssen Unterstützung. (R)"
+      },
+      {
+        "number": 21,
+        "text": "Studierenden ist in der Regel klar, dass die Zusammensetzung der Mahlzeit in der Mensa genaudurchdacht ist.",
+        "answer": "F",
+        "raw": "Studierenden ist in der Regel klar, dass die Zusammensetzung der Mahlzeit in der Mensa genaudurchdacht ist.(F)"
+      },
+      {
+        "number": 22,
+        "text": "Die deutsche Gesellschaft für Ernährung schreiben, aus welchen Lebensmitteln ein Mensa-Essen",
+        "answer": "F",
+        "raw": "Die deutsche Gesellschaft für Ernährung schreiben, aus welchen Lebensmitteln ein Mensa-Essen"
+      },
+      {
+        "number": 23,
+        "text": "Koche in einer Mensa müssen flexibler sein als in einem Restaurant.",
+        "answer": "X",
+        "raw": "Koche in einer Mensa müssen flexibler sein als in einem Restaurant. (X)"
+      },
+      {
+        "number": 24,
+        "text": "wider die Currywurst-uni-Mensch setzen auf Qualität.",
+        "answer": "C",
+        "raw": "wider die Currywurst-uni-Mensch setzen auf Qualität. (C)"
+      }
+    ]
+  },
+  {
+    "teil": 4,
+    "title": "Johan Friedrich oder Gold",
+    "sourceText": "",
+    "questions": [
+      {
+        "number": 13,
+        "text": "Johann Friedrich Böttger tauschte bei einem Auftritt vor, aus Silber Gold erzeugen zu können.",
+        "answer": "R",
+        "raw": "Johann Friedrich Böttger tauschte bei einem Auftritt vor, aus Silber Gold erzeugen zu können. (R)"
+      },
+      {
+        "number": 14,
+        "text": "Unter Arrest wurde Böttger zur Erforschung der Goldherstellung gezwungen.",
+        "answer": "X",
+        "raw": "Unter Arrest wurde Böttger zur Erforschung der Goldherstellung gezwungen. (x)"
+      },
+      {
+        "number": 15,
+        "text": "Böttger genoss einen ausschweifenden Lebensstil auf Kosten des Herrschers.",
+        "answer": "R",
+        "raw": "Böttger genoss einen ausschweifenden Lebensstil auf Kosten des Herrschers.(R)"
+      },
+      {
+        "number": 16,
+        "text": "Asiatisches Porzellan war als Statussymbol bei europäischen Adeligen sehr begehrt.",
+        "answer": "R",
+        "raw": "Asiatisches Porzellan war als Statussymbol bei europäischen Adeligen sehr begehrt.(R)"
+      },
+      {
+        "number": 17,
+        "text": "Die Qualität des europäischen Porzellans reichte nicht an die asiatisches Porzellans heran.",
+        "answer": "F",
+        "raw": "Die Qualität des europäischen Porzellans reichte nicht an die asiatisches Porzellans heran. (F)"
+      },
+      {
+        "number": 18,
+        "text": "August der Starke hoffte darauf, sein Reich durch die Herstellung von Porzellan sanieren zu küssen.",
+        "answer": "R",
+        "raw": "August der Starke hoffte darauf, sein Reich durch die Herstellung von Porzellan sanieren zu küssen. (R)"
+      },
+      {
+        "number": 19,
+        "text": "1703 wurde Böttger auf der Flucht in Prag aufgegriffen und darüber in der Kerker gebracht.",
+        "answer": "X",
+        "raw": "1703 wurde Böttger auf der Flucht in Prag aufgegriffen und darüber in der Kerker gebracht. (X)"
+      },
+      {
+        "number": 20,
+        "text": "Schließlich luftete Böttger im Alleingang das Geheimnis der Porzellanherstellung.",
+        "answer": "F",
+        "raw": "Schließlich luftete Böttger im Alleingang das Geheimnis der Porzellanherstellung. (F)"
+      },
+      {
+        "number": 21,
+        "text": "Zeitweise wurden die Forschungen in getrennten Laboren durchgeführrt.",
+        "answer": "R",
+        "raw": "Zeitweise wurden die Forschungen in getrennten Laboren durchgeführrt. Richtig (R)"
+      },
+      {
+        "number": 22,
+        "text": "Um das Geheimnis der Porzellanherstellung zu schützen, blieb Böttger bis an sein Lebensende an Sachsen gebunden.",
+        "answer": "R",
+        "raw": "Um das Geheimnis der Porzellanherstellung zu schützen, blieb Böttger bis an sein Lebensende an Sachsen gebunden. Richtig (R)"
+      },
+      {
+        "number": 23,
+        "text": "Böttger hatte seine Gesundheit durch seine Experimente mit chemischen Substanzen ruiniert..",
+        "answer": "R",
+        "raw": "Böttger hatte seine Gesundheit durch seine Experimente mit chemischen Substanzen ruiniert. Richtig. (R)"
+      },
+      {
+        "number": 24,
+        "text": "Drei Männer und das weiße Gold.",
+        "answer": "B",
+        "raw": "Drei Männer und das weiße Gold. B"
+      }
+    ]
+  },
+  {
+    "teil": 5,
+    "title": "Sabbatical",
+    "sourceText": "",
+    "questions": [
+      {
+        "number": 13,
+        "text": "In Deutschland stehen die meisten große Firmen dem Sabbatjahr eindeutig positiv gegenüber",
+        "answer": "F",
+        "raw": "In Deutschland stehen die meisten große Firmen dem Sabbatjahr eindeutig positiv gegenüber (F)"
+      },
+      {
+        "number": 14,
+        "text": "Häufig feht es den Angestellten an Mut, um eine Auszeit in die Tat umzusetzen.",
+        "answer": "R",
+        "raw": "Häufig feht es den Angestellten an Mut, um eine Auszeit in die Tat umzusetzen. (R)"
+      },
+      {
+        "number": 15,
+        "text": "Für Frau Pavlovsky stand jahrelang die Arbeit eindeutig Vordergrund.",
+        "answer": "F",
+        "raw": "Für Frau Pavlovsky stand jahrelang die Arbeit eindeutig Vordergrund. (F)"
+      },
+      {
+        "number": 16,
+        "text": "Frau Pavlovsky Kinderdorf-Aktion wurde finanziell von ihrer Firma unterstützt.",
+        "answer": "R",
+        "raw": "Frau Pavlovsky Kinderdorf-Aktion wurde finanziell von ihrer Firma unterstützt. (R)"
+      },
+      {
+        "number": 17,
+        "text": "Während der zweijährigen Auszeit lernerte Frau Pavlovsky, Prioritäten zu setzen.",
+        "answer": "R",
+        "raw": "Während der zweijährigen Auszeit lernerte Frau Pavlovsky, Prioritäten zu setzen. (R)"
+      },
+      {
+        "number": 18,
+        "text": "Florian Maeder sammelte in Uganda Material für einen Dokumentarfilm.",
+        "answer": "X",
+        "raw": "Florian Maeder sammelte in Uganda Material für einen Dokumentarfilm. (X)"
+      },
+      {
+        "number": 19,
+        "text": "Wegen des dachten Arbeitsprogramms belieb Florian Maeder bei dem indischen Schulprojekt zu weniger Zeit für Besichtigungen.",
+        "answer": "F",
+        "raw": "Wegen des dachten Arbeitsprogramms belieb Florian Maeder bei dem indischen Schulprojekt zu weniger Zeit für Besichtigungen. (F)"
+      },
+      {
+        "number": 20,
+        "text": "Beruflich hat Florian Maeder die Auszeit keineswegs geschadet.",
+        "answer": "R",
+        "raw": "Beruflich hat Florian Maeder die Auszeit keineswegs geschadet. (R)"
+      },
+      {
+        "number": 21,
+        "text": "Florian Maeder hat seine Vorhaben für ein weiteres Sabbatjahr schon mit seinem Arbeitgeber besprochen.",
+        "answer": "X",
+        "raw": "Florian Maeder hat seine Vorhaben für ein weiteres Sabbatjahr schon mit seinem Arbeitgeber besprochen.(X)"
+      },
+      {
+        "number": 22,
+        "text": "Nesrins Kinder gehen die Pläne ihrer Mutter mit gemischten Gefühlen auf.",
+        "answer": "R",
+        "raw": "Nesrins Kinder gehen die Pläne ihrer Mutter mit gemischten Gefühlen auf. (R)"
+      },
+      {
+        "number": 23,
+        "text": "Um ihre Auszeit zu finanzierten, musste Nestrin Yilmaz auf ihre Erspannisse zurückgreifen.",
+        "answer": "R",
+        "raw": "Um ihre Auszeit zu finanzierten, musste Nestrin Yilmaz auf ihre Erspannisse zurückgreifen.(R)"
+      },
+      {
+        "number": 24,
+        "text": "Sabbatical - Karriereknick oder Bereicherung?",
+        "answer": "C",
+        "raw": "Sabbatical - Karriereknick oder Bereicherung? C"
+      }
+    ]
+  },
+  {
+    "teil": 6,
+    "title": "Auswanderung arzten nach Schweden / Schweden umwerbt arztze",
+    "sourceText": "",
+    "questions": [
+      {
+        "number": 13,
+        "text": "Bei der Veranstaltung in Berliner Hotel werden Ärzte für ganz Schweden gemacht.",
+        "answer": "F",
+        "raw": "Bei der Veranstaltung in Berliner Hotel werden Ärzte für ganz Schweden gemacht.(F)"
+      },
+      {
+        "number": 14,
+        "text": "Hans Joachim Raubold ist fest zur Auswandering entschlossen.",
+        "answer": "R",
+        "raw": "Hans Joachim Raubold ist fest zur Auswandering entschlossen.(R)"
+      },
+      {
+        "number": 15,
+        "text": "Ärzte sind in Schweden im Durchschnitt wesentlich jünger als in Deutschland.",
+        "answer": "F",
+        "raw": "Ärzte sind in Schweden im Durchschnitt wesentlich jünger als in Deutschland.(F)"
+      },
+      {
+        "number": 15,
+        "text": "Niedriger Alter in Schweden ist eine Voraussetzung für Einstellung",
+        "answer": "F",
+        "raw": "Niedriger Alter in Schweden ist eine Voraussetzung für Einstellung (F)"
+      },
+      {
+        "number": 16,
+        "text": "In Schweden studieren heute mehr Menschen Medizin als früher.",
+        "answer": "X",
+        "raw": "In Schweden studieren heute mehr Menschen Medizin als früher.(X)"
+      },
+      {
+        "number": 17,
+        "text": "Da weitere Ärzte in Schweden bald In den Ruhestand gehen, besteht man Dort meinsten neue Ärzte.",
+        "answer": "R",
+        "raw": "Da weitere Ärzte in Schweden bald In den Ruhestand gehen, besteht man Dort meinsten neue Ärzte. (R)"
+      },
+      {
+        "number": 18,
+        "text": "In Deutschland ist alle teurer als In Schweden.",
+        "answer": "F",
+        "raw": "In Deutschland ist alle teurer als In Schweden.(F)"
+      },
+      {
+        "number": 18,
+        "text": "In Schweden ist alles teurer als In Deutschland.",
+        "answer": "F",
+        "raw": "In Schweden ist alles teurer als In Deutschland.(F)"
+      },
+      {
+        "number": 19,
+        "text": "In Deutschland ist es Assistenzärzte schwierig, eine familienfreundliche Stelle zu finden.",
+        "answer": "R",
+        "raw": "In Deutschland ist es Assistenzärzte schwierig, eine familienfreundliche Stelle zu finden. (R)"
+      },
+      {
+        "number": 20,
+        "text": "Ärzte sind In Schweden wie in Deutschland überwiegend selbstständig.",
+        "answer": "F",
+        "raw": "Ärzte sind In Schweden wie in Deutschland überwiegend selbstständig.(F)"
+      },
+      {
+        "number": 21,
+        "text": "Manche deutschen Ärzte betonen die Vorteile des Angestelltenverhältnisses.",
+        "answer": "R",
+        "raw": "Manche deutschen Ärzte betonen die Vorteile des Angestelltenverhältnisses. (R)"
+      },
+      {
+        "number": 22,
+        "text": "Die Patienten sind in Schweden zufriedener mit den Arzten als in Deutschland.",
+        "answer": "X",
+        "raw": "Die Patienten sind in Schweden zufriedener mit den Arzten als in Deutschland.(X)"
+      },
+      {
+        "number": 23,
+        "text": "In manchen Regionen muss man die Kosten für den schwedischen Kurs zusückzahlen, wenn man in Schweden bleibt.",
+        "answer": "F",
+        "raw": "In manchen Regionen muss man die Kosten für den schwedischen Kurs zusückzahlen, wenn man in Schweden bleibt. (F)"
+      },
+      {
+        "number": 23,
+        "text": "In manchen Regionen muss man die Kosten für den schwedischen Kurs zurückzahlen, wenn man nicht in Schweden bleibt.",
+        "answer": "R",
+        "raw": "In manchen Regionen muss man die Kosten für den schwedischen Kurs zurückzahlen, wenn man nicht in Schweden bleibt.(R)"
+      },
+      {
+        "number": 24,
+        "text": "Schweden umwirbt deutsche Ärzte.",
+        "answer": "C",
+        "raw": "Schweden umwirbt deutsche Ärzte. (C)"
+      },
+      {
+        "number": 24,
+        "text": "Schweden bemührt sich deutsche Ärzte... (C.)",
+        "answer": "C",
+        "raw": "Schweden bemührt sich deutsche Ärzte... (C.)"
+      }
+    ]
+  },
+  {
+    "teil": 7,
+    "title": "Mehrsprachigkeit",
+    "sourceText": "",
+    "questions": [
+      {
+        "number": 13,
+        "text": "Ursprünglich gründet Dina Chubukova die Kita, um Kinder mit Sprachentwicklungsstörungen zu fordern.",
+        "answer": "F",
+        "raw": "Ursprünglich gründet Dina Chubukova die Kita, um Kinder mit Sprachentwicklungsstörungen zu fordern. (F)"
+      },
+      {
+        "number": 14,
+        "text": "Einige Wissenschaftler vermuten. Dass Mehrsprachigkeit)sogar vor etlichen Erkrankungen schützen konnte.",
+        "answer": "F",
+        "raw": "Einige Wissenschaftler vermuten. Dass Mehrsprachigkeit)sogar vor etlichen Erkrankungen schützen konnte. (F)"
+      },
+      {
+        "number": 15,
+        "text": "Der Prozess des Spracherwerbs kann gestört werden, wenn die Umgebung besides die Schule dem Kind eine Zweitsprache aufzwingt.",
+        "answer": "X",
+        "raw": "Der Prozess des Spracherwerbs kann gestört werden, wenn die Umgebung besides die Schule dem Kind eine Zweitsprache aufzwingt. (X)"
+      },
+      {
+        "number": 16,
+        "text": "Mehrsprachigkeit wird von der Gesellschaft auch heute zum Teil noch kritisch beurteilt.",
+        "answer": "R",
+        "raw": "Mehrsprachigkeit wird von der Gesellschaft auch heute zum Teil noch kritisch beurteilt. (R)"
+      },
+      {
+        "number": 17,
+        "text": "Die durch die Migration entwickelte Mehrsprachigkeit beeinflusst auch die Entwicklung der deutschen Sprache.",
+        "answer": "X",
+        "raw": "Die durch die Migration entwickelte Mehrsprachigkeit beeinflusst auch die Entwicklung der deutschen Sprache. (X)"
+      },
+      {
+        "number": 18,
+        "text": "Die optimale Phase für den natürlichen Spracherwerb ist länger als bislang geglaubt.",
+        "answer": "F",
+        "raw": "Die optimale Phase für den natürlichen Spracherwerb ist länger als bislang geglaubt. (F)"
+      },
+      {
+        "number": 19,
+        "text": "Verglichen mit einsprachigen ABC- Schützen verfügen mehrsprachige Schulkinder vorübergehend über einen geringeren Wortschatz in den jeweiligen Sprachen.",
+        "answer": "R",
+        "raw": "Verglichen mit einsprachigen ABC- Schützen verfügen mehrsprachige Schulkinder vorübergehend über einen geringeren Wortschatz in den jeweiligen Sprachen. (R)"
+      },
+      {
+        "number": 20,
+        "text": "Die Befürchtung mehrsprachiger Unterricht wurde die Deutschkenntnisse beeinträchtigen, wird von der Forschung nicht bestätigt.",
+        "answer": "R",
+        "raw": "Die Befürchtung mehrsprachiger Unterricht wurde die Deutschkenntnisse beeinträchtigen, wird von der Forschung nicht bestätigt. (R)"
+      },
+      {
+        "number": 21,
+        "text": "Die Desi-Studie belegt, dass sich zweisprachige Kinder eine weitere Sprache auffallend mühelos aneignen.",
+        "answer": "R",
+        "raw": "Die Desi-Studie belegt, dass sich zweisprachige Kinder eine weitere Sprache auffallend mühelos aneignen. (R)"
+      },
+      {
+        "number": 22,
+        "text": "Maria Simon steht fruhkindlicher Sprachforderung ether kritisch gegenüber.",
+        "answer": "F",
+        "raw": "Maria Simon steht fruhkindlicher Sprachforderung ether kritisch gegenüber. (F)"
+      },
+      {
+        "number": 23,
+        "text": "Europäische Fremdsprachen būnen zunehmend an Wertschätzung ein.",
+        "answer": "F",
+        "raw": "Europäische Fremdsprachen būnen zunehmend an Wertschätzung ein. (F)"
+      }
+    ]
+  },
+  {
+    "teil": 8,
+    "title": "Reisen",
+    "sourceText": "",
+    "questions": [
+      {
+        "number": 13,
+        "text": "Schon im 16. Jahrhundert unternahmen junge Adelige Reisen zum Wissenserwerb.",
+        "answer": "R",
+        "raw": "Schon im 16. Jahrhundert unternahmen junge Adelige Reisen zum Wissenserwerb. R"
+      },
+      {
+        "number": 14,
+        "text": "Längere Reisen galten in dieser Zeit noch als gefährlich für Frauen.",
+        "answer": "F",
+        "raw": "Längere Reisen galten in dieser Zeit noch als gefährlich für Frauen. F"
+      },
+      {
+        "number": 15,
+        "text": "Die lange Reisedauer bei der Grand Tour rief bei den Zeitgenossen oft Kritik hervor.",
+        "answer": "F",
+        "raw": "Die lange Reisedauer bei der Grand Tour rief bei den Zeitgenossen oft Kritik hervor. F"
+      },
+      {
+        "number": 16,
+        "text": "Der Umstieg auf Kutschen machte das Reisen nicht unbedingt zu einer komfortablen Angelegenheit.",
+        "answer": "R",
+        "raw": "Der Umstieg auf Kutschen machte das Reisen nicht unbedingt zu einer komfortablen Angelegenheit. R"
+      },
+      {
+        "number": 17,
+        "text": "Die Reisenden mussten sich alle mit bescheidenen Übernachtungsmöglichkeiten zufriedengeben.",
+        "answer": "F",
+        "raw": "Die Reisenden mussten sich alle mit bescheidenen Übernachtungsmöglichkeiten zufriedengegeben. F",
+        "corrected": true
+      },
+      {
+        "number": 18,
+        "text": "Bei der Grand Tour verreisten die jungen Leute oft nur mit Gleichaltrigen.",
+        "answer": "F",
+        "raw": "Bei der Grand Tour verreisten die jungen Leute oft nur mit Gleichaltrigen. (F)"
+      },
+      {
+        "number": 19,
+        "text": "Auch die Eintrittsgelder für Museen trugen in den besuchten Städten zum wirtschaftlichen Aufschwung bei.",
+        "answer": "X",
+        "raw": "Auch die Eintrittsgelder für Museen trugen in den besuchten Städten zum wirtschaftlichen Aufschwung bei. X"
+      },
+      {
+        "number": 20,
+        "text": "Oft interessierten sich die Reisenden auch fur Ziele, die abseits der üblichen Reisewegelagen.",
+        "answer": "F",
+        "raw": "Oft interessierten sich die Reisenden auch fur Ziele, die abseits der üblichen Reisewegelagen. F"
+      },
+      {
+        "number": 21,
+        "text": "Handelsreisende konnten neu entstehende Handelswege nutzen.",
+        "answer": "X",
+        "raw": "Handelsreisende konnten neu entstehende Handelswege nutzen. X"
+      },
+      {
+        "number": 22,
+        "text": "Wilhelmine von Bayreuth konnte ihre Reisepläne aus gesundheitlichen Gründen wie Jahre lang nicht verwirklichen.",
+        "answer": "R",
+        "raw": "Wilhelmine von Bayreuth konnte ihre Reisepläne aus gesundheitlichen Gründen wie Jahre lang nicht verwirklichen.(R)"
+      },
+      {
+        "number": 23,
+        "text": "Durch die besseren Transportmöglichkeiten im 19. Jahrhundert etablierten sich bald auch neue Reiseziele.",
+        "answer": "R",
+        "raw": "Durch die besseren Transportmöglichkeiten im 19. Jahrhundert etablierten sich bald auch neue Reiseziele.(R)"
+      },
+      {
+        "number": 24,
+        "text": "Weltenbummler einst und heute",
+        "answer": null,
+        "raw": "Weltenbummler einst und heute"
+      }
+    ]
+  },
+  {
+    "teil": 9,
+    "title": "Schimpansen und Gorilla",
+    "sourceText": "",
+    "questions": [
+      {
+        "number": 13,
+        "text": "Dian Fossey und Jane Goodall lieferten mit ihrer Forschung Vorlagen für Tierdokumentationen.",
+        "answer": "X",
+        "raw": "Dian Fossey und Jane Goodall lieferten mit ihrer Forschung Vorlagen für Tierdokumentationen. X"
+      },
+      {
+        "number": 14,
+        "text": "Menschenaffen haben durch Übertragung von Erregern bei Menschen bereits Massenerkrankunger ausgelost.",
+        "answer": "F",
+        "raw": "Menschenaffen haben durch Übertragung von Erregern bei Menschen bereits Massenerkrankunger ausgelost. F"
+      },
+      {
+        "number": 15,
+        "text": "In Uganda mussten Berggorillas vermutlich wegen des Kontaktes mit Menschen medizinisch behandel werden.",
+        "answer": null,
+        "raw": "In Uganda mussten Berggorillas vermutlich wegen des Kontaktes mit Menschen medizinisch behandel werden."
+      },
+      {
+        "number": 16,
+        "text": "Nach Masern und Polio sind Schimpansen und Gorillas nun auch von Tuberkulose betroffen.",
+        "answer": "F",
+        "raw": "Nach Masern und Polio sind Schimpansen und Gorillas nun auch von Tuberkulose betroffen. F"
+      },
+      {
+        "number": 17,
+        "text": "In Schutzgebieten gehoren Entzündungen der Atemwege bei Menschenaffen zu den haufigster Erkrankungen.",
+        "answer": "R",
+        "raw": "In Schutzgebieten gehoren Entzündungen der Atemwege bei Menschenaffen zu den haufigster Erkrankungen. R"
+      },
+      {
+        "number": 18,
+        "text": "Für ihre Forschungen zu Bakterien, die Milzbrand verursachen, wählten Forscher den Tai-Nationalpark- der Elfenbeinküste.",
+        "answer": "R",
+        "raw": "Für ihre Forschungen zu Bakterien, die Milzbrand verursachen, wählten Forscher den Tai-Nationalpark- der Elfenbeinküste. R"
+      },
+      {
+        "number": 19,
+        "text": "Menschenaffen können sich über den Kontakt mit menschlichen Absonderungen anstecken.",
+        "answer": "R",
+        "raw": "Menschenaffen können sich über den Kontakt mit menschlichen Absonderungen anstecken. R"
+      },
+      {
+        "number": 20,
+        "text": "Fledermäuse und Nagetiere gelten als Sammelbecken für Ebola Viren.",
+        "answer": "F",
+        "raw": "Fledermäuse und Nagetiere gelten als Sammelbecken für Ebola Viren. F"
+      },
+      {
+        "number": 21,
+        "text": "Wenn Menschen sich impfen setzen, kommt das auch den Menschenaffen in ihrer Höhe zugute.",
+        "answer": "X",
+        "raw": "Wenn Menschen sich impfen setzen, kommt das auch den Menschenaffen in ihrer Höhe zugute. X"
+      },
+      {
+        "number": 22,
+        "text": "In der Höhe von Touristen verringert sich die Affenpopulation.",
+        "answer": "F",
+        "raw": "In der Höhe von Touristen verringert sich die Affenpopulation. F"
+      },
+      {
+        "number": 23,
+        "text": "Aus Rücksicht auf Touristen werden nicht alle sinnvollen Schutzmaßnahmen durchgeführt.",
+        "answer": "R",
+        "raw": "Aus Rücksicht auf Touristen werden nicht alle sinnvollen Schutzmaßnahmen durchgeführt. R"
+      },
+      {
+        "number": 24,
+        "text": "Chancen und Gefahren einer Annaherung.",
+        "answer": "A",
+        "raw": "Chancen und Gefahren einer Annaherung. A"
+      }
+    ]
+  },
+  {
+    "teil": 10,
+    "title": "Schafe",
+    "sourceText": "",
+    "questions": [
+      {
+        "number": 13,
+        "text": "Zu den Kunden von Ben und Natalie Schneider gehören in erster Linie Unternehmen.",
+        "answer": "R",
+        "raw": "Zu den Kunden von Ben und Natalie Schneider gehören in erster Linie Unternehmen. (R)"
+      },
+      {
+        "number": 14,
+        "text": "Zu Beginn seiner Selfständigkeit hat Ben Schneider bei baltischen Züchtern zwei Schafe erworben.",
+        "answer": "F",
+        "raw": "Zu Beginn seiner Selfständigkeit hat Ben Schneider bei baltischen Züchtern zwei Schafe erworben. (F)"
+      },
+      {
+        "number": 15,
+        "text": "Dank Familie Schneider konnte das Skuddenschaft vor dem Aussterben bewahrt werden.",
+        "answer": "F",
+        "raw": "Dank Familie Schneider konnte das Skuddenschaft vor dem Aussterben bewahrt werden. (F)"
+      },
+      {
+        "number": 16,
+        "text": "Als Kuh-Pate darf man bei der Versorgung von Kühnen mithelfen.",
+        "answer": "R",
+        "raw": "Als Kuh-Pate darf man bei der Versorgung von Kühnen mithelfen. (R)"
+      },
+      {
+        "number": 17,
+        "text": "Die Schneiders haben füur ihre Kunden Einheitspreise, sodass keine Zusatzkosten anfallen konnen.",
+        "answer": "F",
+        "raw": "Die Schneiders haben füur ihre Kunden Einheitspreise, sodass keine Zusatzkosten anfallen konnen. (F)"
+      },
+      {
+        "number": 18,
+        "text": "Schäfer und Schafe sind heute auch als Film- und Comicfiguren beliebt.",
+        "answer": "X",
+        "raw": "Schäfer und Schafe sind heute auch als Film- und Comicfiguren beliebt. $(\\times)$",
+        "corrected": true
+      },
+      {
+        "number": 19,
+        "text": "Urs Bühler mietet $chafe zum Rasenmahen, weil er die Umwelt schonen möchte.",
+        "answer": "F",
+        "raw": "Urs Bühler mietet $chafe zum Rasenmahen, weil er die Umwelt schonen möchte. (F)"
+      },
+      {
+        "number": 20,
+        "text": "Ben Schneider hat wie Schafe, die sehr zutraulich geworden sind.",
+        "answer": "X",
+        "raw": "Ben Schneider hat wie Schafe, die sehr zutraulich geworden sind. (X)"
+      },
+      {
+        "number": 21,
+        "text": "Besonderss in schwer zuganglichem Gelände bietet es sich an, Schafe zum Mahlen einzusetzen.",
+        "answer": "R",
+        "raw": "Besonderss in schwer zuganglichem Gelände bietet es sich an, Schafe zum Mahlen einzusetzen. (R)"
+      },
+      {
+        "number": 22,
+        "text": "Christian Petersen vermietet seine Schafe, weil er nicht über eigene Grasflächen für sie verfügbar.",
+        "answer": "R",
+        "raw": "Christian Petersen vermietet seine Schafe, weil er nicht über eigene Grasflächen für sie verfügbar. (R)"
+      },
+      {
+        "number": 23,
+        "text": "Christian Petersen möchte seinen Tierbestand in{nachster Zeit erweitern.",
+        "answer": "R",
+        "raw": "Christian Petersen möchte seinen Tierbestand in{nachster Zeit erweitern.(R)"
+      },
+      {
+        "number": 24,
+        "text": "Neuer Trend: Rasenmahlen mal anders.",
+        "answer": "C",
+        "raw": "Neuer Trend: Rasenmahlen mal anders. (C)"
+      }
+    ]
+  },
+  {
+    "teil": 11,
+    "title": "Erika Fuchs Comic-Übersetzerin",
+    "sourceText": "",
+    "questions": [
+      {
+        "number": 13,
+        "text": "Die Kindheit von Erika Fuchs war geprügt von den ständigen Geldsorgen ihrer Familie.",
+        "answer": "F",
+        "raw": "Die Kindheit von Erika Fuchs war geprügt von den ständigen Geldsorgen ihrer Familie. F"
+      },
+      {
+        "number": 14,
+        "text": "Erika Fuchs beurteilt die Erziehungsmethoden ihres Vaters ruckblickend negativ.",
+        "answer": "R",
+        "raw": "Erika Fuchs beurteilt die Erziehungsmethoden ihres Vaters ruckblickend negativ. R"
+      },
+      {
+        "number": 15,
+        "text": "Ihr Vater hatte keine Vorbehalte gegenüber Erikas Wunsch, das Jungengymnasium zu besuehen.",
+        "answer": "R",
+        "raw": "Ihr Vater hatte keine Vorbehalte gegenüber Erikas Wunsch, das Jungengymnasium zu besuehen. R"
+      },
+      {
+        "number": 16,
+        "text": "Bevor Erika das Gymnasium besuchen durfte, musste sie privat Sprachkenntnisse erwerben.",
+        "answer": "R",
+        "raw": "Bevor Erika das Gymnasium besuchen durfte, musste sie privat Sprachkenntnisse erwerben. R"
+      },
+      {
+        "number": 17,
+        "text": "Als sie ihre Doktorarbeit schrieb, verbrachte Erika Fuchs viel Zeit mit Recherche in Archiven.",
+        "answer": "X",
+        "raw": "Als sie ihre Doktorarbeit schrieb, verbrachte Erika Fuchs viel Zeit mit Recherche in Archiven. X"
+      },
+      {
+        "number": 18,
+        "text": "Erika Fuchs gründete einen kleinen Verlag, der Zeitschriften für Kinder hersausbrachte.",
+        "answer": "F",
+        "raw": "Erika Fuchs gründete einen kleinen Verlag, der Zeitschriften für Kinder hersausbrachte. F"
+      },
+      {
+        "number": 19,
+        "text": "Bevor sie Comic-Übersetzerin wurde, war Erika Fuchs schon eine passionierte Comic-Leserin.",
+        "answer": "F",
+        "raw": "Bevor sie Comic-Übersetzerin wurde, war Erika Fuchs schon eine passionierte Comic-Leserin. F"
+      },
+      {
+        "number": 20,
+        "text": "Mit seinen weltreichenden Literaturkenntnissen konnte Günter Fuchs seine Frau bei ihrer Arbeit untersitzen.",
+        "answer": "R",
+        "raw": "Mit seinen weltreichenden Literaturkenntnissen konnte Günter Fuchs seine Frau bei ihrer Arbeit untersitzen. R"
+      },
+      {
+        "number": 21,
+        "text": "Oftmals wurde Erika Fuchs vorgeworfen, die amerikanischen Original-Comics beim Übersetzen zu sehr verfürmdet zu haben.F",
+        "answer": "F",
+        "raw": "Oftmals wurde Erika Fuchs vorgeworfen, die amerikanischen Original-Comics beim Übersetzen zu sehr verfürmdet zu haben.F"
+      },
+      {
+        "number": 22,
+        "text": "Erika Fuchs war die Erste, die in ihren Übersetzungen eine bestimmte Verbform verwendete.",
+        "answer": "F",
+        "raw": "Erika Fuchs war die Erste, die in ihren Übersetzungen eine bestimmte Verbform verwendete. F"
+      },
+      {
+        "number": 23,
+        "text": "Mit ihrer Nachfolgerin als Chefredakteurin hatte Erika Fuchs schon viele Jahre im Verlag zusammengearbeitet.",
+        "answer": "X",
+        "raw": "Mit ihrer Nachfolgerin als Chefredakteurin hatte Erika Fuchs schon viele Jahre im Verlag zusammengearbeitet. X"
+      },
+      {
+        "number": 24,
+        "text": "A - Übersetzerlegende Erika Fuchs - ein Leben für den Comic",
+        "answer": "A",
+        "raw": "A - Übersetzerlegende Erika Fuchs - ein Leben für den Comic"
+      }
+    ]
+  },
+  {
+    "teil": 12,
+    "title": "Umweltschutz oder Vogel",
+    "sourceText": "",
+    "questions": [
+      {
+        "number": 13,
+        "text": "Die Vogel auf der Insel zeigen weniger Scheu vor Touristen.",
+        "answer": "R",
+        "raw": "Die Vogel auf der Insel zeigen weniger Scheu vor Touristen. R"
+      },
+      {
+        "number": 14,
+        "text": "Auf den Seychellen ist Umweltschutz gesetzlich festgelegt.",
+        "answer": "R",
+        "raw": "Auf den Seychellen ist Umweltschutz gesetzlich festgelegt. R"
+      },
+      {
+        "number": 15,
+        "text": "Einige der Inseln, die Vögeln Lebensraum bieten, dürfen nicht von Besuchern betreten werden.",
+        "answer": "R",
+        "raw": "Einige der InseIn, die Vogeln Lebensraum bieten, durren nicht von Besuchern betreten werden. R",
+        "corrected": true
+      },
+      {
+        "number": 16,
+        "text": "Die Kooperation mit den Hotels gestaltet sich für die Marine Conservation Society (MCS) als schwierig.",
+        "answer": "F",
+        "raw": "Die Kooperation mit den Hotels gestaltet sich für die Marine Conservation Society (MCS) als schwierig. F"
+      },
+      {
+        "number": 17,
+        "text": "Auch auf den Hotelstränden bieten sich den Meeresschildröten Plätze für ihre Eier.",
+        "answer": "F",
+        "raw": "Auch auf den Hotelstränden bieten sich den Meeresschildröten Plätze für ihre Eier. F"
+      },
+      {
+        "number": 18,
+        "text": "Offiziell heißt es, dass die künstliche Insel die Hauptinsel entlasten sollte.",
+        "answer": "R",
+        "raw": "Offiziell heiBt es, dass die künstliche Insel die Hauptinsel entlasten sollte. R",
+        "corrected": true
+      },
+      {
+        "number": 19,
+        "text": "Marta Cardoso war seit ihrem ersten Aufenthalt auf den Seychellen von der Inselwelt fasciniert.",
+        "answer": "X",
+        "raw": "Marta Cardoso war seit ihrem ersten Aufenthalt auf den Seychellen von der Inselwelt fasciniert. X"
+      },
+      {
+        "number": 20,
+        "text": "Das Six Senses bietet keine importierten Fleisch und Fischspezialitäten mehr an.",
+        "answer": "F",
+        "raw": "Das Six Senses bietet keine importierten Fleisch und Fischspezialitäten mehr an. F"
+      },
+      {
+        "number": 21,
+        "text": "Anna Zora bietet Bootsfahrten an, um die Meereswelt der Inseln zu erkunden.X",
+        "answer": "X",
+        "raw": "Anna Zora bietet Bootsfahrten an, um die Meereswelt der Inseln zu erkunden.X"
+      },
+      {
+        "number": 22,
+        "text": "Seit den Neunzigerjahren des 20. Jahrhunderts hat sich der Bestand des Seychellendajals erholt.",
+        "answer": "R",
+        "raw": "Seit den Neunzigerjahren des 20. Jahrhunderts hat sich der Bestand des Seychellendajals erholt. R"
+      },
+      {
+        "number": 23,
+        "text": "Die erfolglichen Naturschutzmaßnahmen auf Frégate dieren anderen Inseln als nachahmenswertes Beispiel.",
+        "answer": "R",
+        "raw": "Die erfolglichen Naturschutzmaßnahmen auf Frégate dieren anderen Inseln als nachahmenswertes Beispiel. R"
+      },
+      {
+        "number": 24,
+        "text": "Umweltschutz und Luxusurlaub: ein Dilemma?",
+        "answer": "B",
+        "raw": "Umweltschutz und Luxusurlaub: ein Dilemma? B"
+      }
+    ]
+  },
+  {
+    "teil": 13,
+    "title": "Bundesfreiwilligendienst",
+    "sourceText": "",
+    "questions": [
+      {
+        "number": 13,
+        "text": "Thomas Gruner verrichtet Verwaltungstätigkeiten in einem Seniorenheim.",
+        "answer": "F",
+        "raw": "Thomas Gruner verrichtet Verwaltungstätigkeiten in einem Seniorenheim. F"
+      },
+      {
+        "number": 14,
+        "text": "Der Bundesfreiwilligendienst wurde als Ersatz für den Zivildienst eingeführt.",
+        "answer": "R",
+        "raw": "Der Bundesfreiwilligendienst wurde als Ersatz für den Zivildienst eingeführt. R"
+      },
+      {
+        "number": 15,
+        "text": "Beim Bundesfreiwilligendienst kann jeder selbst entscheiden, ob der Einsatz in Vollzeit oder Teilzeit erfolgt.",
+        "answer": "F",
+        "raw": "Beim Bundesfreiwilligendienst kann jeder selbst entscheiden, ob der Einsatz in Vollzeit oder Teilzeit erfolgt. F"
+      },
+      {
+        "number": 16,
+        "text": "Freiwillige können zusätzlich zum Taschengeld Verpflegung und Unterkunft erhalten.",
+        "answer": "X",
+        "raw": "Freiwillige können zusätzlich zum Taschengeld Verpflegung und Unterkunft erhalten. X"
+      },
+      {
+        "number": 17,
+        "text": "Thomas Grüner hat selbst nach einer Möglichkeit gesucht, sich im Ruhestand sozial zu engagieren.",
+        "answer": "F",
+        "raw": "Thomas Grüner hat selbst nach einer Möglichkeit gesucht, sich im Ruhestand sozial zu engagieren. F"
+      },
+      {
+        "number": 18,
+        "text": "Die genaue Zahl der Freiwilligen, die im sozialen Bereich arbeiten, ist statistisch nichtbekannt.",
+        "answer": "X",
+        "raw": "Die genaue Zahl der Freiwilligen, die im sozialen Bereich arbeiten, ist statistisch nichtbekannt. X"
+      },
+      {
+        "number": 19,
+        "text": "Anna Schnell hoffte, durch den Bundesfreiilligendienst Klarheit über ihre Berufsziele zugewinnen.",
+        "answer": "R",
+        "raw": "Anna Schnell hoffte, durch den Bundesfreiilligendienst Klarheit über ihre Berufsziele zugewinnen. R"
+      },
+      {
+        "number": 20,
+        "text": "Finanzielle Grunde speliten bei Annas Entscheidung, den Bundesfreiwilligendienst abzubrechen, keine Rolle.",
+        "answer": "F",
+        "raw": "Finanzielle Grunde speliten bei Annas Entscheidung, den Bundesfreiwilligendienst abzubrechen, keine Rolle. F"
+      },
+      {
+        "number": 21,
+        "text": "Anna hält es für notwendig, den Dienst in den Einrichtungen stärker zu reglementieren.",
+        "answer": "R",
+        "raw": "Anna hält es für notwendig, den Dienst in den Einrichtungen stärker zu reglementieren. R"
+      },
+      {
+        "number": 22,
+        "text": "Gelegentlich wird die Befürchtung geäußert, Freiwilige konnten reguläre Beschäftigte ersetzen.",
+        "answer": "R",
+        "raw": "Gelegentlich wird die Befürchtung geäußert, Freiwilige konnten reguläre Beschäftigte ersetzen. R"
+      },
+      {
+        "number": 23,
+        "text": "Thomas Gruner hat sich für eine Veränderung des Freiwilligendienstes entsprechenden.",
+        "answer": "F",
+        "raw": "Thomas Gruner hat sich für eine Veränderung des Freiwilligendienstes entsprechenden. F"
+      },
+      {
+        "number": 24,
+        "text": "Bundesfreiwilligendienst: Wieso jeder Dritteihn abbricht.",
+        "answer": "A",
+        "raw": "Bundesfreiwilligendienst: Wieso jeder Dritteihn abbricht. A"
+      }
+    ]
+  },
+  {
+    "teil": 14,
+    "title": "Kleingarten",
+    "sourceText": "",
+    "questions": [
+      {
+        "number": 13,
+        "text": "Wer einen Kleingarten bewertschaften will, muss in der Regel einem Verein beitreten.",
+        "answer": "R",
+        "raw": "Wer einen Kleingarten bewertschaften will, muss in der Regel einem Verein beitreten. R"
+      },
+      {
+        "number": 14,
+        "text": "Zu den Gaststätten, die von den Vereinen betrieben werden, haben auch Nicht-Mitglieder Zutritt.",
+        "answer": "X",
+        "raw": "Zu den Gaststätten, die von den Vereinen betrieben werden, haben auch Nicht-Mitglieder Zutritt. X"
+      },
+      {
+        "number": 15,
+        "text": "In den Anfängen führten soziale Missstände zur Gründung von Kleingartenanlagen.",
+        "answer": "R",
+        "raw": "In den Anfängen führten soziale Missstände zur Gründung von Kleingartenanlagen. R"
+      },
+      {
+        "number": 16,
+        "text": "Die ersten, in Kappeln gegrundete Kleingartenanlage besteht bis heute.",
+        "answer": "F",
+        "raw": "Die ersten, in Kappeln gegrundete Kleingartenanlage besteht bis heute. F"
+      },
+      {
+        "number": 17,
+        "text": "Der Arzt Moritz Schreber gründete eine Anlage mit Kleingärten.",
+        "answer": "F",
+        "raw": "Der Arzt Moritz Schreber gründete eine Anlage mit Kleingärten. F"
+      },
+      {
+        "number": 18,
+        "text": "Im 19. Jahrhundert richteten viele Großstädte Spielplätze für Kinder ein.",
+        "answer": "X",
+        "raw": "Im 19. Jahrhundert richteten viele Großstädte Spielplätze für Kinder ein. X"
+      },
+      {
+        "number": 19,
+        "text": "Da die Kinder ihre Beete auf dem Schreberplatz verwahrlosen ließen, übernahmen die Eltern deren Pflege.",
+        "answer": "R",
+        "raw": "Da die Kinder ihre Beete auf dem Schreberplatz verwahrlosen ließen, übernahmen die Eltern deren Pflege. R"
+      },
+      {
+        "number": 20,
+        "text": "Das Deutsche Kleingartnermuseum widmet sich als weltweit einziges Museuder Geschichte der Kleingartnerbewegung.",
+        "answer": "X",
+        "raw": "Das Deutsche Kleingartnermuseum widmet sich als weltweit einziges Museuder Geschichte der Kleingartnerbewegung. X"
+      },
+      {
+        "number": 21,
+        "text": "Seite einiger Zeit interessieren sich auch jüngere Leute wieder zunehmend für Kleingärten.",
+        "answer": "R",
+        "raw": "Seite einiger Zeit interessieren sich auch jüngere Leute wieder zunehmend für Kleingärten. R"
+      },
+      {
+        "number": 22,
+        "text": "Deutschlandweit übersteigt die Zahl der Interessenten das Angebot an Kleingarten.",
+        "answer": "F",
+        "raw": "Deutschlandweit übersteigt die Zahl der Interessenten das Angebot an Kleingarten. F"
+      },
+      {
+        "number": 23,
+        "text": "Der Wunsch nach selbst produziertem Obst und Gemüse spielte heute für Kleingärtne keine Rolle mehr.",
+        "answer": "F",
+        "raw": "Der Wunsch nach selbst produziertem Obst und Gemüse spielte heute für Kleingärtne keine Rolle mehr. F"
+      },
+      {
+        "number": 24,
+        "text": "Naturidylle zum Pachten - Kleingärten im Wandel",
+        "answer": "B",
+        "raw": "Naturidylle zum Pachten - Kleingärten im Wandel B"
+      }
+    ]
+  },
+  {
+    "teil": 15,
+    "title": "Camping",
+    "sourceText": "",
+    "questions": [
+      {
+        "number": 13,
+        "text": "Thomas Hiram Holding hielt seine auf Reisen erworbenen Kennnisse in einem informativen Sachbuch fest.",
+        "answer": "R",
+        "raw": "Thomas Hiram Holding hielt seine auf Reisen erworbenen Kennnisse in einem informativen Sachbuch fest. R"
+      },
+      {
+        "number": 14,
+        "text": "Holding war der Meinung, dass Camping keine für das weibliche Geschlecht geeignete Beschäftigung sei.",
+        "answer": "F",
+        "raw": "Holding war der Meinung, dass Camping keine für das weibliche Geschlecht geeignete Beschäftigung sei. F"
+      },
+      {
+        "number": 15,
+        "text": "in beginnenden 20. Jahrhundert wurden von Schulern und Studenten zahlreiche Wanderverine gegrundet.X",
+        "answer": "X",
+        "raw": "in beginnenden 20. Jahrhundert wurden von Schulern und Studenten zahlreiche Wanderverine gegrundet.X"
+      },
+      {
+        "number": 16,
+        "text": "Schon ein Jahr nach der Erfindung des Wohnwagens fanden sich darauf erste Käufer.",
+        "answer": "R",
+        "raw": "Schon ein Jahr nach der Erfindung des Wohnwagens fanden sich darauf erste Käufer. R"
+      },
+      {
+        "number": 17,
+        "text": "Nach 1960 stellten sich zahlreiche Firmen auf die Bedürfnisse der Camper ein.",
+        "answer": "R",
+        "raw": "Nach 1960 stellten sich zahlreiche Firmen auf die Bedürfnisse der Camper ein. R"
+      },
+      {
+        "number": 18,
+        "text": "Der hohe Preis der Wohnmobile schreckte anfangs wie Kaufer ab.",
+        "answer": "X",
+        "raw": "Der hohe Preis der Wohnmobile schreckte anfangs wie Kaufer ab. X"
+      },
+      {
+        "number": 19,
+        "text": "Als günstige Pauschalreisen aufkamen, minderte dies zunachst nicht die Popularität des Campingurlaubs.",
+        "answer": "F",
+        "raw": "Als günstige Pauschalreisen aufkamen, minderte dies zunachst nicht die Popularität des Campingurlaubs. F"
+      },
+      {
+        "number": 20,
+        "text": "Nach der Wiedervereinigung gewann Campingurlaub für viele Reisende noch einmal an Attraktivität.",
+        "answer": "R",
+        "raw": "Nach der Wiedervereinigung gewann Campingurlaub für viele Reisende noch einmal an Attraktivität."
+      },
+      {
+        "number": 21,
+        "text": "Die Umsätze der Volkswagen-Hersteller stagnieren seit Beginn der 1990er Jahre.",
+        "answer": "R",
+        "raw": "Die Umsätze der Volkswagen-Hersteller stagnieren seit Beginn der 1990er Jahre. R"
+      },
+      {
+        "number": 22,
+        "text": "Campingplatz entwickeln heutzutage immer offen Ansgebote fur spezielle Personenkreise.",
+        "answer": "R",
+        "raw": "Campingplatz entwickeln heutzutage immer offen Ansgebote fur spezielle Personenkreise. R"
+      },
+      {
+        "number": 23,
+        "text": "Das sogenannte Glamping ist attraktiv für wohlhabende Reisende, denen Umweltverträglichkeit ein besonderes Anliegen ist.",
+        "answer": "R",
+        "raw": "Das sogenannte Glamping ist attraktiv für wohlhabende Reisende, denen Umweltverträglichkeit ein besonderes Anliegen ist. R"
+      },
+      {
+        "number": 24,
+        "text": "Campingboom im Wirtschaftswunder.",
+        "answer": "A",
+        "raw": "Campingboom im Wirtschaftswunder. (A)"
+      }
+    ]
+  },
+  {
+    "teil": 16,
+    "title": "Spielzeugindustrie",
+    "sourceText": "",
+    "questions": [
+      {
+        "number": 13,
+        "text": "Auf der Fachmesse fur Spielzeug konnten Spielzeugproduzenten Geschäftskontakte anbahlen.",
+        "answer": "R",
+        "raw": "Auf der Fachmesse fur Spielzeug konnten Spielzeugproduzenten Geschäftskontakte anbahlen.(R)"
+      },
+      {
+        "number": 14,
+        "text": "Die Umsätze der Spielzeugbranche erfüllten insgesamt die Erwartungen.",
+        "answer": "F",
+        "raw": "Die Umsätze der Spielzeugbranche erfüllten insgesamt die Erwartungen.(F)"
+      },
+      {
+        "number": 15,
+        "text": "Die Abschwächung des Marktes in der Weihnachtsszeit ließ die tatsächliche Jahreswachstumsrate unter die erwartete Wachstumsrate fallen.",
+        "answer": "R",
+        "raw": "Die Abschwächung des Marktes in der Weihnachtsszeit ließ die tatsächliche Jahreswachstumsrate unter die erwartete Wachstumsrate fallen.(R)"
+      },
+      {
+        "number": 16,
+        "text": "Die Spielzeugindustrie profitierte in anderen Jahren von Erfolgen in der Filmindustrie.",
+        "answer": "R",
+        "raw": "Die Spielzeugindustrie profitierte in anderen Jahren von Erfolgen in der Filmindustrie.(R)"
+      },
+      {
+        "number": 17,
+        "text": "Auf der Fachmesse konnen die Besucher neue Spielwaren testen.",
+        "answer": "X",
+        "raw": "Auf der Fachmesse konnen die Besucher neue Spielwaren testen.(X)"
+      },
+      {
+        "number": 18,
+        "text": "Der Trend zu elektronischen Spielzeug spiegelt sich in der ungebrochenen Beliebtheit der Spielekonsolen wider.",
+        "answer": "F",
+        "raw": "Der Trend zu elektronischen Spielzeug spiegelt sich in der ungebrochenen Beliebtheit der Spielekonsolen wider.(F)"
+      },
+      {
+        "number": 19,
+        "text": "Viele Eltern möchten elektronisches Spielzeug aus dem Kinderzimmer verbennen",
+        "answer": "F",
+        "raw": "Viele Eltern möchten elektronisches Spielzeug aus dem Kinderzimmer verbennen(F)"
+      },
+      {
+        "number": 20,
+        "text": "Mit Spielwaren im Kleinformat passt sich die Branche an die geänderten Lebensbedingungen wie Kinder an.",
+        "answer": "R",
+        "raw": "Mit Spielwaren im Kleinformat passt sich die Branche an die geänderten Lebensbedingungen wie Kinder an. (R)"
+      },
+      {
+        "number": 21,
+        "text": "Die vier vorgenstellen Trends werden nach Expertenmeinung bald wieder verschwinden.",
+        "answer": "F",
+        "raw": "Die vier vorgenstellen Trends werden nach Expertenmeinung bald wieder verschwinden. (F)"
+      },
+      {
+        "number": 22,
+        "text": "Wegen Sicherheitsbedenken hat ein großer Hersteller Spielzeug zurückgerufen.",
+        "answer": "X",
+        "raw": "Wegen Sicherheitsbedenken hat ein großer Hersteller Spielzeug zurückgerufen.(X)"
+      },
+      {
+        "number": 23,
+        "text": "Der Spielzeugfachhandel wurde bei den Verkaufszahlen bereits von Internethändlern übertroffen.",
+        "answer": "F",
+        "raw": "Der Spielzeugfachhandel wurde bei den Verkaufszahlen bereits von Internethändlern übertroffen.(F)"
+      },
+      {
+        "number": 24,
+        "text": "Neuheiten und Trends in der Spielzeugbranche.B",
+        "answer": "B",
+        "raw": "Neuheiten und Trends in der Spielzeugbranche .B"
+      }
+    ]
+  },
+  {
+    "teil": 17,
+    "title": "etwas über Insel (待定)",
+    "sourceText": "",
+    "questions": []
+  },
+  {
+    "teil": 18,
+    "title": "PRÄSENTATIONEN AN DER UNI: LANGEWEILE GARANTIERT Zweitstudium",
+    "sourceText": "",
+    "questions": [
+      {
+        "number": 13,
+        "text": "Selina Michel entschied sich zunachst gegen das Medizinstudium, weil sie vor dem hohen Lernpensum zusückschreckte.",
+        "answer": "R",
+        "raw": "Selina Michel entschied sich zunachst gegen das Medizinstudium, weil sie vor dem hohen Lernpensum zusückschreckte. R"
+      },
+      {
+        "number": 14,
+        "text": "Selina Michel merkte bald, dass sie im Journalismus keine Aussichten auf eine lukrative Stelle hatte.",
+        "answer": "F",
+        "raw": "Selina Michel merkte bald, dass sie im Journalismus keine Aussichten auf eine lukrative Stelle hatte. F"
+      },
+      {
+        "number": 15,
+        "text": "Für ein Zweitstudium sollte man vor allem Fächer in Betracht ziehen, die das Erststudium ergänzen.",
+        "answer": "F",
+        "raw": "Für ein Zweitstudium sollte man vor allem Fächer in Betracht ziehen, die das Erststudium ergänzen. F"
+      },
+      {
+        "number": 16,
+        "text": "Wer ein Zweitstudium absolvieren möchte, muss seine Bewerbung begründen.",
+        "answer": "X",
+        "raw": "Wer ein Zweitstudium absolvieren möchte, muss seine Bewerbung begründen. $\\times$"
+      },
+      {
+        "number": 17,
+        "text": "Es gibt in manchen Studiengängen eine Quote für Zweitstudenten.",
+        "answer": "R",
+        "raw": "Es gibt in manchen Studiengängen eine Quote für Zweitstudenten. R"
+      },
+      {
+        "number": 18,
+        "text": "Für private Hochschulen spricht es, dass das Betreuungsverhältnis Dort better ist als an staatlichen Hochschulen.",
+        "answer": "R",
+        "raw": "Für private Hochschulen spricht es, dass das Betreuungsverhältnis Dort better ist als an staatlichen Hochschulen. R"
+      },
+      {
+        "number": 19,
+        "text": "Leni Karrenbauer hat nach ihrem Studium eine Führungsposition angestrebt.",
+        "answer": "X",
+        "raw": "Leni Karrenbauer hat nach ihrem Studium eine Führungsposition angestrebt. $\\times$"
+      },
+      {
+        "number": 20,
+        "text": "Leni Karrenbauer brach ihr Zweitstudium ab, um stattdessen eine Weiterbildung zu absolvieren.",
+        "answer": "F",
+        "raw": "Leni Karrenbauer brach ihr Zweitstudium ab, um stattdessen eine Weiterbildung zu absolvieren. F"
+      },
+      {
+        "number": 21,
+        "text": "Selina Michel hat für ihr Studium ihre Ersparnisse verbraucht.×",
+        "answer": "X",
+        "raw": "Selina Michel hat für ihr Studium ihre Ersparnisse verbraucht.×"
+      },
+      {
+        "number": 22,
+        "text": "Selina Michel zweifelt manchmal daran, dass ihre Entscheidung fur das Medizinstudium war.",
+        "answer": "R",
+        "raw": "Selina Michel zweifelt manchmal daran, dass ihre Entscheidung fur das Medizinstudium richtig war. R"
+      },
+      {
+        "number": 23,
+        "text": "Bei der Jobsuche kann es in bestimmten Fällen vorkommen, dass man sich für ein Zweitstudium rechtfertigen muss.",
+        "answer": "R",
+        "raw": "Bei der Jobsuche kann es in bestimmten Fällen vorkommen, dass man sich für ein Zweitstudium rechtfertigen muss. R"
+      },
+      {
+        "number": 24,
+        "text": "Ein Zweitstudium will wohl überlegt sein",
+        "answer": null,
+        "raw": "Ein Zweitstudium will wohl überlegt sein"
+      }
+    ]
+  },
+  {
+    "teil": 19,
+    "title": "Schlangenhaargürken aus Nigeria",
+    "sourceText": "1. Die Luftfeuchtigkeit im Gewächshaus ist hoch und es schlågt einem ein eigentümliches Aroma entgegen. Der intensive Duft entströmt den Bluten, Früchten und Blättern von Trichosanthes cucumerina L., der Schlangenhaar gurke. In ihrer Heimat im Südwesten Nigerras nennt man sie Schlangentomate, weil die reifen Früchte sich rot färben und ähnlich schmecken sollen wie Tomaten. Die Früchte, die in Gewächshäusern in Deutschland angebaut werden, sind allerdings ether klass. Doch das kann auch daran liegen, dass die Anzahl der Sonnenstunden in Deutschland nicht so hoch ist wie in Afrika.\n\nFernab der afrikanischen Sonne wachsen rund hundert Pflanzen im Gewächshaus des Fachbereichs Gartenbauwissenschaft im Institut für Nutzpflanzenwissenschaften und Ressourcenschutz (INRES) der Universität Bonn. Hierher gebracht und aufgezogen hat sie der nigerianische Gartenbauwissenschaftler Odunayo Adebooye. Er will mehr über die bislang kaum erforschte und in seiner Heimat als eine Art Tomate für arme Leute gering geschätzte Pflanze Herausfinden.\n\n2. Denn Trichosanthes cucumerina hat es in sich. Ihr Gehalt an Vitamin C, Vitamin A, Rohproteinen, essentiellen Aminosäuren und Kalzium ist dem der bislang bevorzugten und weiter verbreiteten Tomate und manch anderen Gemüsesorten welt überlegen. Zugleich stellt sie weniger Ansprüche an den Boden und ware davon ideal für den humusarmen Grund, dem die Farmer in Südwestnigeria sonst nur mit Muhe Gemüse abtotzen. Als Grundnahrungsmittel und Vitaminlieferant können sie Mangelernährung vorbeugen und etwa davon sorgen, dass die vor allem bei Kindern*hufigen Augenkrankheiten in der Region weniger wurden.\n\n3. Zunachst aber,musste mehr über die Schlangentomate betracht sein und ihre Verwendung popularer gemacht werden. Wenn es einen idealen Botschafter hierfür gibt, dann ist es Adebooye. Die Pflanzen, die hier in Bonn ein halbes Gewächshaus fullen und bis unter die Decke ranken, sind seine Babys. Der Vaterstolz ist nicht zu übersehen, wenn Adebooye mit leuchtenden Augen die Pflanzen präsentiert Riechen Sie das Aroma?Sehen Sie sich diese Frucht an.Hier wird sie nur so große wie eine Gurke, doch in Nigeria kann sie bis zu einem Meter lang werden! Wenn der Schlaksige Afrikaner mit raschem Schritt in Turnschuhen durch das Institut und die Gewächshäuser federt und Kollegen trifft, merkt man, dass seine Begeisterung ansteckend ist. Jeder an der Bonner Universitat kennt Adebooye und seine Pflanz Aber auch außerhalb der Uni wachst die Fangemeinde.\n\n4. Dabei war es anfangs nicht einfach. Mochte Bonn, anders als Adebooyes Heianstitut, die nötigen technischen Voraussetzungen für die Erforschung der optimalen Kultur- und Anbaubedingungen der Wunderpflanze bieten – der Schlangentomate fehlte ihr natürliches Umfeld. Die aus Nigeria mitgebrachten Samen wollen nicht keimen. Selfst im Gewächshaus war der Boden zu kalt. Also bau die deutschen Kollegen eine spezielle Apparatur, eine Art Fußbodenheziehung, die die Anzuchterde auf 25 bis 30 Grad Celsius erwartmt. Im wohlig temperierten Erdreich keimten die Pflanzen)sogar Schneller daheim und wuchsen mit Hilfe künstlicher, intensiverer Lichteinstrahlung weiter.\n\n5. Doch das{nachste Problem wartete bereits. Die in Deutschland heimischen Insekten konnten die Bluten nicht bestauben, wahrnd dies in Nigeria bestimmte Schmetterlingsarten erledigen. Adebooye musste die Bluten mechanisch befruchten und die Pollen mit einem Pinsel übertragen ein langwieriges und nicht immer von Erfolg gekröntes Verfahren. Wahrscheinlich konnen nur Agrarwissenschaftler wreaklich dasGlucksgefuhl nachvollziehen, das sich einstellt, als die Muhen endlich zum Ziel führten und die ersten Pflanzen Früchte trugen.\n\n6. Vieles, was für den Anbau und die Popularisierung der Pflanze wichtig ist, hat Adebooye in Bonn herselffgegeben und mit wissenschaftlich fundierten Daten unterlegt. Er weiß, welche Mineralstoffe der optimale Boden enthalten muss, er kennt die Koncentration der verschiedene Nährstoffe, die Früchte ernahrungsphysiologisch so attraktiv machen. Er weiß, wie viel Sonnenlicht die Pflanze für optimales Wachstum braucht und dass sie gegen Schädlinge und Pilze unempfindlich ist. Die Schlangentomate verträgt auch starke UV-Belastungen, wie Adebooye sie mit künstlicher Bestrahlung an einigen Pflanzen simuliert hat.\n\n7. Europäische Obst- und Gemüsearten reagieren unter solchen Bedingungen empfindlicher und bereits gewissermaß einen Sonnenbrand. Welche Schutzmechanismen davon sorgen, dass der Schlangentomate so etwas nicht passiert, interessiert nicht nur Adebooye, sondern auch seinen wissenschaftlichen Gastgeber und Leiter des Fachbereichs, Georg Noga. Wie Pflanzen auf Stress reagieren und wie sie trotzdem hohe Erträge liefern, ist einer seiner Forschungsschwerpunkte. Die Erforschung der Schlangentomate konne im Erkenntnisse liefern, die sich bei der Zuchtung neuer, sonnenbrandunempfindlicherer Nutzpflanzen einsetzen ließen.\n\n8. Oft hare ich, dass Wissenschaftler aus Entwicklungsländern nur hierherkommen, um bei uns etwas zu lernen. Die klassische Entwicklungshilfleeinbahnstraße sozusagen. Doch bei thisem Projekt findet esstatt, das viel beschworende Leben und Nehmen. Die Zusammenarbeit führt zu einem Wissenschaftgewinn\n\nsuch auf unserer Seite', erläutert Noga. Er leitet den Lehr und Forschungsbereich Gartenbauwissenschaft im INRES schon seit rund zehn Jahren und ist begeistert von dem gegenseitigen Wissens- und Erfahrungsaustausch, der hier möglich ist.\n\n9. Mit grauen Haaren, Anzug und Schlips entspricht er dem seriösen Bild, das man sich wohl nicht nur in Nigeria von einem deutschen Professor macht. Adebooye spricht ihn nur mit Prof an, beinahe so, als ware er selbst noch ein Student und als erforderde dies der Respektabstand, den ein 40-jähriger Wissenschaftler aus einem Entwicklungsland zu einem deutschen Professor zu halten habe. Doch wenn Adebooye Prof* sagt, hört es sich nicht nur nach Respekt, sondern zugleich nach Vertrautheit an. Sein Gastgeber und er sind ein Team.\n\n10. Welchen Respekt er tatsächlich vor der Erfahrung und dem Know-how des deutschen Kollegen hat, betont Adebooye mit Nachdruck. Dankbar sei er für das, was er hier lernen, und für die ungleich betteren Bedingungen, unter denen er forschen konne. Die Begeisterung ist gegenseitig. Am liebsten', sagt Noga, wurde ichihn hierbehalten. Er ist ein hervorragender Wissenschaftler.\"\n\n11. In wichtigen Wochen endet die Kooperation leider vorzeitig. Adebooyes Heimatuniversität hatihn wegen Personalmangels im Lehrbetrieb zurückgerufen. Die geplanten gemeinsamen Versuche zur UV Resistenz der Pflanze muss Noga nun allein mit seiner Kollegin Christa Lankes durchführren, die schon die bisherigen Experimente tatkräftig begleitet. Adebooye wird dagegen Dort weitermachen, wo er in Nigeria aufgehört hat, nachdem er die Pflanze in einem kleinen Dorf entdeckt und ihr Potenzial zu erforschen begonnen hatte.\n\n12. Damals hatte er eine wissenschaftliche Konferenz veranstaltet und die Werbetrommel gerührt. Jeder der Teilnehmer betram ein Päckchen mit Samen, um die Schlangentomate in seiner Region anzubauen. Mit den Ergebnissen aus Bonn plant Adebooye nun die nachste Welle zur Verbreitung der Pflanze. Doch noch ist es bis zum Abschied einige Zeit hin. Gemeinsam sitzen Adebooye, Noga und Christa Lankes in Nogas Büro und feiern einen ganz besonderen Augenblick: Die erstee Schlangentomate aus Bonner Zucht kommt auf den Tisch. Adebooye schneidet sie mit einer Rasierklinge der Länge nach auf und serviert die tiefroten fleischigen Kerne auf dem herbeigeholten Kaffeeegeschirr. Sie schmecken sÜblich exotisch und erinnern an eine Kakifrucht. „Nicht schlecht. Aber der Geschmack ist sicher noch ausbaufähig,“ mein Toga.\n\n13. Ob die Schlangentomate auch etwas für den deutschen Kuchentisch ware, müssen die Konsumenten entscheiden. Nogas Institut arbeitet mit einem Partner zusammen, der sich um die Vermarktung neuer und optimierter Nutzpflanzen kummert. Vielleicht liegt Trichosanthes cucumerina L. also irgendwann einmal im Regal des Supermarkts um die Ecke. Möglicherweise dann an Stelle der hierzulande welt überschätzten gemeinsen Strauchtomate. Odunayo Adebooyeeware sicherehr stolz auf sein Baby.\n\nWelche der Aussagen sind richtig (r), falsch (f) oder nicht im Text enthalten $(-)?$",
+    "questions": [
+      {
+        "number": 13,
+        "text": "Die Universität Bonn hat sich auf die Erforschung von Pflanzen aus Afrika spezialisiert.",
+        "answer": "X",
+        "raw": "Die Universität Bonn hat sich auf die Erforschung von Pflanzen aus Afrika spezialisiert."
+      },
+      {
+        "number": 14,
+        "text": "Die Schlangenhaar gurke ist reich an Nährstoffen.",
+        "answer": "R",
+        "raw": "Die Schlangenhaar gurke ist reich an Nährstoffen."
+      },
+      {
+        "number": 15,
+        "text": "Landwirte in Afrika bauen die Schlangenhaar gurke halten.",
+        "answer": "X",
+        "raw": "Landwirte in Afrika bauen die Schlangenhaar gurke halten."
+      },
+      {
+        "number": 16,
+        "text": "Die Frucht der Schlangenhaar gurke gedeibt in Deutschland nicht so gut wie in Afrika.",
+        "answer": "R",
+        "raw": "Die Frucht der Schlangenhaar gurke gedeibt in Deutschland nicht so gut wie in Afrika."
+      },
+      {
+        "number": 17,
+        "text": "Adebooye hat ein Verfahrens entwickelt, bei dem die Befruchtung der Bluten auch in Deutschland immer gelingt.",
+        "answer": "F",
+        "raw": "Adebooye hat ein Verfahrens entwickelt, bei dem die Befruchtung der Bluten auch in Deutschland immer gelingt."
+      },
+      {
+        "number": 18,
+        "text": "Adebooye hat den Einfluss von schädlichen Insekten auf die Pflanze noch nicht untersucht.",
+        "answer": "F",
+        "raw": "Adebooye hat den Einfluss von schädlichen Insekten auf die Pflanze noch nicht untersucht."
+      },
+      {
+        "number": 19,
+        "text": "Neben den Auswirkungen von Stress auf Pflanzen untersucht Georg Noga auch, wie Menschen auf Stress reagieren.",
+        "answer": "X",
+        "raw": "Neben den Auswirkungen von Stress auf Pflanzen untersucht Georg Noga auch, wie Menschen auf Stress reagieren."
+      },
+      {
+        "number": 20,
+        "text": "Adebooye studiert bei Professor Noga.",
+        "answer": "F",
+        "raw": "Adebooye studiert bei Professor Noga."
+      },
+      {
+        "number": 21,
+        "text": "Adebooye kann nicht mehr alle begonnenen Versuche in Deutschland zu Ende führen.",
+        "answer": "R",
+        "raw": "Adebooye kann nicht mehr alle begonnenen Versuche in Deutschland zu Ende führen."
+      },
+      {
+        "number": 22,
+        "text": "Die Bonner Schlangenhaar gurken sind geschmacklich bereits optimal.",
+        "answer": "F",
+        "raw": "Die Bonner Schlangenhaar gurken sind geschmacklich bereits optimal."
+      },
+      {
+        "number": 23,
+        "text": "Adebooye unterstützt Nogas Institut bzw., die Schlangenhaar gurke in deutschen Supermarktten zu verkaufen.",
+        "answer": "F",
+        "raw": "Adebooye unterstützt Nogas Institut bzw., die Schlangenhaar gurke in deutschen Supermarktten zu verkaufen."
+      },
+      {
+        "number": 24,
+        "text": "a Austauschprogramme deutscher Universitäten.",
+        "answer": null,
+        "raw": "a Austauschprogramme deutscher Universitäten."
+      }
+    ]
+  }
+];
