@@ -2,13 +2,15 @@ const data = (window.LV3_QUESTIONS || []).map((section) => ({
   ...section,
   questions: section.questions.map((question, index) => {
     const split = splitLanguages(question.text || question.raw || "");
+    const german = question.german || split.german || question.text || question.raw || "";
+    const chinese = question.chinese || split.chinese || "暂无中文释义";
     return {
       ...question,
       id: `${section.teil}-${question.number}-${index}`,
       teil: section.teil,
       teilTitle: section.title,
-      german: split.german || question.text || question.raw || "",
-      chinese: split.chinese || "暂无中文释义",
+      german,
+      chinese,
     };
   }),
 }));

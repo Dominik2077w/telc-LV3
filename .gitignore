@@ -2,3 +2,5 @@ dist/
 *.pdf
 MinerU_markdown_*.md
 data/lv3_raw.md
+data/lv3_pdf_raw.txt
+data/pdf_text.txt
