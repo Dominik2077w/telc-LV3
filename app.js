@@ -54,6 +54,12 @@ const els = {
   roundStrip: document.querySelector("#roundStrip"),
 };
 
+const answerShortcutKeys = {
+  ArrowLeft: 0,
+  ArrowDown: 1,
+  ArrowRight: 2,
+};
+
 renderTeilList();
 bindEvents();
 renderIdle();
@@ -82,6 +88,7 @@ function bindEvents() {
 
   els.startButton.addEventListener("click", startSession);
   els.nextButton.addEventListener("click", nextQuestion);
+  document.addEventListener("keydown", handleKeyboardNavigation);
 }
 
 function renderTeilList() {
@@ -196,10 +203,53 @@ function showFront(question) {
     button.type = "button";
     button.className = "answer-button";
     button.dataset.choice = choice.value;
+    button.title = choice.shortcut;
     button.textContent = choice.label;
     button.addEventListener("click", () => answerQuestion(choice.value));
     els.answerGrid.append(button);
   }
+}
+
+function handleKeyboardNavigation(event) {
+  if (event.repeat || state.complete) return;
+  if (isEditableTarget(event.target)) return;
+  if (!state.current || state.complete) return;
+
+  if (els.backFace.classList.contains("hidden")) {
+    handleAnswerShortcut(event);
+    return;
+  }
+
+  if (!isContinueKey(event)) return;
+  if (isNativeButtonKey(event)) return;
+  event.preventDefault();
+  nextQuestion();
+}
+
+function handleAnswerShortcut(event) {
+  if (!(event.key in answerShortcutKeys)) return;
+
+  const buttons = [...els.answerGrid.querySelectorAll(".answer-button")];
+  const button = buttons[answerShortcutKeys[event.key]];
+  if (!button) return;
+
+  event.preventDefault();
+  button.click();
+}
+
+function isEditableTarget(target) {
+  if (!(target instanceof Element)) return false;
+  return Boolean(target.closest("input, select, textarea, [contenteditable='true']"));
+}
+
+function isContinueKey(event) {
+  if (event.metaKey || event.ctrlKey || event.altKey) return false;
+  return !["Shift", "Control", "Alt", "Meta", "CapsLock", "Tab", "Escape"].includes(event.key);
+}
+
+function isNativeButtonKey(event) {
+  if (!(event.target instanceof Element)) return false;
+  return Boolean(event.target.closest("button")) && ["Enter", " "].includes(event.key);
 }
 
 function answerQuestion(choice) {
@@ -252,16 +302,16 @@ function renderIdle() {
 function getChoices(question) {
   if (question.number === 24 || ["A", "B", "C"].includes(question.answer)) {
     return [
-      { value: "A", label: "A" },
-      { value: "B", label: "B" },
-      { value: "C", label: "C" },
+      { value: "A", label: "A", shortcut: "←" },
+      { value: "B", label: "B", shortcut: "↓" },
+      { value: "C", label: "C", shortcut: "→" },
     ];
   }
 
   return [
-    { value: "R", label: "Richtig" },
-    { value: "F", label: "Falsch" },
-    { value: "X", label: "Nicht im Text" },
+    { value: "R", label: "Richtig", shortcut: "←" },
+    { value: "F", label: "Falsch", shortcut: "↓" },
+    { value: "X", label: "Nicht im Text", shortcut: "→" },
   ];
 }
 
