@@ -300,6 +300,14 @@ function renderIdle() {
 }
 
 function getChoices(question) {
+  if (["R", "F", "X"].includes(question.answer)) {
+    return [
+      { value: "R", label: "Richtig", shortcut: "←" },
+      { value: "F", label: "Falsch", shortcut: "↓" },
+      { value: "X", label: "Nicht im Text", shortcut: "→" },
+    ];
+  }
+
   if (question.number === 24 || ["A", "B", "C"].includes(question.answer)) {
     return [
       { value: "A", label: "A", shortcut: "←" },
