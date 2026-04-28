@@ -4,8 +4,8 @@
 
 - 来源：PDF 可复制文字（`pdftotext -layout`）
 - 语料文件：`data/pdf_text.txt`
-- 提取到 19 个 Teil，230 条题目记录。
-- 答案分布：F=81，R=90，X=40，未标注=5，C=6，B=4，A=4
+- 提取到 19 个 Teil，231 条题目记录。
+- 答案分布：F=81，R=91，X=40，未标注=5，C=6，B=4，A=4
 
 ## 题型结构
 
@@ -31,7 +31,7 @@
 | 12 | Umweltschutz oder Vögel | 12 | 13:R 14:R 15:R 16:F 17:F 18:R 19:X 20:F 21:X 22:R 23:R 24:B |
 | 13 | Bundesfreiwilligendienst | 12 | 13:F 14:R 15:F 16:X 17:F 18:X 19:R 20:F 21:R 22:R 23:F 24:A |
 | 14 | Kleingarten | 12 | 13:R 14:X 15:R 16:F 17:F 18:X 19:R 20:X 21:R 22:F 23:F 24:B |
-| 15 | Camping | 11 | 13:R 14:F 15:X 16:R 17:R 18:X 19:F 20:R 22:R 23:R 24:A |
+| 15 | Camping | 12 | 13:R 14:F 15:X 16:R 17:R 18:X 19:F 20:R 21:R 22:R 23:R 24:A |
 | 16 | Spielzeugindustrie | 12 | 13:R 14:F 15:R 16:R 17:X 18:F 19:F 20:R 21:F 22:X 23:F 24:B |
 | 17 | etwas über Insel （待定） | 0 |  |
 | 18 | PRÄSENTATIONEN AN DER UNI: LANGEWEILE GARANTIERT Zweitstudium | 12 | 13:R 14:F 15:F 16:X 17:R 18:R 19:X 20:F 21:X 22:R 23:R 24:? |

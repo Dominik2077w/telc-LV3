@@ -251,6 +251,17 @@ function parseQuestionsFromLines(lines, teil) {
     const parts = isQuestionStart(line) ? splitQuestionStarts(line) : [line];
 
     for (const part of parts) {
+      const prefixedQuestion = part.match(/^([RFX])\s+((?:1[3-9]|2[0-4])\s*[-.,，]?.*)$/i);
+      if (prefixedQuestion && block && questionMode) {
+        if (!extractAnswer(block.lines.join(" "), questionNumber(block.lines[0]))) {
+          block.lines.push(prefixedQuestion[1].toUpperCase());
+        }
+        flushBlock();
+        block = { lines: [prefixedQuestion[2]] };
+        activeTranslationNumber = null;
+        continue;
+      }
+
       if (activeTranslationNumber && /^（?\s*[RFXABC×]\s*）?$/i.test(part)) {
         addTranslation(part, activeTranslationNumber);
         continue;

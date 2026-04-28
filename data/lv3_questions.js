@@ -1814,11 +1814,20 @@ window.LV3_QUESTIONS = [
       },
       {
         "number": 20,
-        "text": "Nach der Wiedervereinigung gewann Campingurlaub für viele Reisende noch einmal an Attraktivität. R 21 -Die Umsätze der Wohnwagen-Hersteller stagnieren seit Beginn der 1990er Jahre. 德国统一之后，露营度假对许多旅行者再次更具吸引力。",
-        "german": "Nach der Wiedervereinigung gewann Campingurlaub für viele Reisende noch einmal an Attraktivität. R 21 -Die Umsätze der Wohnwagen-Hersteller stagnieren seit Beginn der 1990er Jahre.",
+        "text": "Nach der Wiedervereinigung gewann Campingurlaub für viele Reisende noch einmal an Attraktivität. 德国统一之后，露营度假对许多旅行者再次更具吸引力。",
+        "german": "Nach der Wiedervereinigung gewann Campingurlaub für viele Reisende noch einmal an Attraktivität.",
         "chinese": "德国统一之后，露营度假对许多旅行者再次更具吸引力。",
         "answer": "R",
-        "raw": "Nach der Wiedervereinigung gewann Campingurlaub für viele Reisende noch einmal an Attraktivität. R 21 -Die Umsätze der Wohnwagen-Hersteller stagnieren seit Beginn der 1990er Jahre. R",
+        "raw": "Nach der Wiedervereinigung gewann Campingurlaub für viele Reisende noch einmal an Attraktivität. R",
+        "source": "pdf-text"
+      },
+      {
+        "number": 21,
+        "text": "Die Umsätze der Wohnwagen-Hersteller stagnieren seit Beginn der 1990er Jahre. 自20世纪90年代初以来，旅行拖车制造商的营业额一直停滞不前。",
+        "german": "Die Umsätze der Wohnwagen-Hersteller stagnieren seit Beginn der 1990er Jahre.",
+        "chinese": "自20世纪90年代初以来，旅行拖车制造商的营业额一直停滞不前。",
+        "answer": "R",
+        "raw": "Die Umsätze der Wohnwagen-Hersteller stagnieren seit Beginn der 1990er Jahre. R",
         "source": "pdf-text"
       },
       {
