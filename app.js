@@ -56,6 +56,7 @@ const els = {
 
 const answerShortcutKeys = {
   ArrowLeft: 0,
+  ArrowUp: 1,
   ArrowDown: 1,
   ArrowRight: 2,
 };
@@ -303,7 +304,7 @@ function getChoices(question) {
   if (["R", "F", "X"].includes(question.answer)) {
     return [
       { value: "R", label: "Richtig", shortcut: "←" },
-      { value: "F", label: "Falsch", shortcut: "↓" },
+      { value: "F", label: "Falsch", shortcut: "↑ / ↓" },
       { value: "X", label: "Nicht im Text", shortcut: "→" },
     ];
   }
@@ -311,14 +312,14 @@ function getChoices(question) {
   if (question.number === 24 || ["A", "B", "C"].includes(question.answer)) {
     return [
       { value: "A", label: "A", shortcut: "←" },
-      { value: "B", label: "B", shortcut: "↓" },
+      { value: "B", label: "B", shortcut: "↑ / ↓" },
       { value: "C", label: "C", shortcut: "→" },
     ];
   }
 
   return [
     { value: "R", label: "Richtig", shortcut: "←" },
-    { value: "F", label: "Falsch", shortcut: "↓" },
+    { value: "F", label: "Falsch", shortcut: "↑ / ↓" },
     { value: "X", label: "Nicht im Text", shortcut: "→" },
   ];
 }
