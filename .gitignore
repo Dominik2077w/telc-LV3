@@ -1,4 +1,7 @@
 dist/
+.DS_Store
+__pycache__/
+*.pyc
 *.pdf
 MinerU_markdown_*.md
 data/lv3_raw.md

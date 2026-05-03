@@ -1,11 +1,12 @@
-const CACHE_VERSION = "lv3-trainer-20260428-answers";
-const CACHE_NAME = `telc-lv3-${CACHE_VERSION}`;
+const CACHE_VERSION = "telc-trainer-20260504-lv2-lv3";
+const CACHE_NAME = `telc-trainer-${CACHE_VERSION}`;
 const APP_SHELL = [
   "./",
   "./index.html",
   "./styles.css",
   "./app.js",
   "./manifest.webmanifest",
+  "./data/lv2_questions.js",
   "./data/lv3_questions.js",
   "./icons/icon-192.png",
   "./icons/icon-512.png",
@@ -27,7 +28,11 @@ self.addEventListener("activate", (event) => {
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames
-          .filter((cacheName) => cacheName.startsWith("telc-lv3-") && cacheName !== CACHE_NAME)
+          .filter(
+            (cacheName) =>
+              (cacheName.startsWith("telc-lv3-") || cacheName.startsWith("telc-trainer-")) &&
+              cacheName !== CACHE_NAME
+          )
           .map((cacheName) => caches.delete(cacheName))
       );
     })

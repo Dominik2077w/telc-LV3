@@ -5,21 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#2f7d59" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-title" content="LV3 Trainer" />
+    <meta name="apple-mobile-web-app-title" content="telc Trainer" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-    <title>telc LV3 Trainer</title>
+    <title>telc Trainer</title>
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="apple-touch-icon" href="./icons/icon-192.png" />
     <link rel="icon" href="./icons/icon-192.svg" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <div class="level-gate" id="levelGate">
+      <div class="level-gate-inner">
+        <p class="eyebrow">telc C1 Hochschule</p>
+        <h1>选择训练级别</h1>
+        <div class="level-choice-grid">
+          <button class="level-choice" type="button" data-level-choice="lv2">
+            <strong>LV2</strong>
+            <span>段落 A-E 正反面卡片</span>
+          </button>
+          <button class="level-choice" type="button" data-level-choice="lv3">
+            <strong>LV3</strong>
+            <span>Richtig / Falsch / Nicht im Text</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
     <main class="app-shell">
       <aside class="sidebar">
         <div class="brand">
-          <p class="eyebrow">telc C1 Hochschule</p>
-          <h1>LV3 Trainer</h1>
+          <p class="eyebrow" id="appEyebrow">telc C1 Hochschule</p>
+          <h1 id="appTitle">telc Trainer</h1>
         </div>
+
+        <section class="panel">
+          <div class="level-switch" aria-label="训练级别">
+            <button class="level-switch-button" type="button" data-level-switch="lv2">LV2</button>
+            <button class="level-switch-button" type="button" data-level-switch="lv3">LV3</button>
+          </div>
+        </section>
 
         <section class="panel">
           <div class="panel-title">
@@ -75,7 +99,9 @@
                 <span id="teilBadge">Teil</span>
                 <span id="questionBadge">Frage</span>
               </div>
+              <p class="prompt-label" id="promptLabel">Deutsch</p>
               <p class="german-question" id="germanQuestion">Bereit.</p>
+              <div class="paragraph-panel hidden" id="paragraphPanel"></div>
               <div class="answer-grid" id="answerGrid"></div>
             </div>
 
@@ -83,19 +109,22 @@
               <div class="result-line" id="resultLine"></div>
               <dl class="review-grid">
                 <div>
-                  <dt>Antwort</dt>
+                  <dt id="correctAnswerLabel">Antwort</dt>
                   <dd id="correctAnswer">-</dd>
                 </div>
                 <div>
-                  <dt>Deutsch</dt>
+                  <dt id="reviewGermanLabel">Deutsch</dt>
                   <dd id="reviewGerman">-</dd>
                 </div>
                 <div>
-                  <dt>中文</dt>
+                  <dt id="reviewChineseLabel">中文</dt>
                   <dd id="reviewChinese">-</dd>
                 </div>
               </dl>
-              <button class="primary-button next-button" id="nextButton" type="button">下一题</button>
+              <div class="back-actions">
+                <button class="ghost-button miss-button hidden" id="missButton" type="button">不记得</button>
+                <button class="primary-button next-button" id="nextButton" type="button">下一题</button>
+              </div>
             </div>
           </article>
         </div>
@@ -104,6 +133,7 @@
       </section>
     </main>
 
+    <script src="./data/lv2_questions.js"></script>
     <script src="./data/lv3_questions.js"></script>
     <script src="./app.js"></script>
   </body>

@@ -1,7 +1,7 @@
 {
-  "name": "telc LV3 Trainer",
-  "short_name": "LV3 Trainer",
-  "description": "A focused telc C1 Hochschule LV3 practice trainer with offline support.",
+  "name": "telc LV2/LV3 Trainer",
+  "short_name": "telc Trainer",
+  "description": "A focused telc C1 Hochschule LV2 and LV3 practice trainer with offline support.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",

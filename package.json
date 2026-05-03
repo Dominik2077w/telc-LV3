@@ -4,11 +4,12 @@
   "private": true,
   "scripts": {
     "extract:pdf-text": "node scripts/extract-pdf-text.js",
+    "extract:lv2": "python3 scripts/extract-lv2-from-xlsx.py",
     "extract": "node scripts/extract-pdf-text.js && node scripts/extract-lv3-from-pdf.js",
     "extract:ocr": "node scripts/extract-lv3.js",
     "icons": "node scripts/generate-icons.js",
     "build": "node scripts/generate-icons.js && node scripts/build.js",
     "serve": "python3 -m http.server 4173",
-    "check": "node --check app.js && node --check scripts/extract-pdf-text.js && node --check scripts/extract-lv3-from-pdf.js && node --check scripts/extract-lv3.js && node --check scripts/generate-icons.js && node --check scripts/build.js"
+    "check": "node --check app.js && node --check scripts/extract-pdf-text.js && node --check scripts/extract-lv3-from-pdf.js && node --check scripts/extract-lv3.js && node --check scripts/generate-icons.js && node --check scripts/build.js && python3 -m py_compile scripts/extract-lv2-from-xlsx.py"
   }
 }

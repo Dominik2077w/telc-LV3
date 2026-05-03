@@ -1,22 +1,31 @@
-const data = (window.LV3_QUESTIONS || []).map((section) => ({
-  ...section,
-  questions: section.questions.map((question, index) => {
-    const split = splitLanguages(question.text || question.raw || "");
-    const german = question.german || split.german || question.text || question.raw || "";
-    const chinese = question.chinese || split.chinese || "暂无中文释义";
-    return {
-      ...question,
-      id: `${section.teil}-${question.number}-${index}`,
-      teil: section.teil,
-      teilTitle: section.title,
-      german,
-      chinese,
-    };
-  }),
-}));
+const datasets = {
+  lv2: {
+    label: "LV2",
+    title: "LV2 段落卡片 Trainer",
+    source: window.LV2_QUESTIONS || [],
+    promptLabel: "Abschnitt",
+    answerLabel: "对应题项",
+    reviewGermanLabel: "段落大意",
+    reviewChineseLabel: "段落首句",
+    idleText: "选择 LV2 后，按段落 A-E 背第一句、段意和题项。",
+  },
+  lv3: {
+    label: "LV3",
+    title: "LV3 Trainer",
+    source: window.LV3_QUESTIONS || [],
+    promptLabel: "Deutsch",
+    answerLabel: "Antwort",
+    reviewGermanLabel: "Deutsch",
+    reviewChineseLabel: "中文",
+    idleText: "选择 LV3 后，按 Richtig / Falsch / Nicht im Text 练习。",
+  },
+};
+
+let data = [];
 
 const state = {
-  selectedTeils: new Set(data.filter((section) => section.questions.length).map((section) => section.teil)),
+  level: null,
+  selectedTeils: new Set(),
   sessionSource: [],
   queue: [],
   mistakes: [],
@@ -29,6 +38,11 @@ const state = {
 };
 
 const els = {
+  levelGate: document.querySelector("#levelGate"),
+  levelButtons: [...document.querySelectorAll("[data-level-choice]")],
+  levelSwitchButtons: [...document.querySelectorAll("[data-level-switch]")],
+  appTitle: document.querySelector("#appTitle"),
+  appEyebrow: document.querySelector("#appEyebrow"),
   teilList: document.querySelector("#teilList"),
   toggleAllButton: document.querySelector("#toggleAllButton"),
   teilOrder: document.querySelector("#teilOrder"),
@@ -42,14 +56,20 @@ const els = {
   mistakeText: document.querySelector("#mistakeText"),
   teilBadge: document.querySelector("#teilBadge"),
   questionBadge: document.querySelector("#questionBadge"),
+  promptLabel: document.querySelector("#promptLabel"),
   germanQuestion: document.querySelector("#germanQuestion"),
+  paragraphPanel: document.querySelector("#paragraphPanel"),
   answerGrid: document.querySelector("#answerGrid"),
   frontFace: document.querySelector("#frontFace"),
   backFace: document.querySelector("#backFace"),
   resultLine: document.querySelector("#resultLine"),
+  correctAnswerLabel: document.querySelector("#correctAnswerLabel"),
   correctAnswer: document.querySelector("#correctAnswer"),
+  reviewGermanLabel: document.querySelector("#reviewGermanLabel"),
   reviewGerman: document.querySelector("#reviewGerman"),
+  reviewChineseLabel: document.querySelector("#reviewChineseLabel"),
   reviewChinese: document.querySelector("#reviewChinese"),
+  missButton: document.querySelector("#missButton"),
   nextButton: document.querySelector("#nextButton"),
   roundStrip: document.querySelector("#roundStrip"),
 };
@@ -59,12 +79,74 @@ const answerShortcutKeys = {
   ArrowUp: 1,
   ArrowDown: 1,
   ArrowRight: 2,
+  1: 0,
+  2: 1,
+  3: 2,
+  4: 3,
+  5: 4,
+  a: 0,
+  b: 1,
+  c: 2,
+  d: 3,
+  e: 4,
+  A: 0,
+  B: 1,
+  C: 2,
+  D: 3,
+  E: 4,
 };
 
-renderTeilList();
 bindEvents();
+selectLevel("lv3", { keepGate: true });
 renderIdle();
 registerServiceWorker();
+
+function selectLevel(level, options = {}) {
+  state.level = level;
+  data = normalizeSections(level, datasets[level].source);
+  state.selectedTeils = new Set(data.filter((section) => section.questions.length).map((section) => section.teil));
+  state.sessionSource = [];
+  state.queue = [];
+  state.mistakes = [];
+  state.current = null;
+  state.currentIndex = 0;
+  state.round = 0;
+  state.answeredInRound = 0;
+  state.roundMistakes = 0;
+  state.complete = false;
+
+  renderLevelChrome();
+  renderTeilList();
+  renderIdle();
+
+  if (!options.keepGate) {
+    els.levelGate.classList.add("hidden");
+  }
+}
+
+function normalizeSections(level, sections) {
+  return sections.map((section) => {
+    return {
+      ...section,
+      level,
+      questions: section.questions.map((question, index) => {
+        const split = splitLanguages(question.text || question.raw || "");
+        const german = question.german || split.german || question.text || question.raw || "";
+        const chinese = question.chinese || split.chinese || "暂无中文释义";
+        return {
+          ...question,
+          id: `${level}-${section.teil}-${question.number}-${index}`,
+          level,
+          teil: section.teil,
+          teilTitle: section.title,
+          sectionMode: section.mode || "judgement",
+          german,
+          chinese,
+        };
+      }),
+    };
+  });
+}
 
 function splitLanguages(text) {
   const normalized = String(text).replace(/\s+/g, " ").trim();
@@ -77,6 +159,14 @@ function splitLanguages(text) {
 }
 
 function bindEvents() {
+  for (const button of els.levelButtons) {
+    button.addEventListener("click", () => selectLevel(button.dataset.levelChoice));
+  }
+
+  for (const button of els.levelSwitchButtons) {
+    button.addEventListener("click", () => selectLevel(button.dataset.levelSwitch));
+  }
+
   els.toggleAllButton.addEventListener("click", () => {
     const selectable = data.filter((section) => section.questions.length).map((section) => section.teil);
     if (state.selectedTeils.size === selectable.length) {
@@ -89,7 +179,23 @@ function bindEvents() {
 
   els.startButton.addEventListener("click", startSession);
   els.nextButton.addEventListener("click", nextQuestion);
+  els.missButton.addEventListener("click", markFlashcardMissed);
   document.addEventListener("keydown", handleKeyboardNavigation);
+}
+
+function renderLevelChrome() {
+  const config = datasets[state.level];
+  document.title = `telc ${config.label} Trainer`;
+  els.appEyebrow.textContent = "telc C1 Hochschule";
+  els.appTitle.textContent = config.title;
+  els.promptLabel.textContent = config.promptLabel;
+  els.correctAnswerLabel.textContent = config.answerLabel;
+  els.reviewGermanLabel.textContent = config.reviewGermanLabel;
+  els.reviewChineseLabel.textContent = config.reviewChineseLabel;
+
+  for (const button of els.levelSwitchButtons) {
+    button.classList.toggle("active", button.dataset.levelSwitch === state.level);
+  }
 }
 
 function renderTeilList() {
@@ -178,7 +284,11 @@ function finishRound() {
   els.questionBadge.textContent = "0";
   els.germanQuestion.textContent =
     els.roundMode.value === "mistakes" ? "Alle Fragen sind richtig beantwortet." : "Runde abgeschlossen.";
+  els.paragraphPanel.innerHTML = "";
+  els.paragraphPanel.classList.add("hidden");
   els.answerGrid.innerHTML = "";
+  els.missButton.classList.add("hidden");
+  els.nextButton.textContent = "下一题";
   els.frontFace.classList.remove("hidden");
   els.backFace.classList.add("hidden");
   els.roundStrip.textContent =
@@ -189,17 +299,36 @@ function finishRound() {
 function showFront(question) {
   els.frontFace.classList.remove("hidden");
   els.backFace.classList.add("hidden");
-  els.sessionMode.textContent = `${els.teilOrder.value === "random" ? "Teil 随机" : "Teil 顺序"} · ${
-    els.questionOrder.value === "random" ? "题目随机" : "题目顺序"
-  }`;
+  els.sessionMode.textContent = `${datasets[state.level].label} · ${
+    els.teilOrder.value === "random" ? "Teil 随机" : "Teil 顺序"
+  } · ${els.questionOrder.value === "random" ? "题目随机" : "题目顺序"}`;
   els.sessionTitle.textContent = `Teil ${question.teil}: ${question.teilTitle}`;
   els.teilBadge.textContent = `Teil ${question.teil} · ${question.teilTitle}`;
   els.questionBadge.textContent = `Frage ${question.number}`;
-  els.germanQuestion.textContent = question.german;
+  els.germanQuestion.textContent =
+    question.sectionMode === "paragraph-card"
+      ? `${question.paragraph || question.number}. ${question.firstSentence || question.german}`
+      : question.german;
   els.answerGrid.innerHTML = "";
   els.roundStrip.textContent = `Runde ${state.round}`;
 
-  for (const choice of getChoices(question)) {
+  renderParagraphPanel(question);
+
+  if (question.sectionMode === "paragraph-card") {
+    els.questionBadge.textContent = `Abschnitt ${question.paragraph || question.number}`;
+    els.answerGrid.dataset.count = "1";
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "answer-button";
+    button.textContent = "看背面";
+    button.addEventListener("click", revealFlashcard);
+    els.answerGrid.append(button);
+    return;
+  }
+
+  const choices = getChoices(question);
+  els.answerGrid.dataset.count = String(choices.length);
+  for (const choice of choices) {
     const button = document.createElement("button");
     button.type = "button";
     button.className = "answer-button";
@@ -209,6 +338,43 @@ function showFront(question) {
     button.addEventListener("click", () => answerQuestion(choice.value));
     els.answerGrid.append(button);
   }
+}
+
+function renderParagraphPanel(question) {
+  els.paragraphPanel.innerHTML = "";
+
+  if (question.sectionMode !== "paragraph-match") {
+    els.paragraphPanel.classList.add("hidden");
+    return;
+  }
+
+  els.paragraphPanel.classList.remove("hidden");
+  for (const paragraph of question.paragraphs) {
+    const item = document.createElement("div");
+    item.className = "paragraph-option";
+    item.innerHTML = `<strong>${escapeHtml(paragraph.label)}</strong><span>${escapeHtml(
+      paragraph.firstSentence
+    )}</span><em>${escapeHtml(paragraph.summary)}</em>`;
+    els.paragraphPanel.append(item);
+  }
+}
+
+function revealFlashcard() {
+  const question = state.current;
+  state.answeredInRound += 1;
+
+  els.frontFace.classList.add("hidden");
+  els.backFace.classList.remove("hidden");
+  els.resultLine.className = "result-line neutral";
+  els.resultLine.textContent = `Abschnitt ${question.paragraph || question.number}`;
+  els.correctAnswer.textContent = formatLv2Items(question);
+  els.reviewGerman.textContent = question.summary || "暂无段落大意";
+  els.reviewChinese.textContent = question.firstSentence || question.german;
+  els.missButton.classList.remove("hidden");
+  els.nextButton.textContent = "记得，下一张";
+  els.roundStrip.textContent =
+    els.roundMode.value === "mistakes" ? "不熟的段落可以点“不记得”，下一轮重复。" : "当前是单轮练习。";
+  updateStats();
 }
 
 function handleKeyboardNavigation(event) {
@@ -280,48 +446,99 @@ function answerQuestion(choice) {
   }
 
   els.correctAnswer.textContent = correct || "未标注";
-  els.reviewGerman.textContent = question.german;
-  els.reviewChinese.textContent = question.chinese;
+  els.reviewGerman.textContent = getReviewGerman(question);
+  els.reviewChinese.textContent = getReviewChinese(question);
+  els.missButton.classList.add("hidden");
+  els.nextButton.textContent = "下一题";
   els.roundStrip.textContent =
     els.roundMode.value === "mistakes" ? "答错的题会进入下一轮。" : "当前是单轮练习。";
   updateStats();
 }
 
+function markFlashcardMissed() {
+  if (!state.current) return;
+  state.roundMistakes += 1;
+  state.mistakes.push(state.current);
+  els.missButton.classList.add("hidden");
+  els.resultLine.className = "result-line wrong";
+  els.resultLine.textContent = `已加入错题 · Abschnitt ${state.current.paragraph || state.current.number}`;
+  els.roundStrip.textContent = "这一段会进入下一轮。";
+  updateStats();
+}
+
+function getReviewGerman(question) {
+  if (question.sectionMode === "paragraph-match") {
+    return question.firstSentence || "-";
+  }
+  return question.german;
+}
+
+function getReviewChinese(question) {
+  if (question.sectionMode === "paragraph-match") {
+    return question.summary || question.chinese;
+  }
+  return question.chinese;
+}
+
 function updateStats() {
   els.roundNumber.textContent = state.round;
   els.progressText.textContent = state.queue.length
-    ? `${Math.min(state.answeredInRound + (els.backFace.classList.contains("hidden") ? 0 : 0), state.queue.length)}/${state.queue.length}`
+    ? `${Math.min(state.answeredInRound, state.queue.length)}/${state.queue.length}`
     : "0/0";
   els.mistakeText.textContent = state.roundMistakes;
 }
 
 function renderIdle() {
-  els.roundStrip.textContent = "Bereit.";
+  const config = datasets[state.level];
+  els.sessionMode.textContent = "未开始";
+  els.sessionTitle.textContent = "选择 Teil 后开始练习";
+  els.teilBadge.textContent = config.label;
+  els.questionBadge.textContent = "Frage";
+  els.germanQuestion.textContent = config.idleText;
+  els.paragraphPanel.innerHTML = "";
+  els.paragraphPanel.classList.add("hidden");
   els.answerGrid.innerHTML = "";
+  els.missButton.classList.add("hidden");
+  els.nextButton.textContent = "下一题";
+  els.frontFace.classList.remove("hidden");
+  els.backFace.classList.add("hidden");
+  els.roundStrip.textContent = "Bereit.";
+  updateStats();
 }
 
 function getChoices(question) {
+  if (question.options?.length) {
+    return question.options;
+  }
+
   if (["R", "F", "X"].includes(question.answer)) {
     return [
-      { value: "R", label: "Richtig", shortcut: "←" },
-      { value: "F", label: "Falsch", shortcut: "↑ / ↓" },
-      { value: "X", label: "Nicht im Text", shortcut: "→" },
+      { value: "R", label: "Richtig", shortcut: "← / 1" },
+      { value: "F", label: "Falsch", shortcut: "↑ / ↓ / 2" },
+      { value: "X", label: "Nicht im Text", shortcut: "→ / 3" },
     ];
   }
 
   if (question.number === 24 || ["A", "B", "C"].includes(question.answer)) {
     return [
-      { value: "A", label: "A", shortcut: "←" },
-      { value: "B", label: "B", shortcut: "↑ / ↓" },
-      { value: "C", label: "C", shortcut: "→" },
+      { value: "A", label: "A", shortcut: "← / 1" },
+      { value: "B", label: "B", shortcut: "↑ / ↓ / 2" },
+      { value: "C", label: "C", shortcut: "→ / 3" },
     ];
   }
 
   return [
-    { value: "R", label: "Richtig", shortcut: "←" },
-    { value: "F", label: "Falsch", shortcut: "↑ / ↓" },
-    { value: "X", label: "Nicht im Text", shortcut: "→" },
+    { value: "R", label: "Richtig", shortcut: "← / 1" },
+    { value: "F", label: "Falsch", shortcut: "↑ / ↓ / 2" },
+    { value: "X", label: "Nicht im Text", shortcut: "→ / 3" },
   ];
+}
+
+function formatLv2Items(question) {
+  if (!question.items?.length) return "资料未明确给出对应题项";
+  return question.items
+    .map((item) => `${item.number ? `${item.number}. ` : ""}${item.text}`)
+    .join("\n");
 }
 
 function applyOrder(items, mode) {

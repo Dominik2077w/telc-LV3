@@ -1,10 +1,12 @@
-# telc LV3 Trainer
+# telc LV2/LV3 Trainer
 
-A small PWA trainer for telc C1 Hochschule LV3 practice.
+A small PWA trainer for telc C1 Hochschule LV2 and LV3 practice.
 
 ## Features
 
+- Choose LV2 or LV3 on entry
 - Practice by `Teil`
+- LV2 paragraph flashcards with Abschnitt, first sentence, summary, and linked question items
 - Sequential or random order between `Teil`
 - Sequential or random order inside each `Teil`
 - Mistake-only repeat rounds until every question is correct
@@ -16,6 +18,7 @@ A small PWA trainer for telc C1 Hochschule LV3 practice.
 ## Commands
 
 ```bash
+npm run extract:lv2 -- /path/to/LV2-cleaned.xlsx --output data/lv2_questions.js
 npm run extract
 npm run check
 npm run build

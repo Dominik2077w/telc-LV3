@@ -28,10 +28,17 @@ npm run build
 
 ## 更新题库
 
-如果更新了 OCR Markdown：
+如果更新了 LV3 OCR Markdown：
 
 ```bash
 npm run extract
+npm run build
+```
+
+如果更新了 LV2 清洗表格：
+
+```bash
+npm run extract:lv2 -- /path/to/LV2清洗数据.xlsx --output data/lv2_questions.js
 npm run build
 ```
 

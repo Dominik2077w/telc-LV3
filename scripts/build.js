@@ -9,6 +9,7 @@ const files = [
   "app.js",
   "manifest.webmanifest",
   "service-worker.js",
+  "data/lv2_questions.js",
   "data/lv3_questions.js",
   "icons/icon-192.png",
   "icons/icon-512.png",
@@ -24,7 +25,7 @@ function copyFile(relativePath) {
   if (relativePath === "service-worker.js") {
     const content = fs
       .readFileSync(from, "utf8")
-      .replace('const CACHE_VERSION = "lv3-trainer-dev";', `const CACHE_VERSION = "${Date.now()}";`);
+      .replace(/const CACHE_VERSION = ".+?";/, `const CACHE_VERSION = "${Date.now()}";`);
     fs.writeFileSync(to, content);
     return;
   }
