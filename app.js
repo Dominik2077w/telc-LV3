@@ -9,6 +9,16 @@ const datasets = {
     reviewChineseLabel: "段落首句",
     idleText: "选择 LV2 后，按段落 A-E 背第一句、段意和题项。",
   },
+  lv2v2: {
+    label: "LV2-版本2",
+    title: "LV2-版本2 信号句 Trainer",
+    source: window.LV2_V2_QUESTIONS || [],
+    promptLabel: "正面（A-D列）",
+    answerLabel: "背面（E-K列）",
+    reviewGermanLabel: "段落首句",
+    reviewChineseLabel: "判断逻辑",
+    idleText: "选择 LV2-版本2 后，正面看 A-D 列，背面看其余所有列。",
+  },
   lv3: {
     label: "LV3",
     title: "LV3 Trainer",
@@ -284,6 +294,7 @@ function finishRound() {
   els.questionBadge.textContent = "0";
   els.germanQuestion.textContent =
     els.roundMode.value === "mistakes" ? "Alle Fragen sind richtig beantwortet." : "Runde abgeschlossen.";
+  els.germanQuestion.classList.remove("field-question");
   els.paragraphPanel.innerHTML = "";
   els.paragraphPanel.classList.add("hidden");
   els.answerGrid.innerHTML = "";
@@ -306,15 +317,18 @@ function showFront(question) {
   els.teilBadge.textContent = `Teil ${question.teil} · ${question.teilTitle}`;
   els.questionBadge.textContent = `Frage ${question.number}`;
   els.germanQuestion.textContent =
-    question.sectionMode === "paragraph-card"
+    question.frontFields
+      ? formatFields(question.frontFields)
+      : question.sectionMode === "paragraph-card"
       ? `${question.paragraph || question.number}. ${question.firstSentence || question.german}`
       : question.german;
+  els.germanQuestion.classList.toggle("field-question", Boolean(question.frontFields));
   els.answerGrid.innerHTML = "";
   els.roundStrip.textContent = `Runde ${state.round}`;
 
   renderParagraphPanel(question);
 
-  if (question.sectionMode === "paragraph-card") {
+  if (isFlashcard(question)) {
     els.questionBadge.textContent = `Abschnitt ${question.paragraph || question.number}`;
     els.answerGrid.dataset.count = "1";
     const button = document.createElement("button");
@@ -367,9 +381,9 @@ function revealFlashcard() {
   els.backFace.classList.remove("hidden");
   els.resultLine.className = "result-line neutral";
   els.resultLine.textContent = `Abschnitt ${question.paragraph || question.number}`;
-  els.correctAnswer.textContent = formatLv2Items(question);
-  els.reviewGerman.textContent = question.summary || "暂无段落大意";
-  els.reviewChinese.textContent = question.firstSentence || question.german;
+  els.correctAnswer.textContent = question.backFields ? formatFields(question.backFields) : formatLv2Items(question);
+  els.reviewGerman.textContent = question.firstSentence || question.summary || "暂无段落首句";
+  els.reviewChinese.textContent = question.chinese || question.summary || question.german;
   els.missButton.classList.remove("hidden");
   els.missButton.textContent = "不记得，下一张";
   els.nextButton.textContent = "记得，下一张";
@@ -386,7 +400,7 @@ function handleKeyboardNavigation(event) {
   if (!state.current || state.complete) return;
 
   if (els.backFace.classList.contains("hidden")) {
-    if (state.current.sectionMode === "paragraph-card") {
+    if (isFlashcard(state.current)) {
       if (!["ArrowRight", "Enter", " "].includes(event.key)) return;
       if (isNativeButtonKey(event)) return;
       event.preventDefault();
@@ -398,7 +412,7 @@ function handleKeyboardNavigation(event) {
     return;
   }
 
-  if (state.current.sectionMode === "paragraph-card") {
+  if (isFlashcard(state.current)) {
     if (!["ArrowLeft", "ArrowRight"].includes(event.key)) return;
     event.preventDefault();
     if (event.key === "ArrowLeft") {
@@ -518,6 +532,7 @@ function renderIdle() {
   els.teilBadge.textContent = config.label;
   els.questionBadge.textContent = "Frage";
   els.germanQuestion.textContent = config.idleText;
+  els.germanQuestion.classList.remove("field-question");
   els.paragraphPanel.innerHTML = "";
   els.paragraphPanel.classList.add("hidden");
   els.answerGrid.innerHTML = "";
@@ -562,6 +577,17 @@ function formatLv2Items(question) {
   return question.items
     .map((item) => `${item.number ? `${item.number}. ` : ""}${item.text}`)
     .join("\n");
+}
+
+function formatFields(fields) {
+  return fields
+    .filter((field) => field.value)
+    .map((field) => `${field.label}: ${field.value}`)
+    .join("\n");
+}
+
+function isFlashcard(question) {
+  return question.sectionMode === "paragraph-card" || question.sectionMode === "lv2-v2-card";
 }
 
 function applyOrder(items, mode) {

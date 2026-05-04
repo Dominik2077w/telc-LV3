@@ -48,7 +48,7 @@ body {
 
 .level-choice-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
 }
 
@@ -148,7 +148,7 @@ h2 {
 
 .level-switch {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 8px;
 }
 
@@ -365,6 +365,16 @@ select {
   line-height: 1.36;
 }
 
+.german-question.field-question {
+  display: block;
+  min-height: 230px;
+  overflow-wrap: anywhere;
+  white-space: pre-line;
+  font-family: inherit;
+  font-size: 19px;
+  line-height: 1.5;
+}
+
 .prompt-label {
   margin: 22px 0 0;
   color: var(--muted);
@@ -551,6 +561,7 @@ select {
   }
 
   .level-choice-grid,
+  .level-switch,
   .paragraph-panel,
   .answer-grid[data-count="4"],
   .answer-grid[data-count="5"] {

@@ -10,6 +10,7 @@ const files = [
   "manifest.webmanifest",
   "service-worker.js",
   "data/lv2_questions.js",
+  "data/lv2_v2_questions.js",
   "data/lv3_questions.js",
   "icons/icon-192.png",
   "icons/icon-512.png",
