@@ -179,7 +179,7 @@ function bindEvents() {
 
   els.startButton.addEventListener("click", startSession);
   els.nextButton.addEventListener("click", nextQuestion);
-  els.missButton.addEventListener("click", markFlashcardMissed);
+  els.missButton.addEventListener("click", () => markFlashcardMissed({ advance: true }));
   document.addEventListener("keydown", handleKeyboardNavigation);
 }
 
@@ -371,9 +371,12 @@ function revealFlashcard() {
   els.reviewGerman.textContent = question.summary || "暂无段落大意";
   els.reviewChinese.textContent = question.firstSentence || question.german;
   els.missButton.classList.remove("hidden");
+  els.missButton.textContent = "不记得，下一张";
   els.nextButton.textContent = "记得，下一张";
   els.roundStrip.textContent =
-    els.roundMode.value === "mistakes" ? "不熟的段落可以点“不记得”，下一轮重复。" : "当前是单轮练习。";
+    els.roundMode.value === "mistakes"
+      ? "快捷键：← 不记得，→ 记得。不熟的段落会进入下一轮。"
+      : "快捷键：← 不记得，→ 记得。";
   updateStats();
 }
 
@@ -383,7 +386,26 @@ function handleKeyboardNavigation(event) {
   if (!state.current || state.complete) return;
 
   if (els.backFace.classList.contains("hidden")) {
+    if (state.current.sectionMode === "paragraph-card") {
+      if (!["ArrowRight", "Enter", " "].includes(event.key)) return;
+      if (isNativeButtonKey(event)) return;
+      event.preventDefault();
+      revealFlashcard();
+      return;
+    }
+
     handleAnswerShortcut(event);
+    return;
+  }
+
+  if (state.current.sectionMode === "paragraph-card") {
+    if (!["ArrowLeft", "ArrowRight"].includes(event.key)) return;
+    event.preventDefault();
+    if (event.key === "ArrowLeft") {
+      markFlashcardMissed({ advance: true });
+      return;
+    }
+    nextQuestion();
     return;
   }
 
@@ -455,7 +477,7 @@ function answerQuestion(choice) {
   updateStats();
 }
 
-function markFlashcardMissed() {
+function markFlashcardMissed(options = {}) {
   if (!state.current) return;
   state.roundMistakes += 1;
   state.mistakes.push(state.current);
@@ -464,6 +486,7 @@ function markFlashcardMissed() {
   els.resultLine.textContent = `已加入错题 · Abschnitt ${state.current.paragraph || state.current.number}`;
   els.roundStrip.textContent = "这一段会进入下一轮。";
   updateStats();
+  if (options.advance) nextQuestion();
 }
 
 function getReviewGerman(question) {

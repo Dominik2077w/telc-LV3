@@ -7,38 +7,38 @@ window.LV2_QUESTIONS = [
     "questions": [
       {
         "number": "A",
-        "text": "ZumGlück ist da das Bullauge.",
-        "german": "ZumGlück ist da das Bullauge.",
+        "text": "Zum Glück ist da das Bullauge.",
+        "german": "Zum Glück ist da das Bullauge.",
         "chinese": "幸好这里有一扇舷窗。要不是这个圆形小窗，这个房间就真成了所谓的“清静小密室”。",
         "answer": "",
-        "raw": "12.äußertderAutorBedenken?",
+        "raw": "12.äußert der Autor Bedenken?",
         "source": "lv2-xlsx",
         "paragraph": "A",
-        "firstSentence": "ZumGlück ist da das Bullauge.",
+        "firstSentence": "Zum Glück ist da das Bullauge.",
         "summary": "幸好这里有一扇舷窗。要不是这个圆形小窗，这个房间就真成了所谓的“清静小密室”。",
         "items": [
           {
             "number": "12",
-            "text": "äußertderAutorBedenken?"
+            "text": "äußert der Autor Bedenken?"
           }
         ],
         "note": ""
       },
       {
         "number": "B",
-        "text": "AbgewissenGrößenordnungensindSinnfragenangebracht.",
-        "german": "AbgewissenGrößenordnungensindSinnfragenangebracht.",
+        "text": "Ab gewissen Größenordnungen sind Sinnfragen angebracht.",
+        "german": "Ab gewissen Größenordnungen sind Sinnfragen angebracht.",
         "chinese": "当规模达到一定量级，追问“意义”就合适了。去年有三十多万学生以毕业论文完成学业。",
         "answer": "",
-        "raw": "11LiefertderAutorreineFakten?",
+        "raw": "11Liefert der Autor reine Fakten?",
         "source": "lv2-xlsx",
         "paragraph": "B",
-        "firstSentence": "AbgewissenGrößenordnungensindSinnfragenangebracht.",
+        "firstSentence": "Ab gewissen Größenordnungen sind Sinnfragen angebracht.",
         "summary": "当规模达到一定量级，追问“意义”就合适了。去年有三十多万学生以毕业论文完成学业。",
         "items": [
           {
             "number": "11",
-            "text": "LiefertderAutorreineFakten?"
+            "text": "Liefert der Autor reine Fakten?"
           }
         ],
         "note": ""
@@ -49,7 +49,7 @@ window.LV2_QUESTIONS = [
         "german": "Die Ergebnisse mancher Studien, die vor mir auf dem Schreibtisch liegen, sind auf den ersten Blick allerdings dürftig ↪ und beim Lesen kann ich mir nicht immer ein Lächeln verkneifen.",
         "chinese": "科学。摆在我桌上的某些研究成果，乍看确实“单薄”——读的时候我也不时忍不住会心一笑。",
         "answer": "",
-        "raw": "8-Gibt der Autor fremde Einschätzungen wieder?; 10-Amüsieren sich der Autor?",
+        "raw": "8-Gibt der Autor fremde Einschätzungen wieder?; 10-Amüsiert sich der Autor?",
         "source": "lv2-xlsx",
         "paragraph": "C",
         "firstSentence": "Die Ergebnisse mancher Studien, die vor mir auf dem Schreibtisch liegen, sind auf den ersten Blick allerdings dürftig ↪ und beim Lesen kann ich mir nicht immer ein Lächeln verkneifen.",
@@ -61,7 +61,7 @@ window.LV2_QUESTIONS = [
           },
           {
             "number": "10",
-            "text": "Amüsieren sich der Autor?"
+            "text": "Amüsiert sich der Autor?"
           }
         ],
         "note": ""
@@ -72,7 +72,7 @@ window.LV2_QUESTIONS = [
         "german": "Die Universitäten sind verpflichtet, Abschlussarbeiten einige Jahre aufzubewahren, danach werden sie geschreddert.",
         "chinese": "大学有义务把毕业论文保存若干年，之后将其粉碎。我桌上的这些“漏网之鱼”：要么是在某位好心教授的推荐下发表了，要么人们不仅把论文，还把它们的保留期限也忘了。",
         "answer": "",
-        "raw": "Stellt der Autor Vermutungen an ?",
+        "raw": "Stellt der Autor Vermutungen an?",
         "source": "lv2-xlsx",
         "paragraph": "D",
         "firstSentence": "Die Universitäten sind verpflichtet, Abschlussarbeiten einige Jahre aufzubewahren, danach werden sie geschreddert.",
@@ -80,21 +80,21 @@ window.LV2_QUESTIONS = [
         "items": [
           {
             "number": "",
-            "text": "Stellt der Autor Vermutungen an ?"
+            "text": "Stellt der Autor Vermutungen an?"
           }
         ],
         "note": "原资料题项未显示数字或题号识别不完整"
       },
       {
         "number": "E",
-        "text": "Esist Zeit, meine Forschungsfrage zu beantworten: Nein,Abschlussarbeiten ergeben meistens nicht viel Sinn.",
-        "german": "Esist Zeit, meine Forschungsfrage zu beantworten: Nein,Abschlussarbeiten ergeben meistens nicht viel Sinn.",
+        "text": "Es ist Zeit, meine Forschungsfrage zu beantworten: Nein, Abschlussarbeiten ergeben meistens nicht viel Sinn.",
+        "german": "Es ist Zeit, meine Forschungsfrage zu beantworten: Nein, Abschlussarbeiten ergeben meistens nicht viel Sinn.",
         "chinese": "现在是回答我的研究问题的时候了：不，毕业论文大多没有什么“意义”。但它们创造意义。",
         "answer": "",
         "raw": "Spricht der Autor einen Rat aus?",
         "source": "lv2-xlsx",
         "paragraph": "E",
-        "firstSentence": "Esist Zeit, meine Forschungsfrage zu beantworten: Nein,Abschlussarbeiten ergeben meistens nicht viel Sinn.",
+        "firstSentence": "Es ist Zeit, meine Forschungsfrage zu beantworten: Nein, Abschlussarbeiten ergeben meistens nicht viel Sinn.",
         "summary": "现在是回答我的研究问题的时候了：不，毕业论文大多没有什么“意义”。但它们创造意义。",
         "items": [
           {
@@ -128,19 +128,19 @@ window.LV2_QUESTIONS = [
       },
       {
         "number": "B",
-        "text": "DochwelcheBedeutunghabenTräumeeigentlich?",
-        "german": "DochwelcheBedeutunghabenTräumeeigentlich?",
+        "text": "Doch welche Bedeutung haben Träume eigentlich?",
+        "german": "Doch welche Bedeutung haben Träume eigentlich?",
         "chinese": "那么，梦究竟有什么意义呢？我们常常觉得，睡梦中经历的东西包含着重要信息；",
         "answer": "",
-        "raw": "7-äußertdieAutorinBedenken?wirftdieAutorinBedenkenauf.? wirftdieAutorinZweifelauf.? äußertsichdieAutorinabfällig?",
+        "raw": "7-äußert die Autorin Bedenken? Wirft die Autorin Zweifel auf? Äußert sich die Autorin abfällig?",
         "source": "lv2-xlsx",
         "paragraph": "B",
-        "firstSentence": "DochwelcheBedeutunghabenTräumeeigentlich?",
+        "firstSentence": "Doch welche Bedeutung haben Träume eigentlich?",
         "summary": "那么，梦究竟有什么意义呢？我们常常觉得，睡梦中经历的东西包含着重要信息；",
         "items": [
           {
             "number": "7",
-            "text": "äußertdieAutorinBedenken?wirftdieAutorinBedenkenauf.? wirftdieAutorinZweifelauf.? äußertsichdieAutorinabfällig?"
+            "text": "äußert die Autorin Bedenken? Wirft die Autorin Zweifel auf? Äußert sich die Autorin abfällig?"
           }
         ],
         "note": ""
@@ -151,7 +151,7 @@ window.LV2_QUESTIONS = [
         "german": "Tatsächlich ist der Wahrheitsgehalt von Träumen umstritten, und die Geschichte der Traumdeutung ist geprägt von einem jahrzehntelangen Konflikt zwischen Anhängern und Skeptikern.",
         "chinese": "事实上，梦的真实性是有争议的，解梦史被支持者与怀疑者的长期冲突所塑造。围绕梦的“内涵”流传着不同理论，而且常常彼此排斥。",
         "answer": "",
-        "raw": "9-stelltdieAutorinverschiedeneStandpunkteeinanderGegenüber?; 12-ziehtdieAutorineineSchlussfolgerung?",
+        "raw": "9-stellt die Autorin verschiedene Standpunkte einander gegenüber?; 12-zieht die Autorin eine Schlussfolgerung?",
         "source": "lv2-xlsx",
         "paragraph": "C",
         "firstSentence": "Tatsächlich ist der Wahrheitsgehalt von Träumen umstritten, und die Geschichte der Traumdeutung ist geprägt von einem jahrzehntelangen Konflikt zwischen Anhängern und Skeptikern.",
@@ -159,53 +159,53 @@ window.LV2_QUESTIONS = [
         "items": [
           {
             "number": "9",
-            "text": "stelltdieAutorinverschiedeneStandpunkteeinanderGegenüber?"
+            "text": "stellt die Autorin verschiedene Standpunkte einander gegenüber?"
           },
           {
             "number": "12",
-            "text": "ziehtdieAutorineineSchlussfolgerung?"
+            "text": "zieht die Autorin eine Schlussfolgerung?"
           }
         ],
         "note": ""
       },
       {
         "number": "D",
-        "text": "DieseSchwierigkeitkönnteauchdarinbegründet liegen,dassderGegenstandderUntersuchung nurschwerzufassenist.",
-        "german": "DieseSchwierigkeitkönnteauchdarinbegründet liegen,dassderGegenstandderUntersuchung nurschwerzufassenist.",
+        "text": "Diese Schwierigkeit könnte auch darin begründet liegen, dass der Gegenstand der Untersuchung nur schwer zu fassen ist.",
+        "german": "Diese Schwierigkeit könnte auch darin begründet liegen, dass der Gegenstand der Untersuchung nur schwer zu fassen ist.",
         "chinese": "困难也可能在于：研究对象本身难以捉摸。研究者虽能在睡眠中追踪脑活动，但梦本身只发生在头脑中。",
         "answer": "",
-        "raw": "9-liefertdieAutorinDefinition?; 11-äußertderAutoreinenWunsch?",
+        "raw": "9-liefert die Autorin eine Definition?; 11-äußert der Autor einen Wunsch?",
         "source": "lv2-xlsx",
         "paragraph": "D",
-        "firstSentence": "DieseSchwierigkeitkönnteauchdarinbegründet liegen,dassderGegenstandderUntersuchung nurschwerzufassenist.",
+        "firstSentence": "Diese Schwierigkeit könnte auch darin begründet liegen, dass der Gegenstand der Untersuchung nur schwer zu fassen ist.",
         "summary": "困难也可能在于：研究对象本身难以捉摸。研究者虽能在睡眠中追踪脑活动，但梦本身只发生在头脑中。",
         "items": [
           {
             "number": "9",
-            "text": "liefertdieAutorinDefinition?"
+            "text": "liefert die Autorin eine Definition?"
           },
           {
             "number": "11",
-            "text": "äußertderAutoreinenWunsch?"
+            "text": "äußert der Autor einen Wunsch?"
           }
         ],
         "note": ""
       },
       {
         "number": "E",
-        "text": "EineinteressanteSpurverfolgendabeiNeuroforrscher,diebildgebendeVerfahrennutzen,umdas träumendeGehirnzubeobachten.",
-        "german": "EineinteressanteSpurverfolgendabeiNeuroforrscher,diebildgebendeVerfahrennutzen,umdas träumendeGehirnzubeobachten.",
+        "text": "Eine interessante Spur verfolgen dabei Neuroforscher, die bildgebende Verfahren nutzen, um das träumende Gehirn zu beobachten.",
+        "german": "Eine interessante Spur verfolgen dabei Neuroforscher, die bildgebende Verfahren nutzen, um das träumende Gehirn zu beobachten.",
         "chinese": "一条有意思的线索来自利用影像技术观察“做梦中的大脑”的神经科学家。他们得到一个令人惊讶的结果：在有“真相”，也许并没那么重要。",
         "answer": "",
-        "raw": "8-gibtdieAutorineinenRat?",
+        "raw": "8-gibt die Autorin einen Rat?",
         "source": "lv2-xlsx",
         "paragraph": "E",
-        "firstSentence": "EineinteressanteSpurverfolgendabeiNeuroforrscher,diebildgebendeVerfahrennutzen,umdas träumendeGehirnzubeobachten.",
+        "firstSentence": "Eine interessante Spur verfolgen dabei Neuroforscher, die bildgebende Verfahren nutzen, um das träumende Gehirn zu beobachten.",
         "summary": "一条有意思的线索来自利用影像技术观察“做梦中的大脑”的神经科学家。他们得到一个令人惊讶的结果：在有“真相”，也许并没那么重要。",
         "items": [
           {
             "number": "8",
-            "text": "gibtdieAutorineinenRat?"
+            "text": "gibt die Autorin einen Rat?"
           }
         ],
         "note": ""
@@ -276,14 +276,14 @@ window.LV2_QUESTIONS = [
       },
       {
         "number": "D",
-        "text": "Währendich hustendauf dem Sofaliege und übermeinLeben nachdenke,habe ich diesenWerbespotim Kopf, der mir sagt, dass eine erkältete Mutter sich keine Auszeit nimmt, sondern ein Grippemittel, um sich dann glücklich lächelnd wieder ihren täglichen Aufgaben zu widmen.",
-        "german": "Währendich hustendauf dem Sofaliege und übermeinLeben nachdenke,habe ich diesenWerbespotim Kopf, der mir sagt, dass eine erkältete Mutter sich keine Auszeit nimmt, sondern ein Grippemittel, um sich dann glücklich lächelnd wieder ihren täglichen Aufgaben zu widmen.",
+        "text": "Während ich hustend auf dem Sofa liege und über mein Leben nachdenke, habe ich diesen Werbespot im Kopf, der mir sagt, dass eine erkältete Mutter sich keine Auszeit nimmt, sondern ein Grippemittel, um sich dann glücklich lächelnd wieder ihren täglichen Aufgaben zu widmen.",
+        "german": "Während ich hustend auf dem Sofa liege und über mein Leben nachdenke, habe ich diesen Werbespot im Kopf, der mir sagt, dass eine erkältete Mutter sich keine Auszeit nimmt, sondern ein Grippemittel, um sich dann glücklich lächelnd wieder ihren täglichen Aufgaben zu widmen.",
         "chinese": "使像一只相当怪的青蛙也能享受狂欢节，以及她并不会因为我生病就更少叫我妈妈。",
         "answer": "",
         "raw": "9- ist die Autorin nachsichtig mit sich selbst?作者是否对自己宽容/体谅？",
         "source": "lv2-xlsx",
         "paragraph": "D",
-        "firstSentence": "Währendich hustendauf dem Sofaliege und übermeinLeben nachdenke,habe ich diesenWerbespotim Kopf, der mir sagt, dass eine erkältete Mutter sich keine Auszeit nimmt, sondern ein Grippemittel, um sich dann glücklich lächelnd wieder ihren täglichen Aufgaben zu widmen.",
+        "firstSentence": "Während ich hustend auf dem Sofa liege und über mein Leben nachdenke, habe ich diesen Werbespot im Kopf, der mir sagt, dass eine erkältete Mutter sich keine Auszeit nimmt, sondern ein Grippemittel, um sich dann glücklich lächelnd wieder ihren täglichen Aufgaben zu widmen.",
         "summary": "使像一只相当怪的青蛙也能享受狂欢节，以及她并不会因为我生病就更少叫我妈妈。",
         "items": [
           {
@@ -330,7 +330,7 @@ window.LV2_QUESTIONS = [
         "german": "Ein Fernstudium war noch nie eine besonders gesellige Angelegenheit: Schon in der Anfangszeit, kurz nach der Gründung der ersten Fernhochschulen in den siebziger Jahren, hockte man wie der typische einsame gelehrte abends im Studienstübchen, hinter Papierstapeln, die nicht kleiner werden wollten, juristischen oder medizinisches Fachvokabular, Geschichtsdaten oder Formeln pauken, bis der Kopf rauchte, Und wenn alle paar Wochen der Briefträger mit einem großen, schweren, geheimnisvoll wirkenden Paket kam, fragten sich die Nachbarn vielleicht, welchem seltsamen Hobby man wohl nachgehe.",
         "chinese": "函授从来都不太“社交”。七十年代第一批函授高校刚成立时，你就像典型的“孤独学者”一样，晚上蜷在小书房里，脑袋冒烟地死记硬背法律/医学术语、历史数据、公式。",
         "answer": "",
-        "raw": "9- möchte der Autor die Leser unterhalten ?作者是想逗读者/以趣味笔法来呈现吗？",
+        "raw": "9- möchte der Autor die Leser unterhalten?作者是想逗读者/以趣味笔法来呈现吗？",
         "source": "lv2-xlsx",
         "paragraph": "A",
         "firstSentence": "Ein Fernstudium war noch nie eine besonders gesellige Angelegenheit: Schon in der Anfangszeit, kurz nach der Gründung der ersten Fernhochschulen in den siebziger Jahren, hockte man wie der typische einsame gelehrte abends im Studienstübchen, hinter Papierstapeln, die nicht kleiner werden wollten, juristischen oder medizinisches Fachvokabular, Geschichtsdaten oder Formeln pauken, bis der Kopf rauchte, Und wenn alle paar Wochen der Briefträger mit einem großen, schweren, geheimnisvoll wirkenden Paket kam, fragten sich die Nachbarn vielleicht, welchem seltsamen Hobby man wohl nachgehe.",
@@ -338,21 +338,21 @@ window.LV2_QUESTIONS = [
         "items": [
           {
             "number": "9",
-            "text": "möchte der Autor die Leser unterhalten ?作者是想逗读者/以趣味笔法来呈现吗？"
+            "text": "möchte der Autor die Leser unterhalten?作者是想逗读者/以趣味笔法来呈现吗？"
           }
         ],
         "note": ""
       },
       {
         "number": "B",
-        "text": "Diese Zeiten sind zu, Glück schon lange vorbei, doch damals wie heute ist des Fernstudiums, nämlich die räumliche Flexibilität, gleichzeitig sein größte Nachteil: Das einsame Lernen Überfordert viele Fernstudenten.",
-        "german": "Diese Zeiten sind zu, Glück schon lange vorbei, doch damals wie heute ist des Fernstudiums, nämlich die räumliche Flexibilität, gleichzeitig sein größte Nachteil: Das einsame Lernen Überfordert viele Fernstudenten.",
+        "text": "Diese Zeiten sind zum Glück schon lange vorbei, doch damals wie heute ist die Stärke des Fernstudiums, nämlich die räumliche Flexibilität, gleichzeitig sein größter Nachteil: Das einsame Lernen überfordert viele Fernstudenten.",
+        "german": "Diese Zeiten sind zum Glück schon lange vorbei, doch damals wie heute ist die Stärke des Fernstudiums, nämlich die räumliche Flexibilität, gleichzeitig sein größter Nachteil: Das einsame Lernen überfordert viele Fernstudenten.",
         "chinese": "校园真就“金光闪闪”吗？闪?”进一步引出评估。",
         "answer": "",
         "raw": "11- stützt sich der Autor auf eine fremde Autorität?作者是否援引外部权威？",
         "source": "lv2-xlsx",
         "paragraph": "B",
-        "firstSentence": "Diese Zeiten sind zu, Glück schon lange vorbei, doch damals wie heute ist des Fernstudiums, nämlich die räumliche Flexibilität, gleichzeitig sein größte Nachteil: Das einsame Lernen Überfordert viele Fernstudenten.",
+        "firstSentence": "Diese Zeiten sind zum Glück schon lange vorbei, doch damals wie heute ist die Stärke des Fernstudiums, nämlich die räumliche Flexibilität, gleichzeitig sein größter Nachteil: Das einsame Lernen überfordert viele Fernstudenten.",
         "summary": "校园真就“金光闪闪”吗？闪?”进一步引出评估。",
         "items": [
           {
@@ -368,7 +368,7 @@ window.LV2_QUESTIONS = [
         "german": "Einerseits sind die Bedingungen für ein Fernstudium heute natürlich weitaus besser als in den Anfangszeiten.",
         "chinese": "这些日子早已过去；不过直到今天，函授最大的优势——地域灵活——也是最大劣势：孤独学习让很多函授生吃不消。",
         "answer": "",
-        "raw": "12- wird der Autor sentimental ? / Wird der Autor sensibel ?作者是否流露感伤/怀旧？",
+        "raw": "12- wird der Autor sentimental? / Wird der Autor sensibel?作者是否流露感伤/怀旧？",
         "source": "lv2-xlsx",
         "paragraph": "C",
         "firstSentence": "Einerseits sind die Bedingungen für ein Fernstudium heute natürlich weitaus besser als in den Anfangszeiten.",
@@ -376,35 +376,35 @@ window.LV2_QUESTIONS = [
         "items": [
           {
             "number": "12",
-            "text": "wird der Autor sentimental ? / Wird der Autor sensibel ?作者是否流露感伤/怀旧？"
+            "text": "wird der Autor sentimental? / Wird der Autor sensibel?作者是否流露感伤/怀旧？"
           }
         ],
         "note": ""
       },
       {
         "number": "D",
-        "text": "Anders sieht es freilich bei Berufstätigen aus, die schon immer den klassischen Kunde Studienanbieter bildeten.",
-        "german": "Anders sieht es freilich bei Berufstätigen aus, die schon immer den klassischen Kunde Studienanbieter bildeten.",
+        "text": "Anders sieht es freilich bei Berufstätigen aus, die schon immer den klassischen Kunden der Studienanbieter bildeten.",
+        "german": "Anders sieht es freilich bei Berufstätigen aus, die schon immer den klassischen Kunden der Studienanbieter bildeten.",
         "chinese": "本段把前面对函授孤独性的批评限定到在职学习者之外，说明在职者没有线下选择且能体现软技能。",
         "answer": "",
         "raw": "（资料未明确给出/该段可能不作为配题答案）",
         "source": "lv2-xlsx",
         "paragraph": "D",
-        "firstSentence": "Anders sieht es freilich bei Berufstätigen aus, die schon immer den klassischen Kunde Studienanbieter bildeten.",
+        "firstSentence": "Anders sieht es freilich bei Berufstätigen aus, die schon immer den klassischen Kunden der Studienanbieter bildeten.",
         "summary": "本段把前面对函授孤独性的批评限定到在职学习者之外，说明在职者没有线下选择且能体现软技能。",
         "items": [],
         "note": "资料未明确给出对应题项"
       },
       {
         "number": "E",
-        "text": "Auch die Berufstätigen bezahlen ihr Fernstudium und den Erfolg, den sie sich da Einsamkeit: Denn ohneden Rückzug in die Einsamkeit und Stille lässt sich ein solche bewältigen, auch wenn man online mit vielenandern verbunden sein kann.",
-        "german": "Auch die Berufstätigen bezahlen ihr Fernstudium und den Erfolg, den sie sich da Einsamkeit: Denn ohneden Rückzug in die Einsamkeit und Stille lässt sich ein solche bewältigen, auch wenn man online mit vielenandern verbunden sein kann.",
+        "text": "Auch die Berufstätigen bezahlen ihr Fernstudium und den Erfolg, den sie sich da Einsamkeit: Denn ohne den Rückzug in die Einsamkeit und Stille lässt sich ein solche bewältigen, auch wenn man online mit vielen anderen verbunden sein kann.",
+        "german": "Auch die Berufstätigen bezahlen ihr Fernstudium und den Erfolg, den sie sich da Einsamkeit: Denn ohne den Rückzug in die Einsamkeit und Stille lässt sich ein solche bewältigen, auch wenn man online mit vielen anderen verbunden sein kann.",
         "chinese": "不过，对在职人士——他们一直是传统函授的主力客户——情况就不一样了。上文的那些顾虑在这里自然就站不住脚，因为他们没有面授与函授可供二选一的机会。",
         "answer": "",
         "raw": "7- bezieht der Autor entschieden Position? 作者是否鲜明表态/立场明确？; 8- formuliert der Autor eine Warnung?作者是否提出警告？",
         "source": "lv2-xlsx",
         "paragraph": "E",
-        "firstSentence": "Auch die Berufstätigen bezahlen ihr Fernstudium und den Erfolg, den sie sich da Einsamkeit: Denn ohneden Rückzug in die Einsamkeit und Stille lässt sich ein solche bewältigen, auch wenn man online mit vielenandern verbunden sein kann.",
+        "firstSentence": "Auch die Berufstätigen bezahlen ihr Fernstudium und den Erfolg, den sie sich da Einsamkeit: Denn ohne den Rückzug in die Einsamkeit und Stille lässt sich ein solche bewältigen, auch wenn man online mit vielen anderen verbunden sein kann.",
         "summary": "不过，对在职人士——他们一直是传统函授的主力客户——情况就不一样了。上文的那些顾虑在这里自然就站不住脚，因为他们没有面授与函授可供二选一的机会。",
         "items": [
           {
@@ -428,14 +428,14 @@ window.LV2_QUESTIONS = [
     "questions": [
       {
         "number": "A",
-        "text": "Pünktlichkeit ist eine Tugend, der ein ähnliches Schicksal beschieden ist wie den Dinosaurier: Sie ist vom Aussterben bedroht.",
-        "german": "Pünktlichkeit ist eine Tugend, der ein ähnliches Schicksal beschieden ist wie den Dinosaurier: Sie ist vom Aussterben bedroht.",
+        "text": "Pünktlichkeit ist eine Tugend, der ein ähnliches Schicksal beschieden ist wie den Dinosauriern: Sie ist vom Aussterben bedroht.",
+        "german": "Pünktlichkeit ist eine Tugend, der ein ähnliches Schicksal beschieden ist wie den Dinosauriern: Sie ist vom Aussterben bedroht.",
         "chinese": "本段围绕“Akademisches Viertel: Warum ist denn noch niemand da?”展开，重点考察：fordert die Autorin die Leser zur Selbstreflektion auf? 作者是否让读者自我反思？；äußert sich die Autorin negativ über andere?作者是否负面评价他人？",
         "answer": "",
         "raw": "8- fordert die Autorin die Leser zur Selbstreflektion auf? 作者是否让读者自我反思？; 7-äußert sich die Autorin negativ über andere?作者是否负面评价他人？",
         "source": "lv2-xlsx",
         "paragraph": "A",
-        "firstSentence": "Pünktlichkeit ist eine Tugend, der ein ähnliches Schicksal beschieden ist wie den Dinosaurier: Sie ist vom Aussterben bedroht.",
+        "firstSentence": "Pünktlichkeit ist eine Tugend, der ein ähnliches Schicksal beschieden ist wie den Dinosauriern: Sie ist vom Aussterben bedroht.",
         "summary": "本段围绕“Akademisches Viertel: Warum ist denn noch niemand da?”展开，重点考察：fordert die Autorin die Leser zur Selbstreflektion auf? 作者是否让读者自我反思？；äußert sich die Autorin negativ über andere?作者是否负面评价他人？",
         "items": [
           {
@@ -516,28 +516,28 @@ window.LV2_QUESTIONS = [
     "questions": [
       {
         "number": "A",
-        "text": "In der alten Bildungswelt sah Unterricht so aus: Vorn am Pult stand eine allwissende Respektsperson die mindestens ein halbes Leben älter als man selbst war.",
-        "german": "In der alten Bildungswelt sah Unterricht so aus: Vorn am Pult stand eine allwissende Respektsperson die mindestens ein halbes Leben älter als man selbst war.",
+        "text": "In der alten Bildungswelt sah Unterricht so aus: Vorn am Pult stand eine allwissende Respektsperson, die mindestens ein halbes Leben älter als man selbst war.",
+        "german": "In der alten Bildungswelt sah Unterricht so aus: Vorn am Pult stand eine allwissende Respektsperson, die mindestens ein halbes Leben älter als man selbst war.",
         "chinese": "么？”——用心一想，这些关于学习的信条其实很过时。",
         "answer": "",
         "raw": "（资料未明确给出/该段可能不作为配题答案）",
         "source": "lv2-xlsx",
         "paragraph": "A",
-        "firstSentence": "In der alten Bildungswelt sah Unterricht so aus: Vorn am Pult stand eine allwissende Respektsperson die mindestens ein halbes Leben älter als man selbst war.",
+        "firstSentence": "In der alten Bildungswelt sah Unterricht so aus: Vorn am Pult stand eine allwissende Respektsperson, die mindestens ein halbes Leben älter als man selbst war.",
         "summary": "么？”——用心一想，这些关于学习的信条其实很过时。",
         "items": [],
         "note": "资料未明确给出对应题项"
       },
       {
         "number": "B",
-        "text": "So ähnlich erging es mir in einem Seminar an der Hamburg Media School, an der ich ein berufsbegleitendes Master Weiterbildungsstudium absolvierte.",
-        "german": "So ähnlich erging es mir in einem Seminar an der Hamburg Media School, an der ich ein berufsbegleitendes Master Weiterbildungsstudium absolvierte.",
+        "text": "So ähnlich erging es mir in einem Seminar an der Hamburg Media School, an der ich ein berufsbegleitendes Master-Weiterbildungsstudium absolvierte.",
+        "german": "So ähnlich erging es mir in einem Seminar an der Hamburg Media School, an der ich ein berufsbegleitendes Master-Weiterbildungsstudium absolvierte.",
         "chinese": "“旧式”教育里，讲台前是年长、权威的“全知者”，学生只需顺从聆听。虽已过去，但我们脑中仍存这种等发世界解释者”的形象，我们就愿意接受；",
         "answer": "",
         "raw": "8 schildert der Autor seine persönlichen Erfahrungen? 作者是否在叙述个人经历？",
         "source": "lv2-xlsx",
         "paragraph": "B",
-        "firstSentence": "So ähnlich erging es mir in einem Seminar an der Hamburg Media School, an der ich ein berufsbegleitendes Master Weiterbildungsstudium absolvierte.",
+        "firstSentence": "So ähnlich erging es mir in einem Seminar an der Hamburg Media School, an der ich ein berufsbegleitendes Master-Weiterbildungsstudium absolvierte.",
         "summary": "“旧式”教育里，讲台前是年长、权威的“全知者”，学生只需顺从聆听。虽已过去，但我们脑中仍存这种等发世界解释者”的形象，我们就愿意接受；",
         "items": [
           {
@@ -549,14 +549,14 @@ window.LV2_QUESTIONS = [
       },
       {
         "number": "C",
-        "text": "Die Gründe dafür sind klar: Das Wissen ändert sich auf vielen Gebieten so schnell wie nie zuvor, es wird kleinteiliger und diverser-teilweise mit sehr kurzen Innovationszyklen.",
-        "german": "Die Gründe dafür sind klar: Das Wissen ändert sich auf vielen Gebieten so schnell wie nie zuvor, es wird kleinteiliger und diverser-teilweise mit sehr kurzen Innovationszyklen.",
+        "text": "Die Gründe dafür sind klar: Das Wissen ändert sich auf vielen Gebieten so schnell wie nie zuvor, es wird kleinteiliger und diverser - teilweise mit sehr kurzen Innovationszyklen.",
+        "german": "Die Gründe dafür sind klar: Das Wissen ändert sich auf vielen Gebieten so schnell wie nie zuvor, es wird kleinteiliger und diverser - teilweise mit sehr kurzen Innovationszyklen.",
         "chinese": "传统的学习角色模式已经过去？",
         "answer": "",
         "raw": "10 stützt der Autor seine Argumentation durch Rückgriff auf eine Autorität?作者是否通过诉诸权威来",
         "source": "lv2-xlsx",
         "paragraph": "C",
-        "firstSentence": "Die Gründe dafür sind klar: Das Wissen ändert sich auf vielen Gebieten so schnell wie nie zuvor, es wird kleinteiliger und diverser-teilweise mit sehr kurzen Innovationszyklen.",
+        "firstSentence": "Die Gründe dafür sind klar: Das Wissen ändert sich auf vielen Gebieten so schnell wie nie zuvor, es wird kleinteiliger und diverser - teilweise mit sehr kurzen Innovationszyklen.",
         "summary": "传统的学习角色模式已经过去？",
         "items": [
           {
@@ -568,14 +568,14 @@ window.LV2_QUESTIONS = [
       },
       {
         "number": "D",
-        "text": "Kevin Weyerjedenfalls hat das verinnerlicht.",
-        "german": "Kevin Weyerjedenfalls hat das verinnerlicht.",
+        "text": "Kevin Weyer jedenfalls hat das verinnerlicht.",
+        "german": "Kevin Weyer jedenfalls hat das verinnerlicht.",
         "chinese": "支撑论证？（土哥答案，GPT：没有引用具体权威/研究者/机构，本题不选请考生自行判断）知识更新前所未有地快、更碎片更多样；",
         "answer": "",
         "raw": "7 liefert der Autor eine Definition?作者是否给出定义？",
         "source": "lv2-xlsx",
         "paragraph": "D",
-        "firstSentence": "Kevin Weyerjedenfalls hat das verinnerlicht.",
+        "firstSentence": "Kevin Weyer jedenfalls hat das verinnerlicht.",
         "summary": "支撑论证？（土哥答案，GPT：没有引用具体权威/研究者/机构，本题不选请考生自行判断）知识更新前所未有地快、更碎片更多样；",
         "items": [
           {
@@ -685,19 +685,19 @@ window.LV2_QUESTIONS = [
       },
       {
         "number": "E",
-        "text": "SoskeptischWissenschaftlerdasPhänomenderMondglaubigkeitauchsehenmögen-das InteresseandemHimmelskörperistnachwievorsehrgroß.",
-        "german": "SoskeptischWissenschaftlerdasPhänomenderMondglaubigkeitauchsehenmögen-das InteresseandemHimmelskörperistnachwievorsehrgroß.",
+        "text": "So skeptisch Wissenschaftler das Phänomen der Mondgläubigkeit auch sehen mögen - das Interesse an dem Himmelskörper ist nach wie vor sehr groß.",
+        "german": "So skeptisch Wissenschaftler das Phänomen der Mondgläubigkeit auch sehen mögen - das Interesse an dem Himmelskörper ist nach wie vor sehr groß.",
         "chinese": "连珠设问+„offeneFragen…weiterverfolgensollte”＝典型启发思考/引导反思的语篇策略。即便科学家对“相信月亮”的现象再如何怀疑，公众对这颗天体的兴趣依旧……",
         "answer": "",
-        "raw": "9möchtederAutorzumNachdenkenanregen?作者是否意在引发读者思考？",
+        "raw": "9möchte der Autor zum Nachdenken anregen?作者是否意在引发读者思考？",
         "source": "lv2-xlsx",
         "paragraph": "E",
-        "firstSentence": "SoskeptischWissenschaftlerdasPhänomenderMondglaubigkeitauchsehenmögen-das InteresseandemHimmelskörperistnachwievorsehrgroß.",
+        "firstSentence": "So skeptisch Wissenschaftler das Phänomen der Mondgläubigkeit auch sehen mögen - das Interesse an dem Himmelskörper ist nach wie vor sehr groß.",
         "summary": "连珠设问+„offeneFragen…weiterverfolgensollte”＝典型启发思考/引导反思的语篇策略。即便科学家对“相信月亮”的现象再如何怀疑，公众对这颗天体的兴趣依旧……",
         "items": [
           {
             "number": "9",
-            "text": "möchtederAutorzumNachdenkenanregen?作者是否意在引发读者思考？"
+            "text": "möchte der Autor zum Nachdenken anregen?作者是否意在引发读者思考？"
           }
         ],
         "note": ""
@@ -731,14 +731,14 @@ window.LV2_QUESTIONS = [
       },
       {
         "number": "B",
-        "text": "Ja, ich gebe zu: Ich bin leicht zufriedenzu stellen.",
-        "german": "Ja, ich gebe zu: Ich bin leicht zufriedenzu stellen.",
+        "text": "Ja, ich gebe zu: Ich bin leicht zufrieden zu stellen.",
+        "german": "Ja, ich gebe zu: Ich bin leicht zufrieden zu stellen.",
         "chinese": "多处第一人称直陈（ichgebe zu/ mir schmecken … / stört es mich），先表个人偏好与容忍，再表反感之处＝明确的个人立场陈述。是的，我承认：我很容易……",
         "answer": "",
         "raw": "legt die Autorin ihre persönliche Haltung dar?作者是否陈述了自己的个人立场？",
         "source": "lv2-xlsx",
         "paragraph": "B",
-        "firstSentence": "Ja, ich gebe zu: Ich bin leicht zufriedenzu stellen.",
+        "firstSentence": "Ja, ich gebe zu: Ich bin leicht zufrieden zu stellen.",
         "summary": "多处第一人称直陈（ichgebe zu/ mir schmecken … / stört es mich），先表个人偏好与容忍，再表反感之处＝明确的个人立场陈述。是的，我承认：我很容易……",
         "items": [
           {
@@ -750,14 +750,14 @@ window.LV2_QUESTIONS = [
       },
       {
         "number": "C",
-        "text": "Das Heimwerken solle das GIücksempfinden erhöhen, die zwischen Mensch und Arbeit überwinden, dem Klima guttun und den Konsum eindämmen: Solche Behauptungen hört man immer wieder.",
-        "german": "Das Heimwerken solle das GIücksempfinden erhöhen, die zwischen Mensch und Arbeit überwinden, dem Klima guttun und den Konsum eindämmen: Solche Behauptungen hört man immer wieder.",
+        "text": "Das Heimwerken solle das Glücksempfinden erhöhen, die zwischen Mensch und Arbeit überwinden, dem Klima guttun und den Konsum eindämmen: Solche Behauptungen hört man immer wieder.",
+        "german": "Das Heimwerken solle das Glücksempfinden erhöhen, die zwischen Mensch und Arbeit überwinden, dem Klima guttun und den Konsum eindämmen: Solche Behauptungen hört man immer wieder.",
         "chinese": "比较：“像锤子和钉子一样”＝典型明喻，说明手作与购买相伴。静）。呼吁：命令/劝告式句型„Schaltet mal einen Gang herunter!“＝明确的Appell（别把期……",
         "answer": "",
         "raw": "arbeitet die Autorin mit einem Vergleich? 作者是否使用了比较/比喻？",
         "source": "lv2-xlsx",
         "paragraph": "C",
-        "firstSentence": "Das Heimwerken solle das GIücksempfinden erhöhen, die zwischen Mensch und Arbeit überwinden, dem Klima guttun und den Konsum eindämmen: Solche Behauptungen hört man immer wieder.",
+        "firstSentence": "Das Heimwerken solle das Glücksempfinden erhöhen, die zwischen Mensch und Arbeit überwinden, dem Klima guttun und den Konsum eindämmen: Solche Behauptungen hört man immer wieder.",
         "summary": "比较：“像锤子和钉子一样”＝典型明喻，说明手作与购买相伴。静）。呼吁：命令/劝告式句型„Schaltet mal einen Gang herunter!“＝明确的Appell（别把期……",
         "items": [
           {
@@ -769,14 +769,14 @@ window.LV2_QUESTIONS = [
       },
       {
         "number": "D",
-        "text": "Doch warum ist das Heimwerken eigentlich zum Trend geworden, nachdem es lange Zeit gar nicht mehr gefragt war Sicher ist: Wer im Beruf tagein, tagaus am Computer sitzt und sich oft in den visuellen Welten des Internets und der sozialen Meaien bewegt, sehnt sich irgendwann nach einem Ausgleich.",
-        "german": "Doch warum ist das Heimwerken eigentlich zum Trend geworden, nachdem es lange Zeit gar nicht mehr gefragt war Sicher ist: Wer im Beruf tagein, tagaus am Computer sitzt und sich oft in den visuellen Welten des Internets und der sozialen Meaien bewegt, sehnt sich irgendwann nach einem Ausgleich.",
+        "text": "Doch warum ist das Heimwerken eigentlich zum Trend geworden, nachdem es lange Zeit gar nicht mehr gefragt war. Sicher ist: Wer im Beruf tagein, tagaus am Computer sitzt und sich oft in den visuellen Welten des Internets und der sozialen Medien bewegt, sehnt sich irgendwann nach einem Ausgleich.",
+        "german": "Doch warum ist das Heimwerken eigentlich zum Trend geworden, nachdem es lange Zeit gar nicht mehr gefragt war. Sicher ist: Wer im Beruf tagein, tagaus am Computer sitzt und sich oft in den visuellen Welten des Internets und der sozialen Medien bewegt, sehnt sich irgendwann nach einem Ausgleich.",
         "chinese": "直接援引神经生物学家Hüther的“论断/假说”来支撑解释＝诉诸权威。为何手作在沉寂多时后又成了潮流？",
         "answer": "",
         "raw": "argumentiert die Autorin mit Hilfe einer fremden Autorität?作者是否借助外部权威进行论证？",
         "source": "lv2-xlsx",
         "paragraph": "D",
-        "firstSentence": "Doch warum ist das Heimwerken eigentlich zum Trend geworden, nachdem es lange Zeit gar nicht mehr gefragt war Sicher ist: Wer im Beruf tagein, tagaus am Computer sitzt und sich oft in den visuellen Welten des Internets und der sozialen Meaien bewegt, sehnt sich irgendwann nach einem Ausgleich.",
+        "firstSentence": "Doch warum ist das Heimwerken eigentlich zum Trend geworden, nachdem es lange Zeit gar nicht mehr gefragt war. Sicher ist: Wer im Beruf tagein, tagaus am Computer sitzt und sich oft in den visuellen Welten des Internets und der sozialen Medien bewegt, sehnt sich irgendwann nach einem Ausgleich.",
         "summary": "直接援引神经生物学家Hüther的“论断/假说”来支撑解释＝诉诸权威。为何手作在沉寂多时后又成了潮流？",
         "items": [
           {
@@ -937,14 +937,14 @@ window.LV2_QUESTIONS = [
       },
       {
         "number": "C",
-        "text": "Was in den Texten zu dem Thema nicht mal am Rande erwähnt wird, Es gibt auch Menschen, die aus voller Überzeugung und ganz bewusst allein ins Restaurant geht und Es gibticht, wed sie es mussten oder dort zwingend Kontakt suchten.",
-        "german": "Was in den Texten zu dem Thema nicht mal am Rande erwähnt wird, Es gibt auch Menschen, die aus voller Überzeugung und ganz bewusst allein ins Restaurant geht und Es gibticht, wed sie es mussten oder dort zwingend Kontakt suchten.",
+        "text": "Was in den Texten zu dem Thema nicht mal am Rande erwähnt wird: Es gibt auch Menschen, die aus voller Überzeugung und ganz bewusst allein ins Restaurant gehen und es gibt sie nicht, weil sie es müssen oder dort zwingend Kontakt suchten.",
+        "german": "Was in den Texten zu dem Thema nicht mal am Rande erwähnt wird: Es gibt auch Menschen, die aus voller Überzeugung und ganz bewusst allein ins Restaurant gehen und es gibt sie nicht, weil sie es müssen oder dort zwingend Kontakt suchten.",
         "chinese": "文本几乎没提到：也有人出于坚定选择独自去餐馆——不是被迫、也不是为社交，而是因为独处本就是生活的一部分，与“孤独”无关。作者自认就是这样的“独自用餐者”：性格内向、喜安静、靠独处充电；",
         "answer": "",
         "raw": "10. Legt der Autor seine eigenen Beweggründe dar?作者是否阐明了自己的动机？",
         "source": "lv2-xlsx",
         "paragraph": "C",
-        "firstSentence": "Was in den Texten zu dem Thema nicht mal am Rande erwähnt wird, Es gibt auch Menschen, die aus voller Überzeugung und ganz bewusst allein ins Restaurant geht und Es gibticht, wed sie es mussten oder dort zwingend Kontakt suchten.",
+        "firstSentence": "Was in den Texten zu dem Thema nicht mal am Rande erwähnt wird: Es gibt auch Menschen, die aus voller Überzeugung und ganz bewusst allein ins Restaurant gehen und es gibt sie nicht, weil sie es müssen oder dort zwingend Kontakt suchten.",
         "summary": "文本几乎没提到：也有人出于坚定选择独自去餐馆——不是被迫、也不是为社交，而是因为独处本就是生活的一部分，与“孤独”无关。作者自认就是这样的“独自用餐者”：性格内向、喜安静、靠独处充电；",
         "items": [
           {
@@ -991,7 +991,7 @@ window.LV2_QUESTIONS = [
         "german": "Vor Kurzem hat mir eine gute Bekannte, nennen wir sie mal Elke, ihre neuesten Errungenschaften vorgeführt: eine ganze Kollektion nachhaltiger Kleidung, aus Bio-Baumwolle und veganem Leder.",
         "chinese": "直出“verwunderlich”“verblüfftes Stirnrunzeln”（惊诧/诧异）信号。朋友Elke给我看她新买的一堆“可持续时尚”（有机棉、纯素皮革）。",
         "answer": "",
-        "raw": "11-In welchem Abschnitt zeigt sich die Autorin erstaunt ? 在哪一段作者表现出惊讶？",
+        "raw": "11-In welchem Abschnitt zeigt sich die Autorin erstaunt? 在哪一段作者表现出惊讶？",
         "source": "lv2-xlsx",
         "paragraph": "A",
         "firstSentence": "Vor Kurzem hat mir eine gute Bekannte, nennen wir sie mal Elke, ihre neuesten Errungenschaften vorgeführt: eine ganze Kollektion nachhaltiger Kleidung, aus Bio-Baumwolle und veganem Leder.",
@@ -999,64 +999,64 @@ window.LV2_QUESTIONS = [
         "items": [
           {
             "number": "11",
-            "text": "In welchem Abschnitt zeigt sich die Autorin erstaunt ? 在哪一段作者表现出惊讶？"
+            "text": "In welchem Abschnitt zeigt sich die Autorin erstaunt? 在哪一段作者表现出惊讶？"
           }
         ],
         "note": ""
       },
       {
         "number": "B",
-        "text": "Doch wie kann Konsum überhaupt Umweltbewusstsein?",
-        "german": "Doch wie kann Konsum überhaupt Umweltbewusstsein?",
+        "text": "Doch wie kann Konsum überhaupt Umweltbewusstsein ausdrücken?",
+        "german": "Doch wie kann Konsum überhaupt Umweltbewusstsein ausdrücken?",
         "chinese": "在哪一段作者用数据与事实论证？消费如何能体现环保意识？这岂不是自相矛盾？",
         "answer": "",
-        "raw": "12-In welchem Abschnitt argumentiert die Autorin mit Zahlen und Fakten ?",
+        "raw": "12-In welchem Abschnitt argumentiert die Autorin mit Zahlen und Fakten?",
         "source": "lv2-xlsx",
         "paragraph": "B",
-        "firstSentence": "Doch wie kann Konsum überhaupt Umweltbewusstsein?",
+        "firstSentence": "Doch wie kann Konsum überhaupt Umweltbewusstsein ausdrücken?",
         "summary": "在哪一段作者用数据与事实论证？消费如何能体现环保意识？这岂不是自相矛盾？",
         "items": [
           {
             "number": "12",
-            "text": "In welchem Abschnitt argumentiert die Autorin mit Zahlen und Fakten ?"
+            "text": "In welchem Abschnitt argumentiert die Autorin mit Zahlen und Fakten?"
           }
         ],
         "note": ""
       },
       {
         "number": "C",
-        "text": "Käufe– so nachhaltig die Produkte auch sein mögen– der Umwelt in jedem Falle eher schaden als nützen.",
-        "german": "Käufe– so nachhaltig die Produkte auch sein mögen– der Umwelt in jedem Falle eher schaden als nützen.",
+        "text": "Käufe - so nachhaltig die Produkte auch sein mögen– der Umwelt in jedem Falle eher schaden als nützen.",
+        "german": "Käufe - so nachhaltig die Produkte auch sein mögen– der Umwelt in jedem Falle eher schaden als nützen.",
         "chinese": "多修补）无论产品多“可持续”，购买总体上更可能伤害而非有益于环境。与其给“买买买”涂绿，不如用更好的方式做出生态贡献。",
         "answer": "",
-        "raw": "7-In welchem Abschnitt zieht die Autorin eine Schlussfolgerung ?",
+        "raw": "7-In welchem Abschnitt zieht die Autorin eine Schlussfolgerung?",
         "source": "lv2-xlsx",
         "paragraph": "C",
-        "firstSentence": "Käufe– so nachhaltig die Produkte auch sein mögen– der Umwelt in jedem Falle eher schaden als nützen.",
+        "firstSentence": "Käufe - so nachhaltig die Produkte auch sein mögen– der Umwelt in jedem Falle eher schaden als nützen.",
         "summary": "多修补）无论产品多“可持续”，购买总体上更可能伤害而非有益于环境。与其给“买买买”涂绿，不如用更好的方式做出生态贡献。",
         "items": [
           {
             "number": "7",
-            "text": "In welchem Abschnitt zieht die Autorin eine Schlussfolgerung ?"
+            "text": "In welchem Abschnitt zieht die Autorin eine Schlussfolgerung?"
           }
         ],
         "note": ""
       },
       {
         "number": "D",
-        "text": "Damit keine Missverständnisse aufkommen: Natürlich ist gegen den Kauf umweltfreundlich produzierter Waren nichts einzuwenden– sofern dieser wirklich notwendig ist.",
-        "german": "Damit keine Missverständnisse aufkommen: Natürlich ist gegen den Kauf umweltfreundlich produzierter Waren nichts einzuwenden– sofern dieser wirklich notwendig ist.",
+        "text": "Damit keine Missverständnisse aufkommen: Natürlich ist gegen den Kauf umweltfreundlich produzierter Waren nichts einzuwenden - sofern dieser wirklich notwendig ist.",
+        "german": "Damit keine Missverständnisse aufkommen: Natürlich ist gegen den Kauf umweltfreundlich produzierter Waren nichts einzuwenden - sofern dieser wirklich notwendig ist.",
         "chinese": "避免误会：必要的环保产品购买当然没问题。我本人重视公平生产、拒绝廉价快时尚、只买耐穿的高质量衣物。",
         "answer": "",
-        "raw": "9-In welchem Abschnitt erläutert die Autorin ihre persönliche Haltung ?",
+        "raw": "9-In welchem Abschnitt erläutert die Autorin ihre persönliche Haltung?",
         "source": "lv2-xlsx",
         "paragraph": "D",
-        "firstSentence": "Damit keine Missverständnisse aufkommen: Natürlich ist gegen den Kauf umweltfreundlich produzierter Waren nichts einzuwenden– sofern dieser wirklich notwendig ist.",
+        "firstSentence": "Damit keine Missverständnisse aufkommen: Natürlich ist gegen den Kauf umweltfreundlich produzierter Waren nichts einzuwenden - sofern dieser wirklich notwendig ist.",
         "summary": "避免误会：必要的环保产品购买当然没问题。我本人重视公平生产、拒绝廉价快时尚、只买耐穿的高质量衣物。",
         "items": [
           {
             "number": "9",
-            "text": "In welchem Abschnitt erläutert die Autorin ihre persönliche Haltung ?"
+            "text": "In welchem Abschnitt erläutert die Autorin ihre persönliche Haltung?"
           }
         ],
         "note": ""
@@ -1067,7 +1067,7 @@ window.LV2_QUESTIONS = [
         "german": "Immerhin, bei den Unternehmen ist inzwischen die Erkenntnis angekommen, dass exzessivem Konsum nicht das allerbeste Image anhaftet.",
         "chinese": "至少企业已意识到：过度消费形象不佳。但似乎也难以引发广泛转变——这很可惜。",
         "answer": "",
-        "raw": "8-In welchem Abschnitt äußert die Autorin Bedauern ?",
+        "raw": "8-In welchem Abschnitt äußert die Autorin Bedauern?",
         "source": "lv2-xlsx",
         "paragraph": "E",
         "firstSentence": "Immerhin, bei den Unternehmen ist inzwischen die Erkenntnis angekommen, dass exzessivem Konsum nicht das allerbeste Image anhaftet.",
@@ -1075,7 +1075,7 @@ window.LV2_QUESTIONS = [
         "items": [
           {
             "number": "8",
-            "text": "In welchem Abschnitt äußert die Autorin Bedauern ?"
+            "text": "In welchem Abschnitt äußert die Autorin Bedauern?"
           }
         ],
         "note": ""
@@ -1090,28 +1090,28 @@ window.LV2_QUESTIONS = [
     "questions": [
       {
         "number": "A",
-        "text": "Man konnte so beginnen: die folgenden Untersuchung handelt von der interaktiven Desintegration Von Rollendtrukturen und Handlungswissen in minimalen Organisation.",
-        "german": "Man konnte so beginnen: die folgenden Untersuchung handelt von der interaktiven Desintegration Von Rollendtrukturen und Handlungswissen in minimalen Organisation.",
+        "text": "Man könnte so beginnen: Die folgende Untersuchung handelt von der interaktiven Desintegration von Rollenstrukturen und Handlungswissen in minimalen Organisationen.",
+        "german": "Man könnte so beginnen: Die folgende Untersuchung handelt von der interaktiven Desintegration von Rollenstrukturen und Handlungswissen in minimalen Organisationen.",
         "chinese": "作者用两种完全不同的开头对比科学论文语言：一种晦涩学术，一种像故事，从而引出科学表达的可读性问题。",
         "answer": "",
         "raw": "（资料未明确给出/该段可能不作为配题答案）",
         "source": "lv2-xlsx",
         "paragraph": "A",
-        "firstSentence": "Man konnte so beginnen: die folgenden Untersuchung handelt von der interaktiven Desintegration Von Rollendtrukturen und Handlungswissen in minimalen Organisation.",
+        "firstSentence": "Man könnte so beginnen: Die folgende Untersuchung handelt von der interaktiven Desintegration von Rollenstrukturen und Handlungswissen in minimalen Organisationen.",
         "summary": "作者用两种完全不同的开头对比科学论文语言：一种晦涩学术，一种像故事，从而引出科学表达的可读性问题。",
         "items": [],
         "note": "资料未明确给出对应题项"
       },
       {
         "number": "B",
-        "text": "Veröffentlicht hat den Text der amerikanische Soziologie Karl E.",
-        "german": "Veröffentlicht hat den Text der amerikanische Soziologie Karl E.",
+        "text": "Veröffentlicht hat den Text der amerikanische Soziologe Karl E.",
+        "german": "Veröffentlicht hat den Text der amerikanische Soziologe Karl E.",
         "chinese": "好喝。但为什么恰有两个人能坚持来训练？”——这样更好，像小说开头。",
         "answer": "",
         "raw": "7- spricht der Autor eine Warnung aus?作者是否发出警示？„Gefahr, dass … den Stil verderben“（明确",
         "source": "lv2-xlsx",
         "paragraph": "B",
-        "firstSentence": "Veröffentlicht hat den Text der amerikanische Soziologie Karl E.",
+        "firstSentence": "Veröffentlicht hat den Text der amerikanische Soziologe Karl E.",
         "summary": "好喝。但为什么恰有两个人能坚持来训练？”——这样更好，像小说开头。",
         "items": [
           {
@@ -1123,19 +1123,19 @@ window.LV2_QUESTIONS = [
       },
       {
         "number": "C",
-        "text": "Zwar gibt es Disziplin, die besonders anfällig dafür sind, alltägliche Einsichten nur wissenschaftlich umzuformulieren.",
-        "german": "Zwar gibt es Disziplin, die besonders anfällig dafür sind, alltägliche Einsichten nur wissenschaftlich umzuformulieren.",
+        "text": "Zwar gibt es Disziplinen, die besonders anfällig dafür sind, alltägliche Einsichten nur wissenschaftlich umzuformulieren.",
+        "german": "Zwar gibt es Disziplinen, die besonders anfällig dafür sind, alltägliche Einsichten nur wissenschaftlich umzuformulieren.",
         "chinese": "Eichinger 的判断与抱怨。思想复杂且特异，不能用过于简单的语言解释；",
         "answer": "",
-        "raw": "10- gibt der Autor eine fremde Einschätzung wieder ?是否转述他人/专家的看法？多处直接引用",
+        "raw": "10- gibt der Autor eine fremde Einschätzung wieder?是否转述他人/专家的看法？多处直接引用",
         "source": "lv2-xlsx",
         "paragraph": "C",
-        "firstSentence": "Zwar gibt es Disziplin, die besonders anfällig dafür sind, alltägliche Einsichten nur wissenschaftlich umzuformulieren.",
+        "firstSentence": "Zwar gibt es Disziplinen, die besonders anfällig dafür sind, alltägliche Einsichten nur wissenschaftlich umzuformulieren.",
         "summary": "Eichinger 的判断与抱怨。思想复杂且特异，不能用过于简单的语言解释；",
         "items": [
           {
             "number": "10",
-            "text": "gibt der Autor eine fremde Einschätzung wieder ?是否转述他人/专家的看法？多处直接引用"
+            "text": "gibt der Autor eine fremde Einschätzung wieder?是否转述他人/专家的看法？多处直接引用"
           }
         ],
         "note": ""
@@ -1146,7 +1146,7 @@ window.LV2_QUESTIONS = [
         "german": "Doch haben solche Kritiker überhaupt Recht?",
         "chinese": "可理解性与严肃性可以兼得，并指出“复杂语言还可能更不精确”。",
         "answer": "",
-        "raw": "12- entkräftet der Autor einen Einwand ?/ hat der Autor eine besondere Position berücksichtigt ?",
+        "raw": "12- entkräftet der Autor einen Einwand?/ hat der Autor eine besondere Position berücksichtigt?",
         "source": "lv2-xlsx",
         "paragraph": "D",
         "firstSentence": "Doch haben solche Kritiker überhaupt Recht?",
@@ -1154,26 +1154,26 @@ window.LV2_QUESTIONS = [
         "items": [
           {
             "number": "12",
-            "text": "entkräftet der Autor einen Einwand ?/ hat der Autor eine besondere Position berücksichtigt ?"
+            "text": "entkräftet der Autor einen Einwand?/ hat der Autor eine besondere Position berücksichtigt?"
           }
         ],
         "note": ""
       },
       {
         "number": "E",
-        "text": "Betrachtet man aber das Gesamtbild, lässt sich nur folgern: wer etwa im Studium nur Solche Perlen lesen möchte, wird es nicht bis zum Abschluss schaffen.",
-        "german": "Betrachtet man aber das Gesamtbild, lässt sich nur folgern: wer etwa im Studium nur Solche Perlen lesen möchte, wird es nicht bis zum Abschluss schaffen.",
+        "text": "Betrachtet man aber das Gesamtbild, lässt sich nur folgern: Wer etwa im Studium nur solche Perlen lesen möchte, wird es nicht bis zum Abschluss schaffen.",
+        "german": "Betrachtet man aber das Gesamtbild, lässt sich nur folgern: Wer etwa im Studium nur solche Perlen lesen möchte, wird es nicht bis zum Abschluss schaffen.",
         "chinese": "但这些批评者就一定对吗？复杂、名词化主导的语言不仅不易懂，往往也不精确：内容浮泛、难以把握，因而逃避讨论。",
         "answer": "",
-        "raw": "9- zieht der Autor einen Schluss ? 是否作出结论？„lässt sich nur folgern“ 明确的归结。; 11- äußert der Autor einen Wunsch?是否表达愿望？„schön wäre es, wenn …“ 标准愿望式句型。",
+        "raw": "9- zieht der Autor einen Schluss? 是否作出结论？„lässt sich nur folgern“ 明确的归结。; 11- äußert der Autor einen Wunsch?是否表达愿望？„schön wäre es, wenn …“ 标准愿望式句型。",
         "source": "lv2-xlsx",
         "paragraph": "E",
-        "firstSentence": "Betrachtet man aber das Gesamtbild, lässt sich nur folgern: wer etwa im Studium nur Solche Perlen lesen möchte, wird es nicht bis zum Abschluss schaffen.",
+        "firstSentence": "Betrachtet man aber das Gesamtbild, lässt sich nur folgern: Wer etwa im Studium nur solche Perlen lesen möchte, wird es nicht bis zum Abschluss schaffen.",
         "summary": "但这些批评者就一定对吗？复杂、名词化主导的语言不仅不易懂，往往也不精确：内容浮泛、难以把握，因而逃避讨论。",
         "items": [
           {
             "number": "9",
-            "text": "zieht der Autor einen Schluss ? 是否作出结论？„lässt sich nur folgern“ 明确的归结。"
+            "text": "zieht der Autor einen Schluss? 是否作出结论？„lässt sich nur folgern“ 明确的归结。"
           },
           {
             "number": "11",
@@ -1192,80 +1192,80 @@ window.LV2_QUESTIONS = [
     "questions": [
       {
         "number": "A",
-        "text": "NeulichsaßichnachmittagsanderUniineinerVorlesungundhörteplötzlich,wiemeinPhonevibrierte.",
-        "german": "NeulichsaßichnachmittagsanderUniineinerVorlesungundhörteplötzlich,wiemeinPhonevibrierte.",
+        "text": "Neulich saß ich nachmittags an der Uni in einer Vorlesung und hörte plötzlich, wie mein iPhone vibrierte.",
+        "german": "Neulich saß ich nachmittags an der Uni in einer Vorlesung und hörte plötzlich, wie mein iPhone vibrierte.",
         "chinese": "本段围绕“Rufmichnichtan”展开，重点考察：suchtdieAutorinbeidenLesernnachZustimmung?",
         "answer": "",
-        "raw": "12-suchtdieAutorinbeidenLesernnachZustimmung?",
+        "raw": "12-sucht die Autorin bei den Lesern nach Zustimmung?",
         "source": "lv2-xlsx",
         "paragraph": "A",
-        "firstSentence": "NeulichsaßichnachmittagsanderUniineinerVorlesungundhörteplötzlich,wiemeinPhonevibrierte.",
+        "firstSentence": "Neulich saß ich nachmittags an der Uni in einer Vorlesung und hörte plötzlich, wie mein iPhone vibrierte.",
         "summary": "本段围绕“Rufmichnichtan”展开，重点考察：suchtdieAutorinbeidenLesernnachZustimmung?",
         "items": [
           {
             "number": "12",
-            "text": "suchtdieAutorinbeidenLesernnachZustimmung?"
+            "text": "sucht die Autorin bei den Lesern nach Zustimmung?"
           }
         ],
         "note": ""
       },
       {
         "number": "B",
-        "text": "DochwarumistmeineAbneigunggegendasTelefonierensostark?",
-        "german": "DochwarumistmeineAbneigunggegendasTelefonierensostark?",
+        "text": "Doch warum ist meine Abneigung gegen das Telefonieren so stark?",
+        "german": "Doch warum ist meine Abneigung gegen das Telefonieren so stark?",
         "chinese": "本段围绕“Rufmichnichtan”展开，重点考察：bringtdieAutorinVergleichean?",
         "answer": "",
-        "raw": "8-bringtdieAutorinVergleichean?",
+        "raw": "8-bringt die Autorin Vergleiche an?",
         "source": "lv2-xlsx",
         "paragraph": "B",
-        "firstSentence": "DochwarumistmeineAbneigunggegendasTelefonierensostark?",
+        "firstSentence": "Doch warum ist meine Abneigung gegen das Telefonieren so stark?",
         "summary": "本段围绕“Rufmichnichtan”展开，重点考察：bringtdieAutorinVergleichean?",
         "items": [
           {
             "number": "8",
-            "text": "bringtdieAutorinVergleichean?"
+            "text": "bringt die Autorin Vergleiche an?"
           }
         ],
         "note": ""
       },
       {
         "number": "C",
-        "text": "WennichüberdasheutigeKommunikationsverhaltennachdenke,fälltmirallerdingseinmerkwürdiger Widerspruchauf:Istesniechterstaunlich,dassalleständigeinGerätmitsichherumtrgen,dasursprünglichin ersterLiniezumTelefonierengedachtwar-abergeradedieseFunktionimmerwenigergenutztwird?",
-        "german": "WennichüberdasheutigeKommunikationsverhaltennachdenke,fälltmirallerdingseinmerkwürdiger Widerspruchauf:Istesniechterstaunlich,dassalleständigeinGerätmitsichherumtrgen,dasursprünglichin ersterLiniezumTelefonierengedachtwar-abergeradedieseFunktionimmerwenigergenutztwird?",
+        "text": "Wenn ich über das heutige Kommunikationsverhalten nachdenke, fällt mir allerdings ein merkwürdiger Widerspruch auf: Ist es nicht erstaunlich, dass alle ständig ein Gerät mit sich herumtragen, das ursprünglich in erster Linie zum Telefonieren gedacht war - aber gerade diese Funktion immer weniger genutzt wird?",
+        "german": "Wenn ich über das heutige Kommunikationsverhalten nachdenke, fällt mir allerdings ein merkwürdiger Widerspruch auf: Ist es nicht erstaunlich, dass alle ständig ein Gerät mit sich herumtragen, das ursprünglich in erster Linie zum Telefonieren gedacht war - aber gerade diese Funktion immer weniger genutzt wird?",
         "chinese": "本段围绕“Rufmichnichtan”展开，重点考察：drücktdieAutorinVerwunderungaus?；lädtdieAutorindieLeserzueinemgedanklichenExperimentein?",
         "answer": "",
-        "raw": "9-drücktdieAutorinVerwunderungaus?; 10-lädtdieAutorindieLeserzueinemgedanklichenExperimentein?",
+        "raw": "9-drückt die Autorin Verwunderung aus?; 10-lädt die Autorin die Leser zu einem gedanklichen Experiment ein?",
         "source": "lv2-xlsx",
         "paragraph": "C",
-        "firstSentence": "WennichüberdasheutigeKommunikationsverhaltennachdenke,fälltmirallerdingseinmerkwürdiger Widerspruchauf:Istesniechterstaunlich,dassalleständigeinGerätmitsichherumtrgen,dasursprünglichin ersterLiniezumTelefonierengedachtwar-abergeradedieseFunktionimmerwenigergenutztwird?",
+        "firstSentence": "Wenn ich über das heutige Kommunikationsverhalten nachdenke, fällt mir allerdings ein merkwürdiger Widerspruch auf: Ist es nicht erstaunlich, dass alle ständig ein Gerät mit sich herumtragen, das ursprünglich in erster Linie zum Telefonieren gedacht war - aber gerade diese Funktion immer weniger genutzt wird?",
         "summary": "本段围绕“Rufmichnichtan”展开，重点考察：drücktdieAutorinVerwunderungaus?；lädtdieAutorindieLeserzueinemgedanklichenExperimentein?",
         "items": [
           {
             "number": "9",
-            "text": "drücktdieAutorinVerwunderungaus?"
+            "text": "drückt die Autorin Verwunderung aus?"
           },
           {
             "number": "10",
-            "text": "lädtdieAutorindieLeserzueinemgedanklichenExperimentein?"
+            "text": "lädt die Autorin die Leser zu einem gedanklichen Experiment ein?"
           }
         ],
         "note": ""
       },
       {
         "number": "D",
-        "text": "MitmeinerAbnerigunggegendasTelefonierensteheichübrigensnichtalleineda.",
-        "german": "MitmeinerAbnerigunggegendasTelefonierensteheichübrigensnichtalleineda.",
+        "text": "Mit meiner Abneigung gegen das Telefonieren stehe ich übrigens nicht allein da.",
+        "german": "Mit meiner Abneigung gegen das Telefonieren stehe ich übrigens nicht allein da.",
         "chinese": "本段围绕“Rufmichnichtan”展开，重点考察：beruft sich die Autirin auf die Eindvhätzungen von Fachleuten?",
         "answer": "",
-        "raw": "7-beruft sich die Autirin auf die Eindvhätzungen von Fachleuten?",
+        "raw": "7-beruft sich die Autorin auf die Einschätzungen von Fachleuten?",
         "source": "lv2-xlsx",
         "paragraph": "D",
-        "firstSentence": "MitmeinerAbnerigunggegendasTelefonierensteheichübrigensnichtalleineda.",
+        "firstSentence": "Mit meiner Abneigung gegen das Telefonieren stehe ich übrigens nicht allein da.",
         "summary": "本段围绕“Rufmichnichtan”展开，重点考察：beruft sich die Autirin auf die Eindvhätzungen von Fachleuten?",
         "items": [
           {
             "number": "7",
-            "text": "beruft sich die Autirin auf die Eindvhätzungen von Fachleuten?"
+            "text": "beruft sich die Autorin auf die Einschätzungen von Fachleuten?"
           }
         ],
         "note": ""
@@ -1282,13 +1282,13 @@ window.LV2_QUESTIONS = [
         "number": "A",
         "text": "Vor Präsentationen gibt es an der Uni kein Entkommen.",
         "german": "Vor Präsentationen gibt es an der Uni kein Entkommen.",
-        "chinese": "本段围绕“PRÄSENTATIONEN AN DERUNI:LANGEWEILEGARANTIERT”展开，重点考察：definiert der Autor einen Beginn?；will der Autor unterhalten?",
+        "chinese": "本段围绕“PRÄSENTATIONEN AN DERUNI: LANGEWEILEGARANTIERT”展开，重点考察：definiert der Autor einen Beginn?；will der Autor unterhalten?",
         "answer": "",
         "raw": "9, definiert der Autor einen Beginn?; 7, will der Autor unterhalten?",
         "source": "lv2-xlsx",
         "paragraph": "A",
         "firstSentence": "Vor Präsentationen gibt es an der Uni kein Entkommen.",
-        "summary": "本段围绕“PRÄSENTATIONEN AN DERUNI:LANGEWEILEGARANTIERT”展开，重点考察：definiert der Autor einen Beginn?；will der Autor unterhalten?",
+        "summary": "本段围绕“PRÄSENTATIONEN AN DERUNI: LANGEWEILEGARANTIERT”展开，重点考察：definiert der Autor einen Beginn?；will der Autor unterhalten?",
         "items": [
           {
             "number": "9",
@@ -1305,13 +1305,13 @@ window.LV2_QUESTIONS = [
         "number": "B",
         "text": "Eigentlich wissen es alle: Der Nutzen solcher Präsentationen ist minimal, und in vielen Fällen sind sie sogar kontraproduktiv.",
         "german": "Eigentlich wissen es alle: Der Nutzen solcher Präsentationen ist minimal, und in vielen Fällen sind sie sogar kontraproduktiv.",
-        "chinese": "本段围绕“PRÄSENTATIONEN AN DERUNI:LANGEWEILEGARANTIERT”展开，重点考察：äußert des Autor Verunderung?",
+        "chinese": "本段围绕“PRÄSENTATIONEN AN DERUNI: LANGEWEILEGARANTIERT”展开，重点考察：äußert des Autor Verunderung?",
         "answer": "",
         "raw": "8. äußert des Autor Verunderung?",
         "source": "lv2-xlsx",
         "paragraph": "B",
         "firstSentence": "Eigentlich wissen es alle: Der Nutzen solcher Präsentationen ist minimal, und in vielen Fällen sind sie sogar kontraproduktiv.",
-        "summary": "本段围绕“PRÄSENTATIONEN AN DERUNI:LANGEWEILEGARANTIERT”展开，重点考察：äußert des Autor Verunderung?",
+        "summary": "本段围绕“PRÄSENTATIONEN AN DERUNI: LANGEWEILEGARANTIERT”展开，重点考察：äußert des Autor Verunderung?",
         "items": [
           {
             "number": "8",
@@ -1324,13 +1324,13 @@ window.LV2_QUESTIONS = [
         "number": "C",
         "text": "Doch warum sind die Folien so beliebt?",
         "german": "Doch warum sind die Folien so beliebt?",
-        "chinese": "本段围绕“PRÄSENTATIONEN AN DERUNI:LANGEWEILEGARANTIERT”展开，重点考察：sucht der Autor nach Erklärungen?",
+        "chinese": "本段围绕“PRÄSENTATIONEN AN DERUNI: LANGEWEILEGARANTIERT”展开，重点考察：sucht der Autor nach Erklärungen?",
         "answer": "",
         "raw": "12, sucht der Autor nach Erklärungen?",
         "source": "lv2-xlsx",
         "paragraph": "C",
         "firstSentence": "Doch warum sind die Folien so beliebt?",
-        "summary": "本段围绕“PRÄSENTATIONEN AN DERUNI:LANGEWEILEGARANTIERT”展开，重点考察：sucht der Autor nach Erklärungen?",
+        "summary": "本段围绕“PRÄSENTATIONEN AN DERUNI: LANGEWEILEGARANTIERT”展开，重点考察：sucht der Autor nach Erklärungen?",
         "items": [
           {
             "number": "12",
@@ -1343,13 +1343,13 @@ window.LV2_QUESTIONS = [
         "number": "D",
         "text": "Zu ergänzen ist noch, dass Präsentationen eine Gefahr mit sich bringen, die oft verkannt wird: Sie bieten die perfekte Tarnung für Unsicherheit, inhaltliche Leere und fehlendes Wissen.",
         "german": "Zu ergänzen ist noch, dass Präsentationen eine Gefahr mit sich bringen, die oft verkannt wird: Sie bieten die perfekte Tarnung für Unsicherheit, inhaltliche Leere und fehlendes Wissen.",
-        "chinese": "本段围绕“PRÄSENTATIONEN AN DERUNI:LANGEWEILEGARANTIERT”展开，重点考察：spricht der Autor eine Warnung aus?",
+        "chinese": "本段围绕“PRÄSENTATIONEN AN DERUNI: LANGEWEILEGARANTIERT”展开，重点考察：spricht der Autor eine Warnung aus?",
         "answer": "",
         "raw": "11, spricht der Autor eine Warnung aus?",
         "source": "lv2-xlsx",
         "paragraph": "D",
         "firstSentence": "Zu ergänzen ist noch, dass Präsentationen eine Gefahr mit sich bringen, die oft verkannt wird: Sie bieten die perfekte Tarnung für Unsicherheit, inhaltliche Leere und fehlendes Wissen.",
-        "summary": "本段围绕“PRÄSENTATIONEN AN DERUNI:LANGEWEILEGARANTIERT”展开，重点考察：spricht der Autor eine Warnung aus?",
+        "summary": "本段围绕“PRÄSENTATIONEN AN DERUNI: LANGEWEILEGARANTIERT”展开，重点考察：spricht der Autor eine Warnung aus?",
         "items": [
           {
             "number": "11",
@@ -1362,13 +1362,13 @@ window.LV2_QUESTIONS = [
         "number": "E",
         "text": "Dennoch: Einen Weg zurück gibt es nicht, und Präsentationen sind aus dem Uni-Alltag nicht mehr wegzudenken.",
         "german": "Dennoch: Einen Weg zurück gibt es nicht, und Präsentationen sind aus dem Uni-Alltag nicht mehr wegzudenken.",
-        "chinese": "本段围绕“PRÄSENTATIONEN AN DERUNI:LANGEWEILEGARANTIERT”展开，重点考察：gibt der Autor eine Empfehlung?",
+        "chinese": "本段围绕“PRÄSENTATIONEN AN DERUNI: LANGEWEILEGARANTIERT”展开，重点考察：gibt der Autor eine Empfehlung?",
         "answer": "",
         "raw": "10, gibt der Autor eine Empfehlung?",
         "source": "lv2-xlsx",
         "paragraph": "E",
         "firstSentence": "Dennoch: Einen Weg zurück gibt es nicht, und Präsentationen sind aus dem Uni-Alltag nicht mehr wegzudenken.",
-        "summary": "本段围绕“PRÄSENTATIONEN AN DERUNI:LANGEWEILEGARANTIERT”展开，重点考察：gibt der Autor eine Empfehlung?",
+        "summary": "本段围绕“PRÄSENTATIONEN AN DERUNI: LANGEWEILEGARANTIERT”展开，重点考察：gibt der Autor eine Empfehlung?",
         "items": [
           {
             "number": "10",
@@ -1387,14 +1387,14 @@ window.LV2_QUESTIONS = [
     "questions": [
       {
         "number": "A",
-        "text": "Eltern können anstrengenden sein.",
-        "german": "Eltern können anstrengenden sein.",
+        "text": "Eltern können anstrengend sein.",
+        "german": "Eltern können anstrengend sein.",
         "chinese": "本段围绕“Eltern von heute”展开，重点考察：möchte die Autorin durch eine sachliche Definition informieren?；bringt die Autorin Erstaunen zum Ausdruck?",
         "answer": "",
         "raw": "10- möchte die Autorin durch eine sachliche Definition informieren?; 12- bringt die Autorin Erstaunen zum Ausdruck?",
         "source": "lv2-xlsx",
         "paragraph": "A",
-        "firstSentence": "Eltern können anstrengenden sein.",
+        "firstSentence": "Eltern können anstrengend sein.",
         "summary": "本段围绕“Eltern von heute”展开，重点考察：möchte die Autorin durch eine sachliche Definition informieren?；bringt die Autorin Erstaunen zum Ausdruck?",
         "items": [
           {
@@ -1412,17 +1412,17 @@ window.LV2_QUESTIONS = [
         "number": "B",
         "text": "Etwa die von dem Siebtklässler, der mit zwei Mädchen ins Kino gehen wollte.",
         "german": "Etwa die von dem Siebtklässler, der mit zwei Mädchen ins Kino gehen wollte.",
-        "chinese": "本段围绕“Eltern von heute”展开，重点考察：möchte die Autorin zur Belustigung beitragen ?",
+        "chinese": "本段围绕“Eltern von heute”展开，重点考察：möchte die Autorin zur Belustigung beitragen?",
         "answer": "",
-        "raw": "9- möchte die Autorin zur Belustigung beitragen ?",
+        "raw": "9- möchte die Autorin zur Belustigung beitragen?",
         "source": "lv2-xlsx",
         "paragraph": "B",
         "firstSentence": "Etwa die von dem Siebtklässler, der mit zwei Mädchen ins Kino gehen wollte.",
-        "summary": "本段围绕“Eltern von heute”展开，重点考察：möchte die Autorin zur Belustigung beitragen ?",
+        "summary": "本段围绕“Eltern von heute”展开，重点考察：möchte die Autorin zur Belustigung beitragen?",
         "items": [
           {
             "number": "9",
-            "text": "möchte die Autorin zur Belustigung beitragen ?"
+            "text": "möchte die Autorin zur Belustigung beitragen?"
           }
         ],
         "note": ""
@@ -1431,17 +1431,17 @@ window.LV2_QUESTIONS = [
         "number": "C",
         "text": "Wichtig ist, die Kinder Fehler machen zu lassen.",
         "german": "Wichtig ist, die Kinder Fehler machen zu lassen.",
-        "chinese": "本段围绕“Eltern von heute”展开，重点考察：spricht die Autorin eine Empfehlung ?",
+        "chinese": "本段围绕“Eltern von heute”展开，重点考察：spricht die Autorin eine Empfehlung?",
         "answer": "",
-        "raw": "7- spricht die Autorin eine Empfehlung ?",
+        "raw": "7- spricht die Autorin eine Empfehlung?",
         "source": "lv2-xlsx",
         "paragraph": "C",
         "firstSentence": "Wichtig ist, die Kinder Fehler machen zu lassen.",
-        "summary": "本段围绕“Eltern von heute”展开，重点考察：spricht die Autorin eine Empfehlung ?",
+        "summary": "本段围绕“Eltern von heute”展开，重点考察：spricht die Autorin eine Empfehlung?",
         "items": [
           {
             "number": "7",
-            "text": "spricht die Autorin eine Empfehlung ?"
+            "text": "spricht die Autorin eine Empfehlung?"
           }
         ],
         "note": ""
@@ -1462,15 +1462,15 @@ window.LV2_QUESTIONS = [
       },
       {
         "number": "E",
-        "text": "Doch Hand aufs Herz,wer hat sich nicht schon mal selbstdabei ertappt, wie er es mit der Fürsorge übertreibt?",
-        "german": "Doch Hand aufs Herz,wer hat sich nicht schon mal selbstdabei ertappt, wie er es mit der Fürsorge übertreibt?",
-        "chinese": "本段围绕“Eltern von heute”展开，重点考察：möchte die Autorin zur Selbstreflexionanregen?；drückt die Autorin Bewunderung aus ?",
+        "text": "Doch Hand aufs Herz, wer hat sich nicht schon mal selbst dabei ertappt, wie er es mit der Fürsorge übertreibt?",
+        "german": "Doch Hand aufs Herz, wer hat sich nicht schon mal selbst dabei ertappt, wie er es mit der Fürsorge übertreibt?",
+        "chinese": "本段围绕“Eltern von heute”展开，重点考察：möchte die Autorin zur Selbstreflexionanregen?；drückt die Autorin Bewunderung aus?",
         "answer": "",
-        "raw": "8-möchte die Autorin zur Selbstreflexionanregen?; 11-drückt die Autorin Bewunderung aus ?",
+        "raw": "8-möchte die Autorin zur Selbstreflexionanregen?; 11-drückt die Autorin Bewunderung aus?",
         "source": "lv2-xlsx",
         "paragraph": "E",
-        "firstSentence": "Doch Hand aufs Herz,wer hat sich nicht schon mal selbstdabei ertappt, wie er es mit der Fürsorge übertreibt?",
-        "summary": "本段围绕“Eltern von heute”展开，重点考察：möchte die Autorin zur Selbstreflexionanregen?；drückt die Autorin Bewunderung aus ?",
+        "firstSentence": "Doch Hand aufs Herz, wer hat sich nicht schon mal selbst dabei ertappt, wie er es mit der Fürsorge übertreibt?",
+        "summary": "本段围绕“Eltern von heute”展开，重点考察：möchte die Autorin zur Selbstreflexionanregen?；drückt die Autorin Bewunderung aus?",
         "items": [
           {
             "number": "8",
@@ -1478,7 +1478,7 @@ window.LV2_QUESTIONS = [
           },
           {
             "number": "11",
-            "text": "drückt die Autorin Bewunderung aus ?"
+            "text": "drückt die Autorin Bewunderung aus?"
           }
         ],
         "note": ""
@@ -1512,14 +1512,14 @@ window.LV2_QUESTIONS = [
       },
       {
         "number": "B",
-        "text": "Beispiele gefällig etwa die von dem Siebtklässler, der mit zwei Mädchen ins Kino gehen wollte.",
-        "german": "Beispiele gefällig etwa die von dem Siebtklässler, der mit zwei Mädchen ins Kino gehen wollte.",
+        "text": "Beispiele gefällig? Etwa die von dem Siebtklässler, der mit zwei Mädchen ins Kino gehen wollte.",
+        "german": "Beispiele gefällig? Etwa die von dem Siebtklässler, der mit zwei Mädchen ins Kino gehen wollte.",
         "chinese": "的）群体现象，并带有调侃、滑稽的意味？需要例子吗？比如那个想和两个女孩去看电影的七年级男孩。",
         "answer": "",
         "raw": "12-Die Autorin gibt Erstaunt? Erstaunen Ausdruck ？作者是否表达了惊讶、震惊或不可思议？",
         "source": "lv2-xlsx",
         "paragraph": "B",
-        "firstSentence": "Beispiele gefällig etwa die von dem Siebtklässler, der mit zwei Mädchen ins Kino gehen wollte.",
+        "firstSentence": "Beispiele gefällig? Etwa die von dem Siebtklässler, der mit zwei Mädchen ins Kino gehen wollte.",
         "summary": "的）群体现象，并带有调侃、滑稽的意味？需要例子吗？比如那个想和两个女孩去看电影的七年级男孩。",
         "items": [
           {
@@ -1531,28 +1531,28 @@ window.LV2_QUESTIONS = [
       },
       {
         "number": "C",
-        "text": "Verschieben Sie die Deutscharbeit- mein Sohn hat Geburtstag!",
-        "german": "Verschieben Sie die Deutscharbeit- mein Sohn hat Geburtstag!",
+        "text": "Verschieben Sie die Deutscharbeit - mein Sohn hat Geburtstag!",
+        "german": "Verschieben Sie die Deutscharbeit - mein Sohn hat Geburtstag!",
         "chinese": "本段借记者收集的“直升机父母”案例，说明一些父母甚至干预孩子的报告、职业培训和大学生活。",
         "answer": "",
         "raw": "（资料未明确给出/该段可能不作为配题答案）",
         "source": "lv2-xlsx",
         "paragraph": "C",
-        "firstSentence": "Verschieben Sie die Deutscharbeit- mein Sohn hat Geburtstag!",
+        "firstSentence": "Verschieben Sie die Deutscharbeit - mein Sohn hat Geburtstag!",
         "summary": "本段借记者收集的“直升机父母”案例，说明一些父母甚至干预孩子的报告、职业培训和大学生活。",
         "items": [],
         "note": "资料未明确给出对应题项"
       },
       {
         "number": "D",
-        "text": "wann der erste Elternabend „Jeder muss mal scheitern, braucht mal ein aufgeschürftes Knie\", sagt Padtberg, selbst Mutter.",
-        "german": "wann der erste Elternabend „Jeder muss mal scheitern, braucht mal ein aufgeschürftes Knie\", sagt Padtberg, selbst Mutter.",
+        "text": "Wann der erste Elternabend „Jeder muss mal scheitern, braucht mal ein aufgeschürftes Knie\", sagt Padtberg, selbst Mutter.",
+        "german": "Wann der erste Elternabend „Jeder muss mal scheitern, braucht mal ein aufgeschürftes Knie\", sagt Padtberg, selbst Mutter.",
         "chinese": "“每个人都必须经历失败，也需要一次擦破的膝盖。”Padtberg（她自己也是母亲）这样说。",
         "answer": "",
         "raw": "7- gibt die Autorin ein Rat wieder? Empfehlung 作者是否转述了某种建议或推荐？",
         "source": "lv2-xlsx",
         "paragraph": "D",
-        "firstSentence": "wann der erste Elternabend „Jeder muss mal scheitern, braucht mal ein aufgeschürftes Knie\", sagt Padtberg, selbst Mutter.",
+        "firstSentence": "Wann der erste Elternabend „Jeder muss mal scheitern, braucht mal ein aufgeschürftes Knie\", sagt Padtberg, selbst Mutter.",
         "summary": "“每个人都必须经历失败，也需要一次擦破的膝盖。”Padtberg（她自己也是母亲）这样说。",
         "items": [
           {
@@ -1564,14 +1564,14 @@ window.LV2_QUESTIONS = [
       },
       {
         "number": "E",
-        "text": "Eine coole Rabenmutter Auch Padtberg und Greiner räumenim Schlusswort ihres Buches ein,dass die meisten Eltern in Ordnung sind.",
-        "german": "Eine coole Rabenmutter Auch Padtberg und Greiner räumenim Schlusswort ihres Buches ein,dass die meisten Eltern in Ordnung sind.",
+        "text": "Eine coole Rabenmutter? Auch Padtberg und Greiner räumen im Schlusswort ihres Buches ein, dass die meisten Eltern in Ordnung sind.",
+        "german": "Eine coole Rabenmutter? Auch Padtberg und Greiner räumen im Schlusswort ihres Buches ein, dass die meisten Eltern in Ordnung sind.",
         "chinese": "在书的结尾，Padtberg和Greiner也承认，大多数父母其实都没问题。Padtberg试图保持冷静，即使冒着被称为“冷漠母亲”的风险——比如孩子摔倒时，她不会随身携带顺势疗法或偏……",
         "answer": "",
-        "raw": "8-gibt die Autorin eine Selbstreflexion? 作者是否进行了自我反思？; 11- gibt die Autorin eine Bewunderung ?作者是否表达了赞赏、敬佩或钦佩之情？",
+        "raw": "8-gibt die Autorin eine Selbstreflexion? 作者是否进行了自我反思？; 11- gibt die Autorin eine Bewunderung?作者是否表达了赞赏、敬佩或钦佩之情？",
         "source": "lv2-xlsx",
         "paragraph": "E",
-        "firstSentence": "Eine coole Rabenmutter Auch Padtberg und Greiner räumenim Schlusswort ihres Buches ein,dass die meisten Eltern in Ordnung sind.",
+        "firstSentence": "Eine coole Rabenmutter? Auch Padtberg und Greiner räumen im Schlusswort ihres Buches ein, dass die meisten Eltern in Ordnung sind.",
         "summary": "在书的结尾，Padtberg和Greiner也承认，大多数父母其实都没问题。Padtberg试图保持冷静，即使冒着被称为“冷漠母亲”的风险——比如孩子摔倒时，她不会随身携带顺势疗法或偏……",
         "items": [
           {
@@ -1580,7 +1580,7 @@ window.LV2_QUESTIONS = [
           },
           {
             "number": "11",
-            "text": "gibt die Autorin eine Bewunderung ?作者是否表达了赞赏、敬佩或钦佩之情？"
+            "text": "gibt die Autorin eine Bewunderung?作者是否表达了赞赏、敬佩或钦佩之情？"
           }
         ],
         "note": ""
@@ -1671,14 +1671,14 @@ window.LV2_QUESTIONS = [
       },
       {
         "number": "E",
-        "text": "Dass sich das Verhalten eines Beifahrers so schwer vorhersehbar auf den Fahrer, seine Fahrweise und dieVerkehrssicherheit auswirkt, liegt in der Natur der Sache.",
-        "german": "Dass sich das Verhalten eines Beifahrers so schwer vorhersehbar auf den Fahrer, seine Fahrweise und dieVerkehrssicherheit auswirkt, liegt in der Natur der Sache.",
+        "text": "Dass sich das Verhalten eines Beifahrers so schwer vorhersehbar auf den Fahrer, seine Fahrweise und die Verkehrssicherheit auswirkt, liegt in der Natur der Sache.",
+        "german": "Dass sich das Verhalten eines Beifahrers so schwer vorhersehbar auf den Fahrer, seine Fahrweise und die Verkehrssicherheit auswirkt, liegt in der Natur der Sache.",
         "chinese": "副驾驶的行为会以如此难以预测的方式影响司机、其驾驶方式以及交通安全，这本就是事情的本性所在。然而，一旦交通状况要求司机全神贯注，就常常会出现注意力冲突。",
         "answer": "",
         "raw": "11- spricht der Autor Empfehlungen aus?",
         "source": "lv2-xlsx",
         "paragraph": "E",
-        "firstSentence": "Dass sich das Verhalten eines Beifahrers so schwer vorhersehbar auf den Fahrer, seine Fahrweise und dieVerkehrssicherheit auswirkt, liegt in der Natur der Sache.",
+        "firstSentence": "Dass sich das Verhalten eines Beifahrers so schwer vorhersehbar auf den Fahrer, seine Fahrweise und die Verkehrssicherheit auswirkt, liegt in der Natur der Sache.",
         "summary": "副驾驶的行为会以如此难以预测的方式影响司机、其驾驶方式以及交通安全，这本就是事情的本性所在。然而，一旦交通状况要求司机全神贯注，就常常会出现注意力冲突。",
         "items": [
           {
@@ -1698,14 +1698,14 @@ window.LV2_QUESTIONS = [
     "questions": [
       {
         "number": "A",
-        "text": "Ein kleines Stück Madeleine, eines französischen Sandkuchens also, genügte: Der Genuss dieses Ge bäckstücks, in Lindenblütentee aufgeweicht, erweckte in dem Helden von Marcel Prousts berühmtem Romanzyklus „Auf der Suche nach der verlorenen Zeit“ ein wohliges Glücksgefühl wieder zum Leben, das er aus seiner Kindheit kannte.",
-        "german": "Ein kleines Stück Madeleine, eines französischen Sandkuchens also, genügte: Der Genuss dieses Ge bäckstücks, in Lindenblütentee aufgeweicht, erweckte in dem Helden von Marcel Prousts berühmtem Romanzyklus „Auf der Suche nach der verlorenen Zeit“ ein wohliges Glücksgefühl wieder zum Leben, das er aus seiner Kindheit kannte.",
+        "text": "Ein kleines Stück Madeleine, eines französischen Sandkuchens also, genügte: Der Genuss dieses Gebäckstücks, in Lindenblütentee aufgeweicht, erweckte in dem Helden von Marcel Prousts berühmtem Romanzyklus „Auf der Suche nach der verlorenen Zeit“ ein wohliges Glücksgefühl wieder zum Leben, das er aus seiner Kindheit kannte.",
+        "german": "Ein kleines Stück Madeleine, eines französischen Sandkuchens also, genügte: Der Genuss dieses Gebäckstücks, in Lindenblütentee aufgeweicht, erweckte in dem Helden von Marcel Prousts berühmtem Romanzyklus „Auf der Suche nach der verlorenen Zeit“ ein wohliges Glücksgefühl wieder zum Leben, das er aus seiner Kindheit kannte.",
         "chinese": "作者用普鲁斯特的玛德琳和童年苹果蛋糕唤起情感，说明食物会触发记忆和情绪。",
         "answer": "",
         "raw": "8 appelliert die Autorin an die Gefühle der Leser?",
         "source": "lv2-xlsx",
         "paragraph": "A",
-        "firstSentence": "Ein kleines Stück Madeleine, eines französischen Sandkuchens also, genügte: Der Genuss dieses Ge bäckstücks, in Lindenblütentee aufgeweicht, erweckte in dem Helden von Marcel Prousts berühmtem Romanzyklus „Auf der Suche nach der verlorenen Zeit“ ein wohliges Glücksgefühl wieder zum Leben, das er aus seiner Kindheit kannte.",
+        "firstSentence": "Ein kleines Stück Madeleine, eines französischen Sandkuchens also, genügte: Der Genuss dieses Gebäckstücks, in Lindenblütentee aufgeweicht, erweckte in dem Helden von Marcel Prousts berühmtem Romanzyklus „Auf der Suche nach der verlorenen Zeit“ ein wohliges Glücksgefühl wieder zum Leben, das er aus seiner Kindheit kannte.",
         "summary": "作者用普鲁斯特的玛德琳和童年苹果蛋糕唤起情感，说明食物会触发记忆和情绪。",
         "items": [
           {
@@ -1717,14 +1717,14 @@ window.LV2_QUESTIONS = [
       },
       {
         "number": "B",
-        "text": "Und zwar schon seit Jahrtausenden: Hippokrates von Kos, der berühmteste Arzt der Antike, gab Schwer mütigen eine Empfehlung, die heute sehr viel Heiterkeit hervorrufen dürfte.",
-        "german": "Und zwar schon seit Jahrtausenden: Hippokrates von Kos, der berühmteste Arzt der Antike, gab Schwer mütigen eine Empfehlung, die heute sehr viel Heiterkeit hervorrufen dürfte.",
+        "text": "Und zwar schon seit Jahrtausenden: Hippokrates von Kos, der berühmteste Arzt der Antike, gab Schwermütigen eine Empfehlung, die heute sehr viel Heiterkeit hervorrufen dürfte.",
+        "german": "Und zwar schon seit Jahrtausenden: Hippokrates von Kos, der berühmteste Arzt der Antike, gab Schwermütigen eine Empfehlung, die heute sehr viel Heiterkeit hervorrufen dürfte.",
         "chinese": "本段从古代医学建议写到巧克力、面食等食物影响心情，带有幽默和科学转向。",
         "answer": "",
         "raw": "7 amüsiert sich die Autorin?",
         "source": "lv2-xlsx",
         "paragraph": "B",
-        "firstSentence": "Und zwar schon seit Jahrtausenden: Hippokrates von Kos, der berühmteste Arzt der Antike, gab Schwer mütigen eine Empfehlung, die heute sehr viel Heiterkeit hervorrufen dürfte.",
+        "firstSentence": "Und zwar schon seit Jahrtausenden: Hippokrates von Kos, der berühmteste Arzt der Antike, gab Schwermütigen eine Empfehlung, die heute sehr viel Heiterkeit hervorrufen dürfte.",
         "summary": "本段从古代医学建议写到巧克力、面食等食物影响心情，带有幽默和科学转向。",
         "items": [
           {
@@ -1755,14 +1755,14 @@ window.LV2_QUESTIONS = [
       },
       {
         "number": "D",
-        "text": "Dass Nahrung eine so starke Wirkung auf die Psyche entfaltet, ist allerdings nicht nur vom medizinischen Standpunkt aus bedenkenswert, sondern wirft auch zahlreiche philosophische Probleme auf, die durch aus den Kern des Individuums berühren: Sind wir wirklich nur, was wir essen?",
-        "german": "Dass Nahrung eine so starke Wirkung auf die Psyche entfaltet, ist allerdings nicht nur vom medizinischen Standpunkt aus bedenkenswert, sondern wirft auch zahlreiche philosophische Probleme auf, die durch aus den Kern des Individuums berühren: Sind wir wirklich nur, was wir essen?",
+        "text": "Dass Nahrung eine so starke Wirkung auf die Psyche entfaltet, ist allerdings nicht nur vom medizinischen Standpunkt aus bedenkenswert, sondern wirft auch zahlreiche philosophische Probleme auf, die durchaus den Kern des Individuums berühren: Sind wir wirklich nur, was wir essen?",
+        "german": "Dass Nahrung eine so starke Wirkung auf die Psyche entfaltet, ist allerdings nicht nur vom medizinischen Standpunkt aus bedenkenswert, sondern wirft auch zahlreiche philosophische Probleme auf, die durchaus den Kern des Individuums berühren: Sind wir wirklich nur, was wir essen?",
         "chinese": "本段提出食物影响心理后引发的自主性、操控可能性等哲学和伦理问题。",
         "answer": "",
-        "raw": "10 regt die Autorin dazu an, über weitere Fragen nachzudenken? 9 möchtedie Autorin warnen?",
+        "raw": "10 regt die Autorin dazu an, über weitere Fragen nachzudenken? 9 möchte die Autorin warnen?",
         "source": "lv2-xlsx",
         "paragraph": "D",
-        "firstSentence": "Dass Nahrung eine so starke Wirkung auf die Psyche entfaltet, ist allerdings nicht nur vom medizinischen Standpunkt aus bedenkenswert, sondern wirft auch zahlreiche philosophische Probleme auf, die durch aus den Kern des Individuums berühren: Sind wir wirklich nur, was wir essen?",
+        "firstSentence": "Dass Nahrung eine so starke Wirkung auf die Psyche entfaltet, ist allerdings nicht nur vom medizinischen Standpunkt aus bedenkenswert, sondern wirft auch zahlreiche philosophische Probleme auf, die durchaus den Kern des Individuums berühren: Sind wir wirklich nur, was wir essen?",
         "summary": "本段提出食物影响心理后引发的自主性、操控可能性等哲学和伦理问题。",
         "items": [
           {
@@ -1771,26 +1771,26 @@ window.LV2_QUESTIONS = [
           },
           {
             "number": "9",
-            "text": "möchtedie Autorin warnen?"
+            "text": "möchte die Autorin warnen?"
           }
         ],
         "note": ""
       },
       {
         "number": "E",
-        "text": "Tatsächlich gehen manche Wissenschaftler heutzutage davon aus, dass man durch eine gezielte Umstel lung der Nahrungsgewohnheiten ein neues Lebensgefühl erzeugen könnte.",
-        "german": "Tatsächlich gehen manche Wissenschaftler heutzutage davon aus, dass man durch eine gezielte Umstel lung der Nahrungsgewohnheiten ein neues Lebensgefühl erzeugen könnte.",
+        "text": "Tatsächlich gehen manche Wissenschaftler heutzutage davon aus, dass man durch eine gezielte Umstellung der Nahrungsgewohnheiten ein neues Lebensgefühl erzeugen könnte.",
+        "german": "Tatsächlich gehen manche Wissenschaftler heutzutage davon aus, dass man durch eine gezielte Umstellung der Nahrungsgewohnheiten ein neues Lebensgefühl erzeugen könnte.",
         "chinese": "作者预测食品工业可能利用相关研究开发可调节情绪的产品，但科学证据仍需巩固。",
         "answer": "",
-        "raw": "11 wagt die Autorin eine Prognose? A ) (",
+        "raw": "11 wagt die Autorin eine Prognose? ) (",
         "source": "lv2-xlsx",
         "paragraph": "E",
-        "firstSentence": "Tatsächlich gehen manche Wissenschaftler heutzutage davon aus, dass man durch eine gezielte Umstel lung der Nahrungsgewohnheiten ein neues Lebensgefühl erzeugen könnte.",
+        "firstSentence": "Tatsächlich gehen manche Wissenschaftler heutzutage davon aus, dass man durch eine gezielte Umstellung der Nahrungsgewohnheiten ein neues Lebensgefühl erzeugen könnte.",
         "summary": "作者预测食品工业可能利用相关研究开发可调节情绪的产品，但科学证据仍需巩固。",
         "items": [
           {
             "number": "11",
-            "text": "wagt die Autorin eine Prognose? A"
+            "text": "wagt die Autorin eine Prognose?"
           }
         ],
         "note": ""

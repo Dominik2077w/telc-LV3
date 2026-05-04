@@ -15,11 +15,127 @@ SOURCE_SHEET = "LV2清洗数据"
 SKIP_TEILS = {"1"}
 UNUSABLE_MARKERS = ("资料未明确", "不作为配题答案", "未配题")
 
+TEXT_REPLACEMENTS = (
+    ("ZumGlück", "Zum Glück"),
+    ("AbgewissenGrößenordnungensindSinnfragenangebracht.", "Ab gewissen Größenordnungen sind Sinnfragen angebracht."),
+    ("Esist Zeit", "Es ist Zeit"),
+    ("Nein,Abschlussarbeiten", "Nein, Abschlussarbeiten"),
+    ("DochwelcheBedeutunghabenTräumeeigentlich?", "Doch welche Bedeutung haben Träume eigentlich?"),
+    (
+        "DieseSchwierigkeitkönnteauchdarinbegründet liegen,dassderGegenstandderUntersuchung nurschwerzufassenist.",
+        "Diese Schwierigkeit könnte auch darin begründet liegen, dass der Gegenstand der Untersuchung nur schwer zu fassen ist.",
+    ),
+    (
+        "EineinteressanteSpurverfolgendabeiNeuroforrscher,diebildgebendeVerfahrennutzen,umdas träumendeGehirnzubeobachten.",
+        "Eine interessante Spur verfolgen dabei Neuroforscher, die bildgebende Verfahren nutzen, um das träumende Gehirn zu beobachten.",
+    ),
+    (
+        "Währendich hustendauf dem Sofaliege und übermeinLeben nachdenke,habe ich diesenWerbespotim Kopf",
+        "Während ich hustend auf dem Sofa liege und über mein Leben nachdenke, habe ich diesen Werbespot im Kopf",
+    ),
+    (
+        "SoskeptischWissenschaftlerdasPhänomenderMondglaubigkeitauchsehenmögen-das InteresseandemHimmelskörperistnachwievorsehrgroß.",
+        "So skeptisch Wissenschaftler das Phänomen der Mondgläubigkeit auch sehen mögen - das Interesse an dem Himmelskörper ist nach wie vor sehr groß.",
+    ),
+    (
+        "NeulichsaßichnachmittagsanderUniineinerVorlesungundhörteplötzlich,wiemeinPhonevibrierte.",
+        "Neulich saß ich nachmittags an der Uni in einer Vorlesung und hörte plötzlich, wie mein iPhone vibrierte.",
+    ),
+    (
+        "DochwarumistmeineAbneigunggegendasTelefonierensostark?",
+        "Doch warum ist meine Abneigung gegen das Telefonieren so stark?",
+    ),
+    (
+        "WennichüberdasheutigeKommunikationsverhaltennachdenke,fälltmirallerdingseinmerkwürdiger Widerspruchauf:Istesniechterstaunlich,dassalleständigeinGerätmitsichherumtrgen,dasursprünglichin ersterLiniezumTelefonierengedachtwar-abergeradedieseFunktionimmerwenigergenutztwird?",
+        "Wenn ich über das heutige Kommunikationsverhalten nachdenke, fällt mir allerdings ein merkwürdiger Widerspruch auf: Ist es nicht erstaunlich, dass alle ständig ein Gerät mit sich herumtragen, das ursprünglich in erster Linie zum Telefonieren gedacht war - aber gerade diese Funktion immer weniger genutzt wird?",
+    ),
+    (
+        "MitmeinerAbnerigunggegendasTelefonierensteheichübrigensnichtalleineda.",
+        "Mit meiner Abneigung gegen das Telefonieren stehe ich übrigens nicht allein da.",
+    ),
+    ("dieVerkehrssicherheit", "die Verkehrssicherheit"),
+    ("durch aus", "durchaus"),
+    ("Ge bäckstücks", "Gebäckstücks"),
+    ("Schwer mütigen", "Schwermütigen"),
+    ("Umstel lung", "Umstellung"),
+    ("zufriedenzu stellen", "zufrieden zu stellen"),
+    ("visuellen Welten des Internets und der sozialen Meaien", "visuellen Welten des Internets und der sozialen Medien"),
+    ("ohneden Rückzug", "ohne den Rückzug"),
+    ("vielenandern", "vielen anderen"),
+    ("Diese Zeiten sind zu, Glück", "Diese Zeiten sind zum Glück"),
+    ("ist des Fernstudiums", "ist die Stärke des Fernstudiums"),
+    ("gleichzeitig sein größte Nachteil", "gleichzeitig sein größter Nachteil"),
+    ("Überfordert", "überfordert"),
+    ("Kunde Studienanbieter", "Kunden der Studienanbieter"),
+    (" GIücksempfinden ", " Glücksempfinden "),
+    ("Dinosaurier:", "Dinosauriern:"),
+    ("Kevin Weyerjedenfalls", "Kevin Weyer jedenfalls"),
+    ("Master Weiterbildungsstudium", "Master-Weiterbildungsstudium"),
+    ("diverser-teilweise", "diverser - teilweise"),
+    ("Vorn am Pult stand eine allwissende Respektsperson die", "Vorn am Pult stand eine allwissende Respektsperson, die"),
+    ("Schwerkrafteffekt", "Schwerkrafteffekt"),
+    ("nicht mehr gefragt war Sicher ist", "nicht mehr gefragt war. Sicher ist"),
+    ("Was in den Texten zu dem Thema nicht mal am Rande erwähnt wird, Es gibt", "Was in den Texten zu dem Thema nicht mal am Rande erwähnt wird: Es gibt"),
+    ("und Es gibticht, wed sie es mussten", "und es gibt sie nicht, weil sie es müssen"),
+    ("allein ins Restaurant geht", "allein ins Restaurant gehen"),
+    ("Doch wie kann Konsum überhaupt Umweltbewusstsein?", "Doch wie kann Konsum überhaupt Umweltbewusstsein ausdrücken?"),
+    ("Käufe–", "Käufe -"),
+    ("nichts einzuwenden–", "nichts einzuwenden -"),
+    ("exzessivem Konsum", "exzessivem Konsum"),
+    ("Man konnte so beginnen: die folgenden Untersuchung", "Man könnte so beginnen: Die folgende Untersuchung"),
+    ("Von Rollendtrukturen", "von Rollenstrukturen"),
+    ("minimalen Organisation", "minimalen Organisationen"),
+    ("amerikanische Soziologie", "amerikanische Soziologe"),
+    ("Disziplin, die", "Disziplinen, die"),
+    ("wer etwa", "Wer etwa"),
+    ("nur Solche", "nur solche"),
+    ("Eltern können anstrengenden sein.", "Eltern können anstrengend sein."),
+    ("wer hat sich nicht schon mal selbstdabei", "wer hat sich nicht schon mal selbst dabei"),
+    ("Hand aufs Herz,wer", "Hand aufs Herz, wer"),
+    ("Beispiele gefällig etwa", "Beispiele gefällig? Etwa"),
+    ("Verschieben Sie die Deutscharbeit-", "Verschieben Sie die Deutscharbeit -"),
+    ("wann der erste Elternabend", "Wann der erste Elternabend"),
+    ("Eine coole Rabenmutter Auch", "Eine coole Rabenmutter? Auch"),
+    ("räumenim", "räumen im"),
+    ("Ge bäckstücks", "Gebäckstücks"),
+)
+
+PROMPT_REPLACEMENTS = (
+    ("äußertderAutorBedenken?", "äußert der Autor Bedenken?"),
+    ("LiefertderAutorreineFakten?", "Liefert der Autor reine Fakten?"),
+    ("Amüsieren sich der Autor?", "Amüsiert sich der Autor?"),
+    ("äußertdieAutorinBedenken?wirftdieAutorinBedenkenauf.? wirftdieAutorinZweifelauf.? äußertsichdieAutorinabfällig?", "äußert die Autorin Bedenken? Wirft die Autorin Zweifel auf? Äußert sich die Autorin abfällig?"),
+    ("stelltdieAutorinverschiedeneStandpunkteeinanderGegenüber?", "stellt die Autorin verschiedene Standpunkte einander gegenüber?"),
+    ("ziehtdieAutorineineSchlussfolgerung?", "zieht die Autorin eine Schlussfolgerung?"),
+    ("liefertdieAutorinDefinition?", "liefert die Autorin eine Definition?"),
+    ("äußertderAutoreinenWunsch?", "äußert der Autor einen Wunsch?"),
+    ("gibtdieAutorineinenRat?", "gibt die Autorin einen Rat?"),
+    ("möchtederAutorzumNachdenkenanregen?", "möchte der Autor zum Nachdenken anregen?"),
+    ("suchtdieAutorinbeidenLesernnachZustimmung?", "sucht die Autorin bei den Lesern nach Zustimmung?"),
+    ("bringtdieAutorinVergleichean?", "bringt die Autorin Vergleiche an?"),
+    ("drücktdieAutorinVerwunderungaus?", "drückt die Autorin Verwunderung aus?"),
+    ("lädtdieAutorindieLeserzueinemgedanklichenExperimentein?", "lädt die Autorin die Leser zu einem gedanklichen Experiment ein?"),
+    ("beruft sich die Autirin auf die Eindvhätzungen von Fachleuten?", "beruft sich die Autorin auf die Einschätzungen von Fachleuten?"),
+    ("möchtedie Autorin warnen?", "möchte die Autorin warnen?"),
+    ("wagt die Autorin eine Prognose? A", "wagt die Autorin eine Prognose?"),
+)
+
 
 def clean_text(value) -> str:
     if value is None:
         return ""
     return re.sub(r"\s+", " ", str(value)).strip()
+
+
+def clean_ocr_text(value: str, *, prompt: bool = False) -> str:
+    text = clean_text(value)
+    replacements = (*TEXT_REPLACEMENTS, *(PROMPT_REPLACEMENTS if prompt else ()))
+    for old, new in replacements:
+        text = text.replace(old, new)
+    text = re.sub(r"\s+([,.;:?!])", r"\1", text)
+    text = re.sub(r"([,;:])(?=\S)", r"\1 ", text)
+    text = re.sub(r"\s{2,}", " ", text)
+    return text.strip()
 
 
 def split_answer_items(numbers: str, item_text: str) -> list[tuple[str, str]]:
@@ -49,7 +165,7 @@ def split_answer_items(numbers: str, item_text: str) -> list[tuple[str, str]]:
             number = number_parts[index] if index < len(number_parts) else ""
             prompt = part
 
-        prompt = clean_text(prompt)
+        prompt = clean_ocr_text(prompt, prompt=True)
         prompt = re.sub(r"^[A-E]\s*\)\s*\(?\s*", "", prompt).strip()
         prompt = prompt.strip("() ")
         if not prompt:
@@ -73,13 +189,13 @@ def build_sections(input_path: Path) -> list[dict]:
         if not teil or teil in SKIP_TEILS:
             continue
 
-        title = clean_text(row[indexes["篇目标题"]])
+        title = clean_ocr_text(row[indexes["篇目标题"]])
         paragraph = clean_text(row[indexes["段落编号"]])
-        first_sentence = clean_text(row[indexes["第一句话原文"]])
-        summary = clean_text(row[indexes["段落大意（非逐句译文）"]])
+        first_sentence = clean_ocr_text(row[indexes["第一句话原文"]])
+        summary = clean_ocr_text(row[indexes["段落大意（非逐句译文）"]])
         numbers = clean_text(row[indexes["对应题号"]])
-        item_text = clean_text(row[indexes["对应题目/答案项"]])
-        note = clean_text(row[indexes["备注"]])
+        item_text = clean_ocr_text(row[indexes["对应题目/答案项"]], prompt=True)
+        note = clean_ocr_text(row[indexes["备注"]])
 
         section = sections.setdefault(
             teil,
