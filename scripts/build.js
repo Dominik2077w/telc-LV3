@@ -7,30 +7,32 @@ const files = [
   "index.html",
   "styles.css",
   "app.js",
-  "manifest.webmanifest",
   "service-worker.js",
+  "manifest.webmanifest",
   "data/lv2_questions.js",
   "data/lv2_v2_questions.js",
   "data/lv3_questions.js",
+  "data/hv1_questions.js",
+  "data/hv2_questions.js",
+  "data/writing_questions.js",
   "icons/icon-192.png",
   "icons/icon-512.png",
   "icons/icon-192.svg",
   "icons/icon-512.svg",
 ];
+const filesWithoutAudio = new Set(["data/hv1_questions.js"]);
 
 function copyFile(relativePath) {
   const from = path.join(root, relativePath);
   const to = path.join(dist, relativePath);
   fs.mkdirSync(path.dirname(to), { recursive: true });
-
-  if (relativePath === "service-worker.js") {
-    const content = fs
+  if (filesWithoutAudio.has(relativePath)) {
+    const contents = fs
       .readFileSync(from, "utf8")
-      .replace(/const CACHE_VERSION = ".+?";/, `const CACHE_VERSION = "${Date.now()}";`);
-    fs.writeFileSync(to, content);
+      .replace(/,\n\s*"audio":\s*"[^"]*"/g, "");
+    fs.writeFileSync(to, contents);
     return;
   }
-
   fs.copyFileSync(from, to);
 }
 
@@ -38,5 +40,6 @@ fs.rmSync(dist, { recursive: true, force: true });
 fs.mkdirSync(dist, { recursive: true });
 
 for (const file of files) copyFile(file);
+fs.writeFileSync(path.join(dist, ".nojekyll"), "");
 
-console.log(`Built ${files.length} files into ${dist}`);
+console.log(`Built ${files.length} files into ${dist} without audio assets`);

@@ -11,7 +11,7 @@
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="apple-touch-icon" href="./icons/icon-192.png" />
     <link rel="icon" href="./icons/icon-192.svg" />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles.css?v=20260507-lv2-global-sort" />
   </head>
   <body>
     <div class="level-gate" id="levelGate">
@@ -25,11 +25,27 @@
           </button>
           <button class="level-choice" type="button" data-level-choice="lv2v2">
             <strong>LV2-版本2</strong>
-            <span>A-D 列正面，其余列背面</span>
+            <span>信号词 → 德语原句配对</span>
           </button>
           <button class="level-choice" type="button" data-level-choice="lv3">
             <strong>LV3</strong>
             <span>Richtig / Falsch / Nicht im Text</span>
+          </button>
+          <button class="level-choice" type="button" data-level-choice="hv1">
+            <strong>HV1</strong>
+            <span>Sprecher → Leitsatz 匹配</span>
+          </button>
+          <button class="level-choice" type="button" data-level-choice="hv2">
+            <strong>HV2</strong>
+            <span>句干 → 补全背诵卡片</span>
+          </button>
+          <button class="level-choice" type="button" data-level-choice="writing">
+            <strong>作文专题</strong>
+            <span>德语主题 → 德语 + 中文</span>
+          </button>
+          <button class="level-choice" type="button" data-level-choice="baustein">
+            <strong>Baustein</strong>
+            <span>完整文章 → 四选一填空</span>
           </button>
         </div>
       </div>
@@ -47,6 +63,10 @@
             <button class="level-switch-button" type="button" data-level-switch="lv2">LV2</button>
             <button class="level-switch-button" type="button" data-level-switch="lv2v2">LV2-版本2</button>
             <button class="level-switch-button" type="button" data-level-switch="lv3">LV3</button>
+            <button class="level-switch-button" type="button" data-level-switch="hv1">HV1</button>
+            <button class="level-switch-button" type="button" data-level-switch="hv2">HV2</button>
+            <button class="level-switch-button" type="button" data-level-switch="writing">作文专题</button>
+            <button class="level-switch-button" type="button" data-level-switch="baustein">Baustein</button>
           </div>
         </section>
 
@@ -71,6 +91,27 @@
             <select id="questionOrder">
               <option value="sequential">顺序</option>
               <option value="random">随机</option>
+            </select>
+          </label>
+          <label id="lv2ModeLabel" class="hidden">
+            <span>LV2 模式</span>
+            <select id="lv2Mode">
+              <option value="card">段落卡片</option>
+              <option value="global-sort">全局排序</option>
+            </select>
+          </label>
+          <label id="lv2GlobalDisplayLabel" class="hidden">
+            <span>全局排序显示</span>
+            <select id="lv2GlobalDisplay">
+              <option value="chinese">中文</option>
+              <option value="german">德语</option>
+            </select>
+          </label>
+          <label id="hv1ModeLabel" class="hidden">
+            <span>HV1 模式</span>
+            <select id="hv1Mode">
+              <option value="match">逐一匹配</option>
+              <option value="sort">排序匹配</option>
             </select>
           </label>
           <label>
@@ -98,6 +139,19 @@
         </header>
 
         <div class="card-stage">
+          <div class="audio-panel hidden" id="audioPanel"></div>
+          <div class="sort-mode hidden" id="sortModeView">
+            <div class="sort-header">
+              <span id="sortTeilBadge">Teil</span>
+              <p>从 Sprecher 拖到对应 Leitsatz，松手后生成连线。</p>
+            </div>
+            <div class="sort-info" id="sortInfo"></div>
+            <div class="sort-list" id="sortList"></div>
+            <div class="sort-bottom">
+              <button class="ghost-button" id="sortShuffleButton" type="button">随机打乱</button>
+              <button class="primary-button" id="sortSubmitButton" type="button">提交</button>
+            </div>
+          </div>
           <article class="question-card" id="questionCard">
             <div class="card-face front-face" id="frontFace">
               <div class="card-meta">
@@ -138,9 +192,13 @@
       </section>
     </main>
 
-    <script src="./data/lv2_questions.js?v=20260504-lv2v2"></script>
-    <script src="./data/lv2_v2_questions.js?v=20260504-lv2v2"></script>
-    <script src="./data/lv3_questions.js?v=20260504-lv2v2"></script>
-    <script src="./app.js?v=20260504-lv2v2"></script>
+    <script src="./data/lv2_questions.js?v=20260507-lv2-signal-overwrite"></script>
+    <script src="./data/lv2_v2_questions.js?v=20260504-hv1"></script>
+    <script src="./data/lv3_questions.js?v=20260504-hv1"></script>
+    <script src="./data/hv1_questions.js?v=20260504-hv1"></script>
+    <script src="./data/hv2_questions.js?v=20260506-hv2-unmarked-randomized"></script>
+    <script src="./data/writing_questions.js?v=20260507-writing"></script>
+    <script src="./data/baustein_questions.js?v=20260507-baustein"></script>
+    <script src="./app.js?v=20260507-lv2-signal-overwrite"></script>
   </body>
 </html>

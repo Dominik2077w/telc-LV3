@@ -1,4 +1,4 @@
-const CACHE_VERSION = "telc-trainer-20260504-lv2-v2-lv3";
+const CACHE_VERSION = "telc-trainer-20260507-lv2-signal-overwrite";
 const CACHE_NAME = `telc-trainer-${CACHE_VERSION}`;
 const APP_SHELL = [
   "./",
@@ -9,6 +9,9 @@ const APP_SHELL = [
   "./data/lv2_questions.js",
   "./data/lv2_v2_questions.js",
   "./data/lv3_questions.js",
+  "./data/hv1_questions.js",
+  "./data/hv2_questions.js",
+  "./data/writing_questions.js",
   "./icons/icon-192.png",
   "./icons/icon-512.png",
   "./icons/icon-192.svg",

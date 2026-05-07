@@ -1,2000 +1,3515 @@
 window.LV2_QUESTIONS = [
   {
     "teil": 2,
-    "title": "Der Sinn und Unsinn (auch, aber unterschiedlich)",
-    "sourceText": "LV2 段落卡片",
+    "title": "信号词问句配对",
+    "sourceText": "LV2 信号词问句表 修正版",
     "mode": "paragraph-card",
     "questions": [
       {
-        "number": "A",
-        "text": "Zum Glück ist da das Bullauge.",
-        "german": "Zum Glück ist da das Bullauge.",
-        "chinese": "幸好这里有一扇舷窗。要不是这个圆形小窗，这个房间就真成了所谓的“清静小密室”。",
+        "number": "1",
+        "text": "Ist es nicht Verschwendung von Zeit und Energie?",
+        "german": "Ist es nicht Verschwendung von Zeit und Energie?",
+        "chinese": "这句用否定式反问质疑毕业论文的意义，明确表达 Bedenken。",
         "answer": "",
-        "raw": "12.äußert der Autor Bedenken?",
-        "source": "lv2-xlsx",
+        "raw": "äußert der Autor Bedenken?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 2,
         "paragraph": "A",
-        "firstSentence": "Zum Glück ist da das Bullauge.",
-        "summary": "幸好这里有一扇舷窗。要不是这个圆形小窗，这个房间就真成了所谓的“清静小密室”。",
+        "firstSentence": "Ist es nicht Verschwendung von Zeit und Energie?",
+        "summary": "这句用否定式反问质疑毕业论文的意义，明确表达 Bedenken。",
+        "sentenceZh": "这句用否定式反问质疑毕业论文的意义，明确表达 Bedenken。",
+        "frage": "äußert der Autor Bedenken?",
+        "signalwortZh": "这难道不是……吗？/ 浪费 / 质疑",
         "items": [
           {
-            "number": "12",
-            "text": "äußert der Autor Bedenken?"
+            "number": "A",
+            "text": "äußert der Autor Bedenken?",
+            "german": "äußert der Autor Bedenken?",
+            "chinese": "这句用否定式反问质疑毕业论文的意义，明确表达 Bedenken。",
+            "hint": "这句用否定式反问质疑毕业论文的意义，明确表达 Bedenken。",
+            "sourceRow": 2
           }
-        ],
-        "note": ""
+        ]
       },
       {
-        "number": "B",
-        "text": "Ab gewissen Größenordnungen sind Sinnfragen angebracht.",
-        "german": "Ab gewissen Größenordnungen sind Sinnfragen angebracht.",
-        "chinese": "当规模达到一定量级，追问“意义”就合适了。去年有三十多万学生以毕业论文完成学业。",
+        "number": "2",
+        "text": "Im letzten Jahr schlossen mehr als 300 000 Studenten ihr Studium mit einer Abschlussarbeit ab.",
+        "german": "Im letzten Jahr schlossen mehr als 300 000 Studenten ihr Studium mit einer Abschlussarbeit ab.",
+        "chinese": "这句通过年份和数量给出客观事实。",
         "answer": "",
-        "raw": "11Liefert der Autor reine Fakten?",
-        "source": "lv2-xlsx",
+        "raw": "Liefert der Autor reine Fakten?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 3,
         "paragraph": "B",
-        "firstSentence": "Ab gewissen Größenordnungen sind Sinnfragen angebracht.",
-        "summary": "当规模达到一定量级，追问“意义”就合适了。去年有三十多万学生以毕业论文完成学业。",
+        "firstSentence": "Im letzten Jahr schlossen mehr als 300 000 Studenten ihr Studium mit einer Abschlussarbeit ab.",
+        "summary": "这句通过年份和数量给出客观事实。",
+        "sentenceZh": "这句通过年份和数量给出客观事实。",
+        "frage": "Liefert der Autor reine Fakten?",
+        "signalwortZh": "去年 / 30多万 / 事实数字",
         "items": [
           {
-            "number": "11",
-            "text": "Liefert der Autor reine Fakten?"
+            "number": "B",
+            "text": "Liefert der Autor reine Fakten?",
+            "german": "Liefert der Autor reine Fakten?",
+            "chinese": "这句通过年份和数量给出客观事实。",
+            "hint": "这句通过年份和数量给出客观事实。",
+            "sourceRow": 3
           }
-        ],
-        "note": ""
+        ]
       },
       {
-        "number": "C",
-        "text": "Die Ergebnisse mancher Studien, die vor mir auf dem Schreibtisch liegen, sind auf den ersten Blick allerdings dürftig ↪ und beim Lesen kann ich mir nicht immer ein Lächeln verkneifen.",
-        "german": "Die Ergebnisse mancher Studien, die vor mir auf dem Schreibtisch liegen, sind auf den ersten Blick allerdings dürftig ↪ und beim Lesen kann ich mir nicht immer ein Lächeln verkneifen.",
-        "chinese": "科学。摆在我桌上的某些研究成果，乍看确实“单薄”——读的时候我也不时忍不住会心一笑。",
+        "number": "3",
+        "text": "Kritiker äußern den Vorwurf, allgemein Bekanntes würde in Abschlussarbeiten mit ein paar Fußnoten ...",
+        "german": "Kritiker äußern den Vorwurf, allgemein Bekanntes würde in Abschlussarbeiten mit ein paar Fußnoten ...",
+        "chinese": "这句转述批评者的看法，属于 fremde Einschätzungen。",
         "answer": "",
-        "raw": "8-Gibt der Autor fremde Einschätzungen wieder?; 10-Amüsiert sich der Autor?",
-        "source": "lv2-xlsx",
+        "raw": "Gibt der Autor fremde Einschätzungen wieder?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 4,
         "paragraph": "C",
-        "firstSentence": "Die Ergebnisse mancher Studien, die vor mir auf dem Schreibtisch liegen, sind auf den ersten Blick allerdings dürftig ↪ und beim Lesen kann ich mir nicht immer ein Lächeln verkneifen.",
-        "summary": "科学。摆在我桌上的某些研究成果，乍看确实“单薄”——读的时候我也不时忍不住会心一笑。",
+        "firstSentence": "Kritiker äußern den Vorwurf, allgemein Bekanntes würde in Abschlussarbeiten mit ein paar Fußnoten ...",
+        "summary": "这句转述批评者的看法，属于 fremde Einschätzungen。",
+        "sentenceZh": "这句转述批评者的看法，属于 fremde Einschätzungen。",
+        "frage": "Gibt der Autor fremde Einschätzungen wieder?",
+        "signalwortZh": "批评者提出指责 / 转述他人观点",
         "items": [
           {
-            "number": "8",
-            "text": "Gibt der Autor fremde Einschätzungen wieder?"
-          },
-          {
-            "number": "10",
-            "text": "Amüsiert sich der Autor?"
+            "number": "C",
+            "text": "Gibt der Autor fremde Einschätzungen wieder?",
+            "german": "Gibt der Autor fremde Einschätzungen wieder?",
+            "chinese": "这句转述批评者的看法，属于 fremde Einschätzungen。",
+            "hint": "这句转述批评者的看法，属于 fremde Einschätzungen。",
+            "sourceRow": 4
           }
-        ],
-        "note": ""
+        ]
       },
       {
-        "number": "D",
-        "text": "Die Universitäten sind verpflichtet, Abschlussarbeiten einige Jahre aufzubewahren, danach werden sie geschreddert.",
-        "german": "Die Universitäten sind verpflichtet, Abschlussarbeiten einige Jahre aufzubewahren, danach werden sie geschreddert.",
-        "chinese": "大学有义务把毕业论文保存若干年，之后将其粉碎。我桌上的这些“漏网之鱼”：要么是在某位好心教授的推荐下发表了，要么人们不仅把论文，还把它们的保留期限也忘了。",
+        "number": "4",
+        "text": "Na sowas, denke ich: Das hätte ich auch ohne komplizierte Mathematik herausgefunden.",
+        "german": "Na sowas, denke ich: Das hätte ich auch ohne komplizierte Mathematik herausgefunden.",
+        "chinese": "这句是作者的玩笑式吐槽，体现 amüsiert。",
+        "answer": "",
+        "raw": "Amüsiert sich der Autor?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 5,
+        "paragraph": "C",
+        "firstSentence": "Na sowas, denke ich: Das hätte ich auch ohne komplizierte Mathematik herausgefunden.",
+        "summary": "这句是作者的玩笑式吐槽，体现 amüsiert。",
+        "sentenceZh": "这句是作者的玩笑式吐槽，体现 amüsiert。",
+        "frage": "Amüsiert sich der Autor?",
+        "signalwortZh": "哎呀 / 我想 / 不用复杂数学也知道",
+        "items": [
+          {
+            "number": "C",
+            "text": "Amüsiert sich der Autor?",
+            "german": "Amüsiert sich der Autor?",
+            "chinese": "这句是作者的玩笑式吐槽，体现 amüsiert。",
+            "hint": "这句是作者的玩笑式吐槽，体现 amüsiert。",
+            "sourceRow": 5
+          }
+        ]
+      },
+      {
+        "number": "5",
+        "text": "Doch darüber lässt sich letztlich natürlich nur spekulieren.",
+        "german": "Doch darüber lässt sich letztlich natürlich nur spekulieren.",
+        "chinese": "这句直接说明只能推测，属于 Vermutungen。",
         "answer": "",
         "raw": "Stellt der Autor Vermutungen an?",
-        "source": "lv2-xlsx",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 6,
         "paragraph": "D",
-        "firstSentence": "Die Universitäten sind verpflichtet, Abschlussarbeiten einige Jahre aufzubewahren, danach werden sie geschreddert.",
-        "summary": "大学有义务把毕业论文保存若干年，之后将其粉碎。我桌上的这些“漏网之鱼”：要么是在某位好心教授的推荐下发表了，要么人们不仅把论文，还把它们的保留期限也忘了。",
+        "firstSentence": "Doch darüber lässt sich letztlich natürlich nur spekulieren.",
+        "summary": "这句直接说明只能推测，属于 Vermutungen。",
+        "sentenceZh": "这句直接说明只能推测，属于 Vermutungen。",
+        "frage": "Stellt der Autor Vermutungen an?",
+        "signalwortZh": "只能推测",
         "items": [
           {
-            "number": "",
-            "text": "Stellt der Autor Vermutungen an?"
+            "number": "D",
+            "text": "Stellt der Autor Vermutungen an?",
+            "german": "Stellt der Autor Vermutungen an?",
+            "chinese": "这句直接说明只能推测，属于 Vermutungen。",
+            "hint": "这句直接说明只能推测，属于 Vermutungen。",
+            "sourceRow": 6
           }
-        ],
-        "note": "原资料题项未显示数字或题号识别不完整"
+        ]
       },
       {
-        "number": "E",
-        "text": "Es ist Zeit, meine Forschungsfrage zu beantworten: Nein, Abschlussarbeiten ergeben meistens nicht viel Sinn.",
-        "german": "Es ist Zeit, meine Forschungsfrage zu beantworten: Nein, Abschlussarbeiten ergeben meistens nicht viel Sinn.",
-        "chinese": "现在是回答我的研究问题的时候了：不，毕业论文大多没有什么“意义”。但它们创造意义。",
+        "number": "6",
+        "text": "Deshalb sollte sich auch niemand von dem Gedanken entmutigen lassen.",
+        "german": "Deshalb sollte sich auch niemand von dem Gedanken entmutigen lassen.",
+        "chinese": "这句用 sollte 提出劝告。",
         "answer": "",
         "raw": "Spricht der Autor einen Rat aus?",
-        "source": "lv2-xlsx",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 7,
         "paragraph": "E",
-        "firstSentence": "Es ist Zeit, meine Forschungsfrage zu beantworten: Nein, Abschlussarbeiten ergeben meistens nicht viel Sinn.",
-        "summary": "现在是回答我的研究问题的时候了：不，毕业论文大多没有什么“意义”。但它们创造意义。",
+        "firstSentence": "Deshalb sollte sich auch niemand von dem Gedanken entmutigen lassen.",
+        "summary": "这句用 sollte 提出劝告。",
+        "sentenceZh": "这句用 sollte 提出劝告。",
+        "frage": "Spricht der Autor einen Rat aus?",
+        "signalwortZh": "应该 / 不要灰心",
         "items": [
           {
-            "number": "",
-            "text": "Spricht der Autor einen Rat aus?"
+            "number": "E",
+            "text": "Spricht der Autor einen Rat aus?",
+            "german": "Spricht der Autor einen Rat aus?",
+            "chinese": "这句用 sollte 提出劝告。",
+            "hint": "这句用 sollte 提出劝告。",
+            "sourceRow": 7
           }
-        ],
-        "note": "原资料题项未显示数字或题号识别不完整"
+        ]
       }
     ]
   },
   {
     "teil": 3,
-    "title": "Träume: Botschaften aus dem Unterbewussten / sinnlose Gehirnaktivität / Welche Bedeutung haben Träume?",
-    "sourceText": "LV2 段落卡片",
+    "title": "信号词问句配对",
+    "sourceText": "LV2 信号词问句表 修正版",
     "mode": "paragraph-card",
     "questions": [
       {
-        "number": "A",
-        "text": "Was für ein Schrecken!",
-        "german": "Was für ein Schrecken!",
-        "chinese": "本段以中奖梦被闹钟打断和各种离奇梦境开场，说明梦常常突破现实逻辑并呈现普遍的恐惧场景。",
+        "number": "1",
+        "text": "Sollte man sie nicht am besten einfach ignorieren?",
+        "german": "Sollte man sie nicht am besten einfach ignorieren?",
+        "chinese": "这半句是在提出建议或可采取的做法。",
         "answer": "",
-        "raw": "（资料未明确给出/该段可能不作为配题答案）",
-        "source": "lv2-xlsx",
-        "paragraph": "A",
-        "firstSentence": "Was für ein Schrecken!",
-        "summary": "本段以中奖梦被闹钟打断和各种离奇梦境开场，说明梦常常突破现实逻辑并呈现普遍的恐惧场景。",
-        "items": [],
-        "note": "未配题；资料标注为“不建议配/不作为答案段”"
-      },
-      {
-        "number": "B",
-        "text": "Doch welche Bedeutung haben Träume eigentlich?",
-        "german": "Doch welche Bedeutung haben Träume eigentlich?",
-        "chinese": "那么，梦究竟有什么意义呢？我们常常觉得，睡梦中经历的东西包含着重要信息；",
-        "answer": "",
-        "raw": "7-äußert die Autorin Bedenken? Wirft die Autorin Zweifel auf? Äußert sich die Autorin abfällig?",
-        "source": "lv2-xlsx",
+        "raw": "gibt die Autorin einen Rat?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 8,
         "paragraph": "B",
-        "firstSentence": "Doch welche Bedeutung haben Träume eigentlich?",
-        "summary": "那么，梦究竟有什么意义呢？我们常常觉得，睡梦中经历的东西包含着重要信息；",
+        "firstSentence": "Sollte man sie nicht am besten einfach ignorieren?",
+        "summary": "这半句是在提出建议或可采取的做法。",
+        "sentenceZh": "这半句是在提出建议或可采取的做法。",
+        "frage": "gibt die Autorin einen Rat?",
+        "signalwortZh": "应该 / 建议",
         "items": [
           {
-            "number": "7",
-            "text": "äußert die Autorin Bedenken? Wirft die Autorin Zweifel auf? Äußert sich die Autorin abfällig?"
+            "number": "B",
+            "text": "gibt die Autorin einen Rat?",
+            "german": "gibt die Autorin einen Rat?",
+            "chinese": "这半句是在提出建议或可采取的做法。",
+            "hint": "这半句是在提出建议或可采取的做法。",
+            "sourceRow": 8
           }
-        ],
-        "note": ""
+        ]
       },
       {
-        "number": "C",
-        "text": "Tatsächlich ist der Wahrheitsgehalt von Träumen umstritten, und die Geschichte der Traumdeutung ist geprägt von einem jahrzehntelangen Konflikt zwischen Anhängern und Skeptikern.",
-        "german": "Tatsächlich ist der Wahrheitsgehalt von Träumen umstritten, und die Geschichte der Traumdeutung ist geprägt von einem jahrzehntelangen Konflikt zwischen Anhängern und Skeptikern.",
-        "chinese": "事实上，梦的真实性是有争议的，解梦史被支持者与怀疑者的长期冲突所塑造。围绕梦的“内涵”流传着不同理论，而且常常彼此排斥。",
+        "number": "2",
+        "text": "Allgemeinen wird als Traum eine psychische Aktivität während des Schlafes bezeichnet.",
+        "german": "Allgemeinen wird als Traum eine psychische Aktivität während des Schlafes bezeichnet.",
+        "chinese": "这半句是在界定概念或说明定义。",
         "answer": "",
-        "raw": "9-stellt die Autorin verschiedene Standpunkte einander gegenüber?; 12-zieht die Autorin eine Schlussfolgerung?",
-        "source": "lv2-xlsx",
-        "paragraph": "C",
-        "firstSentence": "Tatsächlich ist der Wahrheitsgehalt von Träumen umstritten, und die Geschichte der Traumdeutung ist geprägt von einem jahrzehntelangen Konflikt zwischen Anhängern und Skeptikern.",
-        "summary": "事实上，梦的真实性是有争议的，解梦史被支持者与怀疑者的长期冲突所塑造。围绕梦的“内涵”流传着不同理论，而且常常彼此排斥。",
-        "items": [
-          {
-            "number": "9",
-            "text": "stellt die Autorin verschiedene Standpunkte einander gegenüber?"
-          },
-          {
-            "number": "12",
-            "text": "zieht die Autorin eine Schlussfolgerung?"
-          }
-        ],
-        "note": ""
-      },
-      {
-        "number": "D",
-        "text": "Diese Schwierigkeit könnte auch darin begründet liegen, dass der Gegenstand der Untersuchung nur schwer zu fassen ist.",
-        "german": "Diese Schwierigkeit könnte auch darin begründet liegen, dass der Gegenstand der Untersuchung nur schwer zu fassen ist.",
-        "chinese": "困难也可能在于：研究对象本身难以捉摸。研究者虽能在睡眠中追踪脑活动，但梦本身只发生在头脑中。",
-        "answer": "",
-        "raw": "9-liefert die Autorin eine Definition?; 11-äußert der Autor einen Wunsch?",
-        "source": "lv2-xlsx",
+        "raw": "liefert die Autorin Definition?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 9,
         "paragraph": "D",
-        "firstSentence": "Diese Schwierigkeit könnte auch darin begründet liegen, dass der Gegenstand der Untersuchung nur schwer zu fassen ist.",
-        "summary": "困难也可能在于：研究对象本身难以捉摸。研究者虽能在睡眠中追踪脑活动，但梦本身只发生在头脑中。",
+        "firstSentence": "Allgemeinen wird als Traum eine psychische Aktivität während des Schlafes bezeichnet.",
+        "summary": "这半句是在界定概念或说明定义。",
+        "sentenceZh": "这半句是在界定概念或说明定义。",
+        "frage": "liefert die Autorin Definition?",
+        "signalwortZh": "被称为 / 定义为",
         "items": [
           {
-            "number": "9",
-            "text": "liefert die Autorin eine Definition?"
-          },
-          {
-            "number": "11",
-            "text": "äußert der Autor einen Wunsch?"
+            "number": "D",
+            "text": "liefert die Autorin Definition?",
+            "german": "liefert die Autorin Definition?",
+            "chinese": "这半句是在界定概念或说明定义。",
+            "hint": "这半句是在界定概念或说明定义。",
+            "sourceRow": 9
           }
-        ],
-        "note": ""
+        ]
       },
       {
-        "number": "E",
-        "text": "Eine interessante Spur verfolgen dabei Neuroforscher, die bildgebende Verfahren nutzen, um das träumende Gehirn zu beobachten.",
-        "german": "Eine interessante Spur verfolgen dabei Neuroforscher, die bildgebende Verfahren nutzen, um das träumende Gehirn zu beobachten.",
-        "chinese": "一条有意思的线索来自利用影像技术观察“做梦中的大脑”的神经科学家。他们得到一个令人惊讶的结果：在有“真相”，也许并没那么重要。",
+        "number": "3",
+        "text": "Allgemeinen wird als Traum eine psychische Aktivität während des Schlafes bezeichnet.",
+        "german": "Allgemeinen wird als Traum eine psychische Aktivität während des Schlafes bezeichnet.",
+        "chinese": "这半句是在界定概念或说明定义。",
         "answer": "",
-        "raw": "8-gibt die Autorin einen Rat?",
-        "source": "lv2-xlsx",
-        "paragraph": "E",
-        "firstSentence": "Eine interessante Spur verfolgen dabei Neuroforscher, die bildgebende Verfahren nutzen, um das träumende Gehirn zu beobachten.",
-        "summary": "一条有意思的线索来自利用影像技术观察“做梦中的大脑”的神经科学家。他们得到一个令人惊讶的结果：在有“真相”，也许并没那么重要。",
+        "raw": "liefert die Autorin eine Definition?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 10,
+        "paragraph": "D",
+        "firstSentence": "Allgemeinen wird als Traum eine psychische Aktivität während des Schlafes bezeichnet.",
+        "summary": "这半句是在界定概念或说明定义。",
+        "sentenceZh": "这半句是在界定概念或说明定义。",
+        "frage": "liefert die Autorin eine Definition?",
+        "signalwortZh": "被称为 / 定义为",
         "items": [
           {
-            "number": "8",
-            "text": "gibt die Autorin einen Rat?"
+            "number": "D",
+            "text": "liefert die Autorin eine Definition?",
+            "german": "liefert die Autorin eine Definition?",
+            "chinese": "这半句是在界定概念或说明定义。",
+            "hint": "这半句是在界定概念或说明定义。",
+            "sourceRow": 10
           }
-        ],
-        "note": ""
+        ]
+      },
+      {
+        "number": "4",
+        "text": "So kursieren verschiedene Theorien über den Gehalt von Träumen, die einander oft",
+        "german": "So kursieren verschiedene Theorien über den Gehalt von Träumen, die einander oft",
+        "chinese": "这半句并列或对照不同立场。",
+        "answer": "",
+        "raw": "stellt die Autorin verschiedene Standpunkte einander Gegenüber ?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 11,
+        "paragraph": "C",
+        "firstSentence": "So kursieren verschiedene Theorien über den Gehalt von Träumen, die einander oft",
+        "summary": "这半句并列或对照不同立场。",
+        "sentenceZh": "这半句并列或对照不同立场。",
+        "frage": "stellt die Autorin verschiedene Standpunkte einander Gegenüber ?",
+        "signalwortZh": "不同理论 / 一方面另一方面",
+        "items": [
+          {
+            "number": "C",
+            "text": "stellt die Autorin verschiedene Standpunkte einander Gegenüber ?",
+            "german": "stellt die Autorin verschiedene Standpunkte einander Gegenüber ?",
+            "chinese": "这半句并列或对照不同立场。",
+            "hint": "这半句并列或对照不同立场。",
+            "sourceRow": 11
+          }
+        ]
+      },
+      {
+        "number": "5",
+        "text": "Traumforschung, lässt sich eigentlich nur Folgendes daraus ableiten: Zwar kreisen viele Theorien",
+        "german": "Traumforschung, lässt sich eigentlich nur Folgendes daraus ableiten: Zwar kreisen viele Theorien",
+        "chinese": "这半句对前文内容作归纳或结论。",
+        "answer": "",
+        "raw": "zieht die Autorin eine Schlussfolgerung?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 12,
+        "paragraph": "C",
+        "firstSentence": "Traumforschung, lässt sich eigentlich nur Folgendes daraus ableiten: Zwar kreisen viele Theorien",
+        "summary": "这半句对前文内容作归纳或结论。",
+        "sentenceZh": "这半句对前文内容作归纳或结论。",
+        "frage": "zieht die Autorin eine Schlussfolgerung?",
+        "signalwortZh": "由此可得 / 因此",
+        "items": [
+          {
+            "number": "C",
+            "text": "zieht die Autorin eine Schlussfolgerung?",
+            "german": "zieht die Autorin eine Schlussfolgerung?",
+            "chinese": "这半句对前文内容作归纳或结论。",
+            "hint": "这半句对前文内容作归纳或结论。",
+            "sourceRow": 12
+          }
+        ]
+      },
+      {
+        "number": "6",
+        "text": "lässt, möglicherweise auf einem Missverständnis basiert.",
+        "german": "lässt, möglicherweise auf einem Missverständnis basiert.",
+        "chinese": "这半句提出质疑、保留意见或反问。",
+        "answer": "",
+        "raw": "äußert / wirft die Autorin Bedenken/Zweifel auf?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 13,
+        "paragraph": "B",
+        "firstSentence": "lässt, möglicherweise auf einem Missverständnis basiert.",
+        "summary": "这半句提出质疑、保留意见或反问。",
+        "sentenceZh": "这半句提出质疑、保留意见或反问。",
+        "frage": "äußert / wirft die Autorin Bedenken/Zweifel auf?",
+        "signalwortZh": "误解 / 质疑 / 疑虑",
+        "items": [
+          {
+            "number": "B",
+            "text": "äußert / wirft die Autorin Bedenken/Zweifel auf?",
+            "german": "äußert / wirft die Autorin Bedenken/Zweifel auf?",
+            "chinese": "这半句提出质疑、保留意见或反问。",
+            "hint": "这半句提出质疑、保留意见或反问。",
+            "sourceRow": 13
+          }
+        ]
+      },
+      {
+        "number": "7",
+        "text": "Da bleibt es nur zu hoffen, dass auch bald die interessante Frage",
+        "german": "Da bleibt es nur zu hoffen, dass auch bald die interessante Frage",
+        "chinese": "这半句表达希望或愿望。",
+        "answer": "",
+        "raw": "äußert der Autor einen Wunsch ?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 14,
+        "paragraph": "D",
+        "firstSentence": "Da bleibt es nur zu hoffen, dass auch bald die interessante Frage",
+        "summary": "这半句表达希望或愿望。",
+        "sentenceZh": "这半句表达希望或愿望。",
+        "frage": "äußert der Autor einen Wunsch ?",
+        "signalwortZh": "希望 / 愿望",
+        "items": [
+          {
+            "number": "D",
+            "text": "äußert der Autor einen Wunsch ?",
+            "german": "äußert der Autor einen Wunsch ?",
+            "chinese": "这半句表达希望或愿望。",
+            "hint": "这半句表达希望或愿望。",
+            "sourceRow": 14
+          }
+        ]
+      },
+      {
+        "number": "8",
+        "text": "lässt, möglicherweise auf einem Missverständnis basiert.",
+        "german": "lässt, möglicherweise auf einem Missverständnis basiert.",
+        "chinese": "这半句提出质疑、保留意见或反问。",
+        "answer": "",
+        "raw": "äußert die Autorin Bedenken? wirft die Autorin Bedenken auf.? wirft die Autorin Zweifel auf.?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 15,
+        "paragraph": "B",
+        "firstSentence": "lässt, möglicherweise auf einem Missverständnis basiert.",
+        "summary": "这半句提出质疑、保留意见或反问。",
+        "sentenceZh": "这半句提出质疑、保留意见或反问。",
+        "frage": "äußert die Autorin Bedenken? wirft die Autorin Bedenken auf.? wirft die Autorin Zweifel auf.?",
+        "signalwortZh": "误解 / 质疑 / 疑虑",
+        "items": [
+          {
+            "number": "B",
+            "text": "äußert die Autorin Bedenken? wirft die Autorin Bedenken auf.? wirft die Autorin Zweifel auf.?",
+            "german": "äußert die Autorin Bedenken? wirft die Autorin Bedenken auf.? wirft die Autorin Zweifel auf.?",
+            "chinese": "这半句提出质疑、保留意见或反问。",
+            "hint": "这半句提出质疑、保留意见或反问。",
+            "sourceRow": 15
+          }
+        ]
+      },
+      {
+        "number": "9",
+        "text": "不建议配「7- äußert / wirft Bedenken/Zweifel … / äußert sich abfällig」",
+        "german": "不建议配「7- äußert / wirft Bedenken/Zweifel … / äußert sich abfällig」",
+        "chinese": "这半句用讽刺、夸张或贬斥语气评价对象。",
+        "answer": "",
+        "raw": "äußert sich die Autorin abfällig?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 16,
+        "paragraph": "B",
+        "firstSentence": "不建议配「7- äußert / wirft Bedenken/Zweifel … / äußert sich abfällig」",
+        "summary": "这半句用讽刺、夸张或贬斥语气评价对象。",
+        "sentenceZh": "这半句用讽刺、夸张或贬斥语气评价对象。",
+        "frage": "äußert sich die Autorin abfällig?",
+        "signalwortZh": "我想吐 / 很烦 / 贬斥",
+        "items": [
+          {
+            "number": "B",
+            "text": "äußert sich die Autorin abfällig?",
+            "german": "äußert sich die Autorin abfällig?",
+            "chinese": "这半句用讽刺、夸张或贬斥语气评价对象。",
+            "hint": "这半句用讽刺、夸张或贬斥语气评价对象。",
+            "sourceRow": 16
+          }
+        ]
       }
     ]
   },
   {
     "teil": 4,
-    "title": "Zwischen Familie und Studium / Doppelbelastung im Studium",
-    "sourceText": "LV2 段落卡片",
+    "title": "信号词问句配对",
+    "sourceText": "LV2 信号词问句表 修正版",
     "mode": "paragraph-card",
     "questions": [
       {
-        "number": "A",
-        "text": "Ich bin Studentin und habe eine kleine Tochter.",
-        "german": "Ich bin Studentin und habe eine kleine Tochter.",
-        "chinese": "作者以自己一边带病一边照顾孩子的处境开场，呈现学生身份与家庭照护之间的双重压力。",
+        "number": "1",
+        "text": "Das alles schafft er scheinbar mit links.",
+        "german": "Das alles schafft er scheinbar mit links.",
+        "chinese": "这半句表达赞赏、钦佩或佩服。",
         "answer": "",
-        "raw": "（资料未明确给出/该段可能不作为配题答案）",
-        "source": "lv2-xlsx",
-        "paragraph": "A",
-        "firstSentence": "Ich bin Studentin und habe eine kleine Tochter.",
-        "summary": "作者以自己一边带病一边照顾孩子的处境开场，呈现学生身份与家庭照护之间的双重压力。",
-        "items": [],
-        "note": "资料未明确给出对应题项"
-      },
-      {
-        "number": "B",
-        "text": "Mit einem halb geöffnet Auge verfolge ich dann, wie das Familienleben ohne mich so läuft.",
-        "german": "Mit einem halb geöffnet Auge verfolge ich dann, wie das Familienleben ohne mich so läuft.",
-        "chinese": "我半睁一只眼，看看没有我的情况下家里运行得怎样。总体上非常好。男友要安抚发烧的孩子、写他的学期论文、洗碗、买菜。",
-        "answer": "",
-        "raw": "7-gibt die Autorin ihre Eifersucht zu?作者是否承认自己的嫉妒？; 11- drückt die Autorin Bewunderung aus?作者是否表达了赞赏/钦佩？",
-        "source": "lv2-xlsx",
+        "raw": "drückt die Autorin Bewunderung aus?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 17,
         "paragraph": "B",
-        "firstSentence": "Mit einem halb geöffnet Auge verfolge ich dann, wie das Familienleben ohne mich so läuft.",
-        "summary": "我半睁一只眼，看看没有我的情况下家里运行得怎样。总体上非常好。男友要安抚发烧的孩子、写他的学期论文、洗碗、买菜。",
+        "firstSentence": "Das alles schafft er scheinbar mit links.",
+        "summary": "这半句表达赞赏、钦佩或佩服。",
+        "sentenceZh": "这半句表达赞赏、钦佩或佩服。",
+        "frage": "drückt die Autorin Bewunderung aus?",
+        "signalwortZh": "轻松做到 / 钦佩 / 有爱心",
         "items": [
           {
-            "number": "7",
-            "text": "gibt die Autorin ihre Eifersucht zu?作者是否承认自己的嫉妒？"
-          },
-          {
-            "number": "11",
-            "text": "drückt die Autorin Bewunderung aus?作者是否表达了赞赏/钦佩？"
+            "number": "B",
+            "text": "drückt die Autorin Bewunderung aus?",
+            "german": "drückt die Autorin Bewunderung aus?",
+            "chinese": "这半句表达赞赏、钦佩或佩服。",
+            "hint": "这半句表达赞赏、钦佩或佩服。",
+            "sourceRow": 17
           }
-        ],
-        "note": ""
+        ]
       },
       {
-        "number": "C",
-        "text": "Ich pendle zwischen der Stadt, in der wir leben, und der Stadt, in der ich studiere.",
-        "german": "Ich pendle zwischen der Stadt, in der wir leben, und der Stadt, in der ich studiere.",
-        "chinese": "我在我们生活的城市和我上学的城市之间来回奔波。顺利的时候我一周不在家3天，不顺利的时候5天。",
+        "number": "2",
+        "text": "Zwischendurch macht er mir Tee, kocht Hühnersuppe oder",
+        "german": "Zwischendurch macht er mir Tee, kocht Hühnersuppe oder",
+        "chinese": "这半句说明个人经历、动机或个人立场。",
         "answer": "",
-        "raw": "7- äußert/offenbart die Autorin Schuldgefühle?作者是否表达/流露了内疚感？",
-        "source": "lv2-xlsx",
+        "raw": "gibt die Autorin einen Rat?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 18,
+        "paragraph": "B",
+        "firstSentence": "Zwischendurch macht er mir Tee, kocht Hühnersuppe oder",
+        "summary": "这半句说明个人经历、动机或个人立场。",
+        "sentenceZh": "这半句说明个人经历、动机或个人立场。",
+        "frage": "gibt die Autorin einen Rat?",
+        "signalwortZh": "我 / 对我而言",
+        "items": [
+          {
+            "number": "B",
+            "text": "gibt die Autorin einen Rat?",
+            "german": "gibt die Autorin einen Rat?",
+            "chinese": "这半句说明个人经历、动机或个人立场。",
+            "hint": "这半句说明个人经历、动机或个人立场。",
+            "sourceRow": 18
+          }
+        ]
+      },
+      {
+        "number": "3",
+        "text": "Zwischendurch macht er mir Tee, kocht Hühnersuppe oder",
+        "german": "Zwischendurch macht er mir Tee, kocht Hühnersuppe oder",
+        "chinese": "这半句说明个人经历、动机或个人立场。",
+        "answer": "",
+        "raw": "gibt die Autorin ihre Eifersucht zu?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 19,
+        "paragraph": "B",
+        "firstSentence": "Zwischendurch macht er mir Tee, kocht Hühnersuppe oder",
+        "summary": "这半句说明个人经历、动机或个人立场。",
+        "sentenceZh": "这半句说明个人经历、动机或个人立场。",
+        "frage": "gibt die Autorin ihre Eifersucht zu?",
+        "signalwortZh": "我 / 对我而言",
+        "items": [
+          {
+            "number": "B",
+            "text": "gibt die Autorin ihre Eifersucht zu?",
+            "german": "gibt die Autorin ihre Eifersucht zu?",
+            "chinese": "这半句说明个人经历、动机或个人立场。",
+            "hint": "这半句说明个人经历、动机或个人立场。",
+            "sourceRow": 19
+          }
+        ]
+      },
+      {
+        "number": "4",
+        "text": "Ich weiß, dass niemand perfekt ist, dass ich das nicht von mir erwarten kann.",
+        "german": "Ich weiß, dass niemand perfekt ist, dass ich das nicht von mir erwarten kann.",
+        "chinese": "这半句体现对自己不完美的接纳。",
+        "answer": "",
+        "raw": "ist die Autorin nachsichtig mit sich selbst?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 20,
         "paragraph": "C",
-        "firstSentence": "Ich pendle zwischen der Stadt, in der wir leben, und der Stadt, in der ich studiere.",
-        "summary": "我在我们生活的城市和我上学的城市之间来回奔波。顺利的时候我一周不在家3天，不顺利的时候5天。",
+        "firstSentence": "Ich weiß, dass niemand perfekt ist, dass ich das nicht von mir erwarten kann.",
+        "summary": "这半句体现对自己不完美的接纳。",
+        "sentenceZh": "这半句体现对自己不完美的接纳。",
+        "frage": "ist die Autorin nachsichtig mit sich selbst?",
+        "signalwortZh": "完美 / 不完美也可以",
         "items": [
           {
-            "number": "7",
-            "text": "äußert/offenbart die Autorin Schuldgefühle?作者是否表达/流露了内疚感？"
+            "number": "C",
+            "text": "ist die Autorin nachsichtig mit sich selbst?",
+            "german": "ist die Autorin nachsichtig mit sich selbst?",
+            "chinese": "这半句体现对自己不完美的接纳。",
+            "hint": "这半句体现对自己不完美的接纳。",
+            "sourceRow": 20
           }
-        ],
-        "note": ""
+        ]
       },
       {
-        "number": "D",
-        "text": "Während ich hustend auf dem Sofa liege und über mein Leben nachdenke, habe ich diesen Werbespot im Kopf, der mir sagt, dass eine erkältete Mutter sich keine Auszeit nimmt, sondern ein Grippemittel, um sich dann glücklich lächelnd wieder ihren täglichen Aufgaben zu widmen.",
-        "german": "Während ich hustend auf dem Sofa liege und über mein Leben nachdenke, habe ich diesen Werbespot im Kopf, der mir sagt, dass eine erkältete Mutter sich keine Auszeit nimmt, sondern ein Grippemittel, um sich dann glücklich lächelnd wieder ihren täglichen Aufgaben zu widmen.",
-        "chinese": "使像一只相当怪的青蛙也能享受狂欢节，以及她并不会因为我生病就更少叫我妈妈。",
+        "number": "5",
+        "text": "Mir wird schlecht, wenn ich daran",
+        "german": "Mir wird schlecht, wenn ich daran",
+        "chinese": "这半句用讽刺、夸张或贬斥语气评价对象。",
         "answer": "",
-        "raw": "9- ist die Autorin nachsichtig mit sich selbst?作者是否对自己宽容/体谅？",
-        "source": "lv2-xlsx",
-        "paragraph": "D",
-        "firstSentence": "Während ich hustend auf dem Sofa liege und über mein Leben nachdenke, habe ich diesen Werbespot im Kopf, der mir sagt, dass eine erkältete Mutter sich keine Auszeit nimmt, sondern ein Grippemittel, um sich dann glücklich lächelnd wieder ihren täglichen Aufgaben zu widmen.",
-        "summary": "使像一只相当怪的青蛙也能享受狂欢节，以及她并不会因为我生病就更少叫我妈妈。",
-        "items": [
-          {
-            "number": "9",
-            "text": "ist die Autorin nachsichtig mit sich selbst?作者是否对自己宽容/体谅？"
-          }
-        ],
-        "note": ""
-      },
-      {
-        "number": "E",
-        "text": "All denjenigen unter euch, die in einer ähnlichen Situation sind und versuchen, den Spagat zwischen Uni und Familie hinzukriegen, kann ich sagen: Macht euch nicht so viele Gedanken und lasst euch auf gar einen Fall ein schlechtes Gewissen einreden, vor allem nicht von den vielen Helikoptereltern, die an den Kitas herumschwirren.",
-        "german": "All denjenigen unter euch, die in einer ähnlichen Situation sind und versuchen, den Spagat zwischen Uni und Familie hinzukriegen, kann ich sagen: Macht euch nicht so viele Gedanken und lasst euch auf gar einen Fall ein schlechtes Gewissen einreden, vor allem nicht von den vielen Helikoptereltern, die an den Kitas herumschwirren.",
-        "chinese": "我一边在沙发上咳嗽，一边思考我的生活，脑海里浮现一个广告：感冒了的妈妈不是休息，而是吃一粒感冒药，然后笑容满面地继续日常任务。要理解这有多不必要，我只需要看看我的小家伙。",
-        "answer": "",
-        "raw": "10-macht die Autorin anderen Mut?作者是否在鼓励/为他人打气？; 12- ist die Autorin polemisch? Oder geringschätzig作者是否带有抨击色彩？或表现出轻蔑？",
-        "source": "lv2-xlsx",
+        "raw": "ist die Autorin polemisch? oder geringschätzig",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 21,
         "paragraph": "E",
-        "firstSentence": "All denjenigen unter euch, die in einer ähnlichen Situation sind und versuchen, den Spagat zwischen Uni und Familie hinzukriegen, kann ich sagen: Macht euch nicht so viele Gedanken und lasst euch auf gar einen Fall ein schlechtes Gewissen einreden, vor allem nicht von den vielen Helikoptereltern, die an den Kitas herumschwirren.",
-        "summary": "我一边在沙发上咳嗽，一边思考我的生活，脑海里浮现一个广告：感冒了的妈妈不是休息，而是吃一粒感冒药，然后笑容满面地继续日常任务。要理解这有多不必要，我只需要看看我的小家伙。",
+        "firstSentence": "Mir wird schlecht, wenn ich daran",
+        "summary": "这半句用讽刺、夸张或贬斥语气评价对象。",
+        "sentenceZh": "这半句用讽刺、夸张或贬斥语气评价对象。",
+        "frage": "ist die Autorin polemisch? oder geringschätzig",
+        "signalwortZh": "我想吐 / 很烦 / 贬斥",
         "items": [
           {
-            "number": "10",
-            "text": "macht die Autorin anderen Mut?作者是否在鼓励/为他人打气？"
-          },
-          {
-            "number": "12",
-            "text": "ist die Autorin polemisch? Oder geringschätzig作者是否带有抨击色彩？或表现出轻蔑？"
+            "number": "E",
+            "text": "ist die Autorin polemisch? oder geringschätzig",
+            "german": "ist die Autorin polemisch? oder geringschätzig",
+            "chinese": "这半句用讽刺、夸张或贬斥语气评价对象。",
+            "hint": "这半句用讽刺、夸张或贬斥语气评价对象。",
+            "sourceRow": 21
           }
-        ],
-        "note": ""
+        ]
+      },
+      {
+        "number": "6",
+        "text": "Uni und Familie hinzukriegen, kann ich sagen: Macht euch nicht so viele Gedanken und lasst euch auf",
+        "german": "Uni und Familie hinzukriegen, kann ich sagen: Macht euch nicht so viele Gedanken und lasst euch auf",
+        "chinese": "这半句是在鼓励读者或发出行动呼吁。",
+        "answer": "",
+        "raw": "macht die Autorin anderen Mut?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 22,
+        "paragraph": "E",
+        "firstSentence": "Uni und Familie hinzukriegen, kann ich sagen: Macht euch nicht so viele Gedanken und lasst euch auf",
+        "summary": "这半句是在鼓励读者或发出行动呼吁。",
+        "sentenceZh": "这半句是在鼓励读者或发出行动呼吁。",
+        "frage": "macht die Autorin anderen Mut?",
+        "signalwortZh": "呼吁 / 鼓励",
+        "items": [
+          {
+            "number": "E",
+            "text": "macht die Autorin anderen Mut?",
+            "german": "macht die Autorin anderen Mut?",
+            "chinese": "这半句是在鼓励读者或发出行动呼吁。",
+            "hint": "这半句是在鼓励读者或发出行动呼吁。",
+            "sourceRow": 22
+          }
+        ]
+      },
+      {
+        "number": "7",
+        "text": "证据：自我质疑与失败者感（„gute Mutter?",
+        "german": "证据：自我质疑与失败者感（„gute Mutter?",
+        "chinese": "这半句表现自责、失败感或内疚。",
+        "answer": "",
+        "raw": "äußert/offenbart die Autorin Schuldgefühle?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 23,
+        "paragraph": "E",
+        "firstSentence": "证据：自我质疑与失败者感（„gute Mutter?",
+        "summary": "这半句表现自责、失败感或内疚。",
+        "sentenceZh": "这半句表现自责、失败感或内疚。",
+        "frage": "äußert/offenbart die Autorin Schuldgefühle?",
+        "signalwortZh": "好妈妈吗 / 失败者 / 内疚",
+        "items": [
+          {
+            "number": "E",
+            "text": "äußert/offenbart die Autorin Schuldgefühle?",
+            "german": "äußert/offenbart die Autorin Schuldgefühle?",
+            "chinese": "这半句表现自责、失败感或内疚。",
+            "hint": "这半句表现自责、失败感或内疚。",
+            "sourceRow": 23
+          }
+        ]
       }
     ]
   },
   {
     "teil": 5,
-    "title": "Fernstudenten: einsam aber virtuell verbunden",
-    "sourceText": "LV2 段落卡片",
+    "title": "信号词问句配对",
+    "sourceText": "LV2 信号词问句表 修正版",
     "mode": "paragraph-card",
     "questions": [
       {
-        "number": "A",
-        "text": "Ein Fernstudium war noch nie eine besonders gesellige Angelegenheit: Schon in der Anfangszeit, kurz nach der Gründung der ersten Fernhochschulen in den siebziger Jahren, hockte man wie der typische einsame gelehrte abends im Studienstübchen, hinter Papierstapeln, die nicht kleiner werden wollten, juristischen oder medizinisches Fachvokabular, Geschichtsdaten oder Formeln pauken, bis der Kopf rauchte, Und wenn alle paar Wochen der Briefträger mit einem großen, schweren, geheimnisvoll wirkenden Paket kam, fragten sich die Nachbarn vielleicht, welchem seltsamen Hobby man wohl nachgehe.",
-        "german": "Ein Fernstudium war noch nie eine besonders gesellige Angelegenheit: Schon in der Anfangszeit, kurz nach der Gründung der ersten Fernhochschulen in den siebziger Jahren, hockte man wie der typische einsame gelehrte abends im Studienstübchen, hinter Papierstapeln, die nicht kleiner werden wollten, juristischen oder medizinisches Fachvokabular, Geschichtsdaten oder Formeln pauken, bis der Kopf rauchte, Und wenn alle paar Wochen der Briefträger mit einem großen, schweren, geheimnisvoll wirkenden Paket kam, fragten sich die Nachbarn vielleicht, welchem seltsamen Hobby man wohl nachgehe.",
-        "chinese": "函授从来都不太“社交”。七十年代第一批函授高校刚成立时，你就像典型的“孤独学者”一样，晚上蜷在小书房里，脑袋冒烟地死记硬背法律/医学术语、历史数据、公式。",
+        "number": "1",
+        "text": "fest überzeugt.",
+        "german": "fest überzeugt.",
+        "chinese": "文中立场鲜明，判断直接。",
         "answer": "",
-        "raw": "9- möchte der Autor die Leser unterhalten?作者是想逗读者/以趣味笔法来呈现吗？",
-        "source": "lv2-xlsx",
-        "paragraph": "A",
-        "firstSentence": "Ein Fernstudium war noch nie eine besonders gesellige Angelegenheit: Schon in der Anfangszeit, kurz nach der Gründung der ersten Fernhochschulen in den siebziger Jahren, hockte man wie der typische einsame gelehrte abends im Studienstübchen, hinter Papierstapeln, die nicht kleiner werden wollten, juristischen oder medizinisches Fachvokabular, Geschichtsdaten oder Formeln pauken, bis der Kopf rauchte, Und wenn alle paar Wochen der Briefträger mit einem großen, schweren, geheimnisvoll wirkenden Paket kam, fragten sich die Nachbarn vielleicht, welchem seltsamen Hobby man wohl nachgehe.",
-        "summary": "函授从来都不太“社交”。七十年代第一批函授高校刚成立时，你就像典型的“孤独学者”一样，晚上蜷在小书房里，脑袋冒烟地死记硬背法律/医学术语、历史数据、公式。",
-        "items": [
-          {
-            "number": "9",
-            "text": "möchte der Autor die Leser unterhalten?作者是想逗读者/以趣味笔法来呈现吗？"
-          }
-        ],
-        "note": ""
-      },
-      {
-        "number": "B",
-        "text": "Diese Zeiten sind zum Glück schon lange vorbei, doch damals wie heute ist die Stärke des Fernstudiums, nämlich die räumliche Flexibilität, gleichzeitig sein größter Nachteil: Das einsame Lernen überfordert viele Fernstudenten.",
-        "german": "Diese Zeiten sind zum Glück schon lange vorbei, doch damals wie heute ist die Stärke des Fernstudiums, nämlich die räumliche Flexibilität, gleichzeitig sein größter Nachteil: Das einsame Lernen überfordert viele Fernstudenten.",
-        "chinese": "校园真就“金光闪闪”吗？闪?”进一步引出评估。",
-        "answer": "",
-        "raw": "11- stützt sich der Autor auf eine fremde Autorität?作者是否援引外部权威？",
-        "source": "lv2-xlsx",
-        "paragraph": "B",
-        "firstSentence": "Diese Zeiten sind zum Glück schon lange vorbei, doch damals wie heute ist die Stärke des Fernstudiums, nämlich die räumliche Flexibilität, gleichzeitig sein größter Nachteil: Das einsame Lernen überfordert viele Fernstudenten.",
-        "summary": "校园真就“金光闪闪”吗？闪?”进一步引出评估。",
-        "items": [
-          {
-            "number": "11",
-            "text": "stützt sich der Autor auf eine fremde Autorität?作者是否援引外部权威？"
-          }
-        ],
-        "note": ""
-      },
-      {
-        "number": "C",
-        "text": "Einerseits sind die Bedingungen für ein Fernstudium heute natürlich weitaus besser als in den Anfangszeiten.",
-        "german": "Einerseits sind die Bedingungen für ein Fernstudium heute natürlich weitaus besser als in den Anfangszeiten.",
-        "chinese": "这些日子早已过去；不过直到今天，函授最大的优势——地域灵活——也是最大劣势：孤独学习让很多函授生吃不消。",
-        "answer": "",
-        "raw": "12- wird der Autor sentimental? / Wird der Autor sensibel?作者是否流露感伤/怀旧？",
-        "source": "lv2-xlsx",
+        "raw": "bezieht der Autor entschieden Position ?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 24,
         "paragraph": "C",
-        "firstSentence": "Einerseits sind die Bedingungen für ein Fernstudium heute natürlich weitaus besser als in den Anfangszeiten.",
-        "summary": "这些日子早已过去；不过直到今天，函授最大的优势——地域灵活——也是最大劣势：孤独学习让很多函授生吃不消。",
+        "firstSentence": "fest überzeugt.",
+        "summary": "文中立场鲜明，判断直接。",
+        "sentenceZh": "文中立场鲜明，判断直接。",
+        "frage": "bezieht der Autor entschieden Position ?",
+        "signalwortZh": "深信 / 明确 / 最终",
         "items": [
           {
-            "number": "12",
-            "text": "wird der Autor sentimental? / Wird der Autor sensibel?作者是否流露感伤/怀旧？"
+            "number": "C",
+            "text": "bezieht der Autor entschieden Position ?",
+            "german": "bezieht der Autor entschieden Position ?",
+            "chinese": "文中立场鲜明，判断直接。",
+            "hint": "文中立场鲜明，判断直接。",
+            "sourceRow": 24
           }
-        ],
-        "note": ""
+        ]
       },
       {
-        "number": "D",
-        "text": "Anders sieht es freilich bei Berufstätigen aus, die schon immer den klassischen Kunden der Studienanbieter bildeten.",
-        "german": "Anders sieht es freilich bei Berufstätigen aus, die schon immer den klassischen Kunden der Studienanbieter bildeten.",
-        "chinese": "本段把前面对函授孤独性的批评限定到在职学习者之外，说明在职者没有线下选择且能体现软技能。",
+        "number": "2",
+        "text": "Einerseits sind die Bedingungen für ein Fernstudium heute natürlich weitaus besser als in den",
+        "german": "Einerseits sind die Bedingungen für ein Fernstudium heute natürlich weitaus besser als in den",
+        "chinese": "这半句用讽刺、夸张或贬斥语气评价对象。",
         "answer": "",
-        "raw": "（资料未明确给出/该段可能不作为配题答案）",
-        "source": "lv2-xlsx",
+        "raw": "ist die Autorin polemisch oder geringschätzig?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 25,
+        "paragraph": "C",
+        "firstSentence": "Einerseits sind die Bedingungen für ein Fernstudium heute natürlich weitaus besser als in den",
+        "summary": "这半句用讽刺、夸张或贬斥语气评价对象。",
+        "sentenceZh": "这半句用讽刺、夸张或贬斥语气评价对象。",
+        "frage": "ist die Autorin polemisch oder geringschätzig?",
+        "signalwortZh": "我想吐 / 很烦 / 贬斥",
+        "items": [
+          {
+            "number": "C",
+            "text": "ist die Autorin polemisch oder geringschätzig?",
+            "german": "ist die Autorin polemisch oder geringschätzig?",
+            "chinese": "这半句用讽刺、夸张或贬斥语气评价对象。",
+            "hint": "这半句用讽刺、夸张或贬斥语气评价对象。",
+            "sourceRow": 25
+          }
+        ]
+      },
+      {
+        "number": "3",
+        "text": "Persönlich bekamen",
+        "german": "Persönlich bekamen",
+        "chinese": "这半句说明个人经历、动机或个人立场。",
+        "answer": "",
+        "raw": "macht die Autorin anderen Mut?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 26,
+        "paragraph": "A",
+        "firstSentence": "Persönlich bekamen",
+        "summary": "这半句说明个人经历、动机或个人立场。",
+        "sentenceZh": "这半句说明个人经历、动机或个人立场。",
+        "frage": "macht die Autorin anderen Mut?",
+        "signalwortZh": "我 / 对我而言",
+        "items": [
+          {
+            "number": "A",
+            "text": "macht die Autorin anderen Mut?",
+            "german": "macht die Autorin anderen Mut?",
+            "chinese": "这半句说明个人经历、动机或个人立场。",
+            "hint": "这半句说明个人经历、动机或个人立场。",
+            "sourceRow": 26
+          }
+        ]
+      },
+      {
+        "number": "4",
+        "text": "9- möchte der Autor die Leser unterhalten ?",
+        "german": "9- möchte der Autor die Leser unterhalten ?",
+        "chinese": "这半句体现幽默、玩味或娱乐化语气。",
+        "answer": "",
+        "raw": "möchte der Autor die Leser unterhalten ?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 27,
+        "paragraph": "A",
+        "firstSentence": "9- möchte der Autor die Leser unterhalten ?",
+        "summary": "这半句体现幽默、玩味或娱乐化语气。",
+        "sentenceZh": "这半句体现幽默、玩味或娱乐化语气。",
+        "frage": "möchte der Autor die Leser unterhalten ?",
+        "signalwortZh": "哎呀 / 会心一笑 / 娱乐",
+        "items": [
+          {
+            "number": "A",
+            "text": "möchte der Autor die Leser unterhalten ?",
+            "german": "möchte der Autor die Leser unterhalten ?",
+            "chinese": "这半句体现幽默、玩味或娱乐化语气。",
+            "hint": "这半句体现幽默、玩味或娱乐化语气。",
+            "sourceRow": 27
+          }
+        ]
+      },
+      {
+        "number": "5",
+        "text": "Anders sieht es freilich bei Berufstätigen aus, die schon immer den klassischen Kunde Studienanbieter",
+        "german": "Anders sieht es freilich bei Berufstätigen aus, die schon immer den klassischen Kunde Studienanbieter",
+        "chinese": "这半句对前文判断作限制、修正或相对化。",
+        "answer": "",
+        "raw": "relativiert der Autor zuvor getroffene Aussagen ?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 28,
         "paragraph": "D",
-        "firstSentence": "Anders sieht es freilich bei Berufstätigen aus, die schon immer den klassischen Kunden der Studienanbieter bildeten.",
-        "summary": "本段把前面对函授孤独性的批评限定到在职学习者之外，说明在职者没有线下选择且能体现软技能。",
-        "items": [],
-        "note": "资料未明确给出对应题项"
-      },
-      {
-        "number": "E",
-        "text": "Auch die Berufstätigen bezahlen ihr Fernstudium und den Erfolg, den sie sich da Einsamkeit: Denn ohne den Rückzug in die Einsamkeit und Stille lässt sich ein solche bewältigen, auch wenn man online mit vielen anderen verbunden sein kann.",
-        "german": "Auch die Berufstätigen bezahlen ihr Fernstudium und den Erfolg, den sie sich da Einsamkeit: Denn ohne den Rückzug in die Einsamkeit und Stille lässt sich ein solche bewältigen, auch wenn man online mit vielen anderen verbunden sein kann.",
-        "chinese": "不过，对在职人士——他们一直是传统函授的主力客户——情况就不一样了。上文的那些顾虑在这里自然就站不住脚，因为他们没有面授与函授可供二选一的机会。",
-        "answer": "",
-        "raw": "7- bezieht der Autor entschieden Position? 作者是否鲜明表态/立场明确？; 8- formuliert der Autor eine Warnung?作者是否提出警告？",
-        "source": "lv2-xlsx",
-        "paragraph": "E",
-        "firstSentence": "Auch die Berufstätigen bezahlen ihr Fernstudium und den Erfolg, den sie sich da Einsamkeit: Denn ohne den Rückzug in die Einsamkeit und Stille lässt sich ein solche bewältigen, auch wenn man online mit vielen anderen verbunden sein kann.",
-        "summary": "不过，对在职人士——他们一直是传统函授的主力客户——情况就不一样了。上文的那些顾虑在这里自然就站不住脚，因为他们没有面授与函授可供二选一的机会。",
+        "firstSentence": "Anders sieht es freilich bei Berufstätigen aus, die schon immer den klassischen Kunde Studienanbieter",
+        "summary": "这半句对前文判断作限制、修正或相对化。",
+        "sentenceZh": "这半句对前文判断作限制、修正或相对化。",
+        "frage": "relativiert der Autor zuvor getroffene Aussagen ?",
+        "signalwortZh": "不过 / 然而 / 情况不同",
         "items": [
           {
-            "number": "7",
-            "text": "bezieht der Autor entschieden Position? 作者是否鲜明表态/立场明确？"
-          },
-          {
-            "number": "8",
-            "text": "formuliert der Autor eine Warnung?作者是否提出警告？"
+            "number": "D",
+            "text": "relativiert der Autor zuvor getroffene Aussagen ?",
+            "german": "relativiert der Autor zuvor getroffene Aussagen ?",
+            "chinese": "这半句对前文判断作限制、修正或相对化。",
+            "hint": "这半句对前文判断作限制、修正或相对化。",
+            "sourceRow": 28
           }
-        ],
-        "note": ""
+        ]
+      },
+      {
+        "number": "6",
+        "text": "Martin kern, Professor für Mediendidaktik, betont, wie wichtig die soziale Interaktion",
+        "german": "Martin kern, Professor für Mediendidaktik, betont, wie wichtig die soziale Interaktion",
+        "chinese": "这半句转述他人观点、专家说法或外部评价。",
+        "answer": "",
+        "raw": "stützt sich der Autor auf eine fremde Autorität ?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 29,
+        "paragraph": "B",
+        "firstSentence": "Martin kern, Professor für Mediendidaktik, betont, wie wichtig die soziale Interaktion",
+        "summary": "这半句转述他人观点、专家说法或外部评价。",
+        "sentenceZh": "这半句转述他人观点、专家说法或外部评价。",
+        "frage": "stützt sich der Autor auf eine fremde Autorität ?",
+        "signalwortZh": "强调 / 批评者 / 研究者",
+        "items": [
+          {
+            "number": "B",
+            "text": "stützt sich der Autor auf eine fremde Autorität ?",
+            "german": "stützt sich der Autor auf eine fremde Autorität ?",
+            "chinese": "这半句转述他人观点、专家说法或外部评价。",
+            "hint": "这半句转述他人观点、专家说法或外部评价。",
+            "sourceRow": 29
+          }
+        ]
+      },
+      {
+        "number": "7",
+        "text": "immer den Reiz des Studentenlebens ausgemacht hat: Gern denke ich zurück an tiefgründige",
+        "german": "immer den Reiz des Studentenlebens ausgemacht hat: Gern denke ich zurück an tiefgründige",
+        "chinese": "这半句流露怀旧、感伤或遗憾。",
+        "answer": "",
+        "raw": "wird der Autor sentimental ? / Wird der Autor sensibel ?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 30,
+        "paragraph": "C",
+        "firstSentence": "immer den Reiz des Studentenlebens ausgemacht hat: Gern denke ich zurück an tiefgründige",
+        "summary": "这半句流露怀旧、感伤或遗憾。",
+        "sentenceZh": "这半句流露怀旧、感伤或遗憾。",
+        "frage": "wird der Autor sentimental ? / Wird der Autor sensibel ?",
+        "signalwortZh": "怀念 / 遗憾 / 可惜",
+        "items": [
+          {
+            "number": "C",
+            "text": "wird der Autor sentimental ? / Wird der Autor sensibel ?",
+            "german": "wird der Autor sentimental ? / Wird der Autor sensibel ?",
+            "chinese": "这半句流露怀旧、感伤或遗憾。",
+            "hint": "这半句流露怀旧、感伤或遗憾。",
+            "sourceRow": 30
+          }
+        ]
       }
     ]
   },
   {
     "teil": 6,
-    "title": "Akademisches Viertel: Warum ist denn noch niemand da?",
-    "sourceText": "LV2 段落卡片",
+    "title": "信号词问句配对",
+    "sourceText": "LV2 信号词问句表 修正版",
     "mode": "paragraph-card",
     "questions": [
       {
-        "number": "A",
-        "text": "Pünktlichkeit ist eine Tugend, der ein ähnliches Schicksal beschieden ist wie den Dinosauriern: Sie ist vom Aussterben bedroht.",
-        "german": "Pünktlichkeit ist eine Tugend, der ein ähnliches Schicksal beschieden ist wie den Dinosauriern: Sie ist vom Aussterben bedroht.",
-        "chinese": "本段围绕“Akademisches Viertel: Warum ist denn noch niemand da?”展开，重点考察：fordert die Autorin die Leser zur Selbstreflektion auf? 作者是否让读者自我反思？；äußert sich die Autorin negativ über andere?作者是否负面评价他人？",
+        "number": "1",
+        "text": "Ich schaue mir die Fahrpläne der öffentlichen Verkehrsmittel an oder die Wege im Navi,",
+        "german": "Ich schaue mir die Fahrpläne der öffentlichen Verkehrsmittel an oder die Wege im Navi,",
+        "chinese": "这半句说明个人经历、动机或个人立场。",
         "answer": "",
-        "raw": "8- fordert die Autorin die Leser zur Selbstreflektion auf? 作者是否让读者自我反思？; 7-äußert sich die Autorin negativ über andere?作者是否负面评价他人？",
-        "source": "lv2-xlsx",
-        "paragraph": "A",
-        "firstSentence": "Pünktlichkeit ist eine Tugend, der ein ähnliches Schicksal beschieden ist wie den Dinosauriern: Sie ist vom Aussterben bedroht.",
-        "summary": "本段围绕“Akademisches Viertel: Warum ist denn noch niemand da?”展开，重点考察：fordert die Autorin die Leser zur Selbstreflektion auf? 作者是否让读者自我反思？；äußert sich die Autorin negativ über andere?作者是否负面评价他人？",
-        "items": [
-          {
-            "number": "8",
-            "text": "fordert die Autorin die Leser zur Selbstreflektion auf? 作者是否让读者自我反思？"
-          },
-          {
-            "number": "7",
-            "text": "äußert sich die Autorin negativ über andere?作者是否负面评价他人？"
-          }
-        ],
-        "note": ""
-      },
-      {
-        "number": "B",
-        "text": "Ich selbst gehöre ja zu den Überpünktlichen.",
-        "german": "Ich selbst gehöre ja zu den Überpünktlichen.",
-        "chinese": "守时这项美德像恐龙一样：濒临灭绝。许多人如今把守时视为迂腐、顽固、老派，甚至是对自由的不必要限制。",
-        "answer": "",
-        "raw": "9- ist die Autorin nachsichtig mit sich selbst? 作者是否对自己宽容/体谅？",
-        "source": "lv2-xlsx",
+        "raw": "fordert die Autorin die Leser zur Selbstreflektion auf?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 31,
         "paragraph": "B",
-        "firstSentence": "Ich selbst gehöre ja zu den Überpünktlichen.",
-        "summary": "守时这项美德像恐龙一样：濒临灭绝。许多人如今把守时视为迂腐、顽固、老派，甚至是对自由的不必要限制。",
+        "firstSentence": "Ich schaue mir die Fahrpläne der öffentlichen Verkehrsmittel an oder die Wege im Navi,",
+        "summary": "这半句说明个人经历、动机或个人立场。",
+        "sentenceZh": "这半句说明个人经历、动机或个人立场。",
+        "frage": "fordert die Autorin die Leser zur Selbstreflektion auf?",
+        "signalwortZh": "我 / 对我而言",
         "items": [
           {
-            "number": "9",
-            "text": "ist die Autorin nachsichtig mit sich selbst? 作者是否对自己宽容/体谅？"
+            "number": "B",
+            "text": "fordert die Autorin die Leser zur Selbstreflektion auf?",
+            "german": "fordert die Autorin die Leser zur Selbstreflektion auf?",
+            "chinese": "这半句说明个人经历、动机或个人立场。",
+            "hint": "这半句说明个人经历、动机或个人立场。",
+            "sourceRow": 31
           }
-        ],
-        "note": ""
+        ]
       },
       {
-        "number": "D",
-        "text": "Eine bahnbrechende Lösung für das Problem der Unpünktlichkeit haben die Universitäten bereits vor mehr als 400 Jahren gefunden und das akademische Viertel eingeführt.",
-        "german": "Eine bahnbrechende Lösung für das Problem der Unpünktlichkeit haben die Universitäten bereits vor mehr als 400 Jahren gefunden und das akademische Viertel eingeführt.",
-        "chinese": "大学早在400多年前就为“不守时”找到了突破性解决方案——“学术一刻钟”。这意味着：时间后若标c. t.（cum tempore，“带时间”），课程通常晚 15分钟开始；",
+        "number": "2",
+        "text": "man unbedingt bleiben, wenn man warten muss: Sonst besteht die Gefahr, dass es einem die Laune",
+        "german": "man unbedingt bleiben, wenn man warten muss: Sonst besteht die Gefahr, dass es einem die Laune",
+        "chinese": "这半句提示风险或负面后果。",
         "answer": "",
-        "raw": "11- liefert die Autorin eine Definition?作者是否给出（术语/现象的）界定/定义",
-        "source": "lv2-xlsx",
-        "paragraph": "D",
-        "firstSentence": "Eine bahnbrechende Lösung für das Problem der Unpünktlichkeit haben die Universitäten bereits vor mehr als 400 Jahren gefunden und das akademische Viertel eingeführt.",
-        "summary": "大学早在400多年前就为“不守时”找到了突破性解决方案——“学术一刻钟”。这意味着：时间后若标c. t.（cum tempore，“带时间”），课程通常晚 15分钟开始；",
+        "raw": "formuliert der Autor eine Warnung?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 32,
+        "paragraph": "B",
+        "firstSentence": "man unbedingt bleiben, wenn man warten muss: Sonst besteht die Gefahr, dass es einem die Laune",
+        "summary": "这半句提示风险或负面后果。",
+        "sentenceZh": "这半句提示风险或负面后果。",
+        "frage": "formuliert der Autor eine Warnung?",
+        "signalwortZh": "风险 / 危险 / 伤害",
         "items": [
           {
-            "number": "11",
-            "text": "liefert die Autorin eine Definition?作者是否给出（术语/现象的）界定/定义"
+            "number": "B",
+            "text": "formuliert der Autor eine Warnung?",
+            "german": "formuliert der Autor eine Warnung?",
+            "chinese": "这半句提示风险或负面后果。",
+            "hint": "这半句提示风险或负面后果。",
+            "sourceRow": 32
           }
-        ],
-        "note": ""
+        ]
       },
       {
-        "number": "E",
-        "text": "Erstaunlich, dass eine so sinnvolle Einrichtung wie das akademische Viertel in angelsächsischen oder romanischen Ländern unbekannt ist.",
-        "german": "Erstaunlich, dass eine so sinnvolle Einrichtung wie das akademische Viertel in angelsächsischen oder romanischen Ländern unbekannt ist.",
-        "chinese": "己的一切疏漏都能宽宥，还摆出一副“我就是酷”的样子——这么一想，一刻钟也挺好过的。并非偶然，莱辛句首即用**„Erstaunlich, dass …“表达惊讶**；",
+        "number": "3",
+        "text": "die Gelassenheit, die man zum Warten braucht- niemand ist schließlich perfekt.",
+        "german": "die Gelassenheit, die man zum Warten braucht- niemand ist schließlich perfekt.",
+        "chinese": "这半句体现对自己不完美的接纳。",
         "answer": "",
-        "raw": "12- zeigt sich die Autorin verwundert?作者是否表示惊讶/诧异？",
-        "source": "lv2-xlsx",
+        "raw": "ist die Autorin nachsichtig mit sich selbst?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 33,
+        "paragraph": "B",
+        "firstSentence": "die Gelassenheit, die man zum Warten braucht- niemand ist schließlich perfekt.",
+        "summary": "这半句体现对自己不完美的接纳。",
+        "sentenceZh": "这半句体现对自己不完美的接纳。",
+        "frage": "ist die Autorin nachsichtig mit sich selbst?",
+        "signalwortZh": "完美 / 不完美也可以",
+        "items": [
+          {
+            "number": "B",
+            "text": "ist die Autorin nachsichtig mit sich selbst?",
+            "german": "ist die Autorin nachsichtig mit sich selbst?",
+            "chinese": "这半句体现对自己不完美的接纳。",
+            "hint": "这半句体现对自己不完美的接纳。",
+            "sourceRow": 33
+          }
+        ]
+      },
+      {
+        "number": "4",
+        "text": "Das bedeutet: Wenn hinter der",
+        "german": "Das bedeutet: Wenn hinter der",
+        "chinese": "这半句是在界定概念或说明定义。",
+        "answer": "",
+        "raw": "liefert die Autorin eine Definition?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 34,
+        "paragraph": "C",
+        "firstSentence": "Das bedeutet: Wenn hinter der",
+        "summary": "这半句是在界定概念或说明定义。",
+        "sentenceZh": "这半句是在界定概念或说明定义。",
+        "frage": "liefert die Autorin eine Definition?",
+        "signalwortZh": "被称为 / 定义为",
+        "items": [
+          {
+            "number": "C",
+            "text": "liefert die Autorin eine Definition?",
+            "german": "liefert die Autorin eine Definition?",
+            "chinese": "这半句是在界定概念或说明定义。",
+            "hint": "这半句是在界定概念或说明定义。",
+            "sourceRow": 34
+          }
+        ]
+      },
+      {
+        "number": "5",
+        "text": "man unbedingt bleiben, wenn man warten muss: Sonst besteht die Gefahr, dass es einem die Laune",
+        "german": "man unbedingt bleiben, wenn man warten muss: Sonst besteht die Gefahr, dass es einem die Laune",
+        "chinese": "这半句提示风险或负面后果。",
+        "answer": "",
+        "raw": "spricht die Autorin eine Warnung aus?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 35,
+        "paragraph": "B",
+        "firstSentence": "man unbedingt bleiben, wenn man warten muss: Sonst besteht die Gefahr, dass es einem die Laune",
+        "summary": "这半句提示风险或负面后果。",
+        "sentenceZh": "这半句提示风险或负面后果。",
+        "frage": "spricht die Autorin eine Warnung aus?",
+        "signalwortZh": "风险 / 危险 / 伤害",
+        "items": [
+          {
+            "number": "B",
+            "text": "spricht die Autorin eine Warnung aus?",
+            "german": "spricht die Autorin eine Warnung aus?",
+            "chinese": "这半句提示风险或负面后果。",
+            "hint": "这半句提示风险或负面后果。",
+            "sourceRow": 35
+          }
+        ]
+      },
+      {
+        "number": "6",
+        "text": "einkalkulierter Puffer -auch wenn dessen Erfinder vor 400 Jahren das natürlich noch nicht vorhersehen",
+        "german": "einkalkulierter Puffer -auch wenn dessen Erfinder vor 400 Jahren das natürlich noch nicht vorhersehen",
+        "chinese": "这半句用讽刺、夸张或贬斥语气评价对象。",
+        "answer": "",
+        "raw": "äußert sich die Autorin negativ über andere?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 36,
         "paragraph": "E",
-        "firstSentence": "Erstaunlich, dass eine so sinnvolle Einrichtung wie das akademische Viertel in angelsächsischen oder romanischen Ländern unbekannt ist.",
-        "summary": "己的一切疏漏都能宽宥，还摆出一副“我就是酷”的样子——这么一想，一刻钟也挺好过的。并非偶然，莱辛句首即用**„Erstaunlich, dass …“表达惊讶**；",
+        "firstSentence": "einkalkulierter Puffer -auch wenn dessen Erfinder vor 400 Jahren das natürlich noch nicht vorhersehen",
+        "summary": "这半句用讽刺、夸张或贬斥语气评价对象。",
+        "sentenceZh": "这半句用讽刺、夸张或贬斥语气评价对象。",
+        "frage": "äußert sich die Autorin negativ über andere?",
+        "signalwortZh": "我想吐 / 很烦 / 贬斥",
         "items": [
           {
-            "number": "12",
-            "text": "zeigt sich die Autorin verwundert?作者是否表示惊讶/诧异？"
+            "number": "E",
+            "text": "äußert sich die Autorin negativ über andere?",
+            "german": "äußert sich die Autorin negativ über andere?",
+            "chinese": "这半句用讽刺、夸张或贬斥语气评价对象。",
+            "hint": "这半句用讽刺、夸张或贬斥语气评价对象。",
+            "sourceRow": 36
           }
-        ],
-        "note": ""
+        ]
       }
     ]
   },
   {
     "teil": 7,
-    "title": "Wenn der Dozent zehn Jahre jünger ist",
-    "sourceText": "LV2 段落卡片",
+    "title": "信号词问句配对",
+    "sourceText": "LV2 信号词问句表 修正版",
     "mode": "paragraph-card",
     "questions": [
       {
-        "number": "A",
-        "text": "In der alten Bildungswelt sah Unterricht so aus: Vorn am Pult stand eine allwissende Respektsperson, die mindestens ein halbes Leben älter als man selbst war.",
-        "german": "In der alten Bildungswelt sah Unterricht so aus: Vorn am Pult stand eine allwissende Respektsperson, die mindestens ein halbes Leben älter als man selbst war.",
-        "chinese": "么？”——用心一想，这些关于学习的信条其实很过时。",
+        "number": "1",
+        "text": "7 liefert der Autor eine Definition?",
+        "german": "7 liefert der Autor eine Definition?",
+        "chinese": "这半句是在界定概念或说明定义。",
         "answer": "",
-        "raw": "（资料未明确给出/该段可能不作为配题答案）",
-        "source": "lv2-xlsx",
-        "paragraph": "A",
-        "firstSentence": "In der alten Bildungswelt sah Unterricht so aus: Vorn am Pult stand eine allwissende Respektsperson, die mindestens ein halbes Leben älter als man selbst war.",
-        "summary": "么？”——用心一想，这些关于学习的信条其实很过时。",
-        "items": [],
-        "note": "资料未明确给出对应题项"
-      },
-      {
-        "number": "B",
-        "text": "So ähnlich erging es mir in einem Seminar an der Hamburg Media School, an der ich ein berufsbegleitendes Master-Weiterbildungsstudium absolvierte.",
-        "german": "So ähnlich erging es mir in einem Seminar an der Hamburg Media School, an der ich ein berufsbegleitendes Master-Weiterbildungsstudium absolvierte.",
-        "chinese": "“旧式”教育里，讲台前是年长、权威的“全知者”，学生只需顺从聆听。虽已过去，但我们脑中仍存这种等发世界解释者”的形象，我们就愿意接受；",
-        "answer": "",
-        "raw": "8 schildert der Autor seine persönlichen Erfahrungen? 作者是否在叙述个人经历？",
-        "source": "lv2-xlsx",
-        "paragraph": "B",
-        "firstSentence": "So ähnlich erging es mir in einem Seminar an der Hamburg Media School, an der ich ein berufsbegleitendes Master-Weiterbildungsstudium absolvierte.",
-        "summary": "“旧式”教育里，讲台前是年长、权威的“全知者”，学生只需顺从聆听。虽已过去，但我们脑中仍存这种等发世界解释者”的形象，我们就愿意接受；",
-        "items": [
-          {
-            "number": "8",
-            "text": "schildert der Autor seine persönlichen Erfahrungen? 作者是否在叙述个人经历？"
-          }
-        ],
-        "note": ""
-      },
-      {
-        "number": "C",
-        "text": "Die Gründe dafür sind klar: Das Wissen ändert sich auf vielen Gebieten so schnell wie nie zuvor, es wird kleinteiliger und diverser - teilweise mit sehr kurzen Innovationszyklen.",
-        "german": "Die Gründe dafür sind klar: Das Wissen ändert sich auf vielen Gebieten so schnell wie nie zuvor, es wird kleinteiliger und diverser - teilweise mit sehr kurzen Innovationszyklen.",
-        "chinese": "传统的学习角色模式已经过去？",
-        "answer": "",
-        "raw": "10 stützt der Autor seine Argumentation durch Rückgriff auf eine Autorität?作者是否通过诉诸权威来",
-        "source": "lv2-xlsx",
-        "paragraph": "C",
-        "firstSentence": "Die Gründe dafür sind klar: Das Wissen ändert sich auf vielen Gebieten so schnell wie nie zuvor, es wird kleinteiliger und diverser - teilweise mit sehr kurzen Innovationszyklen.",
-        "summary": "传统的学习角色模式已经过去？",
-        "items": [
-          {
-            "number": "10",
-            "text": "stützt der Autor seine Argumentation durch Rückgriff auf eine Autorität?作者是否通过诉诸权威来"
-          }
-        ],
-        "note": ""
-      },
-      {
-        "number": "D",
-        "text": "Kevin Weyer jedenfalls hat das verinnerlicht.",
-        "german": "Kevin Weyer jedenfalls hat das verinnerlicht.",
-        "chinese": "支撑论证？（土哥答案，GPT：没有引用具体权威/研究者/机构，本题不选请考生自行判断）知识更新前所未有地快、更碎片更多样；",
-        "answer": "",
-        "raw": "7 liefert der Autor eine Definition?作者是否给出定义？",
-        "source": "lv2-xlsx",
+        "raw": "liefert der Autor eine Definition?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 37,
         "paragraph": "D",
-        "firstSentence": "Kevin Weyer jedenfalls hat das verinnerlicht.",
-        "summary": "支撑论证？（土哥答案，GPT：没有引用具体权威/研究者/机构，本题不选请考生自行判断）知识更新前所未有地快、更碎片更多样；",
+        "firstSentence": "7 liefert der Autor eine Definition?",
+        "summary": "这半句是在界定概念或说明定义。",
+        "sentenceZh": "这半句是在界定概念或说明定义。",
+        "frage": "liefert der Autor eine Definition?",
+        "signalwortZh": "被称为 / 定义为",
         "items": [
           {
-            "number": "7",
-            "text": "liefert der Autor eine Definition?作者是否给出定义？"
+            "number": "D",
+            "text": "liefert der Autor eine Definition?",
+            "german": "liefert der Autor eine Definition?",
+            "chinese": "这半句是在界定概念或说明定义。",
+            "hint": "这半句是在界定概念或说明定义。",
+            "sourceRow": 37
           }
-        ],
-        "note": ""
+        ]
       },
       {
-        "number": "E",
-        "text": "Weyers Schüler scheinen jedenfalls keine Probleme damit zu haben, sich von einem Dozenten anleiten zu lassen, der teilweise nur halb so alt ist wie sie selbst.",
-        "german": "Weyers Schüler scheinen jedenfalls keine Probleme damit zu haben, sich von einem Dozenten anleiten zu lassen, der teilweise nur halb so alt ist wie sie selbst.",
-        "chinese": "立。Weyer 的学员似乎并不介意由小自己一半的讲师指导。59岁的MonikaLeerhammer说：技术方面年轻人确实更灵，值得向他们学习；",
+        "number": "2",
+        "text": "So ähnlich erging es mir in einem Seminar an der Hamburg Media School, an der ich ein",
+        "german": "So ähnlich erging es mir in einem Seminar an der Hamburg Media School, an der ich ein",
+        "chinese": "这半句说明个人经历、动机或个人立场。",
         "answer": "",
-        "raw": "12 zieht der Autor einen Schluss?作者是否作出结论？",
-        "source": "lv2-xlsx",
-        "paragraph": "E",
-        "firstSentence": "Weyers Schüler scheinen jedenfalls keine Probleme damit zu haben, sich von einem Dozenten anleiten zu lassen, der teilweise nur halb so alt ist wie sie selbst.",
-        "summary": "立。Weyer 的学员似乎并不介意由小自己一半的讲师指导。59岁的MonikaLeerhammer说：技术方面年轻人确实更灵，值得向他们学习；",
+        "raw": "schildert der Autor seine persönlichen Erfahrungen?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 38,
+        "paragraph": "B",
+        "firstSentence": "So ähnlich erging es mir in einem Seminar an der Hamburg Media School, an der ich ein",
+        "summary": "这半句说明个人经历、动机或个人立场。",
+        "sentenceZh": "这半句说明个人经历、动机或个人立场。",
+        "frage": "schildert der Autor seine persönlichen Erfahrungen?",
+        "signalwortZh": "我 / 对我而言",
         "items": [
           {
-            "number": "12",
-            "text": "zieht der Autor einen Schluss?作者是否作出结论？"
+            "number": "B",
+            "text": "schildert der Autor seine persönlichen Erfahrungen?",
+            "german": "schildert der Autor seine persönlichen Erfahrungen?",
+            "chinese": "这半句说明个人经历、动机或个人立场。",
+            "hint": "这半句说明个人经历、动机或个人立场。",
+            "sourceRow": 38
           }
-        ],
-        "note": ""
+        ]
+      },
+      {
+        "number": "3",
+        "text": "9 spricht der Autor eine Warnung aus?",
+        "german": "9 spricht der Autor eine Warnung aus?",
+        "chinese": "这半句提示风险或负面后果。",
+        "answer": "",
+        "raw": "spricht der Autor eine Warnung aus?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 39,
+        "paragraph": "D",
+        "firstSentence": "9 spricht der Autor eine Warnung aus?",
+        "summary": "这半句提示风险或负面后果。",
+        "sentenceZh": "这半句提示风险或负面后果。",
+        "frage": "spricht der Autor eine Warnung aus?",
+        "signalwortZh": "风险 / 危险 / 伤害",
+        "items": [
+          {
+            "number": "D",
+            "text": "spricht der Autor eine Warnung aus?",
+            "german": "spricht der Autor eine Warnung aus?",
+            "chinese": "这半句提示风险或负面后果。",
+            "hint": "这半句提示风险或负面后果。",
+            "sourceRow": 39
+          }
+        ]
+      },
+      {
+        "number": "4",
+        "text": "groß: Lebenslanges Lernen kann auch Stress bedeuten, darauf weist auch der Bildungsforscher",
+        "german": "groß: Lebenslanges Lernen kann auch Stress bedeuten, darauf weist auch der Bildungsforscher",
+        "chinese": "这半句转述他人观点、专家说法或外部评价。",
+        "answer": "",
+        "raw": "stützt der Autor seine Argumentation durch Rückgriff auf eine Autorität?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 40,
+        "paragraph": "E",
+        "firstSentence": "groß: Lebenslanges Lernen kann auch Stress bedeuten, darauf weist auch der Bildungsforscher",
+        "summary": "这半句转述他人观点、专家说法或外部评价。",
+        "sentenceZh": "这半句转述他人观点、专家说法或外部评价。",
+        "frage": "stützt der Autor seine Argumentation durch Rückgriff auf eine Autorität?",
+        "signalwortZh": "强调 / 批评者 / 研究者",
+        "items": [
+          {
+            "number": "E",
+            "text": "stützt der Autor seine Argumentation durch Rückgriff auf eine Autorität?",
+            "german": "stützt der Autor seine Argumentation durch Rückgriff auf eine Autorität?",
+            "chinese": "这半句转述他人观点、专家说法或外部评价。",
+            "hint": "这半句转述他人观点、专家说法或外部评价。",
+            "sourceRow": 40
+          }
+        ]
+      },
+      {
+        "number": "5",
+        "text": "die Rollenzuteilungen oft erstaunlich traditionell.",
+        "german": "die Rollenzuteilungen oft erstaunlich traditionell.",
+        "chinese": "这半句直接表现惊讶或意外。",
+        "answer": "",
+        "raw": "zeigt sich der Autor erstaunt?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 41,
+        "paragraph": "A",
+        "firstSentence": "die Rollenzuteilungen oft erstaunlich traditionell.",
+        "summary": "这半句直接表现惊讶或意外。",
+        "sentenceZh": "这半句直接表现惊讶或意外。",
+        "frage": "zeigt sich der Autor erstaunt?",
+        "signalwortZh": "令人惊讶 / 出乎意料",
+        "items": [
+          {
+            "number": "A",
+            "text": "zeigt sich der Autor erstaunt?",
+            "german": "zeigt sich der Autor erstaunt?",
+            "chinese": "这半句直接表现惊讶或意外。",
+            "hint": "这半句直接表现惊讶或意外。",
+            "sourceRow": 41
+          }
+        ]
+      },
+      {
+        "number": "6",
+        "text": "merkwürdigen Selbstzweifel versuchte ich mit dem Gedanken zu bekämpfen, dass es so oder ähnlich",
+        "german": "merkwürdigen Selbstzweifel versuchte ich mit dem Gedanken zu bekämpfen, dass es so oder ähnlich",
+        "chinese": "这半句表现不理解、诧异或困惑。",
+        "answer": "",
+        "raw": "zeigt sich die Autorin verwundert?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 42,
+        "paragraph": "B",
+        "firstSentence": "merkwürdigen Selbstzweifel versuchte ich mit dem Gedanken zu bekämpfen, dass es so oder ähnlich",
+        "summary": "这半句表现不理解、诧异或困惑。",
+        "sentenceZh": "这半句表现不理解、诧异或困惑。",
+        "frage": "zeigt sich die Autorin verwundert?",
+        "signalwortZh": "诧异 / 奇怪 / 为什么",
+        "items": [
+          {
+            "number": "B",
+            "text": "zeigt sich die Autorin verwundert?",
+            "german": "zeigt sich die Autorin verwundert?",
+            "chinese": "这半句表现不理解、诧异或困惑。",
+            "hint": "这半句表现不理解、诧异或困惑。",
+            "sourceRow": 42
+          }
+        ]
       }
     ]
   },
   {
     "teil": 8,
-    "title": "Machtvoller Schein und scheinbare Macht",
-    "sourceText": "LV2 段落卡片",
+    "title": "信号词问句配对",
+    "sourceText": "LV2 信号词问句表 修正版",
     "mode": "paragraph-card",
     "questions": [
       {
-        "number": "A",
-        "text": "Der Mond hat magische Kräfte: Er steuert das Wachstum von Pflanzen und den Zeitpunkt von Geburten.",
-        "german": "Der Mond hat magische Kräfte: Er steuert das Wachstum von Pflanzen und den Zeitpunkt von Geburten.",
-        "chinese": "本段从月亮对植物、出生和日常选择的传说写起，引出“月亮是否也能影响人类行为”的问题。",
+        "number": "1",
+        "text": "Auf die ersten Spuren von Mondkalendern ist er in spätmittelalterlichen",
+        "german": "Auf die ersten Spuren von Mondkalendern ist er in spätmittelalterlichen",
+        "chinese": "这半句呈现一种解释尝试。",
         "answer": "",
-        "raw": "（资料未明确给出/该段可能不作为配题答案）",
-        "source": "lv2-xlsx",
-        "paragraph": "A",
-        "firstSentence": "Der Mond hat magische Kräfte: Er steuert das Wachstum von Pflanzen und den Zeitpunkt von Geburten.",
-        "summary": "本段从月亮对植物、出生和日常选择的传说写起，引出“月亮是否也能影响人类行为”的问题。",
-        "items": [],
-        "note": "资料未明确给出对应题项"
-      },
-      {
-        "number": "B",
-        "text": "Dass der Mond auf die Erde einwirkt, ist unbestritten: Mond und Erde ziehen einander an, und dieser \"Schwerkrafteffekt\" führt zu Ebbe und Flut- ein deutlicher Effekt des fernen Mondes.",
-        "german": "Dass der Mond auf die Erde einwirkt, ist unbestritten: Mond und Erde ziehen einander an, und dieser \"Schwerkrafteffekt\" führt zu Ebbe und Flut- ein deutlicher Effekt des fernen Mondes.",
-        "chinese": "月亮具有神奇的力量：它能主宰植物的生长与分娩的时机——月历和“月亮指南”都是这样写的。天真的“逐月者”们沉迷于“恰当时机”，他们观察月相、翻看“月历”，来决定剪头发、减肥、做手术或仅仅……",
-        "answer": "",
-        "raw": "8 möchte der Autor durch Fakten objektiv informieren?作者是否想通过事实客观地提供信息？",
-        "source": "lv2-xlsx",
-        "paragraph": "B",
-        "firstSentence": "Dass der Mond auf die Erde einwirkt, ist unbestritten: Mond und Erde ziehen einander an, und dieser \"Schwerkrafteffekt\" führt zu Ebbe und Flut- ein deutlicher Effekt des fernen Mondes.",
-        "summary": "月亮具有神奇的力量：它能主宰植物的生长与分娩的时机——月历和“月亮指南”都是这样写的。天真的“逐月者”们沉迷于“恰当时机”，他们观察月相、翻看“月历”，来决定剪头发、减肥、做手术或仅仅……",
-        "items": [
-          {
-            "number": "8",
-            "text": "möchte der Autor durch Fakten objektiv informieren?作者是否想通过事实客观地提供信息？"
-          }
-        ],
-        "note": ""
-      },
-      {
-        "number": "C",
-        "text": "Und dennoch: Unerschütterlich hält sich der Glaube an die Kraft des Mondes.",
-        "german": "Und dennoch: Unerschütterlich hält sich der Glaube an die Kraft des Mondes.",
-        "chinese": "响”的科学研究迄今未能发现直接相关性。仅有一个例外：所谓的“月木”。据说这种畅销木材更不易翘曲、不易燃、也不易腐朽。",
-        "answer": "",
-        "raw": "7 gibt der Autor einen Deutungsversuch wieder?作者是否转述/呈现一种解释？",
-        "source": "lv2-xlsx",
-        "paragraph": "C",
-        "firstSentence": "Und dennoch: Unerschütterlich hält sich der Glaube an die Kraft des Mondes.",
-        "summary": "响”的科学研究迄今未能发现直接相关性。仅有一个例外：所谓的“月木”。据说这种畅销木材更不易翘曲、不易燃、也不易腐朽。",
-        "items": [
-          {
-            "number": "7",
-            "text": "gibt der Autor einen Deutungsversuch wieder?作者是否转述/呈现一种解释？"
-          }
-        ],
-        "note": ""
-      },
-      {
-        "number": "D",
-        "text": "Mondwissen sei uraltes Wissen unserer Ahnen, argumentieren hingegen jene, die vom Einfluss des Mondes auf unser Dasein überzeugt sind.",
-        "german": "Mondwissen sei uraltes Wissen unserer Ahnen, argumentieren hingegen jene, die vom Einfluss des Mondes auf unser Dasein überzeugt sind.",
-        "chinese": "证”？对“月历”作了定义式说明（“就是把一年月相精确列出的日历”）。先对“祖传农事智慧”略表理解，继而以Groschwitz的研究削弱/限定其“古老性与来源”（并非农民、并不与之相反……",
-        "answer": "",
-        "raw": "10 relativiert der Autor ein Forschungsergebnis?作者是否在相对化/限制某一“研究结论/论",
-        "source": "lv2-xlsx",
+        "raw": "gibt der Autor einen Deutungsversuch wieder?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 43,
         "paragraph": "D",
-        "firstSentence": "Mondwissen sei uraltes Wissen unserer Ahnen, argumentieren hingegen jene, die vom Einfluss des Mondes auf unser Dasein überzeugt sind.",
-        "summary": "证”？对“月历”作了定义式说明（“就是把一年月相精确列出的日历”）。先对“祖传农事智慧”略表理解，继而以Groschwitz的研究削弱/限定其“古老性与来源”（并非农民、并不与之相反……",
+        "firstSentence": "Auf die ersten Spuren von Mondkalendern ist er in spätmittelalterlichen",
+        "summary": "这半句呈现一种解释尝试。",
+        "sentenceZh": "这半句呈现一种解释尝试。",
+        "frage": "gibt der Autor einen Deutungsversuch wieder?",
+        "signalwortZh": "可以解释为 / 可能在于",
         "items": [
           {
-            "number": "10",
-            "text": "relativiert der Autor ein Forschungsergebnis?作者是否在相对化/限制某一“研究结论/论"
+            "number": "D",
+            "text": "gibt der Autor einen Deutungsversuch wieder?",
+            "german": "gibt der Autor einen Deutungsversuch wieder?",
+            "chinese": "这半句呈现一种解释尝试。",
+            "hint": "这半句呈现一种解释尝试。",
+            "sourceRow": 43
           }
-        ],
-        "note": ""
+        ]
       },
       {
-        "number": "E",
-        "text": "So skeptisch Wissenschaftler das Phänomen der Mondgläubigkeit auch sehen mögen - das Interesse an dem Himmelskörper ist nach wie vor sehr groß.",
-        "german": "So skeptisch Wissenschaftler das Phänomen der Mondgläubigkeit auch sehen mögen - das Interesse an dem Himmelskörper ist nach wie vor sehr groß.",
-        "chinese": "连珠设问+„offeneFragen…weiterverfolgensollte”＝典型启发思考/引导反思的语篇策略。即便科学家对“相信月亮”的现象再如何怀疑，公众对这颗天体的兴趣依旧……",
+        "number": "2",
+        "text": "12 liefert der Autor eine Definition?",
+        "german": "12 liefert der Autor eine Definition?",
+        "chinese": "这半句是在界定概念或说明定义。",
         "answer": "",
-        "raw": "9möchte der Autor zum Nachdenken anregen?作者是否意在引发读者思考？",
-        "source": "lv2-xlsx",
-        "paragraph": "E",
-        "firstSentence": "So skeptisch Wissenschaftler das Phänomen der Mondgläubigkeit auch sehen mögen - das Interesse an dem Himmelskörper ist nach wie vor sehr groß.",
-        "summary": "连珠设问+„offeneFragen…weiterverfolgensollte”＝典型启发思考/引导反思的语篇策略。即便科学家对“相信月亮”的现象再如何怀疑，公众对这颗天体的兴趣依旧……",
+        "raw": "liefert der Autor eine Definition?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 44,
+        "paragraph": "D",
+        "firstSentence": "12 liefert der Autor eine Definition?",
+        "summary": "这半句是在界定概念或说明定义。",
+        "sentenceZh": "这半句是在界定概念或说明定义。",
+        "frage": "liefert der Autor eine Definition?",
+        "signalwortZh": "被称为 / 定义为",
         "items": [
           {
-            "number": "9",
-            "text": "möchte der Autor zum Nachdenken anregen?作者是否意在引发读者思考？"
+            "number": "D",
+            "text": "liefert der Autor eine Definition?",
+            "german": "liefert der Autor eine Definition?",
+            "chinese": "这半句是在界定概念或说明定义。",
+            "hint": "这半句是在界定概念或说明定义。",
+            "sourceRow": 44
           }
-        ],
-        "note": ""
+        ]
+      },
+      {
+        "number": "3",
+        "text": "einzuschränken: Sie wurde nur an 30 Bäumen durchgeführt.",
+        "german": "einzuschränken: Sie wurde nur an 30 Bäumen durchgeführt.",
+        "chinese": "这半句用数字、年份或事实进行客观说明。",
+        "answer": "",
+        "raw": "möchte der Autor durch Fakten objektiv informieren?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 45,
+        "paragraph": "B",
+        "firstSentence": "einzuschränken: Sie wurde nur an 30 Bäumen durchgeführt.",
+        "summary": "这半句用数字、年份或事实进行客观说明。",
+        "sentenceZh": "这半句用数字、年份或事实进行客观说明。",
+        "frage": "möchte der Autor durch Fakten objektiv informieren?",
+        "signalwortZh": "数字 / 事实",
+        "items": [
+          {
+            "number": "B",
+            "text": "möchte der Autor durch Fakten objektiv informieren?",
+            "german": "möchte der Autor durch Fakten objektiv informieren?",
+            "chinese": "这半句用数字、年份或事实进行客观说明。",
+            "hint": "这半句用数字、年份或事实进行客观说明。",
+            "sourceRow": 45
+          }
+        ]
+      },
+      {
+        "number": "4",
+        "text": "die Gravitationskraft das Wasser bewegen kann, dann müsste sie doch auch auf unseren bis zu 75",
+        "german": "die Gravitationskraft das Wasser bewegen kann, dann müsste sie doch auch auf unseren bis zu 75",
+        "chinese": "这半句对前文判断作限制、修正或相对化。",
+        "answer": "",
+        "raw": "relativiert der Autor ein Forschungsergebnis?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 46,
+        "paragraph": "B",
+        "firstSentence": "die Gravitationskraft das Wasser bewegen kann, dann müsste sie doch auch auf unseren bis zu 75",
+        "summary": "这半句对前文判断作限制、修正或相对化。",
+        "sentenceZh": "这半句对前文判断作限制、修正或相对化。",
+        "frage": "relativiert der Autor ein Forschungsergebnis?",
+        "signalwortZh": "不过 / 然而 / 情况不同",
+        "items": [
+          {
+            "number": "B",
+            "text": "relativiert der Autor ein Forschungsergebnis?",
+            "german": "relativiert der Autor ein Forschungsergebnis?",
+            "chinese": "这半句对前文判断作限制、修正或相对化。",
+            "hint": "这半句对前文判断作限制、修正或相对化。",
+            "sourceRow": 46
+          }
+        ]
+      },
+      {
+        "number": "5",
+        "text": "finden Sie nicht auch? / kennen Sie das? / liebe Leserinnen und Leser",
+        "german": "finden Sie nicht auch? / kennen Sie das? / liebe Leserinnen und Leser",
+        "chinese": "文中直接面向读者并寻求共鸣。",
+        "answer": "",
+        "raw": "signalisiert der Autor Zustimmung?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 47,
+        "paragraph": "B",
+        "firstSentence": "finden Sie nicht auch? / kennen Sie das? / liebe Leserinnen und Leser",
+        "summary": "文中直接面向读者并寻求共鸣。",
+        "sentenceZh": "文中直接面向读者并寻求共鸣。",
+        "frage": "signalisiert der Autor Zustimmung?",
+        "signalwortZh": "你不也觉得吗？/ 你熟悉吗？/ 亲爱的读者",
+        "items": [
+          {
+            "number": "B",
+            "text": "signalisiert der Autor Zustimmung?",
+            "german": "signalisiert der Autor Zustimmung?",
+            "chinese": "文中直接面向读者并寻求共鸣。",
+            "hint": "文中直接面向读者并寻求共鸣。",
+            "sourceRow": 47
+          }
+        ]
+      },
+      {
+        "number": "6",
+        "text": "Mondforscher Bernd Brunner gibt eine Erklärung: Es hilft vielleicht,",
+        "german": "Mondforscher Bernd Brunner gibt eine Erklärung: Es hilft vielleicht,",
+        "chinese": "这半句转述他人观点、专家说法或外部评价。",
+        "answer": "",
+        "raw": "stützt der Autor seine Argumentation durch Rückgriff auf eine Autorität?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 48,
+        "paragraph": "C",
+        "firstSentence": "Mondforscher Bernd Brunner gibt eine Erklärung: Es hilft vielleicht,",
+        "summary": "这半句转述他人观点、专家说法或外部评价。",
+        "sentenceZh": "这半句转述他人观点、专家说法或外部评价。",
+        "frage": "stützt der Autor seine Argumentation durch Rückgriff auf eine Autorität?",
+        "signalwortZh": "强调 / 批评者 / 研究者",
+        "items": [
+          {
+            "number": "C",
+            "text": "stützt der Autor seine Argumentation durch Rückgriff auf eine Autorität?",
+            "german": "stützt der Autor seine Argumentation durch Rückgriff auf eine Autorität?",
+            "chinese": "这半句转述他人观点、专家说法或外部评价。",
+            "hint": "这半句转述他人观点、专家说法或外部评价。",
+            "sourceRow": 48
+          }
+        ]
+      },
+      {
+        "number": "7",
+        "text": "also / daraus folgt / lässt sich ableiten / folglich",
+        "german": "also / daraus folgt / lässt sich ableiten / folglich",
+        "chinese": "文中对前文内容作总结性结论。",
+        "answer": "",
+        "raw": "zieht der Autor einen Schluss?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 49,
+        "paragraph": "C",
+        "firstSentence": "also / daraus folgt / lässt sich ableiten / folglich",
+        "summary": "文中对前文内容作总结性结论。",
+        "sentenceZh": "文中对前文内容作总结性结论。",
+        "frage": "zieht der Autor einen Schluss?",
+        "signalwortZh": "因此 / 由此可得 / 可以推导出 / 所以",
+        "items": [
+          {
+            "number": "C",
+            "text": "zieht der Autor einen Schluss?",
+            "german": "zieht der Autor einen Schluss?",
+            "chinese": "文中对前文内容作总结性结论。",
+            "hint": "文中对前文内容作总结性结论。",
+            "sourceRow": 49
+          }
+        ]
       }
     ]
   },
   {
     "teil": 9,
-    "title": "Selbermachen als Trend",
-    "sourceText": "LV2 段落卡片",
+    "title": "信号词问句配对",
+    "sourceText": "LV2 信号词问句表 修正版",
     "mode": "paragraph-card",
     "questions": [
       {
-        "number": "A",
-        "text": "Mach es selbst! Die bekannte Parole do it yourself hat heute Hochkonjunktur.",
-        "german": "Mach es selbst! Die bekannte Parole do it yourself hat heute Hochkonjunktur.",
-        "chinese": "动手做吧！那句著名口号doityourself 如今正当其时。从蛋杯到布餐巾，一切都得个性化。",
+        "number": "1",
+        "text": "Mir schmecken Produkte aus dem Supermarkt, und",
+        "german": "Mir schmecken Produkte aus dem Supermarkt, und",
+        "chinese": "这半句说明个人经历、动机或个人立场。",
         "answer": "",
-        "raw": "sucht die Autorin nach Zustimmung? 作者是否在寻求读者的赞同？",
-        "source": "lv2-xlsx",
-        "paragraph": "A",
-        "firstSentence": "Mach es selbst! Die bekannte Parole do it yourself hat heute Hochkonjunktur.",
-        "summary": "动手做吧！那句著名口号doityourself 如今正当其时。从蛋杯到布餐巾，一切都得个性化。",
-        "items": [
-          {
-            "number": "",
-            "text": "sucht die Autorin nach Zustimmung? 作者是否在寻求读者的赞同？"
-          }
-        ],
-        "note": "原资料题项未显示数字或题号识别不完整"
-      },
-      {
-        "number": "B",
-        "text": "Ja, ich gebe zu: Ich bin leicht zufrieden zu stellen.",
-        "german": "Ja, ich gebe zu: Ich bin leicht zufrieden zu stellen.",
-        "chinese": "多处第一人称直陈（ichgebe zu/ mir schmecken … / stört es mich），先表个人偏好与容忍，再表反感之处＝明确的个人立场陈述。是的，我承认：我很容易……",
-        "answer": "",
-        "raw": "legt die Autorin ihre persönliche Haltung dar?作者是否陈述了自己的个人立场？",
-        "source": "lv2-xlsx",
+        "raw": "arbeitet die Autorin mit einem Vergleich?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 50,
         "paragraph": "B",
-        "firstSentence": "Ja, ich gebe zu: Ich bin leicht zufrieden zu stellen.",
-        "summary": "多处第一人称直陈（ichgebe zu/ mir schmecken … / stört es mich），先表个人偏好与容忍，再表反感之处＝明确的个人立场陈述。是的，我承认：我很容易……",
+        "firstSentence": "Mir schmecken Produkte aus dem Supermarkt, und",
+        "summary": "这半句说明个人经历、动机或个人立场。",
+        "sentenceZh": "这半句说明个人经历、动机或个人立场。",
+        "frage": "arbeitet die Autorin mit einem Vergleich?",
+        "signalwortZh": "我 / 对我而言",
         "items": [
           {
-            "number": "",
-            "text": "legt die Autorin ihre persönliche Haltung dar?作者是否陈述了自己的个人立场？"
+            "number": "B",
+            "text": "arbeitet die Autorin mit einem Vergleich?",
+            "german": "arbeitet die Autorin mit einem Vergleich?",
+            "chinese": "这半句说明个人经历、动机或个人立场。",
+            "hint": "这半句说明个人经历、动机或个人立场。",
+            "sourceRow": 50
           }
-        ],
-        "note": "原资料题项未显示数字或题号识别不完整"
+        ]
       },
       {
-        "number": "C",
-        "text": "Das Heimwerken solle das Glücksempfinden erhöhen, die zwischen Mensch und Arbeit überwinden, dem Klima guttun und den Konsum eindämmen: Solche Behauptungen hört man immer wieder.",
-        "german": "Das Heimwerken solle das Glücksempfinden erhöhen, die zwischen Mensch und Arbeit überwinden, dem Klima guttun und den Konsum eindämmen: Solche Behauptungen hört man immer wieder.",
-        "chinese": "比较：“像锤子和钉子一样”＝典型明喻，说明手作与购买相伴。静）。呼吁：命令/劝告式句型„Schaltet mal einen Gang herunter!“＝明确的Appell（别把期……",
+        "number": "2",
+        "text": "laut … / Professor … betont / Experten sagen / Kritiker",
+        "german": "laut … / Professor … betont / Experten sagen / Kritiker",
+        "chinese": "文中引用他人观点或权威说法。",
         "answer": "",
-        "raw": "arbeitet die Autorin mit einem Vergleich? 作者是否使用了比较/比喻？",
-        "source": "lv2-xlsx",
+        "raw": "argumentiert die Autorin mit Hilfe einer fremden Autorität?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 51,
+        "paragraph": "B",
+        "firstSentence": "laut … / Professor … betont / Experten sagen / Kritiker",
+        "summary": "文中引用他人观点或权威说法。",
+        "sentenceZh": "文中引用他人观点或权威说法。",
+        "frage": "argumentiert die Autorin mit Hilfe einer fremden Autorität?",
+        "signalwortZh": "据…… / 教授强调 / 专家说 / 批评者",
+        "items": [
+          {
+            "number": "B",
+            "text": "argumentiert die Autorin mit Hilfe einer fremden Autorität?",
+            "german": "argumentiert die Autorin mit Hilfe einer fremden Autorität?",
+            "chinese": "文中引用他人观点或权威说法。",
+            "hint": "文中引用他人观点或权威说法。",
+            "sourceRow": 51
+          }
+        ]
+      },
+      {
+        "number": "3",
+        "text": "sollte dieses Thema wirklich etwas nüchterner betrachten.",
+        "german": "sollte dieses Thema wirklich etwas nüchterner betrachten.",
+        "chinese": "这半句是在提出建议或可采取的做法。",
+        "answer": "",
+        "raw": "formuliert die Autorin einen Appell?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 52,
         "paragraph": "C",
-        "firstSentence": "Das Heimwerken solle das Glücksempfinden erhöhen, die zwischen Mensch und Arbeit überwinden, dem Klima guttun und den Konsum eindämmen: Solche Behauptungen hört man immer wieder.",
-        "summary": "比较：“像锤子和钉子一样”＝典型明喻，说明手作与购买相伴。静）。呼吁：命令/劝告式句型„Schaltet mal einen Gang herunter!“＝明确的Appell（别把期……",
+        "firstSentence": "sollte dieses Thema wirklich etwas nüchterner betrachten.",
+        "summary": "这半句是在提出建议或可采取的做法。",
+        "sentenceZh": "这半句是在提出建议或可采取的做法。",
+        "frage": "formuliert die Autorin einen Appell?",
+        "signalwortZh": "应该 / 建议",
         "items": [
           {
-            "number": "",
-            "text": "arbeitet die Autorin mit einem Vergleich? 作者是否使用了比较/比喻？"
+            "number": "C",
+            "text": "formuliert die Autorin einen Appell?",
+            "german": "formuliert die Autorin einen Appell?",
+            "chinese": "这半句是在提出建议或可采取的做法。",
+            "hint": "这半句是在提出建议或可采取的做法。",
+            "sourceRow": 52
           }
-        ],
-        "note": "原资料题项未显示数字或题号识别不完整"
+        ]
       },
       {
-        "number": "D",
-        "text": "Doch warum ist das Heimwerken eigentlich zum Trend geworden, nachdem es lange Zeit gar nicht mehr gefragt war. Sicher ist: Wer im Beruf tagein, tagaus am Computer sitzt und sich oft in den visuellen Welten des Internets und der sozialen Medien bewegt, sehnt sich irgendwann nach einem Ausgleich.",
-        "german": "Doch warum ist das Heimwerken eigentlich zum Trend geworden, nachdem es lange Zeit gar nicht mehr gefragt war. Sicher ist: Wer im Beruf tagein, tagaus am Computer sitzt und sich oft in den visuellen Welten des Internets und der sozialen Medien bewegt, sehnt sich irgendwann nach einem Ausgleich.",
-        "chinese": "直接援引神经生物学家Hüther的“论断/假说”来支撑解释＝诉诸权威。为何手作在沉寂多时后又成了潮流？",
+        "number": "4",
+        "text": "Mir schmecken Produkte aus dem Supermarkt, und",
+        "german": "Mir schmecken Produkte aus dem Supermarkt, und",
+        "chinese": "这半句说明个人经历、动机或个人立场。",
         "answer": "",
-        "raw": "argumentiert die Autorin mit Hilfe einer fremden Autorität?作者是否借助外部权威进行论证？",
-        "source": "lv2-xlsx",
-        "paragraph": "D",
-        "firstSentence": "Doch warum ist das Heimwerken eigentlich zum Trend geworden, nachdem es lange Zeit gar nicht mehr gefragt war. Sicher ist: Wer im Beruf tagein, tagaus am Computer sitzt und sich oft in den visuellen Welten des Internets und der sozialen Medien bewegt, sehnt sich irgendwann nach einem Ausgleich.",
-        "summary": "直接援引神经生物学家Hüther的“论断/假说”来支撑解释＝诉诸权威。为何手作在沉寂多时后又成了潮流？",
+        "raw": "legt die Autorin ihre persönliche Haltung dar?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 53,
+        "paragraph": "B",
+        "firstSentence": "Mir schmecken Produkte aus dem Supermarkt, und",
+        "summary": "这半句说明个人经历、动机或个人立场。",
+        "sentenceZh": "这半句说明个人经历、动机或个人立场。",
+        "frage": "legt die Autorin ihre persönliche Haltung dar?",
+        "signalwortZh": "我 / 对我而言",
         "items": [
           {
-            "number": "",
-            "text": "argumentiert die Autorin mit Hilfe einer fremden Autorität?作者是否借助外部权威进行论证？"
+            "number": "B",
+            "text": "legt die Autorin ihre persönliche Haltung dar?",
+            "german": "legt die Autorin ihre persönliche Haltung dar?",
+            "chinese": "这半句说明个人经历、动机或个人立场。",
+            "hint": "这半句说明个人经历、动机或个人立场。",
+            "sourceRow": 53
           }
-        ],
-        "note": "原资料题项未显示数字或题号识别不完整"
+        ]
       },
       {
-        "number": "E",
-        "text": "Nicht immer reicht aber die eigene Fantasie aus, manchmal braucht man eben doch Vorbilder.",
-        "german": "Nicht immer reicht aber die eigene Fantasie aus, manchmal braucht man eben doch Vorbilder.",
-        "chinese": "明显的推测标记：„Mankönnte…annehmen“ / „womöglich“；并提出可能真正重要的并非“口味更好”，而是社交/交流的价值。",
+        "number": "5",
+        "text": "Mir schmecken Produkte aus dem Supermarkt, und",
+        "german": "Mir schmecken Produkte aus dem Supermarkt, und",
+        "chinese": "这半句说明个人经历、动机或个人立场。",
         "answer": "",
-        "raw": "spricht die Autorin eine Vermutung aus? 作者是否提出了一个“推测/假设/揣测”？",
-        "source": "lv2-xlsx",
-        "paragraph": "E",
-        "firstSentence": "Nicht immer reicht aber die eigene Fantasie aus, manchmal braucht man eben doch Vorbilder.",
-        "summary": "明显的推测标记：„Mankönnte…annehmen“ / „womöglich“；并提出可能真正重要的并非“口味更好”，而是社交/交流的价值。",
+        "raw": "möchte der Autor zum Nachdenken anregen?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 54,
+        "paragraph": "B",
+        "firstSentence": "Mir schmecken Produkte aus dem Supermarkt, und",
+        "summary": "这半句说明个人经历、动机或个人立场。",
+        "sentenceZh": "这半句说明个人经历、动机或个人立场。",
+        "frage": "möchte der Autor zum Nachdenken anregen?",
+        "signalwortZh": "我 / 对我而言",
         "items": [
           {
-            "number": "",
-            "text": "spricht die Autorin eine Vermutung aus? 作者是否提出了一个“推测/假设/揣测”？"
+            "number": "B",
+            "text": "möchte der Autor zum Nachdenken anregen?",
+            "german": "möchte der Autor zum Nachdenken anregen?",
+            "chinese": "这半句说明个人经历、动机或个人立场。",
+            "hint": "这半句说明个人经历、动机或个人立场。",
+            "sourceRow": 54
           }
-        ],
-        "note": "原资料题项未显示数字或题号识别不完整"
+        ]
+      },
+      {
+        "number": "6",
+        "text": "Mir schmecken Produkte aus dem Supermarkt, und",
+        "german": "Mir schmecken Produkte aus dem Supermarkt, und",
+        "chinese": "这半句说明个人经历、动机或个人立场。",
+        "answer": "",
+        "raw": "sucht die Autorin nach Zustimmung?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 55,
+        "paragraph": "B",
+        "firstSentence": "Mir schmecken Produkte aus dem Supermarkt, und",
+        "summary": "这半句说明个人经历、动机或个人立场。",
+        "sentenceZh": "这半句说明个人经历、动机或个人立场。",
+        "frage": "sucht die Autorin nach Zustimmung?",
+        "signalwortZh": "我 / 对我而言",
+        "items": [
+          {
+            "number": "B",
+            "text": "sucht die Autorin nach Zustimmung?",
+            "german": "sucht die Autorin nach Zustimmung?",
+            "chinese": "这半句说明个人经历、动机或个人立场。",
+            "hint": "这半句说明个人经历、动机或个人立场。",
+            "sourceRow": 55
+          }
+        ]
       }
     ]
   },
   {
     "teil": 10,
-    "title": "Macht Reisen glücklich?",
-    "sourceText": "LV2 段落卡片",
+    "title": "信号词问句配对",
+    "sourceText": "LV2 信号词问句表 修正版",
     "mode": "paragraph-card",
     "questions": [
       {
-        "number": "A",
-        "text": "Eines der schönsten Wörter der deutschen Sprache lautet: Erfahrung.",
-        "german": "Eines der schönsten Wörter der deutschen Sprache lautet: Erfahrung.",
-        "chinese": "一个术语定义？使人增长见识”。把Erfahrung 解释为来自 Fahren（行走/行驶） 的经验，是出其不意的词源式定义，用以论证“旅行德语里最美的词之一是“Erfahrung（经验……",
+        "number": "1",
+        "text": "erstaunlich / überraschend / verblüffend / kaum zu glauben",
+        "german": "erstaunlich / überraschend / verblüffend / kaum zu glauben",
+        "chinese": "文中直接表达惊讶或意外。",
         "answer": "",
-        "raw": "Überrasch der Autor durch eine ungewöhnliche Begriffsdefinition?作者是否用非常规方式给出",
-        "source": "lv2-xlsx",
+        "raw": "Bringt der Autor sein Erstaunen zum Ausdruck?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 56,
         "paragraph": "A",
-        "firstSentence": "Eines der schönsten Wörter der deutschen Sprache lautet: Erfahrung.",
-        "summary": "一个术语定义？使人增长见识”。把Erfahrung 解释为来自 Fahren（行走/行驶） 的经验，是出其不意的词源式定义，用以论证“旅行德语里最美的词之一是“Erfahrung（经验……",
+        "firstSentence": "erstaunlich / überraschend / verblüffend / kaum zu glauben",
+        "summary": "文中直接表达惊讶或意外。",
+        "sentenceZh": "文中直接表达惊讶或意外。",
+        "frage": "Bringt der Autor sein Erstaunen zum Ausdruck?",
+        "signalwortZh": "令人惊讶 / 出乎意料 / 令人吃惊 / 难以相信",
         "items": [
           {
-            "number": "",
-            "text": "Überrasch der Autor durch eine ungewöhnliche Begriffsdefinition?作者是否用非常规方式给出"
+            "number": "A",
+            "text": "Bringt der Autor sein Erstaunen zum Ausdruck?",
+            "german": "Bringt der Autor sein Erstaunen zum Ausdruck?",
+            "chinese": "文中直接表达惊讶或意外。",
+            "hint": "文中直接表达惊讶或意外。",
+            "sourceRow": 56
           }
-        ],
-        "note": "原资料题项未显示数字或题号识别不完整"
+        ]
       },
       {
-        "number": "B",
-        "text": "Reisen ist kein Luxus, sondern eine Notwendigkeit.",
-        "german": "Reisen ist kein Luxus, sondern eine Notwendigkeit.",
-        "chinese": "句中直接使用„Verwunderlich ist …“，明确表明惊讶",
+        "number": "2",
+        "text": "Spricht der Autor eine Empfehlung aus?",
+        "german": "Spricht der Autor eine Empfehlung aus?",
+        "chinese": "这半句是在提出建议或可采取的做法。",
         "answer": "",
-        "raw": "Bringt der Autor sein Erstaunen zum Ausdruck?作者是否表达了“惊讶/诧异”？",
-        "source": "lv2-xlsx",
-        "paragraph": "B",
-        "firstSentence": "Reisen ist kein Luxus, sondern eine Notwendigkeit.",
-        "summary": "句中直接使用„Verwunderlich ist …“，明确表明惊讶",
+        "raw": "Spricht der Autor eine Empfehlung aus?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 57,
+        "paragraph": "A",
+        "firstSentence": "Spricht der Autor eine Empfehlung aus?",
+        "summary": "这半句是在提出建议或可采取的做法。",
+        "sentenceZh": "这半句是在提出建议或可采取的做法。",
+        "frage": "Spricht der Autor eine Empfehlung aus?",
+        "signalwortZh": "应该 / 建议",
         "items": [
           {
-            "number": "",
-            "text": "Bringt der Autor sein Erstaunen zum Ausdruck?作者是否表达了“惊讶/诧异”？"
+            "number": "A",
+            "text": "Spricht der Autor eine Empfehlung aus?",
+            "german": "Spricht der Autor eine Empfehlung aus?",
+            "chinese": "这半句是在提出建议或可采取的做法。",
+            "hint": "这半句是在提出建议或可采取的做法。",
+            "sourceRow": 57
           }
-        ],
-        "note": "原资料题项未显示数字或题号识别不完整"
+        ]
       },
       {
-        "number": "C",
-        "text": "Heutzutage werden jedoch immer öfter Stimmen laut, die das Reisen verdammen.",
-        "german": "Heutzutage werden jedoch immer öfter Stimmen laut, die das Reisen verdammen.",
-        "chinese": "旅行不是奢侈，而是必要。旅游业正在繁荣，但早在定居之前人类就一直在路上：先是出于迫不得已，再是出于好奇，最后纯粹为发现的乐趣。",
+        "number": "3",
+        "text": "Andererseits.",
+        "german": "Andererseits.",
+        "chinese": "这半句并列或对照不同立场。",
         "answer": "",
-        "raw": "Äußert sich der Autor negativ über andere?作者是否负面评价他人？",
-        "source": "lv2-xlsx",
-        "paragraph": "C",
-        "firstSentence": "Heutzutage werden jedoch immer öfter Stimmen laut, die das Reisen verdammen.",
-        "summary": "旅行不是奢侈，而是必要。旅游业正在繁荣，但早在定居之前人类就一直在路上：先是出于迫不得已，再是出于好奇，最后纯粹为发现的乐趣。",
+        "raw": "Wägt der Autor verschiedene Argumente ab?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 58,
+        "paragraph": "A",
+        "firstSentence": "Andererseits.",
+        "summary": "这半句并列或对照不同立场。",
+        "sentenceZh": "这半句并列或对照不同立场。",
+        "frage": "Wägt der Autor verschiedene Argumente ab?",
+        "signalwortZh": "不同理论 / 一方面另一方面",
         "items": [
           {
-            "number": "",
-            "text": "Äußert sich der Autor negativ über andere?作者是否负面评价他人？"
+            "number": "A",
+            "text": "Wägt der Autor verschiedene Argumente ab?",
+            "german": "Wägt der Autor verschiedene Argumente ab?",
+            "chinese": "这半句并列或对照不同立场。",
+            "hint": "这半句并列或对照不同立场。",
+            "sourceRow": 58
           }
-        ],
-        "note": "原资料题项未显示数字或题号识别不完整"
+        ]
       },
       {
-        "number": "D",
-        "text": "Dennoch kann man nicht alle Gegenargumente einfach vom Tisch fegen.",
-        "german": "Dennoch kann man nicht alle Gegenargumente einfach vom Tisch fegen.",
-        "chinese": "要。同时呈现环境成本与发展收益，用问题式对照进行权衡。不过，反对意见也不能一概扫掉。",
+        "number": "4",
+        "text": "vielleicht / womöglich / könnte / künftig / in Zukunft",
+        "german": "vielleicht / womöglich / könnte / künftig / in Zukunft",
+        "chinese": "文中进行推测、设想或预测。",
         "answer": "",
-        "raw": "Wägt der Autor verschiedene Argumente ab?作者是否权衡了不同论点？",
-        "source": "lv2-xlsx",
-        "paragraph": "D",
-        "firstSentence": "Dennoch kann man nicht alle Gegenargumente einfach vom Tisch fegen.",
-        "summary": "要。同时呈现环境成本与发展收益，用问题式对照进行权衡。不过，反对意见也不能一概扫掉。",
+        "raw": "spricht die Autorin eine Vermutung aus?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 59,
+        "paragraph": "A",
+        "firstSentence": "vielleicht / womöglich / könnte / künftig / in Zukunft",
+        "summary": "文中进行推测、设想或预测。",
+        "sentenceZh": "文中进行推测、设想或预测。",
+        "frage": "spricht die Autorin eine Vermutung aus?",
+        "signalwortZh": "也许 / 或许 / 可能 / 今后 / 未来",
         "items": [
           {
-            "number": "",
-            "text": "Wägt der Autor verschiedene Argumente ab?作者是否权衡了不同论点？"
+            "number": "A",
+            "text": "spricht die Autorin eine Vermutung aus?",
+            "german": "spricht die Autorin eine Vermutung aus?",
+            "chinese": "文中进行推测、设想或预测。",
+            "hint": "文中进行推测、设想或预测。",
+            "sourceRow": 59
           }
-        ],
-        "note": "原资料题项未显示数字或题号识别不完整"
+        ]
       },
       {
-        "number": "E",
-        "text": "Wie dem auch sei. Es gehört zu den Vorzügen unserer Zeit, dass wir die Möglichkeit haben, durch Reisen in andere Kulturen einzutauchen und Neues zu lernen, egal ob man die Ferien lieber im Liegestuhl am Strand oder mit dem Kunstreiseführer in Museen und Kathedralen verbringt.",
-        "german": "Wie dem auch sei. Es gehört zu den Vorzügen unserer Zeit, dass wir die Möglichkeit haben, durch Reisen in andere Kulturen einzutauchen und Neues zu lernen, egal ob man die Ferien lieber im Liegestuhl am Strand oder mit dem Kunstreiseführer in Museen und Kathedralen verbringt.",
-        "chinese": "通过设问征同意（“不也…吗？”）+研究佐证来巩固立场，明显在争取读者点头。",
+        "number": "5",
+        "text": "Spricht der Autor eine Empfehlung aus?",
+        "german": "Spricht der Autor eine Empfehlung aus?",
+        "chinese": "这半句是在提出建议或可采取的做法。",
         "answer": "",
-        "raw": "Will der Autor von den Lesern Zustimmung bekommen?作者是否想获得读者的赞同？",
-        "source": "lv2-xlsx",
-        "paragraph": "E",
-        "firstSentence": "Wie dem auch sei. Es gehört zu den Vorzügen unserer Zeit, dass wir die Möglichkeit haben, durch Reisen in andere Kulturen einzutauchen und Neues zu lernen, egal ob man die Ferien lieber im Liegestuhl am Strand oder mit dem Kunstreiseführer in Museen und Kathedralen verbringt.",
-        "summary": "通过设问征同意（“不也…吗？”）+研究佐证来巩固立场，明显在争取读者点头。",
+        "raw": "Äußert sich der Autor negativ über andere?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 60,
+        "paragraph": "A",
+        "firstSentence": "Spricht der Autor eine Empfehlung aus?",
+        "summary": "这半句是在提出建议或可采取的做法。",
+        "sentenceZh": "这半句是在提出建议或可采取的做法。",
+        "frage": "Äußert sich der Autor negativ über andere?",
+        "signalwortZh": "应该 / 建议",
         "items": [
           {
-            "number": "",
-            "text": "Will der Autor von den Lesern Zustimmung bekommen?作者是否想获得读者的赞同？"
+            "number": "A",
+            "text": "Äußert sich der Autor negativ über andere?",
+            "german": "Äußert sich der Autor negativ über andere?",
+            "chinese": "这半句是在提出建议或可采取的做法。",
+            "hint": "这半句是在提出建议或可采取的做法。",
+            "sourceRow": 60
           }
-        ],
-        "note": "原资料题项未显示数字或题号识别不完整"
+        ]
+      },
+      {
+        "number": "6",
+        "text": "Überrasch der Autor durch eine ungewöhnliche Begriffsdefinition?",
+        "german": "Überrasch der Autor durch eine ungewöhnliche Begriffsdefinition?",
+        "chinese": "这半句是在界定概念或说明定义。",
+        "answer": "",
+        "raw": "Überrasch der Autor durch eine ungewöhnliche Begriffsdefinition?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 61,
+        "paragraph": "A",
+        "firstSentence": "Überrasch der Autor durch eine ungewöhnliche Begriffsdefinition?",
+        "summary": "这半句是在界定概念或说明定义。",
+        "sentenceZh": "这半句是在界定概念或说明定义。",
+        "frage": "Überrasch der Autor durch eine ungewöhnliche Begriffsdefinition?",
+        "signalwortZh": "被称为 / 定义为",
+        "items": [
+          {
+            "number": "A",
+            "text": "Überrasch der Autor durch eine ungewöhnliche Begriffsdefinition?",
+            "german": "Überrasch der Autor durch eine ungewöhnliche Begriffsdefinition?",
+            "chinese": "这半句是在界定概念或说明定义。",
+            "hint": "这半句是在界定概念或说明定义。",
+            "sourceRow": 61
+          }
+        ]
       }
     ]
   },
   {
     "teil": 11,
-    "title": "Allein im Restaurant",
-    "sourceText": "LV2 段落卡片",
+    "title": "信号词问句配对",
+    "sourceText": "LV2 信号词问句表 修正版",
     "mode": "paragraph-card",
     "questions": [
       {
-        "number": "A",
-        "text": "Kürzlich hat ein Meinungsforschungsinstitut eine repräsentative Umfrage veröffentlicht.",
-        "german": "Kürzlich hat ein Meinungsforschungsinstitut eine repräsentative Umfrage veröffentlicht.",
-        "chinese": "很惬意。但“旅行让人更快乐”，科学研究也这么说——比如芬兰坦佩雷大学前些时候的一项研究：它列举并对比多位记者相互矛盾/各异的假设与“理论”。",
+        "number": "1",
+        "text": "Einsamkeitsforscher der Welt.",
+        "german": "Einsamkeitsforscher der Welt.",
+        "chinese": "这半句转述他人观点、专家说法或外部评价。",
         "answer": "",
-        "raw": "9. Gibt der Autor unterschiedliche Annahmen wieder?作者是否转述了不同的假设？",
-        "source": "lv2-xlsx",
+        "raw": "Beruft sich der Autor auf die Einschätzung eines Experten?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 62,
         "paragraph": "A",
-        "firstSentence": "Kürzlich hat ein Meinungsforschungsinstitut eine repräsentative Umfrage veröffentlicht.",
-        "summary": "很惬意。但“旅行让人更快乐”，科学研究也这么说——比如芬兰坦佩雷大学前些时候的一项研究：它列举并对比多位记者相互矛盾/各异的假设与“理论”。",
+        "firstSentence": "Einsamkeitsforscher der Welt.",
+        "summary": "这半句转述他人观点、专家说法或外部评价。",
+        "sentenceZh": "这半句转述他人观点、专家说法或外部评价。",
+        "frage": "Beruft sich der Autor auf die Einschätzung eines Experten?",
+        "signalwortZh": "强调 / 批评者 / 研究者",
         "items": [
           {
-            "number": "9",
-            "text": "Gibt der Autor unterschiedliche Annahmen wieder?作者是否转述了不同的假设？"
+            "number": "A",
+            "text": "Beruft sich der Autor auf die Einschätzung eines Experten?",
+            "german": "Beruft sich der Autor auf die Einschätzung eines Experten?",
+            "chinese": "这半句转述他人观点、专家说法或外部评价。",
+            "hint": "这半句转述他人观点、专家说法或外部评价。",
+            "sourceRow": 62
           }
-        ],
-        "note": ""
+        ]
       },
       {
-        "number": "C",
-        "text": "Was in den Texten zu dem Thema nicht mal am Rande erwähnt wird: Es gibt auch Menschen, die aus voller Überzeugung und ganz bewusst allein ins Restaurant gehen und es gibt sie nicht, weil sie es müssen oder dort zwingend Kontakt suchten.",
-        "german": "Was in den Texten zu dem Thema nicht mal am Rande erwähnt wird: Es gibt auch Menschen, die aus voller Überzeugung und ganz bewusst allein ins Restaurant gehen und es gibt sie nicht, weil sie es müssen oder dort zwingend Kontakt suchten.",
-        "chinese": "文本几乎没提到：也有人出于坚定选择独自去餐馆——不是被迫、也不是为社交，而是因为独处本就是生活的一部分，与“孤独”无关。作者自认就是这样的“独自用餐者”：性格内向、喜安静、靠独处充电；",
+        "number": "2",
+        "text": "Gibt der Autor unterschiedliche Annahmen wieder?",
+        "german": "Gibt der Autor unterschiedliche Annahmen wieder?",
+        "chinese": "这半句并列或对照不同立场。",
         "answer": "",
-        "raw": "10. Legt der Autor seine eigenen Beweggründe dar?作者是否阐明了自己的动机？",
-        "source": "lv2-xlsx",
-        "paragraph": "C",
-        "firstSentence": "Was in den Texten zu dem Thema nicht mal am Rande erwähnt wird: Es gibt auch Menschen, die aus voller Überzeugung und ganz bewusst allein ins Restaurant gehen und es gibt sie nicht, weil sie es müssen oder dort zwingend Kontakt suchten.",
-        "summary": "文本几乎没提到：也有人出于坚定选择独自去餐馆——不是被迫、也不是为社交，而是因为独处本就是生活的一部分，与“孤独”无关。作者自认就是这样的“独自用餐者”：性格内向、喜安静、靠独处充电；",
+        "raw": "Gibt der Autor unterschiedliche Annahmen wieder?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 63,
+        "paragraph": "A",
+        "firstSentence": "Gibt der Autor unterschiedliche Annahmen wieder?",
+        "summary": "这半句并列或对照不同立场。",
+        "sentenceZh": "这半句并列或对照不同立场。",
+        "frage": "Gibt der Autor unterschiedliche Annahmen wieder?",
+        "signalwortZh": "不同理论 / 一方面另一方面",
         "items": [
           {
-            "number": "10",
-            "text": "Legt der Autor seine eigenen Beweggründe dar?作者是否阐明了自己的动机？"
+            "number": "A",
+            "text": "Gibt der Autor unterschiedliche Annahmen wieder?",
+            "german": "Gibt der Autor unterschiedliche Annahmen wieder?",
+            "chinese": "这半句并列或对照不同立场。",
+            "hint": "这半句并列或对照不同立场。",
+            "sourceRow": 63
           }
-        ],
-        "note": ""
+        ]
       },
       {
-        "number": "E",
-        "text": "Dennoch weckt es in ihnen manchmal zwiespältige Gefühle, wenn sie etwa im Restaurant allein sind.",
-        "german": "Dennoch weckt es in ihnen manchmal zwiespältige Gefühle, wenn sie etwa im Restaurant allein sind.",
-        "chinese": "独自用餐也会带来复杂感受：想象你一个人坐在餐馆，被情侣和家庭包围，渐渐不适，仿佛感到旁人目光，进而自我怀疑。这源于所谓的**“聚光灯效应（Spotlight-Effekt）”**：即觉……",
+        "number": "3",
+        "text": "Ich mag es leise, sehne mich nach Ruhe - und tanke in der",
+        "german": "Ich mag es leise, sehne mich nach Ruhe - und tanke in der",
+        "chinese": "文中说明个人经历、动机或立场。",
         "answer": "",
-        "raw": "11. Liefert der Autor Definitionen?作者是否给出定义？; 12. Wendet sich der Autor direkt an seine Leserinnen und Leser?作者是否直接面向读者？",
-        "source": "lv2-xlsx",
-        "paragraph": "E",
-        "firstSentence": "Dennoch weckt es in ihnen manchmal zwiespältige Gefühle, wenn sie etwa im Restaurant allein sind.",
-        "summary": "独自用餐也会带来复杂感受：想象你一个人坐在餐馆，被情侣和家庭包围，渐渐不适，仿佛感到旁人目光，进而自我怀疑。这源于所谓的**“聚光灯效应（Spotlight-Effekt）”**：即觉……",
+        "raw": "Legt der Autor seine eigenen Beweggründe dar?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 64,
+        "paragraph": "A",
+        "firstSentence": "Ich mag es leise, sehne mich nach Ruhe - und tanke in der",
+        "summary": "文中说明个人经历、动机或立场。",
+        "sentenceZh": "文中说明个人经历、动机或立场。",
+        "frage": "Legt der Autor seine eigenen Beweggründe dar?",
+        "signalwortZh": "我 / 对我 / 在我看来 / 就我而言 / 我想要",
         "items": [
           {
-            "number": "11",
-            "text": "Liefert der Autor Definitionen?作者是否给出定义？"
-          },
-          {
-            "number": "12",
-            "text": "Wendet sich der Autor direkt an seine Leserinnen und Leser?作者是否直接面向读者？"
+            "number": "A",
+            "text": "Legt der Autor seine eigenen Beweggründe dar?",
+            "german": "Legt der Autor seine eigenen Beweggründe dar?",
+            "chinese": "文中说明个人经历、动机或立场。",
+            "hint": "文中说明个人经历、动机或立场。",
+            "sourceRow": 64
           }
-        ],
-        "note": ""
+        ]
+      },
+      {
+        "number": "4",
+        "text": "Wendet sich der Autor direkt an seine Leserinnen und Leser?",
+        "german": "Wendet sich der Autor direkt an seine Leserinnen und Leser?",
+        "chinese": "文中直接面向读者并寻求共鸣。",
+        "answer": "",
+        "raw": "Will der Autor von den Lesern Zustimmung bekommen?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 65,
+        "paragraph": "A",
+        "firstSentence": "Wendet sich der Autor direkt an seine Leserinnen und Leser?",
+        "summary": "文中直接面向读者并寻求共鸣。",
+        "sentenceZh": "文中直接面向读者并寻求共鸣。",
+        "frage": "Will der Autor von den Lesern Zustimmung bekommen?",
+        "signalwortZh": "你不也觉得吗？/ 你熟悉吗？/ 亲爱的读者",
+        "items": [
+          {
+            "number": "A",
+            "text": "Will der Autor von den Lesern Zustimmung bekommen?",
+            "german": "Will der Autor von den Lesern Zustimmung bekommen?",
+            "chinese": "文中直接面向读者并寻求共鸣。",
+            "hint": "文中直接面向读者并寻求共鸣。",
+            "sourceRow": 65
+          }
+        ]
       }
     ]
   },
   {
     "teil": 12,
-    "title": "Nachhaltiger Konsum – durch Einkaufen die Welt verbessern?",
-    "sourceText": "LV2 段落卡片",
+    "title": "信号词问句配对",
+    "sourceText": "LV2 信号词问句表 修正版",
     "mode": "paragraph-card",
     "questions": [
       {
-        "number": "A",
-        "text": "Vor Kurzem hat mir eine gute Bekannte, nennen wir sie mal Elke, ihre neuesten Errungenschaften vorgeführt: eine ganze Kollektion nachhaltiger Kleidung, aus Bio-Baumwolle und veganem Leder.",
-        "german": "Vor Kurzem hat mir eine gute Bekannte, nennen wir sie mal Elke, ihre neuesten Errungenschaften vorgeführt: eine ganze Kollektion nachhaltiger Kleidung, aus Bio-Baumwolle und veganem Leder.",
-        "chinese": "直出“verwunderlich”“verblüfftes Stirnrunzeln”（惊诧/诧异）信号。朋友Elke给我看她新买的一堆“可持续时尚”（有机棉、纯素皮革）。",
+        "number": "1",
+        "text": "Der Umgang mit Nadel und Faden sollte daher unbedingt zum nachhaltigen",
+        "german": "Der Umgang mit Nadel und Faden sollte daher unbedingt zum nachhaltigen",
+        "chinese": "这半句是在提出建议或可采取的做法。",
         "answer": "",
-        "raw": "11-In welchem Abschnitt zeigt sich die Autorin erstaunt? 在哪一段作者表现出惊讶？",
-        "source": "lv2-xlsx",
+        "raw": "Gibt der Autor einen Rat?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 66,
         "paragraph": "A",
-        "firstSentence": "Vor Kurzem hat mir eine gute Bekannte, nennen wir sie mal Elke, ihre neuesten Errungenschaften vorgeführt: eine ganze Kollektion nachhaltiger Kleidung, aus Bio-Baumwolle und veganem Leder.",
-        "summary": "直出“verwunderlich”“verblüfftes Stirnrunzeln”（惊诧/诧异）信号。朋友Elke给我看她新买的一堆“可持续时尚”（有机棉、纯素皮革）。",
+        "firstSentence": "Der Umgang mit Nadel und Faden sollte daher unbedingt zum nachhaltigen",
+        "summary": "这半句是在提出建议或可采取的做法。",
+        "sentenceZh": "这半句是在提出建议或可采取的做法。",
+        "frage": "Gibt der Autor einen Rat?",
+        "signalwortZh": "应该 / 建议",
         "items": [
           {
-            "number": "11",
-            "text": "In welchem Abschnitt zeigt sich die Autorin erstaunt? 在哪一段作者表现出惊讶？"
+            "number": "A",
+            "text": "Gibt der Autor einen Rat?",
+            "german": "Gibt der Autor einen Rat?",
+            "chinese": "这半句是在提出建议或可采取的做法。",
+            "hint": "这半句是在提出建议或可采取的做法。",
+            "sourceRow": 66
           }
-        ],
-        "note": ""
+        ]
       },
       {
-        "number": "B",
-        "text": "Doch wie kann Konsum überhaupt Umweltbewusstsein ausdrücken?",
-        "german": "Doch wie kann Konsum überhaupt Umweltbewusstsein ausdrücken?",
-        "chinese": "在哪一段作者用数据与事实论证？消费如何能体现环保意识？这岂不是自相矛盾？",
+        "number": "2",
+        "text": "Modebranche 10 Prozent der weltweiten CO2-Emissionen verursachen – mehr als internationale Luftfahrt",
+        "german": "Modebranche 10 Prozent der weltweiten CO2-Emissionen verursachen – mehr als internationale Luftfahrt",
+        "chinese": "这半句用数字、年份或事实进行客观说明。",
         "answer": "",
-        "raw": "12-In welchem Abschnitt argumentiert die Autorin mit Zahlen und Fakten?",
-        "source": "lv2-xlsx",
-        "paragraph": "B",
-        "firstSentence": "Doch wie kann Konsum überhaupt Umweltbewusstsein ausdrücken?",
-        "summary": "在哪一段作者用数据与事实论证？消费如何能体现环保意识？这岂不是自相矛盾？",
+        "raw": "In welchem Abschnitt argumentiert die Autorin mit Zahlen und Fakten ?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 67,
+        "paragraph": "A",
+        "firstSentence": "Modebranche 10 Prozent der weltweiten CO2-Emissionen verursachen – mehr als internationale Luftfahrt",
+        "summary": "这半句用数字、年份或事实进行客观说明。",
+        "sentenceZh": "这半句用数字、年份或事实进行客观说明。",
+        "frage": "In welchem Abschnitt argumentiert die Autorin mit Zahlen und Fakten ?",
+        "signalwortZh": "数字 / 事实",
         "items": [
           {
-            "number": "12",
-            "text": "In welchem Abschnitt argumentiert die Autorin mit Zahlen und Fakten?"
+            "number": "A",
+            "text": "In welchem Abschnitt argumentiert die Autorin mit Zahlen und Fakten ?",
+            "german": "In welchem Abschnitt argumentiert die Autorin mit Zahlen und Fakten ?",
+            "chinese": "这半句用数字、年份或事实进行客观说明。",
+            "hint": "这半句用数字、年份或事实进行客观说明。",
+            "sourceRow": 67
           }
-        ],
-        "note": ""
+        ]
       },
       {
-        "number": "C",
-        "text": "Käufe - so nachhaltig die Produkte auch sein mögen– der Umwelt in jedem Falle eher schaden als nützen.",
-        "german": "Käufe - so nachhaltig die Produkte auch sein mögen– der Umwelt in jedem Falle eher schaden als nützen.",
-        "chinese": "多修补）无论产品多“可持续”，购买总体上更可能伤害而非有益于环境。与其给“买买买”涂绿，不如用更好的方式做出生态贡献。",
+        "number": "3",
+        "text": "Der Umgang mit Nadel und Faden sollte daher unbedingt zum nachhaltigen",
+        "german": "Der Umgang mit Nadel und Faden sollte daher unbedingt zum nachhaltigen",
+        "chinese": "这半句是在提出建议或可采取的做法。",
         "answer": "",
-        "raw": "7-In welchem Abschnitt zieht die Autorin eine Schlussfolgerung?",
-        "source": "lv2-xlsx",
-        "paragraph": "C",
-        "firstSentence": "Käufe - so nachhaltig die Produkte auch sein mögen– der Umwelt in jedem Falle eher schaden als nützen.",
-        "summary": "多修补）无论产品多“可持续”，购买总体上更可能伤害而非有益于环境。与其给“买买买”涂绿，不如用更好的方式做出生态贡献。",
+        "raw": "In welchem Abschnitt gibt die Autorin einen Rat?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 68,
+        "paragraph": "A",
+        "firstSentence": "Der Umgang mit Nadel und Faden sollte daher unbedingt zum nachhaltigen",
+        "summary": "这半句是在提出建议或可采取的做法。",
+        "sentenceZh": "这半句是在提出建议或可采取的做法。",
+        "frage": "In welchem Abschnitt gibt die Autorin einen Rat?",
+        "signalwortZh": "应该 / 建议",
         "items": [
           {
-            "number": "7",
-            "text": "In welchem Abschnitt zieht die Autorin eine Schlussfolgerung?"
+            "number": "A",
+            "text": "In welchem Abschnitt gibt die Autorin einen Rat?",
+            "german": "In welchem Abschnitt gibt die Autorin einen Rat?",
+            "chinese": "这半句是在提出建议或可采取的做法。",
+            "hint": "这半句是在提出建议或可采取的做法。",
+            "sourceRow": 68
           }
-        ],
-        "note": ""
+        ]
       },
       {
-        "number": "D",
-        "text": "Damit keine Missverständnisse aufkommen: Natürlich ist gegen den Kauf umweltfreundlich produzierter Waren nichts einzuwenden - sofern dieser wirklich notwendig ist.",
-        "german": "Damit keine Missverständnisse aufkommen: Natürlich ist gegen den Kauf umweltfreundlich produzierter Waren nichts einzuwenden - sofern dieser wirklich notwendig ist.",
-        "chinese": "避免误会：必要的环保产品购买当然没问题。我本人重视公平生产、拒绝廉价快时尚、只买耐穿的高质量衣物。",
+        "number": "4",
+        "text": "Vor Kurzem hat mir eine gute Bekannte, nennen wir sie mal Elke, ihre neuesten Errungenschaften",
+        "german": "Vor Kurzem hat mir eine gute Bekannte, nennen wir sie mal Elke, ihre neuesten Errungenschaften",
+        "chinese": "这半句说明个人经历、动机或个人立场。",
         "answer": "",
-        "raw": "9-In welchem Abschnitt erläutert die Autorin ihre persönliche Haltung?",
-        "source": "lv2-xlsx",
-        "paragraph": "D",
-        "firstSentence": "Damit keine Missverständnisse aufkommen: Natürlich ist gegen den Kauf umweltfreundlich produzierter Waren nichts einzuwenden - sofern dieser wirklich notwendig ist.",
-        "summary": "避免误会：必要的环保产品购买当然没问题。我本人重视公平生产、拒绝廉价快时尚、只买耐穿的高质量衣物。",
+        "raw": "In welchem Abschnitt zeigt sich die Autorin erstaunt ?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 69,
+        "paragraph": "A",
+        "firstSentence": "Vor Kurzem hat mir eine gute Bekannte, nennen wir sie mal Elke, ihre neuesten Errungenschaften",
+        "summary": "这半句说明个人经历、动机或个人立场。",
+        "sentenceZh": "这半句说明个人经历、动机或个人立场。",
+        "frage": "In welchem Abschnitt zeigt sich die Autorin erstaunt ?",
+        "signalwortZh": "我 / 对我而言",
         "items": [
           {
-            "number": "9",
-            "text": "In welchem Abschnitt erläutert die Autorin ihre persönliche Haltung?"
+            "number": "A",
+            "text": "In welchem Abschnitt zeigt sich die Autorin erstaunt ?",
+            "german": "In welchem Abschnitt zeigt sich die Autorin erstaunt ?",
+            "chinese": "这半句说明个人经历、动机或个人立场。",
+            "hint": "这半句说明个人经历、动机或个人立场。",
+            "sourceRow": 69
           }
-        ],
-        "note": ""
+        ]
       },
       {
-        "number": "E",
-        "text": "Immerhin, bei den Unternehmen ist inzwischen die Erkenntnis angekommen, dass exzessivem Konsum nicht das allerbeste Image anhaftet.",
-        "german": "Immerhin, bei den Unternehmen ist inzwischen die Erkenntnis angekommen, dass exzessivem Konsum nicht das allerbeste Image anhaftet.",
-        "chinese": "至少企业已意识到：过度消费形象不佳。但似乎也难以引发广泛转变——这很可惜。",
+        "number": "5",
+        "text": "Es gibt also bessere Wege, einen ökologischen Beitrag zu leisten, als dem Kaufrausch einfach nur einen",
+        "german": "Es gibt also bessere Wege, einen ökologischen Beitrag zu leisten, als dem Kaufrausch einfach nur einen",
+        "chinese": "这半句对前文内容作归纳或结论。",
         "answer": "",
-        "raw": "8-In welchem Abschnitt äußert die Autorin Bedauern?",
-        "source": "lv2-xlsx",
-        "paragraph": "E",
-        "firstSentence": "Immerhin, bei den Unternehmen ist inzwischen die Erkenntnis angekommen, dass exzessivem Konsum nicht das allerbeste Image anhaftet.",
-        "summary": "至少企业已意识到：过度消费形象不佳。但似乎也难以引发广泛转变——这很可惜。",
+        "raw": "In welchem Abschnitt zieht die Autorin eine Schlussfolgerung ?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 70,
+        "paragraph": "A",
+        "firstSentence": "Es gibt also bessere Wege, einen ökologischen Beitrag zu leisten, als dem Kaufrausch einfach nur einen",
+        "summary": "这半句对前文内容作归纳或结论。",
+        "sentenceZh": "这半句对前文内容作归纳或结论。",
+        "frage": "In welchem Abschnitt zieht die Autorin eine Schlussfolgerung ?",
+        "signalwortZh": "由此可得 / 因此",
         "items": [
           {
-            "number": "8",
-            "text": "In welchem Abschnitt äußert die Autorin Bedauern?"
+            "number": "A",
+            "text": "In welchem Abschnitt zieht die Autorin eine Schlussfolgerung ?",
+            "german": "In welchem Abschnitt zieht die Autorin eine Schlussfolgerung ?",
+            "chinese": "这半句对前文内容作归纳或结论。",
+            "hint": "这半句对前文内容作归纳或结论。",
+            "sourceRow": 70
           }
-        ],
-        "note": ""
+        ]
+      },
+      {
+        "number": "6",
+        "text": "Vor Kurzem hat mir eine gute Bekannte, nennen wir sie mal Elke, ihre neuesten Errungenschaften",
+        "german": "Vor Kurzem hat mir eine gute Bekannte, nennen wir sie mal Elke, ihre neuesten Errungenschaften",
+        "chinese": "这半句说明个人经历、动机或个人立场。",
+        "answer": "",
+        "raw": "Liefert der Autor Definitionen?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 71,
+        "paragraph": "A",
+        "firstSentence": "Vor Kurzem hat mir eine gute Bekannte, nennen wir sie mal Elke, ihre neuesten Errungenschaften",
+        "summary": "这半句说明个人经历、动机或个人立场。",
+        "sentenceZh": "这半句说明个人经历、动机或个人立场。",
+        "frage": "Liefert der Autor Definitionen?",
+        "signalwortZh": "我 / 对我而言",
+        "items": [
+          {
+            "number": "A",
+            "text": "Liefert der Autor Definitionen?",
+            "german": "Liefert der Autor Definitionen?",
+            "chinese": "这半句说明个人经历、动机或个人立场。",
+            "hint": "这半句说明个人经历、动机或个人立场。",
+            "sourceRow": 71
+          }
+        ]
+      },
+      {
+        "number": "7",
+        "text": "Vor Kurzem hat mir eine gute Bekannte, nennen wir sie mal Elke, ihre neuesten Errungenschaften",
+        "german": "Vor Kurzem hat mir eine gute Bekannte, nennen wir sie mal Elke, ihre neuesten Errungenschaften",
+        "chinese": "这半句说明个人经历、动机或个人立场。",
+        "answer": "",
+        "raw": "Wendet sich der Autor direkt an seine Leserinnen und Leser?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 72,
+        "paragraph": "A",
+        "firstSentence": "Vor Kurzem hat mir eine gute Bekannte, nennen wir sie mal Elke, ihre neuesten Errungenschaften",
+        "summary": "这半句说明个人经历、动机或个人立场。",
+        "sentenceZh": "这半句说明个人经历、动机或个人立场。",
+        "frage": "Wendet sich der Autor direkt an seine Leserinnen und Leser?",
+        "signalwortZh": "我 / 对我而言",
+        "items": [
+          {
+            "number": "A",
+            "text": "Wendet sich der Autor direkt an seine Leserinnen und Leser?",
+            "german": "Wendet sich der Autor direkt an seine Leserinnen und Leser?",
+            "chinese": "这半句说明个人经历、动机或个人立场。",
+            "hint": "这半句说明个人经历、动机或个人立场。",
+            "sourceRow": 72
+          }
+        ]
       }
     ]
   },
   {
     "teil": 13,
-    "title": "Die komplizierte Wissenschaftssprache",
-    "sourceText": "LV2 段落卡片",
+    "title": "信号词问句配对",
+    "sourceText": "LV2 信号词问句表 修正版",
     "mode": "paragraph-card",
     "questions": [
       {
-        "number": "A",
-        "text": "Man könnte so beginnen: Die folgende Untersuchung handelt von der interaktiven Desintegration von Rollenstrukturen und Handlungswissen in minimalen Organisationen.",
-        "german": "Man könnte so beginnen: Die folgende Untersuchung handelt von der interaktiven Desintegration von Rollenstrukturen und Handlungswissen in minimalen Organisationen.",
-        "chinese": "作者用两种完全不同的开头对比科学论文语言：一种晦涩学术，一种像故事，从而引出科学表达的可读性问题。",
+        "number": "1",
+        "text": "/ spricht der Autor abfällig ?",
+        "german": "/ spricht der Autor abfällig ?",
+        "chinese": "这半句用讽刺、夸张或贬斥语气评价对象。",
         "answer": "",
-        "raw": "（资料未明确给出/该段可能不作为配题答案）",
-        "source": "lv2-xlsx",
-        "paragraph": "A",
-        "firstSentence": "Man könnte so beginnen: Die folgende Untersuchung handelt von der interaktiven Desintegration von Rollenstrukturen und Handlungswissen in minimalen Organisationen.",
-        "summary": "作者用两种完全不同的开头对比科学论文语言：一种晦涩学术，一种像故事，从而引出科学表达的可读性问题。",
-        "items": [],
-        "note": "资料未明确给出对应题项"
-      },
-      {
-        "number": "B",
-        "text": "Veröffentlicht hat den Text der amerikanische Soziologe Karl E.",
-        "german": "Veröffentlicht hat den Text der amerikanische Soziologe Karl E.",
-        "chinese": "好喝。但为什么恰有两个人能坚持来训练？”——这样更好，像小说开头。",
-        "answer": "",
-        "raw": "7- spricht der Autor eine Warnung aus?作者是否发出警示？„Gefahr, dass … den Stil verderben“（明确",
-        "source": "lv2-xlsx",
+        "raw": "Formuliert der Autor polemisch ?/ spricht der Autor abfällig ? 作 者 是 否 带 抨 击 / 贬 斥 ?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 73,
         "paragraph": "B",
-        "firstSentence": "Veröffentlicht hat den Text der amerikanische Soziologe Karl E.",
-        "summary": "好喝。但为什么恰有两个人能坚持来训练？”——这样更好，像小说开头。",
+        "firstSentence": "/ spricht der Autor abfällig ?",
+        "summary": "这半句用讽刺、夸张或贬斥语气评价对象。",
+        "sentenceZh": "这半句用讽刺、夸张或贬斥语气评价对象。",
+        "frage": "Formuliert der Autor polemisch ?/ spricht der Autor abfällig ? 作 者 是 否 带 抨 击 / 贬 斥 ?",
+        "signalwortZh": "我想吐 / 很烦 / 贬斥",
         "items": [
           {
-            "number": "7",
-            "text": "spricht der Autor eine Warnung aus?作者是否发出警示？„Gefahr, dass … den Stil verderben“（明确"
+            "number": "B",
+            "text": "Formuliert der Autor polemisch ?/ spricht der Autor abfällig ? 作 者 是 否 带 抨 击 / 贬 斥 ?",
+            "german": "Formuliert der Autor polemisch ?/ spricht der Autor abfällig ? 作 者 是 否 带 抨 击 / 贬 斥 ?",
+            "chinese": "这半句用讽刺、夸张或贬斥语气评价对象。",
+            "hint": "这半句用讽刺、夸张或贬斥语气评价对象。",
+            "sourceRow": 73
           }
-        ],
-        "note": ""
+        ]
       },
       {
-        "number": "C",
-        "text": "Zwar gibt es Disziplinen, die besonders anfällig dafür sind, alltägliche Einsichten nur wissenschaftlich umzuformulieren.",
-        "german": "Zwar gibt es Disziplinen, die besonders anfällig dafür sind, alltägliche Einsichten nur wissenschaftlich umzuformulieren.",
-        "chinese": "Eichinger 的判断与抱怨。思想复杂且特异，不能用过于简单的语言解释；",
+        "number": "2",
+        "text": ", der cher nach Hollywood klingt, die Brillanz des Aufsatzes liegt darin, dass er",
+        "german": ", der cher nach Hollywood klingt, die Brillanz des Aufsatzes liegt darin, dass er",
+        "chinese": "文中说明个人经历、动机或立场。",
         "answer": "",
-        "raw": "10- gibt der Autor eine fremde Einschätzung wieder?是否转述他人/专家的看法？多处直接引用",
-        "source": "lv2-xlsx",
-        "paragraph": "C",
-        "firstSentence": "Zwar gibt es Disziplinen, die besonders anfällig dafür sind, alltägliche Einsichten nur wissenschaftlich umzuformulieren.",
-        "summary": "Eichinger 的判断与抱怨。思想复杂且特异，不能用过于简单的语言解释；",
+        "raw": "In welchem Abschnitt erläutert die Autorin ihre persönliche Haltung ?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 74,
+        "paragraph": "A",
+        "firstSentence": ", der cher nach Hollywood klingt, die Brillanz des Aufsatzes liegt darin, dass er",
+        "summary": "文中说明个人经历、动机或立场。",
+        "sentenceZh": "文中说明个人经历、动机或立场。",
+        "frage": "In welchem Abschnitt erläutert die Autorin ihre persönliche Haltung ?",
+        "signalwortZh": "我 / 对我 / 在我看来 / 就我而言 / 我想要",
         "items": [
           {
-            "number": "10",
-            "text": "gibt der Autor eine fremde Einschätzung wieder?是否转述他人/专家的看法？多处直接引用"
+            "number": "A",
+            "text": "In welchem Abschnitt erläutert die Autorin ihre persönliche Haltung ?",
+            "german": "In welchem Abschnitt erläutert die Autorin ihre persönliche Haltung ?",
+            "chinese": "文中说明个人经历、动机或立场。",
+            "hint": "文中说明个人经历、动机或立场。",
+            "sourceRow": 74
           }
-        ],
-        "note": ""
+        ]
       },
       {
-        "number": "D",
+        "number": "3",
+        "text": "Vom Nominalstil geprägten",
+        "german": "Vom Nominalstil geprägten",
+        "chinese": "这半句流露怀旧、感伤或遗憾。",
+        "answer": "",
+        "raw": "In welchem Abschnitt äußert die Autorin Bedauern ?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 75,
+        "paragraph": "D",
+        "firstSentence": "Vom Nominalstil geprägten",
+        "summary": "这半句流露怀旧、感伤或遗憾。",
+        "sentenceZh": "这半句流露怀旧、感伤或遗憾。",
+        "frage": "In welchem Abschnitt äußert die Autorin Bedauern ?",
+        "signalwortZh": "怀念 / 遗憾 / 可惜",
+        "items": [
+          {
+            "number": "D",
+            "text": "In welchem Abschnitt äußert die Autorin Bedauern ?",
+            "german": "In welchem Abschnitt äußert die Autorin Bedauern ?",
+            "chinese": "这半句流露怀旧、感伤或遗憾。",
+            "hint": "这半句流露怀旧、感伤或遗憾。",
+            "sourceRow": 75
+          }
+        ]
+      },
+      {
+        "number": "4",
         "text": "Doch haben solche Kritiker überhaupt Recht?",
         "german": "Doch haben solche Kritiker überhaupt Recht?",
-        "chinese": "可理解性与严肃性可以兼得，并指出“复杂语言还可能更不精确”。",
+        "chinese": "这半句转述他人观点、专家说法或外部评价。",
         "answer": "",
-        "raw": "12- entkräftet der Autor einen Einwand?/ hat der Autor eine besondere Position berücksichtigt?",
-        "source": "lv2-xlsx",
+        "raw": "gibt der Autor eine fremde Einschätzung wieder ?是否转述他人/专家的看法?多处直接引用",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 76,
         "paragraph": "D",
         "firstSentence": "Doch haben solche Kritiker überhaupt Recht?",
-        "summary": "可理解性与严肃性可以兼得，并指出“复杂语言还可能更不精确”。",
+        "summary": "这半句转述他人观点、专家说法或外部评价。",
+        "sentenceZh": "这半句转述他人观点、专家说法或外部评价。",
+        "frage": "gibt der Autor eine fremde Einschätzung wieder ?是否转述他人/专家的看法?多处直接引用",
+        "signalwortZh": "强调 / 批评者 / 研究者",
         "items": [
           {
-            "number": "12",
-            "text": "entkräftet der Autor einen Einwand?/ hat der Autor eine besondere Position berücksichtigt?"
+            "number": "D",
+            "text": "gibt der Autor eine fremde Einschätzung wieder ?是否转述他人/专家的看法?多处直接引用",
+            "german": "gibt der Autor eine fremde Einschätzung wieder ?是否转述他人/专家的看法?多处直接引用",
+            "chinese": "这半句转述他人观点、专家说法或外部评价。",
+            "hint": "这半句转述他人观点、专家说法或外部评价。",
+            "sourceRow": 76
           }
-        ],
-        "note": ""
+        ]
       },
       {
-        "number": "E",
-        "text": "Betrachtet man aber das Gesamtbild, lässt sich nur folgern: Wer etwa im Studium nur solche Perlen lesen möchte, wird es nicht bis zum Abschluss schaffen.",
-        "german": "Betrachtet man aber das Gesamtbild, lässt sich nur folgern: Wer etwa im Studium nur solche Perlen lesen möchte, wird es nicht bis zum Abschluss schaffen.",
-        "chinese": "但这些批评者就一定对吗？复杂、名词化主导的语言不仅不易懂，往往也不精确：内容浮泛、难以把握，因而逃避讨论。",
+        "number": "5",
+        "text": "Dabei besteht die Gefahr, dass sie sich den Stil verderben",
+        "german": "Dabei besteht die Gefahr, dass sie sich den Stil verderben",
+        "chinese": "这半句提示风险或负面后果。",
         "answer": "",
-        "raw": "9- zieht der Autor einen Schluss? 是否作出结论？„lässt sich nur folgern“ 明确的归结。; 11- äußert der Autor einen Wunsch?是否表达愿望？„schön wäre es, wenn …“ 标准愿望式句型。",
-        "source": "lv2-xlsx",
-        "paragraph": "E",
-        "firstSentence": "Betrachtet man aber das Gesamtbild, lässt sich nur folgern: Wer etwa im Studium nur solche Perlen lesen möchte, wird es nicht bis zum Abschluss schaffen.",
-        "summary": "但这些批评者就一定对吗？复杂、名词化主导的语言不仅不易懂，往往也不精确：内容浮泛、难以把握，因而逃避讨论。",
+        "raw": "spricht der Autor eine Warnung aus ?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 77,
+        "paragraph": "B",
+        "firstSentence": "Dabei besteht die Gefahr, dass sie sich den Stil verderben",
+        "summary": "这半句提示风险或负面后果。",
+        "sentenceZh": "这半句提示风险或负面后果。",
+        "frage": "spricht der Autor eine Warnung aus ?",
+        "signalwortZh": "风险 / 危险 / 伤害",
         "items": [
           {
-            "number": "9",
-            "text": "zieht der Autor einen Schluss? 是否作出结论？„lässt sich nur folgern“ 明确的归结。"
-          },
-          {
-            "number": "11",
-            "text": "äußert der Autor einen Wunsch?是否表达愿望？„schön wäre es, wenn …“ 标准愿望式句型。"
+            "number": "B",
+            "text": "spricht der Autor eine Warnung aus ?",
+            "german": "spricht der Autor eine Warnung aus ?",
+            "chinese": "这半句提示风险或负面后果。",
+            "hint": "这半句提示风险或负面后果。",
+            "sourceRow": 77
           }
-        ],
-        "note": ""
+        ]
       }
     ]
   },
   {
     "teil": 14,
-    "title": "Ruf mich nicht an",
-    "sourceText": "LV2 段落卡片",
+    "title": "信号词问句配对",
+    "sourceText": "LV2 信号词问句表 修正版",
     "mode": "paragraph-card",
     "questions": [
       {
-        "number": "A",
-        "text": "Neulich saß ich nachmittags an der Uni in einer Vorlesung und hörte plötzlich, wie mein iPhone vibrierte.",
-        "german": "Neulich saß ich nachmittags an der Uni in einer Vorlesung und hörte plötzlich, wie mein iPhone vibrierte.",
-        "chinese": "本段围绕“Rufmichnichtan”展开，重点考察：suchtdieAutorinbeidenLesernnachZustimmung?",
+        "number": "1",
+        "text": "Darüber haben ich mir in letzter Zeit häufig",
+        "german": "Darüber haben ich mir in letzter Zeit häufig",
+        "chinese": "这半句说明个人经历、动机或个人立场。",
         "answer": "",
-        "raw": "12-sucht die Autorin bei den Lesern nach Zustimmung?",
-        "source": "lv2-xlsx",
-        "paragraph": "A",
-        "firstSentence": "Neulich saß ich nachmittags an der Uni in einer Vorlesung und hörte plötzlich, wie mein iPhone vibrierte.",
-        "summary": "本段围绕“Rufmichnichtan”展开，重点考察：suchtdieAutorinbeidenLesernnachZustimmung?",
-        "items": [
-          {
-            "number": "12",
-            "text": "sucht die Autorin bei den Lesern nach Zustimmung?"
-          }
-        ],
-        "note": ""
-      },
-      {
-        "number": "B",
-        "text": "Doch warum ist meine Abneigung gegen das Telefonieren so stark?",
-        "german": "Doch warum ist meine Abneigung gegen das Telefonieren so stark?",
-        "chinese": "本段围绕“Rufmichnichtan”展开，重点考察：bringtdieAutorinVergleichean?",
-        "answer": "",
-        "raw": "8-bringt die Autorin Vergleiche an?",
-        "source": "lv2-xlsx",
+        "raw": "bringt die Autorin Vergleiche an ?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 78,
         "paragraph": "B",
-        "firstSentence": "Doch warum ist meine Abneigung gegen das Telefonieren so stark?",
-        "summary": "本段围绕“Rufmichnichtan”展开，重点考察：bringtdieAutorinVergleichean?",
+        "firstSentence": "Darüber haben ich mir in letzter Zeit häufig",
+        "summary": "这半句说明个人经历、动机或个人立场。",
+        "sentenceZh": "这半句说明个人经历、动机或个人立场。",
+        "frage": "bringt die Autorin Vergleiche an ?",
+        "signalwortZh": "我 / 对我而言",
         "items": [
           {
-            "number": "8",
-            "text": "bringt die Autorin Vergleiche an?"
+            "number": "B",
+            "text": "bringt die Autorin Vergleiche an ?",
+            "german": "bringt die Autorin Vergleiche an ?",
+            "chinese": "这半句说明个人经历、动机或个人立场。",
+            "hint": "这半句说明个人经历、动机或个人立场。",
+            "sourceRow": 78
           }
-        ],
-        "note": ""
+        ]
       },
       {
-        "number": "C",
-        "text": "Wenn ich über das heutige Kommunikationsverhalten nachdenke, fällt mir allerdings ein merkwürdiger Widerspruch auf: Ist es nicht erstaunlich, dass alle ständig ein Gerät mit sich herumtragen, das ursprünglich in erster Linie zum Telefonieren gedacht war - aber gerade diese Funktion immer weniger genutzt wird?",
-        "german": "Wenn ich über das heutige Kommunikationsverhalten nachdenke, fällt mir allerdings ein merkwürdiger Widerspruch auf: Ist es nicht erstaunlich, dass alle ständig ein Gerät mit sich herumtragen, das ursprünglich in erster Linie zum Telefonieren gedacht war - aber gerade diese Funktion immer weniger genutzt wird?",
-        "chinese": "本段围绕“Rufmichnichtan”展开，重点考察：drücktdieAutorinVerwunderungaus?；lädtdieAutorindieLeserzueinemgedanklichenExperimentein?",
+        "number": "2",
+        "text": "9-drückt die Autorin Verwunderung aus?",
+        "german": "9-drückt die Autorin Verwunderung aus?",
+        "chinese": "这半句表现不理解、诧异或困惑。",
         "answer": "",
-        "raw": "9-drückt die Autorin Verwunderung aus?; 10-lädt die Autorin die Leser zu einem gedanklichen Experiment ein?",
-        "source": "lv2-xlsx",
+        "raw": "drückt die Autorin Verwunderung aus?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 79,
+        "paragraph": "B",
+        "firstSentence": "9-drückt die Autorin Verwunderung aus?",
+        "summary": "这半句表现不理解、诧异或困惑。",
+        "sentenceZh": "这半句表现不理解、诧异或困惑。",
+        "frage": "drückt die Autorin Verwunderung aus?",
+        "signalwortZh": "诧异 / 奇怪 / 为什么",
+        "items": [
+          {
+            "number": "B",
+            "text": "drückt die Autorin Verwunderung aus?",
+            "german": "drückt die Autorin Verwunderung aus?",
+            "chinese": "这半句表现不理解、诧异或困惑。",
+            "hint": "这半句表现不理解、诧异或困惑。",
+            "sourceRow": 79
+          }
+        ]
+      },
+      {
+        "number": "3",
+        "text": "fest überzeugt / klar / am Ende",
+        "german": "fest überzeugt / klar / am Ende",
+        "chinese": "文中立场鲜明，判断直接。",
+        "answer": "",
+        "raw": "entkräftet der Autor einen Einwand ?/ hat der Autor eine besondere Position berücksichtigt ?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 80,
+        "paragraph": "B",
+        "firstSentence": "fest überzeugt / klar / am Ende",
+        "summary": "文中立场鲜明，判断直接。",
+        "sentenceZh": "文中立场鲜明，判断直接。",
+        "frage": "entkräftet der Autor einen Einwand ?/ hat der Autor eine besondere Position berücksichtigt ?",
+        "signalwortZh": "深信 / 明确 / 最终",
+        "items": [
+          {
+            "number": "B",
+            "text": "entkräftet der Autor einen Einwand ?/ hat der Autor eine besondere Position berücksichtigt ?",
+            "german": "entkräftet der Autor einen Einwand ?/ hat der Autor eine besondere Position berücksichtigt ?",
+            "chinese": "文中立场鲜明，判断直接。",
+            "hint": "文中立场鲜明，判断直接。",
+            "sourceRow": 80
+          }
+        ]
+      },
+      {
+        "number": "4",
+        "text": "Stellen Sie sich doch einfach mal vor, wir wären wieder im Jahr 1985, Telefonisch",
+        "german": "Stellen Sie sich doch einfach mal vor, wir wären wieder im Jahr 1985, Telefonisch",
+        "chinese": "这半句直接面向读者，引导共鸣或自我反思。",
+        "answer": "",
+        "raw": "lädt die Autorin die Leser zu einem gedanklichen Experiment ein?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 81,
         "paragraph": "C",
-        "firstSentence": "Wenn ich über das heutige Kommunikationsverhalten nachdenke, fällt mir allerdings ein merkwürdiger Widerspruch auf: Ist es nicht erstaunlich, dass alle ständig ein Gerät mit sich herumtragen, das ursprünglich in erster Linie zum Telefonieren gedacht war - aber gerade diese Funktion immer weniger genutzt wird?",
-        "summary": "本段围绕“Rufmichnichtan”展开，重点考察：drücktdieAutorinVerwunderungaus?；lädtdieAutorindieLeserzueinemgedanklichenExperimentein?",
+        "firstSentence": "Stellen Sie sich doch einfach mal vor, wir wären wieder im Jahr 1985, Telefonisch",
+        "summary": "这半句直接面向读者，引导共鸣或自我反思。",
+        "sentenceZh": "这半句直接面向读者，引导共鸣或自我反思。",
+        "frage": "lädt die Autorin die Leser zu einem gedanklichen Experiment ein?",
+        "signalwortZh": "你熟悉吗 / 请设想 / 读者",
         "items": [
           {
-            "number": "9",
-            "text": "drückt die Autorin Verwunderung aus?"
-          },
-          {
-            "number": "10",
-            "text": "lädt die Autorin die Leser zu einem gedanklichen Experiment ein?"
+            "number": "C",
+            "text": "lädt die Autorin die Leser zu einem gedanklichen Experiment ein?",
+            "german": "lädt die Autorin die Leser zu einem gedanklichen Experiment ein?",
+            "chinese": "这半句直接面向读者，引导共鸣或自我反思。",
+            "hint": "这半句直接面向读者，引导共鸣或自我反思。",
+            "sourceRow": 81
           }
-        ],
-        "note": ""
+        ]
       },
       {
-        "number": "D",
-        "text": "Mit meiner Abneigung gegen das Telefonieren stehe ich übrigens nicht allein da.",
-        "german": "Mit meiner Abneigung gegen das Telefonieren stehe ich übrigens nicht allein da.",
-        "chinese": "本段围绕“Rufmichnichtan”展开，重点考察：beruft sich die Autirin auf die Eindvhätzungen von Fachleuten?",
+        "number": "5",
+        "text": "Stellen Sie sich doch einfach mal vor, wir wären wieder im Jahr 1985, Telefonisch",
+        "german": "Stellen Sie sich doch einfach mal vor, wir wären wieder im Jahr 1985, Telefonisch",
+        "chinese": "这半句直接面向读者，引导共鸣或自我反思。",
         "answer": "",
-        "raw": "7-beruft sich die Autorin auf die Einschätzungen von Fachleuten?",
-        "source": "lv2-xlsx",
-        "paragraph": "D",
-        "firstSentence": "Mit meiner Abneigung gegen das Telefonieren stehe ich übrigens nicht allein da.",
-        "summary": "本段围绕“Rufmichnichtan”展开，重点考察：beruft sich die Autirin auf die Eindvhätzungen von Fachleuten?",
+        "raw": "sucht die Autorin bei den Lesern nach Zustimmung?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 82,
+        "paragraph": "C",
+        "firstSentence": "Stellen Sie sich doch einfach mal vor, wir wären wieder im Jahr 1985, Telefonisch",
+        "summary": "这半句直接面向读者，引导共鸣或自我反思。",
+        "sentenceZh": "这半句直接面向读者，引导共鸣或自我反思。",
+        "frage": "sucht die Autorin bei den Lesern nach Zustimmung?",
+        "signalwortZh": "你熟悉吗 / 请设想 / 读者",
         "items": [
           {
-            "number": "7",
-            "text": "beruft sich die Autorin auf die Einschätzungen von Fachleuten?"
+            "number": "C",
+            "text": "sucht die Autorin bei den Lesern nach Zustimmung?",
+            "german": "sucht die Autorin bei den Lesern nach Zustimmung?",
+            "chinese": "这半句直接面向读者，引导共鸣或自我反思。",
+            "hint": "这半句直接面向读者，引导共鸣或自我反思。",
+            "sourceRow": 82
           }
-        ],
-        "note": ""
+        ]
+      },
+      {
+        "number": "6",
+        "text": "Darüber haben ich mir in letzter Zeit häufig",
+        "german": "Darüber haben ich mir in letzter Zeit häufig",
+        "chinese": "这半句说明个人经历、动机或个人立场。",
+        "answer": "",
+        "raw": "zieht der Autor einen Schluss ? 是否作出结论?„lässt sich nur folgern“ 明确的归结。",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 83,
+        "paragraph": "B",
+        "firstSentence": "Darüber haben ich mir in letzter Zeit häufig",
+        "summary": "这半句说明个人经历、动机或个人立场。",
+        "sentenceZh": "这半句说明个人经历、动机或个人立场。",
+        "frage": "zieht der Autor einen Schluss ? 是否作出结论?„lässt sich nur folgern“ 明确的归结。",
+        "signalwortZh": "我 / 对我而言",
+        "items": [
+          {
+            "number": "B",
+            "text": "zieht der Autor einen Schluss ? 是否作出结论?„lässt sich nur folgern“ 明确的归结。",
+            "german": "zieht der Autor einen Schluss ? 是否作出结论?„lässt sich nur folgern“ 明确的归结。",
+            "chinese": "这半句说明个人经历、动机或个人立场。",
+            "hint": "这半句说明个人经历、动机或个人立场。",
+            "sourceRow": 83
+          }
+        ]
+      },
+      {
+        "number": "7",
+        "text": "sorgen sollten, noch anders.",
+        "german": "sorgen sollten, noch anders.",
+        "chinese": "这半句是在提出建议或可采取的做法。",
+        "answer": "",
+        "raw": "äußert der Autor einen Wunsch?是否表达愿望?„schön wäre es, wenn …“ 标准愿望式句型。",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 84,
+        "paragraph": "C",
+        "firstSentence": "sorgen sollten, noch anders.",
+        "summary": "这半句是在提出建议或可采取的做法。",
+        "sentenceZh": "这半句是在提出建议或可采取的做法。",
+        "frage": "äußert der Autor einen Wunsch?是否表达愿望?„schön wäre es, wenn …“ 标准愿望式句型。",
+        "signalwortZh": "应该 / 建议",
+        "items": [
+          {
+            "number": "C",
+            "text": "äußert der Autor einen Wunsch?是否表达愿望?„schön wäre es, wenn …“ 标准愿望式句型。",
+            "german": "äußert der Autor einen Wunsch?是否表达愿望?„schön wäre es, wenn …“ 标准愿望式句型。",
+            "chinese": "这半句是在提出建议或可采取的做法。",
+            "hint": "这半句是在提出建议或可采取的做法。",
+            "sourceRow": 84
+          }
+        ]
       }
     ]
   },
   {
     "teil": 15,
-    "title": "Präsentationen an der Uni: Langeweile garantiert",
-    "sourceText": "LV2 段落卡片",
+    "title": "信号词问句配对",
+    "sourceText": "LV2 信号词问句表 修正版",
     "mode": "paragraph-card",
     "questions": [
       {
-        "number": "A",
-        "text": "Vor Präsentationen gibt es an der Uni kein Entkommen.",
-        "german": "Vor Präsentationen gibt es an der Uni kein Entkommen.",
-        "chinese": "本段围绕“PRÄSENTATIONEN AN DERUNI: LANGEWEILEGARANTIERT”展开，重点考察：definiert der Autor einen Beginn?；will der Autor unterhalten?",
+        "number": "1",
+        "text": "Für die Zuhörer bedeutet dies verschwendete Lebenszeit, der",
+        "german": "Für die Zuhörer bedeutet dies verschwendete Lebenszeit, der",
+        "chinese": "这半句是在界定概念或说明定义。",
         "answer": "",
-        "raw": "9, definiert der Autor einen Beginn?; 7, will der Autor unterhalten?",
-        "source": "lv2-xlsx",
-        "paragraph": "A",
-        "firstSentence": "Vor Präsentationen gibt es an der Uni kein Entkommen.",
-        "summary": "本段围绕“PRÄSENTATIONEN AN DERUNI: LANGEWEILEGARANTIERT”展开，重点考察：definiert der Autor einen Beginn?；will der Autor unterhalten?",
-        "items": [
-          {
-            "number": "9",
-            "text": ", definiert der Autor einen Beginn?"
-          },
-          {
-            "number": "7",
-            "text": ", will der Autor unterhalten?"
-          }
-        ],
-        "note": ""
-      },
-      {
-        "number": "B",
-        "text": "Eigentlich wissen es alle: Der Nutzen solcher Präsentationen ist minimal, und in vielen Fällen sind sie sogar kontraproduktiv.",
-        "german": "Eigentlich wissen es alle: Der Nutzen solcher Präsentationen ist minimal, und in vielen Fällen sind sie sogar kontraproduktiv.",
-        "chinese": "本段围绕“PRÄSENTATIONEN AN DERUNI: LANGEWEILEGARANTIERT”展开，重点考察：äußert des Autor Verunderung?",
-        "answer": "",
-        "raw": "8. äußert des Autor Verunderung?",
-        "source": "lv2-xlsx",
-        "paragraph": "B",
-        "firstSentence": "Eigentlich wissen es alle: Der Nutzen solcher Präsentationen ist minimal, und in vielen Fällen sind sie sogar kontraproduktiv.",
-        "summary": "本段围绕“PRÄSENTATIONEN AN DERUNI: LANGEWEILEGARANTIERT”展开，重点考察：äußert des Autor Verunderung?",
-        "items": [
-          {
-            "number": "8",
-            "text": "äußert des Autor Verunderung?"
-          }
-        ],
-        "note": ""
-      },
-      {
-        "number": "C",
-        "text": "Doch warum sind die Folien so beliebt?",
-        "german": "Doch warum sind die Folien so beliebt?",
-        "chinese": "本段围绕“PRÄSENTATIONEN AN DERUNI: LANGEWEILEGARANTIERT”展开，重点考察：sucht der Autor nach Erklärungen?",
-        "answer": "",
-        "raw": "12, sucht der Autor nach Erklärungen?",
-        "source": "lv2-xlsx",
+        "raw": "definiert der Autor einen Beginn?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 85,
         "paragraph": "C",
-        "firstSentence": "Doch warum sind die Folien so beliebt?",
-        "summary": "本段围绕“PRÄSENTATIONEN AN DERUNI: LANGEWEILEGARANTIERT”展开，重点考察：sucht der Autor nach Erklärungen?",
+        "firstSentence": "Für die Zuhörer bedeutet dies verschwendete Lebenszeit, der",
+        "summary": "这半句是在界定概念或说明定义。",
+        "sentenceZh": "这半句是在界定概念或说明定义。",
+        "frage": "definiert der Autor einen Beginn?",
+        "signalwortZh": "被称为 / 定义为",
         "items": [
           {
-            "number": "12",
-            "text": ", sucht der Autor nach Erklärungen?"
+            "number": "C",
+            "text": "definiert der Autor einen Beginn?",
+            "german": "definiert der Autor einen Beginn?",
+            "chinese": "这半句是在界定概念或说明定义。",
+            "hint": "这半句是在界定概念或说明定义。",
+            "sourceRow": 85
           }
-        ],
-        "note": ""
+        ]
       },
       {
-        "number": "D",
-        "text": "Zu ergänzen ist noch, dass Präsentationen eine Gefahr mit sich bringen, die oft verkannt wird: Sie bieten die perfekte Tarnung für Unsicherheit, inhaltliche Leere und fehlendes Wissen.",
-        "german": "Zu ergänzen ist noch, dass Präsentationen eine Gefahr mit sich bringen, die oft verkannt wird: Sie bieten die perfekte Tarnung für Unsicherheit, inhaltliche Leere und fehlendes Wissen.",
-        "chinese": "本段围绕“PRÄSENTATIONEN AN DERUNI: LANGEWEILEGARANTIERT”展开，重点考察：spricht der Autor eine Warnung aus?",
+        "number": "2",
+        "text": "7, will der Autor unterhalten?",
+        "german": "7, will der Autor unterhalten?",
+        "chinese": "这半句体现幽默、玩味或娱乐化语气。",
         "answer": "",
-        "raw": "11, spricht der Autor eine Warnung aus?",
-        "source": "lv2-xlsx",
-        "paragraph": "D",
-        "firstSentence": "Zu ergänzen ist noch, dass Präsentationen eine Gefahr mit sich bringen, die oft verkannt wird: Sie bieten die perfekte Tarnung für Unsicherheit, inhaltliche Leere und fehlendes Wissen.",
-        "summary": "本段围绕“PRÄSENTATIONEN AN DERUNI: LANGEWEILEGARANTIERT”展开，重点考察：spricht der Autor eine Warnung aus?",
+        "raw": "will der Autor unterhalten?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 86,
+        "paragraph": "A",
+        "firstSentence": "7, will der Autor unterhalten?",
+        "summary": "这半句体现幽默、玩味或娱乐化语气。",
+        "sentenceZh": "这半句体现幽默、玩味或娱乐化语气。",
+        "frage": "will der Autor unterhalten?",
+        "signalwortZh": "哎呀 / 会心一笑 / 娱乐",
         "items": [
           {
-            "number": "11",
-            "text": ", spricht der Autor eine Warnung aus?"
+            "number": "A",
+            "text": "will der Autor unterhalten?",
+            "german": "will der Autor unterhalten?",
+            "chinese": "这半句体现幽默、玩味或娱乐化语气。",
+            "hint": "这半句体现幽默、玩味或娱乐化语气。",
+            "sourceRow": 86
           }
-        ],
-        "note": ""
+        ]
       },
       {
-        "number": "E",
-        "text": "Dennoch: Einen Weg zurück gibt es nicht, und Präsentationen sind aus dem Uni-Alltag nicht mehr wegzudenken.",
-        "german": "Dennoch: Einen Weg zurück gibt es nicht, und Präsentationen sind aus dem Uni-Alltag nicht mehr wegzudenken.",
-        "chinese": "本段围绕“PRÄSENTATIONEN AN DERUNI: LANGEWEILEGARANTIERT”展开，重点考察：gibt der Autor eine Empfehlung?",
+        "number": "3",
+        "text": "ans Herz legen könnte, der einen guten Vortrag halten will: Der Vortrag sollte bestenfalls",
+        "german": "ans Herz legen könnte, der einen guten Vortrag halten will: Der Vortrag sollte bestenfalls",
+        "chinese": "这半句是在提出建议或可采取的做法。",
         "answer": "",
-        "raw": "10, gibt der Autor eine Empfehlung?",
-        "source": "lv2-xlsx",
+        "raw": "äußert des Autor Verunderung?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 87,
         "paragraph": "E",
-        "firstSentence": "Dennoch: Einen Weg zurück gibt es nicht, und Präsentationen sind aus dem Uni-Alltag nicht mehr wegzudenken.",
-        "summary": "本段围绕“PRÄSENTATIONEN AN DERUNI: LANGEWEILEGARANTIERT”展开，重点考察：gibt der Autor eine Empfehlung?",
+        "firstSentence": "ans Herz legen könnte, der einen guten Vortrag halten will: Der Vortrag sollte bestenfalls",
+        "summary": "这半句是在提出建议或可采取的做法。",
+        "sentenceZh": "这半句是在提出建议或可采取的做法。",
+        "frage": "äußert des Autor Verunderung?",
+        "signalwortZh": "应该 / 建议",
         "items": [
           {
-            "number": "10",
-            "text": ", gibt der Autor eine Empfehlung?"
+            "number": "E",
+            "text": "äußert des Autor Verunderung?",
+            "german": "äußert des Autor Verunderung?",
+            "chinese": "这半句是在提出建议或可采取的做法。",
+            "hint": "这半句是在提出建议或可采取的做法。",
+            "sourceRow": 87
           }
-        ],
-        "note": ""
+        ]
       }
     ]
   },
   {
     "teil": 16,
-    "title": "Eltern von heute",
-    "sourceText": "LV2 段落卡片",
+    "title": "信号词问句配对",
+    "sourceText": "LV2 信号词问句表 修正版",
     "mode": "paragraph-card",
     "questions": [
       {
-        "number": "A",
-        "text": "Eltern können anstrengend sein.",
-        "german": "Eltern können anstrengend sein.",
-        "chinese": "本段围绕“Eltern von heute”展开，重点考察：möchte die Autorin durch eine sachliche Definition informieren?；bringt die Autorin Erstaunen zum Ausdruck?",
+        "number": "1",
+        "text": "mehr Respekt empfindet man vor der Stärke , die unsere Eltern damit demonstriert haben.",
+        "german": "mehr Respekt empfindet man vor der Stärke , die unsere Eltern damit demonstriert haben.",
+        "chinese": "这半句表达赞赏、钦佩或佩服。",
         "answer": "",
-        "raw": "10- möchte die Autorin durch eine sachliche Definition informieren?; 12- bringt die Autorin Erstaunen zum Ausdruck?",
-        "source": "lv2-xlsx",
-        "paragraph": "A",
-        "firstSentence": "Eltern können anstrengend sein.",
-        "summary": "本段围绕“Eltern von heute”展开，重点考察：möchte die Autorin durch eine sachliche Definition informieren?；bringt die Autorin Erstaunen zum Ausdruck?",
-        "items": [
-          {
-            "number": "10",
-            "text": "möchte die Autorin durch eine sachliche Definition informieren?"
-          },
-          {
-            "number": "12",
-            "text": "bringt die Autorin Erstaunen zum Ausdruck?"
-          }
-        ],
-        "note": ""
-      },
-      {
-        "number": "B",
-        "text": "Etwa die von dem Siebtklässler, der mit zwei Mädchen ins Kino gehen wollte.",
-        "german": "Etwa die von dem Siebtklässler, der mit zwei Mädchen ins Kino gehen wollte.",
-        "chinese": "本段围绕“Eltern von heute”展开，重点考察：möchte die Autorin zur Belustigung beitragen?",
-        "answer": "",
-        "raw": "9- möchte die Autorin zur Belustigung beitragen?",
-        "source": "lv2-xlsx",
-        "paragraph": "B",
-        "firstSentence": "Etwa die von dem Siebtklässler, der mit zwei Mädchen ins Kino gehen wollte.",
-        "summary": "本段围绕“Eltern von heute”展开，重点考察：möchte die Autorin zur Belustigung beitragen?",
-        "items": [
-          {
-            "number": "9",
-            "text": "möchte die Autorin zur Belustigung beitragen?"
-          }
-        ],
-        "note": ""
-      },
-      {
-        "number": "C",
-        "text": "Wichtig ist, die Kinder Fehler machen zu lassen.",
-        "german": "Wichtig ist, die Kinder Fehler machen zu lassen.",
-        "chinese": "本段围绕“Eltern von heute”展开，重点考察：spricht die Autorin eine Empfehlung?",
-        "answer": "",
-        "raw": "7- spricht die Autorin eine Empfehlung?",
-        "source": "lv2-xlsx",
-        "paragraph": "C",
-        "firstSentence": "Wichtig ist, die Kinder Fehler machen zu lassen.",
-        "summary": "本段围绕“Eltern von heute”展开，重点考察：spricht die Autorin eine Empfehlung?",
-        "items": [
-          {
-            "number": "7",
-            "text": "spricht die Autorin eine Empfehlung?"
-          }
-        ],
-        "note": ""
-      },
-      {
-        "number": "D",
-        "text": "Nach Einschätzung des Psychotherapeuten Martin Kleiser aus Freiburg tendieren rund 15-20% der Eltern zu extremer Überbehütung.",
-        "german": "Nach Einschätzung des Psychotherapeuten Martin Kleiser aus Freiburg tendieren rund 15-20% der Eltern zu extremer Überbehütung.",
-        "chinese": "本段转述心理治疗师、教育工作者和精神科医生对过度保护父母的不同解释与评价。",
-        "answer": "",
-        "raw": "（资料未明确给出/该段可能不作为配题答案）",
-        "source": "lv2-xlsx",
-        "paragraph": "D",
-        "firstSentence": "Nach Einschätzung des Psychotherapeuten Martin Kleiser aus Freiburg tendieren rund 15-20% der Eltern zu extremer Überbehütung.",
-        "summary": "本段转述心理治疗师、教育工作者和精神科医生对过度保护父母的不同解释与评价。",
-        "items": [],
-        "note": "资料未明确给出对应题项"
-      },
-      {
-        "number": "E",
-        "text": "Doch Hand aufs Herz, wer hat sich nicht schon mal selbst dabei ertappt, wie er es mit der Fürsorge übertreibt?",
-        "german": "Doch Hand aufs Herz, wer hat sich nicht schon mal selbst dabei ertappt, wie er es mit der Fürsorge übertreibt?",
-        "chinese": "本段围绕“Eltern von heute”展开，重点考察：möchte die Autorin zur Selbstreflexionanregen?；drückt die Autorin Bewunderung aus?",
-        "answer": "",
-        "raw": "8-möchte die Autorin zur Selbstreflexionanregen?; 11-drückt die Autorin Bewunderung aus?",
-        "source": "lv2-xlsx",
+        "raw": "bringt die Autorin Erstaunen zum Ausdruck?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 88,
         "paragraph": "E",
-        "firstSentence": "Doch Hand aufs Herz, wer hat sich nicht schon mal selbst dabei ertappt, wie er es mit der Fürsorge übertreibt?",
-        "summary": "本段围绕“Eltern von heute”展开，重点考察：möchte die Autorin zur Selbstreflexionanregen?；drückt die Autorin Bewunderung aus?",
+        "firstSentence": "mehr Respekt empfindet man vor der Stärke , die unsere Eltern damit demonstriert haben.",
+        "summary": "这半句表达赞赏、钦佩或佩服。",
+        "sentenceZh": "这半句表达赞赏、钦佩或佩服。",
+        "frage": "bringt die Autorin Erstaunen zum Ausdruck?",
+        "signalwortZh": "轻松做到 / 钦佩 / 有爱心",
         "items": [
           {
-            "number": "8",
-            "text": "möchte die Autorin zur Selbstreflexionanregen?"
-          },
-          {
-            "number": "11",
-            "text": "drückt die Autorin Bewunderung aus?"
+            "number": "E",
+            "text": "bringt die Autorin Erstaunen zum Ausdruck?",
+            "german": "bringt die Autorin Erstaunen zum Ausdruck?",
+            "chinese": "这半句表达赞赏、钦佩或佩服。",
+            "hint": "这半句表达赞赏、钦佩或佩服。",
+            "sourceRow": 88
           }
-        ],
-        "note": ""
+        ]
+      },
+      {
+        "number": "2",
+        "text": "sollte.",
+        "german": "sollte.",
+        "chinese": "这半句是在提出建议或可采取的做法。",
+        "answer": "",
+        "raw": "gibt der Autor eine Empfehlung?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 89,
+        "paragraph": "B",
+        "firstSentence": "sollte.",
+        "summary": "这半句是在提出建议或可采取的做法。",
+        "sentenceZh": "这半句是在提出建议或可采取的做法。",
+        "frage": "gibt der Autor eine Empfehlung?",
+        "signalwortZh": "应该 / 建议",
+        "items": [
+          {
+            "number": "B",
+            "text": "gibt der Autor eine Empfehlung?",
+            "german": "gibt der Autor eine Empfehlung?",
+            "chinese": "这半句是在提出建议或可采取的做法。",
+            "hint": "这半句是在提出建议或可采取的做法。",
+            "sourceRow": 89
+          }
+        ]
+      },
+      {
+        "number": "3",
+        "text": "10- möchte die Autorin durch eine sachliche Definition informieren?",
+        "german": "10- möchte die Autorin durch eine sachliche Definition informieren?",
+        "chinese": "这半句是在界定概念或说明定义。",
+        "answer": "",
+        "raw": "möchte die Autorin durch eine sachliche Definition informieren?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 90,
+        "paragraph": "B",
+        "firstSentence": "10- möchte die Autorin durch eine sachliche Definition informieren?",
+        "summary": "这半句是在界定概念或说明定义。",
+        "sentenceZh": "这半句是在界定概念或说明定义。",
+        "frage": "möchte die Autorin durch eine sachliche Definition informieren?",
+        "signalwortZh": "被称为 / 定义为",
+        "items": [
+          {
+            "number": "B",
+            "text": "möchte die Autorin durch eine sachliche Definition informieren?",
+            "german": "möchte die Autorin durch eine sachliche Definition informieren?",
+            "chinese": "这半句是在界定概念或说明定义。",
+            "hint": "这半句是在界定概念或说明定义。",
+            "sourceRow": 90
+          }
+        ]
+      },
+      {
+        "number": "4",
+        "text": "Na sowas / schmunzeln / witzig / ironisch / übertrieben",
+        "german": "Na sowas / schmunzeln / witzig / ironisch / übertrieben",
+        "chinese": "文中用幽默、夸张或玩笑语气制造趣味。",
+        "answer": "",
+        "raw": "möchte die Autorin zur Belustigung beitragen ?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 91,
+        "paragraph": "B",
+        "firstSentence": "Na sowas / schmunzeln / witzig / ironisch / übertrieben",
+        "summary": "文中用幽默、夸张或玩笑语气制造趣味。",
+        "sentenceZh": "文中用幽默、夸张或玩笑语气制造趣味。",
+        "frage": "möchte die Autorin zur Belustigung beitragen ?",
+        "signalwortZh": "哎呀 / 会心一笑 / 有趣 / 讽刺 / 夸张",
+        "items": [
+          {
+            "number": "B",
+            "text": "möchte die Autorin zur Belustigung beitragen ?",
+            "german": "möchte die Autorin zur Belustigung beitragen ?",
+            "chinese": "文中用幽默、夸张或玩笑语气制造趣味。",
+            "hint": "文中用幽默、夸张或玩笑语气制造趣味。",
+            "sourceRow": 91
+          }
+        ]
+      },
+      {
+        "number": "5",
+        "text": "damit andere Kinder, die zu Fuß kommen , in Grüße Gefahr.",
+        "german": "damit andere Kinder, die zu Fuß kommen , in Grüße Gefahr.",
+        "chinese": "这半句提示风险或负面后果。",
+        "answer": "",
+        "raw": "spricht der Autor eine Warnung aus?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 92,
+        "paragraph": "B",
+        "firstSentence": "damit andere Kinder, die zu Fuß kommen , in Grüße Gefahr.",
+        "summary": "这半句提示风险或负面后果。",
+        "sentenceZh": "这半句提示风险或负面后果。",
+        "frage": "spricht der Autor eine Warnung aus?",
+        "signalwortZh": "风险 / 危险 / 伤害",
+        "items": [
+          {
+            "number": "B",
+            "text": "spricht der Autor eine Warnung aus?",
+            "german": "spricht der Autor eine Warnung aus?",
+            "chinese": "这半句提示风险或负面后果。",
+            "hint": "这半句提示风险或负面后果。",
+            "sourceRow": 92
+          }
+        ]
+      },
+      {
+        "number": "6",
+        "text": "sollte.",
+        "german": "sollte.",
+        "chinese": "这半句是在提出建议或可采取的做法。",
+        "answer": "",
+        "raw": "sucht der Autor nach Erklärungen?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 93,
+        "paragraph": "B",
+        "firstSentence": "sollte.",
+        "summary": "这半句是在提出建议或可采取的做法。",
+        "sentenceZh": "这半句是在提出建议或可采取的做法。",
+        "frage": "sucht der Autor nach Erklärungen?",
+        "signalwortZh": "应该 / 建议",
+        "items": [
+          {
+            "number": "B",
+            "text": "sucht der Autor nach Erklärungen?",
+            "german": "sucht der Autor nach Erklärungen?",
+            "chinese": "这半句是在提出建议或可采取的做法。",
+            "hint": "这半句是在提出建议或可采取的做法。",
+            "sourceRow": 93
+          }
+        ]
       }
     ]
   },
   {
     "teil": 17,
-    "title": "Eltern von heute (auch, aber nicht gleich)",
-    "sourceText": "LV2 段落卡片",
+    "title": "信号词问句配对",
+    "sourceText": "LV2 信号词问句表 修正版",
     "mode": "paragraph-card",
     "questions": [
       {
-        "number": "A",
-        "text": "Manche Kinder werden in Watte gepackt.",
-        "german": "Manche Kinder werden in Watte gepackt.",
-        "chinese": "有些孩子被“包在棉花里”养大。从摇篮一直到大学课堂，子女们全天候都被照顾着，而这种方式带来了一些奇怪的后果，如今人们可以在一本书中读到这些现象。",
+        "number": "1",
+        "text": "Aber ein bisschen überraschend ist es",
+        "german": "Aber ein bisschen überraschend ist es",
+        "chinese": "这半句直接表现惊讶或意外。",
         "answer": "",
-        "raw": "10- gibt die Autorin eine Definition? / gibt die Autorin definierte Informieren?",
-        "source": "lv2-xlsx",
-        "paragraph": "A",
-        "firstSentence": "Manche Kinder werden in Watte gepackt.",
-        "summary": "有些孩子被“包在棉花里”养大。从摇篮一直到大学课堂，子女们全天候都被照顾着，而这种方式带来了一些奇怪的后果，如今人们可以在一本书中读到这些现象。",
-        "items": [
-          {
-            "number": "10",
-            "text": "gibt die Autorin eine Definition? / gibt die Autorin definierte Informieren?"
-          }
-        ],
-        "note": ""
-      },
-      {
-        "number": "B",
-        "text": "Beispiele gefällig? Etwa die von dem Siebtklässler, der mit zwei Mädchen ins Kino gehen wollte.",
-        "german": "Beispiele gefällig? Etwa die von dem Siebtklässler, der mit zwei Mädchen ins Kino gehen wollte.",
-        "chinese": "的）群体现象，并带有调侃、滑稽的意味？需要例子吗？比如那个想和两个女孩去看电影的七年级男孩。",
-        "answer": "",
-        "raw": "12-Die Autorin gibt Erstaunt? Erstaunen Ausdruck ？作者是否表达了惊讶、震惊或不可思议？",
-        "source": "lv2-xlsx",
-        "paragraph": "B",
-        "firstSentence": "Beispiele gefällig? Etwa die von dem Siebtklässler, der mit zwei Mädchen ins Kino gehen wollte.",
-        "summary": "的）群体现象，并带有调侃、滑稽的意味？需要例子吗？比如那个想和两个女孩去看电影的七年级男孩。",
-        "items": [
-          {
-            "number": "12",
-            "text": "Die Autorin gibt Erstaunt? Erstaunen Ausdruck ？作者是否表达了惊讶、震惊或不可思议？"
-          }
-        ],
-        "note": ""
-      },
-      {
-        "number": "C",
-        "text": "Verschieben Sie die Deutscharbeit - mein Sohn hat Geburtstag!",
-        "german": "Verschieben Sie die Deutscharbeit - mein Sohn hat Geburtstag!",
-        "chinese": "本段借记者收集的“直升机父母”案例，说明一些父母甚至干预孩子的报告、职业培训和大学生活。",
-        "answer": "",
-        "raw": "（资料未明确给出/该段可能不作为配题答案）",
-        "source": "lv2-xlsx",
-        "paragraph": "C",
-        "firstSentence": "Verschieben Sie die Deutscharbeit - mein Sohn hat Geburtstag!",
-        "summary": "本段借记者收集的“直升机父母”案例，说明一些父母甚至干预孩子的报告、职业培训和大学生活。",
-        "items": [],
-        "note": "资料未明确给出对应题项"
-      },
-      {
-        "number": "D",
-        "text": "Wann der erste Elternabend „Jeder muss mal scheitern, braucht mal ein aufgeschürftes Knie\", sagt Padtberg, selbst Mutter.",
-        "german": "Wann der erste Elternabend „Jeder muss mal scheitern, braucht mal ein aufgeschürftes Knie\", sagt Padtberg, selbst Mutter.",
-        "chinese": "“每个人都必须经历失败，也需要一次擦破的膝盖。”Padtberg（她自己也是母亲）这样说。",
-        "answer": "",
-        "raw": "7- gibt die Autorin ein Rat wieder? Empfehlung 作者是否转述了某种建议或推荐？",
-        "source": "lv2-xlsx",
-        "paragraph": "D",
-        "firstSentence": "Wann der erste Elternabend „Jeder muss mal scheitern, braucht mal ein aufgeschürftes Knie\", sagt Padtberg, selbst Mutter.",
-        "summary": "“每个人都必须经历失败，也需要一次擦破的膝盖。”Padtberg（她自己也是母亲）这样说。",
-        "items": [
-          {
-            "number": "7",
-            "text": "gibt die Autorin ein Rat wieder? Empfehlung 作者是否转述了某种建议或推荐？"
-          }
-        ],
-        "note": ""
-      },
-      {
-        "number": "E",
-        "text": "Eine coole Rabenmutter? Auch Padtberg und Greiner räumen im Schlusswort ihres Buches ein, dass die meisten Eltern in Ordnung sind.",
-        "german": "Eine coole Rabenmutter? Auch Padtberg und Greiner räumen im Schlusswort ihres Buches ein, dass die meisten Eltern in Ordnung sind.",
-        "chinese": "在书的结尾，Padtberg和Greiner也承认，大多数父母其实都没问题。Padtberg试图保持冷静，即使冒着被称为“冷漠母亲”的风险——比如孩子摔倒时，她不会随身携带顺势疗法或偏……",
-        "answer": "",
-        "raw": "8-gibt die Autorin eine Selbstreflexion? 作者是否进行了自我反思？; 11- gibt die Autorin eine Bewunderung?作者是否表达了赞赏、敬佩或钦佩之情？",
-        "source": "lv2-xlsx",
+        "raw": "Die Autorin gibt Erstaunt? Erstaunen Ausdruck ?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 94,
         "paragraph": "E",
-        "firstSentence": "Eine coole Rabenmutter? Auch Padtberg und Greiner räumen im Schlusswort ihres Buches ein, dass die meisten Eltern in Ordnung sind.",
-        "summary": "在书的结尾，Padtberg和Greiner也承认，大多数父母其实都没问题。Padtberg试图保持冷静，即使冒着被称为“冷漠母亲”的风险——比如孩子摔倒时，她不会随身携带顺势疗法或偏……",
+        "firstSentence": "Aber ein bisschen überraschend ist es",
+        "summary": "这半句直接表现惊讶或意外。",
+        "sentenceZh": "这半句直接表现惊讶或意外。",
+        "frage": "Die Autorin gibt Erstaunt? Erstaunen Ausdruck ?",
+        "signalwortZh": "令人惊讶 / 出乎意料",
         "items": [
           {
-            "number": "8",
-            "text": "gibt die Autorin eine Selbstreflexion? 作者是否进行了自我反思？"
-          },
-          {
-            "number": "11",
-            "text": "gibt die Autorin eine Bewunderung?作者是否表达了赞赏、敬佩或钦佩之情？"
+            "number": "E",
+            "text": "Die Autorin gibt Erstaunt? Erstaunen Ausdruck ?",
+            "german": "Die Autorin gibt Erstaunt? Erstaunen Ausdruck ?",
+            "chinese": "这半句直接表现惊讶或意外。",
+            "hint": "这半句直接表现惊讶或意外。",
+            "sourceRow": 94
           }
-        ],
-        "note": ""
+        ]
+      },
+      {
+        "number": "2",
+        "text": "bewundernswert / beeindruckend / mit links / Respekt",
+        "german": "bewundernswert / beeindruckend / mit links / Respekt",
+        "chinese": "文中表达赞赏、钦佩或佩服。",
+        "answer": "",
+        "raw": "drückt die Autorin Bewunderung aus ?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 95,
+        "paragraph": "E",
+        "firstSentence": "bewundernswert / beeindruckend / mit links / Respekt",
+        "summary": "文中表达赞赏、钦佩或佩服。",
+        "sentenceZh": "文中表达赞赏、钦佩或佩服。",
+        "frage": "drückt die Autorin Bewunderung aus ?",
+        "signalwortZh": "值得钦佩 / 令人印象深刻 / 轻松做到 / 尊敬",
+        "items": [
+          {
+            "number": "E",
+            "text": "drückt die Autorin Bewunderung aus ?",
+            "german": "drückt die Autorin Bewunderung aus ?",
+            "chinese": "文中表达赞赏、钦佩或佩服。",
+            "hint": "文中表达赞赏、钦佩或佩服。",
+            "sourceRow": 95
+          }
+        ]
+      },
+      {
+        "number": "3",
+        "text": "Daruber sollten wireinmal nachdenken.",
+        "german": "Daruber sollten wireinmal nachdenken.",
+        "chinese": "这半句是在提出建议或可采取的做法。",
+        "answer": "",
+        "raw": "gibt die Autorin ein Rat wieder? Empfehlung",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 96,
+        "paragraph": "D",
+        "firstSentence": "Daruber sollten wireinmal nachdenken.",
+        "summary": "这半句是在提出建议或可采取的做法。",
+        "sentenceZh": "这半句是在提出建议或可采取的做法。",
+        "frage": "gibt die Autorin ein Rat wieder? Empfehlung",
+        "signalwortZh": "应该 / 建议",
+        "items": [
+          {
+            "number": "D",
+            "text": "gibt die Autorin ein Rat wieder? Empfehlung",
+            "german": "gibt die Autorin ein Rat wieder? Empfehlung",
+            "chinese": "这半句是在提出建议或可采取的做法。",
+            "hint": "这半句是在提出建议或可采取的做法。",
+            "sourceRow": 96
+          }
+        ]
+      },
+      {
+        "number": "4",
+        "text": "10- gibt die Autorin eine Definition?",
+        "german": "10- gibt die Autorin eine Definition?",
+        "chinese": "这半句是在界定概念或说明定义。",
+        "answer": "",
+        "raw": "gibt die Autorin eine Definition? / gibt die Autorin definierte Informieren?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 97,
+        "paragraph": "D",
+        "firstSentence": "10- gibt die Autorin eine Definition?",
+        "summary": "这半句是在界定概念或说明定义。",
+        "sentenceZh": "这半句是在界定概念或说明定义。",
+        "frage": "gibt die Autorin eine Definition? / gibt die Autorin definierte Informieren?",
+        "signalwortZh": "被称为 / 定义为",
+        "items": [
+          {
+            "number": "D",
+            "text": "gibt die Autorin eine Definition? / gibt die Autorin definierte Informieren?",
+            "german": "gibt die Autorin eine Definition? / gibt die Autorin definierte Informieren?",
+            "chinese": "这半句是在界定概念或说明定义。",
+            "hint": "这半句是在界定概念或说明定义。",
+            "sourceRow": 97
+          }
+        ]
+      },
+      {
+        "number": "5",
+        "text": "den wenigsten fremd sein dürfte: Stellen Sie sich vor, Sie beißen in ein Stück Apfelkuchen, der genauso",
+        "german": "den wenigsten fremd sein dürfte: Stellen Sie sich vor, Sie beißen in ein Stück Apfelkuchen, der genauso",
+        "chinese": "这半句直接面向读者，引导共鸣或自我反思。",
+        "answer": "",
+        "raw": "möchte die Autorin zur Selbstreflexionanregen?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 98,
+        "paragraph": "E",
+        "firstSentence": "den wenigsten fremd sein dürfte: Stellen Sie sich vor, Sie beißen in ein Stück Apfelkuchen, der genauso",
+        "summary": "这半句直接面向读者，引导共鸣或自我反思。",
+        "sentenceZh": "这半句直接面向读者，引导共鸣或自我反思。",
+        "frage": "möchte die Autorin zur Selbstreflexionanregen?",
+        "signalwortZh": "你熟悉吗 / 请设想 / 读者",
+        "items": [
+          {
+            "number": "E",
+            "text": "möchte die Autorin zur Selbstreflexionanregen?",
+            "german": "möchte die Autorin zur Selbstreflexionanregen?",
+            "chinese": "这半句直接面向读者，引导共鸣或自我反思。",
+            "hint": "这半句直接面向读者，引导共鸣或自我反思。",
+            "sourceRow": 98
+          }
+        ]
+      },
+      {
+        "number": "6",
+        "text": "Daruber sollten wireinmal nachdenken.",
+        "german": "Daruber sollten wireinmal nachdenken.",
+        "chinese": "这半句是在提出建议或可采取的做法。",
+        "answer": "",
+        "raw": "spricht die Autorin eine Empfehlung ?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 99,
+        "paragraph": "D",
+        "firstSentence": "Daruber sollten wireinmal nachdenken.",
+        "summary": "这半句是在提出建议或可采取的做法。",
+        "sentenceZh": "这半句是在提出建议或可采取的做法。",
+        "frage": "spricht die Autorin eine Empfehlung ?",
+        "signalwortZh": "应该 / 建议",
+        "items": [
+          {
+            "number": "D",
+            "text": "spricht die Autorin eine Empfehlung ?",
+            "german": "spricht die Autorin eine Empfehlung ?",
+            "chinese": "这半句是在提出建议或可采取的做法。",
+            "hint": "这半句是在提出建议或可采取的做法。",
+            "sourceRow": 99
+          }
+        ]
       }
     ]
   },
   {
     "teil": 18,
-    "title": "Dann geh zu Fuß, Schatz",
-    "sourceText": "LV2 段落卡片",
+    "title": "信号词问句配对",
+    "sourceText": "LV2 信号词问句表 修正版",
     "mode": "paragraph-card",
     "questions": [
       {
-        "number": "A",
-        "text": "Beifahrer können nervig sein.",
-        "german": "Beifahrer können nervig sein.",
-        "chinese": "副驾驶可能很烦人，但他们也危险吗？一会儿，一辆坐着一对夫妻的梅赛德斯撞上了车库墙，一会儿，警方拦下一名飙车者，他声称自己开得太快是因为车里发生了激烈的夫妻争吵。",
+        "number": "1",
+        "text": "bewundernswert / beeindruckend / mit links / Respekt",
+        "german": "bewundernswert / beeindruckend / mit links / Respekt",
+        "chinese": "文中表达赞赏、钦佩或佩服。",
         "answer": "",
-        "raw": "12- wird der Autor persönlich?",
-        "source": "lv2-xlsx",
+        "raw": "druckt der Autor Bewunderung aus?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 100,
         "paragraph": "A",
-        "firstSentence": "Beifahrer können nervig sein.",
-        "summary": "副驾驶可能很烦人，但他们也危险吗？一会儿，一辆坐着一对夫妻的梅赛德斯撞上了车库墙，一会儿，警方拦下一名飙车者，他声称自己开得太快是因为车里发生了激烈的夫妻争吵。",
+        "firstSentence": "bewundernswert / beeindruckend / mit links / Respekt",
+        "summary": "文中表达赞赏、钦佩或佩服。",
+        "sentenceZh": "文中表达赞赏、钦佩或佩服。",
+        "frage": "druckt der Autor Bewunderung aus?",
+        "signalwortZh": "值得钦佩 / 令人印象深刻 / 轻松做到 / 尊敬",
         "items": [
           {
-            "number": "12",
-            "text": "wird der Autor persönlich?"
+            "number": "A",
+            "text": "druckt der Autor Bewunderung aus?",
+            "german": "druckt der Autor Bewunderung aus?",
+            "chinese": "文中表达赞赏、钦佩或佩服。",
+            "hint": "文中表达赞赏、钦佩或佩服。",
+            "sourceRow": 100
           }
-        ],
-        "note": ""
+        ]
       },
       {
-        "number": "B",
-        "text": "Doch wir Fahrer haben gute Gründe, manchen Beifahrer zum Teufel zu wünschen.",
-        "german": "Doch wir Fahrer haben gute Gründe, manchen Beifahrer zum Teufel zu wünschen.",
-        "chinese": "7分析这里用„wirFahrer“（我们司机），作者把自己放进司机群体，立场非常明确。为司机辩护：他强调副驾驶“烦人”“爱指挥”“爱挖苦”，等于在解释司机为什么会不耐烦，属于为司机找理……",
+        "number": "2",
+        "text": "bewundernswert / beeindruckend / mit links / Respekt",
+        "german": "bewundernswert / beeindruckend / mit links / Respekt",
+        "chinese": "文中表达赞赏、钦佩或佩服。",
         "answer": "",
-        "raw": "7- solidarisiert sich der Autor mit den Fahren?",
-        "source": "lv2-xlsx",
-        "paragraph": "B",
-        "firstSentence": "Doch wir Fahrer haben gute Gründe, manchen Beifahrer zum Teufel zu wünschen.",
-        "summary": "7分析这里用„wirFahrer“（我们司机），作者把自己放进司机群体，立场非常明确。为司机辩护：他强调副驾驶“烦人”“爱指挥”“爱挖苦”，等于在解释司机为什么会不耐烦，属于为司机找理……",
+        "raw": "gibt die Autorin eine Bewunderung ?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 101,
+        "paragraph": "A",
+        "firstSentence": "bewundernswert / beeindruckend / mit links / Respekt",
+        "summary": "文中表达赞赏、钦佩或佩服。",
+        "sentenceZh": "文中表达赞赏、钦佩或佩服。",
+        "frage": "gibt die Autorin eine Bewunderung ?",
+        "signalwortZh": "值得钦佩 / 令人印象深刻 / 轻松做到 / 尊敬",
         "items": [
           {
-            "number": "7",
-            "text": "solidarisiert sich der Autor mit den Fahren?"
+            "number": "A",
+            "text": "gibt die Autorin eine Bewunderung ?",
+            "german": "gibt die Autorin eine Bewunderung ?",
+            "chinese": "文中表达赞赏、钦佩或佩服。",
+            "hint": "文中表达赞赏、钦佩或佩服。",
+            "sourceRow": 101
           }
-        ],
-        "note": ""
+        ]
       },
       {
-        "number": "C",
-        "text": "Die Beifahrerfrage ist ein bedauerlicherweise zu wenig beachtetes Thema der Verkehrssicherheit.",
-        "german": "Die Beifahrerfrage ist ein bedauerlicherweise zu wenig beachtetes Thema der Verkehrssicherheit.",
-        "chinese": "分析直接评价“关注不够”文中说副驾驶问题„ein bedauerlicherweise zu wenig beachtetes Thema“（一个“令人遗憾地关注不足”的议题）。这本身……",
+        "number": "3",
+        "text": "Kennen Sie das? / fragen Sie sich / überlegen Sie selbst",
+        "german": "Kennen Sie das? / fragen Sie sich / überlegen Sie selbst",
+        "chinese": "文中引导读者或作者本人进行反思。",
         "answer": "",
-        "raw": "8- kritisiert der Autor die Forschungslage?",
-        "source": "lv2-xlsx",
-        "paragraph": "C",
-        "firstSentence": "Die Beifahrerfrage ist ein bedauerlicherweise zu wenig beachtetes Thema der Verkehrssicherheit.",
-        "summary": "分析直接评价“关注不够”文中说副驾驶问题„ein bedauerlicherweise zu wenig beachtetes Thema“（一个“令人遗憾地关注不足”的议题）。这本身……",
+        "raw": "gibt die Autorin eine Selbstreflexion?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 102,
+        "paragraph": "A",
+        "firstSentence": "Kennen Sie das? / fragen Sie sich / überlegen Sie selbst",
+        "summary": "文中引导读者或作者本人进行反思。",
+        "sentenceZh": "文中引导读者或作者本人进行反思。",
+        "frage": "gibt die Autorin eine Selbstreflexion?",
+        "signalwortZh": "你熟悉吗？/ 请问自己 / 自己想一想",
         "items": [
           {
-            "number": "8",
-            "text": "kritisiert der Autor die Forschungslage?"
+            "number": "A",
+            "text": "gibt die Autorin eine Selbstreflexion?",
+            "german": "gibt die Autorin eine Selbstreflexion?",
+            "chinese": "文中引导读者或作者本人进行反思。",
+            "hint": "文中引导读者或作者本人进行反思。",
+            "sourceRow": 102
           }
-        ],
-        "note": ""
+        ]
       },
       {
-        "number": "D",
-        "text": "Das Ergebnis zeigt: Beifahrer können zur Verkehrssicherheit beitragen oder diese gefährden.",
-        "german": "Das Ergebnis zeigt: Beifahrer können zur Verkehrssicherheit beitragen oder diese gefährden.",
-        "chinese": "9分析（副驾驶既能促进安全，也能危及安全）这是典型的“Zwiespalt / Ambivalenz”（两面性、矛盾性）。用“副驾驶睡觉”做双面例证正面：司机感到被信任、情绪更稳定。",
+        "number": "4",
+        "text": "Forschung untersucht … doch / kaum erforscht",
+        "german": "Forschung untersucht … doch / kaum erforscht",
+        "chinese": "文中指出研究现状存在不足。",
         "answer": "",
-        "raw": "9- möchte der Autor auf einen Zwiespalt aufmerksam machen?",
-        "source": "lv2-xlsx",
-        "paragraph": "D",
-        "firstSentence": "Das Ergebnis zeigt: Beifahrer können zur Verkehrssicherheit beitragen oder diese gefährden.",
-        "summary": "9分析（副驾驶既能促进安全，也能危及安全）这是典型的“Zwiespalt / Ambivalenz”（两面性、矛盾性）。用“副驾驶睡觉”做双面例证正面：司机感到被信任、情绪更稳定。",
+        "raw": "kritisiert der Autor die Forschungslage?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 103,
+        "paragraph": "A",
+        "firstSentence": "Forschung untersucht … doch / kaum erforscht",
+        "summary": "文中指出研究现状存在不足。",
+        "sentenceZh": "文中指出研究现状存在不足。",
+        "frage": "kritisiert der Autor die Forschungslage?",
+        "signalwortZh": "研究调查了……然而 / 几乎没有研究",
         "items": [
           {
-            "number": "9",
-            "text": "möchte der Autor auf einen Zwiespalt aufmerksam machen?"
+            "number": "A",
+            "text": "kritisiert der Autor die Forschungslage?",
+            "german": "kritisiert der Autor die Forschungslage?",
+            "chinese": "文中指出研究现状存在不足。",
+            "hint": "文中指出研究现状存在不足。",
+            "sourceRow": 103
           }
-        ],
-        "note": ""
+        ]
       },
       {
-        "number": "E",
-        "text": "Dass sich das Verhalten eines Beifahrers so schwer vorhersehbar auf den Fahrer, seine Fahrweise und die Verkehrssicherheit auswirkt, liegt in der Natur der Sache.",
-        "german": "Dass sich das Verhalten eines Beifahrers so schwer vorhersehbar auf den Fahrer, seine Fahrweise und die Verkehrssicherheit auswirkt, liegt in der Natur der Sache.",
-        "chinese": "副驾驶的行为会以如此难以预测的方式影响司机、其驾驶方式以及交通安全，这本就是事情的本性所在。然而，一旦交通状况要求司机全神贯注，就常常会出现注意力冲突。",
+        "number": "5",
+        "text": "einerseits … andererseits / Dilemma / Problem",
+        "german": "einerseits … andererseits / Dilemma / Problem",
+        "chinese": "文中指出两个方向之间的矛盾。",
         "answer": "",
-        "raw": "11- spricht der Autor Empfehlungen aus?",
-        "source": "lv2-xlsx",
-        "paragraph": "E",
-        "firstSentence": "Dass sich das Verhalten eines Beifahrers so schwer vorhersehbar auf den Fahrer, seine Fahrweise und die Verkehrssicherheit auswirkt, liegt in der Natur der Sache.",
-        "summary": "副驾驶的行为会以如此难以预测的方式影响司机、其驾驶方式以及交通安全，这本就是事情的本性所在。然而，一旦交通状况要求司机全神贯注，就常常会出现注意力冲突。",
+        "raw": "möchte der Autor auf einen Zwiespalt aufmerksam machen?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 104,
+        "paragraph": "A",
+        "firstSentence": "einerseits … andererseits / Dilemma / Problem",
+        "summary": "文中指出两个方向之间的矛盾。",
+        "sentenceZh": "文中指出两个方向之间的矛盾。",
+        "frage": "möchte der Autor auf einen Zwiespalt aufmerksam machen?",
+        "signalwortZh": "一方面……另一方面 / 两难 / 问题",
         "items": [
           {
-            "number": "11",
-            "text": "spricht der Autor Empfehlungen aus?"
+            "number": "A",
+            "text": "möchte der Autor auf einen Zwiespalt aufmerksam machen?",
+            "german": "möchte der Autor auf einen Zwiespalt aufmerksam machen?",
+            "chinese": "文中指出两个方向之间的矛盾。",
+            "hint": "文中指出两个方向之间的矛盾。",
+            "sourceRow": 104
           }
-        ],
-        "note": ""
+        ]
+      },
+      {
+        "number": "6",
+        "text": "ich verstehe / ich kenne das / mit den Fahrern",
+        "german": "ich verstehe / ich kenne das / mit den Fahrern",
+        "chinese": "文中表达对某一群体的理解和认同。",
+        "answer": "",
+        "raw": "solidarisiert sich der Autor mit den Fahren?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 105,
+        "paragraph": "A",
+        "firstSentence": "ich verstehe / ich kenne das / mit den Fahrern",
+        "summary": "文中表达对某一群体的理解和认同。",
+        "sentenceZh": "文中表达对某一群体的理解和认同。",
+        "frage": "solidarisiert sich der Autor mit den Fahren?",
+        "signalwortZh": "我理解 / 我懂 / 和司机站在一起",
+        "items": [
+          {
+            "number": "A",
+            "text": "solidarisiert sich der Autor mit den Fahren?",
+            "german": "solidarisiert sich der Autor mit den Fahren?",
+            "chinese": "文中表达对某一群体的理解和认同。",
+            "hint": "文中表达对某一群体的理解和认同。",
+            "sourceRow": 105
+          }
+        ]
+      },
+      {
+        "number": "7",
+        "text": "ich / mir / meiner Meinung nach / bei mir / ich wollte",
+        "german": "ich / mir / meiner Meinung nach / bei mir / ich wollte",
+        "chinese": "文中说明个人经历、动机或立场。",
+        "answer": "",
+        "raw": "wird der Autor persönlich?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 106,
+        "paragraph": "A",
+        "firstSentence": "ich / mir / meiner Meinung nach / bei mir / ich wollte",
+        "summary": "文中说明个人经历、动机或立场。",
+        "sentenceZh": "文中说明个人经历、动机或立场。",
+        "frage": "wird der Autor persönlich?",
+        "signalwortZh": "我 / 对我 / 在我看来 / 就我而言 / 我想要",
+        "items": [
+          {
+            "number": "A",
+            "text": "wird der Autor persönlich?",
+            "german": "wird der Autor persönlich?",
+            "chinese": "文中说明个人经历、动机或立场。",
+            "hint": "文中说明个人经历、动机或立场。",
+            "sourceRow": 106
+          }
+        ]
       }
     ]
   },
   {
     "teil": 19,
-    "title": "Iss dich glücklich",
-    "sourceText": "LV2 段落卡片",
+    "title": "信号词问句配对",
+    "sourceText": "LV2 信号词问句表 修正版",
     "mode": "paragraph-card",
     "questions": [
       {
-        "number": "A",
-        "text": "Ein kleines Stück Madeleine, eines französischen Sandkuchens also, genügte: Der Genuss dieses Gebäckstücks, in Lindenblütentee aufgeweicht, erweckte in dem Helden von Marcel Prousts berühmtem Romanzyklus „Auf der Suche nach der verlorenen Zeit“ ein wohliges Glücksgefühl wieder zum Leben, das er aus seiner Kindheit kannte.",
-        "german": "Ein kleines Stück Madeleine, eines französischen Sandkuchens also, genügte: Der Genuss dieses Gebäckstücks, in Lindenblütentee aufgeweicht, erweckte in dem Helden von Marcel Prousts berühmtem Romanzyklus „Auf der Suche nach der verlorenen Zeit“ ein wohliges Glücksgefühl wieder zum Leben, das er aus seiner Kindheit kannte.",
-        "chinese": "作者用普鲁斯特的玛德琳和童年苹果蛋糕唤起情感，说明食物会触发记忆和情绪。",
+        "number": "1",
+        "text": "Na sowas / schmunzeln / witzig / ironisch / übertrieben",
+        "german": "Na sowas / schmunzeln / witzig / ironisch / übertrieben",
+        "chinese": "文中用幽默、夸张或玩笑语气制造趣味。",
         "answer": "",
-        "raw": "8 appelliert die Autorin an die Gefühle der Leser?",
-        "source": "lv2-xlsx",
+        "raw": "amüsiert sich die Autorin?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 107,
         "paragraph": "A",
-        "firstSentence": "Ein kleines Stück Madeleine, eines französischen Sandkuchens also, genügte: Der Genuss dieses Gebäckstücks, in Lindenblütentee aufgeweicht, erweckte in dem Helden von Marcel Prousts berühmtem Romanzyklus „Auf der Suche nach der verlorenen Zeit“ ein wohliges Glücksgefühl wieder zum Leben, das er aus seiner Kindheit kannte.",
-        "summary": "作者用普鲁斯特的玛德琳和童年苹果蛋糕唤起情感，说明食物会触发记忆和情绪。",
+        "firstSentence": "Na sowas / schmunzeln / witzig / ironisch / übertrieben",
+        "summary": "文中用幽默、夸张或玩笑语气制造趣味。",
+        "sentenceZh": "文中用幽默、夸张或玩笑语气制造趣味。",
+        "frage": "amüsiert sich die Autorin?",
+        "signalwortZh": "哎呀 / 会心一笑 / 有趣 / 讽刺 / 夸张",
         "items": [
           {
-            "number": "8",
-            "text": "appelliert die Autorin an die Gefühle der Leser?"
+            "number": "A",
+            "text": "amüsiert sich die Autorin?",
+            "german": "amüsiert sich die Autorin?",
+            "chinese": "文中用幽默、夸张或玩笑语气制造趣味。",
+            "hint": "文中用幽默、夸张或玩笑语气制造趣味。",
+            "sourceRow": 107
           }
-        ],
-        "note": ""
+        ]
       },
       {
-        "number": "B",
-        "text": "Und zwar schon seit Jahrtausenden: Hippokrates von Kos, der berühmteste Arzt der Antike, gab Schwermütigen eine Empfehlung, die heute sehr viel Heiterkeit hervorrufen dürfte.",
-        "german": "Und zwar schon seit Jahrtausenden: Hippokrates von Kos, der berühmteste Arzt der Antike, gab Schwermütigen eine Empfehlung, die heute sehr viel Heiterkeit hervorrufen dürfte.",
-        "chinese": "本段从古代医学建议写到巧克力、面食等食物影响心情，带有幽默和科学转向。",
+        "number": "2",
+        "text": "muss dringend / sollte umgehend / es bedarf",
+        "german": "muss dringend / sollte umgehend / es bedarf",
+        "chinese": "文中用强烈语气呼吁行动。",
         "answer": "",
-        "raw": "7 amüsiert sich die Autorin?",
-        "source": "lv2-xlsx",
-        "paragraph": "B",
-        "firstSentence": "Und zwar schon seit Jahrtausenden: Hippokrates von Kos, der berühmteste Arzt der Antike, gab Schwermütigen eine Empfehlung, die heute sehr viel Heiterkeit hervorrufen dürfte.",
-        "summary": "本段从古代医学建议写到巧克力、面食等食物影响心情，带有幽默和科学转向。",
+        "raw": "appelliert die Autorin an die Gefühle der Leser?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 108,
+        "paragraph": "A",
+        "firstSentence": "muss dringend / sollte umgehend / es bedarf",
+        "summary": "文中用强烈语气呼吁行动。",
+        "sentenceZh": "文中用强烈语气呼吁行动。",
+        "frage": "appelliert die Autorin an die Gefühle der Leser?",
+        "signalwortZh": "必须紧急 / 应立即 / 需要",
         "items": [
           {
-            "number": "7",
-            "text": "amüsiert sich die Autorin?"
+            "number": "A",
+            "text": "appelliert die Autorin an die Gefühle der Leser?",
+            "german": "appelliert die Autorin an die Gefühle der Leser?",
+            "chinese": "文中用强烈语气呼吁行动。",
+            "hint": "文中用强烈语气呼吁行动。",
+            "sourceRow": 108
           }
-        ],
-        "note": ""
+        ]
       },
       {
-        "number": "C",
-        "text": "Dabei sind die Zweifel, die dieser Theorie lange Zeit von zahlreichen Forschern entgegengebracht wurden, durchaus nachvollziehbar.",
-        "german": "Dabei sind die Zweifel, die dieser Theorie lange Zeit von zahlreichen Forschern entgegengebracht wurden, durchaus nachvollziehbar.",
-        "chinese": "作者解释食物影响情绪的多重机制，并总结每一餐都会影响心理状态。",
+        "number": "3",
+        "text": "Gefahr / Risiko / könnte … schaden / gefährlich",
+        "german": "Gefahr / Risiko / könnte … schaden / gefährlich",
+        "chinese": "文中明确指出可能的风险或负面后果。",
         "answer": "",
-        "raw": "12 zieht die Autorin eine Schlussfolgerung?",
-        "source": "lv2-xlsx",
-        "paragraph": "C",
-        "firstSentence": "Dabei sind die Zweifel, die dieser Theorie lange Zeit von zahlreichen Forschern entgegengebracht wurden, durchaus nachvollziehbar.",
-        "summary": "作者解释食物影响情绪的多重机制，并总结每一餐都会影响心理状态。",
+        "raw": "möchte die Autorin warnen?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 109,
+        "paragraph": "A",
+        "firstSentence": "Gefahr / Risiko / könnte … schaden / gefährlich",
+        "summary": "文中明确指出可能的风险或负面后果。",
+        "sentenceZh": "文中明确指出可能的风险或负面后果。",
+        "frage": "möchte die Autorin warnen?",
+        "signalwortZh": "危险 / 风险 / 可能伤害 / 危险的",
         "items": [
           {
-            "number": "12",
-            "text": "zieht die Autorin eine Schlussfolgerung?"
+            "number": "A",
+            "text": "möchte die Autorin warnen?",
+            "german": "möchte die Autorin warnen?",
+            "chinese": "文中明确指出可能的风险或负面后果。",
+            "hint": "文中明确指出可能的风险或负面后果。",
+            "sourceRow": 109
           }
-        ],
-        "note": ""
+        ]
       },
       {
-        "number": "D",
-        "text": "Dass Nahrung eine so starke Wirkung auf die Psyche entfaltet, ist allerdings nicht nur vom medizinischen Standpunkt aus bedenkenswert, sondern wirft auch zahlreiche philosophische Probleme auf, die durchaus den Kern des Individuums berühren: Sind wir wirklich nur, was wir essen?",
-        "german": "Dass Nahrung eine so starke Wirkung auf die Psyche entfaltet, ist allerdings nicht nur vom medizinischen Standpunkt aus bedenkenswert, sondern wirft auch zahlreiche philosophische Probleme auf, die durchaus den Kern des Individuums berühren: Sind wir wirklich nur, was wir essen?",
-        "chinese": "本段提出食物影响心理后引发的自主性、操控可能性等哲学和伦理问题。",
+        "number": "4",
+        "text": "Wie …? / Warum …? / offen bleibt / stellt sich die Frage",
+        "german": "Wie …? / Warum …? / offen bleibt / stellt sich die Frage",
+        "chinese": "文中提出开放问题，引发继续思考。",
         "answer": "",
-        "raw": "10 regt die Autorin dazu an, über weitere Fragen nachzudenken? 9 möchte die Autorin warnen?",
-        "source": "lv2-xlsx",
-        "paragraph": "D",
-        "firstSentence": "Dass Nahrung eine so starke Wirkung auf die Psyche entfaltet, ist allerdings nicht nur vom medizinischen Standpunkt aus bedenkenswert, sondern wirft auch zahlreiche philosophische Probleme auf, die durchaus den Kern des Individuums berühren: Sind wir wirklich nur, was wir essen?",
-        "summary": "本段提出食物影响心理后引发的自主性、操控可能性等哲学和伦理问题。",
+        "raw": "regt die Autorin dazu an, über weitere Fragen nachzudenken?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 110,
+        "paragraph": "A",
+        "firstSentence": "Wie …? / Warum …? / offen bleibt / stellt sich die Frage",
+        "summary": "文中提出开放问题，引发继续思考。",
+        "sentenceZh": "文中提出开放问题，引发继续思考。",
+        "frage": "regt die Autorin dazu an, über weitere Fragen nachzudenken?",
+        "signalwortZh": "怎样……？/ 为什么……？/ 仍未解决 / 问题是",
         "items": [
           {
-            "number": "10",
-            "text": "regt die Autorin dazu an, über weitere Fragen nachzudenken?"
-          },
-          {
-            "number": "9",
-            "text": "möchte die Autorin warnen?"
+            "number": "A",
+            "text": "regt die Autorin dazu an, über weitere Fragen nachzudenken?",
+            "german": "regt die Autorin dazu an, über weitere Fragen nachzudenken?",
+            "chinese": "文中提出开放问题，引发继续思考。",
+            "hint": "文中提出开放问题，引发继续思考。",
+            "sourceRow": 110
           }
-        ],
-        "note": ""
+        ]
       },
       {
-        "number": "E",
-        "text": "Tatsächlich gehen manche Wissenschaftler heutzutage davon aus, dass man durch eine gezielte Umstellung der Nahrungsgewohnheiten ein neues Lebensgefühl erzeugen könnte.",
-        "german": "Tatsächlich gehen manche Wissenschaftler heutzutage davon aus, dass man durch eine gezielte Umstellung der Nahrungsgewohnheiten ein neues Lebensgefühl erzeugen könnte.",
-        "chinese": "作者预测食品工业可能利用相关研究开发可调节情绪的产品，但科学证据仍需巩固。",
+        "number": "5",
+        "text": "sollte / sollten / ich rate / besser / eine Möglichkeit wäre",
+        "german": "sollte / sollten / ich rate / besser / eine Möglichkeit wäre",
+        "chinese": "文中给出可执行的建议或做法。",
         "answer": "",
-        "raw": "11 wagt die Autorin eine Prognose? ) (",
-        "source": "lv2-xlsx",
-        "paragraph": "E",
-        "firstSentence": "Tatsächlich gehen manche Wissenschaftler heutzutage davon aus, dass man durch eine gezielte Umstellung der Nahrungsgewohnheiten ein neues Lebensgefühl erzeugen könnte.",
-        "summary": "作者预测食品工业可能利用相关研究开发可调节情绪的产品，但科学证据仍需巩固。",
+        "raw": "spricht der Autor Empfehlungen aus?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 111,
+        "paragraph": "A",
+        "firstSentence": "sollte / sollten / ich rate / besser / eine Möglichkeit wäre",
+        "summary": "文中给出可执行的建议或做法。",
+        "sentenceZh": "文中给出可执行的建议或做法。",
+        "frage": "spricht der Autor Empfehlungen aus?",
+        "signalwortZh": "应该 / 我建议 / 更好 / 一种可能是",
         "items": [
           {
-            "number": "11",
-            "text": "wagt die Autorin eine Prognose?"
+            "number": "A",
+            "text": "spricht der Autor Empfehlungen aus?",
+            "german": "spricht der Autor Empfehlungen aus?",
+            "chinese": "文中给出可执行的建议或做法。",
+            "hint": "文中给出可执行的建议或做法。",
+            "sourceRow": 111
           }
-        ],
-        "note": ""
+        ]
+      },
+      {
+        "number": "6",
+        "text": "vielleicht / womöglich / könnte / künftig / in Zukunft",
+        "german": "vielleicht / womöglich / könnte / künftig / in Zukunft",
+        "chinese": "文中进行推测、设想或预测。",
+        "answer": "",
+        "raw": "wagt die Autorin eine Prognose?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 112,
+        "paragraph": "A",
+        "firstSentence": "vielleicht / womöglich / könnte / künftig / in Zukunft",
+        "summary": "文中进行推测、设想或预测。",
+        "sentenceZh": "文中进行推测、设想或预测。",
+        "frage": "wagt die Autorin eine Prognose?",
+        "signalwortZh": "也许 / 或许 / 可能 / 今后 / 未来",
+        "items": [
+          {
+            "number": "A",
+            "text": "wagt die Autorin eine Prognose?",
+            "german": "wagt die Autorin eine Prognose?",
+            "chinese": "文中进行推测、设想或预测。",
+            "hint": "文中进行推测、设想或预测。",
+            "sourceRow": 112
+          }
+        ]
+      },
+      {
+        "number": "7",
+        "text": "also / daraus folgt / lässt sich ableiten / folglich",
+        "german": "also / daraus folgt / lässt sich ableiten / folglich",
+        "chinese": "文中对前文内容作总结性结论。",
+        "answer": "",
+        "raw": "zieht die Autorin eine Schlussfolgerung?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 113,
+        "paragraph": "A",
+        "firstSentence": "also / daraus folgt / lässt sich ableiten / folglich",
+        "summary": "文中对前文内容作总结性结论。",
+        "sentenceZh": "文中对前文内容作总结性结论。",
+        "frage": "zieht die Autorin eine Schlussfolgerung?",
+        "signalwortZh": "因此 / 由此可得 / 可以推导出 / 所以",
+        "items": [
+          {
+            "number": "A",
+            "text": "zieht die Autorin eine Schlussfolgerung?",
+            "german": "zieht die Autorin eine Schlussfolgerung?",
+            "chinese": "文中对前文内容作总结性结论。",
+            "hint": "文中对前文内容作总结性结论。",
+            "sourceRow": 113
+          }
+        ]
       }
     ]
   },
   {
     "teil": 20,
-    "title": "Smartwatches für Kinder: bunte Überwachungsgeräte",
-    "sourceText": "LV2 段落卡片",
+    "title": "信号词问句配对",
+    "sourceText": "LV2 信号词问句表 修正版",
     "mode": "paragraph-card",
     "questions": [
       {
-        "number": "A",
-        "text": "Beinahe hätten wir für unsere achtjährige Tochter Lea eine Smartwatch gekauft.",
-        "german": "Beinahe hätten wir für unsere achtjährige Tochter Lea eine Smartwatch gekauft.",
-        "chinese": "作者用自己差点给女儿买儿童智能手表的经历开篇，呈现家庭内部对监控工具的分歧。",
+        "number": "1",
+        "text": "Kennen Sie das? / fragen Sie sich / überlegen Sie selbst",
+        "german": "Kennen Sie das? / fragen Sie sich / überlegen Sie selbst",
+        "chinese": "文中引导读者或作者本人进行反思。",
         "answer": "",
-        "raw": "Schildert der Autor eine persönliche Erfahrung?",
-        "source": "lv2-xlsx",
+        "raw": "Fordert der Autor die Leser auf, eigene Erfahrungen zu reflektieren?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 114,
         "paragraph": "A",
-        "firstSentence": "Beinahe hätten wir für unsere achtjährige Tochter Lea eine Smartwatch gekauft.",
-        "summary": "作者用自己差点给女儿买儿童智能手表的经历开篇，呈现家庭内部对监控工具的分歧。",
+        "firstSentence": "Kennen Sie das? / fragen Sie sich / überlegen Sie selbst",
+        "summary": "文中引导读者或作者本人进行反思。",
+        "sentenceZh": "文中引导读者或作者本人进行反思。",
+        "frage": "Fordert der Autor die Leser auf, eigene Erfahrungen zu reflektieren?",
+        "signalwortZh": "你熟悉吗？/ 请问自己 / 自己想一想",
         "items": [
           {
-            "number": "",
-            "text": "Schildert der Autor eine persönliche Erfahrung?"
+            "number": "A",
+            "text": "Fordert der Autor die Leser auf, eigene Erfahrungen zu reflektieren?",
+            "german": "Fordert der Autor die Leser auf, eigene Erfahrungen zu reflektieren?",
+            "chinese": "文中引导读者或作者本人进行反思。",
+            "hint": "文中引导读者或作者本人进行反思。",
+            "sourceRow": 114
           }
-        ],
-        "note": "原资料题项未显示数字或题号识别不完整"
+        ]
       },
       {
-        "number": "B",
-        "text": "Doch warum war ich eigentlich so skeptisch?",
-        "german": "Doch warum war ich eigentlich so skeptisch?",
-        "chinese": "作者邀请读者回想没有手机和定位设备的童年，强调儿童自由和拥有秘密的价值。",
-        "answer": "",
-        "raw": "Fordert der Autor die Leser auf, eigene Erfahrungen zu reflektieren? (",
-        "source": "lv2-xlsx",
-        "paragraph": "B",
-        "firstSentence": "Doch warum war ich eigentlich so skeptisch?",
-        "summary": "作者邀请读者回想没有手机和定位设备的童年，强调儿童自由和拥有秘密的价值。",
-        "items": [
-          {
-            "number": "",
-            "text": "Fordert der Autor die Leser auf, eigene Erfahrungen zu reflektieren?"
-          }
-        ],
-        "note": "原资料题项未显示数字或题号识别不完整"
-      },
-      {
-        "number": "C",
-        "text": "Viele Eltern kaufen ihren Schulkindern eine Smartwatch.",
-        "german": "Viele Eltern kaufen ihren Schulkindern eine Smartwatch.",
-        "chinese": "本段反驳“智能手表能保护儿童安全”的常见理由，指出定位、续航和网络都并不可靠。",
-        "answer": "",
-        "raw": "Widerlegt der Autor ein gängiges Argument? (",
-        "source": "lv2-xlsx",
-        "paragraph": "C",
-        "firstSentence": "Viele Eltern kaufen ihren Schulkindern eine Smartwatch.",
-        "summary": "本段反驳“智能手表能保护儿童安全”的常见理由，指出定位、续航和网络都并不可靠。",
-        "items": [
-          {
-            "number": "",
-            "text": "Widerlegt der Autor ein gängiges Argument?"
-          }
-        ],
-        "note": "原资料题项未显示数字或题号识别不完整"
-      },
-      {
-        "number": "D",
-        "text": "In den meisten Schulen gilt heute: Handys aus oder im Flugmodus, im Ranzen verstaut.",
-        "german": "In den meisten Schulen gilt heute: Handys aus oder im Flugmodus, im Ranzen verstaut.",
-        "chinese": "本段引用教育工作者观点，说明定位设备会削弱孩子独立决策和建立自信的学习过程。",
-        "answer": "",
-        "raw": "Weist der Autor auf noch ungeklärte und weiterführende Fragen hin? Spricht der Autor eine Warnung aus? (",
-        "source": "lv2-xlsx",
-        "paragraph": "D",
-        "firstSentence": "In den meisten Schulen gilt heute: Handys aus oder im Flugmodus, im Ranzen verstaut.",
-        "summary": "本段引用教育工作者观点，说明定位设备会削弱孩子独立决策和建立自信的学习过程。",
-        "items": [
-          {
-            "number": "",
-            "text": "Weist der Autor auf noch ungeklärte und weiterführende Fragen hin? Spricht der Autor eine Warnung aus?"
-          }
-        ],
-        "note": "原资料题项未显示数字或题号识别不完整"
-      },
-      {
-        "number": "E",
-        "text": "Ich könnte darauf ein paar Antworten geben: Man sollte nicht heimlich schauen, wo das Kind ist.",
-        "german": "Ich könnte darauf ein paar Antworten geben: Man sollte nicht heimlich schauen, wo das Kind ist.",
-        "chinese": "作者给父母提出做法：少依赖技术监控，多建立信任、沟通和适度联系。",
+        "number": "2",
+        "text": "sollte / sollten / ich rate / besser / eine Möglichkeit wäre",
+        "german": "sollte / sollten / ich rate / besser / eine Möglichkeit wäre",
+        "chinese": "文中给出可执行的建议或做法。",
         "answer": "",
         "raw": "Gibt der Autor Empfehlungen?",
-        "source": "lv2-xlsx",
-        "paragraph": "E",
-        "firstSentence": "Ich könnte darauf ein paar Antworten geben: Man sollte nicht heimlich schauen, wo das Kind ist.",
-        "summary": "作者给父母提出做法：少依赖技术监控，多建立信任、沟通和适度联系。",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 115,
+        "paragraph": "A",
+        "firstSentence": "sollte / sollten / ich rate / besser / eine Möglichkeit wäre",
+        "summary": "文中给出可执行的建议或做法。",
+        "sentenceZh": "文中给出可执行的建议或做法。",
+        "frage": "Gibt der Autor Empfehlungen?",
+        "signalwortZh": "应该 / 我建议 / 更好 / 一种可能是",
         "items": [
           {
-            "number": "",
-            "text": "Gibt der Autor Empfehlungen?"
+            "number": "A",
+            "text": "Gibt der Autor Empfehlungen?",
+            "german": "Gibt der Autor Empfehlungen?",
+            "chinese": "文中给出可执行的建议或做法。",
+            "hint": "文中给出可执行的建议或做法。",
+            "sourceRow": 115
           }
-        ],
-        "note": "原资料题项未显示数字或题号识别不完整"
+        ]
+      },
+      {
+        "number": "3",
+        "text": "sollte / sollten / ich rate / besser / eine Möglichkeit wäre",
+        "german": "sollte / sollten / ich rate / besser / eine Möglichkeit wäre",
+        "chinese": "文中给出可执行的建议或做法。",
+        "answer": "",
+        "raw": "Gibt der Autor Empfehlungen?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 116,
+        "paragraph": "A",
+        "firstSentence": "sollte / sollten / ich rate / besser / eine Möglichkeit wäre",
+        "summary": "文中给出可执行的建议或做法。",
+        "sentenceZh": "文中给出可执行的建议或做法。",
+        "frage": "Gibt der Autor Empfehlungen?",
+        "signalwortZh": "应该 / 我建议 / 更好 / 一种可能是",
+        "items": [
+          {
+            "number": "A",
+            "text": "Gibt der Autor Empfehlungen?",
+            "german": "Gibt der Autor Empfehlungen?",
+            "chinese": "文中给出可执行的建议或做法。",
+            "hint": "文中给出可执行的建议或做法。",
+            "sourceRow": 116
+          }
+        ]
+      },
+      {
+        "number": "4",
+        "text": "ich / mir / meiner Meinung nach / bei mir / ich wollte",
+        "german": "ich / mir / meiner Meinung nach / bei mir / ich wollte",
+        "chinese": "文中说明个人经历、动机或立场。",
+        "answer": "",
+        "raw": "Schildert der Autor eine persönliche Erfahrung?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 117,
+        "paragraph": "A",
+        "firstSentence": "ich / mir / meiner Meinung nach / bei mir / ich wollte",
+        "summary": "文中说明个人经历、动机或立场。",
+        "sentenceZh": "文中说明个人经历、动机或立场。",
+        "frage": "Schildert der Autor eine persönliche Erfahrung?",
+        "signalwortZh": "我 / 对我 / 在我看来 / 就我而言 / 我想要",
+        "items": [
+          {
+            "number": "A",
+            "text": "Schildert der Autor eine persönliche Erfahrung?",
+            "german": "Schildert der Autor eine persönliche Erfahrung?",
+            "chinese": "文中说明个人经历、动机或立场。",
+            "hint": "文中说明个人经历、动机或立场。",
+            "sourceRow": 117
+          }
+        ]
+      },
+      {
+        "number": "5",
+        "text": "Gefahr / Risiko / könnte … schaden / gefährlich",
+        "german": "Gefahr / Risiko / könnte … schaden / gefährlich",
+        "chinese": "文中明确指出可能的风险或负面后果。",
+        "answer": "",
+        "raw": "Spricht der Autor eine Warnung aus?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 118,
+        "paragraph": "A",
+        "firstSentence": "Gefahr / Risiko / könnte … schaden / gefährlich",
+        "summary": "文中明确指出可能的风险或负面后果。",
+        "sentenceZh": "文中明确指出可能的风险或负面后果。",
+        "frage": "Spricht der Autor eine Warnung aus?",
+        "signalwortZh": "危险 / 风险 / 可能伤害 / 危险的",
+        "items": [
+          {
+            "number": "A",
+            "text": "Spricht der Autor eine Warnung aus?",
+            "german": "Spricht der Autor eine Warnung aus?",
+            "chinese": "文中明确指出可能的风险或负面后果。",
+            "hint": "文中明确指出可能的风险或负面后果。",
+            "sourceRow": 118
+          }
+        ]
+      },
+      {
+        "number": "6",
+        "text": "Gefahr / Risiko / könnte … schaden / gefährlich",
+        "german": "Gefahr / Risiko / könnte … schaden / gefährlich",
+        "chinese": "文中明确指出可能的风险或负面后果。",
+        "answer": "",
+        "raw": "Spricht der Autor eine Warnung aus?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 119,
+        "paragraph": "A",
+        "firstSentence": "Gefahr / Risiko / könnte … schaden / gefährlich",
+        "summary": "文中明确指出可能的风险或负面后果。",
+        "sentenceZh": "文中明确指出可能的风险或负面后果。",
+        "frage": "Spricht der Autor eine Warnung aus?",
+        "signalwortZh": "危险 / 风险 / 可能伤害 / 危险的",
+        "items": [
+          {
+            "number": "A",
+            "text": "Spricht der Autor eine Warnung aus?",
+            "german": "Spricht der Autor eine Warnung aus?",
+            "chinese": "文中明确指出可能的风险或负面后果。",
+            "hint": "文中明确指出可能的风险或负面后果。",
+            "sourceRow": 119
+          }
+        ]
+      },
+      {
+        "number": "7",
+        "text": "Wie …? / Warum …? / offen bleibt / stellt sich die Frage",
+        "german": "Wie …? / Warum …? / offen bleibt / stellt sich die Frage",
+        "chinese": "文中提出开放问题，引发继续思考。",
+        "answer": "",
+        "raw": "Weist der Autor auf noch ungeklärte und weiterführende Fragen hin?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 120,
+        "paragraph": "A",
+        "firstSentence": "Wie …? / Warum …? / offen bleibt / stellt sich die Frage",
+        "summary": "文中提出开放问题，引发继续思考。",
+        "sentenceZh": "文中提出开放问题，引发继续思考。",
+        "frage": "Weist der Autor auf noch ungeklärte und weiterführende Fragen hin?",
+        "signalwortZh": "怎样……？/ 为什么……？/ 仍未解决 / 问题是",
+        "items": [
+          {
+            "number": "A",
+            "text": "Weist der Autor auf noch ungeklärte und weiterführende Fragen hin?",
+            "german": "Weist der Autor auf noch ungeklärte und weiterführende Fragen hin?",
+            "chinese": "文中提出开放问题，引发继续思考。",
+            "hint": "文中提出开放问题，引发继续思考。",
+            "sourceRow": 120
+          }
+        ]
+      },
+      {
+        "number": "8",
+        "text": "Wie …? / Warum …? / offen bleibt / stellt sich die Frage",
+        "german": "Wie …? / Warum …? / offen bleibt / stellt sich die Frage",
+        "chinese": "文中提出开放问题，引发继续思考。",
+        "answer": "",
+        "raw": "Weist der Autor auf noch ungeklärte und weiterführende Fragen hin?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 121,
+        "paragraph": "A",
+        "firstSentence": "Wie …? / Warum …? / offen bleibt / stellt sich die Frage",
+        "summary": "文中提出开放问题，引发继续思考。",
+        "sentenceZh": "文中提出开放问题，引发继续思考。",
+        "frage": "Weist der Autor auf noch ungeklärte und weiterführende Fragen hin?",
+        "signalwortZh": "怎样……？/ 为什么……？/ 仍未解决 / 问题是",
+        "items": [
+          {
+            "number": "A",
+            "text": "Weist der Autor auf noch ungeklärte und weiterführende Fragen hin?",
+            "german": "Weist der Autor auf noch ungeklärte und weiterführende Fragen hin?",
+            "chinese": "文中提出开放问题，引发继续思考。",
+            "hint": "文中提出开放问题，引发继续思考。",
+            "sourceRow": 121
+          }
+        ]
+      },
+      {
+        "number": "9",
+        "text": "aber / dieser Einwand greift zu kurz / stimmt nicht",
+        "german": "aber / dieser Einwand greift zu kurz / stimmt nicht",
+        "chinese": "文中反驳或削弱一个常见观点。",
+        "answer": "",
+        "raw": "Widerlegt der Autor ein gängiges Argument?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 122,
+        "paragraph": "A",
+        "firstSentence": "aber / dieser Einwand greift zu kurz / stimmt nicht",
+        "summary": "文中反驳或削弱一个常见观点。",
+        "sentenceZh": "文中反驳或削弱一个常见观点。",
+        "frage": "Widerlegt der Autor ein gängiges Argument?",
+        "signalwortZh": "但是 / 这个反驳不充分 / 不正确",
+        "items": [
+          {
+            "number": "A",
+            "text": "Widerlegt der Autor ein gängiges Argument?",
+            "german": "Widerlegt der Autor ein gängiges Argument?",
+            "chinese": "文中反驳或削弱一个常见观点。",
+            "hint": "文中反驳或削弱一个常见观点。",
+            "sourceRow": 122
+          }
+        ]
+      },
+      {
+        "number": "10",
+        "text": "aber / dieser Einwand greift zu kurz / stimmt nicht",
+        "german": "aber / dieser Einwand greift zu kurz / stimmt nicht",
+        "chinese": "文中反驳或削弱一个常见观点。",
+        "answer": "",
+        "raw": "Widerlegt der Autor ein gängiges Argument?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 123,
+        "paragraph": "A",
+        "firstSentence": "aber / dieser Einwand greift zu kurz / stimmt nicht",
+        "summary": "文中反驳或削弱一个常见观点。",
+        "sentenceZh": "文中反驳或削弱一个常见观点。",
+        "frage": "Widerlegt der Autor ein gängiges Argument?",
+        "signalwortZh": "但是 / 这个反驳不充分 / 不正确",
+        "items": [
+          {
+            "number": "A",
+            "text": "Widerlegt der Autor ein gängiges Argument?",
+            "german": "Widerlegt der Autor ein gängiges Argument?",
+            "chinese": "文中反驳或削弱一个常见观点。",
+            "hint": "文中反驳或削弱一个常见观点。",
+            "sourceRow": 123
+          }
+        ]
+      },
+      {
+        "number": "11",
+        "text": "ich / mir / meiner Meinung nach / bei mir / ich wollte",
+        "german": "ich / mir / meiner Meinung nach / bei mir / ich wollte",
+        "chinese": "文中说明个人经历、动机或立场。",
+        "answer": "",
+        "raw": "haben? Natürlich haben sich die Zeiten geändert. Dennoch wünsche ich meinen Kindern, eigene Erfahrungen",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 124,
+        "paragraph": "A",
+        "firstSentence": "ich / mir / meiner Meinung nach / bei mir / ich wollte",
+        "summary": "文中说明个人经历、动机或立场。",
+        "sentenceZh": "文中说明个人经历、动机或立场。",
+        "frage": "haben? Natürlich haben sich die Zeiten geändert. Dennoch wünsche ich meinen Kindern, eigene Erfahrungen",
+        "signalwortZh": "我 / 对我 / 在我看来 / 就我而言 / 我想要",
+        "items": [
+          {
+            "number": "A",
+            "text": "haben? Natürlich haben sich die Zeiten geändert. Dennoch wünsche ich meinen Kindern, eigene Erfahrungen",
+            "german": "haben? Natürlich haben sich die Zeiten geändert. Dennoch wünsche ich meinen Kindern, eigene Erfahrungen",
+            "chinese": "文中说明个人经历、动机或立场。",
+            "hint": "文中说明个人经历、动机或立场。",
+            "sourceRow": 124
+          }
+        ]
       }
     ]
   },
   {
     "teil": 21,
-    "title": "Die neue Sehnsucht nach der Natur",
-    "sourceText": "LV2 段落卡片",
+    "title": "信号词问句配对",
+    "sourceText": "LV2 信号词问句表 修正版",
     "mode": "paragraph-card",
     "questions": [
       {
-        "number": "A",
-        "text": "Wie kann man zukünftig eine Balance zwischen einer naturnahen Lebensweise in den Städten und den Bedürfnissen der Stadtbewohner erreichen?",
-        "german": "Wie kann man zukünftig eine Balance zwischen einer naturnahen Lebensweise in den Städten und den Bedürfnissen der Stadtbewohner erreichen?",
-        "chinese": "作者提出城市亲近自然与居民需求如何平衡的问题，并列出近距离设施、居家办公、屋顶花园等方案。",
-        "answer": "",
-        "raw": "Spricht die Autorin einen deutlichen Appell aus? Macht die Autorin Vorschläge？",
-        "source": "lv2-xlsx",
-        "paragraph": "A",
-        "firstSentence": "Wie kann man zukünftig eine Balance zwischen einer naturnahen Lebensweise in den Städten und den Bedürfnissen der Stadtbewohner erreichen?",
-        "summary": "作者提出城市亲近自然与居民需求如何平衡的问题，并列出近距离设施、居家办公、屋顶花园等方案。",
-        "items": [
-          {
-            "number": "",
-            "text": "Spricht die Autorin einen deutlichen Appell aus? Macht die Autorin Vorschläge？"
-          }
-        ],
-        "note": "原资料题项未显示数字或题号识别不完整"
-      },
-      {
-        "number": "B",
-        "text": "Einige positive Trends zeichnen sich heute zum Glück schon ab.",
-        "german": "Einige positive Trends zeichnen sich heute zum Glück schon ab.",
-        "chinese": "本段强调环保城市已有进展但远远不够，呼吁规划者、政治层面和个人都尽快行动。",
-        "answer": "",
-        "raw": "（资料未明确给出/该段可能不作为配题答案）",
-        "source": "lv2-xlsx",
-        "paragraph": "B",
-        "firstSentence": "Einige positive Trends zeichnen sich heute zum Glück schon ab.",
-        "summary": "本段强调环保城市已有进展但远远不够，呼吁规划者、政治层面和个人都尽快行动。",
-        "items": [],
-        "note": "资料未明确给出对应题项"
-      },
-      {
-        "number": "C",
-        "text": "„Frau Gerolds Garten“ ist ein nettes Plätzchen.",
-        "german": "„Frau Gerolds Garten“ ist ein nettes Plätzchen.",
-        "chinese": "作者以“Frau Gerolds Garten”为例说明都市人对自然空间的向往，并解释昆虫旅馆等概念。",
-        "answer": "",
-        "raw": "liefert die Autorin eine Definition?",
-        "source": "lv2-xlsx",
-        "paragraph": "C",
-        "firstSentence": "„Frau Gerolds Garten“ ist ein nettes Plätzchen.",
-        "summary": "作者以“Frau Gerolds Garten”为例说明都市人对自然空间的向往，并解释昆虫旅馆等概念。",
-        "items": [
-          {
-            "number": "",
-            "text": "liefert die Autorin eine Definition?"
-          }
-        ],
-        "note": "原资料题项未显示数字或题号识别不完整"
-      },
-      {
-        "number": "D",
-        "text": "Niemand zweifelt daran, dass der neue Trend zur Ökologie die Städte bereichert und attraktiver macht.",
-        "german": "Niemand zweifelt daran, dass der neue Trend zur Ökologie die Städte bereichert und attraktiver macht.",
-        "chinese": "本段以较客观口吻指出生态化城市也会带来交通、供给和成本方面的现实顾虑。",
+        "number": "1",
+        "text": "Missverständnis / Ist es nicht…? / problematisch",
+        "german": "Missverständnis / Ist es nicht…? / problematisch",
+        "chinese": "文中通过反问、误解或问题风险提出疑虑。",
         "answer": "",
         "raw": "Formuliert die Autorin auf sachliche Weise Bedenken?",
-        "source": "lv2-xlsx",
-        "paragraph": "D",
-        "firstSentence": "Niemand zweifelt daran, dass der neue Trend zur Ökologie die Städte bereichert und attraktiver macht.",
-        "summary": "本段以较客观口吻指出生态化城市也会带来交通、供给和成本方面的现实顾虑。",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 125,
+        "paragraph": "A",
+        "firstSentence": "Missverständnis / Ist es nicht…? / problematisch",
+        "summary": "文中通过反问、误解或问题风险提出疑虑。",
+        "sentenceZh": "文中通过反问、误解或问题风险提出疑虑。",
+        "frage": "Formuliert die Autorin auf sachliche Weise Bedenken?",
+        "signalwortZh": "误解 / 难道不是……吗？/ 有问题",
         "items": [
           {
-            "number": "",
-            "text": "Formuliert die Autorin auf sachliche Weise Bedenken?"
+            "number": "A",
+            "text": "Formuliert die Autorin auf sachliche Weise Bedenken?",
+            "german": "Formuliert die Autorin auf sachliche Weise Bedenken?",
+            "chinese": "文中通过反问、误解或问题风险提出疑虑。",
+            "hint": "文中通过反问、误解或问题风险提出疑虑。",
+            "sourceRow": 125
           }
-        ],
-        "note": "原资料题项未显示数字或题号识别不完整"
+        ]
       },
       {
-        "number": "E",
-        "text": "Die neue Sehnsucht nach der Natur hinterlässt auch sichtbare Spuren im Stadtbild.",
-        "german": "Die neue Sehnsucht nach der Natur hinterlässt auch sichtbare Spuren im Stadtbild.",
-        "chinese": "作者讽刺都市自然风潮中的表演性环保：园艺、骑车、农场假期和社交媒体晒生活。",
+        "number": "2",
+        "text": "sollte / sollten / ich rate / besser / eine Möglichkeit wäre",
+        "german": "sollte / sollten / ich rate / besser / eine Möglichkeit wäre",
+        "chinese": "文中给出可执行的建议或做法。",
         "answer": "",
-        "raw": "Äußert sich die Autorin spöttisch?",
-        "source": "lv2-xlsx",
-        "paragraph": "E",
-        "firstSentence": "Die neue Sehnsucht nach der Natur hinterlässt auch sichtbare Spuren im Stadtbild.",
-        "summary": "作者讽刺都市自然风潮中的表演性环保：园艺、骑车、农场假期和社交媒体晒生活。",
+        "raw": "Macht die Autorin Vorschläge?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 126,
+        "paragraph": "A",
+        "firstSentence": "sollte / sollten / ich rate / besser / eine Möglichkeit wäre",
+        "summary": "文中给出可执行的建议或做法。",
+        "sentenceZh": "文中给出可执行的建议或做法。",
+        "frage": "Macht die Autorin Vorschläge?",
+        "signalwortZh": "应该 / 我建议 / 更好 / 一种可能是",
         "items": [
           {
-            "number": "",
-            "text": "Äußert sich die Autorin spöttisch?"
+            "number": "A",
+            "text": "Macht die Autorin Vorschläge?",
+            "german": "Macht die Autorin Vorschläge?",
+            "chinese": "文中给出可执行的建议或做法。",
+            "hint": "文中给出可执行的建议或做法。",
+            "sourceRow": 126
           }
-        ],
-        "note": "原资料题项未显示数字或题号识别不完整"
+        ]
+      },
+      {
+        "number": "3",
+        "text": "muss dringend / sollte umgehend / es bedarf",
+        "german": "muss dringend / sollte umgehend / es bedarf",
+        "chinese": "文中用强烈语气呼吁行动。",
+        "answer": "",
+        "raw": "Spricht die Autorin einen deutlichen Appell aus?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 127,
+        "paragraph": "A",
+        "firstSentence": "muss dringend / sollte umgehend / es bedarf",
+        "summary": "文中用强烈语气呼吁行动。",
+        "sentenceZh": "文中用强烈语气呼吁行动。",
+        "frage": "Spricht die Autorin einen deutlichen Appell aus?",
+        "signalwortZh": "必须紧急 / 应立即 / 需要",
+        "items": [
+          {
+            "number": "A",
+            "text": "Spricht die Autorin einen deutlichen Appell aus?",
+            "german": "Spricht die Autorin einen deutlichen Appell aus?",
+            "chinese": "文中用强烈语气呼吁行动。",
+            "hint": "文中用强烈语气呼吁行动。",
+            "sourceRow": 127
+          }
+        ]
+      },
+      {
+        "number": "4",
+        "text": "Wie …? / Warum …? / offen bleibt / stellt sich die Frage",
+        "german": "Wie …? / Warum …? / offen bleibt / stellt sich die Frage",
+        "chinese": "文中提出开放问题，引发继续思考。",
+        "answer": "",
+        "raw": "Wirft die Autorin Fragen auf?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 128,
+        "paragraph": "A",
+        "firstSentence": "Wie …? / Warum …? / offen bleibt / stellt sich die Frage",
+        "summary": "文中提出开放问题，引发继续思考。",
+        "sentenceZh": "文中提出开放问题，引发继续思考。",
+        "frage": "Wirft die Autorin Fragen auf?",
+        "signalwortZh": "怎样……？/ 为什么……？/ 仍未解决 / 问题是",
+        "items": [
+          {
+            "number": "A",
+            "text": "Wirft die Autorin Fragen auf?",
+            "german": "Wirft die Autorin Fragen auf?",
+            "chinese": "文中提出开放问题，引发继续思考。",
+            "hint": "文中提出开放问题，引发继续思考。",
+            "sourceRow": 128
+          }
+        ]
+      },
+      {
+        "number": "5",
+        "text": "bedeutet / heißt / wird … bezeichnet / es handelt sich um",
+        "german": "bedeutet / heißt / wird … bezeichnet / es handelt sich um",
+        "chinese": "文中给出概念的含义或界定。",
+        "answer": "",
+        "raw": "liefert die Autorin eine Definition?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 129,
+        "paragraph": "A",
+        "firstSentence": "bedeutet / heißt / wird … bezeichnet / es handelt sich um",
+        "summary": "文中给出概念的含义或界定。",
+        "sentenceZh": "文中给出概念的含义或界定。",
+        "frage": "liefert die Autorin eine Definition?",
+        "signalwortZh": "意思是 / 叫作 / 被称为 / 这是……",
+        "items": [
+          {
+            "number": "A",
+            "text": "liefert die Autorin eine Definition?",
+            "german": "liefert die Autorin eine Definition?",
+            "chinese": "文中给出概念的含义或界定。",
+            "hint": "文中给出概念的含义或界定。",
+            "sourceRow": 129
+          }
+        ]
+      },
+      {
+        "number": "6",
+        "text": "lächerlich / nervig / natürlich … / Mir wird schlecht",
+        "german": "lächerlich / nervig / natürlich … / Mir wird schlecht",
+        "chinese": "文中用讽刺、贬斥或挖苦语气评价对象。",
+        "answer": "",
+        "raw": "Äußert sich die Autorin spöttisch?",
+        "source": "lv2-signal-question-xlsx",
+        "sourceRow": 130,
+        "paragraph": "A",
+        "firstSentence": "lächerlich / nervig / natürlich … / Mir wird schlecht",
+        "summary": "文中用讽刺、贬斥或挖苦语气评价对象。",
+        "sentenceZh": "文中用讽刺、贬斥或挖苦语气评价对象。",
+        "frage": "Äußert sich die Autorin spöttisch?",
+        "signalwortZh": "可笑 / 烦人 / 当然啦 / 我想吐",
+        "items": [
+          {
+            "number": "A",
+            "text": "Äußert sich die Autorin spöttisch?",
+            "german": "Äußert sich die Autorin spöttisch?",
+            "chinese": "文中用讽刺、贬斥或挖苦语气评价对象。",
+            "hint": "文中用讽刺、贬斥或挖苦语气评价对象。",
+            "sourceRow": 130
+          }
+        ]
       }
     ]
   }
