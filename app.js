@@ -99,7 +99,9 @@ const state = {
 };
 
 const els = {
+  appShell: document.querySelector("#appShell"),
   levelGate: document.querySelector("#levelGate"),
+  sidebarToggle: document.querySelector("#sidebarToggle"),
   levelButtons: [...document.querySelectorAll("[data-level-choice]")],
   levelSwitchButtons: [...document.querySelectorAll("[data-level-switch]")],
   appTitle: document.querySelector("#appTitle"),
@@ -181,6 +183,7 @@ const answerShortcutKeys = {
 };
 
 bindEvents();
+restoreSidebarState();
 selectLevel("lv3", { keepGate: true });
 renderIdle();
 unregisterServiceWorker();
@@ -245,6 +248,8 @@ function splitLanguages(text) {
 }
 
 function bindEvents() {
+  els.sidebarToggle.addEventListener("click", toggleSidebar);
+
   for (const button of els.levelButtons) {
     button.addEventListener("click", () => selectLevel(button.dataset.levelChoice));
   }
@@ -277,6 +282,22 @@ function bindEvents() {
   els.sortSubmitButton.addEventListener("click", submitSort);
   els.sortShuffleButton.addEventListener("click", shuffleSort);
   document.addEventListener("keydown", handleKeyboardNavigation);
+}
+
+function restoreSidebarState() {
+  const collapsed = localStorage.getItem("telc-sidebar-collapsed") === "true";
+  setSidebarCollapsed(collapsed);
+}
+
+function toggleSidebar() {
+  setSidebarCollapsed(!els.appShell.classList.contains("sidebar-collapsed"));
+}
+
+function setSidebarCollapsed(collapsed) {
+  els.appShell.classList.toggle("sidebar-collapsed", collapsed);
+  els.sidebarToggle.textContent = collapsed ? "展开" : "收起";
+  els.sidebarToggle.setAttribute("aria-expanded", String(!collapsed));
+  localStorage.setItem("telc-sidebar-collapsed", String(collapsed));
 }
 
 function renderLevelChrome() {
@@ -698,7 +719,10 @@ function renderBausteinFloatingPanel(row, index, total) {
     total +
     '</em></div><div class="baustein-float-options">' +
     optionHtml +
-    '</div><p>按 1 / 2 / 3 / 4 选择，Delete 或 Backspace 退回上一个空。</p>';
+    '</div><div class="baustein-float-actions">' +
+    '<button type="button" class="baustein-float-action" data-action="back">回退</button>' +
+    '<button type="button" class="baustein-float-action primary" data-action="next">下一个</button>' +
+    '</div><p>点击选项直接选择；Enter 或“下一个”推进，Delete / Backspace 或“回退”退回。</p>';
 
   for (const button of panel.querySelectorAll(".baustein-float-option")) {
     button.addEventListener("click", () => {
@@ -706,6 +730,11 @@ function renderBausteinFloatingPanel(row, index, total) {
       if (sourceButton) selectBausteinOption(row, sourceButton);
     });
   }
+
+  const backButton = panel.querySelector('[data-action="back"]');
+  const nextButton = panel.querySelector('[data-action="next"]');
+  if (backButton) backButton.addEventListener("click", stepBackBausteinSelection);
+  if (nextButton) nextButton.addEventListener("click", moveBausteinFocusForward);
 }
 
 function handleBausteinKeyboard(event) {
@@ -729,7 +758,23 @@ function handleBausteinKeyboard(event) {
     return true;
   }
 
+  if (event.key === "Enter") {
+    event.preventDefault();
+    moveBausteinFocusForward();
+    return true;
+  }
+
   return false;
+}
+
+function moveBausteinFocusForward() {
+  const rows = getBausteinRows();
+  if (!rows.length) return;
+
+  const currentIndex = Math.max(0, getBausteinRowIndex(getCurrentBausteinRow()));
+  const nextUnansweredIndex = rows.findIndex((row, rowIndex) => rowIndex > currentIndex && !row.dataset.selected);
+  const nextIndex = nextUnansweredIndex === -1 ? Math.min(currentIndex + 1, rows.length - 1) : nextUnansweredIndex;
+  setBausteinFocus(nextIndex);
 }
 
 function stepBackBausteinSelection() {

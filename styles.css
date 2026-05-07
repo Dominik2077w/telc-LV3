@@ -94,6 +94,11 @@ select {
   display: grid;
   grid-template-columns: 340px minmax(0, 1fr);
   min-height: 100vh;
+  transition: grid-template-columns 160ms ease;
+}
+
+.app-shell.sidebar-collapsed {
+  grid-template-columns: 72px minmax(0, 1fr);
 }
 
 .sidebar {
@@ -103,8 +108,53 @@ select {
   overflow: auto;
 }
 
+.sidebar-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
 .brand {
   margin-bottom: 22px;
+  min-width: 0;
+}
+
+.sidebar-toggle {
+  flex: 0 0 auto;
+  min-height: 36px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: #eef0ed;
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 850;
+  padding: 7px 10px;
+}
+
+.sidebar-toggle:hover {
+  border-color: var(--green);
+  color: var(--green-dark);
+}
+
+.app-shell.sidebar-collapsed .sidebar {
+  overflow: hidden;
+  padding: 22px 12px;
+}
+
+.app-shell.sidebar-collapsed .sidebar-top {
+  justify-content: center;
+}
+
+.app-shell.sidebar-collapsed .brand,
+.app-shell.sidebar-collapsed .sidebar-body {
+  display: none;
+}
+
+.app-shell.sidebar-collapsed .sidebar-toggle {
+  min-width: 46px;
+  padding: 7px 8px;
 }
 
 .eyebrow {
@@ -751,6 +801,17 @@ select {
   color: var(--blue);
 }
 
+.baustein-float-option:hover,
+.baustein-float-action:hover {
+  border-color: var(--blue);
+  outline: 3px solid rgba(40, 92, 143, 0.14);
+}
+
+.baustein-float-option:active,
+.baustein-float-action:active {
+  transform: translateY(1px);
+}
+
 .baustein-float-option kbd {
   display: inline-grid;
   place-items: center;
@@ -765,6 +826,29 @@ select {
 
 .baustein-float-option span {
   overflow-wrap: anywhere;
+}
+
+.baustein-float-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.baustein-float-action {
+  min-height: 40px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: #eef0ed;
+  color: var(--ink);
+  cursor: pointer;
+  font-weight: 850;
+}
+
+.baustein-float-action.primary {
+  border-color: var(--green);
+  background: #e9f2ec;
+  color: var(--green-dark);
 }
 
 .baustein-floating-panel p {
@@ -861,9 +945,21 @@ select {
     grid-template-columns: 1fr;
   }
 
+  .app-shell.sidebar-collapsed {
+    grid-template-columns: 1fr;
+  }
+
   .sidebar {
     border-right: 0;
     border-bottom: 1px solid var(--line);
+  }
+
+  .app-shell.sidebar-collapsed .sidebar {
+    padding: 14px 20px;
+  }
+
+  .app-shell.sidebar-collapsed .sidebar-top {
+    justify-content: flex-end;
   }
 
   .teil-list {

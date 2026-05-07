@@ -11,7 +11,7 @@
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="apple-touch-icon" href="./icons/icon-192.png" />
     <link rel="icon" href="./icons/icon-192.svg" />
-    <link rel="stylesheet" href="./styles.css?v=20260507-lv2-global-sort" />
+    <link rel="stylesheet" href="./styles.css?v=20260507-baustein-touch" />
   </head>
   <body>
     <div class="level-gate" id="levelGate">
@@ -55,79 +55,92 @@
       </div>
     </div>
 
-    <main class="app-shell">
+    <main class="app-shell" id="appShell">
       <aside class="sidebar">
-        <div class="brand">
-          <p class="eyebrow" id="appEyebrow">telc C1 Hochschule</p>
-          <h1 id="appTitle">telc Trainer</h1>
+        <div class="sidebar-top">
+          <div class="brand">
+            <p class="eyebrow" id="appEyebrow">telc C1 Hochschule</p>
+            <h1 id="appTitle">telc Trainer</h1>
+          </div>
+          <button
+            class="sidebar-toggle"
+            id="sidebarToggle"
+            type="button"
+            aria-controls="sidebarBody"
+            aria-expanded="true"
+          >
+            收起
+          </button>
         </div>
 
-        <section class="panel">
-          <div class="level-switch" aria-label="训练级别">
-            <button class="level-switch-button" type="button" data-level-switch="lv2">LV2</button>
-            <button class="level-switch-button" type="button" data-level-switch="lv2v2">LV2-版本2</button>
-            <button class="level-switch-button" type="button" data-level-switch="lv3">LV3</button>
-            <button class="level-switch-button" type="button" data-level-switch="hv1">HV1</button>
-            <button class="level-switch-button" type="button" data-level-switch="hv2">HV2</button>
-            <button class="level-switch-button" type="button" data-level-switch="writing">作文专题</button>
-            <button class="level-switch-button" type="button" data-level-switch="speaking">口语</button>
-            <button class="level-switch-button" type="button" data-level-switch="baustein">Baustein</button>
-          </div>
-        </section>
+        <div class="sidebar-body" id="sidebarBody">
+          <section class="panel">
+            <div class="level-switch" aria-label="训练级别">
+              <button class="level-switch-button" type="button" data-level-switch="lv2">LV2</button>
+              <button class="level-switch-button" type="button" data-level-switch="lv2v2">LV2-版本2</button>
+              <button class="level-switch-button" type="button" data-level-switch="lv3">LV3</button>
+              <button class="level-switch-button" type="button" data-level-switch="hv1">HV1</button>
+              <button class="level-switch-button" type="button" data-level-switch="hv2">HV2</button>
+              <button class="level-switch-button" type="button" data-level-switch="writing">作文专题</button>
+              <button class="level-switch-button" type="button" data-level-switch="speaking">口语</button>
+              <button class="level-switch-button" type="button" data-level-switch="baustein">Baustein</button>
+            </div>
+          </section>
 
-        <section class="panel">
-          <div class="panel-title">
-            <span>Teil</span>
-            <button class="ghost-button" id="toggleAllButton" type="button">全选</button>
-          </div>
-          <div class="teil-list" id="teilList"></div>
-        </section>
+          <section class="panel">
+            <div class="panel-title">
+              <span>Teil</span>
+              <button class="ghost-button" id="toggleAllButton" type="button">全选</button>
+            </div>
+            <div class="teil-list" id="teilList"></div>
+          </section>
 
-        <section class="panel controls">
-          <label>
-            <span>Teil 顺序</span>
-            <select id="teilOrder">
-              <option value="sequential">顺序</option>
-              <option value="random">随机</option>
-            </select>
-          </label>
-          <label>
-            <span>组内题目</span>
-            <select id="questionOrder">
-              <option value="sequential">顺序</option>
-              <option value="random">随机</option>
-            </select>
-          </label>
-          <label id="lv2ModeLabel" class="hidden">
-            <span>LV2 模式</span>
-            <select id="lv2Mode">
-              <option value="card">段落卡片</option>
-              <option value="global-sort">全局排序</option>
-            </select>
-          </label>
-          <label id="lv2GlobalDisplayLabel" class="hidden">
-            <span>全局排序显示</span>
-            <select id="lv2GlobalDisplay">
-              <option value="chinese">中文</option>
-              <option value="german">德语</option>
-            </select>
-          </label>
-          <label id="hv1ModeLabel" class="hidden">
-            <span>HV1 模式</span>
-            <select id="hv1Mode">
-              <option value="match">逐一匹配</option>
-              <option value="sort">排序匹配</option>
-            </select>
-          </label>
-          <label>
-            <span>轮次</span>
-            <select id="roundMode">
-              <option value="mistakes">错题轮回</option>
-              <option value="single">单轮</option>
-            </select>
-          </label>
-          <button class="primary-button" id="startButton" type="button">开始</button>
-        </section>
+          <section class="panel controls">
+            <label>
+              <span>Teil 顺序</span>
+              <select id="teilOrder">
+                <option value="sequential">顺序</option>
+                <option value="random">随机</option>
+              </select>
+            </label>
+            <label>
+              <span>组内题目</span>
+              <select id="questionOrder">
+                <option value="sequential">顺序</option>
+                <option value="random">随机</option>
+              </select>
+            </label>
+            <label id="lv2ModeLabel" class="hidden">
+              <span>LV2 模式</span>
+              <select id="lv2Mode">
+                <option value="card">段落卡片</option>
+                <option value="global-sort">全局排序</option>
+              </select>
+            </label>
+            <label id="lv2GlobalDisplayLabel" class="hidden">
+              <span>全局排序显示</span>
+              <select id="lv2GlobalDisplay">
+                <option value="chinese">中文</option>
+                <option value="german">德语</option>
+              </select>
+            </label>
+            <label id="hv1ModeLabel" class="hidden">
+              <span>HV1 模式</span>
+              <select id="hv1Mode">
+                <option value="match">逐一匹配</option>
+                <option value="sort">排序匹配</option>
+              </select>
+            </label>
+            <label>
+              <span>轮次</span>
+              <select id="roundMode">
+                <option value="mistakes">错题轮回</option>
+                <option value="single">单轮</option>
+              </select>
+            </label>
+            <button class="primary-button" id="startButton" type="button">开始</button>
+          </section>
+        </div>
       </aside>
 
       <section class="practice">
@@ -205,6 +218,6 @@
     <script src="./data/writing_questions.js?v=20260507-writing"></script>
     <script src="./data/baustein_questions.js?v=20260507-baustein"></script>
     <script src="./data/speaking_questions.js?v=20260507-speaking"></script>
-    <script src="./app.js?v=20260507-speaking"></script>
+    <script src="./app.js?v=20260507-baustein-touch"></script>
   </body>
 </html>

@@ -1,4 +1,4 @@
-const CACHE_VERSION = "telc-trainer-20260507-speaking";
+const CACHE_VERSION = "telc-trainer-20260507-baustein-touch";
 const CACHE_NAME = `telc-trainer-${CACHE_VERSION}`;
 const APP_SHELL = [
   "./",
