@@ -59,6 +59,16 @@ const datasets = {
     reviewChineseLabel: "中文",
     idleText: "选择作文专题后，正面背德语主题，背面看德语和中文意思。",
   },
+  speaking: {
+    label: "口语",
+    title: "口语题目 Trainer",
+    source: window.SPEAKING_QUESTIONS || [],
+    promptLabel: "Deutsch",
+    answerLabel: "索引",
+    reviewGermanLabel: "Deutsch",
+    reviewChineseLabel: "中文",
+    idleText: "选择口语后，正面看德语题目，背面看德语题目和中文理解。",
+  },
   baustein: {
     label: "Baustein",
     title: "Baustein 完形填空 Trainer",
@@ -459,11 +469,19 @@ function showFront(question) {
   els.sessionMode.textContent = `${datasets[state.level].label} · ${
     els.teilOrder.value === "random" ? "Teil 随机" : "Teil 顺序"
   } · ${els.questionOrder.value === "random" ? "题目随机" : "题目顺序"}`;
-  els.sessionTitle.textContent = `Teil ${question.teil}: ${question.teilTitle}`;
-  els.teilBadge.textContent = `Teil ${question.teil} · ${question.teilTitle}`;
+  els.sessionTitle.textContent =
+    question.sectionMode === "speaking-card"
+      ? `${question.teilLabel || question.teilTitle}: ${question.number}`
+      : `Teil ${question.teil}: ${question.teilTitle}`;
+  els.teilBadge.textContent =
+    question.sectionMode === "speaking-card"
+      ? question.teilLabel || `Teil ${question.teil}`
+      : `Teil ${question.teil} · ${question.teilTitle}`;
   els.questionBadge.textContent =
     question.sectionMode === "hv1-match"
       ? `Sprecher ${question.number}`
+      : question.sectionMode === "speaking-card"
+      ? `编号 ${question.number}`
       : `Frage ${question.number}`;
   els.germanQuestion.textContent =
     question.frontFields
@@ -878,11 +896,17 @@ function revealFlashcard() {
   els.backFace.classList.remove("hidden");
   setBackReviewLayout(question);
   els.resultLine.className = "result-line neutral";
-  els.resultLine.textContent = `Abschnitt ${question.paragraph || question.number}`;
+  els.resultLine.textContent =
+    question.sectionMode === "speaking-card"
+      ? `${question.teilLabel || question.teilTitle} · ${question.number}`
+      : `Abschnitt ${question.paragraph || question.number}`;
   if (question.sectionMode === "writing-card") {
     els.resultLine.textContent = `Thema ${question.teil}${question.number}`;
     els.reviewGerman.textContent = question.german || "-";
     els.reviewChinese.textContent = question.chinese || "暂无中文释义";
+  } else if (question.sectionMode === "speaking-card") {
+    els.reviewGerman.textContent = question.german || "-";
+    els.reviewChinese.textContent = question.chinese || "暂无中文理解";
   } else {
     els.correctAnswer.textContent = question.backFields ? formatFields(question.backFields) : formatLv2Items(question);
     els.reviewGerman.textContent = question.firstSentence || question.summary || "暂无段落首句";
@@ -1030,8 +1054,11 @@ function markFlashcardMissed(options = {}) {
   state.mistakes.push(state.current);
   els.missButton.classList.add("hidden");
   els.resultLine.className = "result-line wrong";
-  els.resultLine.textContent = `已加入错题 · Abschnitt ${state.current.paragraph || state.current.number}`;
-  els.roundStrip.textContent = "这一段会进入下一轮。";
+  els.resultLine.textContent =
+    state.current.sectionMode === "speaking-card"
+      ? `已加入错题 · ${state.current.teilLabel || state.current.teilTitle} · ${state.current.number}`
+      : `已加入错题 · Abschnitt ${state.current.paragraph || state.current.number}`;
+  els.roundStrip.textContent = state.current.sectionMode === "speaking-card" ? "这张口语卡会进入下一轮。" : "这一段会进入下一轮。";
   updateStats();
   if (options.advance) nextQuestion();
 }
@@ -2223,14 +2250,19 @@ function formatBausteinArticle(article) {
 }
 
 function isFlashcard(question) {
-  return question.sectionMode === "paragraph-card" || question.sectionMode === "lv2-v2-card" || question.sectionMode === "writing-card";
+  return (
+    question.sectionMode === "paragraph-card" ||
+    question.sectionMode === "lv2-v2-card" ||
+    question.sectionMode === "writing-card" ||
+    question.sectionMode === "speaking-card"
+  );
 }
 
 function setBackReviewLayout(question) {
   const answerBlock = els.correctAnswer.closest("div");
   if (!answerBlock) return;
 
-  if (question.sectionMode === "writing-card") {
+  if (question.sectionMode === "writing-card" || question.sectionMode === "speaking-card") {
     answerBlock.classList.add("hidden");
     els.correctAnswer.textContent = "";
     return;
