@@ -15,6 +15,7 @@ const files = [
   "data/hv1_questions.js",
   "data/hv2_questions.js",
   "data/writing_questions.js",
+  "data/baustein_questions.js",
   "icons/icon-192.png",
   "icons/icon-512.png",
   "icons/icon-192.svg",
