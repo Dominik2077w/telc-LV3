@@ -1,4 +1,4 @@
-const CACHE_VERSION = "telc-trainer-20260507-baustein-touch";
+const CACHE_VERSION = "telc-trainer-20260508-grammar";
 const CACHE_NAME = `telc-trainer-${CACHE_VERSION}`;
 const APP_SHELL = [
   "./",
@@ -14,6 +14,7 @@ const APP_SHELL = [
   "./data/writing_questions.js",
   "./data/baustein_questions.js",
   "./data/speaking_questions.js",
+  "./data/baustein_grammar_questions.js",
   "./icons/icon-192.png",
   "./icons/icon-512.png",
   "./icons/icon-192.svg",

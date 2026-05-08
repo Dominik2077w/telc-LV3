@@ -17,6 +17,7 @@ const files = [
   "data/writing_questions.js",
   "data/baustein_questions.js",
   "data/speaking_questions.js",
+  "data/baustein_grammar_questions.js",
   "icons/icon-192.png",
   "icons/icon-512.png",
   "icons/icon-192.svg",

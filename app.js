@@ -69,6 +69,16 @@ const datasets = {
     reviewChineseLabel: "中文",
     idleText: "选择口语后，正面看德语题目，背面看德语题目和中文理解。",
   },
+  grammar: {
+    label: "语法卡",
+    title: "Baustein 语法卡 Trainer",
+    source: window.BAUSTEIN_GRAMMAR_QUESTIONS || [],
+    promptLabel: "卡面",
+    answerLabel: "卡背 / 判断法",
+    reviewGermanLabel: "补充",
+    reviewChineseLabel: "索引",
+    idleText: "选择语法卡后，按说明顺序先刷搭配卡，再刷结构卡，最后刷逻辑词卡。",
+  },
   baustein: {
     label: "Baustein",
     title: "Baustein 完形填空 Trainer",
@@ -493,16 +503,22 @@ function showFront(question) {
   els.sessionTitle.textContent =
     question.sectionMode === "speaking-card"
       ? `${question.teilLabel || question.teilTitle}: ${question.number}`
+      : question.sectionMode === "baustein-grammar-card"
+      ? `${question.cardType || question.teilTitle}: ${question.cardKey || question.number}`
       : `Teil ${question.teil}: ${question.teilTitle}`;
   els.teilBadge.textContent =
     question.sectionMode === "speaking-card"
       ? question.teilLabel || `Teil ${question.teil}`
+      : question.sectionMode === "baustein-grammar-card"
+      ? question.cardType || question.teilTitle
       : `Teil ${question.teil} · ${question.teilTitle}`;
   els.questionBadge.textContent =
     question.sectionMode === "hv1-match"
       ? `Sprecher ${question.number}`
       : question.sectionMode === "speaking-card"
       ? `编号 ${question.number}`
+      : question.sectionMode === "baustein-grammar-card"
+      ? `卡片 ${question.number}`
       : `Frage ${question.number}`;
   els.germanQuestion.textContent =
     question.frontFields
@@ -521,7 +537,14 @@ function showFront(question) {
   renderAudioPlayer(question);
 
   if (isFlashcard(question)) {
-    els.questionBadge.textContent = `Abschnitt ${question.paragraph || question.number}`;
+    els.questionBadge.textContent =
+      question.sectionMode === "writing-card"
+        ? `Thema ${question.teil}${question.number}`
+        : question.sectionMode === "speaking-card"
+        ? `编号 ${question.number}`
+        : question.sectionMode === "baustein-grammar-card"
+        ? `卡片 ${question.number}`
+        : `Abschnitt ${question.paragraph || question.number}`;
     els.answerGrid.dataset.count = "1";
     const button = document.createElement("button");
     button.type = "button";
@@ -952,6 +975,15 @@ function revealFlashcard() {
   } else if (question.sectionMode === "speaking-card") {
     els.reviewGerman.textContent = question.german || "-";
     els.reviewChinese.textContent = question.chinese || "暂无中文理解";
+  } else if (question.sectionMode === "baustein-grammar-card") {
+    els.resultLine.textContent = `${question.cardType || question.teilTitle} · ${question.number}`;
+    els.correctAnswer.textContent = question.answerText || "-";
+    els.reviewGerman.textContent = question.extra
+      ? `${question.extraLabel || "补充"}: ${question.extra}`
+      : "暂无补充";
+    els.reviewChinese.textContent = question.cardKey
+      ? `${question.cardType || question.teilTitle} · ${question.cardKey}`
+      : `${question.cardType || question.teilTitle} · ${question.number}`;
   } else {
     els.correctAnswer.textContent = question.backFields ? formatFields(question.backFields) : formatLv2Items(question);
     els.reviewGerman.textContent = question.firstSentence || question.summary || "暂无段落首句";
@@ -962,7 +994,9 @@ function revealFlashcard() {
   els.nextButton.textContent = "记得，下一张";
   els.roundStrip.textContent =
     els.roundMode.value === "mistakes"
-      ? "快捷键：← 不记得，→ 记得。不熟的段落会进入下一轮。"
+      ? question.sectionMode === "baustein-grammar-card"
+        ? "快捷键：← 不记得，→ 记得。不熟的卡片会进入下一轮。"
+        : "快捷键：← 不记得，→ 记得。不熟的段落会进入下一轮。"
       : "快捷键：← 不记得，→ 记得。";
   updateStats();
 }
@@ -1102,8 +1136,15 @@ function markFlashcardMissed(options = {}) {
   els.resultLine.textContent =
     state.current.sectionMode === "speaking-card"
       ? `已加入错题 · ${state.current.teilLabel || state.current.teilTitle} · ${state.current.number}`
+      : state.current.sectionMode === "baustein-grammar-card"
+      ? `已加入错题 · ${state.current.cardType || state.current.teilTitle} · ${state.current.number}`
       : `已加入错题 · Abschnitt ${state.current.paragraph || state.current.number}`;
-  els.roundStrip.textContent = state.current.sectionMode === "speaking-card" ? "这张口语卡会进入下一轮。" : "这一段会进入下一轮。";
+  els.roundStrip.textContent =
+    state.current.sectionMode === "speaking-card"
+      ? "这张口语卡会进入下一轮。"
+      : state.current.sectionMode === "baustein-grammar-card"
+      ? "这张语法卡会进入下一轮。"
+      : "这一段会进入下一轮。";
   updateStats();
   if (options.advance) nextQuestion();
 }
@@ -2299,7 +2340,8 @@ function isFlashcard(question) {
     question.sectionMode === "paragraph-card" ||
     question.sectionMode === "lv2-v2-card" ||
     question.sectionMode === "writing-card" ||
-    question.sectionMode === "speaking-card"
+    question.sectionMode === "speaking-card" ||
+    question.sectionMode === "baustein-grammar-card"
   );
 }
 
