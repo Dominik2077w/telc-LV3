@@ -311,6 +311,222 @@ window.SPEAKING_QUESTIONS = [
         "chinese": "选择专业时是否应以就业市场为导向？",
         "teilLabel": "Teil 1 A",
         "source": "speaking-xlsx"
+      },
+      {
+        "number": "A23-1",
+        "german": "Was sind für Sie die vorrangigen Aufgaben der Grundschule? Begründen Sie Ihre Ansicht .Berichten Sie auch von eigenen Erfahrungen und Beobachtungen.",
+        "addedIn": "2026.9",
+        "chinese": "你认为小学最重要的任务是什么？说明理由，并结合自己的经历和观察。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 1 A",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          285
+        ]
+      },
+      {
+        "number": "A23-2",
+        "german": "Sollte an den Universitäten ein verpflichtendes Feedback der Studierenden an die Lehrenden eingeführt werden?",
+        "addedIn": "2026.9",
+        "chinese": "大学是否应要求学生向教师提供反馈？",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 1 A",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          285
+        ]
+      },
+      {
+        "number": "A24-1",
+        "german": "Welche Gründe rechtfertigen Ihrer Meinung nach eine Studienzeitverlängerung, welche nicht? Berichten Sie auch von Ihren eigenen Erfahrungen und Beobachtungen",
+        "addedIn": "2026.9",
+        "chinese": "哪些理由可以合理延长学业，哪些不可以？结合自己的经历和观察。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 1 A",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          285
+        ]
+      },
+      {
+        "number": "A24-2",
+        "german": "Sind Sie der Ansicht, dass bereits Grundschulkinder einen eigenen Computer besitzen sollten? Begründen Sie Ihre Meinung.",
+        "addedIn": "2026.9",
+        "chinese": "小学生是否应该拥有自己的电脑？说明理由。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 1 A",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          285
+        ]
+      },
+      {
+        "number": "A25-1",
+        "german": "Beschreiben Sie für ein Land Ihrer Wahl, welche Hilfe man bekommen kann, um sein Studium erfolgreich bewältigen zu können.",
+        "addedIn": "2026.9",
+        "chinese": "以一个国家为例，介绍学生可以获得哪些帮助来顺利完成学业。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 1 A",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          286
+        ]
+      },
+      {
+        "number": "A25-2",
+        "german": "Sollten Studierende während des Studiums eher theoretische Grundlagen lernen oder praktisch. Auf das spätere Berufsleben vorbereitet werden?",
+        "addedIn": "2026.9",
+        "chinese": "大学应更重视理论基础，还是为今后的职业生活提供实践准备？",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 1 A",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          286
+        ]
+      },
+      {
+        "number": "A26-1",
+        "german": "Beschreiben Sie unterschiedliche Möglichkeiten der Berufstätigkeit, die Sie nach dem Studium haben. Gehen Sie auch auf Vor- und Nachteile dieser Möglichkeiten ein.",
+        "addedIn": "2026.9",
+        "chinese": "介绍毕业后不同的就业方式，并分析各自的优缺点。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 1 A",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          286
+        ]
+      },
+      {
+        "number": "A26-2",
+        "german": "Wie kann die Vorbereitung auf das Studium verbessert werden? Was müssen Schule oder Hochschule tun, was können die Schülerinnen selbst tun?",
+        "addedIn": "2026.9",
+        "chinese": "如何改善升入大学前的准备？学校、大学以及学生本人各能做什么？",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 1 A",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          286
+        ]
+      },
+      {
+        "number": "A27-1",
+        "german": "Leistet die Anonymität bei Postings im Netz lediglich verbalen Aggressionen Vorschub?",
+        "addedIn": "2026.9",
+        "chinese": "网络发帖的匿名性是否只会助长言语攻击？",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 1 A",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          286
+        ]
+      },
+      {
+        "number": "A27-2",
+        "german": "Sind Sie der Meinung, dass Seniorinnen und Senioren mehr für ein Studium bezahlen sollten als junge Studierende? Erläutern Sie Ihre Überlegungen.",
+        "addedIn": "2026.9",
+        "chinese": "老年学生是否应该比年轻学生支付更多学费？说明你的看法。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 1 A",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          286
+        ]
+      },
+      {
+        "number": "A28-1",
+        "german": "Sind Sie der Ansicht, dass Studierende sich an den Hochschulen politisch organisieren sollten? Würden Sie sich politisch engagieren?",
+        "addedIn": "2026.9",
+        "chinese": "大学生是否应该在高校参与政治组织？你自己会参与政治活动吗？",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 1 A",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          286
+        ]
+      },
+      {
+        "number": "A28-2",
+        "german": "Sollte man Handys an den Schulen verbieten?",
+        "addedIn": "2026.9",
+        "chinese": "学校是否应该禁止手机？",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 1 A",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          286
+        ]
+      },
+      {
+        "number": "A29-1",
+        "german": "Wie wichtig ist es, auch im Ausland zu studieren?",
+        "addedIn": "2026.9",
+        "chinese": "赴国外学习有多重要？",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 1 A",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          286
+        ]
+      },
+      {
+        "number": "A29-2",
+        "german": "Sollten Kunst und Musik oder Naturwissenschaften in der Schule eine größere Rolle spielen? Begründen Sie Ihre Meinung und geben Sie eventuell Beispiele.",
+        "addedIn": "2026.9",
+        "chinese": "学校应更加重视艺术和音乐，还是自然科学？说明理由并举例。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 1 A",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          286
+        ]
+      },
+      {
+        "number": "A30-1",
+        "german": "Es gibt die Forderung, berufstätige Studierende stärker zu fördern. Sollte jede Universität berufsbegleitende Studiengänge anbieten? Begründen Sie Ihre Ansicht.",
+        "addedIn": "2026.9",
+        "chinese": "是否应加强对在职学生的支持，要求每所大学开设可兼顾工作的课程？",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 1 A",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          286
+        ]
+      },
+      {
+        "number": "A30-2",
+        "german": "Finden Sie, dass es Fächer gibt, in denen jede Schülerin und jeder Schüler unterrichtet werden sollte? Welche Fächer wären das? Sie können auch Vergleiche zu anderen Zeiten oder Ländern ziehen.",
+        "addedIn": "2026.9",
+        "chinese": "是否存在所有学生都应该学习的科目？有哪些？可比较不同时代或国家。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 1 A",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          286
+        ]
+      },
+      {
+        "number": "A31-1",
+        "german": "Kann es sinnvoll sein, Jungen und Mädchen getrennt voneinander zu unterrichten?",
+        "addedIn": "2026.9",
+        "chinese": "男女学生分开授课是否可能有益？",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 1 A",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          286
+        ]
+      },
+      {
+        "number": "A31-2",
+        "german": "Für manche Familien dienen Mahlzeiten nur der Essensaufnahme, für andere sind gemeinsame Mahlzeiten ein wichtiger Fixpunkt. Erzählen Sie von Ihren eigenen Erfahrungen.",
+        "addedIn": "2026.9",
+        "chinese": "有的家庭只把吃饭当作进食，有的把共同用餐视为重要的家庭活动。谈谈你的经历。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 1 A",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          286
+        ]
       }
     ]
   },
@@ -626,6 +842,222 @@ window.SPEAKING_QUESTIONS = [
         "chinese": "职业中的人脉维护/社交网络有多重要？",
         "teilLabel": "Teil 1 B",
         "source": "speaking-xlsx"
+      },
+      {
+        "number": "B23-1",
+        "german": "Haben Sie während Ihrer Schul- oder Studienzeit Sternstunden\" erlebt, in denen spezifische Erkenntnisse Sie besonders beeindruckt haben?",
+        "addedIn": "2026.9",
+        "chinese": "在学校或大学里，你是否经历过某种认识让你特别受启发的高光时刻？",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 1 B",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          290
+        ]
+      },
+      {
+        "number": "B23-2",
+        "german": "Sollten Ihrer Meinung nach Stipendien nach Leistung oder nach sozialen Kriterien vergeben werden?",
+        "addedIn": "2026.9",
+        "chinese": "奖学金应按成绩，还是按社会经济条件发放？",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 1 B",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          290
+        ]
+      },
+      {
+        "number": "B24-1",
+        "german": "Sollte angesichts der Not in der Welt weiterhin Geld in die Weltraumforschung investiert werden?",
+        "addedIn": "2026.9",
+        "chinese": "面对世界上的贫困与困境，是否还应继续投资太空研究？",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 1 B",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          290
+        ]
+      },
+      {
+        "number": "B24-2",
+        "german": "In manchen Ländern tragen Lernende Schuluniformen. Gehen Sie auf Vor- und Nachteile ein. Erzählen Sie von Ihren eigenen Erfahrungen.",
+        "addedIn": "2026.9",
+        "chinese": "分析校服的优缺点，并结合自己的经历。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 1 B",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          290
+        ]
+      },
+      {
+        "number": "B25-1",
+        "german": "Glauben Sie, dass Lehrende durch Roboter ersetzt werden können? Begründen Sie Ihre Ansicht und nennen Sie Beispiele.",
+        "addedIn": "2026.9",
+        "chinese": "机器人能否取代教师？说明理由并举例。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 1 B",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          290
+        ]
+      },
+      {
+        "number": "B25-2",
+        "german": "Sind Sie der Meinung, dass Kreativität und Eigensinn von Schulkindern stärker gefördert werden sollten? Berichten Sie von Ihren eigenen Erfahrungen.",
+        "addedIn": "2026.9",
+        "chinese": "是否应更加鼓励学生的创造力和独立个性？结合自己的经历。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 1 B",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          291
+        ]
+      },
+      {
+        "number": "B26-1",
+        "german": "Sollten Unternehmen an Schulen werben dürfen? Nennen Sie Beispiele.",
+        "addedIn": "2026.9",
+        "chinese": "企业是否应获准在学校投放广告？举例说明。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 1 B",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          291
+        ]
+      },
+      {
+        "number": "B26-2",
+        "german": "Sollte man in Fächern wie Musik, Sport oder Kunst Noten abschaffen.",
+        "addedIn": "2026.9",
+        "chinese": "音乐、体育或美术等科目是否应取消评分？",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 1 B",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          291
+        ]
+      },
+      {
+        "number": "B27-1",
+        "german": "Schule und Studium sind in verschiedenen Ländern unterschiedlich aufgebaut und laufen anders ab. Beschreiben Sie, welche Beobachtungen Sie in unterschiedlichen Ländern an Schulen . Oder Hochschulen dazu gemacht haben. Was finden Sie gut, was nicht?",
+        "addedIn": "2026.9",
+        "chinese": "比较不同国家的学校和大学教育：你观察到哪些差异，哪些好、哪些不好？",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 1 B",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          291
+        ]
+      },
+      {
+        "number": "B27-2",
+        "german": "Sollte Wissenschaft auch im Dienst der Politik stehen? Tut sie das vielleicht ohnehin?",
+        "addedIn": "2026.9",
+        "chinese": "科学是否也应该为政治服务？或者它本来就已经如此？",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 1 B",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          291
+        ]
+      },
+      {
+        "number": "B28-1",
+        "german": "Unterschiedliche Gruppen von Jugendlichen verwenden gern besondere Sprachmuster oder Sprechweisen. Sollten solche Jugendsprachen in den schulischen bzw. universitären Sprachunterricht einfließen?",
+        "addedIn": "2026.9",
+        "chinese": "不同青年群体有各自的语言表达方式。这些青年用语是否应纳入学校或大学的语言教学？",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 1 B",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          291
+        ]
+      },
+      {
+        "number": "B28-2",
+        "german": "Das Individuum oder die Gemeinschaft – wer sollte im Zweifelsfall Vorrang haben?",
+        "addedIn": "2026.9",
+        "chinese": "个人与集体发生冲突时，谁应该优先？",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 1 B",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          291
+        ]
+      },
+      {
+        "number": "B29-1",
+        "german": "Beschreiben Sie Aufbau und Ablauf eines Studiums Ihrer Wahl. Gehen Sie auch auf die Vor- und Nachteile ein.",
+        "addedIn": "2026.9",
+        "chinese": "介绍一个专业的课程结构与学习流程，并分析其优缺点。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 1 B",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          291
+        ]
+      },
+      {
+        "number": "B29-2",
+        "german": "Erläutern Sie Vor- und Nachteile der wirtschaftlichen Globalisierung. Geben Sie auch Beispiele.",
+        "addedIn": "2026.9",
+        "chinese": "说明经济全球化的优缺点，并举例。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 1 B",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          291
+        ]
+      },
+      {
+        "number": "B30-1",
+        "german": "Beschreiben Sie für ein Land Ihrer Wahl, welche Voraussetzungen man erfüllen muss, um studieren zu können. Wie beurteilen Sie dieses System?",
+        "addedIn": "2026.9",
+        "chinese": "以一个国家为例，介绍大学入学条件，并评价这一制度。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 1 B",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          291
+        ]
+      },
+      {
+        "number": "B30-2",
+        "german": "Wie nützlich finden Sie Notengebung in Schule oder Studium? Begründen Sie Ihre Meinung. Nennen Sie Beispiele oder Vor- und Nachteile.",
+        "addedIn": "2026.9",
+        "chinese": "学校或大学的评分制度有多大用处？说明理由、举例或分析利弊。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 1 B",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          291
+        ]
+      },
+      {
+        "number": "B31-1",
+        "german": "Der Erhalt und die Restaurierung historischer Gebäude kosten viel Geld. Sollte dieses Geld nicht besser in die Finanzierung von Bildungseinrichtungen investiert werden?",
+        "addedIn": "2026.9",
+        "chinese": "历史建筑的保护与修复花费很高。这些资金是否更应该投入教育机构？",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 1 B",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          291
+        ]
+      },
+      {
+        "number": "B31-2",
+        "german": "Finden Sie, dass Ehefrauen bzw., Ehemänner von Politikerinnen und Politikern Repräsentationsaufgaben übernehmen müssen?",
+        "addedIn": "2026.9",
+        "chinese": "政治人物的配偶是否必须承担礼仪性代表职责？",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 1 B",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          291
+        ]
       }
     ]
   },
@@ -948,6 +1380,150 @@ window.SPEAKING_QUESTIONS = [
         "chinese": "许多国家有罢工文化。请讨论你对罢工的看法。",
         "teilLabel": "Teil 1 C",
         "source": "speaking-xlsx"
+      },
+      {
+        "number": "C23-1",
+        "german": "Sollten alle Schulabsolventinnen und -absolventen dazu verpflichtet werden, Sozialarbeit zu leisten?",
+        "addedIn": "2026.9",
+        "chinese": "是否应要求所有中学毕业生承担社会服务？",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 1 C",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          295
+        ]
+      },
+      {
+        "number": "C23-2",
+        "german": "Wer sollte bei der Einstellung von Lehrenden ein Mitspracherecht haben?",
+        "addedIn": "2026.9",
+        "chinese": "聘用教师时，谁应该拥有发言权？",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 1 C",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          295
+        ]
+      },
+      {
+        "number": "C24-1",
+        "german": "Beschreiben Sie den Aufbau des Schulsystems in einem Land Ihrer Wahl. Nennen Sie Vorteile Nachteile und Verbesserungsmöglichkeiten.",
+        "addedIn": "2026.9",
+        "chinese": "介绍一个国家的学校体系，并说明其优点、缺点和改进方向。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 1 C",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          295
+        ]
+      },
+      {
+        "number": "C24-2",
+        "german": "Sollten alle Studierenden zu Beginn des Studiums das Schreiben von Referaten und Haus-arbeiten, Studienorganisation und wissenschaftliches Arbeiten lernen?",
+        "addedIn": "2026.9",
+        "chinese": "是否应在入学初期教所有大学生撰写报告和课程论文、安排学业以及进行学术研究？",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 1 C",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          295
+        ]
+      },
+      {
+        "number": "C25-1",
+        "german": "Ist es Aufgabe des Staates, Künstlerinnen und Künstler durch öffentliche Aufträge zu fördern?",
+        "addedIn": "2026.9",
+        "chinese": "国家是否有责任通过公共委托支持艺术家？",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 1 C",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          296
+        ]
+      },
+      {
+        "number": "C25-2",
+        "german": "Wie sollten sich ihrer Meinung nach Personen des öffentlichen Lebens verhalten? Führen Sie Beispiele und Vergleiche an.",
+        "addedIn": "2026.9",
+        "chinese": "公众人物应该如何行事？举例并进行比较。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 1 C",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          296
+        ]
+      },
+      {
+        "number": "C26-1",
+        "german": "Beschreiben Sie für ein Land Ihrer Wahl, welche Rolle Wissenschaft in den Medien und in der Öffentlichkeit spielt. Geben Sie auch Beispiele.",
+        "addedIn": "2026.9",
+        "chinese": "以一个国家为例，介绍科学在媒体和公共生活中的作用，并举例。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 1 C",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          296
+        ]
+      },
+      {
+        "number": "C26-2",
+        "german": "Welche Studienfächer sind besonders wichtig, um zukünftig gesellschaftliche oder wirtschaftliche Krisen zu vermeiden?",
+        "addedIn": "2026.9",
+        "chinese": "哪些专业对避免未来的社会或经济危机尤其重要？",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 1 C",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          296
+        ]
+      },
+      {
+        "number": "C27-1",
+        "german": "Sollten Studierende mit anderer Muttersprache verpflichtet sein, für alle Fächer das gleiche Deutschniveau nachzuweisen?",
+        "addedIn": "2026.9",
+        "chinese": "是否应要求非德语母语学生在所有专业都证明自己达到相同的德语水平？",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 1 C",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          296
+        ]
+      },
+      {
+        "number": "C27-2",
+        "german": "Was halten Sie von der Idee, muttersprachliche Quereinsteiger im Sprachunterricht als Lehrkräfte einzusetzen?",
+        "addedIn": "2026.9",
+        "chinese": "你如何看待让母语人士跨专业转行担任语言教师？",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 1 C",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          296
+        ]
+      },
+      {
+        "number": "C28-1",
+        "german": "Sollte an den Universitäten der Schwerpunkt auf der Lehre oder auf der Forschung liegen?",
+        "addedIn": "2026.9",
+        "chinese": "大学应该更重视教学，还是研究？",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 1 C",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          296
+        ]
+      },
+      {
+        "number": "C28-2",
+        "german": "Welches Fach bzw. welche Fächer Ihrer Schulzeit empfinden Sie im Rückblick als besonders bereichernd?",
+        "addedIn": "2026.9",
+        "chinese": "回顾学校生活，哪些科目让你收获尤其丰富？",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 1 C",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          296
+        ]
       }
     ]
   },
@@ -1571,6 +2147,510 @@ window.SPEAKING_QUESTIONS = [
         "chinese": "即使是一只瞎鸡，偶尔也能找到一粒谷子。引申：能力不足的人也可能偶然成功。",
         "teilLabel": "Teil 2 Diskussion",
         "source": "speaking-xlsx"
+      },
+      {
+        "number": "89",
+        "addedIn": "2026.9",
+        "german": "Sobald jemand in einer Sache Meister geworden ist, sollte er in einer neuen Sache Schüler werden.",
+        "chinese": "当一个人在某件事上成为大师，就应该在另一件新事物上重新当学生。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 2 Diskussion",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          302
+        ]
+      },
+      {
+        "number": "90",
+        "addedIn": "2026.9",
+        "german": "Ein guter Lehrer bleibt ein Schüler bis an das Ende seiner Tage.",
+        "chinese": "好老师终其一生都是学生。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 2 Diskussion",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          302
+        ]
+      },
+      {
+        "number": "91",
+        "addedIn": "2026.9",
+        "german": "Bildung sollte das wichtigste politische Thema sein.",
+        "chinese": "教育应该是最重要的政治议题。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 2 Diskussion",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          302
+        ]
+      },
+      {
+        "number": "92",
+        "addedIn": "2026.9",
+        "german": "Jede Lösung eines Problems bringt ein neues Problem mit sich.",
+        "chinese": "每解决一个问题，都会带来一个新问题。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 2 Diskussion",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          302
+        ]
+      },
+      {
+        "number": "93",
+        "addedIn": "2026.9",
+        "german": "Erfolg ist eine Frage des Willens.",
+        "chinese": "成功取决于意志。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 2 Diskussion",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          302
+        ]
+      },
+      {
+        "number": "94",
+        "addedIn": "2026.9",
+        "german": "Selbstsichere Menschen brauchen keine Statussymbole.",
+        "chinese": "自信的人不需要身份象征。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 2 Diskussion",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          302
+        ]
+      },
+      {
+        "number": "95",
+        "addedIn": "2026.9",
+        "german": "Die Wissenschaft hat keine moralische Dimension. Sie ist wie ein Messer. Wenn man es einem Chirurgen und einem Mörder gibt, gebraucht es jeder auf seine Weise.",
+        "chinese": "科学没有道德维度。它像一把刀，交给外科医生或杀人犯，会被用于不同目的。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 2 Diskussion",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          302
+        ]
+      },
+      {
+        "number": "96",
+        "addedIn": "2026.9",
+        "german": "Das Wohl der Familie ist wichtiger als das Streben nach individueller Erfüllung.",
+        "chinese": "家庭的福祉比追求个人的自我实现更重要。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 2 Diskussion",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          303
+        ]
+      },
+      {
+        "number": "97",
+        "addedIn": "2026.9",
+        "german": "Man sieht oft etwas hundert Mal, tausend Mal, ehe man es zum allerersten Mal wirklich sieht..",
+        "chinese": "人们往往看过某样东西上百次、上千次，才第一次真正看见它。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 2 Diskussion",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          303
+        ]
+      },
+      {
+        "number": "98",
+        "addedIn": "2026.9",
+        "german": "Auch die Medien erziehen unsere Kinder.",
+        "chinese": "媒体也在教育我们的孩子。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 2 Diskussion",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          303
+        ]
+      },
+      {
+        "number": "99",
+        "addedIn": "2026.9",
+        "german": "Im Interesse der Menschheit müssen die Geburtenraten weltweit begrenzt werden.",
+        "chinese": "为了人类的利益，必须限制全球出生率。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 2 Diskussion",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          303
+        ]
+      },
+      {
+        "number": "100",
+        "addedIn": "2026.9",
+        "german": "Man muss über seine Leistungen und Erfolge sprechen, um Beachtung zu finden.",
+        "chinese": "人必须谈论自己的成绩和成功，才能得到关注。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 2 Diskussion",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          303
+        ]
+      },
+      {
+        "number": "101",
+        "addedIn": "2026.9",
+        "german": "Du lernst den Baum kennen, wenn du dich an ihn lehnen willst.",
+        "chinese": "当你想靠在树上时，才会了解这棵树。引申：有所依靠时才看得出对方是否可靠。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 2 Diskussion",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          303
+        ]
+      },
+      {
+        "number": "102",
+        "addedIn": "2026.9",
+        "german": "Wer nicht auf seine Weise denkt, denkt überhaupt nicht.",
+        "chinese": "不以自己的方式思考的人，根本就没有思考。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 2 Diskussion",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          303
+        ]
+      },
+      {
+        "number": "103",
+        "addedIn": "2026.9",
+        "german": "Auch aus Steinen, die dir in den Weg gelegt werden, kannst du etwas Schönes bauen.",
+        "chinese": "即使是别人放在你路上的石头，你也可以用它建造美好的东西。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 2 Diskussion",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          303
+        ]
+      },
+      {
+        "number": "104",
+        "addedIn": "2026.9",
+        "german": "Bei Job Joblössetzungen sollte die familiäre Situation der Bewerberinnen und Bewerber stärker berücksichtigt werden.",
+        "chinese": "招聘时，应该更多考虑应聘者的家庭状况。（德语原文有疑似笔误。）",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 2 Diskussion",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          303
+        ]
+      },
+      {
+        "number": "105",
+        "addedIn": "2026.9",
+        "german": "Phantasie ist wichtiger als Wissen, denn Wissen ist begrenzt.",
+        "chinese": "想象力比知识更重要，因为知识是有限的。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 2 Diskussion",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          303
+        ]
+      },
+      {
+        "number": "106",
+        "addedIn": "2026.9",
+        "german": "Das Volk kann man nicht erziehen.",
+        "chinese": "人民是无法被教育的。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 2 Diskussion",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          303
+        ]
+      },
+      {
+        "number": "107",
+        "addedIn": "2026.9",
+        "german": "Eine Investition in Wissen bringt immer noch die besten Zinsen.",
+        "chinese": "对知识的投资，总能带来最好的回报。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 2 Diskussion",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          303
+        ]
+      },
+      {
+        "number": "108",
+        "addedIn": "2026.9",
+        "german": "Heutzutage können junge Menschen nichts mehr von der älteren Generation lernen.",
+        "chinese": "如今，年轻人已经无法再从老一辈那里学到任何东西。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 2 Diskussion",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          303
+        ]
+      },
+      {
+        "number": "109",
+        "addedIn": "2026.9",
+        "german": "Zuverlässig verdankt mancher das Glück seines Lebens bloß dem Umstande, dass er ein angenehmes Lächeln besitzt, womit er die Herzen gewinnt.",
+        "chinese": "有些人一生的幸福，仅仅得益于令人愉快、能够赢得人心的微笑。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 2 Diskussion",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          303
+        ]
+      },
+      {
+        "number": "110",
+        "addedIn": "2026.9",
+        "german": "Wer die Entwicklung von Medikamenten finanziert, soll auch an ihrem Verkauf verdienen.",
+        "chinese": "谁出资研发药品，谁就应该从销售中获利。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 2 Diskussion",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          304
+        ]
+      },
+      {
+        "number": "111",
+        "addedIn": "2026.9",
+        "german": "Die Menschen müssen zum Umweltschutz gezwungen werden.",
+        "chinese": "必须强迫人们保护环境。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 2 Diskussion",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          304
+        ]
+      },
+      {
+        "number": "112",
+        "addedIn": "2026.9",
+        "german": "Vater werden ist nicht schwer, Vater sein dagegen sehr.",
+        "chinese": "成为父亲不难，当好父亲却很难。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 2 Diskussion",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          304
+        ]
+      },
+      {
+        "number": "113",
+        "addedIn": "2026.9",
+        "german": "Ein Zuviel an Informationen trägt nicht zur Erkenntnis bei.",
+        "chinese": "过量的信息无助于获得认识。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 2 Diskussion",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          304
+        ]
+      },
+      {
+        "number": "114",
+        "addedIn": "2026.9",
+        "german": "Forderung an Hochschulen: Bildung statt Ausbildung!",
+        "chinese": "对大学的要求：重在教育，而非职业训练！",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 2 Diskussion",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          304
+        ]
+      },
+      {
+        "number": "115",
+        "addedIn": "2026.9",
+        "german": "Bildung lässt sich nicht downloaden.",
+        "chinese": "教育无法下载。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 2 Diskussion",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          304
+        ]
+      },
+      {
+        "number": "116",
+        "addedIn": "2026.9",
+        "german": "Kinder und Uhren dürfen nicht beständig aufgezogen werden. Man muss sie auch gehen lassen.",
+        "chinese": "孩子和钟表都不应不停地上发条，也要让他们自己走。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 2 Diskussion",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          304
+        ]
+      },
+      {
+        "number": "117",
+        "addedIn": "2026.9",
+        "german": "Der Wille und nicht die Gabe macht den Geber.",
+        "chinese": "决定一个人是否是给予者的，是心意而非礼物。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 2 Diskussion",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          304
+        ]
+      },
+      {
+        "number": "118",
+        "addedIn": "2026.9",
+        "german": "Man sieht oft etwas hundert Mal, tausend Mal, ehe man es zum allerersten Mal wirklich sieht.",
+        "chinese": "人们往往看过某样东西上百次、上千次，才第一次真正看见它。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 2 Diskussion",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          304
+        ]
+      },
+      {
+        "number": "119",
+        "addedIn": "2026.9",
+        "german": "Zuverlässig verdankt mancher das Glück seines Lebens bloß dem Umstande, dass er ein angenehmes Lächeln besitzt, womit er die Herzen gewinnt.",
+        "chinese": "有些人一生的幸福，仅仅得益于令人愉快、能够赢得人心的微笑。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 2 Diskussion",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          304
+        ]
+      },
+      {
+        "number": "120",
+        "addedIn": "2026.9",
+        "german": "Heutzutage können junge Menschen nichts mehr von der älteren Generation lernen.",
+        "chinese": "如今，年轻人已经无法再从老一辈那里学到任何东西。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 2 Diskussion",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          304
+        ]
+      },
+      {
+        "number": "121",
+        "addedIn": "2026.9",
+        "german": "Fehlt es an Wind, so greife zum Ruder .",
+        "chinese": "没有风，就拿起船桨。引申：条件不足时，要靠自己行动。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 2 Diskussion",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          304
+        ]
+      },
+      {
+        "number": "122",
+        "addedIn": "2026.9",
+        "german": "Wenn es dem Esel zu wohl wird, geht er aufs Glatteis .",
+        "chinese": "驴子过得太舒服，就会跑到冰上。引申：安逸时容易冒险自找麻烦。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 2 Diskussion",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          304
+        ]
+      },
+      {
+        "number": "123",
+        "addedIn": "2026.9",
+        "german": "Ein Urteil lässt sich widerlegen, aber niemals ein Vorurteil",
+        "chinese": "一种判断可以被驳倒，一种偏见却不能。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 2 Diskussion",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          304
+        ]
+      },
+      {
+        "number": "124",
+        "addedIn": "2026.9",
+        "german": "Wer nichts waget, der darf nichts hoffen \".",
+        "chinese": "不敢冒险的人，也不该抱有希望。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 2 Diskussion",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          304
+        ]
+      },
+      {
+        "number": "125",
+        "addedIn": "2026.9",
+        "german": "Ein Streichholz bricht, dreißig aber nicht .",
+        "chinese": "一根火柴容易折断，三十根却不容易。引申：团结就是力量。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 2 Diskussion",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          305
+        ]
+      },
+      {
+        "number": "126",
+        "addedIn": "2026.9",
+        "german": "Der Humor ist der Regenschirm der Weisen \".",
+        "chinese": "幽默是智者的雨伞。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 2 Diskussion",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          305
+        ]
+      },
+      {
+        "number": "127",
+        "addedIn": "2026.9",
+        "german": "Die Wahrheit von heute ist die Lüge von morgen .",
+        "chinese": "今天的真理，是明天的谎言。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 2 Diskussion",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          305
+        ]
+      },
+      {
+        "number": "128",
+        "addedIn": "2026.9",
+        "german": "In der Liebe ziehen sich Gegensätze an \".",
+        "chinese": "在爱情中，相反的性格会互相吸引。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 2 Diskussion",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          305
+        ]
+      },
+      {
+        "number": "129",
+        "addedIn": "2026.9",
+        "german": "Das Schicksal mischt die Karten und wir spielen",
+        "chinese": "命运洗牌，而我们负责出牌。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 2 Diskussion",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          305
+        ]
+      },
+      {
+        "number": "130",
+        "addedIn": "2026.9",
+        "german": "Wer sich während der Ausbildung viel Mühe gegeben hat sollte auch seinen Abschluss bekommen",
+        "chinese": "在学习或培训期间非常努力的人，就应该获得毕业资格。",
+        "translationSource": "译文补充",
+        "teilLabel": "Teil 2 Diskussion",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          305
+        ]
       }
     ]
   }

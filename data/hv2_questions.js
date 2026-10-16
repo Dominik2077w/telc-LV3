@@ -4796,9 +4796,367 @@ window.HV2_QUESTIONS = [
   {
     "teil": "17",
     "title": "Anna Palmers Blog",
-    "sourceText": "原文件注明暂无答案",
-    "mode": "hv2-choice",
-    "note": "暂无答案，暂不生成题目。",
-    "questions": []
+    "mode": "corpus-card",
+    "sourceText": "2026实时更新2026.9(腾讯文档实时更新）.pdf",
+    "addedIn": "2026.9",
+    "source": "tencent-2026-09",
+    "sourcePages": [
+      244
+    ],
+    "questions": [
+      {
+        "number": "55",
+        "text": "Anna Palmer hat;",
+        "german": "Anna Palmer hat;",
+        "chinese": "安娜·帕尔默对获奖并没有抱太大希望。",
+        "answer": "",
+        "answerText": "A. hat sich keine große Hoffnung auf einen Preis gemacht.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          244
+        ],
+        "completion": "hat sich keine große Hoffnung auf einen Preis gemacht.",
+        "reviewGerman": "hat sich keine große Hoffnung auf einen Preis gemacht.",
+        "sourceAnswer": "A",
+        "sourceNote": "原文只提供正确补全，未提供其他选项。"
+      },
+      {
+        "number": "56",
+        "text": "Für Anna Palmer ist es wichtig, dass",
+        "german": "Für Anna Palmer ist es wichtig, dass",
+        "chinese": "对安娜·帕尔默来说，重要的是她的博客能够在专业领域引起关注。",
+        "answer": "",
+        "answerText": "A. ihr Blog vor allem in der Fachwelt Interesse weckt.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          244
+        ],
+        "completion": "ihr Blog vor allem in der Fachwelt Interesse weckt.",
+        "reviewGerman": "ihr Blog vor allem in der Fachwelt Interesse weckt.",
+        "sourceAnswer": "A",
+        "sourceNote": "原文只提供正确补全，未提供其他选项。"
+      },
+      {
+        "number": "57",
+        "text": "Um Schreiben zu lernen,",
+        "german": "Um Schreiben zu lernen,",
+        "chinese": "为了学习写作，安娜·帕尔默在网上寻找写作指导。",
+        "answer": "",
+        "answerText": "A. suchte Anna Palmer Anleitungen im Internet.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          244
+        ],
+        "completion": "suchte Anna Palmer Anleitungen im Internet.",
+        "reviewGerman": "suchte Anna Palmer Anleitungen im Internet.",
+        "sourceAnswer": "A",
+        "sourceNote": "原文只提供正确补全，未提供其他选项。"
+      },
+      {
+        "number": "58",
+        "text": "Anna Palmer plant,",
+        "german": "Anna Palmer plant,",
+        "chinese": "安娜·帕尔默计划撰写其他主题的博客文章。",
+        "answer": "",
+        "answerText": "B. Blogartikel zu anderen Themen zu schreiben.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          244
+        ],
+        "completion": "Blogartikel zu anderen Themen zu schreiben.",
+        "reviewGerman": "Blogartikel zu anderen Themen zu schreiben.",
+        "sourceAnswer": "B",
+        "sourceNote": "原文只提供正确补全，未提供其他选项。"
+      },
+      {
+        "number": "59",
+        "text": "Anna Palmer",
+        "german": "Anna Palmer",
+        "chinese": "安娜·帕尔默会花很多时间进行写作。",
+        "answer": "",
+        "answerText": "C. nimmt sich für das Schreiben viel Zeit.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          244
+        ],
+        "completion": "nimmt sich für das Schreiben viel Zeit.",
+        "reviewGerman": "nimmt sich für das Schreiben viel Zeit.",
+        "sourceAnswer": "C",
+        "sourceNote": "原文只提供正确补全，未提供其他选项。"
+      },
+      {
+        "number": "60",
+        "text": "Ihre Themen findet Anna Palmer vor allem",
+        "german": "Ihre Themen findet Anna Palmer vor allem",
+        "chinese": "安娜·帕尔默主要通过阅读科学出版物来寻找写作主题。",
+        "answer": "",
+        "answerText": "A. durch die Lektüre wissenschaftlicher Publikationen.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          244
+        ],
+        "completion": "durch die Lektüre wissenschaftlicher Publikationen.",
+        "reviewGerman": "durch die Lektüre wissenschaftlicher Publikationen.",
+        "sourceAnswer": "A",
+        "sourceNote": "原文只提供正确补全，未提供其他选项。"
+      },
+      {
+        "number": "61",
+        "text": "Anna Palmer meint, dass sie durch das Bloggen",
+        "german": "Anna Palmer meint, dass sie durch das Bloggen",
+        "chinese": "安娜·帕尔默认为，通过写博客，她结识了许多其他科学家。",
+        "answer": "",
+        "answerText": "C. viele Kontakte zu anderen Wissenschaftlern knüpft.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          244
+        ],
+        "completion": "viele Kontakte zu anderen Wissenschaftlern knüpft.",
+        "reviewGerman": "viele Kontakte zu anderen Wissenschaftlern knüpft.",
+        "sourceAnswer": "C",
+        "sourceNote": "原文只提供正确补全，未提供其他选项。"
+      },
+      {
+        "number": "62",
+        "text": "Um genügend Zeit fürs Schreiben zu finden",
+        "german": "Um genügend Zeit fürs Schreiben zu finden",
+        "chinese": "为了找到足够的写作时间，安娜·帕尔默养成了早起的习惯。",
+        "answer": "",
+        "answerText": "B. hat sich Anna Palmer angewöhnt früh aufzustehen.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          244
+        ],
+        "completion": "hat sich Anna Palmer angewöhnt früh aufzustehen.",
+        "reviewGerman": "hat sich Anna Palmer angewöhnt früh aufzustehen.",
+        "sourceAnswer": "B",
+        "sourceNote": "原文只提供正确补全，未提供其他选项。"
+      },
+      {
+        "number": "63",
+        "text": "Anna Palmer empfiehlt zukünftigen Bloggern,",
+        "german": "Anna Palmer empfiehlt zukünftigen Bloggern,",
+        "chinese": "安娜·帕尔默建议未来的博主首先制定一个主题计划。",
+        "answer": "",
+        "answerText": "A. zunächst einen Themenplan zu erstellen.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          244
+        ],
+        "completion": "zunächst einen Themenplan zu erstellen.",
+        "reviewGerman": "zunächst einen Themenplan zu erstellen.",
+        "sourceAnswer": "A",
+        "sourceNote": "原文只提供正确补全，未提供其他选项。"
+      },
+      {
+        "number": "64",
+        "text": "Anna Palmer",
+        "german": "Anna Palmer",
+        "chinese": "安娜·帕尔默希望在大学从事学术事业。",
+        "answer": "",
+        "answerText": "C. strebt eine Karriere an der Uni an.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          244
+        ],
+        "completion": "strebt eine Karriere an der Uni an.",
+        "reviewGerman": "strebt eine Karriere an der Uni an.",
+        "sourceAnswer": "C",
+        "sourceNote": "原文只提供正确补全，未提供其他选项。"
+      }
+    ]
+  },
+  {
+    "teil": "18",
+    "title": "Umweltfreundliche Städte",
+    "mode": "corpus-card",
+    "sourceText": "2026实时更新2026.9(腾讯文档实时更新）.pdf",
+    "addedIn": "2026.9",
+    "source": "tencent-2026-09",
+    "sourcePages": [
+      245
+    ],
+    "questions": [
+      {
+        "number": "55",
+        "text": "Herr Dr. Müller hat",
+        "german": "Herr Dr. Müller hat",
+        "chinese": "穆勒博士先生是在职业咨询中了解到自己后来所学的专业的。",
+        "answer": "",
+        "answerText": "B. in der Berufsberatung von seinem späteren Studienfach erfahren.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          245
+        ],
+        "completion": "in der Berufsberatung von seinem späteren Studienfach erfahren.",
+        "reviewGerman": "in der Berufsberatung von seinem späteren Studienfach erfahren.",
+        "sourceAnswer": "B",
+        "sourceNote": "原文只提供正确补全，未提供其他选项。"
+      },
+      {
+        "number": "56",
+        "text": "Herrn Dr. Müller gefällt es an seinem Beruf, dass er",
+        "german": "Herrn Dr. Müller gefällt es an seinem Beruf, dass er",
+        "chinese": "穆勒博士喜欢自己这份职业的一点是，他能够经常与市民接触。",
+        "answer": "",
+        "answerText": "B. regelmäßig Kontakt zu Bürgern hat",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          245
+        ],
+        "completion": "regelmäßig Kontakt zu Bürgern hat",
+        "reviewGerman": "regelmäßig Kontakt zu Bürgern hat",
+        "sourceAnswer": "B",
+        "sourceNote": "原文只提供正确补全，未提供其他选项。"
+      },
+      {
+        "number": "57",
+        "text": "Um den Autoverkehr in Innenstädten zu reduzieren, sollten",
+        "german": "Um den Autoverkehr in Innenstädten zu reduzieren, sollten",
+        "chinese": "为了减少市中心的汽车交通，应该让尽可能少的人购买私人汽车。",
+        "answer": "",
+        "answerText": "C. wenige Menschen eigene PKW erwerben.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          245
+        ],
+        "completion": "wenige Menschen eigene PKW erwerben.",
+        "reviewGerman": "wenige Menschen eigene PKW erwerben.",
+        "sourceAnswer": "C",
+        "sourceNote": "原文只提供正确补全，未提供其他选项。"
+      },
+      {
+        "number": "58",
+        "text": "Um die Innenstädte für Radfahrer attraktiver zu machen, empfiehlt Herr Dr. Müller",
+        "german": "Um die Innenstädte für Radfahrer attraktiver zu machen, empfiehlt Herr Dr. Müller",
+        "chinese": "为了让市中心对骑自行车的人更有吸引力，穆勒博士建议设置更多货运自行车停车位。",
+        "answer": "",
+        "answerText": "B. mehr Stellplätze für Lastenräder.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          245
+        ],
+        "completion": "mehr Stellplätze für Lastenräder.",
+        "reviewGerman": "mehr Stellplätze für Lastenräder.",
+        "sourceAnswer": "B",
+        "sourceNote": "原文只提供正确补全，未提供其他选项。"
+      },
+      {
+        "number": "59",
+        "text": "In den Städten",
+        "german": "In den Städten",
+        "chinese": "在城市里，尤其是提供特色商品或服务的商店能够取得成功。",
+        "answer": "",
+        "answerText": "A. können vor allem Geschäfte mit besonderem Angebot erfolgreich sein.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          245
+        ],
+        "completion": "können vor allem Geschäfte mit besonderem Angebot erfolgreich sein.",
+        "reviewGerman": "können vor allem Geschäfte mit besonderem Angebot erfolgreich sein.",
+        "sourceAnswer": "A",
+        "sourceNote": "原文只提供正确补全，未提供其他选项。"
+      },
+      {
+        "number": "60",
+        "text": "Herr Dr. Müller prognostiziert, dass in Zukunft",
+        "german": "Herr Dr. Müller prognostiziert, dass in Zukunft",
+        "chinese": "穆勒博士预测，未来的城市景观将更多地以绿地为特征。",
+        "answer": "",
+        "answerText": "B. das Stadtbild stärker von Grünflächen geprägt sein wird.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          245
+        ],
+        "completion": "das Stadtbild stärker von Grünflächen geprägt sein wird.",
+        "reviewGerman": "das Stadtbild stärker von Grünflächen geprägt sein wird.",
+        "sourceAnswer": "B",
+        "sourceNote": "原文只提供正确补全，未提供其他选项。"
+      },
+      {
+        "number": "61",
+        "text": "Dr. Müller sagt, dass",
+        "german": "Dr. Müller sagt, dass",
+        "chinese": "穆勒博士表示，未来人们将不再像现在这样孤立地生活",
+        "answer": "",
+        "answerText": "A. die Menschen in Zukunft weniger isoliert wohnen werden",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          245
+        ],
+        "completion": "die Menschen in Zukunft weniger isoliert wohnen werden",
+        "reviewGerman": "die Menschen in Zukunft weniger isoliert wohnen werden",
+        "sourceAnswer": "A",
+        "sourceNote": "原文只提供正确补全，未提供其他选项。"
+      },
+      {
+        "number": "62",
+        "text": "Städte sind als Wohnort attraktiv, weil",
+        "german": "Städte sind als Wohnort attraktiv, weil",
+        "chinese": "城市作为居住地之所以具有吸引力，是因为它们能为不同年龄段的人群提供诸多优势",
+        "answer": "",
+        "answerText": "B. sie Vorteile für verschiedene Altersgruppen bieten",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          245
+        ],
+        "completion": "sie Vorteile für verschiedene Altersgruppen bieten",
+        "reviewGerman": "sie Vorteile für verschiedene Altersgruppen bieten",
+        "sourceAnswer": "B",
+        "sourceNote": "原文只提供正确补全，未提供其他选项。"
+      },
+      {
+        "number": "63",
+        "text": "Eine besonders große Herausforderung ist für Herrn Dr. Müller",
+        "german": "Eine besonders große Herausforderung ist für Herrn Dr. Müller",
+        "chinese": "对穆勒博士而言，实现无障碍环境是一项特别大的挑战。",
+        "answer": "",
+        "answerText": "C. die Herstellung von Barrierefreiheit.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          245
+        ],
+        "completion": "die Herstellung von Barrierefreiheit.",
+        "reviewGerman": "die Herstellung von Barrierefreiheit.",
+        "sourceAnswer": "C",
+        "sourceNote": "原文只提供正确补全，未提供其他选项。"
+      },
+      {
+        "number": "64",
+        "text": "Laut Herrn Dr. Müller ist die Stadt Hamburg ein Vorreiter",
+        "german": "Laut Herrn Dr. Müller ist die Stadt Hamburg ein Vorreiter",
+        "chinese": "据穆勒博士称，汉堡市是数字化领域的先驱。",
+        "answer": "",
+        "answerText": "B. bei der Digitalisierung.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          245
+        ],
+        "completion": "bei der Digitalisierung.",
+        "reviewGerman": "bei der Digitalisierung.",
+        "sourceAnswer": "B",
+        "sourceNote": "原文只提供正确补全，未提供其他选项。"
+      }
+    ]
   }
 ];

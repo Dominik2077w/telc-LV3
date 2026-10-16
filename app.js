@@ -37,7 +37,7 @@ const datasets = {
     answerLabel: "Leitsatz",
     reviewGermanLabel: "Transkript",
     reviewChineseLabel: "中文",
-    idleText: "选择 HV1 后，听音频选出对应 Leitsatz。",
+    idleText: "选择 HV1 后，听音频选出对应 Leitsatz；新增无音频题组使用复习卡。",
   },
   hv2: {
     label: "HV2",
@@ -47,7 +47,7 @@ const datasets = {
     answerLabel: "正确选项",
     reviewGermanLabel: "正确补全",
     reviewChineseLabel: "中文",
-    idleText: "选择 HV2 后，读德语题面，并在 A/B/C 中选择正确补全。",
+    idleText: "选择 HV2 后，读题选择正确补全；只有答案的新增题组使用复习卡。",
   },
   writing: {
     label: "作文专题",
@@ -87,7 +87,7 @@ const datasets = {
     answerLabel: "答案",
     reviewGermanLabel: "解析",
     reviewChineseLabel: "说明",
-    idleText: "选择 Baustein 后，按完整文章逐空选择 a/b/c/d，最后统一核对答案。",
+    idleText: "选择 Baustein 后，按文章逐空选择并核对答案；只有答案的题组使用填空复习卡。",
   },
 };
 
@@ -118,6 +118,8 @@ const els = {
   appEyebrow: document.querySelector("#appEyebrow"),
   teilList: document.querySelector("#teilList"),
   toggleAllButton: document.querySelector("#toggleAllButton"),
+  newOnly: document.querySelector("#newOnly"),
+  corpusUpdateBadge: document.querySelector("#corpusUpdateBadge"),
   teilOrder: document.querySelector("#teilOrder"),
   questionOrder: document.querySelector("#questionOrder"),
   roundMode: document.querySelector("#roundMode"),
@@ -202,7 +204,7 @@ function selectLevel(level, options = {}) {
   stopSortAudio();
   state.level = level;
   data = normalizeSections(level, datasets[level].source);
-  state.selectedTeils = new Set(data.filter((section) => section.questions.length).map((section) => section.teil));
+  state.selectedTeils = new Set(getPracticeSections().filter((section) => section.questions.length).map((section) => section.teil));
   state.sessionSource = [];
   state.queue = [];
   state.mistakes = [];
@@ -231,7 +233,7 @@ function normalizeSections(level, sections) {
         const split = splitLanguages(question.text || question.raw || "");
         const german = question.german || split.german || question.text || question.raw || "";
         const chinese = question.chinese || split.chinese || "暂无中文释义";
-        const mode = level === "hv1" ? "hv1-match" : (section.mode || "judgement");
+        const mode = section.mode || (level === "hv1" ? "hv1-match" : "judgement");
         return {
           ...question,
           id: `${level}-${section.teil}-${question.number}-${index}`,
@@ -258,6 +260,10 @@ function splitLanguages(text) {
 }
 
 function bindEvents() {
+  els.newOnly.addEventListener("change", () => {
+    state.selectedTeils = new Set(getPracticeSections().filter((section) => section.questions.length).map((section) => section.teil));
+    renderTeilList();
+  });
   els.sidebarToggle.addEventListener("click", toggleSidebar);
 
   for (const button of els.levelButtons) {
@@ -269,7 +275,7 @@ function bindEvents() {
   }
 
   els.toggleAllButton.addEventListener("click", () => {
-    const selectable = data.filter((section) => section.questions.length).map((section) => section.teil);
+    const selectable = getPracticeSections().filter((section) => section.questions.length).map((section) => section.teil);
     if (state.selectedTeils.size === selectable.length) {
       state.selectedTeils.clear();
     } else {
@@ -332,9 +338,17 @@ function renderLevelChrome() {
   els.hv1ModeLabel.classList.toggle("hidden", state.level !== "hv1");
 }
 
+function getPracticeSections() {
+  if (!els.newOnly.checked) return data;
+  return data.map((section) => ({ ...section, questions: section.questions.filter((question) => question.addedIn === "2026.9") }))
+    .filter((section) => section.questions.length);
+}
+
 function renderTeilList() {
   els.teilList.innerHTML = "";
-  for (const section of data) {
+  const sections = getPracticeSections();
+  if (!sections.length) els.teilList.textContent = "这个模块没有 2026.9 新增题目。";
+  for (const section of sections) {
     const label = document.createElement("label");
     label.className = "teil-item";
 
@@ -349,7 +363,14 @@ function renderTeilList() {
 
     const name = document.createElement("span");
     name.className = "teil-name";
-    name.innerHTML = `<strong>Teil ${section.teil}</strong><span>${escapeHtml(section.title)}</span>`;
+    name.innerHTML = `<strong>Teil ${section.teil}</strong><span>${escapeHtml(section.title)}${section.mode === "corpus-card" ? " · 复习卡" : ""}</span>`;
+    const added = section.questions.filter((question) => question.addedIn === "2026.9").length;
+    if (added) {
+      const badge = document.createElement("span");
+      badge.className = "new-badge";
+      badge.textContent = `2026.9 新增 ${added}`;
+      name.append(badge);
+    }
 
     const count = document.createElement("span");
     count.className = "count-pill";
@@ -361,7 +382,7 @@ function renderTeilList() {
 }
 
 function startSession() {
-  const chosen = data.filter((section) => state.selectedTeils.has(section.teil) && section.questions.length);
+  const chosen = getPracticeSections().filter((section) => state.selectedTeils.has(section.teil) && section.questions.length);
   if (!chosen.length) {
     els.roundStrip.textContent = "请选择至少一个有题目的 Teil。";
     return;
@@ -372,13 +393,18 @@ function startSession() {
   if ((state.level === "lv2" && els.lv2Mode.value === "global-sort") || state.level === "lv2v2") {
     state.sessionSource = teilOrdered.map(buildLv2GlobalSortBatch);
   } else if (state.level === "baustein") {
-    state.sessionSource = teilOrdered.map((section) => ({ ...section, sectionMode: "baustein-article" }));
+    state.sessionSource = teilOrdered.flatMap((section) => section.mode === "corpus-card"
+      ? applyOrder(section.questions, els.questionOrder.value).map((question) => ({ ...question }))
+      : [{ ...section, sectionMode: "baustein-article" }]);
   } else if (state.level === "hv1" && els.hv1Mode.value === "sort") {
-    state.sessionSource = teilOrdered.map(function (section) {
+    state.sessionSource = teilOrdered.flatMap(function (section) {
+      if (section.mode === "corpus-card") {
+        return applyOrder(section.questions, els.questionOrder.value).map((question) => ({ ...question }));
+      }
       var questions = applyOrder(section.questions, "sequential").map(function (q) {
         return { ...q };
       });
-      return {
+      return [{
         id: "hv1-sort-" + section.teil,
         level: "hv1",
         teil: section.teil,
@@ -387,7 +413,7 @@ function startSession() {
         questions: questions,
         german: section.title,
         chinese: "",
-      };
+      }];
     });
   } else {
     state.sessionSource = teilOrdered.flatMap((section) => {
@@ -454,6 +480,9 @@ function finishRound() {
   els.backFace.classList.add("hidden");
   els.questionCard.classList.remove("hidden");
   els.sortModeView.classList.add("hidden");
+  const config = datasets[state.level];
+  els.promptLabel.textContent = config.promptLabel;
+  els.corpusUpdateBadge.classList.add("hidden");
   stopSortAudio();
   els.roundStrip.textContent =
     els.roundMode.value === "mistakes" ? "错题轮回完成，当前选择的题都做对了。" : "单轮练习完成。";
@@ -461,6 +490,9 @@ function finishRound() {
 }
 
 function showFront(question) {
+  const edition = question.addedIn || question.updatedIn;
+  els.corpusUpdateBadge.textContent = edition ? `${edition} ${question.addedIn ? "新增" : "修订"}` : "";
+  els.corpusUpdateBadge.classList.toggle("hidden", !edition);
   if (question.sectionMode === "baustein-article") {
     renderBausteinArticle(question);
     updateStats();
@@ -497,6 +529,11 @@ function showFront(question) {
   els.sortModeView.classList.add("hidden");
   els.frontFace.classList.remove("hidden");
   els.backFace.classList.add("hidden");
+  const config = datasets[state.level];
+  els.promptLabel.textContent = question.sectionMode === "corpus-card" ? "复习卡" : config.promptLabel;
+  els.correctAnswerLabel.textContent = question.sectionMode === "corpus-card" ? "原文答案" : config.answerLabel;
+  els.reviewGermanLabel.textContent = question.sectionMode === "corpus-card" ? "原文" : config.reviewGermanLabel;
+  els.reviewChineseLabel.textContent = question.sectionMode === "corpus-card" ? "中文 / 说明" : config.reviewChineseLabel;
   els.sessionMode.textContent = `${datasets[state.level].label} · ${
     els.teilOrder.value === "random" ? "Teil 随机" : "Teil 顺序"
   } · ${els.questionOrder.value === "random" ? "题目随机" : "题目顺序"}`;
@@ -544,6 +581,8 @@ function showFront(question) {
         ? `编号 ${question.number}`
         : question.sectionMode === "baustein-grammar-card"
         ? `卡片 ${question.number}`
+        : question.sectionMode === "corpus-card"
+        ? `Frage ${question.number}`
         : `Abschnitt ${question.paragraph || question.number}`;
     els.answerGrid.dataset.count = "1";
     const button = document.createElement("button");
@@ -970,8 +1009,13 @@ function revealFlashcard() {
       : `Abschnitt ${question.paragraph || question.number}`;
   if (question.sectionMode === "writing-card") {
     els.resultLine.textContent = `Thema ${question.teil}${question.number}`;
-    els.reviewGerman.textContent = question.german || "-";
+    els.reviewGerman.textContent = [question.german, question.positions].filter(Boolean).join("\n\n") || "-";
     els.reviewChinese.textContent = question.chinese || "暂无中文释义";
+  } else if (question.sectionMode === "corpus-card") {
+    els.resultLine.textContent = `Teil ${question.teil} · Frage ${question.number} · 复习卡`;
+    els.correctAnswer.textContent = question.answerText || "原文未标注答案";
+    els.reviewGerman.textContent = question.reviewGerman || question.german;
+    els.reviewChinese.textContent = [question.chinese, question.sourceNote].filter(Boolean).join("\n\n");
   } else if (question.sectionMode === "speaking-card") {
     els.reviewGerman.textContent = question.german || "-";
     els.reviewChinese.textContent = question.chinese || "暂无中文理解";
@@ -986,7 +1030,7 @@ function revealFlashcard() {
       : `${question.cardType || question.teilTitle} · ${question.number}`;
   } else {
     els.correctAnswer.textContent = question.backFields ? formatFields(question.backFields) : formatLv2Items(question);
-    els.reviewGerman.textContent = question.firstSentence || question.summary || "暂无段落首句";
+    els.reviewGerman.textContent = question.passage || question.firstSentence || question.summary || "暂无段落首句";
     els.reviewChinese.textContent = question.chinese || question.summary || question.german;
   }
   els.missButton.classList.remove("hidden");
@@ -996,6 +1040,8 @@ function revealFlashcard() {
     els.roundMode.value === "mistakes"
       ? question.sectionMode === "baustein-grammar-card"
         ? "快捷键：← 不记得，→ 记得。不熟的卡片会进入下一轮。"
+        : question.sectionMode === "corpus-card"
+        ? "快捷键：← 不记得，→ 记得。不熟的复习卡会进入下一轮。"
         : "快捷键：← 不记得，→ 记得。不熟的段落会进入下一轮。"
       : "快捷键：← 不记得，→ 记得。";
   updateStats();
@@ -1142,6 +1188,8 @@ function markFlashcardMissed(options = {}) {
   els.roundStrip.textContent =
     state.current.sectionMode === "speaking-card"
       ? "这张口语卡会进入下一轮。"
+      : state.current.sectionMode === "corpus-card"
+      ? "这张复习卡会进入下一轮。"
       : state.current.sectionMode === "baustein-grammar-card"
       ? "这张语法卡会进入下一轮。"
       : "这一段会进入下一轮。";
@@ -1160,7 +1208,7 @@ function getReviewChinese(question) {
   if (question.sectionMode === "paragraph-match") {
     return question.summary || question.chinese;
   }
-  return question.chinese;
+  return [question.chinese, question.answerEvidence, question.sourceNote].filter(Boolean).join("\n\n");
 }
 
 function getHv2AnswerText(question) {
@@ -1178,6 +1226,7 @@ function updateStats() {
 
 function renderIdle() {
   const config = datasets[state.level];
+  els.corpusUpdateBadge.classList.add("hidden");
   els.sessionMode.textContent = "未开始";
   els.sessionTitle.textContent = "选择 Teil 后开始练习";
   els.teilBadge.textContent = config.label;
@@ -1295,11 +1344,12 @@ function buildLv2GlobalSortBatch(section) {
     var items = question.items || [];
     for (var j = 0; j < items.length; j++) {
       var item = items[j];
+      if (item.unverified) continue;
       var german = splitLanguages(item.text || "").german || item.text || "";
       var optionChinese =
         question.source === "lv2-signal-question-xlsx"
           ? question.sentenceZh || question.chinese || item.chinese || item.hint || ""
-          : item.chinese || item.hint || item.signalwortZh || "";
+          : item.chinese || item.hint || item.signalwortZh || item.text || "";
       options.push({
         id: question.id + "-item-" + j,
         paragraphId: question.id,
@@ -1317,6 +1367,7 @@ function buildLv2GlobalSortBatch(section) {
 
   return {
     id: (section.level || state.level || "lv2") + "-global-sort-" + section.teil,
+    addedIn: section.addedIn,
     level: section.level || state.level || "lv2",
     teil: section.teil,
     teilTitle: section.title,
@@ -2316,7 +2367,7 @@ function cssEscape(value) {
 function formatLv2Items(question) {
   if (!question.items?.length) return "资料未明确给出对应题项";
   return question.items
-    .map((item) => `${item.number ? `${item.number}. ` : ""}${item.text}`)
+    .map((item) => `${item.number ? `${item.number}. ` : ""}${item.text}${item.unverified ? "（原文标注存疑，未参与配对评分）" : ""}`)
     .join("\n");
 }
 
@@ -2341,6 +2392,7 @@ function isFlashcard(question) {
     question.sectionMode === "lv2-v2-card" ||
     question.sectionMode === "writing-card" ||
     question.sectionMode === "speaking-card" ||
+    question.sectionMode === "corpus-card" ||
     question.sectionMode === "baustein-grammar-card"
   );
 }

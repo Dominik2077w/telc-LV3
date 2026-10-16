@@ -3512,5 +3512,829 @@ window.LV2_QUESTIONS = [
         ]
       }
     ]
+  },
+  {
+    "teil": 22,
+    "title": "Selfie",
+    "mode": "paragraph-card",
+    "sourceText": "2026实时更新2026.9(腾讯文档实时更新）.pdf",
+    "addedIn": "2026.9",
+    "source": "tencent-2026-09",
+    "sourcePages": [
+      117,
+      118,
+      119
+    ],
+    "questions": [
+      {
+        "number": "1",
+        "paragraph": "A",
+        "text": "Letzten Samstag im Restaurant: Das Essen kommt – ein Traum!",
+        "german": "Letzten Samstag im Restaurant: Das Essen kommt – ein Traum!",
+        "firstSentence": "Letzten Samstag im Restaurant: Das Essen kommt – ein Traum!",
+        "chinese": "上周六在餐厅：菜上桌了——简直是美梦成真！意面配上浓郁的松露酱，点缀着胡椒粒，诱人的 香气扑鼻而来，光是看着就让人垂涎三尺。我第一时间想到：这得给朋友们看看。我立刻掏出了 智能手机。要不要请服务员帮我拍张站在盘子前的照片呢？还是算了吧，那样我会觉得尴尬。眼 下没人注意，我便拍了一张自拍。但这种不自在感究竟从何而来？毕竟如今自我展示无处不在： 没有在主要景点前自拍的城市之旅是不完整的，更不用说音乐会、体育赛事或度假体验了。在数 字时代，自我展示已达到前所未有的程度。",
+        "sentenceZh": "上周六在餐厅：菜上桌了——简直是美梦成真！",
+        "summary": "上周六在餐厅：菜上桌了——简直是美梦成真！",
+        "frage": "berichtet die Autorin von einer persönlichen Erfahrung?",
+        "answer": "",
+        "raw": "Letzten Samstag im Restaurant: Das Essen kommt – ein Traum! Pasta mit cremiger Trüffelsauce, gesprenkelt mit Pfefferkörnern, köstlicher Duft steigt mir in die Nase und das Auge isst mit. Mein erster Gedanke: Das muss ich meinen Freunden zeigen. Schon zücke ich das Smartphone. Ob ich den Kellner bitten soll, ein Foto von mir vor meinem Teller zu machen? Lieber nicht, denn das wäre mir peinlich. Gerade schaut keiner zu und ich mache ein Selfie. Aber warum eigentlich dieses Unbehagen? Schließlich ist Selbstdarstellung heute allgegenwärtig: kein Städtetrip ohne Selfies vor den wichtigsten Sehenswürdigkeiten, ganz zu schweigen von Konzerten, Sportveranstaltungen oder Urlaubserlebnissen. Im digitalen Zeitalter hat die Selbstinszenierung noch nie dagewesene Ausmaße angenommen.",
+        "passage": "Letzten Samstag im Restaurant: Das Essen kommt – ein Traum! Pasta mit cremiger Trüffelsauce, gesprenkelt mit Pfefferkörnern, köstlicher Duft steigt mir in die Nase und das Auge isst mit. Mein erster Gedanke: Das muss ich meinen Freunden zeigen. Schon zücke ich das Smartphone. Ob ich den Kellner bitten soll, ein Foto von mir vor meinem Teller zu machen? Lieber nicht, denn das wäre mir peinlich. Gerade schaut keiner zu und ich mache ein Selfie. Aber warum eigentlich dieses Unbehagen? Schließlich ist Selbstdarstellung heute allgegenwärtig: kein Städtetrip ohne Selfies vor den wichtigsten Sehenswürdigkeiten, ganz zu schweigen von Konzerten, Sportveranstaltungen oder Urlaubserlebnissen. Im digitalen Zeitalter hat die Selbstinszenierung noch nie dagewesene Ausmaße angenommen.",
+        "items": [
+          {
+            "number": "12",
+            "text": "berichtet die Autorin von einer persönlichen Erfahrung?",
+            "german": "berichtet die Autorin von einer persönlichen Erfahrung?",
+            "chinese": "作者是否讲述了一个个人经历？",
+            "sourcePage": 117
+          }
+        ],
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          117
+        ],
+        "addedIn": "2026.9"
+      },
+      {
+        "number": "2",
+        "paragraph": "B",
+        "text": "Warum kommt bei mir bloß immer ein unangenehmes Gefühl auf, wenn ich in der Öffentlichkeit Selfies mache?",
+        "german": "Warum kommt bei mir bloß immer ein unangenehmes Gefühl auf, wenn ich in der Öffentlichkeit Selfies mache?",
+        "firstSentence": "Warum kommt bei mir bloß immer ein unangenehmes Gefühl auf, wenn ich in der Öffentlichkeit Selfies mache?",
+        "chinese": "为什么我在公共场合自拍时，总是会产生一种不舒服的感觉呢？那么，我并不是和智能手机一起 长大的。在我的青年时期，人们并不是不断地给自己拍照，而是只用照片记录非常特别的时刻。 所谓的“数字原住民”则有完全不同的经历。这样的人指的是那些和智能手机以及数字媒体一起长 大的人。对他们来说，每一种经历都值得与他人分享，而且是以自拍的形式分享，这是理所当然 的。如今，自拍早已成为一种大众现象，而且这个概念已经不能再从德语中被想象掉了。Duden 在线版中写道：“自拍，名词：用数码相机，通常是智能手机或平板电脑的数码相机，大多自发拍 摄的一个人或多个人的自画像。”",
+        "sentenceZh": "为什么我在公共场合自拍时，总是会产生一种不舒服的感觉呢？",
+        "summary": "为什么我在公共场合自拍时，总是会产生一种不舒服的感觉呢？",
+        "frage": "liefert die Autorin eine Definition?",
+        "answer": "",
+        "raw": "Warum kommt bei mir bloß immer ein unangenehmes Gefühl auf, wenn ich in der Öffentlichkeit Selfies mache? Nun, ich bin nicht mit dem Smartphone aufgewachsen. In meiner Jugend hat man nicht ständig sich selbst fotografiert, sondern mit Fotos wurden nur ganz besondere Augenblicke festgehalten. Ganz andere Erfahrungen machen die sogenannten Digital Natives. Als solche werden Personen bezeichnet, die mit Smartphone und digitalen Medien großgeworden sind. Für sie ist es selbstverständlich, dass jede Erfahrung es verdient, mit anderen geteilt zu werden, und zwar in Form von Selfies. Heute ist das Selfie längst zum Massenphänomen geworden und der Begriff aus der deutschen Sprache nicht mehr wegzudenken. „Selfie, das: mit der Digitalkamera (des Smartphones oder Tablets) meist spontan aufgenommenes Selbstporträt einer oder mehrerer Personen“, heißt es in der Online-Ausgabe des Dudens.",
+        "passage": "Warum kommt bei mir bloß immer ein unangenehmes Gefühl auf, wenn ich in der Öffentlichkeit Selfies mache? Nun, ich bin nicht mit dem Smartphone aufgewachsen. In meiner Jugend hat man nicht ständig sich selbst fotografiert, sondern mit Fotos wurden nur ganz besondere Augenblicke festgehalten. Ganz andere Erfahrungen machen die sogenannten Digital Natives. Als solche werden Personen bezeichnet, die mit Smartphone und digitalen Medien großgeworden sind. Für sie ist es selbstverständlich, dass jede Erfahrung es verdient, mit anderen geteilt zu werden, und zwar in Form von Selfies. Heute ist das Selfie längst zum Massenphänomen geworden und der Begriff aus der deutschen Sprache nicht mehr wegzudenken. „Selfie, das: mit der Digitalkamera (des Smartphones oder Tablets) meist spontan aufgenommenes Selbstporträt einer oder mehrerer Personen“, heißt es in der Online-Ausgabe des Dudens.",
+        "items": [
+          {
+            "number": "11",
+            "text": "liefert die Autorin eine Definition?",
+            "german": "liefert die Autorin eine Definition?",
+            "chinese": "作者是否提供了一个定义？",
+            "sourcePage": 117
+          }
+        ],
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          117,
+          118
+        ],
+        "addedIn": "2026.9"
+      },
+      {
+        "number": "3",
+        "paragraph": "C",
+        "text": "Die digitale Fotografie und die Verbreitung von Smartphones haben die Selfies zu einer wahren Flut anwachsen lassen.",
+        "german": "Die digitale Fotografie und die Verbreitung von Smartphones haben die Selfies zu einer wahren Flut anwachsen lassen.",
+        "firstSentence": "Die digitale Fotografie und die Verbreitung von Smartphones haben die Selfies zu einer wahren Flut anwachsen lassen.",
+        "chinese": "数码摄影和智能手机的传播，使自拍增长成了一场真正的洪流。而且几乎没有人再问自己这样一 个问题：整个世界是否真的对他的日常经历感兴趣——哪怕这些经历是如此平凡。在我的熟人圈 里有一些人，他们不断地满怀自豪地向世界展示自己经历了多么了不起的事情：如果他们早餐给 自己准备了一份带水果的健康燕麦片，在试衣间试穿一条裤子，或者晚上在阳台上喝一杯红酒， 这些马上就会被摆拍出来，好像其他人面对这些无关紧要的小事必须嫉妒得脸色发白一样。自拍 刚一完成，就会被上传。也许人们还会快速看一下朋友们发布了什么，然后被迎面扑来的自拍洪 流弄得心烦。",
+        "sentenceZh": "数码摄影和智能手机的传播，使自拍增长成了一场真正的洪流。",
+        "summary": "数码摄影和智能手机的传播，使自拍增长成了一场真正的洪流。",
+        "frage": "macht sich die Autorin über andere lustig?",
+        "answer": "",
+        "raw": "Die digitale Fotografie und die Verbreitung von Smartphones haben die Selfies zu einer wahren Flut anwachsen lassen. Und kaum jemand stellt sich mehr die Frage, ob sich die ganze Welt wirklich für seine Alltagserlebnisse – und seien sie noch so banal – interessiert. In meinem Bekanntenkreis gibt es einige, die der Welt ständig voller Stolz präsentieren, was sie alles Tolles erlebt haben: Wenn sie sich zum Frühstück ein gesundes Müsli mit Obst zubereiten, in der Umkleidekabine eine Hose anprobieren oder abends auf dem Balkon ein Glas Rotwein trinken, wird das gleich in Szene gesetzt, als müssten andere angesichts solcher Belanglosigkeiten vor Neid erblassen. Kaum ist das Selfie fertig, wird es hochgeladen. Vielleicht schaut man schnell noch, was Freunde gepostet haben, und ist genervt von der Selfieflut, die einem entgegenspringt.",
+        "passage": "Die digitale Fotografie und die Verbreitung von Smartphones haben die Selfies zu einer wahren Flut anwachsen lassen. Und kaum jemand stellt sich mehr die Frage, ob sich die ganze Welt wirklich für seine Alltagserlebnisse – und seien sie noch so banal – interessiert. In meinem Bekanntenkreis gibt es einige, die der Welt ständig voller Stolz präsentieren, was sie alles Tolles erlebt haben: Wenn sie sich zum Frühstück ein gesundes Müsli mit Obst zubereiten, in der Umkleidekabine eine Hose anprobieren oder abends auf dem Balkon ein Glas Rotwein trinken, wird das gleich in Szene gesetzt, als müssten andere angesichts solcher Belanglosigkeiten vor Neid erblassen. Kaum ist das Selfie fertig, wird es hochgeladen. Vielleicht schaut man schnell noch, was Freunde gepostet haben, und ist genervt von der Selfieflut, die einem entgegenspringt.",
+        "items": [
+          {
+            "number": "10",
+            "text": "macht sich die Autorin über andere lustig?",
+            "german": "macht sich die Autorin über andere lustig?",
+            "chinese": "作者是否取笑别人？",
+            "sourcePage": 118
+          }
+        ],
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          118
+        ],
+        "addedIn": "2026.9"
+      },
+      {
+        "number": "4",
+        "paragraph": "D",
+        "text": "Der Genuss des Augenblicks verschwindet heutzutage oft hinter dem Versuch, das perfekte Bild zu machen.",
+        "german": "Der Genuss des Augenblicks verschwindet heutzutage oft hinter dem Versuch, das perfekte Bild zu machen.",
+        "firstSentence": "Der Genuss des Augenblicks verschwindet heutzutage oft hinter dem Versuch, das perfekte Bild zu machen.",
+        "chinese": "对当下时刻的享受，如今常常消失在拍出完美照片的尝试背后。在旅行中，似乎不再是所参观的 东西和有待发现的东西有趣，而是在那里记录下自己短暂的存在有趣。但是，人们几乎不再真正 投入到自己正在经历的事情中，这难道不可惜吗？这难道不是我们这个时代的困境吗：我们因为 过度担心自己的形象而忘记了生活？但是，这种追求自我图像的冲动背后到底是什么呢？对于意 大利记者 Marco d’Eramo 来说，这件事很清楚，他写过一本关于这个主题的非常值得一读的书： 在自拍中表达出一种不可战胜的需求，即确认自己的存在，留下一个关于自己的证明，留下一个 自己在世界中存在的痕迹。”以这种方式关注自己的需求，尤其在年轻人中如今已经如此强烈，以 至于研究人员甚至把它识别为一种成瘾现象。英国 Trent 大学和印度 Thiagaraja School of Management 的心理学家给它命名为 Selfitis。",
+        "sentenceZh": "对当下时刻的享受，如今常常消失在拍出完美照片的尝试背后。",
+        "summary": "对当下时刻的享受，如今常常消失在拍出完美照片的尝试背后。",
+        "frage": "äußert die Autorin Bedauern? / beruft sich die Autorin auf Experten?",
+        "answer": "",
+        "raw": "Der Genuss des Augenblicks verschwindet heutzutage oft hinter dem Versuch, das perfekte Bild zu machen. Auf Reisen scheint nicht mehr das Besuchte und zu Entdeckende interessant zu sein, sondern das Festhalten der eigenen, flüchtigen Anwesenheit dort. Aber ist es nicht schade, dass man sich kaum mehr auf das, was man gerade erlebt, einlässt? Ist es nicht das Dilemma unserer Zeit, dass wir vor lauter Sorge um unser Image vergessen zu leben? Was steckt aber hinter diesem Drang zum Selbstbildnis? Für den italienischen Journalisten Marco d’Eramo, der ein sehr lesenswertes Buch zu dem Thema geschrieben hat, ist die Sache klar: „Im Selfie drückt sich ein unbezwingbares Bedürfnis aus, das eigene Dasein zu bestätigen, ein Zeugnis von sich selbst, eine Spur des eigenen In-der-Welt-Seins zu hinterlassen.“ Das Bedürfnis, sich auf diese Weise mit sich selbst zu beschäftigen, ist gerade bei jüngeren Menschen inzwischen so groß, dass Forscher es sogar als Suchtphänomen identifiziert haben. Psychologen der Trent-Universität in Großbritannien und der Thiagaraja School of Management in Indien gaben ihm den Namen Selfitis.",
+        "passage": "Der Genuss des Augenblicks verschwindet heutzutage oft hinter dem Versuch, das perfekte Bild zu machen. Auf Reisen scheint nicht mehr das Besuchte und zu Entdeckende interessant zu sein, sondern das Festhalten der eigenen, flüchtigen Anwesenheit dort. Aber ist es nicht schade, dass man sich kaum mehr auf das, was man gerade erlebt, einlässt? Ist es nicht das Dilemma unserer Zeit, dass wir vor lauter Sorge um unser Image vergessen zu leben? Was steckt aber hinter diesem Drang zum Selbstbildnis? Für den italienischen Journalisten Marco d’Eramo, der ein sehr lesenswertes Buch zu dem Thema geschrieben hat, ist die Sache klar: „Im Selfie drückt sich ein unbezwingbares Bedürfnis aus, das eigene Dasein zu bestätigen, ein Zeugnis von sich selbst, eine Spur des eigenen In-der-Welt-Seins zu hinterlassen.“ Das Bedürfnis, sich auf diese Weise mit sich selbst zu beschäftigen, ist gerade bei jüngeren Menschen inzwischen so groß, dass Forscher es sogar als Suchtphänomen identifiziert haben. Psychologen der Trent-Universität in Großbritannien und der Thiagaraja School of Management in Indien gaben ihm den Namen Selfitis.",
+        "items": [
+          {
+            "number": "7",
+            "text": "äußert die Autorin Bedauern?",
+            "german": "äußert die Autorin Bedauern?",
+            "chinese": "作者是否表达遗憾？",
+            "sourcePage": 118
+          },
+          {
+            "number": "8",
+            "text": "beruft sich die Autorin auf Experten?",
+            "german": "beruft sich die Autorin auf Experten?",
+            "chinese": "作者是否援引专家？",
+            "sourcePage": 118
+          }
+        ],
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          118,
+          119
+        ],
+        "addedIn": "2026.9"
+      },
+      {
+        "number": "5",
+        "paragraph": "E",
+        "text": "Die meisten Selfies werden ins Netz gestellt, um Reaktionen hervorzurufen.",
+        "german": "Die meisten Selfies werden ins Netz gestellt, um Reaktionen hervorzurufen.",
+        "firstSentence": "Die meisten Selfies werden ins Netz gestellt, um Reaktionen hervorzurufen.",
+        "chinese": "大多数自拍被放到网上，是为了引发反应。所以，这也涉及交流。此外：年轻人以这种轻松的方 式展示自己，到底有什么可指责的呢？老一辈人在相机前僵硬地摆姿势，真的就更少考虑效果 吗？除此之外：自我营销常常几乎是被我们期待的。没有哪本求职指导书不会提到自我营销的必 要性。自拍因此是一种多层面的现象，人们应该带着相当程度的从容去接近它。我自己将来会少 拍自拍吗？我会尝试，并努力更强烈地享受当下。最好的建议只能是：不要在自拍的镜子里观察 你的生活，而是看向真正围绕着你的东西。你的朋友、美味的食物、自然的美——因为最好的图 像仍然是在头脑中产生的。",
+        "sentenceZh": "大多数自拍被放到网上，是为了引发反应。",
+        "summary": "大多数自拍被放到网上，是为了引发反应。",
+        "frage": "gibt die Autorin einen Rat?",
+        "answer": "",
+        "raw": "Die meisten Selfies werden ins Netz gestellt, um Reaktionen hervorzurufen. Es geht auch um Kommunikation. Und außerdem: Was ist denn so verwerflich an der lockeren Art, mit der junge Menschen sich in Szene setzen? War das steife Posieren älterer Generationen vor einer Kamera wirklich weniger auf Wirkung bedacht? Zudem: Selbstvermarktung wird von uns oft geradezu erwartet. Kein Bewerbungsratgeber, in dem nicht von der Erfordernis des Selbstmarketings die Rede wäre. Selfies sind also ein facettenreiches Phänomen, dem man sich mit einer ordentlichen Portion Gelassenheit nähern sollte. Werde ich selbst in Zukunft weniger Selfies machen? Ich werde es probieren und versuchen, stärker den Moment zu genießen. Die beste Empfehlung kann nur lauten: Betrachte dein Leben nicht im Spiegel der Selfies, sondern schau auf das, was dich tatsächlich umgibt. Deine Freunde, leckeres Essen, die Schönheit der Natur – denn die besten Bilder entstehen immer noch im Kopf.",
+        "passage": "Die meisten Selfies werden ins Netz gestellt, um Reaktionen hervorzurufen. Es geht auch um Kommunikation. Und außerdem: Was ist denn so verwerflich an der lockeren Art, mit der junge Menschen sich in Szene setzen? War das steife Posieren älterer Generationen vor einer Kamera wirklich weniger auf Wirkung bedacht? Zudem: Selbstvermarktung wird von uns oft geradezu erwartet. Kein Bewerbungsratgeber, in dem nicht von der Erfordernis des Selbstmarketings die Rede wäre. Selfies sind also ein facettenreiches Phänomen, dem man sich mit einer ordentlichen Portion Gelassenheit nähern sollte. Werde ich selbst in Zukunft weniger Selfies machen? Ich werde es probieren und versuchen, stärker den Moment zu genießen. Die beste Empfehlung kann nur lauten: Betrachte dein Leben nicht im Spiegel der Selfies, sondern schau auf das, was dich tatsächlich umgibt. Deine Freunde, leckeres Essen, die Schönheit der Natur – denn die besten Bilder entstehen immer noch im Kopf.",
+        "items": [
+          {
+            "number": "9",
+            "text": "gibt die Autorin einen Rat?",
+            "german": "gibt die Autorin einen Rat?",
+            "chinese": "作者是否给出一个建议？",
+            "sourcePage": 119
+          }
+        ],
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          119
+        ],
+        "addedIn": "2026.9"
+      }
+    ]
+  },
+  {
+    "teil": 23,
+    "title": "Metaphorische Darstellung der Einsamkeit",
+    "mode": "paragraph-card",
+    "sourceText": "2026实时更新2026.9(腾讯文档实时更新）.pdf",
+    "addedIn": "2026.9",
+    "source": "tencent-2026-09",
+    "sourcePages": [
+      119,
+      120,
+      121
+    ],
+    "questions": [
+      {
+        "number": "1",
+        "paragraph": "A",
+        "text": "Die Vorstellung von einer Insel hat Menschen schon immer fasziniert.",
+        "german": "Die Vorstellung von einer Insel hat Menschen schon immer fasziniert.",
+        "firstSentence": "Die Vorstellung von einer Insel hat Menschen schon immer fasziniert.",
+        "chinese": "关于岛屿的想象一直以来都令人着迷。在文学、哲学以及游记中，岛屿一次又一次地作为一个能 够带来某种特殊自由的地方出现。对于很多人来说，岛屿似乎是忙碌日常世界的对立面：一个没 有义务、没有约会安排、没有社会期待的地方。生活在岛上的人——至少在人们的想象中似乎如 此——不受外界束缚，并且可以完全按照自己的想法来安排自己的生活。这种想法绝不是新的。 早在过去几个世纪，人们就已经梦想着那些偏僻的地方，在那里他们可以远离社会生活。在许多 故事中，岛屿成为了一个寻找自我的空间：到达那里的人会发现新的能力，学会依靠简单的条件 生活，并形成一种看待生活的新视角。尤其是在一个复杂并且常常让人感到不堪重负的世界里， 这种想象具有巨大的吸引力。",
+        "sentenceZh": "关于岛屿的想象一直以来都令人着迷。",
+        "summary": "关于岛屿的想象一直以来都令人着迷。",
+        "frage": "",
+        "answer": "",
+        "raw": "Die Vorstellung von einer Insel hat Menschen schon immer fasziniert. In Literatur, Philosophie und Reiseberichten taucht sie immer wieder als Ort auf, der eine besondere Form der Freiheit verspricht. Eine Insel erscheint vielen als Gegenbild zur hektischen Welt des Alltags: ein Ort ohne Verpflichtungen, ohne Termine, ohne gesellschaftliche Erwartungen. Wer auf einer Insel lebt, so scheint es zumindest in der Vorstellung, ist unabhängig von äußeren Zwängen und kann sein Leben ganz nach eigenen Vorstellungen gestalten. Diese Idee ist keineswegs neu. Schon in früheren Jahrhunderten träumten Menschen von abgelegenen Orten, an denen sie fern von der Gesellschaft leben konnten. In vielen Geschichten wird die Insel zu einem Raum der Selbstfindung: Wer dort landet, entdeckt neue Fähigkeiten, lernt mit einfachen Mitteln auszukommen und entwickelt eine neue Perspektive auf das Leben. Gerade in einer komplexen und oft überfordernden Welt übt diese Vorstellung eine große Anziehungskraft aus.",
+        "passage": "Die Vorstellung von einer Insel hat Menschen schon immer fasziniert. In Literatur, Philosophie und Reiseberichten taucht sie immer wieder als Ort auf, der eine besondere Form der Freiheit verspricht. Eine Insel erscheint vielen als Gegenbild zur hektischen Welt des Alltags: ein Ort ohne Verpflichtungen, ohne Termine, ohne gesellschaftliche Erwartungen. Wer auf einer Insel lebt, so scheint es zumindest in der Vorstellung, ist unabhängig von äußeren Zwängen und kann sein Leben ganz nach eigenen Vorstellungen gestalten. Diese Idee ist keineswegs neu. Schon in früheren Jahrhunderten träumten Menschen von abgelegenen Orten, an denen sie fern von der Gesellschaft leben konnten. In vielen Geschichten wird die Insel zu einem Raum der Selbstfindung: Wer dort landet, entdeckt neue Fähigkeiten, lernt mit einfachen Mitteln auszukommen und entwickelt eine neue Perspektive auf das Leben. Gerade in einer komplexen und oft überfordernden Welt übt diese Vorstellung eine große Anziehungskraft aus.",
+        "items": [],
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          119,
+          120
+        ],
+        "addedIn": "2026.9"
+      },
+      {
+        "number": "2",
+        "paragraph": "B",
+        "text": "Interessanterweise muss eine solche Insel heute gar kein realer geografischer Ort mehr sein.",
+        "german": "Interessanterweise muss eine solche Insel heute gar kein realer geografischer Ort mehr sein.",
+        "firstSentence": "Interessanterweise muss eine solche Insel heute gar kein realer geografischer Ort mehr sein.",
+        "chinese": "有意思的是，如今这样的“岛屿”甚至完全不必再是一个真实的地理地点。在谈话中，人们经常会 听到这样的句子：“我迫切需要一座岛。”⁷然而，这句话所指的很少是真正在海上一块偏远的陆 地上停留。⁸ 相反，在这样的表达中，“岛屿”代表的是一种比喻意义上的退避空间。一座“岛”例 如可以是一项人们全神贯注投入其中的爱好，也可以是一个能够让人在一段时间内不受打扰的地 方。有些人在阅读时找到自己的“岛”，另一些人则在运动或者在大自然中散步时找到自己的 岛”。¹⁰ 在所有这些情况下，“岛屿”都发挥着同样的作用：它使人们与日常生活保持距离，并使人能够暂 时摆脱现代世界的各种要求。",
+        "sentenceZh": "有意思的是，如今这样的“岛屿”甚至完全不必再是一个真实的地理地点。",
+        "summary": "有意思的是，如今这样的“岛屿”甚至完全不必再是一个真实的地理地点。",
+        "frage": "beschreibt der Autor eine persönliche Vorstellung? / erklärt der Autor eine Metapher? / stellt der Autor einen Zusammenhang her?",
+        "answer": "",
+        "raw": "Interessanterweise muss eine solche Insel heute gar kein realer geografischer Ort mehr sein. In Gesprächen hört man häufig Sätze wie: „Ich brauche dringend eine Insel.“  Gemeint ist damit jedoch selten ein tatsächlicher Aufenthalt auf einer abgelegenen Landfläche im Meer . Vielmehr steht die Insel in solchen Aussagen für einen Rückzugsraum im übertragenen Sinn. Eine „Insel“ kann zum Beispiel ein Hobby sein, dem man sich mit voller Konzentration widmet, oder ein Ort, an dem man für eine gewisse Zeit ungestört ist. Manche Menschen finden ihre Insel beim Lesen, andere beim Sport oder beim Spaziergang in der Natur . In all diesen Fällen erfüllt die Insel dieselbe Funktion: Sie schafft Distanz zum Alltag und ermöglicht es, für einen Moment aus den Anforderungen der modernen Welt auszusteigen.",
+        "passage": "Interessanterweise muss eine solche Insel heute gar kein realer geografischer Ort mehr sein. In Gesprächen hört man häufig Sätze wie: „Ich brauche dringend eine Insel.“  Gemeint ist damit jedoch selten ein tatsächlicher Aufenthalt auf einer abgelegenen Landfläche im Meer . Vielmehr steht die Insel in solchen Aussagen für einen Rückzugsraum im übertragenen Sinn. Eine „Insel“ kann zum Beispiel ein Hobby sein, dem man sich mit voller Konzentration widmet, oder ein Ort, an dem man für eine gewisse Zeit ungestört ist. Manche Menschen finden ihre Insel beim Lesen, andere beim Sport oder beim Spaziergang in der Natur . In all diesen Fällen erfüllt die Insel dieselbe Funktion: Sie schafft Distanz zum Alltag und ermöglicht es, für einen Moment aus den Anforderungen der modernen Welt auszusteigen.",
+        "items": [
+          {
+            "number": "7",
+            "text": "beschreibt der Autor eine persönliche Vorstellung?",
+            "german": "beschreibt der Autor eine persönliche Vorstellung?",
+            "chinese": "",
+            "sourcePage": 120
+          },
+          {
+            "number": "8",
+            "text": "erklärt der Autor eine Metapher?",
+            "german": "erklärt der Autor eine Metapher?",
+            "chinese": "",
+            "sourcePage": 120
+          },
+          {
+            "number": "10",
+            "text": "stellt der Autor einen Zusammenhang her?",
+            "german": "stellt der Autor einen Zusammenhang her?",
+            "chinese": "",
+            "sourcePage": 120,
+            "unverified": true
+          }
+        ],
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          120
+        ],
+        "addedIn": "2026.9"
+      },
+      {
+        "number": "3",
+        "paragraph": "C",
+        "text": "Trotz dieser Sehnsucht nach Rückzug darf man jedoch nicht vergessen, dass Menschen grundsätzlich soziale Wesen sind.",
+        "german": "Trotz dieser Sehnsucht nach Rückzug darf man jedoch nicht vergessen, dass Menschen grundsätzlich soziale Wesen sind.",
+        "firstSentence": "Trotz dieser Sehnsucht nach Rückzug darf man jedoch nicht vergessen, dass Menschen grundsätzlich soziale Wesen sind.",
+        "chinese": "然而，尽管存在这种退避的渴望，也不能忘记，人从根本上来说是社会性的存在。完全的孤立很 少符合我们真正的需求。即使是那些梦想着长时间退出社会生活的人，通常也只会有限地设想这 样的生活。真正曾经长时间独处的人经常会讲到，与他人交流的需求会多么迅速地产生。交谈、 共同活动以及自己是一个群体中一员的感觉，都属于人类最基本的体验。那种认为一个完全独立 的个体生活在自己岛屿上的浪漫想象，因此很少能够经得住现实的检验。⁹",
+        "sentenceZh": "然而，尽管存在这种退避的渴望，也不能忘记，人从根本上来说是社会性的存在。",
+        "summary": "然而，尽管存在这种退避的渴望，也不能忘记，人从根本上来说是社会性的存在。",
+        "frage": "kritisiert der Autor eine bestimmte Einstellung?",
+        "answer": "",
+        "raw": "Trotz dieser Sehnsucht nach Rückzug darf man jedoch nicht vergessen, dass Menschen grundsätzlich soziale Wesen sind. Vollständige Isolation entspricht nur selten unseren tatsächlichen Bedürfnissen. Selbst diejenigen, die davon träumen, sich für längere Zeit aus der Gesellschaft zurückzuziehen, stellen sich ein solches Leben meist nur begrenzt vor. Wer tatsächlich einmal längere Zeit allein verbracht hat, berichtet oft davon, wie schnell das Bedürfnis nach Austausch entsteht. Gespräche, gemeinsame Aktivitäten und das Gefühl, Teil einer Gemeinschaft zu sein, gehören zu den grundlegenden menschlichen Erfahrungen. Die romantische Vorstellung vom völlig unabhängigen Individuum, das auf seiner eigenen Insel lebt, hält der Realität daher nur selten stand.",
+        "passage": "Trotz dieser Sehnsucht nach Rückzug darf man jedoch nicht vergessen, dass Menschen grundsätzlich soziale Wesen sind. Vollständige Isolation entspricht nur selten unseren tatsächlichen Bedürfnissen. Selbst diejenigen, die davon träumen, sich für längere Zeit aus der Gesellschaft zurückzuziehen, stellen sich ein solches Leben meist nur begrenzt vor. Wer tatsächlich einmal längere Zeit allein verbracht hat, berichtet oft davon, wie schnell das Bedürfnis nach Austausch entsteht. Gespräche, gemeinsame Aktivitäten und das Gefühl, Teil einer Gemeinschaft zu sein, gehören zu den grundlegenden menschlichen Erfahrungen. Die romantische Vorstellung vom völlig unabhängigen Individuum, das auf seiner eigenen Insel lebt, hält der Realität daher nur selten stand.",
+        "items": [
+          {
+            "number": "9",
+            "text": "kritisiert der Autor eine bestimmte Einstellung?",
+            "german": "kritisiert der Autor eine bestimmte Einstellung?",
+            "chinese": "作者是否批评了一种特定的观念？",
+            "sourcePage": 120
+          }
+        ],
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          120
+        ],
+        "addedIn": "2026.9"
+      },
+      {
+        "number": "4",
+        "paragraph": "D",
+        "text": "Gleichzeitig scheint das Bedürfnis nach solchen „Inseln“ gerade heute besonders stark zu sein .",
+        "german": "Gleichzeitig scheint das Bedürfnis nach solchen „Inseln“ gerade heute besonders stark zu sein .",
+        "firstSentence": "Gleichzeitig scheint das Bedürfnis nach solchen „Inseln“ gerade heute besonders stark zu sein .",
+        "chinese": "与此同时，人们对这种“岛屿”的需求，恰恰在今天似乎尤其强烈。¹¹ 现代通信工具使人们能够随 时保持联系。电子邮件、消息和社交网络导致许多人几乎无法再真正地放松下来。这种持续不断 的网络连接有很多优点，但它也导致安静的时刻变得越来越少。因此，一些人会有意识地在日常 生活中创造一些“小岛”：他们把智能手机放到一边，关闭网络，或者在一些别人无法联系到他们 的地方待上几个小时。这些决定起初或许显得不起眼，但却能够为保持活动与休息之间的平衡作 出重要贡献。",
+        "sentenceZh": "与此同时，人们对这种“岛屿”的需求，恰恰在今天似乎尤其强烈。",
+        "summary": "与此同时，人们对这种“岛屿”的需求，恰恰在今天似乎尤其强烈。",
+        "frage": "nennt der Autor ein Beispiel?",
+        "answer": "",
+        "raw": "Gleichzeitig scheint das Bedürfnis nach solchen „Inseln“ gerade heute besonders stark zu sein . Moderne Kommunikationsmittel ermöglichen es, jederzeit erreichbar zu sein. E-Mails, Nachrichten und soziale Netzwerke sorgen dafür, dass viele Menschen kaum noch wirklich abschalten können. Diese ständige Vernetzung hat viele Vorteile, sie führt aber auch dazu, dass Momente der Ruhe immer seltener werden. Deshalb versuchen manche Menschen bewusst, kleine Inseln im Alltag zu schaffen: Sie legen ihr Smartphone beiseite, schalten das Internet aus oder verbringen einige Stunden an Orten, an denen sie nicht erreichbar sind. Solche Entscheidungen wirken zunächst vielleicht unscheinbar, können aber einen wichtigen Beitrag dazu leisten, das Gleichgewicht zwischen Aktivität und Erholung zu bewahren.",
+        "passage": "Gleichzeitig scheint das Bedürfnis nach solchen „Inseln“ gerade heute besonders stark zu sein . Moderne Kommunikationsmittel ermöglichen es, jederzeit erreichbar zu sein. E-Mails, Nachrichten und soziale Netzwerke sorgen dafür, dass viele Menschen kaum noch wirklich abschalten können. Diese ständige Vernetzung hat viele Vorteile, sie führt aber auch dazu, dass Momente der Ruhe immer seltener werden. Deshalb versuchen manche Menschen bewusst, kleine Inseln im Alltag zu schaffen: Sie legen ihr Smartphone beiseite, schalten das Internet aus oder verbringen einige Stunden an Orten, an denen sie nicht erreichbar sind. Solche Entscheidungen wirken zunächst vielleicht unscheinbar, können aber einen wichtigen Beitrag dazu leisten, das Gleichgewicht zwischen Aktivität und Erholung zu bewahren.",
+        "items": [
+          {
+            "number": "11",
+            "text": "nennt der Autor ein Beispiel?",
+            "german": "nennt der Autor ein Beispiel?",
+            "chinese": "作者是否举了一个例子？",
+            "sourcePage": 121
+          }
+        ],
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          120,
+          121
+        ],
+        "addedIn": "2026.9"
+      },
+      {
+        "number": "5",
+        "paragraph": "E",
+        "text": "Die Insel ist deshalb weniger als konkreter Ort zu verstehen, sondern vielmehr als Symbol.",
+        "german": "Die Insel ist deshalb weniger als konkreter Ort zu verstehen, sondern vielmehr als Symbol.",
+        "firstSentence": "Die Insel ist deshalb weniger als konkreter Ort zu verstehen, sondern vielmehr als Symbol.",
+        "chinese": "因此，“岛屿”与其被理解为一个具体的地点，不如说更应该被理解为一种象征。它代表着人们对 于自主决定生活以及与社会要求保持一定距离的愿望。与此同时，它也提醒我们，完全的独立几 乎是不可能的。也许，这个比喻真正的意义恰恰就在这种矛盾关系之中。¹² 人既需要群体和社会 关系，也需要退避和独处的可能性。偶尔为自己创造一座“岛”的人，并不是永久地脱离社会，而 是在积蓄新的能量，以便之后重新积极地参与社会生活。因此，“岛屿”并不是一个逃避的地方， 而是一个保持平衡的空间——一种短暂的距离，使人能够以新的视角来看待日常生活。",
+        "sentenceZh": "因此，“岛屿”与其被理解为一个具体的地点，不如说更应该被理解为一种象征。",
+        "summary": "因此，“岛屿”与其被理解为一个具体的地点，不如说更应该被理解为一种象征。",
+        "frage": "zieht der Autor eine Schlussfolgerung?",
+        "answer": "",
+        "raw": "Die Insel ist deshalb weniger als konkreter Ort zu verstehen, sondern vielmehr als Symbol. Sie steht für den Wunsch nach Selbstbestimmung und nach einem gewissen Abstand zu den Anforderungen der Gesellschaft. Gleichzeitig erinnert sie uns daran, dass völlige Unabhängigkeit kaum möglich ist. Vielleicht liegt die eigentliche Bedeutung dieser Metapher gerade in diesem Spannungsfeld . Menschen brauchen sowohl Gemeinschaft als auch Rückzugsmöglichkeiten. Wer sich gelegentlich eine „Insel“ schafft, entzieht sich nicht dauerhaft der Gesellschaft, sondern sammelt neue Energie, um später wieder aktiv am sozialen Leben teilzunehmen. Die Insel ist damit kein Ort der Flucht, sondern ein Raum der Balance – ein kurzer Abstand, der es ermöglicht, den Alltag mit neuer Perspektive zu betrachten.",
+        "passage": "Die Insel ist deshalb weniger als konkreter Ort zu verstehen, sondern vielmehr als Symbol. Sie steht für den Wunsch nach Selbstbestimmung und nach einem gewissen Abstand zu den Anforderungen der Gesellschaft. Gleichzeitig erinnert sie uns daran, dass völlige Unabhängigkeit kaum möglich ist. Vielleicht liegt die eigentliche Bedeutung dieser Metapher gerade in diesem Spannungsfeld . Menschen brauchen sowohl Gemeinschaft als auch Rückzugsmöglichkeiten. Wer sich gelegentlich eine „Insel“ schafft, entzieht sich nicht dauerhaft der Gesellschaft, sondern sammelt neue Energie, um später wieder aktiv am sozialen Leben teilzunehmen. Die Insel ist damit kein Ort der Flucht, sondern ein Raum der Balance – ein kurzer Abstand, der es ermöglicht, den Alltag mit neuer Perspektive zu betrachten.",
+        "items": [
+          {
+            "number": "12",
+            "text": "zieht der Autor eine Schlussfolgerung?",
+            "german": "zieht der Autor eine Schlussfolgerung?",
+            "chinese": "作者是否得出一个结论？",
+            "sourcePage": 121
+          }
+        ],
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          121
+        ],
+        "addedIn": "2026.9"
+      }
+    ]
+  },
+  {
+    "teil": 24,
+    "title": "Wege der Migration – Ein persönliches Protokoll",
+    "mode": "paragraph-card",
+    "sourceText": "2026实时更新2026.9(腾讯文档实时更新）.pdf",
+    "addedIn": "2026.9",
+    "source": "tencent-2026-09",
+    "sourcePages": [
+      121,
+      122,
+      123,
+      124
+    ],
+    "questions": [
+      {
+        "number": "1",
+        "paragraph": "A",
+        "text": "Ich sitze in meinem Glasbüro in einem Berliner Software-Startup und betrachte das geschäftige Treiben auf der Torstraße.",
+        "german": "Ich sitze in meinem Glasbüro in einem Berliner Software-Startup und betrachte das geschäftige Treiben auf der Torstraße.",
+        "firstSentence": "Ich sitze in meinem Glasbüro in einem Berliner Software-Startup und betrachte das geschäftige Treiben auf der Torstraße.",
+        "chinese": "我坐在柏林一家软件初创公司的玻璃办公室里，看着 Torstraße 大街上忙碌的景象。自从我带着仅 有的一个行李箱和一个优秀的计算机科学硕士学位离开祖国以来，已经过去了将近十年。 当时，我沉浸在一种虚假的安全感中，认为技术知识是一种通用的“货币”，能够立刻为我打开所 有的大门。然而，最初几年的现实更像是一种生活在阴影中的状态。 我感觉自己就像一部外语电影中的群众演员：虽然我能够费力地理解其中的对白，但其中的文化 潜台词和细微的讽刺对我来说却始终难以理解。 当自己的认知能力被对方无意识地根据发音是否完美，或者介词选择是否正确来衡量时，这是一 种极其令人不安的经历。日常交谈中这种微妙的“去人格化”会留下痕迹，即使在取得多年职业成 功之后，也无法完全愈合。",
+        "sentenceZh": "我坐在柏林一家软件初创公司的玻璃办公室里，看着 Torstraße 大街上忙碌的景象。",
+        "summary": "我坐在柏林一家软件初创公司的玻璃办公室里，看着 Torstraße 大街上忙碌的景象。",
+        "frage": "Beschreibt der Autor ein Gefühl der Entfremdung in der neuen Umgebung?",
+        "answer": "",
+        "raw": "Ich sitze in meinem Glasbüro in einem Berliner Software-Startup und betrachte das geschäftige Treiben auf der Torstraße. Fast ein Jahrzehnt ist vergangen, seit ich mein Heimatland mit nichts als einem Koffer und einem exzellenten Masterabschluss in Informatik verlassen habe. Damals wiegte ich mich in der trügerischen Sicherheit, dass technisches Know-how eine universelle Währung sei, die mir sofort alle Türen öffnen würde. Doch die Realität der ersten Jahre glich eher einem Schattendasein. Ich fühlte mich wie ein Statist in einem fremdsprachigen Film, dessen Dialoge ich zwar mühsam dechiffrieren konnte, dessen kulturelle Untertöne und feine Ironie mir jedoch verschlossen blieben. Es ist eine zutiefst verstörende Erfahrung, wenn die eigene kognitive Leistungsfähigkeit vom Gegenüber unbewusst an der Perfektion der Aussprache oder der Wahl der Präpositionen gemessen wird. Diese subtile Form der Depersonalisierung in alltäglichen Gesprächen hinterlässt Spuren, die auch nach Jahren des beruflichen Erfolgs nicht gänzlich verheilen.",
+        "passage": "Ich sitze in meinem Glasbüro in einem Berliner Software-Startup und betrachte das geschäftige Treiben auf der Torstraße. Fast ein Jahrzehnt ist vergangen, seit ich mein Heimatland mit nichts als einem Koffer und einem exzellenten Masterabschluss in Informatik verlassen habe. Damals wiegte ich mich in der trügerischen Sicherheit, dass technisches Know-how eine universelle Währung sei, die mir sofort alle Türen öffnen würde. Doch die Realität der ersten Jahre glich eher einem Schattendasein. Ich fühlte mich wie ein Statist in einem fremdsprachigen Film, dessen Dialoge ich zwar mühsam dechiffrieren konnte, dessen kulturelle Untertöne und feine Ironie mir jedoch verschlossen blieben. Es ist eine zutiefst verstörende Erfahrung, wenn die eigene kognitive Leistungsfähigkeit vom Gegenüber unbewusst an der Perfektion der Aussprache oder der Wahl der Präpositionen gemessen wird. Diese subtile Form der Depersonalisierung in alltäglichen Gesprächen hinterlässt Spuren, die auch nach Jahren des beruflichen Erfolgs nicht gänzlich verheilen.",
+        "items": [
+          {
+            "number": "10",
+            "text": "Beschreibt der Autor ein Gefühl der Entfremdung in der neuen Umgebung?",
+            "german": "Beschreibt der Autor ein Gefühl der Entfremdung in der neuen Umgebung?",
+            "chinese": "作者是否描述了在新环境中的一种疏离感？",
+            "sourcePage": 122
+          }
+        ],
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          121,
+          122
+        ],
+        "addedIn": "2026.9"
+      },
+      {
+        "number": "2",
+        "paragraph": "B",
+        "text": "Rückblickend muss ich eingestehen, dass mein anfänglicher Eifer, mich bis zur Unkenntlichkeit anzupassen, ein psychologischer Holzweg war.",
+        "german": "Rückblickend muss ich eingestehen, dass mein anfänglicher Eifer, mich bis zur Unkenntlichkeit anzupassen, ein psychologischer Holzweg war.",
+        "firstSentence": "Rückblickend muss ich eingestehen, dass mein anfänglicher Eifer, mich bis zur Unkenntlichkeit anzupassen, ein psychologischer Holzweg war.",
+        "chinese": "回过头来看，我必须承认，我最初那种想要把自己改变到几乎让人认不出来的程度、以此来适应 环境的热情，其实是一条心理上的错误道路。 在那种近乎执着地想把所有“典型德国式”的东西内化，并消除自己出身的一切痕迹的努力中，我 一度失去了与自己价值观的联系。 我经常对自己毫不留情，表现出一种近乎自虐式的工作纪律，只是为了通过付出双倍的努力，来 弥补我所认为的移民经历带来的劣势。 如今，我把这种追求完美的冲动看作一种自我否定。当时，我本应该允许自己犯错，并且不应该 把自己的不同看作一种缺陷，而应该把它理解为自己身份中合理的一部分。 然而，我却充当了自己最严厉的监督者，时刻保持警惕，只为了不给别人留下任何可以批评我的 地方。",
+        "sentenceZh": "回过头来看，我必须承认，我最初那种想要把自己改变到几乎让人认不出来的程度、以此来适应 环境的热情，其实是一条心理上的错误道路。",
+        "summary": "回过头来看，我必须承认，我最初那种想要把自己改变到几乎让人认不出来的程度、以此来适应 环境的热情，其实是一条心理上的错误道路。",
+        "frage": "Hinterfragt der Autor den eigenen Weg?",
+        "answer": "",
+        "raw": "Rückblickend muss ich eingestehen, dass mein anfänglicher Eifer, mich bis zur Unkenntlichkeit anzupassen, ein psychologischer Holzweg war. In dem obsessiven Bestreben, alles „typisch Deutsche“ zu internalisieren und jede Spur meiner Herkunft zu tilgen, verlor ich zeitweise den Kontakt zu meinen eigenen Werten. Ich war oft unerbittlich mit mir selbst, legte eine fast schon masochistische Arbeitsdisziplin an den Tag, nur um die vermeintliche Unterlegenheit meiner migrantischen Biografie durch doppelte Leistung zu kompensieren. Heute betrachte ich diesen Perfektionsdrang als eine Form der Selbstverleugnung. Ich hätte mir damals die Freiheit zugestehen müssen, Fehler zu machen und meine Andersartigkeit nicht als Defizit, sondern als legitimen Teil meiner Identität zu begreifen. Stattdessen fungierte ich als mein eigener strengster Kontrolleur, immer auf der Hut, bloß keine Angriffsfläche für Kritik zu bieten.",
+        "passage": "Rückblickend muss ich eingestehen, dass mein anfänglicher Eifer, mich bis zur Unkenntlichkeit anzupassen, ein psychologischer Holzweg war. In dem obsessiven Bestreben, alles „typisch Deutsche“ zu internalisieren und jede Spur meiner Herkunft zu tilgen, verlor ich zeitweise den Kontakt zu meinen eigenen Werten. Ich war oft unerbittlich mit mir selbst, legte eine fast schon masochistische Arbeitsdisziplin an den Tag, nur um die vermeintliche Unterlegenheit meiner migrantischen Biografie durch doppelte Leistung zu kompensieren. Heute betrachte ich diesen Perfektionsdrang als eine Form der Selbstverleugnung. Ich hätte mir damals die Freiheit zugestehen müssen, Fehler zu machen und meine Andersartigkeit nicht als Defizit, sondern als legitimen Teil meiner Identität zu begreifen. Stattdessen fungierte ich als mein eigener strengster Kontrolleur, immer auf der Hut, bloß keine Angriffsfläche für Kritik zu bieten.",
+        "items": [
+          {
+            "number": "9",
+            "text": "Hinterfragt der Autor den eigenen Weg?",
+            "german": "Hinterfragt der Autor den eigenen Weg?",
+            "chinese": "作者是否反思/质疑了自己所走的道路？",
+            "sourcePage": 122
+          }
+        ],
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          122
+        ],
+        "addedIn": "2026.9"
+      },
+      {
+        "number": "3",
+        "paragraph": "C",
+        "text": "Was mich jedoch bis heute mit einer Mischung aus Zorn und Fassungslosigkeit erfüllt, ist die institutionelle Kälte, die einem in den hiesigen Amtsstuben entgegenschlägt.",
+        "german": "Was mich jedoch bis heute mit einer Mischung aus Zorn und Fassungslosigkeit erfüllt, ist die institutionelle Kälte, die einem in den hiesigen Amtsstuben entgegenschlägt.",
+        "firstSentence": "Was mich jedoch bis heute mit einer Mischung aus Zorn und Fassungslosigkeit erfüllt, ist die institutionelle Kälte, die einem in den hiesigen Amtsstuben entgegenschlägt.",
+        "chinese": "然而，直到今天仍然让我同时感到愤怒和难以置信的，是这里政府机关中迎面而来的那种制度性 的冷漠。人们一方面把你作为急需的高素质专业人才招揽过来，另一方面却发现自己陷入无休止 的排队等待之中，还要接受办事人员的说教，而这些办事人员似乎自己也被困在密密麻麻的行政 规定之中。这些语言障碍，以一种晦涩难懂的官僚德语表现出来，给人的感觉就像是一种有意设 置的排斥策略。人们不禁怀疑，这些官僚主义障碍不仅仅是为了维持秩序，而且还充当着一种非 正式的压力测试，用来检验新来者的心理承受能力。政治话语中所谓的“欢迎文化”与实际行政现 实之间存在的巨大差距，是一种系统性的失败，它让宝贵的潜力还没有得到发展就被扼杀了。",
+        "sentenceZh": "然而，直到今天仍然让我同时感到愤怒和难以置信的，是这里政府机关中迎面而来的那种制度性 的冷漠。",
+        "summary": "然而，直到今天仍然让我同时感到愤怒和难以置信的，是这里政府机关中迎面而来的那种制度性 的冷漠。",
+        "frage": "Kritisiert der Autor bürokratische Hürden?",
+        "answer": "",
+        "raw": "Was mich jedoch bis heute mit einer Mischung aus Zorn und Fassungslosigkeit erfüllt, ist die institutionelle Kälte, die einem in den hiesigen Amtsstuben entgegenschlägt. Man wird als dringend benötigte Hochwertfachkraft angeworben, findet sich dann aber in endlosen Warteschlangen wieder, um von Sachbearbeitern belehrt zu werden, die im Dickicht ihrer eigenen Verwaltungsvorschriften gefangen scheinen. Diese sprachlichen Barrieren, manifestiert in einem kryptischen Beamtendeutsch, wirken wie eine absichtliche Exklusionsstrategie. Es drängt sich der Verdacht auf, dass die bürokratischen Hürden nicht nur der Ordnung dienen, sondern als eine Art inoffizieller Belastungstest fungieren, der die psychische Belastbarkeit der Neuankömmlinge auf die Probe stellen soll. Die Diskrepanz zwischen der politischen Rhetorik der „Willkommenskultur“ und der gelebten administrativen Realität ist ein systemisches Versagen, das wertvolle Potenziale im Keim erstickt.",
+        "passage": "Was mich jedoch bis heute mit einer Mischung aus Zorn und Fassungslosigkeit erfüllt, ist die institutionelle Kälte, die einem in den hiesigen Amtsstuben entgegenschlägt. Man wird als dringend benötigte Hochwertfachkraft angeworben, findet sich dann aber in endlosen Warteschlangen wieder, um von Sachbearbeitern belehrt zu werden, die im Dickicht ihrer eigenen Verwaltungsvorschriften gefangen scheinen. Diese sprachlichen Barrieren, manifestiert in einem kryptischen Beamtendeutsch, wirken wie eine absichtliche Exklusionsstrategie. Es drängt sich der Verdacht auf, dass die bürokratischen Hürden nicht nur der Ordnung dienen, sondern als eine Art inoffizieller Belastungstest fungieren, der die psychische Belastbarkeit der Neuankömmlinge auf die Probe stellen soll. Die Diskrepanz zwischen der politischen Rhetorik der „Willkommenskultur“ und der gelebten administrativen Realität ist ein systemisches Versagen, das wertvolle Potenziale im Keim erstickt.",
+        "items": [
+          {
+            "number": "12",
+            "text": "Kritisiert der Autor bürokratische Hürden?",
+            "german": "Kritisiert der Autor bürokratische Hürden?",
+            "chinese": "作者是否批评了官僚主义障碍？",
+            "sourcePage": 123
+          }
+        ],
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          122,
+          123
+        ],
+        "addedIn": "2026.9"
+      },
+      {
+        "number": "4",
+        "paragraph": "D",
+        "text": "Trotz des viel beschworenen Fachkräftemangels und der Omnipräsenz des Begriffs „Diversity“ in modernen Firmenbroschüren, sind die gläsernen Decken für Menschen mit Migrationshintergrund nach wie vor Realität.",
+        "german": "Trotz des viel beschworenen Fachkräftemangels und der Omnipräsenz des Begriffs „Diversity“ in modernen Firmenbroschüren, sind die gläsernen Decken für Menschen mit Migrationshintergrund nach wie vor Realität.",
+        "firstSentence": "Trotz des viel beschworenen Fachkräftemangels und der Omnipräsenz des Begriffs „Diversity“ in modernen Firmenbroschüren, sind die gläsernen Decken für Menschen mit Migrationshintergrund nach wie vor Realität.",
+        "chinese": "尽管人们经常强调专业人才短缺，而且“多样性”这个概念在现代企业宣传册中无处不在，但是对 于有移民背景的人来说，“玻璃天花板”至今仍然是现实。具有讽刺意味的是，只要一个人能够顺 利地发挥作用，人们就会把他作为一种“丰富和补充”来赞扬；但是一旦他提出担任领导职位的要 求，就会立刻遭遇根深蒂固的刻板印象。移民经常会在无意识中被推入某些特定的边缘岗位—— 例如负责与比较棘手的国外市场进行沟通——而真正具有战略意义的核心决策，却仍然掌握在一 个成员高度同质化的小圈子里。这种隐性的分类尤其危险，因为它通常是伴随着友善的微笑出现 的。人们会因为你的“跨文化能力”而称赞你，但说得直白一点，这往往意味着：人们根本没有打 算让你成为传统意义上的决策者。",
+        "sentenceZh": "尽管人们经常强调专业人才短缺，而且“多样性”这个概念在现代企业宣传册中无处不在，但是对 于有移民背景的人来说，“玻璃天花板”至今仍然是现实。",
+        "summary": "尽管人们经常强调专业人才短缺，而且“多样性”这个概念在现代企业宣传册中无处不在，但是对 于有移民背景的人来说，“玻璃天花板”至今仍然是现实。",
+        "frage": "Geht der Autor auf die Existenz von Vorurteilen in der Gesellschaft ein?",
+        "answer": "",
+        "raw": "Trotz des viel beschworenen Fachkräftemangels und der Omnipräsenz des Begriffs „Diversity“ in modernen Firmenbroschüren, sind die gläsernen Decken für Menschen mit Migrationshintergrund nach wie vor Realität. Es ist eine bittere Ironie, dass man zwar als „Bereicherung“ gefeiert wird, solange man reibungslos funktioniert, aber sofort auf hartnäckige Stereotypen stößt, sobald man Führungsansprüche anmeldet. Oftmals werden Migranten unbewusst in bestimmte Nischen gedrängt – etwa für die Kommunikation mit schwierigen Auslandsmärkten –, während die strategischen Kernentscheidungen in einem homogenen Zirkel verbleiben. Diese unterschwellige Kategorisierung ist umso gefährlicher, da sie meist freundlich lächelnd daherkommt. Man wird für seine „interkulturelle Kompetenz“ gelobt, was im Klartext oft bedeutet, dass man für die Position des klassischen Entscheidungsträgers schlicht nicht vorgesehen ist.",
+        "passage": "Trotz des viel beschworenen Fachkräftemangels und der Omnipräsenz des Begriffs „Diversity“ in modernen Firmenbroschüren, sind die gläsernen Decken für Menschen mit Migrationshintergrund nach wie vor Realität. Es ist eine bittere Ironie, dass man zwar als „Bereicherung“ gefeiert wird, solange man reibungslos funktioniert, aber sofort auf hartnäckige Stereotypen stößt, sobald man Führungsansprüche anmeldet. Oftmals werden Migranten unbewusst in bestimmte Nischen gedrängt – etwa für die Kommunikation mit schwierigen Auslandsmärkten –, während die strategischen Kernentscheidungen in einem homogenen Zirkel verbleiben. Diese unterschwellige Kategorisierung ist umso gefährlicher, da sie meist freundlich lächelnd daherkommt. Man wird für seine „interkulturelle Kompetenz“ gelobt, was im Klartext oft bedeutet, dass man für die Position des klassischen Entscheidungsträgers schlicht nicht vorgesehen ist.",
+        "items": [
+          {
+            "number": "8",
+            "text": "Geht der Autor auf die Existenz von Vorurteilen in der Gesellschaft ein?",
+            "german": "Geht der Autor auf die Existenz von Vorurteilen in der Gesellschaft ein?",
+            "chinese": "作者是否谈到了社会中偏见的存在？",
+            "sourcePage": 123
+          }
+        ],
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          123
+        ],
+        "addedIn": "2026.9"
+      },
+      {
+        "number": "5",
+        "paragraph": "E",
+        "text": "Allen, die sich momentan in der kräftezehrenden Phase der ersten Ankunft befinden, möchte ich zurufen: Bewahrt euch eure Resilienz und lasst euch nicht von der Kälte der Paragrafen entmutigen.",
+        "german": "Allen, die sich momentan in der kräftezehrenden Phase der ersten Ankunft befinden, möchte ich zurufen: Bewahrt euch eure Resilienz und lasst euch nicht von der Kälte der Paragrafen entmutigen.",
+        "firstSentence": "Allen, die sich momentan in der kräftezehrenden Phase der ersten Ankunft befinden, möchte ich zurufen: Bewahrt euch eure Resilienz und lasst euch nicht von der Kälte der Paragrafen entmutigen.",
+        "chinese": "对于所有目前正处于刚刚抵达时那段令人精疲力竭的阶段的人，我想大声告诉你们：保持你们的 韧性，不要因为冰冷的法律条文而灰心丧气。通往社会参与的道路不是一场短跑，而是一场马拉 松，而且这场马拉松不应该独自完成。我们必须开始建立牢固的互助网络，在这样的网络中，我 们分享知识、相互支持，从而共同打破结构性的不利处境。尽管这个体系存在着不可否认的缺 陷，我仍然带着谨慎的乐观态度看待未来。人口结构的现实将不可避免地迫使这个国家学会真正 的包容。我们的存在不是一种乞求，而是这个社会至关重要的机会，因为如果没有来自外部的人 口流入，这个社会自身的创新能力就会受到损失。坚持下去——改变已经正在发生。",
+        "sentenceZh": "对于所有目前正处于刚刚抵达时那段令人精疲力竭的阶段的人，我想大声告诉你们：保持你们的 韧性，不要因为冰冷的法律条文而灰心丧气。",
+        "summary": "对于所有目前正处于刚刚抵达时那段令人精疲力竭的阶段的人，我想大声告诉你们：保持你们的 韧性，不要因为冰冷的法律条文而灰心丧气。",
+        "frage": "Drückt der Autor Hoffnung auf eine bessere Zukunft aus? / Ruft der Autor zur Solidarität mit anderen Migrant/innen auf?",
+        "answer": "",
+        "raw": "Allen, die sich momentan in der kräftezehrenden Phase der ersten Ankunft befinden, möchte ich zurufen: Bewahrt euch eure Resilienz und lasst euch nicht von der Kälte der Paragrafen entmutigen. Der Weg zur gesellschaftlichen Teilhabe ist kein Sprint, sondern ein Marathon, den man nicht alleine bestreiten sollte. Wir müssen damit beginnen, belastbare Netzwerke der Solidarität zu knüpfen, in denen wir Wissen weitergeben und uns gegenseitig stützen, um die strukturellen Benachteiligungen kollektiv aufzubrechen. Trotz der unbestreitbaren Defizite im System blicke ich mit vorsichtigem Optimismus in die Zukunft. Die demografische Realität wird dieses Land unweigerlich dazu zwingen, echte Inklusion zu lernen. Unsere Präsenz ist kein Bittgang, sondern die vitale Chance für eine Gesellschaft, die ohne den Zustrom von außen ihre eigene Innovationsfähigkeit einbüßen würde. Bleibt standhaft – der Wandel ist bereits im Gange.",
+        "passage": "Allen, die sich momentan in der kräftezehrenden Phase der ersten Ankunft befinden, möchte ich zurufen: Bewahrt euch eure Resilienz und lasst euch nicht von der Kälte der Paragrafen entmutigen. Der Weg zur gesellschaftlichen Teilhabe ist kein Sprint, sondern ein Marathon, den man nicht alleine bestreiten sollte. Wir müssen damit beginnen, belastbare Netzwerke der Solidarität zu knüpfen, in denen wir Wissen weitergeben und uns gegenseitig stützen, um die strukturellen Benachteiligungen kollektiv aufzubrechen. Trotz der unbestreitbaren Defizite im System blicke ich mit vorsichtigem Optimismus in die Zukunft. Die demografische Realität wird dieses Land unweigerlich dazu zwingen, echte Inklusion zu lernen. Unsere Präsenz ist kein Bittgang, sondern die vitale Chance für eine Gesellschaft, die ohne den Zustrom von außen ihre eigene Innovationsfähigkeit einbüßen würde. Bleibt standhaft – der Wandel ist bereits im Gange.",
+        "items": [
+          {
+            "number": "7",
+            "text": "Drückt der Autor Hoffnung auf eine bessere Zukunft aus?",
+            "german": "Drückt der Autor Hoffnung auf eine bessere Zukunft aus?",
+            "chinese": "作者是否表达了对更美好未来的希望？",
+            "sourcePage": 123
+          },
+          {
+            "number": "11",
+            "text": "Ruft der Autor zur Solidarität mit anderen Migrant/innen auf?",
+            "german": "Ruft der Autor zur Solidarität mit anderen Migrant/innen auf?",
+            "chinese": "作者是否呼吁与其他移民团结互助？",
+            "sourcePage": 123
+          }
+        ],
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          123,
+          124
+        ],
+        "addedIn": "2026.9"
+      }
+    ]
+  },
+  {
+    "teil": 25,
+    "title": "IMMER AUF DEM SPRUNG: MODERNE ARBEITSNOMADEN",
+    "mode": "paragraph-card",
+    "sourceText": "2026实时更新2026.9(腾讯文档实时更新）.pdf",
+    "addedIn": "2026.9",
+    "source": "tencent-2026-09",
+    "sourcePages": [
+      124,
+      125,
+      126
+    ],
+    "questions": [
+      {
+        "number": "1",
+        "paragraph": "A",
+        "text": "Heute Hamburg, morgen München, nächste Woche Zoll am See: Timo Antz ist ständig auf Achse.",
+        "german": "Heute Hamburg, morgen München, nächste Woche Zoll am See: Timo Antz ist ständig auf Achse.",
+        "firstSentence": "Heute Hamburg, morgen München, nächste Woche Zoll am See: Timo Antz ist ständig auf Achse.",
+        "chinese": "今天汉堡，明天慕尼黑，下周又去湖边的海关：Timo Antz 总是在路上。我在他位于波恩的公寓 里见到了他，不过想找到一个双方都有空的时间并不容易。他的日程安排得很满。多年以来，这 位自由职业的 IT 顾问一直从一个地方奔波到另一个地方。他在客户公司的工作有时持续几天，有 时持续几个月。Antz 已经因为工作原因搬过好几次家，而且他的公寓经常连续几个星期都空着。 他总是随时准备出发，随时都有可能被派到另一个地方，这一点甚至也反映在他的家居布置上。 墙壁空空荡荡，所有东西看起来都有些临时凑合的感觉，房间甚至让人觉得好像没有人居住一 样。频繁更换地点并不会让他感到困扰。恰恰相反：“这样我至少可以了解一下这个世界。” 如今，这样的生活模式已经不再是例外。因为流动性现在在职业生活中扮演着如此重要的角色， 以至于一个还相当年轻的研究领域——流动性研究——专门对此进行研究。这个领域研究流动性 和交通的发展与各种社会变迁过程之间的相互作用，同时也研究这些变化对社会和个人产生的影 响。",
+        "sentenceZh": "今天汉堡，明天慕尼黑，下周又去湖边的海关：Timo Antz 总是在路上。",
+        "summary": "今天汉堡，明天慕尼黑，下周又去湖边的海关：Timo Antz 总是在路上。",
+        "frage": "schildert die Autorin ihre persönlichen Eindrücke?",
+        "answer": "",
+        "raw": "Heute Hamburg, morgen München, nächste Woche Zoll am See: Timo Antz ist ständig auf Achse. Ich treffe ihn in seiner Wohnung in Bonn, doch einen gemeinsamen Termin zu finden war nicht einfach. Sein Zeitplan ist dicht, und seit Jahren reist der selbständige IT-Berater von einem Ort zum nächsten, seine Einsätze in den Unternehmen seiner Kunden dauern mal ein paar Tage, mal ein paar Monate. Antz hat schon einige berufsbedingte Umzüge hinter sich, und oft steht seine Wohnung wochenlang leer. Dass er immer auf dem Sprung ist, es ihn jederzeit an einen anderen Ort verschlagen kann, spiegelt sich sogar in seiner Wohnungseinrichtung wider. Die Wände sind kahl, alles sieht ein wenig provisorisch aus und die Räume wirken fast, als wären sie unbewohnt. Die vielen Ortswechsel stören ihn nicht: Im Gegenteil. So lerne ich wenigstens was von der Welt kennen. Ein solches Lebensmodell ist heute keine Ausnahme mehr. Denn Mobilität spielt im Arbeitsleben mittlerweile eine so große Rolle, dass sich ihr die noch recht junge Disziplin der Mobilitätsforschung widmet. Diese betrachtet die Entwicklung von Mobilität und Verkehr in Wechselwirkung mit vielfältigen gesellschaftlichen Veränderungsprozessen und untersucht auch deren Auswirkungen auf Gesellschaft und Individuum.",
+        "passage": "Heute Hamburg, morgen München, nächste Woche Zoll am See: Timo Antz ist ständig auf Achse. Ich treffe ihn in seiner Wohnung in Bonn, doch einen gemeinsamen Termin zu finden war nicht einfach. Sein Zeitplan ist dicht, und seit Jahren reist der selbständige IT-Berater von einem Ort zum nächsten, seine Einsätze in den Unternehmen seiner Kunden dauern mal ein paar Tage, mal ein paar Monate. Antz hat schon einige berufsbedingte Umzüge hinter sich, und oft steht seine Wohnung wochenlang leer. Dass er immer auf dem Sprung ist, es ihn jederzeit an einen anderen Ort verschlagen kann, spiegelt sich sogar in seiner Wohnungseinrichtung wider. Die Wände sind kahl, alles sieht ein wenig provisorisch aus und die Räume wirken fast, als wären sie unbewohnt. Die vielen Ortswechsel stören ihn nicht: Im Gegenteil. So lerne ich wenigstens was von der Welt kennen. Ein solches Lebensmodell ist heute keine Ausnahme mehr. Denn Mobilität spielt im Arbeitsleben mittlerweile eine so große Rolle, dass sich ihr die noch recht junge Disziplin der Mobilitätsforschung widmet. Diese betrachtet die Entwicklung von Mobilität und Verkehr in Wechselwirkung mit vielfältigen gesellschaftlichen Veränderungsprozessen und untersucht auch deren Auswirkungen auf Gesellschaft und Individuum.",
+        "items": [
+          {
+            "number": "9",
+            "text": "schildert die Autorin ihre persönlichen Eindrücke?",
+            "german": "schildert die Autorin ihre persönlichen Eindrücke?",
+            "chinese": "作者是否描述了自己的个人印象？",
+            "sourcePage": 124
+          }
+        ],
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          124
+        ],
+        "addedIn": "2026.9"
+      },
+      {
+        "number": "2",
+        "paragraph": "B",
+        "text": "Diese strahlen in viele Lebensbereiche hinein.",
+        "german": "Diese strahlen in viele Lebensbereiche hinein.",
+        "firstSentence": "Diese strahlen in viele Lebensbereiche hinein.",
+        "chinese": "这些影响会延伸到生活的许多领域。一方面，这种经常被视为理所当然的灵活性具有一些优点。 对于个人来说，它可以满足自己不断迎接新挑战的愿望；对于那些在全球开展业务并拥有众多分 公司的大型企业来说，它同样具有优势。对于这些企业而言，流动性强、受过良好教育并且尽可 能不受牵绊的员工，是理想的候选人。另一方面，这些人的生活往往是不安定的、忙碌的并且不 稳定的。尤其对于伴侣和家庭来说，不断变化的工作地点是一种负担。在新的地方很难建立新的 友谊，而且即使认识了很多人，大多数关系仍然停留在表面。流动性的一个负面影响是，对个人 来说，在一个地方扎根并真正把那里当作家乡变得越来越困难。而这还伴随着一种不可低估的危 险：如果一个人一次又一次“拔营”，无论在哪里都必须重新开始，那么他就可能面临失去方向感 和身份认同的风险。",
+        "sentenceZh": "这些影响会延伸到生活的许多领域。",
+        "summary": "这些影响会延伸到生活的许多领域。",
+        "frage": "wägt die Autorin Pro und Kontra ab?",
+        "answer": "",
+        "raw": "Diese strahlen in viele Lebensbereiche hinein. Einerseits hat die oft als selbstverständlich betrachtete Flexibilität Vorteile, sowohl für den Einzelnen, der seinen Wunsch nach immer neuen Herausforderungen erfüllen kann, als auch für größere Unternehmen, die weltweit operieren und zahlreiche Niederlassungen haben. Für sie sind mobile, gut ausgebildete und möglichst ungebundene Arbeitnehmer Traumkandidaten. Andererseits ist deren Leben oft rastlos, hektisch und unbeständig. Vor allem für Paare und Familien sind ständig wechselnde Arbeitsorte belastend. Neue Freundschaften können dort nur schwer entstehen, und auch wenn man viele Kontakte gewinnt, bleiben die meisten oberflächlich. Eine der Kehrseiten der Mobilität ist es, dass es für den Einzelnen immer schwieriger wird, sich an einem Ort zu verwurzeln und dort wirklich eine Heimat zu finden. Und dies ist mit einer Gefahr verbunden, die nicht zu unterschätzen ist: Wer immer wieder seine Zelte abbricht und überall von Neuem anfangen muss, riskiert Orientierungslosigkeit und Identitätsverlust.",
+        "passage": "Diese strahlen in viele Lebensbereiche hinein. Einerseits hat die oft als selbstverständlich betrachtete Flexibilität Vorteile, sowohl für den Einzelnen, der seinen Wunsch nach immer neuen Herausforderungen erfüllen kann, als auch für größere Unternehmen, die weltweit operieren und zahlreiche Niederlassungen haben. Für sie sind mobile, gut ausgebildete und möglichst ungebundene Arbeitnehmer Traumkandidaten. Andererseits ist deren Leben oft rastlos, hektisch und unbeständig. Vor allem für Paare und Familien sind ständig wechselnde Arbeitsorte belastend. Neue Freundschaften können dort nur schwer entstehen, und auch wenn man viele Kontakte gewinnt, bleiben die meisten oberflächlich. Eine der Kehrseiten der Mobilität ist es, dass es für den Einzelnen immer schwieriger wird, sich an einem Ort zu verwurzeln und dort wirklich eine Heimat zu finden. Und dies ist mit einer Gefahr verbunden, die nicht zu unterschätzen ist: Wer immer wieder seine Zelte abbricht und überall von Neuem anfangen muss, riskiert Orientierungslosigkeit und Identitätsverlust.",
+        "items": [
+          {
+            "number": "11",
+            "text": "wägt die Autorin Pro und Kontra ab?",
+            "german": "wägt die Autorin Pro und Kontra ab?",
+            "chinese": "作者是否权衡了优点和缺点？",
+            "sourcePage": 125
+          }
+        ],
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          124,
+          125
+        ],
+        "addedIn": "2026.9"
+      },
+      {
+        "number": "3",
+        "paragraph": "C",
+        "text": "Dies bestätigt auch der Jenaer Soziologe Hartmut Rosa der einem breiteren Publikum vor allem als Entschleunigungskritiker bekannt geworden ist.",
+        "german": "Dies bestätigt auch der Jenaer Soziologe Hartmut Rosa der einem breiteren Publikum vor allem als Entschleunigungskritiker bekannt geworden ist.",
+        "firstSentence": "Dies bestätigt auch der Jenaer Soziologe Hartmut Rosa der einem breiteren Publikum vor allem als Entschleunigungskritiker bekannt geworden ist.",
+        "chinese": "耶拿的社会学家 Hartmut Rosa 也证实了这一点。他尤其作为一名批判生活不断加速的学者而被更 广泛的公众所熟知。按照他的观点，过度的不受约束以及失去一个固定的参照点，会导致人不堪 重负。毕竟，人们习惯于在某一个特定的地方长期定居。相反，无家可归、没有固定归属会导致 疏离感：那些只短暂停留的地方，最终只能与一个人自身的身份和人生经历形成非常松散的联 系。此外，流动性的批评者还指出，如果一个人总是不断重新开始，那么他就很难在个人层面上 继续发展。于是，流动性产生了一种乍看之下十分矛盾、令人惊讶的效果：恰恰是流动，也就是 不断移动，反而可能使个人产生一种自身停滞不前的感觉。",
+        "sentenceZh": "耶拿的社会学家 Hartmut Rosa 也证实了这一点。",
+        "summary": "耶拿的社会学家 Hartmut Rosa 也证实了这一点。",
+        "frage": "gibt die Autorin einen fremden Standpunkt wieder? / zeigt die Autorin Verwunderung?",
+        "answer": "",
+        "raw": "Dies bestätigt auch der Jenaer Soziologe Hartmut Rosa der einem breiteren Publikum vor allem als Entschleunigungskritiker bekannt geworden ist. Seiner Auffassung nach führen zu große Unverbindlichkeit und der Verlust eines festen Bezugspunktes zu Überforderung. Schließlich seien es die Menschen gewohnt, sich an einem bestimmten Ort fest niederzulassen. Heimatlosigkeit führe dagegen zu Entfremdung: Orte, an denen man nur kurz bleibt, sind schließlich nur locker mit der eigenen Identität und Lebensgeschichte verknüpft. Mobilitätskritiker weisen außerdem darauf hin, immer wieder neu anfängt, kann man sich schwer persönlich weiterentwickeln. Und so bringt die Mobilität einen Effekt hervor, der zunächst paradox erscheint und Erstaunen hervorruft: Gerade Mobilität, Bewegung also, kann bei der Einzelnen das Gefühl persönlichen Stillstands hervorrufen.",
+        "passage": "Dies bestätigt auch der Jenaer Soziologe Hartmut Rosa der einem breiteren Publikum vor allem als Entschleunigungskritiker bekannt geworden ist. Seiner Auffassung nach führen zu große Unverbindlichkeit und der Verlust eines festen Bezugspunktes zu Überforderung. Schließlich seien es die Menschen gewohnt, sich an einem bestimmten Ort fest niederzulassen. Heimatlosigkeit führe dagegen zu Entfremdung: Orte, an denen man nur kurz bleibt, sind schließlich nur locker mit der eigenen Identität und Lebensgeschichte verknüpft. Mobilitätskritiker weisen außerdem darauf hin, immer wieder neu anfängt, kann man sich schwer persönlich weiterentwickeln. Und so bringt die Mobilität einen Effekt hervor, der zunächst paradox erscheint und Erstaunen hervorruft: Gerade Mobilität, Bewegung also, kann bei der Einzelnen das Gefühl persönlichen Stillstands hervorrufen.",
+        "items": [
+          {
+            "number": "8",
+            "text": "gibt die Autorin einen fremden Standpunkt wieder?",
+            "german": "gibt die Autorin einen fremden Standpunkt wieder?",
+            "chinese": "作者是否转述了他人的观点？",
+            "sourcePage": 125
+          },
+          {
+            "number": "10",
+            "text": "zeigt die Autorin Verwunderung?",
+            "german": "zeigt die Autorin Verwunderung?",
+            "chinese": "作者是否表现出了惊讶？",
+            "sourcePage": 125
+          }
+        ],
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          125
+        ],
+        "addedIn": "2026.9"
+      },
+      {
+        "number": "4",
+        "paragraph": "D",
+        "text": "Es ist anzunehmen, dass die Auswirkungen, die ständige Ortswechsel haben können, in Zukunft noch genauer untersucht werden.",
+        "german": "Es ist anzunehmen, dass die Auswirkungen, die ständige Ortswechsel haben können, in Zukunft noch genauer untersucht werden.",
+        "firstSentence": "Es ist anzunehmen, dass die Auswirkungen, die ständige Ortswechsel haben können, in Zukunft noch genauer untersucht werden.",
+        "chinese": "可以推测，不断更换地点可能产生的影响，在未来还会得到更加深入的研究。因为如今如此经常 被要求具备的流动性，其实是一种相对较新的生活模式。过去，人们通常只有在迫不得已的情况 下才会离开自己的生活中心。没有牵绊、四处漂泊，在过去带有负面的含义。甚至在20世纪70年 代，如果一个人不在任何地方固定定居，这仍然会被认为是一种不稳定的生活状态，甚至被看作 社会地位较低的标志。而那些住在廉价酒店、每天晚上都必须在餐馆吃饭的商务旅行者，引起的 往往是同情，而不是羡慕。如今，这种看法已经完全颠倒过来了：一个总是待在同一个地方、不 愿意为了工作搬到任何地方、也从来没有在国外生活过的人，会被认为能力相对较弱；相反，一 个自由穿梭于世界各地的人，则被视为更加灵活、更有抱负的“环球生活者”。",
+        "sentenceZh": "可以推测，不断更换地点可能产生的影响，在未来还会得到更加深入的研究。",
+        "summary": "可以推测，不断更换地点可能产生的影响，在未来还会得到更加深入的研究。",
+        "frage": "stellt die Autorin eine Vermutung an?",
+        "answer": "",
+        "raw": "Es ist anzunehmen, dass die Auswirkungen, die ständige Ortswechsel haben können, in Zukunft noch genauer untersucht werden. Denn die heute so oft geforderte Mobilität stellt ein relativ neues Lebenskonzept dar. In der Vergangenheit verließen Menschen ihren Lebensmittelpunkt meist nur, wenn sie dazu gezwungen waren. Ungebunden und nicht sesshaft zu sein, war früher negativ konnotiert. Noch in den siebziger Jahren galt es als prekär, als Zeichen für einen niedrigen sozialen Status gar, wenn man sich nirgends fest niederließ. Und Handlungsreisende, die in billigen Hotels nächtigten und Abend für Abend in der Gaststätte essen mussten, riefen eher Mitleid als Neid hervor. Mittlerweile hat sich diese Sichtweise in ihr Gegenteil verkehrt: Wer immer am selben Ort bleibt, nicht bereit ist, für den Job überallhin zu ziehen und auch nie im Ausland gelebt hat, gilt als weniger leistungsfähig, wer sich frei über den Globus bewegt, dagegen als flexibler und ehrgeiziger Jetsetter.",
+        "passage": "Es ist anzunehmen, dass die Auswirkungen, die ständige Ortswechsel haben können, in Zukunft noch genauer untersucht werden. Denn die heute so oft geforderte Mobilität stellt ein relativ neues Lebenskonzept dar. In der Vergangenheit verließen Menschen ihren Lebensmittelpunkt meist nur, wenn sie dazu gezwungen waren. Ungebunden und nicht sesshaft zu sein, war früher negativ konnotiert. Noch in den siebziger Jahren galt es als prekär, als Zeichen für einen niedrigen sozialen Status gar, wenn man sich nirgends fest niederließ. Und Handlungsreisende, die in billigen Hotels nächtigten und Abend für Abend in der Gaststätte essen mussten, riefen eher Mitleid als Neid hervor. Mittlerweile hat sich diese Sichtweise in ihr Gegenteil verkehrt: Wer immer am selben Ort bleibt, nicht bereit ist, für den Job überallhin zu ziehen und auch nie im Ausland gelebt hat, gilt als weniger leistungsfähig, wer sich frei über den Globus bewegt, dagegen als flexibler und ehrgeiziger Jetsetter.",
+        "items": [
+          {
+            "number": "12",
+            "text": "stellt die Autorin eine Vermutung an?",
+            "german": "stellt die Autorin eine Vermutung an?",
+            "chinese": "作者是否作出了一个推测？",
+            "sourcePage": 126
+          }
+        ],
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          125,
+          126
+        ],
+        "addedIn": "2026.9"
+      },
+      {
+        "number": "5",
+        "paragraph": "E",
+        "text": "Dabei stellt sich die Frage, ob wir uns damit von den Erfordernissen der Wirtschaft eine Lebensweise aufs zwingen lassen, die uns auf die Dauer sogar unglücklich machen könnte.",
+        "german": "Dabei stellt sich die Frage, ob wir uns damit von den Erfordernissen der Wirtschaft eine Lebensweise aufs zwingen lassen, die uns auf die Dauer sogar unglücklich machen könnte.",
+        "firstSentence": "Dabei stellt sich die Frage, ob wir uns damit von den Erfordernissen der Wirtschaft eine Lebensweise aufs zwingen lassen, die uns auf die Dauer sogar unglücklich machen könnte.",
+        "chinese": "这里就产生了一个问题：我们是否正在任由经济发展的要求，强迫我们接受一种生活方式，而这 种生活方式从长远来看甚至可能让我们变得不幸福？越来越多的公司给员工配备笔记本电脑，把 他们一会儿派往偏远的分公司，一会儿又派往忙碌的大都市。他们就像旅鼠一样，加入那些忙得 不可开交的经理、记者或顾问的大军。这些人不断从一个地方奔向另一个地方，从这种疲于奔命 的生活中获得一种自己非常重要的感觉，同时还表现出一副胸怀大志的样子。而那些四处奔波的 工作游牧者”，可能被自己的所谓伟大迷惑得太深，以至于甚至不敢说出自己内心最大的愿望： 一份安稳的工作，以及一栋位于绿地中的小房子。因为即使他们不断更换自己的居住地，很多人 真正渴望的其实只是一个真正的家。",
+        "sentenceZh": "这里就产生了一个问题：我们是否正在任由经济发展的要求，强迫我们接受一种生活方式，而这 种生活方式从长远来看甚至可能让我们变得不幸福？",
+        "summary": "这里就产生了一个问题：我们是否正在任由经济发展的要求，强迫我们接受一种生活方式，而这 种生活方式从长远来看甚至可能让我们变得不幸福？",
+        "frage": "äußert sich die Autorin polemisch?",
+        "answer": "",
+        "raw": "Dabei stellt sich die Frage, ob wir uns damit von den Erfordernissen der Wirtschaft eine Lebensweise aufs zwingen lassen, die uns auf die Dauer sogar unglücklich machen könnte. Immer mehr Firmen rüsten ihre Angestellten mit Notebooks aus und schicken sie mal in abgelegene Niederlassungen, mal in hektische Metropolen. Lemmingen ähnlich reihen diese sich in die Schar vielbeschäftigter Manager, Journalisten oder Berater ein, die von jeher ständig von einem Ort zum anderen hetzen, aus ihrem gehetzten Dasein ein Gefühl enormer Bedeutsamkeit beziehen und dabei viel Großspurigkeit zur Schau stellen, und der rastlose Jobnomade lässt sich womöglich von seiner eigenen Großartigkeit so sehr blenden, dass er seinen größten Wunsch gar nicht auszusprechen wagt: ein ruhiger Job und ein Häuschen im Grünen. Denn auch wenn sie ständig ihren Wohnort wechseln, sehnen sich viele eigentlich nur nach einem richtigen Zuhause.",
+        "passage": "Dabei stellt sich die Frage, ob wir uns damit von den Erfordernissen der Wirtschaft eine Lebensweise aufs zwingen lassen, die uns auf die Dauer sogar unglücklich machen könnte. Immer mehr Firmen rüsten ihre Angestellten mit Notebooks aus und schicken sie mal in abgelegene Niederlassungen, mal in hektische Metropolen. Lemmingen ähnlich reihen diese sich in die Schar vielbeschäftigter Manager, Journalisten oder Berater ein, die von jeher ständig von einem Ort zum anderen hetzen, aus ihrem gehetzten Dasein ein Gefühl enormer Bedeutsamkeit beziehen und dabei viel Großspurigkeit zur Schau stellen, und der rastlose Jobnomade lässt sich womöglich von seiner eigenen Großartigkeit so sehr blenden, dass er seinen größten Wunsch gar nicht auszusprechen wagt: ein ruhiger Job und ein Häuschen im Grünen. Denn auch wenn sie ständig ihren Wohnort wechseln, sehnen sich viele eigentlich nur nach einem richtigen Zuhause.",
+        "items": [
+          {
+            "number": "7",
+            "text": "äußert sich die Autorin polemisch?",
+            "german": "äußert sich die Autorin polemisch?",
+            "chinese": "作者的表达是否带有论战性/尖锐的讽刺批评？",
+            "sourcePage": 126
+          }
+        ],
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          126
+        ],
+        "addedIn": "2026.9"
+      }
+    ]
+  },
+  {
+    "teil": 26,
+    "title": "Wenn Unternehmen Personal abbauen",
+    "mode": "paragraph-card",
+    "sourceText": "2026实时更新2026.9(腾讯文档实时更新）.pdf",
+    "addedIn": "2026.9",
+    "source": "tencent-2026-09",
+    "sourcePages": [
+      126,
+      127,
+      128,
+      129
+    ],
+    "questions": [
+      {
+        "number": "1",
+        "paragraph": "A",
+        "text": "Der Begriff „Personalabbau“ gehört seit Jahrzehnten zum Wortschatz moderner Wirtschaftsgesellschaften.",
+        "german": "Der Begriff „Personalabbau“ gehört seit Jahrzehnten zum Wortschatz moderner Wirtschaftsgesellschaften.",
+        "firstSentence": "Der Begriff „Personalabbau“ gehört seit Jahrzehnten zum Wortschatz moderner Wirtschaftsgesellschaften.",
+        "chinese": "裁员”这个概念几十年来一直是现代经济社会中的常用词汇。它指的是企业采取的、旨在减少员 工数量的措施。这种做法可以通过不同的方式进行：直接解雇员工、让固定期限劳动合同到期后 不再续签，或者通过所谓的提前退休计划。在经济困难时期，企业经常采取这些手段，以降低成 本并确保自身的竞争力。与此同时，随着时间推移，人们也创造出了许多委婉的表达方式来描述 这一过程，例如“重组”“提高效率”或者“优化人员结构”。这些概念听起来具有技术性而且很中 性，但它们往往掩盖了这样一个事实：这些词语背后涉及的是一个个具体的人的命运。对于受到 影响的员工而言，裁员不仅意味着失去工作，而且往往还意味着进入一个充满巨大不确定性以及 需要重新规划职业方向的阶段。",
+        "sentenceZh": "裁员”这个概念几十年来一直是现代经济社会中的常用词汇。",
+        "summary": "裁员”这个概念几十年来一直是现代经济社会中的常用词汇。",
+        "frage": "liefert der Autor eine Definition?",
+        "answer": "",
+        "raw": "Der Begriff „Personalabbau“ gehört seit Jahrzehnten zum Wortschatz moderner Wirtschaftsgesellschaften. Darunter versteht man Maßnahmen von Unternehmen, die darauf abzielen, die Zahl der Beschäftigten zu reduzieren. Dies kann auf unterschiedliche Weise geschehen: durch direkte Entlassungen, durch das Auslaufen befristeter Arbeitsverträge oder durch sogenannte Frühverrentungsprogramme. In wirtschaftlich schwierigen Zeiten greifen Firmen häufig zu solchen Instrumenten, um Kosten zu senken und ihre Wettbewerbsfähigkeit zu sichern. Gleichzeitig hat sich im Laufe der Zeit eine Vielzahl von euphemistischen Formulierungen entwickelt, die diesen Prozess beschreiben sollen: Man spricht etwa von „Restrukturierung“, „Effizienzsteigerung“ oder „Optimierung der Personalstruktur“. Solche Begriffe klingen technisch und neutral, verdecken jedoch häufig, dass hinter ihnen konkrete menschliche Schicksale stehen. Für die betroffenen Beschäftigten bedeutet Personalabbau nicht nur den Verlust ihres Arbeitsplatzes, sondern häufig auch eine Phase großer Unsicherheit und beruflicher Neuorientierung. “",
+        "passage": "Der Begriff „Personalabbau“ gehört seit Jahrzehnten zum Wortschatz moderner Wirtschaftsgesellschaften. Darunter versteht man Maßnahmen von Unternehmen, die darauf abzielen, die Zahl der Beschäftigten zu reduzieren. Dies kann auf unterschiedliche Weise geschehen: durch direkte Entlassungen, durch das Auslaufen befristeter Arbeitsverträge oder durch sogenannte Frühverrentungsprogramme. In wirtschaftlich schwierigen Zeiten greifen Firmen häufig zu solchen Instrumenten, um Kosten zu senken und ihre Wettbewerbsfähigkeit zu sichern. Gleichzeitig hat sich im Laufe der Zeit eine Vielzahl von euphemistischen Formulierungen entwickelt, die diesen Prozess beschreiben sollen: Man spricht etwa von „Restrukturierung“, „Effizienzsteigerung“ oder „Optimierung der Personalstruktur“. Solche Begriffe klingen technisch und neutral, verdecken jedoch häufig, dass hinter ihnen konkrete menschliche Schicksale stehen. Für die betroffenen Beschäftigten bedeutet Personalabbau nicht nur den Verlust ihres Arbeitsplatzes, sondern häufig auch eine Phase großer Unsicherheit und beruflicher Neuorientierung. “",
+        "items": [
+          {
+            "number": "9",
+            "text": "liefert der Autor eine Definition?",
+            "german": "liefert der Autor eine Definition?",
+            "chinese": "作者是否给出了一个定义？",
+            "sourcePage": 127
+          }
+        ],
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          126,
+          127
+        ],
+        "addedIn": "2026.9"
+      },
+      {
+        "number": "2",
+        "paragraph": "B",
+        "text": "In den letzten Jahren hat sich jedoch eine Entwicklung gezeigt, die viele Beobachter überrascht.",
+        "german": "In den letzten Jahren hat sich jedoch eine Entwicklung gezeigt, die viele Beobachter überrascht.",
+        "firstSentence": "In den letzten Jahren hat sich jedoch eine Entwicklung gezeigt, die viele Beobachter überrascht.",
+        "chinese": "然而，在最近几年中出现了一种令许多观察者感到惊讶的发展趋势。企业一次又一次地报告利润 增长以及营业额稳定——但与此同时却宣布进行大规模裁员。对于很多人来说，这种做法显得十 分矛盾：为什么企业明明看起来经济状况很稳定，却还要裁员呢？经济专家对此现象的解释是， 企业不仅会对当前的状况作出反应，更重要的是，它们还会对未来的预期作出反应。投资者和股 东要求企业管理层长期保持盈利，并不断提高效率。因此，即使目前的经济状况看起来仍然稳 定，许多企业也会提前尝试改变自己的成本结构。所以，一家公司裁减岗位，并不一定意味着它 已经陷入危机。",
+        "sentenceZh": "然而，在最近几年中出现了一种令许多观察者感到惊讶的发展趋势。",
+        "summary": "然而，在最近几年中出现了一种令许多观察者感到惊讶的发展趋势。",
+        "frage": "zeigt der Autor Verwunderung über eine Entwicklung?",
+        "answer": "",
+        "raw": "In den letzten Jahren hat sich jedoch eine Entwicklung gezeigt, die viele Beobachter überrascht. Immer wieder berichten Unternehmen von steigenden Gewinnen und stabilen Umsätzen – und kündigen gleichzeitig umfangreiche Stellenstreichungen an. Für viele Menschen wirkt dieses Vorgehen widersprüchlich. Wie kann es sein, dass Firmen Personal abbauen, obwohl ihre wirtschaftliche Lage scheinbar solide ist? Wirtschaftsexperten erklären dieses Phänomen damit, dass Unternehmen nicht nur auf ihre aktuelle Situation reagieren, sondern vor allem auf zukünftige Erwartungen. Investoren und Aktionäre verlangen von den Unternehmensleitungen, langfristig profitabel zu bleiben und ihre Effizienz ständig zu steigern. Daher versuchen viele Firmen bereits frühzeitig, ihre Kostenstrukturen zu verändern, selbst wenn die wirtschaftliche Lage noch stabil erscheint. Dass ein Unternehmen Stellen abbaut, bedeutet also nicht unbedingt, dass es sich bereits in einer Krise befindet.",
+        "passage": "In den letzten Jahren hat sich jedoch eine Entwicklung gezeigt, die viele Beobachter überrascht. Immer wieder berichten Unternehmen von steigenden Gewinnen und stabilen Umsätzen – und kündigen gleichzeitig umfangreiche Stellenstreichungen an. Für viele Menschen wirkt dieses Vorgehen widersprüchlich. Wie kann es sein, dass Firmen Personal abbauen, obwohl ihre wirtschaftliche Lage scheinbar solide ist? Wirtschaftsexperten erklären dieses Phänomen damit, dass Unternehmen nicht nur auf ihre aktuelle Situation reagieren, sondern vor allem auf zukünftige Erwartungen. Investoren und Aktionäre verlangen von den Unternehmensleitungen, langfristig profitabel zu bleiben und ihre Effizienz ständig zu steigern. Daher versuchen viele Firmen bereits frühzeitig, ihre Kostenstrukturen zu verändern, selbst wenn die wirtschaftliche Lage noch stabil erscheint. Dass ein Unternehmen Stellen abbaut, bedeutet also nicht unbedingt, dass es sich bereits in einer Krise befindet.",
+        "items": [
+          {
+            "number": "11",
+            "text": "zeigt der Autor Verwunderung über eine Entwicklung?",
+            "german": "zeigt der Autor Verwunderung über eine Entwicklung?",
+            "chinese": "作者是否对一种发展趋势表现出惊讶？",
+            "sourcePage": 127
+          }
+        ],
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          127
+        ],
+        "addedIn": "2026.9"
+      },
+      {
+        "number": "3",
+        "paragraph": "C",
+        "text": "Die Gründe für Personalabbau sind vielfältig und reichen weit über kurzfristige wirtschaftliche Schwankungen hinaus.",
+        "german": "Die Gründe für Personalabbau sind vielfältig und reichen weit über kurzfristige wirtschaftliche Schwankungen hinaus.",
+        "firstSentence": "Die Gründe für Personalabbau sind vielfältig und reichen weit über kurzfristige wirtschaftliche Schwankungen hinaus.",
+        "chinese": "裁员的原因多种多样，而且远远不只是短期经济波动造成的。 其中最重要的因素之一是技术变革。自动化和数字化正在从根本上改变许多工作流程。过去需要 由多名员工完成的工作，如今经常可以由机器或者专门的软件程序来完成。尤其是在工业和行政 管理领域，这一趋势已经带来了显著的变化。另一个重要因素是全球化。企业长期面临竞争压 力，并试图以尽可能低的成本生产产品。如果其他国家的生产成本更低，企业就会把生产地点转 移到国外，或者减少本国员工数量。此外，还有企业内部的结构调整：企业不断根据新的市场条 件调整自身组织结构，合并部门，或者集中发展某些核心业务领域。 所有这些发展都可能导致工作岗位消失。",
+        "sentenceZh": "裁员的原因多种多样，而且远远不只是短期经济波动造成的。",
+        "summary": "裁员的原因多种多样，而且远远不只是短期经济波动造成的。",
+        "frage": "erklärt der Autor eine Ursache für Unternehmensentlassungen?",
+        "answer": "",
+        "raw": "Die Gründe für Personalabbau sind vielfältig und reichen weit über kurzfristige wirtschaftliche Schwankungen hinaus. Einer der wichtigsten Faktoren ist der technologische Wandel. Automatisierung und Digitalisierung verändern zahlreiche Arbeitsprozesse grundlegend. Tätigkeiten, die früher von mehreren Mitarbeitern erledigt wurden, können heute häufig von Maschinen oder speziellen Softwareprogrammen übernommen werden. Besonders in der Industrie und im Verwaltungsbereich hat dieser Trend zu erheblichen Veränderungen geführt. Ein weiterer wichtiger Faktor ist die Globalisierung. Unternehmen stehen unter ständigem Wettbewerbsdruck und versuchen, ihre Produkte möglichst kostengünstig herzustellen. Wenn Produktionskosten in anderen Ländern niedriger sind, verlagern Firmen ihre Standorte oder reduzieren Personal im Inland. Hinzu kommen interne Umstrukturierungen: Unternehmen passen ihre Organisation immer wieder an neue Marktbedingungen an, legen Abteilungen zusammen oder konzentrieren sich auf bestimmte Kernbereiche. All diese Entwicklungen können dazu führen, dass Arbeitsplätze wegfallen.",
+        "passage": "Die Gründe für Personalabbau sind vielfältig und reichen weit über kurzfristige wirtschaftliche Schwankungen hinaus. Einer der wichtigsten Faktoren ist der technologische Wandel. Automatisierung und Digitalisierung verändern zahlreiche Arbeitsprozesse grundlegend. Tätigkeiten, die früher von mehreren Mitarbeitern erledigt wurden, können heute häufig von Maschinen oder speziellen Softwareprogrammen übernommen werden. Besonders in der Industrie und im Verwaltungsbereich hat dieser Trend zu erheblichen Veränderungen geführt. Ein weiterer wichtiger Faktor ist die Globalisierung. Unternehmen stehen unter ständigem Wettbewerbsdruck und versuchen, ihre Produkte möglichst kostengünstig herzustellen. Wenn Produktionskosten in anderen Ländern niedriger sind, verlagern Firmen ihre Standorte oder reduzieren Personal im Inland. Hinzu kommen interne Umstrukturierungen: Unternehmen passen ihre Organisation immer wieder an neue Marktbedingungen an, legen Abteilungen zusammen oder konzentrieren sich auf bestimmte Kernbereiche. All diese Entwicklungen können dazu führen, dass Arbeitsplätze wegfallen.",
+        "items": [
+          {
+            "number": "7",
+            "text": "erklärt der Autor eine Ursache für Unternehmensentlassungen?",
+            "german": "erklärt der Autor eine Ursache für Unternehmensentlassungen?",
+            "chinese": "作者是否解释了企业裁员的一个原因？",
+            "sourcePage": 127
+          }
+        ],
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          127,
+          128
+        ],
+        "addedIn": "2026.9"
+      },
+      {
+        "number": "4",
+        "paragraph": "D",
+        "text": "Konkrete Beispiele für solche Entwicklungen lassen sich in vielen Branchen beobachten.",
+        "german": "Konkrete Beispiele für solche Entwicklungen lassen sich in vielen Branchen beobachten.",
+        "firstSentence": "Konkrete Beispiele für solche Entwicklungen lassen sich in vielen Branchen beobachten.",
+        "chinese": "在许多行业中都可以观察到这种发展的具体实例。例如，在汽车行业，多家大型制造商已经宣 布，将在未来几年裁减数千个岗位，因为它们希望让生产更加侧重于电动汽车。这种技术变革不 仅改变了汽车本身，也改变了生产流程，因此某些工作未来需要的劳动力会更少。银行业也出现 了类似趋势。过去几年，大量银行网点被关闭，因为越来越多的客户开始在网上办理银行业务。 因此，传统的银行柜台工作岗位变得越来越不重要。而在零售业，不断发展的网络购物则导致传 统商店需要的员工越来越少，甚至有些传统商店会彻底消失。这些例子说明，裁员往往是大规模 结构性变化的一部分，并不能仅仅用短期经济困难来解释。",
+        "sentenceZh": "在许多行业中都可以观察到这种发展的具体实例。",
+        "summary": "在许多行业中都可以观察到这种发展的具体实例。",
+        "frage": "nennt der Autor konkrete Beispiele aus der Praxis?",
+        "answer": "",
+        "raw": "Konkrete Beispiele für solche Entwicklungen lassen sich in vielen Branchen beobachten. In der Automobilindustrie etwa haben mehrere große Hersteller angekündigt, in den kommenden Jahren tausende Stellen abzubauen, weil sie ihre Produktion stärker auf Elektromobilität ausrichten wollen. Dieser technologische Wandel verändert nicht nur die Fahrzeuge selbst, sondern auch die Produktionsprozesse, sodass bestimmte Tätigkeiten künftig weniger Arbeitskräfte erfordern.Auch im Bankensektor zeigt sich ein ähnlicher Trend. Zahlreiche Filialen wurden in den vergangenen Jahren geschlossen, da immer mehr Kunden ihre Bankgeschäfte online erledigen. Dadurch verlieren klassische Schalterarbeitsplätze an Bedeutung. Im Einzelhandel wiederum sorgt der wachsende Onlinehandel dafür, dass traditionelle Geschäfte weniger Personal benötigen oder ganz verschwinden. Diese Beispiele verdeutlichen, dass Personalabbau häufig Teil umfassender struktureller Veränderungen ist und nicht allein durch kurzfristige wirtschaftliche Schwierigkeiten erklärt werden kann.",
+        "passage": "Konkrete Beispiele für solche Entwicklungen lassen sich in vielen Branchen beobachten. In der Automobilindustrie etwa haben mehrere große Hersteller angekündigt, in den kommenden Jahren tausende Stellen abzubauen, weil sie ihre Produktion stärker auf Elektromobilität ausrichten wollen. Dieser technologische Wandel verändert nicht nur die Fahrzeuge selbst, sondern auch die Produktionsprozesse, sodass bestimmte Tätigkeiten künftig weniger Arbeitskräfte erfordern.Auch im Bankensektor zeigt sich ein ähnlicher Trend. Zahlreiche Filialen wurden in den vergangenen Jahren geschlossen, da immer mehr Kunden ihre Bankgeschäfte online erledigen. Dadurch verlieren klassische Schalterarbeitsplätze an Bedeutung. Im Einzelhandel wiederum sorgt der wachsende Onlinehandel dafür, dass traditionelle Geschäfte weniger Personal benötigen oder ganz verschwinden. Diese Beispiele verdeutlichen, dass Personalabbau häufig Teil umfassender struktureller Veränderungen ist und nicht allein durch kurzfristige wirtschaftliche Schwierigkeiten erklärt werden kann.",
+        "items": [
+          {
+            "number": "10",
+            "text": "nennt der Autor konkrete Beispiele aus der Praxis?",
+            "german": "nennt der Autor konkrete Beispiele aus der Praxis?",
+            "chinese": "作者是否列举了来自现实中的具体例子？",
+            "sourcePage": 128
+          }
+        ],
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          128
+        ],
+        "addedIn": "2026.9"
+      },
+      {
+        "number": "5",
+        "paragraph": "E",
+        "text": "Gleichzeitig wird in der öffentlichen Diskussion immer häufiger die Frage gestellt, ob Unternehmen ausreichend Verantwortung gegenüber ihren Beschäftigten übernehmen.",
+        "german": "Gleichzeitig wird in der öffentlichen Diskussion immer häufiger die Frage gestellt, ob Unternehmen ausreichend Verantwortung gegenüber ihren Beschäftigten übernehmen.",
+        "firstSentence": "Gleichzeitig wird in der öffentlichen Diskussion immer häufiger die Frage gestellt, ob Unternehmen ausreichend Verantwortung gegenüber ihren Beschäftigten übernehmen.",
+        "chinese": "与此同时，在公共讨论中，人们越来越频繁地提出这样一个问题：企业是否对自己的员工承担了 足够的责任？批评者指责一些大型企业过快地把裁员看作一种看似简单的解决办法，而不是制定 长期战略。他们认为，投资员工继续教育或者企业内部的转岗培训计划，可能是一种更加可持续 的解决方式。然而，另一些专家指出，经济现实同样不能被忽视。企业必须适应不断变化的市场 条件，才能够长期生存下去。尽管如此，我们仍然可以从这一发展中得出一个重要结论：在一个 快速变化的职场中，对于劳动者来说，不断提升自己的职业资质和能力将变得越来越重要。 因此，“终身学习”已经不再只是一句口号，而是未来继续拥有职业机会的一项核心前提。",
+        "sentenceZh": "与此同时，在公共讨论中，人们越来越频繁地提出这样一个问题：企业是否对自己的员工承担了 足够的责任？",
+        "summary": "与此同时，在公共讨论中，人们越来越频繁地提出这样一个问题：企业是否对自己的员工承担了 足够的责任？",
+        "frage": "äußert der Autor eine kritische Bewertung der Situation? / zieht der Autor eine Schlussfolgerung oder Empfehlung?",
+        "answer": "",
+        "raw": "Gleichzeitig wird in der öffentlichen Diskussion immer häufiger die Frage gestellt, ob Unternehmen ausreichend Verantwortung gegenüber ihren Beschäftigten übernehmen. Kritiker werfen einigen Konzernen vor, Personalabbau zu schnell als scheinbar einfache Lösung zu betrachten, anstatt langfristige Strategien zu entwickeln. Sie argumentieren, dass Investitionen in Weiterbildung oder interne Umschulungsprogramme für die Mitarbeiter nachhaltiger sein könnten.Andere Experten weisen jedoch darauf hin, dass wirtschaftliche Realitäten nicht ignoriert werden dürfen. Unternehmen müssen sich an veränderte Marktbedingungen anpassen, um langfristig bestehen zu können. Dennoch lässt sich aus dieser Entwicklung eine wichtige Schlussfolgerung ziehen: In einer sich schnell wandelnden Arbeitswelt wird es für Arbeitnehmer immer entscheidender, ihre Qualifikationen kontinuierlich weiterzuentwickeln. Lebenslanges Lernen ist damit nicht mehr nur ein Schlagwort, sondern eine zentrale Voraussetzung, um auch in Zukunft berufliche Chancen zu haben.",
+        "passage": "Gleichzeitig wird in der öffentlichen Diskussion immer häufiger die Frage gestellt, ob Unternehmen ausreichend Verantwortung gegenüber ihren Beschäftigten übernehmen. Kritiker werfen einigen Konzernen vor, Personalabbau zu schnell als scheinbar einfache Lösung zu betrachten, anstatt langfristige Strategien zu entwickeln. Sie argumentieren, dass Investitionen in Weiterbildung oder interne Umschulungsprogramme für die Mitarbeiter nachhaltiger sein könnten.Andere Experten weisen jedoch darauf hin, dass wirtschaftliche Realitäten nicht ignoriert werden dürfen. Unternehmen müssen sich an veränderte Marktbedingungen anpassen, um langfristig bestehen zu können. Dennoch lässt sich aus dieser Entwicklung eine wichtige Schlussfolgerung ziehen: In einer sich schnell wandelnden Arbeitswelt wird es für Arbeitnehmer immer entscheidender, ihre Qualifikationen kontinuierlich weiterzuentwickeln. Lebenslanges Lernen ist damit nicht mehr nur ein Schlagwort, sondern eine zentrale Voraussetzung, um auch in Zukunft berufliche Chancen zu haben.",
+        "items": [
+          {
+            "number": "8",
+            "text": "äußert der Autor eine kritische Bewertung der Situation?",
+            "german": "äußert der Autor eine kritische Bewertung der Situation?",
+            "chinese": "作者是否对当前情况作出了批判性的评价？",
+            "sourcePage": 128
+          },
+          {
+            "number": "12",
+            "text": "zieht der Autor eine Schlussfolgerung oder Empfehlung?",
+            "german": "zieht der Autor eine Schlussfolgerung oder Empfehlung?",
+            "chinese": "作者是否得出了一个结论或提出了建议？",
+            "sourcePage": 128
+          }
+        ],
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          128,
+          129
+        ],
+        "addedIn": "2026.9"
+      }
+    ]
   }
 ];

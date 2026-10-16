@@ -1012,5 +1012,1171 @@ window.HV1_QUESTIONS = [
         "audio": ""
       }
     ]
+  },
+  {
+    "teil": "12-2",
+    "title": "Grünflächen（第二版）",
+    "mode": "corpus-card",
+    "sourceText": "2026实时更新2026.9(腾讯文档实时更新）.pdf",
+    "addedIn": "2026.9",
+    "source": "tencent-2026-09",
+    "sourcePages": [
+      219,
+      220
+    ],
+    "questions": [
+      {
+        "number": "1",
+        "text": "Sprecher 1: Welcher Leitsatz passt?",
+        "german": "Sprecher 1: Welcher Leitsatz passt?",
+        "chinese": "社区花园提供了比人们想象中更多的非传统方式来创造绿地。",
+        "answer": "",
+        "answerText": "C. Eine Stadt bietet mehr unkonventionelle Möglichkeiten, Grünflächen zu schaffen, als gedacht.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          220
+        ],
+        "reviewGerman": "Eine Stadt bietet mehr unkonventionelle Möglichkeiten, Grünflächen zu schaffen, als gedacht.",
+        "sourceAnswer": "C",
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      },
+      {
+        "number": "2",
+        "text": "Sprecher 2: Welcher Leitsatz passt?",
+        "german": "Sprecher 2: Welcher Leitsatz passt?",
+        "chinese": "城市并不是种植蔬菜的理想环境。",
+        "answer": "",
+        "answerText": "I. Städte sind keine gute Umgebung für den Anbau von Gemüse.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          220
+        ],
+        "reviewGerman": "Städte sind keine gute Umgebung für den Anbau von Gemüse.",
+        "sourceAnswer": "I",
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      },
+      {
+        "number": "3",
+        "text": "Sprecher 3: Welcher Leitsatz passt?",
+        "german": "Sprecher 3: Welcher Leitsatz passt?",
+        "chinese": "社区花园能增强社区街区（小区）里的凝聚力。",
+        "answer": "",
+        "answerText": "B. Gemeinschaftsgärten stärken den Zusammenhalt im Stadtviertel.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          220
+        ],
+        "reviewGerman": "Gemeinschaftsgärten stärken den Zusammenhalt im Stadtviertel.",
+        "sourceAnswer": "B",
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      },
+      {
+        "number": "4",
+        "text": "Sprecher 4: Welcher Leitsatz passt?",
+        "german": "Sprecher 4: Welcher Leitsatz passt?",
+        "chinese": "社区花园也可以用于教育目的。",
+        "answer": "",
+        "answerText": "D. Gemeinschaftsgärten können auch zu pädagogischen Zwecken eingesetzt werden.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          220
+        ],
+        "reviewGerman": "Gemeinschaftsgärten können auch zu pädagogischen Zwecken eingesetzt werden.",
+        "sourceAnswer": "D",
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      },
+      {
+        "number": "5",
+        "text": "Sprecher 5: Welcher Leitsatz passt?",
+        "german": "Sprecher 5: Welcher Leitsatz passt?",
+        "chinese": "城市增绿对城市气候有正面影响。",
+        "answer": "",
+        "answerText": "E. Die Begrünung von Städten hat positive Auswirkungen auf das Stadtklima.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          220
+        ],
+        "reviewGerman": "Die Begrünung von Städten hat positive Auswirkungen auf das Stadtklima.",
+        "sourceAnswer": "E",
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      },
+      {
+        "number": "6",
+        "text": "Sprecher 6: Welcher Leitsatz passt?",
+        "german": "Sprecher 6: Welcher Leitsatz passt?",
+        "chinese": "头顶的屋檐（有个住处）比手里自己种出来的胡萝卜更重要",
+        "answer": "",
+        "answerText": "J. Das Dach über den Kopf ist wichtiger als die selbstgezogene Mohrrübe in der Hand.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          220
+        ],
+        "reviewGerman": "Das Dach über den Kopf ist wichtiger als die selbstgezogene Mohrrübe in der Hand.",
+        "sourceAnswer": "J",
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      },
+      {
+        "number": "7",
+        "text": "Sprecher 7: Welcher Leitsatz passt?",
+        "german": "Sprecher 7: Welcher Leitsatz passt?",
+        "chinese": "绿地对心理健康有积极影响。",
+        "answer": "",
+        "answerText": "G. Grünflächen wirken sich positiv auf die psychische Gesundheit aus.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          220
+        ],
+        "reviewGerman": "Grünflächen wirken sich positiv auf die psychische Gesundheit aus.",
+        "sourceAnswer": "G",
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      },
+      {
+        "number": "8",
+        "text": "Sprecher 8: Welcher Leitsatz passt?",
+        "german": "Sprecher 8: Welcher Leitsatz passt?",
+        "chinese": "城市绿地往往并不十分干净。",
+        "answer": "",
+        "answerText": "A. Städtische Grünflächen sind oft kein Musterbeispiel an Sauberkeit.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          220
+        ],
+        "reviewGerman": "Städtische Grünflächen sind oft kein Musterbeispiel an Sauberkeit.",
+        "sourceAnswer": "A",
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      }
+    ]
+  },
+  {
+    "teil": "13-2",
+    "title": "Nebenjob im Studium（第二版）",
+    "mode": "corpus-card",
+    "sourceText": "2026实时更新2026.9(腾讯文档实时更新）.pdf",
+    "addedIn": "2026.9",
+    "source": "tencent-2026-09",
+    "sourcePages": [
+      221,
+      222
+    ],
+    "questions": [
+      {
+        "number": "1",
+        "text": "Sprecher 1: Welcher Leitsatz passt?",
+        "german": "Sprecher 1: Welcher Leitsatz passt?",
+        "chinese": "服务行业的工作能在很大程度上促进沟通能力。",
+        "answer": "",
+        "answerText": "G. Jobs im Dienstleistungssektor fördern maßgeblich die kommunikativen Kompetenzen.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          221
+        ],
+        "reviewGerman": "Jobs im Dienstleistungssektor fördern maßgeblich die kommunikativen Kompetenzen.",
+        "sourceAnswer": "G",
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      },
+      {
+        "number": "2",
+        "text": "Sprecher 2: Welcher Leitsatz passt?",
+        "german": "Sprecher 2: Welcher Leitsatz passt?",
+        "chinese": "尽快完成学业是最优先的目标，因此放弃从事有报酬的工作。",
+        "answer": "",
+        "answerText": "B. Ein zügiger Studienabschluss hat oberste Priorität, weshalb auf eine Erwerbstätigkeit verzichtet wird.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          221
+        ],
+        "reviewGerman": "Ein zügiger Studienabschluss hat oberste Priorität, weshalb auf eine Erwerbstätigkeit verzichtet wird.",
+        "sourceAnswer": "B",
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      },
+      {
+        "number": "3",
+        "text": "Sprecher 3: Welcher Leitsatz passt?",
+        "german": "Sprecher 3: Welcher Leitsatz passt?",
+        "chinese": "通过在学院/研究所工作，可以在院系内部建立宝贵的人脉联系。",
+        "answer": "",
+        "answerText": "A. Durch die Tätigkeit am Institut lassen sich wertvolle Kontakte innerhalb der Fakultät knüpfen.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          221
+        ],
+        "reviewGerman": "Durch die Tätigkeit am Institut lassen sich wertvolle Kontakte innerhalb der Fakultät knüpfen.",
+        "sourceAnswer": "A",
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      },
+      {
+        "number": "4",
+        "text": "Sprecher 4: Welcher Leitsatz passt?",
+        "german": "Sprecher 4: Welcher Leitsatz passt?",
+        "chinese": "双重负担会导致学业成绩明显下降。",
+        "answer": "",
+        "answerText": "C. Die Doppelbelastung führt dazu, dass die akademischen Leistungen deutlich nachlassen.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          222
+        ],
+        "reviewGerman": "Die Doppelbelastung führt dazu, dass die akademischen Leistungen deutlich nachlassen.",
+        "sourceAnswer": "C",
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      },
+      {
+        "number": "5",
+        "text": "Sprecher 5: Welcher Leitsatz passt?",
+        "german": "Sprecher 5: Welcher Leitsatz passt?",
+        "chinese": "能够把工作时间灵活地配合课表安排的自由度尤其重要。",
+        "answer": "",
+        "answerText": "F. Die Freiheit, die Arbeitszeiten flexibel an den Stundenplan anzupassen, ist besonders wichtig.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          222
+        ],
+        "reviewGerman": "Die Freiheit, die Arbeitszeiten flexibel an den Stundenplan anzupassen, ist besonders wichtig.",
+        "sourceAnswer": "F",
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      },
+      {
+        "number": "6",
+        "text": "Sprecher 6: Welcher Leitsatz passt?",
+        "german": "Sprecher 6: Welcher Leitsatz passt?",
+        "chinese": "兼职工作为大学里的脑力学习提供了一个受欢迎的调剂/放松。",
+        "answer": "",
+        "answerText": "D. Die Nebentätigkeit bietet einen willkommenen Ausgleich zur geistigen Anstrengung an der Uni.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          222
+        ],
+        "reviewGerman": "Die Nebentätigkeit bietet einen willkommenen Ausgleich zur geistigen Anstrengung an der Uni.",
+        "sourceAnswer": "D",
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      },
+      {
+        "number": "7",
+        "text": "Sprecher 7: Welcher Leitsatz passt?",
+        "german": "Sprecher 7: Welcher Leitsatz passt?",
+        "chinese": "在目标职业领域的实践经验比纯理论更受重视。",
+        "answer": "",
+        "answerText": "H. Praktische Erfahrungen im angestrebten Berufsfeld werden höher bewertet als reine Theorie.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          222
+        ],
+        "reviewGerman": "Praktische Erfahrungen im angestrebten Berufsfeld werden höher bewertet als reine Theorie.",
+        "sourceAnswer": "H",
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      },
+      {
+        "number": "8",
+        "text": "Sprecher 8: Welcher Leitsatz passt?",
+        "german": "Sprecher 8: Welcher Leitsatz passt?",
+        "chinese": "由于工作在时间上的占用，私人生活被挤压得不够。",
+        "answer": "",
+        "answerText": "I. Aufgrund der zeitlichen Beanspruchung durch den Job kommt das Privatleben zu kurz.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          222
+        ],
+        "reviewGerman": "Aufgrund der zeitlichen Beanspruchung durch den Job kommt das Privatleben zu kurz.",
+        "sourceAnswer": "I",
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      }
+    ]
+  },
+  {
+    "teil": "14-1",
+    "title": "Online Bücher",
+    "mode": "corpus-card",
+    "sourceText": "2026实时更新2026.9(腾讯文档实时更新）.pdf",
+    "addedIn": "2026.9",
+    "source": "tencent-2026-09",
+    "sourcePages": [
+      222,
+      223
+    ],
+    "questions": [
+      {
+        "number": "1",
+        "text": "Sprecher 1: Welcher Leitsatz passt?",
+        "german": "Sprecher 1: Welcher Leitsatz passt?",
+        "chinese": "传统书店已经不合时宜。",
+        "answer": "",
+        "answerText": "Herkömmliche Buchläden sind einfach nicht mehr Zeitgemäß .",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          222
+        ],
+        "reviewGerman": "Herkömmliche Buchläden sind einfach nicht mehr Zeitgemäß .",
+        "sourceAnswer": null,
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      },
+      {
+        "number": "2",
+        "text": "Sprecher 2: Welcher Leitsatz passt?",
+        "german": "Sprecher 2: Welcher Leitsatz passt?",
+        "chinese": "便捷性是在线购书的一个重要因素。",
+        "answer": "",
+        "answerText": "Bequemlichkeit ist ein wesentliches Argument für den Online-Verkauf von Büchern .",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          222
+        ],
+        "reviewGerman": "Bequemlichkeit ist ein wesentliches Argument für den Online-Verkauf von Büchern .",
+        "sourceAnswer": null,
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      },
+      {
+        "number": "3",
+        "text": "Sprecher 3: Welcher Leitsatz passt?",
+        "german": "Sprecher 3: Welcher Leitsatz passt?",
+        "chinese": "只有在好的书店里才能获得亲切的阅读建议。",
+        "answer": "",
+        "answerText": "Freundliche Lesentipps kann man nur in einer gut sortierten Buchhandlung erwarten .",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          222
+        ],
+        "reviewGerman": "Freundliche Lesentipps kann man nur in einer gut sortierten Buchhandlung erwarten .",
+        "sourceAnswer": null,
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      },
+      {
+        "number": "4",
+        "text": "Sprecher 4: Welcher Leitsatz passt?",
+        "german": "Sprecher 4: Welcher Leitsatz passt?",
+        "chinese": "线上销售和传统书店是相互竞争的关系。",
+        "answer": "",
+        "answerText": "Online-Verkauf und traditioneller Buchhandel stehen in Konkurrenz zueinander.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          222
+        ],
+        "reviewGerman": "Online-Verkauf und traditioneller Buchhandel stehen in Konkurrenz zueinander.",
+        "sourceAnswer": null,
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      },
+      {
+        "number": "5",
+        "text": "Sprecher 5: Welcher Leitsatz passt?",
+        "german": "Sprecher 5: Welcher Leitsatz passt?",
+        "chinese": "书的外观设计只能在书店才能好好评估。",
+        "answer": "",
+        "answerText": "Die äußere Gestaltung der Bücher lässt sich nur im Buchhandel beurteilen .",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          222
+        ],
+        "reviewGerman": "Die äußere Gestaltung der Bücher lässt sich nur im Buchhandel beurteilen .",
+        "sourceAnswer": null,
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      },
+      {
+        "number": "6",
+        "text": "Sprecher 6: Welcher Leitsatz passt?",
+        "german": "Sprecher 6: Welcher Leitsatz passt?",
+        "chinese": "只有书店能激发阅读的乐趣。",
+        "answer": "",
+        "answerText": "Nur Buchhandlung sind in der Lage , die Freude am Buch zu wecken.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          223
+        ],
+        "reviewGerman": "Nur Buchhandlung sind in der Lage , die Freude am Buch zu wecken.",
+        "sourceAnswer": null,
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      },
+      {
+        "number": "7",
+        "text": "Sprecher 7: Welcher Leitsatz passt?",
+        "german": "Sprecher 7: Welcher Leitsatz passt?",
+        "chinese": "传统书店未来需要采用替代销售策略。",
+        "answer": "",
+        "answerText": "Der traditionelle Buchhandel braucht in Zukunft alternative Verkaufstatriegen.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          223
+        ],
+        "reviewGerman": "Der traditionelle Buchhandel braucht in Zukunft alternative Verkaufstatriegen.",
+        "sourceAnswer": null,
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      },
+      {
+        "number": "8",
+        "text": "Sprecher 8: Welcher Leitsatz passt?",
+        "german": "Sprecher 8: Welcher Leitsatz passt?",
+        "chinese": "在线书店确保了书籍的普及性。",
+        "answer": "",
+        "answerText": "Der Online-Buchhandel sichert die Verfügbarkeit für alle .",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          223
+        ],
+        "reviewGerman": "Der Online-Buchhandel sichert die Verfügbarkeit für alle .",
+        "sourceAnswer": null,
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      }
+    ]
+  },
+  {
+    "teil": "14-2",
+    "title": "Bargeld",
+    "mode": "corpus-card",
+    "sourceText": "2026实时更新2026.9(腾讯文档实时更新）.pdf",
+    "addedIn": "2026.9",
+    "source": "tencent-2026-09",
+    "sourcePages": [
+      223,
+      224
+    ],
+    "questions": [
+      {
+        "number": "1",
+        "text": "Sprecher 1: Welcher Leitsatz passt?",
+        "german": "Sprecher 1: Welcher Leitsatz passt?",
+        "chinese": "在一些国家，现金的使用已经受到限制。",
+        "answer": "",
+        "answerText": "H. In einigen Staaten wird die Verwendung von Bargeld bereits eingeschränkt.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          223
+        ],
+        "reviewGerman": "In einigen Staaten wird die Verwendung von Bargeld bereits eingeschränkt.",
+        "sourceAnswer": "H",
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      },
+      {
+        "number": "2",
+        "text": "Sprecher 2: Welcher Leitsatz passt?",
+        "german": "Sprecher 2: Welcher Leitsatz passt?",
+        "chinese": "无现金支付是打击犯罪的重要手段之一",
+        "answer": "",
+        "answerText": "B. Der bargeldlose Zahlungsverkehr ist ein wichtiger Faktor in der Kriminalitätsbekämpfung.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          223
+        ],
+        "reviewGerman": "Der bargeldlose Zahlungsverkehr ist ein wichtiger Faktor in der Kriminalitätsbekämpfung.",
+        "sourceAnswer": "B",
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      },
+      {
+        "number": "3",
+        "text": "Sprecher 3: Welcher Leitsatz passt?",
+        "german": "Sprecher 3: Welcher Leitsatz passt?",
+        "chinese": "取消现金是对人们个人自由的一种干涉。",
+        "answer": "",
+        "answerText": "E. Die Abschaffung von Bargeld ist ein Eingriff in die persönliche Freiheit der Menschen.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          223
+        ],
+        "reviewGerman": "Die Abschaffung von Bargeld ist ein Eingriff in die persönliche Freiheit der Menschen.",
+        "sourceAnswer": "E",
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      },
+      {
+        "number": "4",
+        "text": "Sprecher 4: Welcher Leitsatz passt?",
+        "german": "Sprecher 4: Welcher Leitsatz passt?",
+        "chinese": "目前，大量资金正被投入到无现金支付系统中",
+        "answer": "",
+        "answerText": "D. Derzeit wird viel Geld in bargeldlose Zahlungssysteme investiert.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          223
+        ],
+        "reviewGerman": "Derzeit wird viel Geld in bargeldlose Zahlungssysteme investiert.",
+        "sourceAnswer": "D",
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      },
+      {
+        "number": "5",
+        "text": "Sprecher 5: Welcher Leitsatz passt?",
+        "german": "Sprecher 5: Welcher Leitsatz passt?",
+        "chinese": "无现金支付太缺乏人情味了。",
+        "answer": "",
+        "answerText": "A. Bargeldlose Zahlen ist zu unpersönlich.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          223
+        ],
+        "reviewGerman": "Bargeldlose Zahlen ist zu unpersönlich.",
+        "sourceAnswer": "A",
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      },
+      {
+        "number": "6",
+        "text": "Sprecher 6: Welcher Leitsatz passt?",
+        "german": "Sprecher 6: Welcher Leitsatz passt?",
+        "chinese": "取消现金并不是打击偷税漏税的有效方法。",
+        "answer": "",
+        "answerText": "F. Die Abschaffung von Bargeld ist kein effizient Mittle gegen Steuerbetrug.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          223
+        ],
+        "reviewGerman": "Die Abschaffung von Bargeld ist kein effizient Mittle gegen Steuerbetrug.",
+        "sourceAnswer": "F",
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      },
+      {
+        "number": "7",
+        "text": "Sprecher 7: Welcher Leitsatz passt?",
+        "german": "Sprecher 7: Welcher Leitsatz passt?",
+        "chinese": "数字支付系统无法得到足够可靠的保护来防范攻击。",
+        "answer": "",
+        "answerText": "C. Der digitale Zahlungsverkehr kann nicht gut genug gegen Angriffe abgeschirmt werden.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          223
+        ],
+        "reviewGerman": "Der digitale Zahlungsverkehr kann nicht gut genug gegen Angriffe abgeschirmt werden.",
+        "sourceAnswer": "C",
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      },
+      {
+        "number": "8",
+        "text": "Sprecher 8: Welcher Leitsatz passt?",
+        "german": "Sprecher 8: Welcher Leitsatz passt?",
+        "chinese": "许多德国人觉得口袋里带着现金会更有安全感。",
+        "answer": "",
+        "answerText": "J. Viele Deutsche fühlen sich mit Barern in der Tasche wohl.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          224
+        ],
+        "reviewGerman": "Viele Deutsche fühlen sich mit Barern in der Tasche wohl.",
+        "sourceAnswer": "J",
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      }
+    ]
+  },
+  {
+    "teil": 15,
+    "title": "Ernährung",
+    "mode": "corpus-card",
+    "sourceText": "2026实时更新2026.9(腾讯文档实时更新）.pdf",
+    "addedIn": "2026.9",
+    "source": "tencent-2026-09",
+    "sourcePages": [
+      224
+    ],
+    "questions": [
+      {
+        "number": "1",
+        "text": "Sprecher 1: Welcher Leitsatz passt?",
+        "german": "Sprecher 1: Welcher Leitsatz passt?",
+        "chinese": "能否健康饮食，也取决于个人的经济条件。",
+        "answer": "",
+        "answerText": "G. Es hängt auch von den eigenen finanziellen Möglichkeiten ab, ob man sich gesund ernähren kann.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          224
+        ],
+        "reviewGerman": "Es hängt auch von den eigenen finanziellen Möglichkeiten ab, ob man sich gesund ernähren kann.",
+        "sourceAnswer": "G",
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      },
+      {
+        "number": "2",
+        "text": "Sprecher 2: Welcher Leitsatz passt?",
+        "german": "Sprecher 2: Welcher Leitsatz passt?",
+        "chinese": "迈向更健康饮食的第一步，是检查和反思自己的饮食习惯。",
+        "answer": "",
+        "answerText": "E. Der erste Schritt zu einer gesünderen Ernährung ist es, die eigenen Gewohnheiten zu überprüfen.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          224
+        ],
+        "reviewGerman": "Der erste Schritt zu einer gesünderen Ernährung ist es, die eigenen Gewohnheiten zu überprüfen.",
+        "sourceAnswer": "E",
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      },
+      {
+        "number": "3",
+        "text": "Sprecher 3: Welcher Leitsatz passt?",
+        "german": "Sprecher 3: Welcher Leitsatz passt?",
+        "chinese": "通过选择健康的食物，可以提高学习能力。",
+        "answer": "",
+        "answerText": "B. Durch die Wahl gesunder Nahrungsmittel lässt sich die Lernfähigkeit positiv beeinflussen.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          224
+        ],
+        "reviewGerman": "Durch die Wahl gesunder Nahrungsmittel lässt sich die Lernfähigkeit positiv beeinflussen.",
+        "sourceAnswer": "B",
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      },
+      {
+        "number": "4",
+        "text": "Sprecher 4: Welcher Leitsatz passt?",
+        "german": "Sprecher 4: Welcher Leitsatz passt?",
+        "chinese": "如果提前规划饮食并自己做饭，即使预算有限也能实现健康饮食。",
+        "answer": "",
+        "answerText": "H. Wenn man die Mahlzeiten vorausplant und selbst kocht, kann man sich auch mit kleinem Geldbeutel gesund ernähren.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          224
+        ],
+        "reviewGerman": "Wenn man die Mahlzeiten vorausplant und selbst kocht, kann man sich auch mit kleinem Geldbeutel gesund ernähren.",
+        "sourceAnswer": "H",
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      },
+      {
+        "number": "5",
+        "text": "Sprecher 5: Welcher Leitsatz passt?",
+        "german": "Sprecher 5: Welcher Leitsatz passt?",
+        "chinese": "注意均衡饮食并不需要花费太多精力。",
+        "answer": "",
+        "answerText": "A. Es erfordert nicht viel Mühe, auf eine ausgewogene Ernährung zu achten.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          224
+        ],
+        "reviewGerman": "Es erfordert nicht viel Mühe, auf eine ausgewogene Ernährung zu achten.",
+        "sourceAnswer": "A",
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      },
+      {
+        "number": "6",
+        "text": "Sprecher 6: Welcher Leitsatz passt?",
+        "german": "Sprecher 6: Welcher Leitsatz passt?",
+        "chinese": "享受美食与保持均衡的饮食习惯并不矛盾。",
+        "answer": "",
+        "answerText": "J. Genuss beim Essen und ein ausgeglichenes Essverhalten schließen einander nicht aus.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          224
+        ],
+        "reviewGerman": "Genuss beim Essen und ein ausgeglichenes Essverhalten schließen einander nicht aus.",
+        "sourceAnswer": "J",
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      },
+      {
+        "number": "7",
+        "text": "Sprecher 7: Welcher Leitsatz passt?",
+        "german": "Sprecher 7: Welcher Leitsatz passt?",
+        "chinese": "一起用餐有助于提升身心健康和幸福感。",
+        "answer": "",
+        "answerText": "F. Gemeinsame Mahlzeiten wirken sich positiv auf das Wohlbefinden aus.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          224
+        ],
+        "reviewGerman": "Gemeinsame Mahlzeiten wirken sich positiv auf das Wohlbefinden aus.",
+        "sourceAnswer": "F",
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      },
+      {
+        "number": "8",
+        "text": "Sprecher 8: Welcher Leitsatz passt?",
+        "german": "Sprecher 8: Welcher Leitsatz passt?",
+        "chinese": "健康饮食带来的好处不足以弥补为此付出的努力。",
+        "answer": "",
+        "answerText": "D. Die Vorteile gesunder Ernährung wiegen den damit verbundenen Aufwand nicht auf.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          224
+        ],
+        "reviewGerman": "Die Vorteile gesunder Ernährung wiegen den damit verbundenen Aufwand nicht auf.",
+        "sourceAnswer": "D",
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      }
+    ]
+  },
+  {
+    "teil": 16,
+    "title": "Hausarbeiten",
+    "mode": "corpus-card",
+    "sourceText": "2026实时更新2026.9(腾讯文档实时更新）.pdf",
+    "addedIn": "2026.9",
+    "source": "tencent-2026-09",
+    "sourcePages": [
+      225
+    ],
+    "questions": [
+      {
+        "number": "1",
+        "text": "Sprecher 1: Welcher Leitsatz passt?",
+        "german": "Sprecher 1: Welcher Leitsatz passt?",
+        "chinese": "为了学会进行科学研究和学术写作，课程论文是不可缺少的。",
+        "answer": "",
+        "answerText": "H. Um zu lernen, wissenschaftlich zu arbeiten, sind Hausarbeiten unverzichtbar.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          225
+        ],
+        "reviewGerman": "Um zu lernen, wissenschaftlich zu arbeiten, sind Hausarbeiten unverzichtbar.",
+        "sourceAnswer": "H",
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      },
+      {
+        "number": "2",
+        "text": "Sprecher 2: Welcher Leitsatz passt?",
+        "german": "Sprecher 2: Welcher Leitsatz passt?",
+        "chinese": "由于大学生的时间安排已经十分紧张，课程论文会带来不必要的压力。",
+        "answer": "",
+        "answerText": "I. Da Studierende einen engen Zeitplan haben, verursachen Hausarbeiten unnötigen Stress.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          225
+        ],
+        "reviewGerman": "Da Studierende einen engen Zeitplan haben, verursachen Hausarbeiten unnötigen Stress.",
+        "sourceAnswer": "I",
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      },
+      {
+        "number": "3",
+        "text": "Sprecher 3: Welcher Leitsatz passt?",
+        "german": "Sprecher 3: Welcher Leitsatz passt?",
+        "chinese": "课程论文所要求的学术水平让许多学生感到难以应付。",
+        "answer": "",
+        "answerText": "A. Der mit Hausarbeiten verbundene wissenschaftliche Anspruch überfordert Studierende.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          225
+        ],
+        "reviewGerman": "Der mit Hausarbeiten verbundene wissenschaftliche Anspruch überfordert Studierende.",
+        "sourceAnswer": "A",
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      },
+      {
+        "number": "4",
+        "text": "Sprecher 4: Welcher Leitsatz passt?",
+        "german": "Sprecher 4: Welcher Leitsatz passt?",
+        "chinese": "教师应该花更多时间与学生讨论和点评他们的课程论文。",
+        "answer": "",
+        "answerText": "B. Dozenten sollten sich mehr Zeit nehmen, um die Hausarbeiten mit den Studierenden zu besprechen.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          225
+        ],
+        "reviewGerman": "Dozenten sollten sich mehr Zeit nehmen, um die Hausarbeiten mit den Studierenden zu besprechen.",
+        "sourceAnswer": "B",
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      },
+      {
+        "number": "5",
+        "text": "Sprecher 5: Welcher Leitsatz passt?",
+        "german": "Sprecher 5: Welcher Leitsatz passt?",
+        "chinese": "课程论文对于教师来说也是一种负担。",
+        "answer": "",
+        "answerText": "F. Auch für Lehrkräfte stellen Hausarbeiten eine Belastung dar.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          225
+        ],
+        "reviewGerman": "Auch für Lehrkräfte stellen Hausarbeiten eine Belastung dar.",
+        "sourceAnswer": "F",
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      },
+      {
+        "number": "6",
+        "text": "Sprecher 6: Welcher Leitsatz passt?",
+        "german": "Sprecher 6: Welcher Leitsatz passt?",
+        "chinese": "大学专业课程设置应该进行调整，让学生有更多时间完成课程论文。",
+        "answer": "",
+        "answerText": "C. Die Studiengänge sollten so gestaltet werden, dass die Studierenden mehr Zeit für Hausarbeiten haben.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          225
+        ],
+        "reviewGerman": "Die Studiengänge sollten so gestaltet werden, dass die Studierenden mehr Zeit für Hausarbeiten haben.",
+        "sourceAnswer": "C",
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      },
+      {
+        "number": "7",
+        "text": "Sprecher 7: Welcher Leitsatz passt?",
+        "german": "Sprecher 7: Welcher Leitsatz passt?",
+        "chinese": "学术论文应该被与职业发展更相关的写作练习所取代。",
+        "answer": "",
+        "answerText": "J. Wissenschaftliche Hausarbeiten sollten durch beruflich relevante Schreibübungen ersetzt werden.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          225
+        ],
+        "reviewGerman": "Wissenschaftliche Hausarbeiten sollten durch beruflich relevante Schreibübungen ersetzt werden.",
+        "sourceAnswer": "J",
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      },
+      {
+        "number": "8",
+        "text": "Sprecher 8: Welcher Leitsatz passt?",
+        "german": "Sprecher 8: Welcher Leitsatz passt?",
+        "chinese": "由于课程论文容易产生作弊行为，因此应该采用其他形式的成绩考核。",
+        "answer": "",
+        "answerText": "E. Da Hausarbeiten Betrugsversuche ermöglichen, sollte auf andere Leistungsnachweise ausgewichen werden.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          225
+        ],
+        "reviewGerman": "Da Hausarbeiten Betrugsversuche ermöglichen, sollte auf andere Leistungsnachweise ausgewichen werden.",
+        "sourceAnswer": "E",
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      }
+    ]
+  },
+  {
+    "teil": 17,
+    "title": "Mode und Trends / Modebranche",
+    "mode": "corpus-card",
+    "sourceText": "2026实时更新2026.9(腾讯文档实时更新）.pdf",
+    "addedIn": "2026.9",
+    "source": "tencent-2026-09",
+    "sourcePages": [
+      225,
+      226
+    ],
+    "questions": [
+      {
+        "number": "A",
+        "text": "Für mich ist Mode nicht nur eine Frage des Geschmacks, sondern auch eine Möglichkeit, meine Persönlichkeit und meine Stimmung nach außen zu zeigen.",
+        "german": "Für mich ist Mode nicht nur eine Frage des Geschmacks, sondern auch eine Möglichkeit, meine Persönlichkeit und meine Stimmung nach außen zu zeigen.",
+        "chinese": "对我来说，时尚不仅仅是一个个人品味的问题，也是一种向外界展现我的个性和心情的方式。",
+        "answer": "",
+        "answerText": "Für mich ist Mode nicht nur eine Frage des Geschmacks, sondern auch eine Möglichkeit, meine Persönlichkeit und meine Stimmung nach außen zu zeigen.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          225
+        ],
+        "reviewGerman": "Für mich ist Mode nicht nur eine Frage des Geschmacks, sondern auch eine Möglichkeit, meine Persönlichkeit und meine Stimmung nach außen zu zeigen.",
+        "sourceAnswer": null,
+        "sourceNote": "原文仅有陈述，未提供 Sprecher 对应答案。"
+      },
+      {
+        "number": "B",
+        "text": "Ich kaufe neue Kleidung eigentlich nur dann, wenn meine alten Sachen wirklich nicht mehr tragbar sind oder ersetzt werden müssen.",
+        "german": "Ich kaufe neue Kleidung eigentlich nur dann, wenn meine alten Sachen wirklich nicht mehr tragbar sind oder ersetzt werden müssen.",
+        "chinese": "实际上，我只有在旧衣服真的已经不能再穿或者必须更换的时候，才会购买新衣服。",
+        "answer": "",
+        "answerText": "Ich kaufe neue Kleidung eigentlich nur dann, wenn meine alten Sachen wirklich nicht mehr tragbar sind oder ersetzt werden müssen.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          225
+        ],
+        "reviewGerman": "Ich kaufe neue Kleidung eigentlich nur dann, wenn meine alten Sachen wirklich nicht mehr tragbar sind oder ersetzt werden müssen.",
+        "sourceAnswer": null,
+        "sourceNote": "原文仅有陈述，未提供 Sprecher 对应答案。"
+      },
+      {
+        "number": "C",
+        "text": "In letzter Zeit interessiere ich mich immer stärker für nachhaltige Mode und achte darauf, dass Kleidung unter fairen Bedingungen produziert wird.",
+        "german": "In letzter Zeit interessiere ich mich immer stärker für nachhaltige Mode und achte darauf, dass Kleidung unter fairen Bedingungen produziert wird.",
+        "chinese": "最近，我对可持续时尚越来越感兴趣，并且会注意衣服是否是在公平的条件下生产的。",
+        "answer": "",
+        "answerText": "In letzter Zeit interessiere ich mich immer stärker für nachhaltige Mode und achte darauf, dass Kleidung unter fairen Bedingungen produziert wird.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          226
+        ],
+        "reviewGerman": "In letzter Zeit interessiere ich mich immer stärker für nachhaltige Mode und achte darauf, dass Kleidung unter fairen Bedingungen produziert wird.",
+        "sourceAnswer": null,
+        "sourceNote": "原文仅有陈述，未提供 Sprecher 对应答案。"
+      },
+      {
+        "number": "D",
+        "text": "Ich orientiere mich häufig an aktuellen Trends, die ich in sozialen Netzwerken oder auf Modeblogs sehe.",
+        "german": "Ich orientiere mich häufig an aktuellen Trends, die ich in sozialen Netzwerken oder auf Modeblogs sehe.",
+        "chinese": "我经常会参考我在社交网络或时尚博客上看到的最新潮流。",
+        "answer": "",
+        "answerText": "Ich orientiere mich häufig an aktuellen Trends, die ich in sozialen Netzwerken oder auf Modeblogs sehe.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          226
+        ],
+        "reviewGerman": "Ich orientiere mich häufig an aktuellen Trends, die ich in sozialen Netzwerken oder auf Modeblogs sehe.",
+        "sourceAnswer": null,
+        "sourceNote": "原文仅有陈述，未提供 Sprecher 对应答案。"
+      },
+      {
+        "number": "E",
+        "text": "Mir ist Markenkleidung durchaus wichtig, weil ich den Eindruck habe, dass sie oft besser verarbeitet ist und länger hält.",
+        "german": "Mir ist Markenkleidung durchaus wichtig, weil ich den Eindruck habe, dass sie oft besser verarbeitet ist und länger hält.",
+        "chinese": "对我来说，品牌服装还是相当重要的，因为我觉得它们通常做工更好，而且更加耐穿。",
+        "answer": "",
+        "answerText": "Mir ist Markenkleidung durchaus wichtig, weil ich den Eindruck habe, dass sie oft besser verarbeitet ist und länger hält.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          226
+        ],
+        "reviewGerman": "Mir ist Markenkleidung durchaus wichtig, weil ich den Eindruck habe, dass sie oft besser verarbeitet ist und länger hält.",
+        "sourceAnswer": null,
+        "sourceNote": "原文仅有陈述，未提供 Sprecher 对应答案。"
+      },
+      {
+        "number": "F",
+        "text": "Viele meiner Kleidungsstücke bestelle ich inzwischen im Internet, weil die Auswahl dort deutlich größer ist als in den meisten Geschäften.",
+        "german": "Viele meiner Kleidungsstücke bestelle ich inzwischen im Internet, weil die Auswahl dort deutlich größer ist als in den meisten Geschäften.",
+        "chinese": "现在，我的很多衣服都是在网上购买的，因为网上的选择明显比大多数实体店更加丰富。",
+        "answer": "",
+        "answerText": "Viele meiner Kleidungsstücke bestelle ich inzwischen im Internet, weil die Auswahl dort deutlich größer ist als in den meisten Geschäften.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          226
+        ],
+        "reviewGerman": "Viele meiner Kleidungsstücke bestelle ich inzwischen im Internet, weil die Auswahl dort deutlich größer ist als in den meisten Geschäften.",
+        "sourceAnswer": null,
+        "sourceNote": "原文仅有陈述，未提供 Sprecher 对应答案。"
+      },
+      {
+        "number": "G",
+        "text": "Beim Kauf von Kleidung spielt für mich vor allem der Komfort eine Rolle – sie muss praktisch sein und gut sitzen.",
+        "german": "Beim Kauf von Kleidung spielt für mich vor allem der Komfort eine Rolle – sie muss praktisch sein und gut sitzen.",
+        "chinese": "买衣服时，对我来说最重要的是舒适度——衣服必须实用，而且穿起来合身。",
+        "answer": "",
+        "answerText": "Beim Kauf von Kleidung spielt für mich vor allem der Komfort eine Rolle – sie muss praktisch sein und gut sitzen.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          226
+        ],
+        "reviewGerman": "Beim Kauf von Kleidung spielt für mich vor allem der Komfort eine Rolle – sie muss praktisch sein und gut sitzen.",
+        "sourceAnswer": null,
+        "sourceNote": "原文仅有陈述，未提供 Sprecher 对应答案。"
+      },
+      {
+        "number": "H",
+        "text": "Manchmal tausche ich Kleidung mit Freunden oder Bekannten, statt mir immer wieder neue Sachen zu kaufen.",
+        "german": "Manchmal tausche ich Kleidung mit Freunden oder Bekannten, statt mir immer wieder neue Sachen zu kaufen.",
+        "chinese": "有时候，我会和朋友或熟人交换衣服，而不是总是给自己买新衣服。",
+        "answer": "",
+        "answerText": "Manchmal tausche ich Kleidung mit Freunden oder Bekannten, statt mir immer wieder neue Sachen zu kaufen.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          226
+        ],
+        "reviewGerman": "Manchmal tausche ich Kleidung mit Freunden oder Bekannten, statt mir immer wieder neue Sachen zu kaufen.",
+        "sourceAnswer": null,
+        "sourceNote": "原文仅有陈述，未提供 Sprecher 对应答案。"
+      },
+      {
+        "number": "I",
+        "text": "Da ich beruflich in der Modebranche tätig bin, beschäftige ich mich auch in meiner Freizeit viel mit aktuellen Kollektionen und Trends.",
+        "german": "Da ich beruflich in der Modebranche tätig bin, beschäftige ich mich auch in meiner Freizeit viel mit aktuellen Kollektionen und Trends.",
+        "chinese": "由于我的工作与时尚行业有关，所以即使在业余时间，我也会经常关注最新的服装系列和流行趋 势。",
+        "answer": "",
+        "answerText": "Da ich beruflich in der Modebranche tätig bin, beschäftige ich mich auch in meiner Freizeit viel mit aktuellen Kollektionen und Trends.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          226
+        ],
+        "reviewGerman": "Da ich beruflich in der Modebranche tätig bin, beschäftige ich mich auch in meiner Freizeit viel mit aktuellen Kollektionen und Trends.",
+        "sourceAnswer": null,
+        "sourceNote": "原文仅有陈述，未提供 Sprecher 对应答案。"
+      },
+      {
+        "number": "J",
+        "text": "Ich habe oft den Eindruck, dass viele Menschen viel zu viel Geld für Kleidung ausgeben, die sie am Ende kaum tragen.",
+        "german": "Ich habe oft den Eindruck, dass viele Menschen viel zu viel Geld für Kleidung ausgeben, die sie am Ende kaum tragen.",
+        "chinese": "我经常觉得，很多人在衣服上花了太多的钱，但这些衣服最后却几乎没怎么穿。",
+        "answer": "",
+        "answerText": "Ich habe oft den Eindruck, dass viele Menschen viel zu viel Geld für Kleidung ausgeben, die sie am Ende kaum tragen.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          226
+        ],
+        "reviewGerman": "Ich habe oft den Eindruck, dass viele Menschen viel zu viel Geld für Kleidung ausgeben, die sie am Ende kaum tragen.",
+        "sourceAnswer": null,
+        "sourceNote": "原文仅有陈述，未提供 Sprecher 对应答案。"
+      }
+    ]
+  },
+  {
+    "teil": 18,
+    "title": "TEMPOLIMIT",
+    "mode": "corpus-card",
+    "sourceText": "2026实时更新2026.9(腾讯文档实时更新）.pdf",
+    "addedIn": "2026.9",
+    "source": "tencent-2026-09",
+    "sourcePages": [
+      226,
+      227
+    ],
+    "questions": [
+      {
+        "number": "1",
+        "text": "Sprecher 1: Welcher Leitsatz passt?",
+        "german": "Sprecher 1: Welcher Leitsatz passt?",
+        "chinese": "限速将为高效汽车的制造带来新的推动力。",
+        "answer": "",
+        "answerText": "G. Ein Tempolimit würde neue Impulse für einen effizienten Autobau setzen.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          226
+        ],
+        "reviewGerman": "Ein Tempolimit würde neue Impulse für einen effizienten Autobau setzen.",
+        "sourceAnswer": "G",
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      },
+      {
+        "number": "2",
+        "text": "Sprecher 2: Welcher Leitsatz passt?",
+        "german": "Sprecher 2: Welcher Leitsatz passt?",
+        "chinese": "限速对气候保护并不能产生明显的作用。",
+        "answer": "",
+        "answerText": "I. Ein Tempolimit leistet keinen spürbaren Beitrag zum Klimaschutz.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          226
+        ],
+        "reviewGerman": "Ein Tempolimit leistet keinen spürbaren Beitrag zum Klimaschutz.",
+        "sourceAnswer": "I",
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      },
+      {
+        "number": "3",
+        "text": "Sprecher 3: Welcher Leitsatz passt?",
+        "german": "Sprecher 3: Welcher Leitsatz passt?",
+        "chinese": "实行限速时，交通运行会更加顺畅。",
+        "answer": "",
+        "answerText": "B. Der Verkehr läuft bei einer Geschwindigkeitsbegrenzung flüssiger.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          227
+        ],
+        "reviewGerman": "Der Verkehr läuft bei einer Geschwindigkeitsbegrenzung flüssiger.",
+        "sourceAnswer": "B",
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      },
+      {
+        "number": "4",
+        "text": "Sprecher 4: Welcher Leitsatz passt?",
+        "german": "Sprecher 4: Welcher Leitsatz passt?",
+        "chinese": "我不想要一个对人加以管束的国家，由它来规定我们应当如何出行。",
+        "answer": "",
+        "answerText": "H. Ich will keinen bevormundenden Staat, der vorschreibt, wie wir uns fortbewegen.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          227
+        ],
+        "reviewGerman": "Ich will keinen bevormundenden Staat, der vorschreibt, wie wir uns fortbewegen.",
+        "sourceAnswer": "H",
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      },
+      {
+        "number": "5",
+        "text": "Sprecher 5: Welcher Leitsatz passt?",
+        "german": "Sprecher 5: Welcher Leitsatz passt?",
+        "chinese": "在德国联邦高速公路上实行全面限速，并不会提高交通安全。",
+        "answer": "",
+        "answerText": "F. Ein generelles Tempolimit auf den Bundesautobahnen wäre kein Gewinn für Verkehrssicherheit.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          227
+        ],
+        "reviewGerman": "Ein generelles Tempolimit auf den Bundesautobahnen wäre kein Gewinn für Verkehrssicherheit.",
+        "sourceAnswer": "F",
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      },
+      {
+        "number": "6",
+        "text": "Sprecher 6: Welcher Leitsatz passt?",
+        "german": "Sprecher 6: Welcher Leitsatz passt?",
+        "chinese": "限速措施之所以无法落实，是因为德国强大的汽车游说集团从中阻挠。",
+        "answer": "",
+        "answerText": "C. Die Durchsetzung des Tempolimits scheitert an der starken deutschen Autolobby.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          227
+        ],
+        "reviewGerman": "Die Durchsetzung des Tempolimits scheitert an der starken deutschen Autolobby.",
+        "sourceAnswer": "C",
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      },
+      {
+        "number": "7",
+        "text": "Sprecher 7: Welcher Leitsatz passt?",
+        "german": "Sprecher 7: Welcher Leitsatz passt?",
+        "chinese": "根据具体情况灵活调整车速，比实行统一限速更合理。",
+        "answer": "",
+        "answerText": "E. Eine flexible, situationsgerechte Geschwindigkeitsregelung ist sinnvoller als ein Tempolimit.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          227
+        ],
+        "reviewGerman": "Eine flexible, situationsgerechte Geschwindigkeitsregelung ist sinnvoller als ein Tempolimit.",
+        "sourceAnswer": "E",
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      },
+      {
+        "number": "8",
+        "text": "Sprecher 8: Welcher Leitsatz passt?",
+        "german": "Sprecher 8: Welcher Leitsatz passt?",
+        "chinese": "通过实行限速，造成人员伤亡的交通事故将减少三分之一。",
+        "answer": "",
+        "answerText": "J. Unfälle mit Personenschäden würden durch eine Geschwindigkeitsbegrenzung um ein Drittel zurückgehen.",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          227
+        ],
+        "reviewGerman": "Unfälle mit Personenschäden würden durch eine Geschwindigkeitsbegrenzung um ein Drittel zurückgehen.",
+        "sourceAnswer": "J",
+        "sourceNote": "原文未提供此组音频及完整听力稿，按复习卡学习。"
+      }
+    ]
   }
 ];

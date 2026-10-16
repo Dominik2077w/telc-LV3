@@ -1,4 +1,3 @@
-// Generated from /Users/dominik/Desktop/baustein_teil_1-21_gesamtpaket.json
 window.BAUSTEIN_QUESTIONS = [
   {
     "teil": 1,
@@ -9867,8 +9866,8 @@ window.BAUSTEIN_QUESTIONS = [
         "options": [
           {
             "value": "A",
-            "label": "a. zur",
-            "rawLabel": "zur",
+            "label": "a. als",
+            "rawLabel": "als",
             "shortcut": "1 / A"
           },
           {
@@ -9891,9 +9890,15 @@ window.BAUSTEIN_QUESTIONS = [
           }
         ],
         "answer": "A",
-        "answerText": "zur",
+        "answerText": "als",
         "acceptedAnswers": [],
-        "knowledgePoint": "介词缩合/固定搭配：zur Grundlage dienen = 作为……的基础"
+        "knowledgePoint": "als Grundlage für etwas dienen：作为……的基础；PDF 第45空（本地第21空）将 zur 改为 als。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          170,
+          171
+        ],
+        "updatedIn": "2026.9"
       },
       {
         "number": 22,
@@ -9933,11 +9938,346 @@ window.BAUSTEIN_QUESTIONS = [
   {
     "teil": 14,
     "title": "Unterschätzte Pflanzen",
-    "sourceText": "PDF Baustein Teil 14, S.163-164",
-    "mode": "baustein-article",
-    "article": "",
-    "status": "incomplete_in_source",
-    "questions": []
+    "mode": "corpus-card",
+    "sourceText": "2026实时更新2026.9(腾讯文档实时更新）.pdf",
+    "addedIn": "2026.9",
+    "source": "tencent-2026-09",
+    "sourcePages": [
+      172,
+      173
+    ],
+    "questions": [
+      {
+        "number": 25,
+        "text": "Aber wer würde schon so weit gehen, Pflanzen [25]____ intelligent zu bezeichnen? Menschen trauen Pflanzen oft nicht viel zu, doch sie gehören zu den erfolgreichsten Lebewesen auf unserem Planeten und verfügen über viele erstaunliche Fähigkeiten.",
+        "german": "Aber wer würde schon so weit gehen, Pflanzen [25]____ intelligent zu bezeichnen? Menschen trauen Pflanzen oft nicht viel zu, doch sie gehören zu den erfolgreichsten Lebewesen auf unserem Planeten und verfügen über viele erstaunliche Fähigkeiten.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "als",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          172,
+          173
+        ],
+        "reviewGerman": "Aber wer würde schon so weit gehen, Pflanzen als intelligent zu bezeichnen? Menschen trauen Pflanzen oft nicht viel zu, doch sie gehören zu den erfolgreichsten Lebewesen auf unserem Planeten und verfügen über viele erstaunliche Fähigkeiten."
+      },
+      {
+        "number": 26,
+        "text": "Aber wer würde schon so weit gehen, Pflanzen als intelligent zu bezeichnen? Menschen trauen Pflanzen oft nicht viel zu, [26]____ sie gehören zu den erfolgreichsten Lebewesen auf unserem Planeten und verfügen über viele erstaunliche Fähigkeiten.",
+        "german": "Aber wer würde schon so weit gehen, Pflanzen als intelligent zu bezeichnen? Menschen trauen Pflanzen oft nicht viel zu, [26]____ sie gehören zu den erfolgreichsten Lebewesen auf unserem Planeten und verfügen über viele erstaunliche Fähigkeiten.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "doch",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          172,
+          173
+        ],
+        "reviewGerman": "Aber wer würde schon so weit gehen, Pflanzen als intelligent zu bezeichnen? Menschen trauen Pflanzen oft nicht viel zu, doch sie gehören zu den erfolgreichsten Lebewesen auf unserem Planeten und verfügen über viele erstaunliche Fähigkeiten."
+      },
+      {
+        "number": 27,
+        "text": "Aber wer würde schon so weit gehen, Pflanzen als intelligent zu bezeichnen? Menschen trauen Pflanzen oft nicht viel zu, doch sie gehören zu den erfolgreichsten Lebewesen auf unserem Planeten und verfügen [27]____ viele erstaunliche Fähigkeiten.",
+        "german": "Aber wer würde schon so weit gehen, Pflanzen als intelligent zu bezeichnen? Menschen trauen Pflanzen oft nicht viel zu, doch sie gehören zu den erfolgreichsten Lebewesen auf unserem Planeten und verfügen [27]____ viele erstaunliche Fähigkeiten.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "über",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          172,
+          173
+        ],
+        "reviewGerman": "Aber wer würde schon so weit gehen, Pflanzen als intelligent zu bezeichnen? Menschen trauen Pflanzen oft nicht viel zu, doch sie gehören zu den erfolgreichsten Lebewesen auf unserem Planeten und verfügen über viele erstaunliche Fähigkeiten."
+      },
+      {
+        "number": 28,
+        "text": "Pflanzenforscher haben in den vergangenen Jahren bei ihren Experimenten [28]____ Entdeckungen gemacht.",
+        "german": "Pflanzenforscher haben in den vergangenen Jahren bei ihren Experimenten [28]____ Entdeckungen gemacht.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "spektakuläre",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          172,
+          173
+        ],
+        "reviewGerman": "Pflanzenforscher haben in den vergangenen Jahren bei ihren Experimenten spektakuläre Entdeckungen gemacht."
+      },
+      {
+        "number": 29,
+        "text": "Pflanzen unterscheiden [29]____ verschiedene Wellenlängen des Lichts, können also „sehen“.",
+        "german": "Pflanzen unterscheiden [29]____ verschiedene Wellenlängen des Lichts, können also „sehen“.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "offensichtlich",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          172,
+          173
+        ],
+        "reviewGerman": "Pflanzen unterscheiden offensichtlich verschiedene Wellenlängen des Lichts, können also „sehen“."
+      },
+      {
+        "number": 30,
+        "text": "Sie können [30]____ erkennen, ob ein Schatten von einer anderen Pflanze oder einem Felsen kommt.",
+        "german": "Sie können [30]____ erkennen, ob ein Schatten von einer anderen Pflanze oder einem Felsen kommt.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "sogar",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          172,
+          173
+        ],
+        "reviewGerman": "Sie können sogar erkennen, ob ein Schatten von einer anderen Pflanze oder einem Felsen kommt."
+      },
+      {
+        "number": 31,
+        "text": "Aber damit nicht genug: Pflanzen „riechen“ chemische Botenstoffe in der Luft und „schmecken“ die Nährstoffe im [31]____.",
+        "german": "Aber damit nicht genug: Pflanzen „riechen“ chemische Botenstoffe in der Luft und „schmecken“ die Nährstoffe im [31]____.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "Boden",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          172,
+          173
+        ],
+        "reviewGerman": "Aber damit nicht genug: Pflanzen „riechen“ chemische Botenstoffe in der Luft und „schmecken“ die Nährstoffe im Boden."
+      },
+      {
+        "number": 32,
+        "text": "Der italienische Biologe Stefano Mancuso, Professor am Internationalen Institut für Neurobiologie der Pflanzen in Florenz, [32]____ seit Jahren, wie Pflanzen auf ihre Umwelt reagieren.",
+        "german": "Der italienische Biologe Stefano Mancuso, Professor am Internationalen Institut für Neurobiologie der Pflanzen in Florenz, [32]____ seit Jahren, wie Pflanzen auf ihre Umwelt reagieren.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "erforscht",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          172,
+          173
+        ],
+        "reviewGerman": "Der italienische Biologe Stefano Mancuso, Professor am Internationalen Institut für Neurobiologie der Pflanzen in Florenz, erforscht seit Jahren, wie Pflanzen auf ihre Umwelt reagieren."
+      },
+      {
+        "number": 33,
+        "text": "So erklärt er, Pflanzen könnten wie [33]____ Menschen sehen, hören, riechen, schmecken und tasten.",
+        "german": "So erklärt er, Pflanzen könnten wie [33]____ Menschen sehen, hören, riechen, schmecken und tasten.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "wir",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          172,
+          173
+        ],
+        "reviewGerman": "So erklärt er, Pflanzen könnten wie wir Menschen sehen, hören, riechen, schmecken und tasten."
+      },
+      {
+        "number": 34,
+        "text": "Das [34]____ aber längst nicht alles: Mancuso spricht sogar von mindestens fünfzehn weiteren Sinnen, die uns die Pflanzen vorausheben.",
+        "german": "Das [34]____ aber längst nicht alles: Mancuso spricht sogar von mindestens fünfzehn weiteren Sinnen, die uns die Pflanzen vorausheben.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "sei",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          172,
+          173
+        ],
+        "reviewGerman": "Das sei aber längst nicht alles: Mancuso spricht sogar von mindestens fünfzehn weiteren Sinnen, die uns die Pflanzen vorausheben."
+      },
+      {
+        "number": 35,
+        "text": "Das sei aber längst nicht alles: Mancuso spricht sogar von mindestens fünfzehn weiteren Sinnen, die uns die Pflanzen [35]____.",
+        "german": "Das sei aber längst nicht alles: Mancuso spricht sogar von mindestens fünfzehn weiteren Sinnen, die uns die Pflanzen [35]____.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。 本空原文存在疑似笔误或缺文，待核对；未自行改写答案。",
+        "answer": "",
+        "answerText": "vorausheben",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          172,
+          173
+        ],
+        "reviewGerman": "Das sei aber längst nicht alles: Mancuso spricht sogar von mindestens fünfzehn weiteren Sinnen, die uns die Pflanzen vorausheben."
+      },
+      {
+        "number": 36,
+        "text": "Sie können zum Beispiel die Schwerkraft berechnen oder chemische Stoffe [36]____.",
+        "german": "Sie können zum Beispiel die Schwerkraft berechnen oder chemische Stoffe [36]____.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "analysieren",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          172,
+          173
+        ],
+        "reviewGerman": "Sie können zum Beispiel die Schwerkraft berechnen oder chemische Stoffe analysieren."
+      },
+      {
+        "number": 37,
+        "text": "Sinnesorgane brauchen sie dafür aber [37]____ – denn das ganze Gewächs kann Informationen aufnehmen und weitergeben.",
+        "german": "Sinnesorgane brauchen sie dafür aber [37]____ – denn das ganze Gewächs kann Informationen aufnehmen und weitergeben.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "keine",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          172,
+          173
+        ],
+        "reviewGerman": "Sinnesorgane brauchen sie dafür aber keine – denn das ganze Gewächs kann Informationen aufnehmen und weitergeben."
+      },
+      {
+        "number": 38,
+        "text": "Wahrscheinlich ist der [38]____, den die Pflanzen uns gegenüber haben, durch die Evolution begründet.",
+        "german": "Wahrscheinlich ist der [38]____, den die Pflanzen uns gegenüber haben, durch die Evolution begründet.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "Vorsprung",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          172,
+          173
+        ],
+        "reviewGerman": "Wahrscheinlich ist der Vorsprung, den die Pflanzen uns gegenüber haben, durch die Evolution begründet."
+      },
+      {
+        "number": 39,
+        "text": "„Im [39]____ zu Tieren können Pflanzen nicht flüchten, wenn sie bedroht werden“, erklärt Mancuso.",
+        "german": "„Im [39]____ zu Tieren können Pflanzen nicht flüchten, wenn sie bedroht werden“, erklärt Mancuso.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "Gegensatz",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          172,
+          173
+        ],
+        "reviewGerman": "„Im Gegensatz zu Tieren können Pflanzen nicht flüchten, wenn sie bedroht werden“, erklärt Mancuso."
+      },
+      {
+        "number": 40,
+        "text": "„Sie müssen es darum viel früher wahrnehmen, wenn [40]____ in ihrer Umgebung etwas verändert.“ Pflanzen können außerdem auf unterschiedliche Situationen reagieren.",
+        "german": "„Sie müssen es darum viel früher wahrnehmen, wenn [40]____ in ihrer Umgebung etwas verändert.“ Pflanzen können außerdem auf unterschiedliche Situationen reagieren.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "sich",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          172,
+          173
+        ],
+        "reviewGerman": "„Sie müssen es darum viel früher wahrnehmen, wenn sich in ihrer Umgebung etwas verändert.“ Pflanzen können außerdem auf unterschiedliche Situationen reagieren."
+      },
+      {
+        "number": 41,
+        "text": "So haben sie [41]____ Strategien entwickelt, um sich gegen allzu aufdringliche Besucher zur Wehr setzen zu können, zum Beispiel, indem sie spitzen Stacheln und Dornen ausbilden.",
+        "german": "So haben sie [41]____ Strategien entwickelt, um sich gegen allzu aufdringliche Besucher zur Wehr setzen zu können, zum Beispiel, indem sie spitzen Stacheln und Dornen ausbilden.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "raffinierte",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          172,
+          173
+        ],
+        "reviewGerman": "So haben sie raffinierte Strategien entwickelt, um sich gegen allzu aufdringliche Besucher zur Wehr setzen zu können, zum Beispiel, indem sie spitzen Stacheln und Dornen ausbilden."
+      },
+      {
+        "number": 42,
+        "text": "So haben sie raffinierte Strategien entwickelt, um sich gegen allzu aufdringliche Besucher [42]____ zu können, zum Beispiel, indem sie spitzen Stacheln und Dornen ausbilden.",
+        "german": "So haben sie raffinierte Strategien entwickelt, um sich gegen allzu aufdringliche Besucher [42]____ zu können, zum Beispiel, indem sie spitzen Stacheln und Dornen ausbilden.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "zur Wehr setzen",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          172,
+          173
+        ],
+        "reviewGerman": "So haben sie raffinierte Strategien entwickelt, um sich gegen allzu aufdringliche Besucher zur Wehr setzen zu können, zum Beispiel, indem sie spitzen Stacheln und Dornen ausbilden."
+      },
+      {
+        "number": 43,
+        "text": "So haben sie raffinierte Strategien entwickelt, um sich gegen allzu aufdringliche Besucher zur Wehr setzen zu können, zum Beispiel, indem sie [43]____ Stacheln und Dornen ausbilden.",
+        "german": "So haben sie raffinierte Strategien entwickelt, um sich gegen allzu aufdringliche Besucher zur Wehr setzen zu können, zum Beispiel, indem sie [43]____ Stacheln und Dornen ausbilden.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "spitzen",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          172,
+          173
+        ],
+        "reviewGerman": "So haben sie raffinierte Strategien entwickelt, um sich gegen allzu aufdringliche Besucher zur Wehr setzen zu können, zum Beispiel, indem sie spitzen Stacheln und Dornen ausbilden."
+      },
+      {
+        "number": 44,
+        "text": "Nicht zuletzt sind sie erstaunliche Chemiker, die eine Vielzahl an [44]____ Stoffen herstellen können, von unangenehm schmeckenden Substanzen wie Bitterstoffen bis hin zum tödlichen Gift einer Tollkirsche.",
+        "german": "Nicht zuletzt sind sie erstaunliche Chemiker, die eine Vielzahl an [44]____ Stoffen herstellen können, von unangenehm schmeckenden Substanzen wie Bitterstoffen bis hin zum tödlichen Gift einer Tollkirsche.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "unterschiedlichsten",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          172,
+          173
+        ],
+        "reviewGerman": "Nicht zuletzt sind sie erstaunliche Chemiker, die eine Vielzahl an unterschiedlichsten Stoffen herstellen können, von unangenehm schmeckenden Substanzen wie Bitterstoffen bis hin zum tödlichen Gift einer Tollkirsche."
+      },
+      {
+        "number": 45,
+        "text": "Japanische Forscher entdeckten, dass Tomatenpflanzen ihre Nachbarpflanzen [45]____ Feinden warnen.",
+        "german": "Japanische Forscher entdeckten, dass Tomatenpflanzen ihre Nachbarpflanzen [45]____ Feinden warnen.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "vor",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          172,
+          173
+        ],
+        "reviewGerman": "Japanische Forscher entdeckten, dass Tomatenpflanzen ihre Nachbarpflanzen vor Feinden warnen."
+      },
+      {
+        "number": 46,
+        "text": "Das Vorurteil, Pflanzen wären still und hilflos, sollte nun endgültig aus dem Weg [46]____ sein.",
+        "german": "Das Vorurteil, Pflanzen wären still und hilflos, sollte nun endgültig aus dem Weg [46]____ sein.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "geräumt",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          172,
+          173
+        ],
+        "reviewGerman": "Das Vorurteil, Pflanzen wären still und hilflos, sollte nun endgültig aus dem Weg geräumt sein."
+      }
+    ]
   },
   {
     "teil": 15,
@@ -13451,739 +13791,689 @@ window.BAUSTEIN_QUESTIONS = [
   },
   {
     "teil": 21,
-    "title": "Wieso wir irgendwann aufhören, neue Musik zu hören",
-    "sourceText": "PDF Baustein 新更 Teil 21, S.174",
-    "mode": "baustein-article",
-    "article": "Ob wir [1]____ Rap, Metal oder Klaviersonaten mögen, entscheidet sich schon früh im Leben. Doch wenn wir älter werden, verändert sich unser [2]____. Während Teenager [3]____ jedes Genre auf der Suche nach großartigen Neuentdeckungen durchforsten, bevorzugen die älteren Jahrgänge altbekannte Songs, Bands und Künstler. Dies [4]____ vielleicht gar nicht so erstaunlich sein: Denn wie wir wissen, [5]____ sich der Musikgeschmack bereits im Alter von 13 oder 14 Jahren herauszukristallisieren. Mit Anfang 20 sind die Geschmäcker schon relativ fest [6]____. Tatsächlich [7]____ einige Studien, dass [8]____ von uns im Alter von 33 Jahren aufhören, neue Musik zu hören. Stattdessen bleiben Lieder, die herauskamen, als man Teenager war, wahrscheinlich für den Rest des Lebens in der eigenen [9]____ beliebt.\n\n[10]____ könnte es eine biologische Erklärung geben. Diese lautet, dass das Gehirn Bekanntes leichter verarbeiten könne und darauf mit einer positiven Empfindung reagiere. Damit wir öfter auf Bekanntes [11]____, belohnt uns das Gehirn, indem es Dopamin ausschüttet, auch als Glücksbotenstoff bekannt. Doch was genau passiert dabei eigentlich? Im Gehirn verarbeitet ein Nervennetzwerk [12]____. Töne und damit auch Musik werden im [13]____ Kortex, dem Hörzentrum, verarbeitet. Verschiedene Musikmuster, [14]____ und Klangfolgen werden katalogisiert. Wenn wir [15]____ Muster noch einmal hören, setzt unser Gehirn eine entsprechende [16]____ Dopamin frei. Im Grunde ist diese chemische Reaktion der eigentliche Grund, wieso wir Musik so [17]____ lieben, denn Dopamin löst in uns starke Gefühle aus. Neue Muster zu katalogisieren ist also für das Gehirn anstrengend - und je älter wir werden, desto weniger Lust hat es darauf. Schließlich hat es [18]____ schon jede Menge Daten angesammelt.\n\nDennoch passiert es [19]____ selten, dass sich auch über Dreißigjährige für die neuesten Hits begeistern. Dies scheint sich in einem [20]____ zu den obigen Ausführungen zu befinden. Doch eigentlich ist die Erklärung für dieses Phänomen [21]____ einfach: Diese neuen Hits sind gar nicht so neu. Sie nutzen Muster, die uns bereits bekannt sind, und [22]____ sie ab. Das Ergebnis ist für unseren Kopf viel leichter zu verarbeiten als ein neuer avantgardistischer Experimentalklang.",
+    "title": "„Bio“ giftiger als „Chemie“",
+    "mode": "corpus-card",
+    "sourceText": "2026实时更新2026.9(腾讯文档实时更新）.pdf",
+    "addedIn": "2026.9",
+    "source": "tencent-2026-09",
+    "sourcePages": [
+      179,
+      180
+    ],
     "questions": [
       {
-        "number": 1,
-        "options": [
-          {
-            "value": "A",
-            "label": "a. mehr",
-            "rawLabel": "mehr",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "b. eher",
-            "rawLabel": "eher",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "c. näher",
-            "rawLabel": "näher",
-            "shortcut": "3 / C"
-          },
-          {
-            "value": "D",
-            "label": "d. sehr",
-            "rawLabel": "sehr",
-            "shortcut": "4 / D"
-          }
+        "number": 25,
+        "text": "enn heutzutage von gefährlichen 0 die Rede ist, geht es [25]____ um Chemieunfälle oder Pestizidskandale.",
+        "german": "enn heutzutage von gefährlichen 0 die Rede ist, geht es [25]____ um Chemieunfälle oder Pestizidskandale.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "in der Regel",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          179,
+          180
         ],
-        "answer": "B",
-        "answerText": "eher",
-        "acceptedAnswers": [],
-        "knowledgePoint": "Modalpartikel/Adverb：eher Rap, Metal oder Klaviersonaten = eher X oder Y"
+        "reviewGerman": "enn heutzutage von gefährlichen 0 die Rede ist, geht es in der Regel um Chemieunfälle oder Pestizidskandale."
       },
       {
-        "number": 2,
-        "options": [
-          {
-            "value": "A",
-            "label": "a. Hörverhalten",
-            "rawLabel": "Hörverhalten",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "b. Hörvermögen",
-            "rawLabel": "Hörvermögen",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "c. Hörverständnis",
-            "rawLabel": "Hörverständnis",
-            "shortcut": "3 / C"
-          },
-          {
-            "value": "D",
-            "label": "d. Hörgefühl",
-            "rawLabel": "Hörgefühl",
-            "shortcut": "4 / D"
-          }
+        "number": 26,
+        "text": "Im Gegenzug gilt das, was die Natur [26]____, als gesund.",
+        "german": "Im Gegenzug gilt das, was die Natur [26]____, als gesund.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "hervorbringt",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          179,
+          180
         ],
-        "answer": "A",
-        "answerText": "Hörverhalten",
-        "acceptedAnswers": [],
-        "knowledgePoint": "Kompositum/名词语义：Hörverhalten = 听歌行为/听觉行为"
+        "reviewGerman": "Im Gegenzug gilt das, was die Natur hervorbringt, als gesund."
       },
       {
-        "number": 3,
-        "options": [
-          {
-            "value": "A",
-            "label": "a. nahezu",
-            "rawLabel": "nahezu",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "b. meistens",
-            "rawLabel": "meistens",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "c. meisten",
-            "rawLabel": "meisten",
-            "shortcut": "3 / C"
-          },
-          {
-            "value": "D",
-            "label": "d. naheliegend",
-            "rawLabel": "naheliegend",
-            "shortcut": "4 / D"
-          }
+        "number": 27,
+        "text": "Denn sie sind zweifelsfrei hochtoxische [27]____.",
+        "german": "Denn sie sind zweifelsfrei hochtoxische [27]____.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "Substanzen",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          179,
+          180
         ],
-        "answer": "A",
-        "answerText": "nahezu",
-        "acceptedAnswers": [],
-        "knowledgePoint": "程度副词：nahezu jedes Genre = 几乎每一种类型"
+        "reviewGerman": "Denn sie sind zweifelsfrei hochtoxische Substanzen."
       },
       {
-        "number": 4,
-        "options": [
-          {
-            "value": "A",
-            "label": "a. darf",
-            "rawLabel": "darf",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "b. soll",
-            "rawLabel": "soll",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "c. mag",
-            "rawLabel": "mag",
-            "shortcut": "3 / C"
-          },
-          {
-            "value": "D",
-            "label": "d. muss",
-            "rawLabel": "muss",
-            "shortcut": "4 / D"
-          }
+        "number": 28,
+        "text": "Doch innerhalb der Europäischen Union sind die Richtlinien und Grenzwerte für sie sehr [28]____, und sie stellen für den Verbraucher eigentlich kein Risiko dar.",
+        "german": "Doch innerhalb der Europäischen Union sind die Richtlinien und Grenzwerte für sie sehr [28]____, und sie stellen für den Verbraucher eigentlich kein Risiko dar.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "streng",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          179,
+          180
         ],
-        "answer": "C",
-        "answerText": "mag",
-        "acceptedAnswers": [],
-        "knowledgePoint": "情态动词语义：Dies mag ... sein = 这可能是"
+        "reviewGerman": "Doch innerhalb der Europäischen Union sind die Richtlinien und Grenzwerte für sie sehr streng, und sie stellen für den Verbraucher eigentlich kein Risiko dar."
       },
       {
-        "number": 5,
-        "options": [
-          {
-            "value": "A",
-            "label": "a. beginnt",
-            "rawLabel": "beginnt",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "b. beginnen",
-            "rawLabel": "beginnen",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "c. begann",
-            "rawLabel": "begann",
-            "shortcut": "3 / C"
-          },
-          {
-            "value": "D",
-            "label": "d. begonnen",
-            "rawLabel": "begonnen",
-            "shortcut": "4 / D"
-          }
+        "number": 29,
+        "text": "Doch innerhalb der Europäischen Union sind die Richtlinien und Grenzwerte für sie sehr streng, und sie stellen für den Verbraucher eigentlich kein Risiko [29]____.",
+        "german": "Doch innerhalb der Europäischen Union sind die Richtlinien und Grenzwerte für sie sehr streng, und sie stellen für den Verbraucher eigentlich kein Risiko [29]____.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "dar",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          179,
+          180
         ],
-        "answer": "A",
-        "answerText": "beginnt",
-        "acceptedAnswers": [],
-        "knowledgePoint": "动词变位：der Musikgeschmack beginnt sich herauszukristallisieren"
+        "reviewGerman": "Doch innerhalb der Europäischen Union sind die Richtlinien und Grenzwerte für sie sehr streng, und sie stellen für den Verbraucher eigentlich kein Risiko dar."
       },
       {
-        "number": 6,
-        "options": [
-          {
-            "value": "A",
-            "label": "a. verankert",
-            "rawLabel": "verankert",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "b. verankerte",
-            "rawLabel": "verankerte",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "c. verankern",
-            "rawLabel": "verankern",
-            "shortcut": "3 / C"
-          },
-          {
-            "value": "D",
-            "label": "d. verhärtet",
-            "rawLabel": "verhärtet",
-            "shortcut": "4 / D"
-          }
+        "number": 30,
+        "text": "Einer Studie [30]____ sind in Gewicht gemessen nur 0,01 Prozent aller gesundheitsgefährdenden Stoffe chemischen Ursprungs, also durch Menschenhand gemacht.",
+        "german": "Einer Studie [30]____ sind in Gewicht gemessen nur 0,01 Prozent aller gesundheitsgefährdenden Stoffe chemischen Ursprungs, also durch Menschenhand gemacht.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "zufolge",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          179,
+          180
         ],
-        "answer": "A",
-        "answerText": "verankert",
-        "acceptedAnswers": [],
-        "knowledgePoint": "形容词化分词/固定表达：fest verankert"
+        "reviewGerman": "Einer Studie zufolge sind in Gewicht gemessen nur 0,01 Prozent aller gesundheitsgefährdenden Stoffe chemischen Ursprungs, also durch Menschenhand gemacht."
       },
       {
-        "number": 7,
-        "options": [
-          {
-            "value": "A",
-            "label": "a. besprechen",
-            "rawLabel": "besprechen",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "b. besagen",
-            "rawLabel": "besagen",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "c. belegen",
-            "rawLabel": "belegen",
-            "shortcut": "3 / C"
-          },
-          {
-            "value": "D",
-            "label": "d. besitzen",
-            "rawLabel": "besitzen",
-            "shortcut": "4 / D"
-          }
+        "number": 31,
+        "text": "Einer Studie zufolge sind in Gewicht gemessen nur 0,01 Prozent aller [31]____ Stoffe chemischen Ursprungs, also durch Menschenhand gemacht.",
+        "german": "Einer Studie zufolge sind in Gewicht gemessen nur 0,01 Prozent aller [31]____ Stoffe chemischen Ursprungs, also durch Menschenhand gemacht.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "gesundheitsgefährdenden",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          179,
+          180
         ],
-        "answer": "B",
-        "answerText": "besagen",
-        "acceptedAnswers": [],
-        "knowledgePoint": "动词搭配：Studien besagen, dass ..."
+        "reviewGerman": "Einer Studie zufolge sind in Gewicht gemessen nur 0,01 Prozent aller gesundheitsgefährdenden Stoffe chemischen Ursprungs, also durch Menschenhand gemacht."
       },
       {
-        "number": 8,
-        "options": [
-          {
-            "value": "A",
-            "label": "a. der meiste",
-            "rawLabel": "der meiste",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "b. das meiste",
-            "rawLabel": "das meiste",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "c. die meisten",
-            "rawLabel": "die meisten",
-            "shortcut": "3 / C"
-          },
-          {
-            "value": "D",
-            "label": "d. den meisten",
-            "rawLabel": "den meisten",
-            "shortcut": "4 / D"
-          }
+        "number": 32,
+        "text": "Unglaubliche 99,99 Prozent aller Giftstoffe [32]____ Pflanzen ganz von selbst! Aber welches Interesse hat zum Beispiel eine Kartoffel, uns das Leben mit giftigen Zusatzstoffen schwer zu machen? Nun, auch eine Kartoffel will stressfrei leben und ihre Gene weitergeben.",
+        "german": "Unglaubliche 99,99 Prozent aller Giftstoffe [32]____ Pflanzen ganz von selbst! Aber welches Interesse hat zum Beispiel eine Kartoffel, uns das Leben mit giftigen Zusatzstoffen schwer zu machen? Nun, auch eine Kartoffel will stressfrei leben und ihre Gene weitergeben.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "produzieren",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          179,
+          180
         ],
-        "answer": "C",
-        "answerText": "die meisten",
-        "acceptedAnswers": [],
-        "knowledgePoint": "代词/名词化形容词：die meisten von uns"
+        "reviewGerman": "Unglaubliche 99,99 Prozent aller Giftstoffe produzieren Pflanzen ganz von selbst! Aber welches Interesse hat zum Beispiel eine Kartoffel, uns das Leben mit giftigen Zusatzstoffen schwer zu machen? Nun, auch eine Kartoffel will stressfrei leben und ihre Gene weitergeben."
       },
       {
-        "number": 9,
-        "options": [
-          {
-            "value": "A",
-            "label": "a. Alterskohorte",
-            "rawLabel": "Alterskohorte",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "b. Altersvorsorge",
-            "rawLabel": "Altersvorsorge",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "c. Altersgrenze",
-            "rawLabel": "Altersgrenze",
-            "shortcut": "3 / C"
-          },
-          {
-            "value": "D",
-            "label": "d. Altersfrage",
-            "rawLabel": "Altersfrage",
-            "shortcut": "4 / D"
-          }
+        "number": 33,
+        "text": "Unglaubliche 99,99 Prozent aller Giftstoffe produzieren Pflanzen ganz von selbst! Aber welches Interesse hat zum Beispiel eine Kartoffel, uns das Leben mit giftigen Zusatzstoffen schwer zu [33]____? Nun, auch eine Kartoffel will stressfrei leben und ihre Gene weitergeben.",
+        "german": "Unglaubliche 99,99 Prozent aller Giftstoffe produzieren Pflanzen ganz von selbst! Aber welches Interesse hat zum Beispiel eine Kartoffel, uns das Leben mit giftigen Zusatzstoffen schwer zu [33]____? Nun, auch eine Kartoffel will stressfrei leben und ihre Gene weitergeben.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "machen",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          179,
+          180
         ],
-        "answer": "A",
-        "answerText": "Alterskohorte",
-        "acceptedAnswers": [],
-        "knowledgePoint": "名词语义：Alterskohorte = 同年龄群体"
+        "reviewGerman": "Unglaubliche 99,99 Prozent aller Giftstoffe produzieren Pflanzen ganz von selbst! Aber welches Interesse hat zum Beispiel eine Kartoffel, uns das Leben mit giftigen Zusatzstoffen schwer zu machen? Nun, auch eine Kartoffel will stressfrei leben und ihre Gene weitergeben."
       },
       {
-        "number": 10,
-        "options": [
-          {
-            "value": "A",
-            "label": "a. Daran",
-            "rawLabel": "Daran",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "b. Dafür",
-            "rawLabel": "Dafür",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "c. Dabei",
-            "rawLabel": "Dabei",
-            "shortcut": "3 / C"
-          },
-          {
-            "value": "D",
-            "label": "d. Damit",
-            "rawLabel": "Damit",
-            "shortcut": "4 / D"
-          }
+        "number": 34,
+        "text": "Unglaubliche 99,99 Prozent aller Giftstoffe produzieren Pflanzen ganz von selbst! Aber welches Interesse hat zum Beispiel eine Kartoffel, uns das Leben mit giftigen Zusatzstoffen schwer zu machen? Nun, auch eine Kartoffel will stressfrei leben und ihre Gene [34]____.",
+        "german": "Unglaubliche 99,99 Prozent aller Giftstoffe produzieren Pflanzen ganz von selbst! Aber welches Interesse hat zum Beispiel eine Kartoffel, uns das Leben mit giftigen Zusatzstoffen schwer zu machen? Nun, auch eine Kartoffel will stressfrei leben und ihre Gene [34]____.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "weitergeben",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          179,
+          180
         ],
-        "answer": "B",
-        "answerText": "Dafür",
-        "acceptedAnswers": [],
-        "knowledgePoint": "代副词：dafür = 对此/为此"
+        "reviewGerman": "Unglaubliche 99,99 Prozent aller Giftstoffe produzieren Pflanzen ganz von selbst! Aber welches Interesse hat zum Beispiel eine Kartoffel, uns das Leben mit giftigen Zusatzstoffen schwer zu machen? Nun, auch eine Kartoffel will stressfrei leben und ihre Gene weitergeben."
       },
       {
-        "number": 11,
-        "options": [
-          {
-            "value": "A",
-            "label": "a. zurückgreifen",
-            "rawLabel": "zurückgreifen",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "b. angreifen",
-            "rawLabel": "angreifen",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "c. eingreifen",
-            "rawLabel": "eingreifen",
-            "shortcut": "3 / C"
-          },
-          {
-            "value": "D",
-            "label": "d. ergreifen",
-            "rawLabel": "ergreifen",
-            "shortcut": "4 / D"
-          }
+        "number": 35,
+        "text": "Um sich vor Feinden zu schützen, hat die Natur eine Vielzahl von [35]____ entwickelt.",
+        "german": "Um sich vor Feinden zu schützen, hat die Natur eine Vielzahl von [35]____ entwickelt.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "Strategien",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          179,
+          180
         ],
-        "answer": "A",
-        "answerText": "zurückgreifen",
-        "acceptedAnswers": [],
-        "knowledgePoint": "介词动词搭配：auf Bekanntes zurückgreifen"
+        "reviewGerman": "Um sich vor Feinden zu schützen, hat die Natur eine Vielzahl von Strategien entwickelt."
       },
       {
-        "number": 12,
-        "options": [
-          {
-            "value": "A",
-            "label": "a. alle möglichen Sinneseindrücke",
-            "rawLabel": "alle möglichen Sinneseindrücke",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "b. allen möglichen Sinneseindrücken",
-            "rawLabel": "allen möglichen Sinneseindrücken",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "c. alle mögliche Sinneseindrücke",
-            "rawLabel": "alle mögliche Sinneseindrücke",
-            "shortcut": "3 / C"
-          },
-          {
-            "value": "D",
-            "label": "d. aller möglichen Sinneseindrücke",
-            "rawLabel": "aller möglichen Sinneseindrücke",
-            "shortcut": "4 / D"
-          }
+        "number": 36,
+        "text": "Von einem Kohlkopf, der sich totstellt, [36]____ sich ein hungriges Kaninchen nicht groß beeindrucken.",
+        "german": "Von einem Kohlkopf, der sich totstellt, [36]____ sich ein hungriges Kaninchen nicht groß beeindrucken.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "lässt",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          179,
+          180
         ],
-        "answer": "A",
-        "answerText": "alle möglichen Sinneseindrücke",
-        "acceptedAnswers": [],
-        "knowledgePoint": "形容词词尾/宾语结构：alle möglichen + Akk. Pl."
+        "reviewGerman": "Von einem Kohlkopf, der sich totstellt, lässt sich ein hungriges Kaninchen nicht groß beeindrucken."
       },
       {
-        "number": 13,
-        "options": [
-          {
-            "value": "A",
-            "label": "a. auditiver",
-            "rawLabel": "auditiver",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "b. auditivem",
-            "rawLabel": "auditivem",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "c. auditiven",
-            "rawLabel": "auditiven",
-            "shortcut": "3 / C"
-          },
-          {
-            "value": "D",
-            "label": "d. auditive",
-            "rawLabel": "auditive",
-            "shortcut": "4 / D"
-          }
+        "number": 37,
+        "text": "Was [37]____ tun Pflanzen, um zu überleben? Entweder sie tarnen sich wie lebende Steine.",
+        "german": "Was [37]____ tun Pflanzen, um zu überleben? Entweder sie tarnen sich wie lebende Steine.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。 本空原文存在疑似笔误或缺文，待核对；未自行改写答案。",
+        "answer": "",
+        "answerText": "also",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          179,
+          180
         ],
-        "answer": "C",
-        "answerText": "auditiven",
-        "acceptedAnswers": [],
-        "knowledgePoint": "形容词词尾：im auditiven Kortex，Dativ Singular maskulin"
+        "reviewGerman": "Was also tun Pflanzen, um zu überleben? Entweder sie tarnen sich wie lebende Steine."
       },
       {
-        "number": 14,
-        "options": [
-          {
-            "value": "A",
-            "label": "a. Reime",
-            "rawLabel": "Reime",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "b. Rhythmen",
-            "rawLabel": "Rhythmen",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "c. Richtungen",
-            "rawLabel": "Richtungen",
-            "shortcut": "3 / C"
-          },
-          {
-            "value": "D",
-            "label": "d. Rythmen",
-            "rawLabel": "Rythmen",
-            "shortcut": "4 / D"
-          }
+        "number": 38,
+        "text": "Maden und Pilzen ganz schnell [38]____.",
+        "german": "Maden und Pilzen ganz schnell [38]____.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。 本空原文存在疑似笔误或缺文，待核对；未自行改写答案。",
+        "answer": "",
+        "answerText": "herum",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          179,
+          180
         ],
-        "answer": "B",
-        "answerText": "Rhythmen",
-        "acceptedAnswers": [],
-        "knowledgePoint": "名词语义/拼写：Musikmuster, Rhythmen und Klangfolgen"
+        "reviewGerman": "Maden und Pilzen ganz schnell herum."
       },
       {
-        "number": 15,
-        "options": [
-          {
-            "value": "A",
-            "label": "a. bereits katalogisiert",
-            "rawLabel": "bereits katalogisiert",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "b. bereits katalogisierten",
-            "rawLabel": "bereits katalogisierten",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "c. bereits katalogisierte",
-            "rawLabel": "bereits katalogisierte",
-            "shortcut": "3 / C"
-          },
-          {
-            "value": "D",
-            "label": "d. bereits katalogisierende",
-            "rawLabel": "bereits katalogisierende",
-            "shortcut": "4 / D"
-          }
+        "number": 39,
+        "text": "Dennoch verzehren wir – gesundheitlich vollkommen [39]____ – 60 Kilogramm Kartoffeln im Jahr.",
+        "german": "Dennoch verzehren wir – gesundheitlich vollkommen [39]____ – 60 Kilogramm Kartoffeln im Jahr.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "unbedenklich",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          179,
+          180
         ],
-        "answer": "C",
-        "answerText": "bereits katalogisierte",
-        "acceptedAnswers": [],
-        "knowledgePoint": "分词作形容词/词尾：katalogisierte Muster，Akk. Pl."
+        "reviewGerman": "Dennoch verzehren wir – gesundheitlich vollkommen unbedenklich – 60 Kilogramm Kartoffeln im Jahr."
       },
       {
-        "number": 16,
-        "options": [
-          {
-            "value": "A",
-            "label": "a. Menge",
-            "rawLabel": "Menge",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "b. Masse",
-            "rawLabel": "Masse",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "c. Reihe",
-            "rawLabel": "Reihe",
-            "shortcut": "3 / C"
-          },
-          {
-            "value": "D",
-            "label": "d. Folge",
-            "rawLabel": "Folge",
-            "shortcut": "4 / D"
-          }
+        "number": 40,
+        "text": "Denn wir wissen ganz genau, wo die Kartoffel ihr Gift [40]____.",
+        "german": "Denn wir wissen ganz genau, wo die Kartoffel ihr Gift [40]____.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "speichert",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          179,
+          180
         ],
-        "answer": "A",
-        "answerText": "Menge",
-        "acceptedAnswers": [],
-        "knowledgePoint": "固定搭配：eine entsprechende Menge Dopamin"
+        "reviewGerman": "Denn wir wissen ganz genau, wo die Kartoffel ihr Gift speichert."
       },
       {
-        "number": 17,
-        "options": [
-          {
-            "value": "A",
-            "label": "a. gern",
-            "rawLabel": "gern",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "b. viel",
-            "rawLabel": "viel",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "c. sehr",
-            "rawLabel": "sehr",
-            "shortcut": "3 / C"
-          },
-          {
-            "value": "D",
-            "label": "d. stark",
-            "rawLabel": "stark",
-            "shortcut": "4 / D"
-          }
+        "number": 41,
+        "text": "Die Blüten und Beeren einer Kartoffel [41]____ diverse Glykoalkaloide in hohen Dosen, darunter das giftige Solanin.",
+        "german": "Die Blüten und Beeren einer Kartoffel [41]____ diverse Glykoalkaloide in hohen Dosen, darunter das giftige Solanin.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "enthalten",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          179,
+          180
         ],
-        "answer": "C",
-        "answerText": "sehr",
-        "acceptedAnswers": [],
-        "knowledgePoint": "程度副词：Musik so sehr lieben"
+        "reviewGerman": "Die Blüten und Beeren einer Kartoffel enthalten diverse Glykoalkaloide in hohen Dosen, darunter das giftige Solanin."
       },
       {
-        "number": 18,
-        "options": [
-          {
-            "value": "A",
-            "label": "a. im Laufe des Lebens",
-            "rawLabel": "im Laufe des Lebens",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "b. im Laufe dem Leben",
-            "rawLabel": "im Laufe dem Leben",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "c. in Laufe des Lebens",
-            "rawLabel": "in Laufe des Lebens",
-            "shortcut": "3 / C"
-          },
-          {
-            "value": "D",
-            "label": "d. im Lauf dem Lebens",
-            "rawLabel": "im Lauf dem Lebens",
-            "shortcut": "4 / D"
-          }
+        "number": 42,
+        "text": "Die Blüten und Beeren einer Kartoffel enthalten diverse Glykoalkaloide in hohen [42]____, darunter das giftige Solanin.",
+        "german": "Die Blüten und Beeren einer Kartoffel enthalten diverse Glykoalkaloide in hohen [42]____, darunter das giftige Solanin.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "Dosen",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          179,
+          180
         ],
-        "answer": "A",
-        "answerText": "im Laufe des Lebens",
-        "acceptedAnswers": [
-          "im Laufe des Lebens",
-          "im Lauf des Lebens"
-        ],
-        "knowledgePoint": "固定介词短语：im Laufe + Genitiv"
+        "reviewGerman": "Die Blüten und Beeren einer Kartoffel enthalten diverse Glykoalkaloide in hohen Dosen, darunter das giftige Solanin."
       },
       {
-        "number": 19,
-        "options": [
-          {
-            "value": "A",
-            "label": "a. gar nicht mal so",
-            "rawLabel": "gar nicht mal so",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "b. so gar nicht mal",
-            "rawLabel": "so gar nicht mal",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "c. nicht gar mal so",
-            "rawLabel": "nicht gar mal so",
-            "shortcut": "3 / C"
-          },
-          {
-            "value": "D",
-            "label": "d. gar so nicht mal",
-            "rawLabel": "gar so nicht mal",
-            "shortcut": "4 / D"
-          }
+        "number": 43,
+        "text": "Die Knolle, in der die Stärke und die anderen Nährstoffe lagern, ist im Gegensatz [43]____ ungiftig.",
+        "german": "Die Knolle, in der die Stärke und die anderen Nährstoffe lagern, ist im Gegensatz [43]____ ungiftig.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "dazu",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          179,
+          180
         ],
-        "answer": "A",
-        "answerText": "gar nicht mal so",
-        "acceptedAnswers": [],
-        "knowledgePoint": "固定副词结构：gar nicht mal so selten = 并不那么罕见"
+        "reviewGerman": "Die Knolle, in der die Stärke und die anderen Nährstoffe lagern, ist im Gegensatz dazu ungiftig."
       },
       {
-        "number": 20,
-        "options": [
-          {
-            "value": "A",
-            "label": "a. Widerspruch",
-            "rawLabel": "Widerspruch",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "b. Widerstand",
-            "rawLabel": "Widerstand",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "c. Widerschein",
-            "rawLabel": "Widerschein",
-            "shortcut": "3 / C"
-          },
-          {
-            "value": "D",
-            "label": "d. Widerhall",
-            "rawLabel": "Widerhall",
-            "shortcut": "4 / D"
-          }
+        "number": 44,
+        "text": "Bei zu viel UV-Licht beispielsweise [44]____ die Kartoffelzelle Alarm und verstärkt die Produktion von Solanin, erkennbar an den grünen Augen.",
+        "german": "Bei zu viel UV-Licht beispielsweise [44]____ die Kartoffelzelle Alarm und verstärkt die Produktion von Solanin, erkennbar an den grünen Augen.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "schlägt",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          179,
+          180
         ],
-        "answer": "A",
-        "answerText": "Widerspruch",
-        "acceptedAnswers": [],
-        "knowledgePoint": "名词/固定搭配：in einem Widerspruch zu etwas stehen/sich befinden"
+        "reviewGerman": "Bei zu viel UV-Licht beispielsweise schlägt die Kartoffelzelle Alarm und verstärkt die Produktion von Solanin, erkennbar an den grünen Augen."
       },
       {
-        "number": 21,
-        "options": [
-          {
-            "value": "A",
-            "label": "a. recht",
-            "rawLabel": "recht",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "b. richtig",
-            "rawLabel": "richtig",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "c. gerecht",
-            "rawLabel": "gerecht",
-            "shortcut": "3 / C"
-          },
-          {
-            "value": "D",
-            "label": "d. rechte",
-            "rawLabel": "rechte",
-            "shortcut": "4 / D"
-          }
+        "number": 45,
+        "text": "Für uns Menschen ist das [45]____ praktisch.",
+        "german": "Für uns Menschen ist das [45]____ praktisch.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "ziemlich",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          179,
+          180
         ],
-        "answer": "A",
-        "answerText": "recht",
-        "acceptedAnswers": [],
-        "knowledgePoint": "程度副词：recht einfach = 相当简单"
+        "reviewGerman": "Für uns Menschen ist das ziemlich praktisch."
       },
       {
-        "number": 22,
-        "options": [
-          {
-            "value": "A",
-            "label": "a. wandeln",
-            "rawLabel": "wandeln",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "b. wechseln",
-            "rawLabel": "wechseln",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "c. wandern",
-            "rawLabel": "wandern",
-            "shortcut": "3 / C"
-          },
-          {
-            "value": "D",
-            "label": "d. wenden",
-            "rawLabel": "wenden",
-            "shortcut": "4 / D"
-          }
+        "number": 46,
+        "text": "Man [46]____ die Intelligenz seiner Fressfeinde nie unterschätzen.",
+        "german": "Man [46]____ die Intelligenz seiner Fressfeinde nie unterschätzen.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "sollte",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          179,
+          180
         ],
-        "answer": "A",
-        "answerText": "wandeln",
-        "acceptedAnswers": [],
-        "knowledgePoint": "可分动词：etwas abwandeln = 改编/变体化"
+        "reviewGerman": "Man sollte die Intelligenz seiner Fressfeinde nie unterschätzen."
+      }
+    ]
+  },
+  {
+    "teil": 22,
+    "title": "Wohnen in der Zukunft – es wird eng",
+    "mode": "corpus-card",
+    "sourceText": "2026实时更新2026.9(腾讯文档实时更新）.pdf",
+    "addedIn": "2026.9",
+    "source": "tencent-2026-09",
+    "sourcePages": [
+      180,
+      181
+    ],
+    "questions": [
+      {
+        "number": 25,
+        "text": "In den verschiedenen Regionen haben die Wohnungsmärkte [25]____ mit ganz unterschiedlichen Problemen zu kämpfen.",
+        "german": "In den verschiedenen Regionen haben die Wohnungsmärkte [25]____ mit ganz unterschiedlichen Problemen zu kämpfen.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。 本空原文存在疑似笔误或缺文，待核对；未自行改写答案。",
+        "answer": "",
+        "answerText": "sie",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          180,
+          181
+        ],
+        "reviewGerman": "In den verschiedenen Regionen haben die Wohnungsmärkte sie mit ganz unterschiedlichen Problemen zu kämpfen."
+      },
+      {
+        "number": 26,
+        "text": "Während in manchen Großstädten die Mieten explodieren und bezahlbarer Wohnraum knapp wird, kämpfen ländliche Gebiete [26]____ Abwanderung und Leerstand.",
+        "german": "Während in manchen Großstädten die Mieten explodieren und bezahlbarer Wohnraum knapp wird, kämpfen ländliche Gebiete [26]____ Abwanderung und Leerstand.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "mit",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          180,
+          181
+        ],
+        "reviewGerman": "Während in manchen Großstädten die Mieten explodieren und bezahlbarer Wohnraum knapp wird, kämpfen ländliche Gebiete mit Abwanderung und Leerstand."
+      },
+      {
+        "number": 27,
+        "text": "Experten sehen [27]____, um eine weitere Verschärfung der Lage zu verhindern.",
+        "german": "Experten sehen [27]____, um eine weitere Verschärfung der Lage zu verhindern.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "einen dringenden Handlungsbedarf",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          180,
+          181
+        ],
+        "reviewGerman": "Experten sehen einen dringenden Handlungsbedarf, um eine weitere Verschärfung der Lage zu verhindern."
+      },
+      {
+        "number": 28,
+        "text": "Prognosen zufolge werden die Mieten in Ballungsräumen in den nächsten Jahrzehnten weiter steigen, [28]____ keine grundlegenden Maßnahmen ergriffen werden.",
+        "german": "Prognosen zufolge werden die Mieten in Ballungsräumen in den nächsten Jahrzehnten weiter steigen, [28]____ keine grundlegenden Maßnahmen ergriffen werden.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "wenn",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          180,
+          181
+        ],
+        "reviewGerman": "Prognosen zufolge werden die Mieten in Ballungsräumen in den nächsten Jahrzehnten weiter steigen, wenn keine grundlegenden Maßnahmen ergriffen werden."
+      },
+      {
+        "number": 29,
+        "text": "Gleichzeitig nimmt die Nachfrage [29]____ nachhaltigem und bezahlbarem Wohnraum zu.",
+        "german": "Gleichzeitig nimmt die Nachfrage [29]____ nachhaltigem und bezahlbarem Wohnraum zu.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "nach",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          180,
+          181
+        ],
+        "reviewGerman": "Gleichzeitig nimmt die Nachfrage nach nachhaltigem und bezahlbarem Wohnraum zu."
+      },
+      {
+        "number": 30,
+        "text": "Viele Menschen suchen Alternativen [30]____ klassischen Einfamilienhaus oder zur teuren Stadtwohnung.",
+        "german": "Viele Menschen suchen Alternativen [30]____ klassischen Einfamilienhaus oder zur teuren Stadtwohnung.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "zum",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          180,
+          181
+        ],
+        "reviewGerman": "Viele Menschen suchen Alternativen zum klassischen Einfamilienhaus oder zur teuren Stadtwohnung."
+      },
+      {
+        "number": 31,
+        "text": "Viele Menschen suchen Alternativen zum klassischen Einfamilienhaus oder [31]____ teuren Stadtwohnung.",
+        "german": "Viele Menschen suchen Alternativen zum klassischen Einfamilienhaus oder [31]____ teuren Stadtwohnung.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "zur",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          180,
+          181
+        ],
+        "reviewGerman": "Viele Menschen suchen Alternativen zum klassischen Einfamilienhaus oder zur teuren Stadtwohnung."
+      },
+      {
+        "number": 32,
+        "text": "Neue Wohnformen [32]____ Tiny Houses, Co-Living-Projekte und modulare Bauten gewinnen an Bedeutung.",
+        "german": "Neue Wohnformen [32]____ Tiny Houses, Co-Living-Projekte und modulare Bauten gewinnen an Bedeutung.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "wie",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          180,
+          181
+        ],
+        "reviewGerman": "Neue Wohnformen wie Tiny Houses, Co-Living-Projekte und modulare Bauten gewinnen an Bedeutung."
+      },
+      {
+        "number": 33,
+        "text": "Sie versprechen nicht nur geringere Kosten und einen kleineren ökologischen Fußabdruck, [33]____ auch mehr Gemeinschaft und Flexibilität.",
+        "german": "Sie versprechen nicht nur geringere Kosten und einen kleineren ökologischen Fußabdruck, [33]____ auch mehr Gemeinschaft und Flexibilität.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "sondern",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          180,
+          181
+        ],
+        "reviewGerman": "Sie versprechen nicht nur geringere Kosten und einen kleineren ökologischen Fußabdruck, sondern auch mehr Gemeinschaft und Flexibilität."
+      },
+      {
+        "number": 34,
+        "text": "In Co-Living-Wohnungen teilen sich Bewohner Küche, Arbeitsräume und Freizeitflächen – ein Modell, [34]____ besonders bei jungen Erwachsenen und Digital Nomads beliebt ist.",
+        "german": "In Co-Living-Wohnungen teilen sich Bewohner Küche, Arbeitsräume und Freizeitflächen – ein Modell, [34]____ besonders bei jungen Erwachsenen und Digital Nomads beliebt ist.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "das",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          180,
+          181
+        ],
+        "reviewGerman": "In Co-Living-Wohnungen teilen sich Bewohner Küche, Arbeitsräume und Freizeitflächen – ein Modell, das besonders bei jungen Erwachsenen und Digital Nomads beliebt ist."
+      },
+      {
+        "number": 35,
+        "text": "Tiny Houses [35]____ ermöglichen ein minimalistisches Leben auf kleinstem Raum, oft mobil und energieautark.",
+        "german": "Tiny Houses [35]____ ermöglichen ein minimalistisches Leben auf kleinstem Raum, oft mobil und energieautark.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "wiederum",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          180,
+          181
+        ],
+        "reviewGerman": "Tiny Houses wiederum ermöglichen ein minimalistisches Leben auf kleinstem Raum, oft mobil und energieautark."
+      },
+      {
+        "number": 36,
+        "text": "[36]____ nicht alle sehen in diesen Entwicklungen nur Vorteile.",
+        "german": "[36]____ nicht alle sehen in diesen Entwicklungen nur Vorteile.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "Doch",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          180,
+          181
+        ],
+        "reviewGerman": "Doch nicht alle sehen in diesen Entwicklungen nur Vorteile."
+      },
+      {
+        "number": 37,
+        "text": "Kritiker warnen [37]____ einem Verlust an Privatsphäre und vor sozialer Isolation, selbst wenn Menschen räumlich nah beieinander wohnen.",
+        "german": "Kritiker warnen [37]____ einem Verlust an Privatsphäre und vor sozialer Isolation, selbst wenn Menschen räumlich nah beieinander wohnen.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "vor",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          180,
+          181
+        ],
+        "reviewGerman": "Kritiker warnen vor einem Verlust an Privatsphäre und vor sozialer Isolation, selbst wenn Menschen räumlich nah beieinander wohnen."
+      },
+      {
+        "number": 38,
+        "text": "Kritiker warnen vor einem Verlust an Privatsphäre und [38]____ sozialer Isolation, selbst wenn Menschen räumlich nah beieinander wohnen.",
+        "german": "Kritiker warnen vor einem Verlust an Privatsphäre und [38]____ sozialer Isolation, selbst wenn Menschen räumlich nah beieinander wohnen.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "vor",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          180,
+          181
+        ],
+        "reviewGerman": "Kritiker warnen vor einem Verlust an Privatsphäre und vor sozialer Isolation, selbst wenn Menschen räumlich nah beieinander wohnen."
+      },
+      {
+        "number": 39,
+        "text": "In dicht besiedelten Quartieren kann die Enge [39]____ Konflikten führen, während der Lärmpegel steigt und Grünflächen abnehmen.",
+        "german": "In dicht besiedelten Quartieren kann die Enge [39]____ Konflikten führen, während der Lärmpegel steigt und Grünflächen abnehmen.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "zu",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          180,
+          181
+        ],
+        "reviewGerman": "In dicht besiedelten Quartieren kann die Enge zu Konflikten führen, während der Lärmpegel steigt und Grünflächen abnehmen."
+      },
+      {
+        "number": 40,
+        "text": "Zudem sind viele innovative Wohnprojekte noch teuer [40]____ der Umsetzung und nicht für alle Einkommensschichten zugänglich.",
+        "german": "Zudem sind viele innovative Wohnprojekte noch teuer [40]____ der Umsetzung und nicht für alle Einkommensschichten zugänglich.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "in",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          180,
+          181
+        ],
+        "reviewGerman": "Zudem sind viele innovative Wohnprojekte noch teuer in der Umsetzung und nicht für alle Einkommensschichten zugänglich."
+      },
+      {
+        "number": 41,
+        "text": "Zudem sind viele innovative Wohnprojekte noch teuer in der Umsetzung und nicht [41]____ alle Einkommensschichten zugänglich.",
+        "german": "Zudem sind viele innovative Wohnprojekte noch teuer in der Umsetzung und nicht [41]____ alle Einkommensschichten zugänglich.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "für",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          180,
+          181
+        ],
+        "reviewGerman": "Zudem sind viele innovative Wohnprojekte noch teuer in der Umsetzung und nicht für alle Einkommensschichten zugänglich."
+      },
+      {
+        "number": 42,
+        "text": "Die Politik steht [42]____ der Aufgabe, den Wohnungsbau zu beschleunigen und gleichzeitig Nachhaltigkeit und soziale Gerechtigkeit zu gewährleisten.",
+        "german": "Die Politik steht [42]____ der Aufgabe, den Wohnungsbau zu beschleunigen und gleichzeitig Nachhaltigkeit und soziale Gerechtigkeit zu gewährleisten.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "vor",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          180,
+          181
+        ],
+        "reviewGerman": "Die Politik steht vor der Aufgabe, den Wohnungsbau zu beschleunigen und gleichzeitig Nachhaltigkeit und soziale Gerechtigkeit zu gewährleisten."
+      },
+      {
+        "number": 43,
+        "text": "Baugenehmigungen müssen schneller erteilt werden, Flächen [43]____ den Wohnungsbau freigegeben und Förderprogramme für energieeffizientes Bauen ausgebaut werden.",
+        "german": "Baugenehmigungen müssen schneller erteilt werden, Flächen [43]____ den Wohnungsbau freigegeben und Förderprogramme für energieeffizientes Bauen ausgebaut werden.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "für",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          180,
+          181
+        ],
+        "reviewGerman": "Baugenehmigungen müssen schneller erteilt werden, Flächen für den Wohnungsbau freigegeben und Förderprogramme für energieeffizientes Bauen ausgebaut werden."
+      },
+      {
+        "number": 44,
+        "text": "Baugenehmigungen müssen schneller erteilt werden, Flächen für den Wohnungsbau freigegeben und Förderprogramme [44]____ energieeffizientes Bauen ausgebaut werden.",
+        "german": "Baugenehmigungen müssen schneller erteilt werden, Flächen für den Wohnungsbau freigegeben und Förderprogramme [44]____ energieeffizientes Bauen ausgebaut werden.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "für",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          180,
+          181
+        ],
+        "reviewGerman": "Baugenehmigungen müssen schneller erteilt werden, Flächen für den Wohnungsbau freigegeben und Förderprogramme für energieeffizientes Bauen ausgebaut werden."
+      },
+      {
+        "number": 45,
+        "text": "Gleichzeitig gilt es, den Leerstand auf dem Land zu reduzieren und attraktive Angebote [45]____ Rückkehrer zu schaffen.",
+        "german": "Gleichzeitig gilt es, den Leerstand auf dem Land zu reduzieren und attraktive Angebote [45]____ Rückkehrer zu schaffen.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "für",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          180,
+          181
+        ],
+        "reviewGerman": "Gleichzeitig gilt es, den Leerstand auf dem Land zu reduzieren und attraktive Angebote für Rückkehrer zu schaffen."
+      },
+      {
+        "number": 46,
+        "text": "Ob die Zukunft des Wohnens enger oder offener wird, [46]____ davon ab, wie Gesellschaft, Politik und Wirtschaft zusammenwirken.",
+        "german": "Ob die Zukunft des Wohnens enger oder offener wird, [46]____ davon ab, wie Gesellschaft, Politik und Wirtschaft zusammenwirken.",
+        "chinese": "原文只提供填空答案，未提供 a/b/c/d 选项；保留原文用词。",
+        "answer": "",
+        "answerText": "hängt",
+        "addedIn": "2026.9",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          180,
+          181
+        ],
+        "reviewGerman": "Ob die Zukunft des Wohnens enger oder offener wird, hängt davon ab, wie Gesellschaft, Politik und Wirtschaft zusammenwirken."
       }
     ]
   }

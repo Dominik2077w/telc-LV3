@@ -1,0 +1,36 @@
+{
+  "id": "tencent-2026-09",
+  "filename": "2026实时更新2026.9(腾讯文档实时更新）.pdf",
+  "pages": 329,
+  "sha256": "dfa404ef59dfe38308e702daf614251eea025e313a1f0245c71e5b613c848999",
+  "modules": {
+    "lv2": {
+      "sections": 25,
+      "questions": 154
+    },
+    "lv3": {
+      "sections": 23,
+      "questions": 280
+    },
+    "hv1": {
+      "sections": 21,
+      "questions": 170
+    },
+    "hv2": {
+      "sections": 19,
+      "questions": 198
+    },
+    "baustein": {
+      "sections": 22,
+      "questions": 464
+    },
+    "speaking": {
+      "sections": 4,
+      "questions": 311
+    },
+    "writing": {
+      "sections": 64,
+      "questions": 128
+    }
+  }
+}

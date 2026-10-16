@@ -269,6 +269,36 @@ h2 {
   font-weight: 800;
 }
 
+.new-badge,
+.teil-name .new-badge {
+  display: inline-block;
+  width: fit-content;
+  margin-top: 5px;
+  border: 1px solid #b9dbc5;
+  border-radius: 5px;
+  padding: 3px 7px;
+  background: #e6f5eb;
+  color: #205840;
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.new-only {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 10px 0;
+  color: var(--green-dark);
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.corpus-edition {
+  color: var(--green-dark);
+  font-size: 13px;
+}
+
 .controls {
   display: grid;
   gap: 12px;
