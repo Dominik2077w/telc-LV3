@@ -92,6 +92,11 @@ const datasets = {
 };
 
 let data = [];
+const mobileLayout = window.matchMedia("(max-width: 850px)");
+const compactMatching = window.matchMedia("(max-width: 850px)");
+let mobileMenuOpen = false;
+let levelChosen = false;
+let overlayReturnFocus = null;
 
 const state = {
   level: null,
@@ -112,6 +117,16 @@ const els = {
   appShell: document.querySelector("#appShell"),
   levelGate: document.querySelector("#levelGate"),
   sidebarToggle: document.querySelector("#sidebarToggle"),
+  sidebar: document.querySelector("#practiceSettings"),
+  practice: document.querySelector("#practice"),
+  mobileBar: document.querySelector(".mobile-bar"),
+  mobileModules: document.querySelector("#mobileModules"),
+  mobileLevelLabel: document.querySelector("#mobileLevelLabel"),
+  mobileSettings: document.querySelector("#mobileSettings"),
+  mobileCloseSettings: document.querySelector("#mobileCloseSettings"),
+  mobileBackdrop: document.querySelector("#mobileBackdrop"),
+  closeLevelGate: document.querySelector("#closeLevelGate"),
+  sortInstruction: document.querySelector("#sortInstruction"),
   levelButtons: [...document.querySelectorAll("[data-level-choice]")],
   levelSwitchButtons: [...document.querySelectorAll("[data-level-switch]")],
   appTitle: document.querySelector("#appTitle"),
@@ -199,6 +214,7 @@ restoreSidebarState();
 selectLevel("lv3", { keepGate: true });
 renderIdle();
 unregisterServiceWorker();
+syncMobileLayout();
 
 function selectLevel(level, options = {}) {
   stopSortAudio();
@@ -220,7 +236,10 @@ function selectLevel(level, options = {}) {
   renderIdle();
 
   if (!options.keepGate) {
+    levelChosen = true;
     els.levelGate.classList.add("hidden");
+    syncMobileLayout();
+    if (mobileLayout.matches) setMobileMenuOpen(true);
   }
 }
 
@@ -260,6 +279,14 @@ function splitLanguages(text) {
 }
 
 function bindEvents() {
+  els.mobileSettings.addEventListener("click", () => setMobileMenuOpen(true));
+  els.mobileCloseSettings.addEventListener("click", () => setMobileMenuOpen(false));
+  els.mobileBackdrop.addEventListener("click", () => setMobileMenuOpen(false));
+  els.mobileModules.addEventListener("click", openLevelGate);
+  els.closeLevelGate.addEventListener("click", closeLevelGate);
+  document.addEventListener("keydown", handleOverlayKeyboard, true);
+  mobileLayout.addEventListener("change", syncMobileLayout);
+  compactMatching.addEventListener("change", refreshMatchingLayout);
   els.newOnly.addEventListener("change", () => {
     state.selectedTeils = new Set(getPracticeSections().filter((section) => section.questions.length).map((section) => section.teil));
     renderTeilList();
@@ -300,6 +327,92 @@ function bindEvents() {
   document.addEventListener("keydown", handleKeyboardNavigation);
 }
 
+function setMobileMenuOpen(open) {
+  if (open && mobileLayout.matches) overlayReturnFocus = document.activeElement;
+  mobileMenuOpen = open && mobileLayout.matches;
+  syncMobileLayout();
+  if (mobileMenuOpen) els.mobileCloseSettings.focus();
+  else if (mobileLayout.matches) els.mobileSettings.focus({ preventScroll: true });
+}
+
+function syncMobileLayout() {
+  if (!mobileLayout.matches) mobileMenuOpen = false;
+  const gateOpen = !els.levelGate.classList.contains("hidden");
+  els.appShell.classList.toggle("mobile-settings-open", mobileMenuOpen);
+  els.mobileBackdrop.classList.toggle("hidden", !mobileMenuOpen);
+  els.mobileSettings.setAttribute("aria-expanded", String(mobileMenuOpen));
+  els.appShell.inert = gateOpen;
+  els.sidebar.inert = mobileLayout.matches && !mobileMenuOpen;
+  els.practice.inert = mobileMenuOpen;
+  els.mobileBar.inert = mobileMenuOpen;
+  document.body.classList.toggle("overlay-open", gateOpen || mobileMenuOpen);
+  if (mobileMenuOpen) {
+    els.sidebar.setAttribute("role", "dialog");
+    els.sidebar.setAttribute("aria-modal", "true");
+    els.sidebar.setAttribute("aria-labelledby", "appTitle");
+  } else {
+    els.sidebar.removeAttribute("role");
+    els.sidebar.removeAttribute("aria-modal");
+    els.sidebar.removeAttribute("aria-labelledby");
+  }
+}
+
+function openLevelGate() {
+  setMobileMenuOpen(false);
+  overlayReturnFocus = els.mobileModules;
+  els.closeLevelGate.classList.toggle("hidden", !levelChosen);
+  els.levelGate.classList.remove("hidden");
+  syncMobileLayout();
+  els.levelButtons[0].focus();
+}
+
+function closeLevelGate() {
+  if (!levelChosen) return;
+  els.levelGate.classList.add("hidden");
+  syncMobileLayout();
+  if (overlayReturnFocus?.isConnected) overlayReturnFocus.focus({ preventScroll: true });
+}
+
+function handleOverlayKeyboard(event) {
+  const gateOpen = !els.levelGate.classList.contains("hidden");
+  if (!gateOpen && !mobileMenuOpen) return;
+  if (event.key === "Escape") {
+    event.preventDefault();
+    if (gateOpen) closeLevelGate();
+    else setMobileMenuOpen(false);
+    return;
+  }
+  if (event.key !== "Tab") return;
+  const dialog = gateOpen ? els.levelGate : els.sidebar;
+  const focusable = [...dialog.querySelectorAll('button, input, select, [href], [tabindex="0"]')]
+    .filter((element) => !element.disabled && element.getClientRects().length);
+  const first = focusable[0], last = focusable[focusable.length - 1];
+  if (event.shiftKey && (document.activeElement === first || !dialog.contains(document.activeElement))) {
+    event.preventDefault();
+    last?.focus();
+  } else if (!event.shiftKey && (document.activeElement === last || !dialog.contains(document.activeElement))) {
+    event.preventDefault();
+    first?.focus();
+  }
+}
+
+function scrollMobilePracticeTop() {
+  if (!mobileLayout.matches) return;
+  window.scrollTo({ top: 0, behavior: "instant" });
+}
+
+function refreshMatchingLayout() {
+  if (state.current?.sectionMode === "lv2-global-sort" && !state.complete) {
+    els.sortInstruction.textContent = getLv2GlobalInstruction();
+    renderLv2GlobalSortList();
+    bindLv2GlobalSortEvents();
+  } else if (state.current?.sectionMode === "hv1-sort" && !state.complete) {
+    els.sortInstruction.textContent = compactMatching.matches ? "逐个点选 Sprecher 对应的 Leitsatz，无需拖拽。" : "从 Sprecher 拖到对应 Leitsatz，松手后生成连线。";
+    renderSortList();
+    bindSortEvents();
+  }
+}
+
 function restoreSidebarState() {
   const collapsed = localStorage.getItem("telc-sidebar-collapsed") === "true";
   setSidebarCollapsed(collapsed);
@@ -321,6 +434,7 @@ function renderLevelChrome() {
   document.title = `telc ${config.label} Trainer`;
   els.appEyebrow.textContent = "telc C1 Hochschule";
   els.appTitle.textContent = config.title;
+  els.mobileLevelLabel.textContent = config.label;
   els.promptLabel.textContent = config.promptLabel;
   els.correctAnswerLabel.textContent = config.answerLabel;
   els.reviewGermanLabel.textContent = config.reviewGermanLabel;
@@ -385,8 +499,11 @@ function startSession() {
   const chosen = getPracticeSections().filter((section) => state.selectedTeils.has(section.teil) && section.questions.length);
   if (!chosen.length) {
     els.roundStrip.textContent = "请选择至少一个有题目的 Teil。";
+    els.startButton.textContent = "请先选择题组";
     return;
   }
+  els.startButton.textContent = "开始练习";
+  if (mobileLayout.matches) setMobileMenuOpen(false);
 
   const teilOrdered = applyOrder(chosen, els.teilOrder.value);
 
@@ -450,6 +567,7 @@ function nextQuestion() {
   state.currentIndex += 1;
   showFront(state.current);
   updateStats();
+  if (state.current.sectionMode !== "baustein-article") scrollMobilePracticeTop();
 }
 
 function finishRound() {
@@ -487,6 +605,7 @@ function finishRound() {
   els.roundStrip.textContent =
     els.roundMode.value === "mistakes" ? "错题轮回完成，当前选择的题都做对了。" : "单轮练习完成。";
   updateStats();
+  scrollMobilePracticeTop();
 }
 
 function showFront(question) {
@@ -568,6 +687,7 @@ function showFront(question) {
   els.germanQuestion.classList.remove("baustein-title");
   els.germanQuestion.classList.toggle("field-question", Boolean(question.frontFields));
   els.answerGrid.innerHTML = "";
+  els.answerGrid.classList.remove("is-short");
   els.roundStrip.textContent = `Runde ${state.round}`;
 
   renderParagraphPanel(question);
@@ -595,6 +715,7 @@ function showFront(question) {
   }
 
   const choices = getChoices(question);
+  els.answerGrid.classList.toggle("is-short", choices.length <= 5 && choices.every((choice) => choice.label.length <= 18));
   els.answerGrid.dataset.count = String(choices.length);
   for (const choice of choices) {
     const button = document.createElement("button");
@@ -614,6 +735,7 @@ function showFront(question) {
 
 function renderParagraphPanel(question) {
   els.paragraphPanel.innerHTML = "";
+  els.paragraphPanel.classList.remove("is-reviewed");
   els.paragraphPanel.classList.remove("baustein-panel");
 
   if (question.sectionMode !== "paragraph-match") {
@@ -633,6 +755,7 @@ function renderParagraphPanel(question) {
 }
 
 function renderBausteinArticle(section) {
+  els.paragraphPanel.classList.remove("is-reviewed");
   els.questionCard.classList.remove("hidden");
   els.sortModeView.classList.add("hidden");
   els.audioPanel.classList.add("hidden");
@@ -654,7 +777,21 @@ function renderBausteinArticle(section) {
 
   const article = document.createElement("div");
   article.className = "baustein-article";
+  article.lang = "de";
   article.innerHTML = formatBausteinArticle(section.article || "");
+  article.addEventListener("click", (event) => {
+    const blank = event.target.closest(".baustein-blank");
+    if (!blank || els.paragraphPanel.classList.contains("is-reviewed")) return;
+    const rowIndex = getBausteinRows().findIndex((row) => row.dataset.number === blank.dataset.number);
+    setBausteinFocus(rowIndex);
+    const panel = els.paragraphPanel.querySelector(".baustein-floating-panel");
+    panel?.classList.remove("is-collapsed");
+    const toggle = panel?.querySelector('[data-action="toggle-panel"]');
+    if (toggle) {
+      toggle.textContent = "收起选项";
+      toggle.setAttribute("aria-expanded", "true");
+    }
+  });
   els.paragraphPanel.append(article);
 
   const floatingPanel = document.createElement("aside");
@@ -692,7 +829,9 @@ function createBausteinQuestionNode(question) {
   row.className = "baustein-question";
   row.dataset.number = question.number;
   row.dataset.answer = question.answer;
-  row.addEventListener("click", () => setBausteinFocus(getBausteinRowIndex(row)));
+  row.addEventListener("click", (event) => {
+    if (!event.target.closest(".baustein-option")) setBausteinFocus(getBausteinRowIndex(row));
+  });
 
   const header = document.createElement("div");
   header.className = "baustein-question-head";
@@ -726,6 +865,7 @@ function selectBausteinOption(row, button) {
 }
 
 function setBausteinFocus(index, options = {}) {
+  if (els.paragraphPanel.classList.contains("is-reviewed")) return;
   const rows = getBausteinRows();
   if (!rows.length) return;
 
@@ -744,6 +884,10 @@ function setBausteinFocus(index, options = {}) {
   }
 
   renderBausteinFloatingPanel(rows[nextIndex], nextIndex, rows.length);
+  if (mobileLayout.matches) {
+    const blank = els.paragraphPanel.querySelector(".baustein-blank.current");
+    blank?.scrollIntoView({ block: "center", behavior: "instant" });
+  }
 }
 
 function renderBausteinFloatingPanel(row, index, total) {
@@ -779,11 +923,14 @@ function renderBausteinFloatingPanel(row, index, total) {
     (index + 1) +
     " / " +
     total +
-    '</em></div><div class="baustein-float-options">' +
+    '</em><button type="button" class="ghost-button baustein-panel-toggle" data-action="toggle-panel" aria-expanded="' +
+    !panel.classList.contains("is-collapsed") + '">' + (panel.classList.contains("is-collapsed") ? "展开选项" : "收起选项") +
+    '</button></div><div class="baustein-float-options">' +
     optionHtml +
     '</div><div class="baustein-float-actions">' +
     '<button type="button" class="baustein-float-action" data-action="back">回退</button>' +
     '<button type="button" class="baustein-float-action primary" data-action="next">下一个</button>' +
+    '<button type="button" class="baustein-float-action primary" data-action="submit">核对整篇</button>' +
     '</div><p>点击选项直接选择；Enter 或“下一个”推进，Delete / Backspace 或“回退”退回。</p>';
 
   for (const button of panel.querySelectorAll(".baustein-float-option")) {
@@ -797,10 +944,17 @@ function renderBausteinFloatingPanel(row, index, total) {
   const nextButton = panel.querySelector('[data-action="next"]');
   if (backButton) backButton.addEventListener("click", stepBackBausteinSelection);
   if (nextButton) nextButton.addEventListener("click", moveBausteinFocusForward);
+  panel.querySelector('[data-action="submit"]').addEventListener("click", () => submitBausteinArticle(state.current));
+  panel.querySelector('[data-action="toggle-panel"]').addEventListener("click", (event) => {
+    const collapsed = panel.classList.toggle("is-collapsed");
+    event.currentTarget.textContent = collapsed ? "展开选项" : "收起选项";
+    event.currentTarget.setAttribute("aria-expanded", String(!collapsed));
+  });
 }
 
 function handleBausteinKeyboard(event) {
   if (!state.current || state.current.sectionMode !== "baustein-article") return false;
+  if (els.paragraphPanel.classList.contains("is-reviewed") || isNativeButtonKey(event)) return false;
   if (!els.backFace.classList.contains("hidden")) return false;
 
   if (["1", "2", "3", "4"].includes(event.key)) {
@@ -886,6 +1040,7 @@ function updateBausteinBlankAfterSubmit(row, question, isCorrect) {
   const answer = row.dataset.answer || "";
   const correctOption = answer ? row.querySelector(`.baustein-option[data-choice="${cssEscape(answer)}"]`) : null;
   const answerText = correctOption?.textContent || question?.answerText || answer;
+  blank.disabled = true;
   blank.classList.remove("current");
   blank.classList.add("answered");
   blank.classList.toggle("correct", isCorrect);
@@ -907,6 +1062,9 @@ function getBausteinRowIndex(row) {
 }
 
 function submitBausteinArticle(section) {
+  if (els.paragraphPanel.classList.contains("is-reviewed")) return;
+  els.paragraphPanel.classList.add("is-reviewed");
+  els.paragraphPanel.querySelector(".baustein-floating-panel")?.remove();
   const rows = [...els.paragraphPanel.querySelectorAll(".baustein-question")];
   let correctCount = 0;
   let unansweredCount = 0;
@@ -964,6 +1122,7 @@ function submitBausteinArticle(section) {
   els.roundStrip.textContent =
     els.roundMode.value === "mistakes" ? "有错的文章会进入下一轮。" : "当前是单轮练习。";
   updateStats();
+  if (mobileLayout.matches) els.answerGrid.scrollIntoView({ block: "center", behavior: "instant" });
 }
 
 function renderAudioPlayer(question) {
@@ -1045,9 +1204,11 @@ function revealFlashcard() {
         : "快捷键：← 不记得，→ 记得。不熟的段落会进入下一轮。"
       : "快捷键：← 不记得，→ 记得。";
   updateStats();
+  scrollMobilePracticeTop();
 }
 
 function handleKeyboardNavigation(event) {
+  if (mobileMenuOpen || !els.levelGate.classList.contains("hidden")) return;
   if (event.repeat || state.complete) return;
   if (isEditableTarget(event.target)) return;
   if (!state.current || state.complete) return;
@@ -1171,6 +1332,7 @@ function answerQuestion(choice) {
   els.roundStrip.textContent =
     els.roundMode.value === "mistakes" ? "答错的题会进入下一轮。" : "当前是单轮练习。";
   updateStats();
+  scrollMobilePracticeTop();
 }
 
 function markFlashcardMissed(options = {}) {
@@ -1391,7 +1553,8 @@ function renderLv2GlobalSortView(batch) {
   lv2GlobalSortState.submitted = false;
 
   els.sortTeilBadge.textContent = "Teil " + batch.teil + " · " + batch.teilTitle;
-  els.sortInfo.textContent = getLv2GlobalInstruction();
+  els.sortInfo.textContent = compactMatching.matches ? "已配对 0 / " + lv2GlobalSortState.options.length : getLv2GlobalInstruction();
+  els.sortInstruction.textContent = getLv2GlobalInstruction();
   els.sortSubmitButton.textContent = "提交";
   els.sortSubmitButton.disabled = false;
   els.sortSubmitButton.onclick = null;
@@ -1401,6 +1564,7 @@ function renderLv2GlobalSortView(batch) {
 }
 
 function getLv2GlobalInstruction() {
+  if (compactMatching.matches) return "先查看段落 / 信号词，再逐题点选对应段落，无需拖拽。";
   if (lv2GlobalSortState.batch?.level === "lv2v2") {
     return "把右侧德语原句拖到左侧对应的德语信号词。左侧同时显示对应问句。";
   }
@@ -1409,6 +1573,10 @@ function getLv2GlobalInstruction() {
 
 function renderLv2GlobalSortList() {
   els.sortList.innerHTML = "";
+  if (compactMatching.matches) {
+    renderMobileLv2Matching();
+    return;
+  }
   var board = document.createElement("div");
   board.className =
     "sort-connect-board lv2-global-board" +
@@ -1431,6 +1599,134 @@ function renderLv2GlobalSortList() {
   }
 
   drawLv2GlobalSortLines();
+}
+
+// Native selects keep matching usable while scrolling with one finger on phones.
+function createMobileMatchCard(title, text, choices, value, submitted, correct, feedback, onChange) {
+  const card = document.createElement("article");
+  card.className = "mobile-match-card";
+  card.classList.toggle("matched", Boolean(value));
+  if (submitted) card.classList.add(correct ? "correct" : "incorrect");
+  const heading = document.createElement("div");
+  heading.className = "mobile-match-head";
+  heading.textContent = title;
+  card.append(heading);
+  if (text) {
+    const content = document.createElement("p");
+    content.textContent = text;
+    card.append(content);
+  }
+  const label = document.createElement("label");
+  label.append(document.createTextNode(submitted ? "正确配对" : "选择对应项"));
+  const select = document.createElement("select");
+  select.setAttribute("aria-label", title + "：选择对应项");
+  select.append(new Option("请选择…", ""));
+  for (const choice of choices) select.append(new Option(choice.label, choice.id));
+  select.value = value || "";
+  select.disabled = submitted;
+  select.addEventListener("change", function () {
+    onChange(select.value);
+    card.classList.toggle("matched", Boolean(select.value));
+    const preview = card.querySelector(".mobile-match-selection");
+    if (preview) preview.textContent = select.value ? select.selectedOptions[0].textContent : "";
+  });
+  label.append(select);
+  card.append(label);
+  if (!submitted && choices.some(choice => choice.label.length > 30)) {
+    const preview = document.createElement("p");
+    preview.className = "mobile-match-selection";
+    preview.setAttribute("aria-live", "polite");
+    preview.textContent = value ? select.selectedOptions[0]?.textContent || "" : "";
+    card.append(preview);
+  }
+  if (submitted) {
+    const result = document.createElement("p");
+    result.className = "mobile-match-feedback";
+    result.textContent = (correct ? "✓ 回答正确\n" : "✗ ") + feedback;
+    card.append(result);
+  }
+  return card;
+}
+
+function renderMobileLv2Matching() {
+  const list = document.createElement("div");
+  list.className = "mobile-match-list";
+  const reference = document.createElement("details");
+  reference.className = "mobile-reference";
+  const summary = document.createElement("summary");
+  summary.textContent = "查看全部段落 / 信号词（" + lv2GlobalSortState.paragraphs.length + "）";
+  reference.append(summary);
+  const isV2 = lv2GlobalSortState.batch?.level === "lv2v2";
+  for (const paragraph of lv2GlobalSortState.paragraphs) {
+    const content = document.createElement("div");
+    content.className = "sort-node";
+    content.textContent = "Abschnitt " + paragraph.label + " · " +
+      (isV2 ? (paragraph.german || paragraph.signalwort || "") + "\n" + (paragraph.frage || "") :
+        (els.lv2GlobalDisplay.value === "german" ? paragraph.german : paragraph.chinese));
+    reference.append(content);
+  }
+  list.append(reference);
+  const choices = lv2GlobalSortState.paragraphs.map(function (paragraph) {
+    const repeatedLabel = lv2GlobalSortState.paragraphs.some(p => p.id !== paragraph.id && p.label === paragraph.label);
+    return { id: paragraph.id, label: "Abschnitt " + paragraph.label +
+      (isV2 || repeatedLabel ? " · " + (paragraph.german || paragraph.signalwort) : "") };
+  });
+  const displayMatches = getLv2GlobalDisplayMatches();
+  lv2GlobalSortState.options.forEach(function (option, index) {
+    const original = findLv2GlobalParagraph(lv2GlobalSortState.matches[index]);
+    const correct = findLv2GlobalParagraph(option.paragraphId);
+    const feedback = (original ? "你选择了 " + choices.find(c => c.id === original.id).label : "未作答") +
+      "；正确为 Abschnitt " + (correct?.label || "?") + "。\n" +
+      (correct ? (isV2 ? correct.german + "\n" + correct.chinese + "\n" + correct.frage :
+        (els.lv2GlobalDisplay.value === "german" ? correct.german : correct.chinese)) : "");
+    list.append(createMobileMatchCard("题项 " + (index + 1), isV2 ? option.text : getLv2OptionDisplayText(option),
+      choices, displayMatches[index], lv2GlobalSortState.submitted, isLv2GlobalMatchCorrect(index), feedback,
+      function (value) {
+        if (value) lv2GlobalSortState.matches[index] = value;
+        else delete lv2GlobalSortState.matches[index];
+        els.sortInfo.textContent = "已配对 " + Object.keys(lv2GlobalSortState.matches).length + " / " + lv2GlobalSortState.options.length;
+      }));
+  });
+  els.sortList.append(list);
+}
+
+function renderMobileHv1Matching() {
+  const list = document.createElement("div");
+  list.className = "mobile-match-list";
+  const choices = sortState.questions.map((q, i) => ({ id: q.id, label: (i + 1) + ". " + q.leitsatz }));
+  const displayMatches = getSortDisplayMatches();
+  sortState.speakers.forEach(function (speaker, index) {
+    const original = findSortQuestion(sortState.matches[index]);
+    const correct = findCorrectSortQuestionForSpeaker(index);
+    const selected = findSortQuestion(displayMatches[index]);
+    const feedback = isSortMatchCorrect(index) ? "配对已确认。" :
+      (original ? "你选择了：" + original.leitsatz : "未作答") + "\n正确答案：" + (correct?.leitsatz || "");
+    const card = createMobileMatchCard("Sprecher " + speaker.number,
+      sortState.submitted ? selected?.leitsatz : "", choices, displayMatches[index], sortState.submitted,
+      isSortMatchCorrect(index), feedback, function (value) {
+        if (value) removeExistingSortMatch(value);
+        if (value) sortState.matches[index] = value;
+        else delete sortState.matches[index];
+        list.querySelectorAll("select").forEach(function (select, i) {
+          select.value = sortState.matches[i] || "";
+          select.closest(".mobile-match-card").classList.toggle("matched", Boolean(select.value));
+          const preview = select.closest(".mobile-match-card").querySelector(".mobile-match-selection");
+          if (preview) preview.textContent = select.value ? select.selectedOptions[0].textContent : "";
+        });
+        els.sortInfo.textContent = "已配对 " + Object.keys(sortState.matches).length + " / " + sortState.speakers.length;
+      });
+    if (speaker.audio) {
+      const audio = document.createElement("button");
+      audio.type = "button";
+      audio.className = "sort-audio-btn";
+      audio.dataset.audio = speaker.audio;
+      audio.textContent = "▶ 播放";
+      audio.setAttribute("aria-label", "播放 Sprecher " + speaker.number);
+      card.querySelector(".mobile-match-head").append(audio);
+    }
+    list.append(card);
+  });
+  els.sortList.append(list);
 }
 
 function bindLv2GlobalSortEvents() {
@@ -1731,8 +2027,8 @@ function submitLv2GlobalSort() {
   var scoreText = correct === total ? "全部正确！" : correct + " / " + total + " 正确";
   els.sortInfo.innerHTML =
     '<span class="sort-score ' + scoreClass + '">' + scoreText + "</span>" +
-    (correct === total ? "" : '<span class="sort-correction-note">红色为已更正的正确连线。</span>') +
-    (lv2GlobalSortState.batch?.level === "lv2v2" && correct < total ? renderLv2V2Corrections() : "");
+    (correct === total ? "" : '<span class="sort-correction-note">' + (compactMatching.matches ? "已在各题下显示正确配对。" : "红色为已更正的正确连线。") + '</span>') +
+    (!compactMatching.matches && lv2GlobalSortState.batch?.level === "lv2v2" && correct < total ? renderLv2V2Corrections() : "");
 
   if (correct < total) {
     state.roundMistakes += total - correct;
@@ -1745,6 +2041,7 @@ function submitLv2GlobalSort() {
   els.sortSubmitButton.onclick = nextQuestion;
 
   updateStats();
+  scrollMobilePracticeTop();
 }
 
 function renderLv2V2Corrections() {
@@ -1781,7 +2078,7 @@ function shuffleLv2GlobalSort() {
   lv2GlobalSortState.selectedOption = null;
   lv2GlobalSortState.drag = null;
   lv2GlobalSortState.suppressClick = false;
-  els.sortInfo.textContent = "已重新打乱右侧题项。";
+  els.sortInfo.textContent = compactMatching.matches ? "已重新打乱，请重新点选配对。" : "已重新打乱右侧题项。";
   renderLv2GlobalSortList();
   bindLv2GlobalSortEvents();
 }
@@ -1835,7 +2132,8 @@ function renderSortView(batch) {
   sortState.submitted = false;
 
   els.sortTeilBadge.textContent = "Teil " + batch.teil + " · " + batch.teilTitle;
-  els.sortInfo.textContent = "Ziehe links einen Sprecher auf den passenden Leitsatz.";
+  els.sortInfo.textContent = compactMatching.matches ? "已配对 0 / " + sortState.speakers.length : "Ziehe links einen Sprecher auf den passenden Leitsatz.";
+  els.sortInstruction.textContent = compactMatching.matches ? "逐个点选 Sprecher 对应的 Leitsatz，无需拖拽。" : "从 Sprecher 拖到对应 Leitsatz，松手后生成连线。";
   els.sortSubmitButton.textContent = "提交";
   els.sortSubmitButton.disabled = false;
   els.sortSubmitButton.onclick = null;
@@ -1846,6 +2144,10 @@ function renderSortView(batch) {
 
 function renderSortList() {
   els.sortList.innerHTML = "";
+  if (compactMatching.matches) {
+    renderMobileHv1Matching();
+    return;
+  }
   var board = document.createElement("div");
   board.className = "sort-connect-board";
   board.innerHTML =
@@ -2290,7 +2592,7 @@ function submitSort() {
   var scoreText = correct === total ? "全部正确！" : correct + " / " + total + " 正确";
   els.sortInfo.innerHTML =
     '<span class="sort-score ' + scoreClass + '">' + scoreText + "</span>" +
-    (correct === total ? "" : '<span class="sort-correction-note">红色为已改正的正确连线。</span>');
+    (correct === total ? "" : '<span class="sort-correction-note">' + (compactMatching.matches ? "已在各题下显示正确配对。" : "红色为已改正的正确连线。") + '</span>');
 
   if (correct < total) {
     state.roundMistakes += total - correct;
@@ -2306,6 +2608,7 @@ function submitSort() {
   };
 
   updateStats();
+  scrollMobilePracticeTop();
 }
 
 function stopSortAudio() {
@@ -2328,7 +2631,7 @@ function shuffleSort() {
   sortState.selectedSpeaker = null;
   sortState.drag = null;
   sortState.suppressClick = false;
-  els.sortInfo.textContent = "已重新打乱 Leitsätze。拖拽 Sprecher 到对应 Leitsatz。";
+  els.sortInfo.textContent = compactMatching.matches ? "已重新打乱，请重新点选配对。" : "已重新打乱 Leitsätze。拖拽 Sprecher 到对应 Leitsatz。";
   renderSortList();
   bindSortEvents();
 }
@@ -2380,7 +2683,7 @@ function formatFields(fields) {
 
 function formatBausteinArticle(article) {
   const html = escapeHtml(article)
-    .replace(/\[(\d+)\]____/g, '<span class="baustein-blank" data-number="$1">$1 ___</span>')
+    .replace(/\[(\d+)\]____/g, '<button type="button" class="baustein-blank" data-number="$1" aria-label="空格 $1">$1 ___</button>')
     .replace(/\n{2,}/g, "</p><p>")
     .replace(/\n/g, "<br>");
   return `<p>${html}</p>`;

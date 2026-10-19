@@ -54,3 +54,11 @@ The published build includes the question data and review cards. Local audio ass
 ## iOS Local Use
 
 Open the GitHub Pages link in Safari to use the hosted app. For local testing from another device, run a local server on the machine that hosts this folder and open the machine's LAN address in Safari.
+
+## Phone Layout
+
+Screens up to 850 CSS pixels use a compact practice layout. Choose a module, select the desired sections in **题组 / 设置**, then use the always-visible **开始练习** button. Settings close during practice and can be reopened from the top bar. The module button opens the module chooser without discarding the current exercise until a module is selected.
+
+LV2 global matching, LV2 version 2, and HV1 sorting use native selection controls on phones; selected text and corrections wrap in the card. Baustein articles have a bottom option panel that can be collapsed for reading, and tapping a blank returns to its options. Review and matching actions stay near the bottom of the viewport while reading. The **2026.9 新增** badges and filter are available in the phone layout.
+
+Browser checks cover 320×568, 360×640, 390×844, landscape, and a 1280-pixel desktop viewport. See [the mobile validation notes](docs/mobile-validation.md).

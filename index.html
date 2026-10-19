@@ -2,7 +2,7 @@
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="theme-color" content="#2f7d59" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-title" content="telc Trainer" />
@@ -11,13 +11,13 @@
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="apple-touch-icon" href="./icons/icon-192.png" />
     <link rel="icon" href="./icons/icon-192.svg" />
-    <link rel="stylesheet" href="./styles.css?v=202609-corpus" />
+    <link rel="stylesheet" href="./styles.css?v=20261019-mobile" />
   </head>
   <body>
-    <div class="level-gate" id="levelGate">
+    <div class="level-gate" id="levelGate" role="dialog" aria-modal="true" aria-labelledby="levelGateTitle">
       <div class="level-gate-inner">
         <p class="eyebrow">telc C1 Hochschule</p>
-        <h1>选择训练级别</h1>
+        <div class="gate-heading"><h1 id="levelGateTitle">选择训练级别</h1><button class="ghost-button hidden" id="closeLevelGate" type="button">返回练习</button></div>
         <p class="corpus-edition">2026.9 语料已更新，新题带有「新增」标记。</p>
         <div class="level-choice-grid">
           <button class="level-choice" type="button" data-level-choice="lv2">
@@ -60,8 +60,14 @@
       </div>
     </div>
 
+    <div class="mobile-backdrop hidden" id="mobileBackdrop" aria-hidden="true"></div>
     <main class="app-shell" id="appShell">
-      <aside class="sidebar">
+      <header class="mobile-bar">
+        <button class="mobile-module-button" id="mobileModules" type="button" aria-haspopup="dialog"><span id="mobileLevelLabel">LV3</span><span aria-hidden="true"> ▾</span><span class="sr-only">切换训练模块</span></button>
+        <span class="mobile-brand">telc Trainer</span>
+        <button class="mobile-settings-button" id="mobileSettings" type="button" aria-controls="practiceSettings" aria-expanded="false">题组 / 设置</button>
+      </header>
+      <aside class="sidebar" id="practiceSettings" tabindex="-1">
         <div class="sidebar-top">
           <div class="brand">
             <p class="eyebrow" id="appEyebrow">telc C1 Hochschule</p>
@@ -76,6 +82,7 @@
           >
             收起
           </button>
+          <button class="mobile-menu-close" id="mobileCloseSettings" type="button" aria-label="关闭题组设置">完成</button>
         </div>
 
         <div class="sidebar-body" id="sidebarBody">
@@ -145,16 +152,16 @@
                 <option value="single">单轮</option>
               </select>
             </label>
-            <button class="primary-button" id="startButton" type="button">开始</button>
           </section>
         </div>
+        <div class="settings-actions"><button class="primary-button" id="startButton" type="button">开始练习</button></div>
       </aside>
 
-      <section class="practice">
+      <section class="practice" id="practice">
         <header class="topbar">
           <div>
             <p class="eyebrow" id="sessionMode">未开始</p>
-            <h2 id="sessionTitle">选择 Teil 后开始练习</h2>
+            <h2 id="sessionTitle" tabindex="-1">选择 Teil 后开始练习</h2>
             <span class="new-badge hidden" id="corpusUpdateBadge"></span>
           </div>
           <div class="stats">
@@ -169,7 +176,7 @@
           <div class="sort-mode hidden" id="sortModeView">
             <div class="sort-header">
               <span id="sortTeilBadge">Teil</span>
-              <p>从 Sprecher 拖到对应 Leitsatz，松手后生成连线。</p>
+              <p id="sortInstruction">从 Sprecher 拖到对应 Leitsatz，松手后生成连线。</p>
             </div>
             <div class="sort-info" id="sortInfo"></div>
             <div class="sort-list" id="sortList"></div>
@@ -185,7 +192,7 @@
                 <span id="questionBadge">Frage</span>
               </div>
               <p class="prompt-label" id="promptLabel">Deutsch</p>
-              <p class="german-question" id="germanQuestion">Bereit.</p>
+              <p class="german-question" id="germanQuestion" lang="de">Bereit.</p>
               <div class="paragraph-panel hidden" id="paragraphPanel"></div>
               <div class="answer-grid" id="answerGrid"></div>
             </div>
@@ -199,7 +206,7 @@
                 </div>
                 <div>
                   <dt id="reviewGermanLabel">Deutsch</dt>
-                  <dd id="reviewGerman">-</dd>
+                  <dd id="reviewGerman" lang="de">-</dd>
                 </div>
                 <div>
                   <dt id="reviewChineseLabel">中文</dt>
@@ -227,6 +234,6 @@
     <script src="./data/baustein_questions.js?v=202609-corpus"></script>
     <script src="./data/speaking_questions.js?v=202609-corpus"></script>
     <script src="./data/baustein_grammar_questions.js?v=20260508-grammar"></script>
-    <script src="./app.js?v=202609-corpus"></script>
+    <script src="./app.js?v=20261019-mobile"></script>
   </body>
 </html>
