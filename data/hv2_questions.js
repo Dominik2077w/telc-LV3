@@ -87,7 +87,7 @@ window.HV2_QUESTIONS = [
         "number": "58a",
         "text": "Schon in naher Zukunft ...",
         "german": "Schon in naher Zukunft ...",
-        "chinese": "暂无中文释义",
+        "chinese": "在不久的将来，清洁机器人能够自行充电。",
         "answer": "B",
         "completion": "können sich Reinigungsroboter selbst aufladen.",
         "options": [
@@ -113,7 +113,7 @@ window.HV2_QUESTIONS = [
         "number": "58b",
         "text": "Schon jetzt ...",
         "german": "Schon jetzt ...",
-        "chinese": "暂无中文释义",
+        "chinese": "如今，机器人已经能够自行充电。",
         "answer": "C",
         "completion": "sind Roboter in der Lage, sich selbst aufzuladen.",
         "options": [
@@ -139,7 +139,7 @@ window.HV2_QUESTIONS = [
         "number": "59a",
         "text": "Herr Burgard sagt, dass Roboter ...",
         "german": "Herr Burgard sagt, dass Roboter ...",
-        "chinese": "暂无中文释义",
+        "chinese": "布格瓦德先生说，机器人可以被用作看门犬。",
         "answer": "A",
         "completion": "als Wachhunde eingesetzt werden können.",
         "options": [
@@ -165,7 +165,7 @@ window.HV2_QUESTIONS = [
         "number": "59b",
         "text": "Herr Burgard sagt, dass Roboter ...",
         "german": "Herr Burgard sagt, dass Roboter ...",
-        "chinese": "暂无中文释义",
+        "chinese": "布格瓦德先生说，机器人可以用来保护自己的住宅。",
         "answer": "A",
         "completion": "zum Schutz eigener Wohnung eingesetzt werden.",
         "options": [
@@ -2361,7 +2361,7 @@ window.HV2_QUESTIONS = [
         "number": "59a",
         "text": "Wer Astronaut werden will, ...",
         "german": "Wer Astronaut werden will, ...",
-        "chinese": "暂无中文释义",
+        "chinese": "有志成为宇航员的人，必须做好接受多年训练的准备。",
         "answer": "A",
         "completion": "muss sich auf mehrjährige Trainings einstellen.",
         "options": [
@@ -2387,7 +2387,7 @@ window.HV2_QUESTIONS = [
         "number": "59b",
         "text": "Wer Astronaut werden will, ...",
         "german": "Wer Astronaut werden will, ...",
-        "chinese": "暂无中文释义",
+        "chinese": "想成为宇航员，需要有坚韧不拔的毅力。",
         "answer": "A",
         "completion": "braucht Durchhaltevermögen.",
         "options": [
@@ -2439,7 +2439,7 @@ window.HV2_QUESTIONS = [
         "number": "61a",
         "text": "Für Thomas Reiter ist Raumfahrt ...",
         "german": "Für Thomas Reiter ist Raumfahrt ...",
-        "chinese": "暂无中文释义",
+        "chinese": "对托马斯·赖特而言，航天事业是人类进步的基础。",
         "answer": "A",
         "completion": "eine Grundlage für den Fortschritt der Menschheit.",
         "options": [
@@ -2465,7 +2465,7 @@ window.HV2_QUESTIONS = [
         "number": "61b",
         "text": "Erkundungsreisen sind ...",
         "german": "Erkundungsreisen sind ...",
-        "chinese": "暂无中文释义",
+        "chinese": "探索之旅是建设高度发达社会的先决条件。",
         "answer": "C",
         "completion": "Vorbedingung für eine hochentwickelte Gesellschaft.",
         "options": [
@@ -2491,7 +2491,7 @@ window.HV2_QUESTIONS = [
         "number": "62a",
         "text": "Thomas Reiter ...",
         "german": "Thomas Reiter ...",
-        "chinese": "暂无中文释义",
+        "chinese": "托马斯·赖特预计，在可预见的未来，人类也会开展前往其他行星的太空飞行。",
         "answer": "C",
         "completion": "erwartet, dass es in absehbarer Zukunft auch Raumfahrt zu anderen Planeten geben wird.",
         "options": [
@@ -2517,7 +2517,7 @@ window.HV2_QUESTIONS = [
         "number": "62b",
         "text": "Expeditionen zum Mars ...",
         "german": "Expeditionen zum Mars ...",
-        "chinese": "暂无中文释义",
+        "chinese": "火星探险计划应在不久的将来于国际空间站上进行准备。",
         "answer": "B",
         "completion": "sollen in näherer Zukunft auf der Raumfahrt ISS vorbereitet werden.",
         "options": [
@@ -2543,7 +2543,7 @@ window.HV2_QUESTIONS = [
         "number": "63a",
         "text": "Raumfahrt ...",
         "german": "Raumfahrt ...",
-        "chinese": "暂无中文释义",
+        "chinese": "航天事业应该向每个人开放。",
         "answer": "C",
         "completion": "sollte für jeden zugänglich sein.",
         "options": [
@@ -2569,7 +2569,7 @@ window.HV2_QUESTIONS = [
         "number": "63b",
         "text": "Raumfahrt ...",
         "german": "Raumfahrt ...",
-        "chinese": "暂无中文释义",
+        "chinese": "航天事业应该向更广泛的人群开放。",
         "answer": "C",
         "completion": "sollte breiten Schichten zugänglich gemacht werden.",
         "options": [
@@ -4535,7 +4535,7 @@ window.HV2_QUESTIONS = [
         "number": "55",
         "text": "Der Studiogast ...",
         "german": "Der Studiogast ...",
-        "chinese": "暂无中文释义",
+        "chinese": "这位节目嘉宾的职业是研究无人机领域的最新发展。",
         "answer": "A",
         "completion": "beschäftigt sich beruflich mit den neuesten Entwicklungen im Bereich Drohnen.",
         "options": [
@@ -4561,7 +4561,7 @@ window.HV2_QUESTIONS = [
         "number": "56",
         "text": "Der Begriff „Drohnen“ ...",
         "german": "Der Begriff „Drohnen“ ...",
-        "chinese": "暂无中文释义",
+        "chinese": "“无人机”这一概念涵盖军事和非军事飞行器。",
         "answer": "B",
         "completion": "umfasst militärische und nicht-militärische Flugobjekte.",
         "options": [
@@ -4587,7 +4587,7 @@ window.HV2_QUESTIONS = [
         "number": "57",
         "text": "Nikola Tesla ...",
         "german": "Nikola Tesla ...",
-        "chinese": "暂无中文释义",
+        "chinese": "尼古拉·特斯拉发明了一种与今天的无人机相似的装置。",
         "answer": "A",
         "completion": "entwickelte ein Gerät, das den heutigen Drohnen ähnelt.",
         "options": [
@@ -4613,7 +4613,7 @@ window.HV2_QUESTIONS = [
         "number": "58",
         "text": "Ein Quadrocopter ...",
         "german": "Ein Quadrocopter ...",
-        "chinese": "暂无中文释义",
+        "chinese": "四旋翼飞行器特别稳定，也很容易操控。",
         "answer": "A",
         "completion": "ist besonders stabil und leicht zu dirigieren.",
         "options": [
@@ -4639,7 +4639,7 @@ window.HV2_QUESTIONS = [
         "number": "59",
         "text": "Drohnen ...",
         "german": "Drohnen ...",
-        "chinese": "暂无中文释义",
+        "chinese": "无人机降低了救援人员面临的危险。",
         "answer": "B",
         "completion": "verringern das Gefahrenpotenzial für Rettungskräfte.",
         "options": [
@@ -4665,7 +4665,7 @@ window.HV2_QUESTIONS = [
         "number": "60",
         "text": "Mithilfe von Drohnen ...",
         "german": "Mithilfe von Drohnen ...",
-        "chinese": "暂无中文释义",
+        "chinese": "借助无人机，可以更好地规划极端自然灾害后的救援行动。",
         "answer": "A",
         "completion": "können Einsätze nach extremen Naturereignissen besser geplant werden.",
         "options": [
@@ -4691,7 +4691,7 @@ window.HV2_QUESTIONS = [
         "number": "61",
         "text": "Im Vergleich zu Satelliten ...",
         "german": "Im Vergleich zu Satelliten ...",
-        "chinese": "暂无中文释义",
+        "chinese": "与卫星影像相比，无人机拍摄的影像不会受到云层影响。",
         "answer": "C",
         "completion": "werden Drohnenaufnahmen nicht durch Wolken gestört.",
         "options": [
@@ -4717,7 +4717,7 @@ window.HV2_QUESTIONS = [
         "number": "62",
         "text": "Die Organisation Ärzte ohne Grenzen ...",
         "german": "Die Organisation Ärzte ohne Grenzen ...",
-        "chinese": "暂无中文释义",
+        "chinese": "无国界医生组织需要一种新的医疗物资运输工具。",
         "answer": "A",
         "completion": "brauchte ein neues Transportmittel für medizinische Produkte.",
         "options": [
@@ -4743,7 +4743,7 @@ window.HV2_QUESTIONS = [
         "number": "63",
         "text": "In den USA ...",
         "german": "In den USA ...",
-        "chinese": "暂无中文释义",
+        "chinese": "在美国，已经有人通过无人机配送药品。",
         "answer": "C",
         "completion": "werden schon Medikamente per Drohne zugestellt.",
         "options": [
@@ -4769,7 +4769,7 @@ window.HV2_QUESTIONS = [
         "number": "64",
         "text": "Die Nutzung von Drohnen ...",
         "german": "Die Nutzung von Drohnen ...",
-        "chinese": "暂无中文释义",
+        "chinese": "无人机的使用也必须符合数据保护法。",
         "answer": "B",
         "completion": "muss auch dem Datenschutzgesetz entsprechen.",
         "options": [
