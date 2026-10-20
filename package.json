@@ -12,6 +12,7 @@
     "extract:ocr": "node scripts/extract-lv3.js",
     "update:corpus:2026-09": "python3 scripts/update-corpus-2026-09.py",
     "check:corpus": "node scripts/check-corpus.js && python3 -m unittest discover -s tests -p test_corpus_import.py",
+    "check:hv1": "node --check app.js && node --check hv1-order.js && node --test tests/hv1-order.test.js",
     "icons": "node scripts/generate-icons.js",
     "build": "node scripts/generate-icons.js && node scripts/build.js",
     "serve": "python3 -m http.server 4173",

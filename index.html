@@ -11,7 +11,7 @@
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="apple-touch-icon" href="./icons/icon-192.png" />
     <link rel="icon" href="./icons/icon-192.svg" />
-    <link rel="stylesheet" href="./styles.css?v=20261019-mobile" />
+    <link rel="stylesheet" href="./styles.css?v=20261020-hv1-order" />
   </head>
   <body>
     <div class="level-gate" id="levelGate" role="dialog" aria-modal="true" aria-labelledby="levelGateTitle">
@@ -34,7 +34,7 @@
           </button>
           <button class="level-choice" type="button" data-level-choice="hv1">
             <strong>HV1</strong>
-            <span>Sprecher 匹配 / 新题复习卡</span>
+            <span>先记忆正确顺序，再拖动排序</span>
           </button>
           <button class="level-choice" type="button" data-level-choice="hv2">
             <strong>HV2</strong>
@@ -117,7 +117,7 @@
                 <option value="random">随机</option>
               </select>
             </label>
-            <label>
+            <label id="questionOrderLabel">
               <span>组内题目</span>
               <select id="questionOrder">
                 <option value="sequential">顺序</option>
@@ -141,8 +141,8 @@
             <label id="hv1ModeLabel" class="hidden">
               <span>HV1 模式</span>
               <select id="hv1Mode">
-                <option value="match">逐一匹配</option>
-                <option value="sort">排序匹配</option>
+                <option value="sort">先记忆 → 拖动排序</option>
+                <option value="match">逐一匹配（旧版）</option>
               </select>
             </label>
             <label>
@@ -234,6 +234,7 @@
     <script src="./data/baustein_questions.js?v=202609-corpus"></script>
     <script src="./data/speaking_questions.js?v=202609-corpus"></script>
     <script src="./data/baustein_grammar_questions.js?v=20260508-grammar"></script>
-    <script src="./app.js?v=20261019-mobile"></script>
+    <script src="./hv1-order.js?v=20261020-hv1-order"></script>
+    <script src="./app.js?v=20261020-hv1-order"></script>
   </body>
 </html>

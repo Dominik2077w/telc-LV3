@@ -7,6 +7,7 @@ const files = [
   "index.html",
   "styles.css",
   "app.js",
+  "hv1-order.js",
   "service-worker.js",
   "manifest.webmanifest",
   "data/lv2_questions.js",

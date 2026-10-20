@@ -1585,4 +1585,32 @@ select {
   .baustein-float-actions { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .baustein-float-actions [data-action="submit"] { grid-column: auto; }
 }
+/* HV1 memory and sortable statements share one vertical layout on every screen. */
+.hv1-order-list h3 { margin: 22px 0 12px; font-size: 18px; }
+.hv1-statements { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.hv1-statement { display: grid; grid-template-columns: 32px minmax(0, 1fr) auto; align-items: start; gap: 12px; border: 1px solid var(--line); border-radius: 8px; padding: 14px; background: #fbfaf6; }
+.hv1-position { display: grid; place-items: center; min-width: 30px; min-height: 30px; border-radius: 50%; background: #e9f2ec; color: var(--green-dark); font-size: 14px; font-weight: 850; }
+.hv1-statement-body { min-width: 0; }
+.hv1-statement-body p { margin: 2px 0; font-size: 18px; line-height: 1.5; overflow-wrap: anywhere; }
+.hv1-move-controls { display: grid; grid-template-columns: repeat(2, 44px); gap: 4px; }
+.hv1-move-controls button { min-width: 44px; min-height: 44px; border: 1px solid var(--line); border-radius: 6px; font-size: 20px; color: var(--green-dark); background: white; cursor: pointer; }
+.hv1-move-controls button:disabled { opacity: .3; cursor: default; }
+.hv1-move-controls .hv1-drag-handle { grid-column: 1 / -1; touch-action: none; cursor: grab; background: #e9f2ec; font-size: 28px; }
+.hv1-statement.is-dragging { outline: 3px solid var(--blue); background: #eaf2fa; box-shadow: var(--shadow); position: relative; z-index: 2; }
+.hv1-is-dragging { user-select: none; cursor: grabbing; }
+.hv1-statement.correct { border-color: var(--green); background: #eff8f1; }
+.hv1-statement.incorrect { border-color: var(--red); background: #fff1ee; }
+.hv1-statement .hv1-position-feedback { margin-top: 9px; font-size: 14px; color: var(--green-dark); }
+.hv1-statement.incorrect .hv1-position-feedback { color: var(--red); }
+.hv1-order-mode .sort-bottom { position: sticky; bottom: 0; z-index: 3; background: white; padding: 12px 0 max(8px, env(safe-area-inset-bottom, 0px)); }
+.hv1-order-mode .sort-bottom button { min-height: 48px; }
+@media (max-width: 850px) {
+  .hv1-statement { grid-template-columns: 26px minmax(0, 1fr); gap: 8px; padding: 12px; }
+  .hv1-position { min-width: 26px; min-height: 26px; font-size: 13px; }
+  .hv1-statement-body p { font-size: 17px; }
+  .hv1-move-controls { grid-column: 2; display: flex; justify-content: flex-end; }
+  .hv1-move-controls .hv1-drag-handle { width: 64px; }
+  .hv1-order-mode .sort-bottom { gap: 8px; }
+  .hv1-order-mode .sort-bottom button { font-size: 14px; }
+}
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; } }

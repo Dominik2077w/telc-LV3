@@ -37,7 +37,7 @@ const datasets = {
     answerLabel: "Leitsatz",
     reviewGermanLabel: "Transkript",
     reviewChineseLabel: "中文",
-    idleText: "选择 HV1 后，听音频选出对应 Leitsatz；新增无音频题组使用复习卡。",
+    idleText: "选择 HV1 后，先记住 8 项正确顺序，准备好后拖动排序并提交核对。",
   },
   hv2: {
     label: "HV2",
@@ -315,6 +315,7 @@ function bindEvents() {
   els.nextButton.addEventListener("click", nextQuestion);
   els.missButton.addEventListener("click", () => markFlashcardMissed({ advance: true }));
   els.lv2Mode.addEventListener("change", renderLevelChrome);
+  els.hv1Mode.addEventListener("change", () => { renderLevelChrome(); renderTeilList(); });
   els.lv2GlobalDisplay.addEventListener("change", () => {
     if (state.current?.sectionMode === "lv2-global-sort" && !state.complete) {
       els.sortInfo.textContent = getLv2GlobalInstruction();
@@ -406,10 +407,6 @@ function refreshMatchingLayout() {
     els.sortInstruction.textContent = getLv2GlobalInstruction();
     renderLv2GlobalSortList();
     bindLv2GlobalSortEvents();
-  } else if (state.current?.sectionMode === "hv1-sort" && !state.complete) {
-    els.sortInstruction.textContent = compactMatching.matches ? "逐个点选 Sprecher 对应的 Leitsatz，无需拖拽。" : "从 Sprecher 拖到对应 Leitsatz，松手后生成连线。";
-    renderSortList();
-    bindSortEvents();
   }
 }
 
@@ -450,6 +447,7 @@ function renderLevelChrome() {
     state.level !== "lv2" || els.lv2Mode.value !== "global-sort"
   );
   els.hv1ModeLabel.classList.toggle("hidden", state.level !== "hv1");
+  document.querySelector("#questionOrderLabel").classList.toggle("hidden", state.level === "hv1" && els.hv1Mode.value === "sort");
 }
 
 function getPracticeSections() {
@@ -477,7 +475,8 @@ function renderTeilList() {
 
     const name = document.createElement("span");
     name.className = "teil-name";
-    name.innerHTML = `<strong>Teil ${section.teil}</strong><span>${escapeHtml(section.title)}${section.mode === "corpus-card" ? " · 复习卡" : ""}</span>`;
+    const reviewOnly = section.mode === "corpus-card" && !(state.level === "hv1" && els.hv1Mode.value === "sort" && Hv1Order.canPractice(section.questions));
+    name.innerHTML = `<strong>Teil ${section.teil}</strong><span>${escapeHtml(section.title)}${reviewOnly ? " · 复习卡" : ""}</span>`;
     const added = section.questions.filter((question) => question.addedIn === "2026.9").length;
     if (added) {
       const badge = document.createElement("span");
@@ -503,6 +502,7 @@ function startSession() {
     return;
   }
   els.startButton.textContent = "开始练习";
+  stopSortAudio();
   if (mobileLayout.matches) setMobileMenuOpen(false);
 
   const teilOrdered = applyOrder(chosen, els.teilOrder.value);
@@ -515,7 +515,7 @@ function startSession() {
       : [{ ...section, sectionMode: "baustein-article" }]);
   } else if (state.level === "hv1" && els.hv1Mode.value === "sort") {
     state.sessionSource = teilOrdered.flatMap(function (section) {
-      if (section.mode === "corpus-card") {
+      if (!Hv1Order.canPractice(section.questions)) {
         return applyOrder(section.questions, els.questionOrder.value).map((question) => ({ ...question }));
       }
       var questions = applyOrder(section.questions, "sequential").map(function (q) {
@@ -527,6 +527,8 @@ function startSession() {
         teil: section.teil,
         teilTitle: section.title,
         sectionMode: "hv1-sort",
+        addedIn: section.addedIn,
+        updatedIn: section.updatedIn,
         questions: questions,
         german: section.title,
         chinese: "",
@@ -632,7 +634,7 @@ function showFront(question) {
   }
 
   if (question.sectionMode === "hv1-sort") {
-    els.sessionMode.textContent = "HV1 · 排序匹配";
+    els.sessionMode.textContent = "HV1 · 先记忆，再排序";
     els.sessionTitle.textContent = "Teil " + question.teil + ": " + question.teilTitle;
     els.teilBadge.textContent = "Teil " + question.teil;
     els.questionBadge.textContent = "排序";
@@ -1216,7 +1218,7 @@ function handleKeyboardNavigation(event) {
   if (handleBausteinKeyboard(event)) return;
 
   if (state.current.sectionMode === "hv1-sort") {
-    if (event.key === "Enter" && !sortState.submitted) {
+    if (event.key === "Enter" && !isNativeButtonKey(event)) {
       event.preventDefault();
       submitSort();
     }
@@ -1542,6 +1544,9 @@ function buildLv2GlobalSortBatch(section) {
 }
 
 function renderLv2GlobalSortView(batch) {
+  els.sortModeView.classList.remove("hv1-order-mode");
+  els.sortShuffleButton.classList.remove("hidden");
+  els.sortShuffleButton.textContent = "随机打乱";
   lv2GlobalSortState.batch = batch;
   lv2GlobalSortState.paragraphs = batch.paragraphs.map(function (paragraph) { return { ...paragraph }; });
   lv2GlobalSortState.options = shuffledLv2GlobalOptions(batch.options);
@@ -1572,6 +1577,7 @@ function getLv2GlobalInstruction() {
 }
 
 function renderLv2GlobalSortList() {
+  els.sortList.classList.remove("hv1-order-list");
   els.sortList.innerHTML = "";
   if (compactMatching.matches) {
     renderMobileLv2Matching();
@@ -1686,45 +1692,6 @@ function renderMobileLv2Matching() {
         else delete lv2GlobalSortState.matches[index];
         els.sortInfo.textContent = "已配对 " + Object.keys(lv2GlobalSortState.matches).length + " / " + lv2GlobalSortState.options.length;
       }));
-  });
-  els.sortList.append(list);
-}
-
-function renderMobileHv1Matching() {
-  const list = document.createElement("div");
-  list.className = "mobile-match-list";
-  const choices = sortState.questions.map((q, i) => ({ id: q.id, label: (i + 1) + ". " + q.leitsatz }));
-  const displayMatches = getSortDisplayMatches();
-  sortState.speakers.forEach(function (speaker, index) {
-    const original = findSortQuestion(sortState.matches[index]);
-    const correct = findCorrectSortQuestionForSpeaker(index);
-    const selected = findSortQuestion(displayMatches[index]);
-    const feedback = isSortMatchCorrect(index) ? "配对已确认。" :
-      (original ? "你选择了：" + original.leitsatz : "未作答") + "\n正确答案：" + (correct?.leitsatz || "");
-    const card = createMobileMatchCard("Sprecher " + speaker.number,
-      sortState.submitted ? selected?.leitsatz : "", choices, displayMatches[index], sortState.submitted,
-      isSortMatchCorrect(index), feedback, function (value) {
-        if (value) removeExistingSortMatch(value);
-        if (value) sortState.matches[index] = value;
-        else delete sortState.matches[index];
-        list.querySelectorAll("select").forEach(function (select, i) {
-          select.value = sortState.matches[i] || "";
-          select.closest(".mobile-match-card").classList.toggle("matched", Boolean(select.value));
-          const preview = select.closest(".mobile-match-card").querySelector(".mobile-match-selection");
-          if (preview) preview.textContent = select.value ? select.selectedOptions[0].textContent : "";
-        });
-        els.sortInfo.textContent = "已配对 " + Object.keys(sortState.matches).length + " / " + sortState.speakers.length;
-      });
-    if (speaker.audio) {
-      const audio = document.createElement("button");
-      audio.type = "button";
-      audio.className = "sort-audio-btn";
-      audio.dataset.audio = speaker.audio;
-      audio.textContent = "▶ 播放";
-      audio.setAttribute("aria-label", "播放 Sprecher " + speaker.number);
-      card.querySelector(".mobile-match-head").append(audio);
-    }
-    list.append(card);
   });
   els.sortList.append(list);
 }
@@ -2106,560 +2073,241 @@ function isLv2GlobalOptionOrderOriginal(shuffled, original) {
   return shuffled.length > 0;
 }
 
-// ---- HV1 Sort Mode ----
+// ---- HV1: memorize the complete order, then reorder all eight statements. ----
 
-var sortState = {
-  questions: [],
-  speakers: [],
-  matches: {},
-  correctedMatches: {},
-  selectedSpeaker: null,
-  drag: null,
-  suppressClick: false,
-  submitted: false,
-  currentAudio: null,
-  resizeBound: false,
-};
+var sortState = { session: null, drag: null };
 
 function renderSortView(batch) {
-  sortState.questions = shuffledSortQuestions(batch.questions);
-  sortState.speakers = batch.questions.map(function (q) { return { ...q }; }).sort(compareHv1Speakers);
-  sortState.matches = {};
-  sortState.correctedMatches = {};
-  sortState.selectedSpeaker = null;
-  sortState.drag = null;
-  sortState.suppressClick = false;
-  sortState.submitted = false;
-
+  stopSortAudio();
+  els.sortModeView.classList.add("hv1-order-mode");
+  sortState.session = Hv1Order.createSession(batch.questions);
   els.sortTeilBadge.textContent = "Teil " + batch.teil + " · " + batch.teilTitle;
-  els.sortInfo.textContent = compactMatching.matches ? "已配对 0 / " + sortState.speakers.length : "Ziehe links einen Sprecher auf den passenden Leitsatz.";
-  els.sortInstruction.textContent = compactMatching.matches ? "逐个点选 Sprecher 对应的 Leitsatz，无需拖拽。" : "从 Sprecher 拖到对应 Leitsatz，松手后生成连线。";
-  els.sortSubmitButton.textContent = "提交";
-  els.sortSubmitButton.disabled = false;
   els.sortSubmitButton.onclick = null;
-
   renderSortList();
-  bindSortEvents();
+  window.scrollTo({ top: 0, behavior: "instant" });
+}
+
+function createHv1OrderList(items, options = {}) {
+  const list = document.createElement("ol");
+  list.className = "hv1-statements";
+  list.setAttribute("aria-label", options.editable ? "拖动排序的选项" : options.label || "正确顺序");
+  items.forEach(function (item, index) {
+    const row = document.createElement("li");
+    row.className = "hv1-statement";
+    row.dataset.itemId = item.id;
+    const rank = document.createElement("span");
+    rank.className = "hv1-position";
+    rank.textContent = String(index + 1);
+    row.append(rank);
+    const body = document.createElement("div");
+    body.className = "hv1-statement-body";
+    const text = document.createElement("p");
+    text.lang = "de";
+    text.textContent = item.text;
+    body.append(text);
+    if (options.feedback) {
+      row.classList.add(item.correct ? "correct" : "incorrect");
+      const feedback = document.createElement("p");
+      feedback.className = "hv1-position-feedback";
+      feedback.textContent = item.correct ? "✓ 位置正确" : "✗ 你排在第 " + item.position + " 位；应在第 " + item.expectedPosition + " 位";
+      body.append(feedback);
+    }
+    row.append(body);
+    if (options.editable) {
+      const controls = document.createElement("div");
+      controls.className = "hv1-move-controls";
+      for (const [direction, label] of [[-1, "上移"], [1, "下移"]]) {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.textContent = direction < 0 ? "↑" : "↓";
+        button.dataset.move = String(direction);
+        button.disabled = index + direction < 0 || index + direction >= items.length;
+        button.setAttribute("aria-label", "第 " + (index + 1) + " 项" + label);
+        button.addEventListener("click", () => moveHv1Item(item.id, direction));
+        controls.append(button);
+      }
+      const handle = document.createElement("button");
+      handle.type = "button";
+      handle.className = "hv1-drag-handle";
+      handle.textContent = "⠿";
+      handle.setAttribute("aria-label", "拖动第 " + (index + 1) + " 项排序");
+      handle.title = "拖动排序，也可用上下方向键";
+      handle.addEventListener("pointerdown", beginHv1Drag);
+      handle.addEventListener("keydown", function (event) {
+        if (!["ArrowUp", "ArrowDown"].includes(event.key)) return;
+        event.preventDefault();
+        event.stopPropagation();
+        moveHv1Item(item.id, event.key === "ArrowUp" ? -1 : 1);
+      });
+      controls.append(handle);
+      row.append(controls);
+    }
+    list.append(row);
+  });
+  return list;
 }
 
 function renderSortList() {
+  const session = sortState.session;
+  if (!session) return;
   els.sortList.innerHTML = "";
-  if (compactMatching.matches) {
-    renderMobileHv1Matching();
-    return;
-  }
-  var board = document.createElement("div");
-  board.className = "sort-connect-board";
-  board.innerHTML =
-    '<svg class="sort-lines" aria-hidden="true"></svg>' +
-    '<div class="sort-column sort-speakers" aria-label="Sprecher"></div>' +
-    '<div class="sort-column sort-leitsaetze" aria-label="Leitsätze"></div>';
-  els.sortList.appendChild(board);
-
-  var speakerColumn = board.querySelector(".sort-speakers");
-  var leitsatzColumn = board.querySelector(".sort-leitsaetze");
-
-  for (var i = 0; i < sortState.speakers.length; i++) {
-    speakerColumn.appendChild(createSpeakerNode(sortState.speakers[i], i));
-  }
-
-  for (var j = 0; j < sortState.questions.length; j++) {
-    leitsatzColumn.appendChild(createLeitsatzNode(sortState.questions[j]));
-  }
-
-  drawSortLines();
-}
-
-function bindSortEvents() {
-  var speakerNodes = els.sortList.querySelectorAll(".sort-speaker-node");
-  var leitsatzNodes = els.sortList.querySelectorAll(".sort-leitsatz-node");
-  var audioButtons = els.sortList.querySelectorAll(".sort-audio-btn");
-
-  for (var i = 0; i < speakerNodes.length; i++) {
-    speakerNodes[i].addEventListener("click", onSpeakerNodeClick);
-    speakerNodes[i].addEventListener("pointerdown", onSortDragStart);
-  }
-  for (var j = 0; j < leitsatzNodes.length; j++) {
-    leitsatzNodes[j].addEventListener("click", onLeitsatzNodeClick);
-  }
-  for (var k = 0; k < audioButtons.length; k++) {
-    audioButtons[k].addEventListener("click", onSortAudioClick);
-  }
-
-  if (!sortState.resizeBound) {
-    window.addEventListener("resize", drawSortLines);
-    sortState.resizeBound = true;
+  els.sortList.classList.add("hv1-order-list");
+  els.sortInfo.setAttribute("role", "status");
+  els.sortSubmitButton.onclick = null;
+  els.sortSubmitButton.disabled = false;
+  els.sortShuffleButton.classList.toggle("hidden", session.phase !== "practice");
+  els.sortShuffleButton.textContent = "重新打乱";
+  if (session.phase === "memory") {
+    els.sessionMode.textContent = "HV1 · 先记忆";
+    els.sortInstruction.textContent = "先按从上到下的正确顺序记一遍。准备好后，再开始排序。";
+    els.sortInfo.textContent = "正确顺序 · 共 " + session.correct.length + " 项";
+    els.sortList.append(createHv1OrderList(session.correct));
+    els.sortSubmitButton.textContent = "准备好了，开始排序";
+    els.roundStrip.textContent = "记忆阶段不会计分；点击准备好了后才会打乱选项。";
+  } else if (session.phase === "practice") {
+    els.sessionMode.textContent = "HV1 · 拖动排序";
+    els.sortInstruction.textContent = "将全部 8 项从上到下排回正确顺序。拖动右侧手柄，上下移动；也可以点箭头微调。";
+    els.sortInfo.textContent = "8 项已打乱 · 排好后一次提交";
+    els.sortList.append(createHv1OrderList(session.order, { editable: true }));
+    els.sortSubmitButton.textContent = "提交排序";
+    els.roundStrip.textContent = "拖住 ⠿ 调整顺序，靠近屏幕边缘会自动滚动。选项文字区域可以正常滑动阅读。";
+  } else {
+    els.sessionMode.textContent = "HV1 · 排序结果";
+    els.sortInstruction.textContent = "先看你排的顺序和逐项反馈，再对照下面的完整正确顺序。";
+    els.sortInfo.textContent = session.result.correct + " / " + session.result.total + " 项位置正确";
+    const heading = document.createElement("h3");
+    heading.textContent = "你的排序";
+    els.sortList.append(heading, createHv1OrderList(session.result.rows, { feedback: true, label: "你的排序和逐项结果" }));
+    const correctHeading = document.createElement("h3");
+    correctHeading.textContent = "完整正确顺序";
+    els.sortList.append(correctHeading, createHv1OrderList(session.correct));
+    els.sortSubmitButton.textContent = state.currentIndex >= state.queue.length ? "完成本轮" : "下一 Teil";
+    els.roundStrip.textContent = els.roundMode.value === "mistakes" ? "排错的 Teil 会进入下一轮，重新记忆并排序。" : "当前是单轮练习。";
   }
 }
 
-function createSpeakerNode(q, index) {
-  var button = document.createElement("button");
-  button.type = "button";
-  button.className = "sort-node sort-speaker-node";
-  button.dataset.speakerIndex = String(index);
-  button.disabled = sortState.submitted;
-  if (sortState.selectedSpeaker === index) button.classList.add("selected");
-  if (sortState.matches[index]) button.classList.add("matched");
-  if (sortState.submitted) {
-    button.classList.add(isSortMatchCorrect(index) ? "correct" : "corrected");
-  }
-  button.innerHTML =
-    '<span class="sort-speaker-label">Sprecher ' +
-    escapeHtml(q.number) +
-    "</span>" +
-    (q.audio
-      ? '<span class="sort-audio-btn" role="button" tabindex="0" data-audio="' +
-        escapeHtml(q.audio) +
-        '" title="Sprecher ' +
-        escapeHtml(q.number) +
-        '">&#9654;</span>'
-      : '<span class="sort-audio-btn" style="visibility:hidden"></span>');
-  return button;
-}
-
-function createLeitsatzNode(q) {
-  var button = document.createElement("button");
-  button.type = "button";
-  button.className = "sort-node sort-leitsatz-node";
-  button.dataset.questionId = q.id;
-  button.disabled = sortState.submitted;
-  if (isLeitsatzMatched(q.id)) button.classList.add("matched");
-  if (sortState.submitted) {
-    button.classList.add(isLeitsatzCorrect(q.id) ? "correct" : isLeitsatzCorrected(q.id) ? "corrected" : "neutral");
-  }
-  button.textContent = q.leitsatz;
-  return button;
-}
-
-function onSpeakerNodeClick(e) {
-  if (sortState.submitted) return;
-  if (sortState.suppressClick) {
-    sortState.suppressClick = false;
-    return;
-  }
-  if (sortState.drag && sortState.drag.moved) return;
-  var node = e.currentTarget;
-  sortState.selectedSpeaker = Number(node.dataset.speakerIndex);
+function moveHv1Item(id, direction) {
+  const session = sortState.session;
+  const from = session.order.findIndex(item => item.id === id);
+  if (!Hv1Order.move(session, from, from + direction)) return;
   renderSortList();
-  bindSortEvents();
+  const handle = els.sortList.querySelector('[data-item-id="' + cssEscape(id) + '"] .hv1-drag-handle');
+  handle?.focus({ preventScroll: true });
+  els.sortInfo.textContent = "已移到第 " + (from + direction + 1) + " 位";
 }
 
-function onLeitsatzNodeClick(e) {
-  if (sortState.submitted) return;
-  if (sortState.selectedSpeaker === null) {
-    els.sortInfo.textContent = "Bitte zuerst links einen Sprecher auswählen.";
-    return;
-  }
-  var questionId = e.currentTarget.dataset.questionId;
-  removeExistingSortMatch(questionId);
-  sortState.matches[sortState.selectedSpeaker] = questionId;
-  sortState.selectedSpeaker = nextUnmatchedSpeakerIndex();
-  els.sortInfo.textContent = "Verbindung gesetzt.";
-  renderSortList();
-  bindSortEvents();
+function beginHv1Drag(event) {
+  if (sortState.session?.phase !== "practice" || !event.isPrimary || event.button !== 0) return;
+  event.preventDefault();
+  const handle = event.currentTarget;
+  const row = handle.closest(".hv1-statement");
+  sortState.drag = { id: row.dataset.itemId, row, handle, pointerId: event.pointerId, y: event.clientY, frame: null };
+  row.classList.add("is-dragging");
+  handle.setPointerCapture(event.pointerId);
+  document.body.classList.add("hv1-is-dragging");
+  window.addEventListener("pointermove", moveHv1Drag, { passive: false });
+  window.addEventListener("pointerup", finishHv1Drag);
+  window.addEventListener("pointercancel", finishHv1Drag);
+  window.addEventListener("blur", finishHv1Drag);
+  sortState.drag.frame = requestAnimationFrame(scrollHv1Drag);
 }
 
-function onSortDragStart(e) {
-  if (sortState.submitted) return;
-  if (e.button !== 0 && e.pointerType !== "touch") return;
-  if (e.target.closest(".sort-audio-btn")) return;
-
-  var node = e.currentTarget;
-  sortState.drag = {
-    speakerIndex: Number(node.dataset.speakerIndex),
-    pointerId: e.pointerId,
-    x: e.clientX,
-    y: e.clientY,
-    moved: false,
-  };
-  sortState.selectedSpeaker = sortState.drag.speakerIndex;
-  node.classList.add("dragging");
-  node.setPointerCapture(e.pointerId);
-  window.addEventListener("pointermove", onSortDragMove);
-  window.addEventListener("pointerup", onSortDragEnd);
-  window.addEventListener("pointercancel", onSortDragCancel);
-  drawSortLines();
-  e.preventDefault();
-}
-
-function onSortDragMove(e) {
-  if (!sortState.drag || e.pointerId !== sortState.drag.pointerId) return;
-  sortState.drag.x = e.clientX;
-  sortState.drag.y = e.clientY;
-  sortState.drag.moved = true;
-  highlightSortDropTarget(e.clientX, e.clientY);
-  drawSortLines();
-}
-
-function onSortDragEnd(e) {
-  if (!sortState.drag || e.pointerId !== sortState.drag.pointerId) return;
-  var target = getSortDropTarget(e.clientX, e.clientY);
-  if (target) {
-    var questionId = target.dataset.questionId;
-    removeExistingSortMatch(questionId);
-    sortState.matches[sortState.drag.speakerIndex] = questionId;
-    sortState.selectedSpeaker = nextUnmatchedSpeakerIndex();
-    els.sortInfo.textContent = "Verbindung gesetzt.";
-  } else if (sortState.drag.moved) {
-    els.sortInfo.textContent = "Auf einen Leitsatz ziehen und dort loslassen.";
-  }
-  sortState.suppressClick = sortState.drag.moved;
-  finishSortDrag();
-  renderSortList();
-  bindSortEvents();
-}
-
-function onSortDragCancel(e) {
-  if (!sortState.drag || e.pointerId !== sortState.drag.pointerId) return;
-  finishSortDrag();
-  renderSortList();
-  bindSortEvents();
-}
-
-function finishSortDrag() {
-  window.removeEventListener("pointermove", onSortDragMove);
-  window.removeEventListener("pointerup", onSortDragEnd);
-  window.removeEventListener("pointercancel", onSortDragCancel);
-  var dragging = els.sortList.querySelector(".sort-speaker-node.dragging");
-  if (dragging && sortState.drag) {
-    try {
-      dragging.releasePointerCapture(sortState.drag.pointerId);
-    } catch (error) {
-      // Pointer capture may already be gone if the pointer was cancelled.
-    }
-    dragging.classList.remove("dragging");
-  }
-  clearSortDropHighlight();
-  sortState.drag = null;
-}
-
-function getSortDropTarget(x, y) {
-  var target = document.elementFromPoint(x, y);
-  return target ? target.closest(".sort-leitsatz-node") : null;
-}
-
-function highlightSortDropTarget(x, y) {
-  clearSortDropHighlight();
-  var target = getSortDropTarget(x, y);
-  if (target) target.classList.add("drop-target");
-}
-
-function clearSortDropHighlight() {
-  var highlighted = els.sortList.querySelectorAll(".sort-leitsatz-node.drop-target");
-  for (var i = 0; i < highlighted.length; i++) {
-    highlighted[i].classList.remove("drop-target");
-  }
-}
-
-function removeExistingSortMatch(questionId) {
-  for (var key in sortState.matches) {
-    if (sortState.matches[key] === questionId) delete sortState.matches[key];
-  }
-}
-
-function nextUnmatchedSpeakerIndex() {
-  for (var i = 0; i < sortState.speakers.length; i++) {
-    if (!sortState.matches[i]) return i;
-  }
-  return null;
-}
-
-function isLeitsatzMatched(questionId) {
-  for (var key in sortState.matches) {
-    if (sortState.matches[key] === questionId) return true;
-  }
-  return false;
-}
-
-function isSortMatchCorrect(index) {
-  var question = findSortQuestion(sortState.matches[index]);
-  return Boolean(question && question.answer === expectedAnswerForSpeaker(index));
-}
-
-function isLeitsatzCorrect(questionId) {
-  var question = findSortQuestion(questionId);
-  if (!question) return false;
-  for (var key in sortState.matches) {
-    if (sortState.matches[key] === questionId) return question.answer === expectedAnswerForSpeaker(Number(key));
-  }
-  return false;
-}
-
-function isLeitsatzCorrected(questionId) {
-  for (var key in sortState.correctedMatches) {
-    if (sortState.correctedMatches[key] === questionId) return true;
-  }
-  return false;
-}
-
-function expectedAnswerForSpeaker(index) {
-  return sortState.speakers[index] ? sortState.speakers[index].answer : "";
-}
-
-function findSortQuestion(questionId) {
-  for (var i = 0; i < sortState.questions.length; i++) {
-    if (sortState.questions[i].id === questionId) return sortState.questions[i];
-  }
-  return null;
-}
-
-function findCorrectSortQuestionForSpeaker(index) {
-  var answer = expectedAnswerForSpeaker(index);
-  for (var i = 0; i < sortState.questions.length; i++) {
-    if (sortState.questions[i].answer === answer) return sortState.questions[i];
-  }
-  return null;
-}
-
-function drawSortLines() {
-  var board = els.sortList.querySelector(".sort-connect-board");
-  if (!board) return;
-  var svg = board.querySelector(".sort-lines");
-  if (!svg) return;
-  var boardRect = board.getBoundingClientRect();
-  svg.setAttribute("viewBox", "0 0 " + boardRect.width + " " + boardRect.height);
-  svg.innerHTML = "";
-
-  var displayMatches = getSortDisplayMatches();
-  for (var key in displayMatches) {
-    var speaker = board.querySelector('[data-speaker-index="' + key + '"]');
-    var leitsatz = board.querySelector('[data-question-id="' + cssEscape(displayMatches[key]) + '"]');
-    if (!speaker || !leitsatz) continue;
-
-    var speakerRect = speaker.getBoundingClientRect();
-    var leitsatzRect = leitsatz.getBoundingClientRect();
-    var x1 = speakerRect.right - boardRect.left;
-    var y1 = speakerRect.top + speakerRect.height / 2 - boardRect.top;
-    var x2 = leitsatzRect.left - boardRect.left;
-    var y2 = leitsatzRect.top + leitsatzRect.height / 2 - boardRect.top;
-    var path = document.createElementNS("http://www.w3.org/2000/svg", "path");
-    path.setAttribute("d", "M " + x1 + " " + y1 + " L " + x2 + " " + y2);
-    path.setAttribute("class", "sort-line " + getSortLineClass(Number(key)));
-    svg.appendChild(path);
-  }
-
-  if (sortState.drag) {
-    var dragSpeaker = board.querySelector('[data-speaker-index="' + sortState.drag.speakerIndex + '"]');
-    if (dragSpeaker) {
-      var dragRect = dragSpeaker.getBoundingClientRect();
-      var startX = dragRect.right - boardRect.left;
-      var startY = dragRect.top + dragRect.height / 2 - boardRect.top;
-      var endX = sortState.drag.x - boardRect.left;
-      var endY = sortState.drag.y - boardRect.top;
-      var dragPath = document.createElementNS("http://www.w3.org/2000/svg", "path");
-      dragPath.setAttribute("d", "M " + startX + " " + startY + " L " + endX + " " + endY);
-      dragPath.setAttribute("class", "sort-line preview");
-      svg.appendChild(dragPath);
-    }
-  }
-}
-
-function getSortDisplayMatches() {
-  if (!sortState.submitted) return sortState.matches;
-  return { ...sortState.matches, ...sortState.correctedMatches };
-}
-
-function getSortLineClass(index) {
-  if (!sortState.submitted) return "";
-  return sortState.correctedMatches[index] ? "corrected" : "correct";
-}
-
-function moveSortItem(btn, direction) {
-  if (sortState.submitted) return;
-  var li = btn.closest(".sort-item");
-  var index = parseInt(li.dataset.index, 10);
-  var newIndex = index + direction;
-  if (newIndex < 0 || newIndex >= sortState.questions.length) return;
-
-  var moved = sortState.questions.splice(index, 1)[0];
-  sortState.questions.splice(newIndex, 0, moved);
-  renderSortList();
-  bindSortEvents();
-}
-
-// ---- Drag and Drop ----
-
-var dragIndex = -1;
-
-function onDragStart(e) {
-  if (sortState.submitted) { e.preventDefault(); return; }
-  dragIndex = parseInt(this.dataset.index, 10);
-  this.classList.add("dragging");
-  e.dataTransfer.effectAllowed = "move";
-  e.dataTransfer.setData("text/plain", String(dragIndex));
-}
-
-function onDragOver(e) {
-  e.preventDefault();
-  e.dataTransfer.dropEffect = "move";
-  this.classList.add("drag-over");
-}
-
-function onDragLeave() {
-  this.classList.remove("drag-over");
-}
-
-function onDrop(e) {
-  e.preventDefault();
-  this.classList.remove("drag-over");
-  var from = dragIndex;
-  var to = parseInt(this.dataset.index, 10);
-  if (from === to || from < 0) return;
-
-  var moved = sortState.questions.splice(from, 1)[0];
-  sortState.questions.splice(to, 0, moved);
-  renderSortList();
-  bindSortEvents();
-  dragIndex = -1;
-}
-
-function onDragEnd() {
-  this.classList.remove("dragging");
-  dragIndex = -1;
-  var allItems = els.sortList.querySelectorAll(".sort-item");
-  for (var i = 0; i < allItems.length; i++) {
-    allItems[i].classList.remove("drag-over");
-  }
-}
-
-// ---- Sort Audio ----
-
-function onSortAudioClick(e) {
-  e.stopPropagation();
-  var btn = e.currentTarget;
-  var audioSrc = btn.dataset.audio;
-
-  if (sortState.currentAudio && sortState.currentAudio.src === audioSrc) {
-    if (sortState.currentAudio.paused) {
-      sortState.currentAudio.play();
-    } else {
-      sortState.currentAudio.pause();
-    }
-    return;
-  }
-
-  if (sortState.currentAudio) {
-    sortState.currentAudio.pause();
-    var prevBtn = els.sortList.querySelector(".sort-audio-btn.playing");
-    if (prevBtn) prevBtn.classList.remove("playing");
-  }
-
-  var audio = new Audio(audioSrc);
-  audio.preload = "auto";
-  sortState.currentAudio = audio;
-  btn.classList.add("playing");
-
-  audio.onended = function () {
-    btn.classList.remove("playing");
-    sortState.currentAudio = null;
-  };
-
-  audio.play().catch(function () {
-    btn.classList.remove("playing");
-    sortState.currentAudio = null;
+function positionHv1Drag() {
+  const drag = sortState.drag;
+  if (!drag) return;
+  const list = drag.row.parentElement;
+  const others = [...list.children].filter(row => row !== drag.row);
+  let to = others.findIndex(row => drag.y < row.getBoundingClientRect().top + row.getBoundingClientRect().height / 2);
+  if (to < 0) to = others.length;
+  const from = sortState.session.order.findIndex(item => item.id === drag.id);
+  if (!Hv1Order.move(sortState.session, from, to)) return;
+  list.insertBefore(drag.row, others[to] || null);
+  // Moving a captured element in the DOM can release capture on mobile browsers.
+  try { drag.handle.setPointerCapture(drag.pointerId); } catch (_) { /* Pointer may already be up. */ }
+  [...list.children].forEach(function (row, index) {
+    row.querySelector(".hv1-position").textContent = String(index + 1);
+    row.querySelector(".hv1-drag-handle").setAttribute("aria-label", "拖动第 " + (index + 1) + " 项排序");
+    row.querySelectorAll("[data-move]").forEach(function (button) {
+      const direction = Number(button.dataset.move);
+      button.disabled = index + direction < 0 || index + direction >= list.children.length;
+      button.setAttribute("aria-label", "第 " + (index + 1) + " 项" + (direction < 0 ? "上移" : "下移"));
+    });
   });
 }
 
-// ---- Sort Submission ----
+function moveHv1Drag(event) {
+  if (!sortState.drag || event.pointerId !== sortState.drag.pointerId) return;
+  event.preventDefault();
+  sortState.drag.y = event.clientY;
+  positionHv1Drag();
+}
+
+function scrollHv1Drag() {
+  const drag = sortState.drag;
+  if (!drag) return;
+  const topEdge = mobileLayout.matches ? 110 : 60;
+  const bottomEdge = window.innerHeight - 100;
+  const delta = drag.y < topEdge ? -Math.min(16, (topEdge - drag.y) / 4) :
+    drag.y > bottomEdge ? Math.min(16, (drag.y - bottomEdge) / 4) : 0;
+  if (delta) {
+    window.scrollBy(0, delta);
+    positionHv1Drag();
+  }
+  drag.frame = requestAnimationFrame(scrollHv1Drag);
+}
+
+function finishHv1Drag(event) {
+  const drag = sortState?.drag;
+  if (!drag || (event?.pointerId !== undefined && event.pointerId !== drag.pointerId)) return;
+  cancelAnimationFrame(drag.frame);
+  drag.row.classList.remove("is-dragging");
+  document.body.classList.remove("hv1-is-dragging");
+  window.removeEventListener("pointermove", moveHv1Drag);
+  window.removeEventListener("pointerup", finishHv1Drag);
+  window.removeEventListener("pointercancel", finishHv1Drag);
+  window.removeEventListener("blur", finishHv1Drag);
+  try { drag.handle.releasePointerCapture(drag.pointerId); } catch (_) { /* Capture may have ended. */ }
+  sortState.drag = null;
+  els.sortInfo.textContent = "已移到第 " + (sortState.session.order.findIndex(item => item.id === drag.id) + 1) + " 位";
+}
 
 function submitSort() {
-  if (state.current?.sectionMode === "lv2-global-sort") {
-    submitLv2GlobalSort();
+  if (state.current?.sectionMode === "lv2-global-sort") return submitLv2GlobalSort();
+  const session = sortState?.session;
+  if (state.current?.sectionMode !== "hv1-sort" || !session) return;
+  finishHv1Drag();
+  if (session.phase === "memory") {
+    Hv1Order.begin(session);
+  } else if (session.phase === "practice") {
+    const result = Hv1Order.submit(session);
+    if (!session.scored) {
+      session.scored = true;
+      state.answeredInRound++;
+      state.roundMistakes += result.total - result.correct;
+      if (result.correct < result.total) state.mistakes.push(state.current);
+      updateStats();
+    }
+  } else {
+    nextQuestion();
     return;
   }
-
-  if (sortState.submitted) return;
-
-  var correct = 0;
-  var total = sortState.speakers.length;
-  sortState.correctedMatches = {};
-
-  for (var i = 0; i < total; i++) {
-    if (isSortMatchCorrect(i)) {
-      correct++;
-    } else {
-      var correctQuestion = findCorrectSortQuestionForSpeaker(i);
-      if (correctQuestion) sortState.correctedMatches[i] = correctQuestion.id;
-    }
-  }
-
-  sortState.submitted = true;
   renderSortList();
-  bindSortEvents();
-  drawSortLines();
-
-  var scoreClass = correct === total ? "perfect" : "partial";
-  var scoreText = correct === total ? "全部正确！" : correct + " / " + total + " 正确";
-  els.sortInfo.innerHTML =
-    '<span class="sort-score ' + scoreClass + '">' + scoreText + "</span>" +
-    (correct === total ? "" : '<span class="sort-correction-note">' + (compactMatching.matches ? "已在各题下显示正确配对。" : "红色为已改正的正确连线。") + '</span>');
-
-  if (correct < total) {
-    state.roundMistakes += total - correct;
-    state.mistakes.push(state.current);
-  }
-
-  state.answeredInRound += 1;
-  els.sortSubmitButton.textContent = "下一 Teil";
-  els.sortSubmitButton.disabled = false;
-  els.sortSubmitButton.onclick = function () {
-    stopSortAudio();
-    nextQuestion();
-  };
-
-  updateStats();
-  scrollMobilePracticeTop();
+  window.scrollTo({ top: 0, behavior: "instant" });
 }
 
 function stopSortAudio() {
-  if (sortState && sortState.currentAudio) {
-    sortState.currentAudio.pause();
-    sortState.currentAudio = null;
-  }
+  finishHv1Drag();
+  els.audioPanel.querySelector("audio")?.pause();
 }
 
 function shuffleSort() {
-  if (state.current?.sectionMode === "lv2-global-sort") {
-    shuffleLv2GlobalSort();
-    return;
-  }
-
-  if (sortState.submitted) return;
-  sortState.questions = shuffledSortQuestions(sortState.questions);
-  sortState.matches = {};
-  sortState.correctedMatches = {};
-  sortState.selectedSpeaker = null;
-  sortState.drag = null;
-  sortState.suppressClick = false;
-  els.sortInfo.textContent = compactMatching.matches ? "已重新打乱，请重新点选配对。" : "已重新打乱 Leitsätze。拖拽 Sprecher 到对应 Leitsatz。";
+  if (state.current?.sectionMode === "lv2-global-sort") return shuffleLv2GlobalSort();
+  const session = sortState?.session;
+  if (!session || session.phase !== "practice") return;
+  finishHv1Drag();
+  session.order = Hv1Order.shuffled(session.correct);
   renderSortList();
-  bindSortEvents();
-}
-
-function shuffledSortQuestions(questions) {
-  var shuffled = questions.map(function (q) { return { ...q }; });
-  for (var i = shuffled.length - 1; i > 0; i--) {
-    var j = Math.floor(Math.random() * (i + 1));
-    var tmp = shuffled[i];
-    shuffled[i] = shuffled[j];
-    shuffled[j] = tmp;
-  }
-  if (isSortOrderCorrect(shuffled) && shuffled.length > 1) {
-    var first = shuffled.shift();
-    shuffled.push(first);
-  }
-  return shuffled;
-}
-
-function isSortOrderCorrect(questions) {
-  for (var i = 0; i < questions.length; i++) {
-    if (questions[i].answer !== String.fromCharCode(65 + i)) return false;
-  }
-  return questions.length > 0;
-}
-
-function compareHv1Speakers(a, b) {
-  return String(a.answer).localeCompare(String(b.answer));
+  els.sortInfo.textContent = "已重新打乱全部 8 项";
 }
 
 function cssEscape(value) {
