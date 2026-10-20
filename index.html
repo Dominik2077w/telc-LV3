@@ -11,22 +11,18 @@
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="apple-touch-icon" href="./icons/icon-192.png" />
     <link rel="icon" href="./icons/icon-192.svg" />
-    <link rel="stylesheet" href="./styles.css?v=20261020-hv1-source" />
+    <link rel="stylesheet" href="./styles.css?v=20261020-pdf-only" />
   </head>
   <body>
     <div class="level-gate" id="levelGate" role="dialog" aria-modal="true" aria-labelledby="levelGateTitle">
       <div class="level-gate-inner">
         <p class="eyebrow">telc C1 Hochschule</p>
         <div class="gate-heading"><h1 id="levelGateTitle">选择训练级别</h1><button class="ghost-button hidden" id="closeLevelGate" type="button">返回练习</button></div>
-        <p class="corpus-edition">2026.9 语料已更新，新题带有「新增」标记。</p>
+        <p class="corpus-edition">全部训练语料已按 2026.9 PDF 重新提取覆盖。</p>
         <div class="level-choice-grid">
           <button class="level-choice" type="button" data-level-choice="lv2">
             <strong>LV2</strong>
             <span>段落 A-E 正反面卡片</span>
-          </button>
-          <button class="level-choice" type="button" data-level-choice="lv2v2">
-            <strong>LV2-版本2</strong>
-            <span>信号词 → 德语原句配对</span>
           </button>
           <button class="level-choice" type="button" data-level-choice="lv3">
             <strong>LV3</strong>
@@ -34,7 +30,7 @@
           </button>
           <button class="level-choice" type="button" data-level-choice="hv1">
             <strong>HV1</strong>
-            <span>先记忆正确顺序，再拖动排序</span>
+            <span>先记忆正确顺序，再听音选择</span>
           </button>
           <button class="level-choice" type="button" data-level-choice="hv2">
             <strong>HV2</strong>
@@ -42,19 +38,15 @@
           </button>
           <button class="level-choice" type="button" data-level-choice="writing">
             <strong>作文专题</strong>
-            <span>德语主题 → 德语 + 中文</span>
+            <span>原文主题与正反观点</span>
           </button>
           <button class="level-choice" type="button" data-level-choice="speaking">
             <strong>口语</strong>
-            <span>德语题目 → 德语 + 中文</span>
-          </button>
-          <button class="level-choice" type="button" data-level-choice="grammar">
-            <strong>语法卡</strong>
-            <span>搭配 → 结构 → 逻辑词</span>
+            <span>完整德语任务与讨论题</span>
           </button>
           <button class="level-choice" type="button" data-level-choice="baustein">
             <strong>Baustein</strong>
-            <span>文章四选一 / 填空复习卡</span>
+            <span>按 PDF 词语 / 答案复习</span>
           </button>
         </div>
       </div>
@@ -89,13 +81,11 @@
           <section class="panel">
             <div class="level-switch" aria-label="训练级别">
               <button class="level-switch-button" type="button" data-level-switch="lv2">LV2</button>
-              <button class="level-switch-button" type="button" data-level-switch="lv2v2">LV2-版本2</button>
               <button class="level-switch-button" type="button" data-level-switch="lv3">LV3</button>
               <button class="level-switch-button" type="button" data-level-switch="hv1">HV1</button>
               <button class="level-switch-button" type="button" data-level-switch="hv2">HV2</button>
               <button class="level-switch-button" type="button" data-level-switch="writing">作文专题</button>
               <button class="level-switch-button" type="button" data-level-switch="speaking">口语</button>
-              <button class="level-switch-button" type="button" data-level-switch="grammar">语法卡</button>
               <button class="level-switch-button" type="button" data-level-switch="baustein">Baustein</button>
             </div>
           </section>
@@ -141,7 +131,7 @@
             <label id="hv1ModeLabel" class="hidden">
               <span>HV1 模式</span>
               <select id="hv1Mode">
-                <option value="sort">先记忆 → 拖动排序</option>
+                <option value="listen">先记顺序 → 逐题听音选择</option>
                 <option value="cards">逐句复习（按新 PDF）</option>
               </select>
             </label>
@@ -225,16 +215,15 @@
       </section>
     </main>
 
-    <script src="./data/lv2_questions.js?v=202609-corpus"></script>
-    <script src="./data/lv2_v2_questions.js?v=20260504-hv1"></script>
-    <script src="./data/lv3_questions.js?v=202609-corpus"></script>
-    <script src="./data/hv1_questions.js?v=20261020-hv1-source"></script>
-    <script src="./data/hv2_questions.js?v=20261020-hv2-translations"></script>
-    <script src="./data/writing_questions.js?v=202609-corpus"></script>
-    <script src="./data/baustein_questions.js?v=202609-corpus"></script>
-    <script src="./data/speaking_questions.js?v=202609-corpus"></script>
-    <script src="./data/baustein_grammar_questions.js?v=20260508-grammar"></script>
-    <script src="./hv1-order.js?v=20261020-hv1-source"></script>
-    <script src="./app.js?v=20261020-hv1-source"></script>
+    <script src="./data/lv2_questions.js?v=20261020-pdf-only"></script>
+    <script src="./data/lv3_questions.js?v=20261020-pdf-only"></script>
+    <script src="./data/hv1_questions.js?v=20261020-hv1-audio"></script>
+    <script src="./data/hv2_questions.js?v=20261020-pdf-only"></script>
+    <script src="./data/writing_questions.js?v=20261020-pdf-only"></script>
+    <script src="./data/baustein_questions.js?v=20261020-pdf-only"></script>
+    <script src="./data/speaking_questions.js?v=20261020-pdf-only"></script>
+    <script src="./hv1-order.js?v=20261020-pdf-only"></script>
+    <script src="./hv1-quiz.js?v=20261020-hv1-audio"></script>
+    <script src="./app.js?v=20261020-hv1-audio"></script>
   </body>
 </html>

@@ -3,10 +3,15 @@
   "filename": "2026实时更新2026.9(腾讯文档实时更新）.pdf",
   "pages": 329,
   "sha256": "dfa404ef59dfe38308e702daf614251eea025e313a1f0245c71e5b613c848999",
+  "importMode": "replace-from-pdf-only",
+  "removedModules": [
+    "lv2v2",
+    "grammar"
+  ],
   "modules": {
     "lv2": {
-      "sections": 25,
-      "questions": 154
+      "sections": 26,
+      "questions": 130
     },
     "lv3": {
       "sections": 23,
@@ -18,11 +23,11 @@
     },
     "hv2": {
       "sections": 19,
-      "questions": 198
+      "questions": 199
     },
     "baustein": {
-      "sections": 22,
-      "questions": 464
+      "sections": 21,
+      "questions": 456
     },
     "speaking": {
       "sections": 4,

@@ -1,6 +1,7 @@
 import importlib.util
 from pathlib import Path
 import unittest
+from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
 spec = importlib.util.spec_from_file_location("corpus_import", ROOT / "scripts/update-corpus-2026-09.py")
@@ -105,6 +106,54 @@ class CorpusImportTests(unittest.TestCase):
         statement, letter = corpus.hv1_statement("E-Mails haben Vorteile gegenüber Briefverkehr .", answer_markers=False)
         self.assertEqual(statement, "E-Mails haben Vorteile gegenüber Briefverkehr.")
         self.assertIsNone(letter)
+
+    def test_lv2_rebuild_includes_teil_one_and_original_paragraphs(self):
+        pages = [""] * 329
+        pages[54] = "Teil 1 Original\nA\nEin erster Satz.\n10-Amüsiert sich der Autor?作者是否觉得有趣？\n段落中文。\nB\nEin zweiter Satz.\nC\nEin dritter Satz.\nD\nEin vierter Satz.\nE\nEin fünfter Satz."
+        with patch.object(Path, "read_text", side_effect=AssertionError("Must not read an old question bank")):
+            data = corpus.lv2(pages)
+        self.assertEqual(data[0]["teil"], 1)
+        self.assertEqual([q["paragraph"] for q in data[0]["questions"]], list("ABCDE"))
+        self.assertEqual(data[0]["questions"][0]["firstSentence"], "Ein erster Satz.")
+        self.assertEqual(data[0]["questions"][0]["items"][0]["number"], "10")
+
+    def test_hv2_keeps_repeated_source_variants_without_invented_choices(self):
+        pages = [""] * 329
+        pages[229] = "Teil 4 Pflanzen\n56-Frau Sellinger\nb-erforscht Signale.\n她研究信号。\n56-Frau Sellinger\nb-versucht Signale zu ergründen.\n她试图探明信号。"
+        questions = corpus.hv2(pages)[0]["questions"]
+        self.assertEqual([q["number"] for q in questions], ["56a", "56b"])
+        self.assertEqual([q["sourceNumber"] for q in questions], ["56", "56"])
+        self.assertTrue(all(q["sourceAnswer"] == "B" and not q["answer"] and "options" not in q for q in questions))
+
+    def test_hv2_latin_name_in_translation_does_not_leak_into_answer(self):
+        pages = [""] * 329
+        pages[227] = "Teil 1 Roboter\n55-Tourbot ist ein Roboter, der..\nc-führt Touristen.\nc Tourbot 是一种机器人。"
+        q = corpus.hv2(pages)[0]["questions"][0]
+        self.assertEqual(q["completion"], "führt Touristen.")
+        self.assertIn("Tourbot 是", q["chinese"])
+
+    def test_baustein_uses_printed_number_before_word_not_local_index(self):
+        pages = [""] * 329
+        pages[176] = "Teil20 Musik\nOb wir (25 eher) Rap mögen.\n我们是否更喜欢说唱。"
+        q = corpus.baustein(pages)[0]["questions"][0]
+        self.assertEqual(q["number"], 25)
+        self.assertEqual(q["answerText"], "eher")
+        self.assertEqual(q["german"], "Ob wir [25]____ Rap mögen.")
+        self.assertEqual(q["chinese"], "我们是否更喜欢说唱。")
+
+    def test_baustein_preserves_separate_preposition_and_noun_blanks(self):
+        pages = [""] * 329
+        pages[160] = "Teil 8 Programm\nDavid war ((zu))/(Gast) / (Besuch) an der Schule."
+        questions = corpus.baustein(pages)[0]["questions"]
+        self.assertEqual([q["answerText"] for q in questions], ["zu", "Gast / Besuch"])
+
+    def test_baustein_does_not_recreate_absent_teil_nineteen(self):
+        pages = [""] * 329
+        pages[176] = "Teil 18 Plastik im Meer\n" + ", ".join(f"{i}-C" for i in range(25, 47)) + "\nTeil20 Musik\nMusik ist (gut)."
+        data = corpus.baustein(pages)
+        self.assertEqual([s["teil"] for s in data], [18, 20])
+        self.assertEqual(len(data[0]["questions"]), 22)
+        self.assertTrue(all(not q["answer"] and "options" not in q for q in data[0]["questions"]))
 
 
 if __name__ == "__main__":

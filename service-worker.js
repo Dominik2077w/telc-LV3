@@ -1,4 +1,4 @@
-const CACHE_VERSION = "telc-trainer-20261020-hv1-source";
+const CACHE_VERSION = "telc-trainer-20261020-hv1-audio";
 const CACHE_NAME = `telc-trainer-${CACHE_VERSION}`;
 const APP_SHELL = [
   "./",
@@ -6,16 +6,15 @@ const APP_SHELL = [
   "./styles.css",
   "./app.js",
   "./hv1-order.js",
+  "./hv1-quiz.js",
   "./manifest.webmanifest",
   "./data/lv2_questions.js",
-  "./data/lv2_v2_questions.js",
   "./data/lv3_questions.js",
   "./data/hv1_questions.js",
   "./data/hv2_questions.js",
   "./data/writing_questions.js",
   "./data/baustein_questions.js",
   "./data/speaking_questions.js",
-  "./data/baustein_grammar_questions.js",
   "./icons/icon-192.png",
   "./icons/icon-512.png",
   "./icons/icon-192.svg",

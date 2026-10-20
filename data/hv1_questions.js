@@ -31,7 +31,12 @@ window.HV1_QUESTIONS = [
           182
         ],
         "translationSource": "source-pdf",
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Drei Wochen Urlaub am Strand mit ein paar Büchern. Kein Problem. Da brauche ich kein Internet. Ich treibe mehr Sport und für die Nachrichten reicht ein Blick in die Zeitung. Aber so im täglichen Leben, da wollteich es nicht missen. Für meinen zukünftigen Beruf ist das Netz unwahrscheinlich wichtig. Ich studiere nämlich Informatik privat. Natürlich könnte ich darauf verzichten. Es wäre auch völlig hinreichend, wenn ich in meiner Wohnung fließend Kaltwasser hätte und in der Matratze zum Schlafen. Ich würde überleben. Aber zu meinem Lebens Komfort gehört der tägliche Austausch im Netz. Seit über 15 Jahren. Jetzt einfach dazu",
+        "sourceTranscriptPages": [
+          182
+        ],
+        "audio": "data/audio/hv1/teil-1-speaker-1.mp3"
       },
       {
         "number": 2,
@@ -51,7 +56,12 @@ window.HV1_QUESTIONS = [
           183
         ],
         "translationSource": "source-pdf",
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Das Internet ist meine primäre Information und Unterhaltung Quelle. Wenn es um multimediales geht. Ich brauche keine gedruckte Zeitung. Alles, was ich wissen will, kriege ich fast schon live im Internet, während ich am nächsten Tag gelangweilt die Tageszeitung am Kiosk durchblättere und dort Nachrichten finde, die vom Vortag sind. Deja vu pur. Das World Wide Web ist das wichtigste Kommunikationsmittel, das ich nutze. Abgesehen vom Handy. Und zwar täglich. Wer schaltet bitteschön für ein, zwei Tage den Fernseher oder das Radio ab und guckt nicht in die Zeitung? Das macht doch auch keiner",
+        "sourceTranscriptPages": [
+          183
+        ],
+        "audio": "data/audio/hv1/teil-1-speaker-2.mp3"
       },
       {
         "number": 3,
@@ -71,7 +81,12 @@ window.HV1_QUESTIONS = [
           183
         ],
         "translationSource": "source-pdf",
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Leben ohne Internet. Das ist eine sehr interessante Frage. Ich gebe zu, ich könnte, wenn es sein müsste, ganz ohne Internet leben. Natürlich. Aber zum Glück muss ich nicht darauf verzichten, denn das Internet hat einen sehr hohen Stellenwert in meinem Leben. Da meine Familie über drei Erdteile verstreut lebt. Ich bin an einer Uni in Europa. Die Kinder studieren in Nordamerika. Und einige Verwandte und Freunde leben in Ostasien, so dass wir praktisch täglich Kontakt über Internet haben. Ansonsten lese ich Nachrichten. Und höre Radio ebenfalls über diese tolle Sache. Dass wir im Zeitalter der Kommunikation leben",
+        "sourceTranscriptPages": [
+          183
+        ],
+        "audio": "data/audio/hv1/teil-1-speaker-3.mp3"
       },
       {
         "number": 4,
@@ -91,14 +106,20 @@ window.HV1_QUESTIONS = [
           183
         ],
         "translationSource": "source-pdf",
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Wenn ich durch einsame Gebirgslandschaft wandere, dann vermisse ich das Netz, das mir zu Hause zu einer absoluten Selbstverständlichkeit geworden ist. Keine Sekunde. In den ersten Tagen ist es durchaus ungewohnt, aus Fragen zuerst selbst eine mögliche Antwort finden zu müssen, ohne die Option zu haben Das Google ich heute Abend. Und wenn ich dann nach Hause komme, dann ist mein erster Gang zur Waschmaschine, mein zweiter Gang in die Badewanne und dann erst mal sehr lange nichts mehr. Der Gang zum PC kann warten und erfolgt meist sogar erst am nächsten oder übernächsten Tag. Und wehe, ich habe da nicht mindestens 99 Mails in meinem Posteingang",
+        "sourceTranscriptPages": [
+          183,
+          184
+        ],
+        "audio": "data/audio/hv1/teil-1-speaker-4.mp3"
       },
       {
         "number": 5,
         "leitsatz": "E-Mails haben Vorteile gegenüber Briefverkehr.",
         "text": "Sprecher 5: Welcher Leitsatz passt?",
         "german": "Sprecher 5: Welcher Leitsatz passt?",
-        "chinese": "电子邮件比书信往来更有优势。",
+        "chinese": "原文未提供中文释义",
         "answer": "",
         "answerText": "E-Mails haben Vorteile gegenüber Briefverkehr.",
         "reviewGerman": "E-Mails haben Vorteile gegenüber Briefverkehr.",
@@ -109,8 +130,13 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           182
         ],
-        "translationSource": "translated-from-source-german",
-        "updatedIn": "2026.9"
+        "translationSource": "not-provided",
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Ohne das Netz würde mir etwas fehlen. Es ermöglicht es mir, bei geringem Zeitaufwand und ohne zusätzliche Benzinkosten gegebenenfalls bestimmte Dinge schnell einzukaufen. Ich kann schnell etwas nachsehen, mich zu einem Seminar im Forum austauschen oder mit anderen Menschen auch einfach so mal schnell Erfahrungen austauschen, Verwandten und Bekannten Mails mit Anhang zusenden und empfangen ohne Mehrkosten und den teilweise zeitaufwendigen Postverkehr und so ich es möchte mich auf diversen Humor Seiten mal aufheitern lassen. Das Internet erleichtert mir mein Leben, macht mich vielfach unabhängig von Zeit und Raum, ist jedoch keinesfalls mein Lebensmittelpunkt. Trotzdem kann ich nicht darauf verzichten",
+        "sourceTranscriptPages": [
+          184
+        ],
+        "audio": "data/audio/hv1/teil-1-speaker-5.mp3"
       },
       {
         "number": 6,
@@ -130,7 +156,12 @@ window.HV1_QUESTIONS = [
           184
         ],
         "translationSource": "source-pdf",
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Es ist doch wie bei allen liebgewordenen Annehmlichkeiten in unserer technisierten Welt. Man gewöhnt sich einfach daran. Und das, obwohl es vor ein paar Jahren auch noch ohne ging. Gerade an der Uni hat das Internet natürlich viele Vorteile. Ich musste während meines Studiums noch sehr aufwendig nach Literatur recherchieren. Da musste man tatsächlich in die Bibliothek. Und wenn etwas nicht vorhanden war, hat die Bestellung Wochen gedauert. Heute kann man viele Publikationen über den Universität Zugang sogar kostenlos abrufen. Dort lauern da natürlich auch Gefahren. Das sehe ich jetzt, wenn ich Arbeiten von Studierenden bewerte. Manche übernehmen bibliographische Angaben, ohne sie jemals selbst geprüft zu haben aus dem Internet. Und es gibt auch Fälle, in denen sogar ganze Texte aus dem Internet kopiert werden. In solchen Momenten erinnere ich mich dann gerne daran, wie das Leben ohne Internet war",
+        "sourceTranscriptPages": [
+          184
+        ],
+        "audio": "data/audio/hv1/teil-1-speaker-6.mp3"
       },
       {
         "number": 7,
@@ -150,7 +181,13 @@ window.HV1_QUESTIONS = [
           185
         ],
         "translationSource": "source-pdf",
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Ohne Internet hätte ich persönlich erhebliche Probleme. Schuld daran. Ist die Distanz. Zur Bank, zu Bibliotheken, Geschäften. Und so weiter. Ebay und YouTube nutze ich nicht. Flüge buche ich traditionellen Reisebüros. Ansonsten ist das Internet eine vortreffliche Sache Nachrichten auf einen Klick. Hintergrundinformationen. Infos, Email. Außerdem könnte man Unternehmen ohne Internet überhaupt nicht existieren. Es ist einfach undenkbar. Heute noch ohne dieses Medium arbeiten zu wollen. So sehr ich manche Sachen, die im Internet angeboten werden, auch verabscheue, es ist nun mal das wichtigste Kommunikationsmedium und das billigste",
+        "sourceTranscriptPages": [
+          184,
+          185
+        ],
+        "audio": "data/audio/hv1/teil-1-speaker-7.mp3"
       },
       {
         "number": 8,
@@ -170,7 +207,12 @@ window.HV1_QUESTIONS = [
           185
         ],
         "translationSource": "source-pdf",
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Ich war lange in meiner Freizeit ziemlich intensiv im Internet unterwegs. Um das ein bisschen einzudämmen, mache ich jetzt seit ein paar Monaten so, dass ich meinen PC unter der Woche nur dazu benutze, für mein Studium zu recherchieren. Das ist natürlich nicht ganz einfach, weil man oft denkt, ich könnte doch eben schnell auch noch. Aber meist klappt das ganz gut. Am Wochenende quillt da natürlich der private Posteingang über oder in einem Forum warten User auf Antwort. Am liebsten würde ich dann die ganze Woche eine interessante Diskussion weiterverfolgen, die ich am Samstag gefunden habe. Ist schon schlimm, wie einen das Internet gefangen nehmen kann, wenn man es zuletzt. Komplett wegdenken kann ich mir das Internet aber nicht. Und meine Eltern haben auch erzählt, dass sie früher oft den Videotext benutzt haben, um einfach mal zu stöbern",
+        "sourceTranscriptPages": [
+          185
+        ],
+        "audio": "data/audio/hv1/teil-1-speaker-8.mp3"
       }
     ],
     "updatedIn": "2026.9"
@@ -207,7 +249,12 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           185
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Unter unserer Regierung wird dieses Bundesland auch mittelfristig keine Studiengebühren bringen. Wir stehen dazu, dass diese Maßnahme eine soziale Selektion wäre. Daher muss der Senat die Studiengebühren aus. Studiengebühren bedeuten einen erheblichen finanziellen Mehraufwand für Studierende. Dadurch werden vor allem Bewerber einkommensschwachen Elternhäusern abgeschreckt, die sich laut einer aktuellen Untersuchung insbesondere für die Studienfächer Ingenieurs und Naturwissenschaften interessieren. Diese soziale Selektion wäre also ein vollkommen falsches Signal, nicht zuletzt an unserer Entscheidung gegen Studiengebühren. Schon in den nächsten Jahren die Attraktivität unseres Bundeslandes für Studierende deutlich erhöhen. Viele Studierende haben dann bei uns studiert. Wir sehen auch, dass sich beide Bundesländer und Unterhaltung anschließen. Für uns sind Studiengebühren kein sinnvolles Instrument, um die Studienbedingungen zu verbessern. Wir wollen auch nicht, dass die Studierenden aus anderen Bundesländern alle mit uns zu uns kommen. Das wäre eine ungesunde Situation. St",
+        "sourceTranscriptPages": [
+          186
+        ],
+        "audio": "data/audio/hv1/teil-2-speaker-1.mp3"
       },
       {
         "number": 2,
@@ -225,7 +272,13 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           185
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Ich habe selbst jetzt im letzten Semester mein Studium begonnen und bin der Meinung, dass die Studiengebühren überall abgeschafft werden sollten. Als Student sollte man vom Staat viel mehr unterstützt werden, da Stipendien nur bedingt helfen können. Viele Studenten bekommen ohnehin nur sehr wenig oder gar keine Unterstützung und auch das Bewerbungsverfahren Fischstäbchen ist sehr langwierig. Beispielsweise erhalte ich selbst auch keine Unterstützung vom Staat, obwohl meine Eltern wirklich nicht reich sind. Umdie Gebühren für mein Studium zahlen zu können, muss ich jetzt zusätzlich arbeiten, das die Zeit bietet für das Studium. Und das will ich einfach nicht richtig so. Wir wollen mein Studium wesentlich länger bezahlt und ist damit gedient",
+        "sourceTranscriptPages": [
+          186,
+          187
+        ],
+        "audio": "data/audio/hv1/teil-2-speaker-2.mp3"
       },
       {
         "number": 3,
@@ -243,7 +296,12 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           185
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "So ein Studium ist ohnehin schon eine große finanzielle Belastung. Meine Kinder haben auch studiert. Daher weiß ich, wovon ich spreche. Ich kann nur hoffen, dass wir mit meinen originären Eltern noch spielen können. Dann haben wir durchaus die Pflicht der Eltern, mit ihren Kindern einzugehen und Individualität zu zeigen. Dazu kommen dann aber auch Bücher, die der Mode oder anderes Arbeitsmaterial. So gesehen kann es kaum jemand bezahlen. Deswegen bin ich der Meinung, dass es keine Studiengebühren geben sollte. St",
+        "sourceTranscriptPages": [
+          187
+        ],
+        "audio": "data/audio/hv1/teil-2-speaker-3.mp3"
       },
       {
         "number": 4,
@@ -261,7 +319,12 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           185
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Derzeit bereite ich mich und mein Abitur in Jahren und natürlich beschäftigt mich auf die Frage, was und wo ich anschließend studieren könnte. Studiengebühren sind da auch ein Thema. Ich bin absolut gegen Studiengebühren, zumal wir nicht für eine Verbesserung der Studien Qualität eingesetzt wurden. Für die Öffentlichkeit ist immer noch nicht klar, wie das Geld ausgegeben wird. Meine Schwester, die schon studiert, die erzählt, dass es wegen der Dozenten noch bessere Arbeitsmaterialien gibt. Da frage ich mich schon, ob ich überhaupt so viel Geld investieren soll. Außerdem verschwinden die Studiengebühren, das Recht auf Bildung. Studierende sollten mehr unterstützt werden und dafür sollte es auch mehr Stipendien geben. St",
+        "sourceTranscriptPages": [
+          187
+        ],
+        "audio": "data/audio/hv1/teil-2-speaker-4.mp3"
       },
       {
         "number": 5,
@@ -279,7 +342,13 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           185
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Schwer zu evaluieren zwischen 15 Jahren an jeder Universität in der Verwaltung. Warum habe ich soviel zu tun wie heute? Das liegt einerseits natürlich auch daran, dass wir immer mehr Studienanfänger haben, aber es gibt andererseits tatsächlich auch bei den Studiengebühren in unserem Bundesland Probleme. Die Verwaltung dieser Gelder ist ein zusätzlicher Aufwand. Geben unser Geld verantwortlich ist. Dabei geht es dabei natürlich nicht nur, dass wir das Geld auf meinem Konto können, sondern natürlich in diese Linie aus einem ist. Und für jede Ausgabe muss ein Beschluss gefasst werden. Zwar bin ich an der Beschlussfassung nicht beteiligt, aber ich muss Meine beiden Kolleginnen müssen die Papiere für meinenVorgänger ausfüllen und an die richtigen Stellen weiterleiten. Das ist ein ebenso äußert",
+        "sourceTranscriptPages": [
+          187,
+          188
+        ],
+        "audio": "data/audio/hv1/teil-2-speaker-5.mp3"
       },
       {
         "number": 6,
@@ -297,7 +366,12 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           186
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Ich habe mich jetzt nicht mit Geld und Ökonomie studiert, sondern eine betriebliche Ausbildung absolviert. Aber ich bin davon überzeugt, dass der Staat für alle schulischen Einrichtungen und somit auch für Universitäten verantwortlich ist. Deshalb denke ich auch, dass es keine Studiengebühren geben sollte. Es ist Aufgabe des Staates, Chancengleichheit für alle zu schaffen. Wenn welche Universitäten kann, darf doch nicht vom Einkommen der Eltern abhängen. Auf der anderen Seite müssen sich Studenten aber auch bewusst sein, dass ein höheres Studium oder ein häufiger Wechsel des Studiengangs zulasten der Allgemeinheit geht. Wir würden zum Beispiel plötzlich lernen, dass es drei verschiedene Studiengänge eingeschrieben und alle nach spätestens zwei Jahren wieder aufgebaut, wenn es an seinen Universitäten Studiengebühren gegeben hätte. Wer weiß, vielleicht hätte er nicht das Zeug vorher benötigt. Schon sehr gut",
+        "sourceTranscriptPages": [
+          188
+        ],
+        "audio": "data/audio/hv1/teil-2-speaker-6.mp3"
       },
       {
         "number": 7,
@@ -315,7 +389,13 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           186
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Unsere Partei ist davon überzeugt, dass Studiengebühren wichtig sind der Opposition und Studentenvertreter deren Abschaffung fordern, ist zwar aus ihrer Sicht nachvollziehbar oder sogar angezeigt. Aber wir werden uns nicht anschließen. Die Studienbeiträge kommen den Hochschulen und den Studierenden zugute. Es wäre sehr bedauerlich, wenn in Deutschland auch ohne Studium etwas sinnvolles, bewährtes Instrument zur Verbesserung der Studienbedingungen keine große In unserem Bundesland haben wir die Qualität der Lehre durch die Studienbeiträge entscheidend verbessern. Man darf nicht außer Acht lassen, dass ein günstiger Kredit sowie verschiedene Ausnahmeregelungen für eine gute soziale Abfederung sorgen. Für eine soziale Ungleichgewicht oder gar den Ausschluss ganzer Gesellschaftsschichten und Studium kann daher keine Rede sein. Die",
+        "sourceTranscriptPages": [
+          188,
+          189
+        ],
+        "audio": "data/audio/hv1/teil-2-speaker-7.mp3"
       },
       {
         "number": 8,
@@ -333,7 +413,12 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           186
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "An meiner Universität werden schon seit mehreren Jahren Studiengebühren erhoben. Für mich persönlich stellt sich deshalb nach dem Abitur schon die Frage, ob ich mir das überhaupt leisten kann. Heute allerdings habe ich eine andere Perspektive. Ich bin jetzt kurz vor meinen Prüfungen und konnte selbst erleben,wie sich im Laufe der letzten Semester die Ausstattung der Uni verändert hat. In meinem Labor wurden moderne Geräte angeschafft und endlich können alle Studierenden eines Seminars auch wirklich selbst Experimente durchführen. Dafür gab es vorher einfach nicht genügend Materialien und sie mussten dann immer Noten zu sechs oder manchmal sogar acht Studierenden gewählt haben. So kann man natürlich nicht die notwendigen Erfahrungen sammeln, auch wenn viele meiner Kommilitonen es noch immer nicht wahrhaben wollen. Die Gebühren sind zumindest bei uns sinnvoll eingesetzt worden",
+        "sourceTranscriptPages": [
+          189
+        ],
+        "audio": "data/audio/hv1/teil-2-speaker-8.mp3"
       }
     ],
     "updatedIn": "2026.9"
@@ -370,7 +455,12 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           189
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Arbeit Studium und Kinder das alles sei problemlos vereinbar. Manchmal ein bisschen stressig aber erfüllend und empfehlenswert das möchte man uns weismachen. Theoretisch haben alle volles Verständnis für oder studierende Eltern. Aber die Wirklichkeit sieht anders aus. Eltern die voller Schuldgefühle arbeiten im Büro liegen lassen weil die Kita schließt. Mütter die ihr krankes Kind mit schlechtem Gewissen der Oma überlassen, weil an der Uni Anwesenheitspflicht besteht. In der Wirtschaft der Politik und der Öffentlichkeit muss es endlich ein wirkliches Umdenken geben. Mit Lippenbekenntnissen ist den Eltern nicht geholfen. Selbst neue Fördermodell sind nicht die Lösung des Problems. Arbeitgeber Professoren kinderlose Kollegen und Kommilitonen auch wir Eltern müssen begreifen, dass Kinder uns alle etwas angehen was wir brauchen ist das Bewusstsein, dass die Gesellschaft als Ganze für gelungene Kinderbetreuung verantwortlich ist. In der Arbeitswelt wie an den Hochschulen. S",
+        "sourceTranscriptPages": [
+          190
+        ],
+        "audio": "data/audio/hv1/teil-3-speaker-1.mp3"
       },
       {
         "number": 2,
@@ -388,7 +478,13 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           189
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Der Druck der auf uns Studierenden lastet nimmt ständig zu. Wir sollen Auslandssemester machen und bereits während des Studiums Praktika absolvieren eine oder besser gleich mehrere Fremdsprachen zu beherrschen ist eine Selbstverständlichkeit. Grundsätzlich ja alles Dinge die sinnvoll sind aber sie bedeuten auch einen riesigen Aufwand das Studium sollen wir außerdem in der kürzesten Zeit und natürlich mit Bestnoten abschließen um am Arbeitsmarkt Chancen auf einen gut bezahlten Job zu haben. Viele von uns müssen trotz all dieser Ansprüche auch noch neben dem Studium arbeiten um finanziell über die Runden zu kommen. Ich frage Sie Wie könnte man unter solchen Voraussetzungen auch nur daran denken während des Studiums Mutter zu werden. Ich kann mir beim besten Willen nicht vorstellen wie Studium und Kind unter einen Hut zu bringen sind. Ei",
+        "sourceTranscriptPages": [
+          190,
+          191
+        ],
+        "audio": "data/audio/hv1/teil-3-speaker-2.mp3"
       },
       {
         "number": 3,
@@ -406,7 +502,12 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           189
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "seit der sogenannten Bologna-Reform hat sich der Alltag an den Universitäten stark verändert. Es gibt viele Seminare und Vorlesungen mit Anwesenheitspflicht. Der Prozentsatz der Zeit die man anwesend sein muss wird zwar von den einzelnen Hochschulen festgelegt und ist deshalb nicht überall gleich. Wenn man aber über die jeweils festgelegte Zeit hinaus fehlt muss man die Fehlzeiten mit anderen Leistungen ausgleichen. Es gibt Kurse in denen die Anwesenheitslisten kontrolliert wird. Man wird auch automatisch negativ bewertet wenn man zu einer Prüfung angemeldet ist und nicht erscheint. Dadurch haben studierende Eltern eindeutig einen Nachteil gegenüber ihren kinderlosen Studienkollegen und Kollegen. Denn ein Kind richtet sich nun einmal nicht nach Vorlesung oder Prüfungstermin. Wenn es zur Welt kommt oder krank wird ist man meist auf das Verständnis der Dozentin oder Dozenten angewiesen. Und das ist lästig",
+        "sourceTranscriptPages": [
+          191
+        ],
+        "audio": "data/audio/hv1/teil-3-speaker-3.mp3"
       },
       {
         "number": 4,
@@ -424,7 +525,13 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           189
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Natürlich habe ich auch schon darüber nachgedacht wie es wäre als Mutter mit einem Baby zu studieren. Aber ich habe derzeit andere Prioritäten. Es wird ohnehin nicht leicht werden in der Arbeitswelt Fuß zu fassen. Schließlich gibt es genug Arbeitslosigkeit auch unter Akademikern mit einem Kind stelle ich mir den Berufseinstieg noch wesentlich schwieriger vor. Nicht ohne Grund steigt das durchschnittliche Alter der Frauen die zum ersten Mal Mutter werden kontinuierlich an. Ich würdemeine Chancen wohl kaum erhöhen wenn ich gleich bei der ersten Stelle auf die Bedürfnisse eines Kleinkindes Rücksicht nehmen müsste. Außerdem ist es mir wichtig mein Studium mit sehr guten Noten zu beenden damit ich Vorteile bei der Jobsuche habe. Mit einem Kind würden sich meine Leistungen an der Uni aber sicher verschlechtern. Also ein Kind ja. Aber später. Ein",
+        "sourceTranscriptPages": [
+          191,
+          192
+        ],
+        "audio": "data/audio/hv1/teil-3-speaker-4.mp3"
       },
       {
         "number": 5,
@@ -442,7 +549,12 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           189
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Die deutschen Hochschulen sind eigentlich ganz gut auf studierende Eltern vorbereitet. Es wurden in den letzten Jahren zahlreiche Maßnahmen getroffen damit ein Kind nicht zu einer Benachteiligung führt oder gar zu einem Grund für einen Studienabbruch wird. Das Angebot reicht von Stipendien über flexible Betreuung bis hin zu ganz konkreten Dingen wie weggeblasen. Es gibt viele sehr verständnisvolle Dozentinnen und Dozenten da kann man ruhig auch einmal ein wenig mit in die Sprechstunde bringen. Die meisten von ihnen sind doch selbst Eltern die sehr gut wissen wie schwierig es sein kann Beruf und Familie miteinander zu vereinbaren. Natürlich sind die Voraussetzungen nicht an allen Hochschulen gleich. Es zahlt sich auf jeden Fall aus sich darüber gründlich zu informieren. Dafür kann man sich an die Gleichstellungsbeauftragten oder das Frauenbüro wenden. Für die Unis ist das kein Problem wenn jemand während des Studiums auch Verantwortung für ein Kind hat",
+        "sourceTranscriptPages": [
+          192
+        ],
+        "audio": "data/audio/hv1/teil-3-speaker-5.mp3"
       },
       {
         "number": 6,
@@ -460,7 +572,12 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           190
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Ich habe zwei Kinder und beide sind während meines Studiums zur Welt gekommen. Es war nicht immer leicht Studium und Familie zu vereinbaren. Zeitweise war es ganz schön stressig. Vor allem als mein Mann und ich kurz vor dem Abschluss standen. Wir haben beide auch etwas länger für das Examen gebraucht als die meisten unserer Freunde. Aber wir hatten keine wesentlichen Probleme. Die Situation forderte uns allerdings viel Selbstdisziplin ab und wir mussten auf einiges verzichten zum Beispiel auf häufiges ausgeben. Auf der anderen Seite hatten wir sicher viel mehr Zeit für unsere Kinder als berufstätige Eltern. Rückblickend muss ich sagen. Dass es eine wunderbare Zeit war und ich würde mich auch heute nicht anders entscheiden. Den Kindern geht es super und beruflich hat es weder mir noch meinem Mann geschadet",
+        "sourceTranscriptPages": [
+          192
+        ],
+        "audio": "data/audio/hv1/teil-3-speaker-6.mp3"
       },
       {
         "number": 7,
@@ -483,7 +600,13 @@ window.HV1_QUESTIONS = [
           "Wer während des Studiums ein Kind bekommt, hat weniger Möglichkeiten, sich persönlich weiterzuentwickeln."
         ],
         "studyNote": "原文同时列有 kaumer / weniger 两种表述，这里采用后一种。",
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "also rein strukturell sehe ich kein Problem darin während des Studiums ein Kind zu bekommen. Die Universitäten stellen durchaus Unterstützung bereit und es gibt auch Fördermaßnahmen die in Anspruch genommen werden können. Bedenken möchte ich aus ganz anderen Gründen äußern. Die Jahre des Studiums sehe ich nicht nur aber doch auch als eine Gelegenheit zum Experimentieren. Eine Chance zur eigenen Persönlichkeitsentfaltung. Ich halte gar nichts davon wenn Studien der Mindestdauer abgespult werden wenn die Studierenden kein Interesse an dem Leben außerhalb der Universität zeigen. Interessante Lebensläufe mit Praxis und Auslandserfahrung sind mir wichtiger als Bestnoten und Rekords zeigen. Das erfordert aber Zeit und eine gewisse Muße. Mit einem Kind so fürchte ich. Nimmt man sich diese Chance. Das finde ich schade denn diese Phase der Selbstfindung kommt nicht wieder. Wer w",
+        "sourceTranscriptPages": [
+          192,
+          193
+        ],
+        "audio": "data/audio/hv1/teil-3-speaker-7.mp3"
       },
       {
         "number": 8,
@@ -501,7 +624,12 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           190
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Mit meinen Freundinnen diskutiere ich oft über Studium und Kinderwunsch. Viele von ihnen glauben dass sie sich dadurch ihre berufliche Zukunft verbauen. Das sehe ich ganz anders. Ich bin nämlich der Meinung dass es von Vorteil ist die Kinder wenn man denn welche möchte schon während des Studiums zu bekommen Pausen einlegen und etwas reduzieren. Das geht doch im Studium wesentlich leichter als später im Beruf auch wenn es Anwesenheitspflicht und Prüfungstermine gibt. Ist man als Studentin noch freier in seiner Zeiteinteilung. Ich glaube dass man an der Uni auch eher auf Verständnis hoffen kann als bei einem Arbeitgeber. Wenn man einmal wegen des Kindes einen Termin verpasst. Wenn ich als Frau später im Beruf stehe und dann in Elternzeit gehe bedeutet das mit Sicherheit einen Karriereknick für den beruflichen Erfolg wäre es also am besten wenn die Familienplanung idealerweise schon vor dem Berufseinstieg abgeschlossen wäre",
+        "sourceTranscriptPages": [
+          193
+        ],
+        "audio": "data/audio/hv1/teil-3-speaker-8.mp3"
       }
     ],
     "updatedIn": "2026.9"
@@ -538,7 +666,13 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           194
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Die Experten schätzen, dass ein Tempolimit von 120 Stundenkilometern die Atmosphäre jährlich um gut 3 Millionen Tonnen CO2 entlasten würde. Die Schadstoff Minderung entspräche etwa dem jährlichen Ausstoß eines mittelgroßen Kohlekraftwerks. Das ist eine ganze Menge. Ich bin außerdem überzeugt, dass ein Tempolimit langfristig das Wettrüsten um immer leistungsstärkere Autos beenden und zu einer Verbreitung kleinerer und sparsamere Motoren führen würde. Der Effekt eines solchen sogenannten Downsizing wäre nicht unerheblich. Bei einem 100 Kilogramm leichteren PKW wird etwa ein Liter weniger vom Kraftstoff verbraucht. Verkehrsexperten empfehlen deshalb auch eine Höchstgeschwindigkeit von 120 Stundenkilometern, weil oberhalb dieser Geschwindigkeit der Spritverbrauch vieler Automobile überproportional ansteigt. Ein",
+        "sourceTranscriptPages": [
+          194,
+          195
+        ],
+        "audio": "data/audio/hv1/teil-4-speaker-1.mp3"
       },
       {
         "number": 2,
@@ -556,7 +690,12 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           194
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Das Umweltbundesamt, immerhin eine Behörde des Bundesumweltministeriums, schätzt die CO2 Einsparung bei einer Geschwindigkeitsbeschränkung auf 120 Stundenkilometer auf lediglich 2 % der CO2 Emissionen des Straßenverkehrs, das heißt auf magere 0,3 % der deutschen CO2 Emissionen insgesamt. Bei einem Tempolimit von 120 Stundenkilometern dürfte von einem reinen Null Effekt auszugehen sein. Ein wesentliches Einsparpotenzial von CO2 wäre hingegen die Reduzierung des Stopp and Go Verkehrs. Bis zu fünfmal mehr CO2 produziert ein Fahrzeug, wenn es lange im Stau steht. Die Verflüssigung des Verkehrs ist daher Grundvoraussetzung, um Emissionen einsparen zu können. Anstatt über ein wirkungsloses Tempolimit nachzudenken, sollte der Bund mehr Geld in den Ausbau der Autobahnen stecken. Ei",
+        "sourceTranscriptPages": [
+          195
+        ],
+        "audio": "data/audio/hv1/teil-4-speaker-2.mp3"
       },
       {
         "number": 3,
@@ -574,7 +713,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           194
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-4-speaker-3.mp3"
       },
       {
         "number": 4,
@@ -592,7 +732,13 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           194
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Ich bin eine Verfechterin des Grundsatzes Freie Fahrt für freie Bürger. Davon sind wir hier in Deutschland allerdings weit entfernt. Denn die Realität auf den Bundesautobahnen sieht ganz anders aus. Unser Autobahnnetz gleicht eher einer Orgie der Tempo Beschränkungen. Und die Behörden haben genug Argumente, um Tempolimits einzuführen. Mal ist es die stark angewachsene Verkehrsdichte, die die Behörden motiviert, die freie Fahrt auf Teilstrecken des Autobahn Netzes einzuschränken. Denn je mehr Verkehr entsteht, desto eher greift das zentrale Argument für die Einrichtung von Tempolimits Sicherheit. Und mal ist es das Autobahnkreuz, denn wo verschiedene Verkehrsströme ineinander fließen, wird die Geschwindigkeit prinzipiell herabgesetzt, weil starke Geschwindigkeit unterschiede das Ein und Ausfällen nicht leichter machen. So endet die Fahrt ganz oft, wie sie begonnen hat. nämlich im vorgeschriebenen Limit",
+        "sourceTranscriptPages": [
+          195,
+          196
+        ],
+        "audio": "data/audio/hv1/teil-4-speaker-4.mp3"
       },
       {
         "number": 5,
@@ -610,7 +756,12 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           194
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Es klingt auf den ersten Blick so schlüssig, so einfach. Und eigentlich machen es ja alle in Europa. Da kann es doch nicht falsch sein, ein Tempolimit auf deutschen Autobahnen zu fordern. Aber wie immer, wenn etwas einfach erscheint, lohnt der Blick auf die Zahlen. Generell sind die Schnellstraßen seit Jahren statistisch betrachtet die sichersten Strecken. Der Anteil an tödlichen Unfällen auf Autobahnen liegt bei 6 % der Gesamtheit der Verkehrstoten. Zudem ist die Zahl im vergangenen Jahr erneut gesunken. Auch ohne Tempolimit. Der Risiko Schwerpunkt liegt mit 60 % der anteiligen Verkehrstoten eindeutig auf den Landstraßen. Wenn man also an der Unfallstatistik signifikant etwas verändern möchte, dann ist Tempolimit auf Autobahnen eindeutig der falscheAnsatz. Ei",
+        "sourceTranscriptPages": [
+          196
+        ],
+        "audio": "data/audio/hv1/teil-4-speaker-5.mp3"
       },
       {
         "number": 6,
@@ -628,7 +779,13 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           194
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Ein Blick in unsere Nachbarländer zeigt Überall gibt es allgemeine Geschwindigkeitsbeschränkungen auf Autobahnen. Dass Deutschland Europas letzte Bastion gegen ein generelles Tempolimit ist, hat natürlich in erster Linie mit dem Einfluss der Autoindustrie und deren Befürwortern zu tun. Der ADAC als Autofahrer Club, in dem etwa 19 Millionen Mitglieder organisiert sind, und der Verband der Automobilindustrie VDA kämpfen schon lange vehement und sehr erfolgreich gegen die Einführung eines allgemeinen Tempolimits. Beide Institutionen stehen sich sehr nah. Und gerade die deutschen Autohersteller, in deren Modellpalette sich zahlreiche PS starke und entsprechend schnelle Fahrzeuge befinden, sind daran interessiert, mit dieser Contra Haltung die vermeintliche Daseinsberechtigung ihrer Autos zu sichern",
+        "sourceTranscriptPages": [
+          196,
+          197
+        ],
+        "audio": "data/audio/hv1/teil-4-speaker-6.mp3"
       },
       {
         "number": 7,
@@ -646,7 +803,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           194
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-4-speaker-7.mp3"
       },
       {
         "number": 8,
@@ -664,7 +822,12 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           194
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Nach Angaben der Polizei nimmt die Aggression Bereitschaft auf deutschen Autobahnen zu. Sportwagen, die mit Lichthupe über die linke Spur rasen. Riskante Überholmanöver, illegale Autorennen. Die Mehrheit der schweren Unfälle auf Autobahnen sind Geschwindigkeit Unfälle. Tödliche Unfälle ereignen sich in der Regel auf solchen Autobahnen Abschnitten, die keine Geschwindigkeitsbegrenzung haben. Wo Tempolimits auf einzelnen Streckenabschnitten eingeführt werden, ist ein Rückgang der Unfälle mit Verletzten und Toten um etwa 30 % zu beobachten. Ein Tempolimit macht die Autobahnen also nachweislich sicherer. Das erklärt sich schon durch ein wenig Physik. Wer langsamer fährt, hat mehr Zeit zum Reagieren und kann einen Unfall eher verhindern. Und wenn es doch kracht, dann ist der Aufprall weniger heftig und damit die Folgen weniger schlimm",
+        "sourceTranscriptPages": [
+          197
+        ],
+        "audio": "data/audio/hv1/teil-4-speaker-8.mp3"
       }
     ],
     "updatedIn": "2026.9"
@@ -701,7 +864,13 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           198
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Die Gentechnik in der Landwirtschaft bedeutet Gewinnmaximierung auf dem Acker. Immer größere Maschinen, von wenigen Menschen. Gesteuert, bewirtschaften immer größere Flächen, umweltschonende Bewirtschaftung. Formen sind Arbeit und personalintensiv. Und rechnen sich daher nicht. Schon jetzt sind zahlreiche Arbeitsplätze in der Biobranche und der konventionellen Landwirtschaft verloren gegangen, und ich bin sicher, dass diese Tendenz sich fortsetzen wird. Es wird zwar immer wieder behauptet, dieGentechnik schaffe neue Arbeitsplätze, aber das bezieht sich nur auf einige wenige Stellen in der Forschung, die die Arbeitsplatzverluste in der Landwirtschaft nicht kompensieren können. Bauern, die gentechnikfrei wirtschaften wollen, müssen große Anstrengungen aufbringen. Um bestimmte Auflagen zu erfüllen oder um Tests zu bezahlen, die die Gentechnikfreiheit ihrer Produkte. Belegen. Viele können da nicht mehr mithalten und sind gezwungen, ihre Betriebe früher oder später aufzugeben. Gen",
+        "sourceTranscriptPages": [
+          198,
+          199
+        ],
+        "audio": "data/audio/hv1/teil-5-speaker-1.mp3"
       },
       {
         "number": 2,
@@ -719,7 +888,12 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           198
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Zur Zeit weiß niemand. Wie sich gentechnisch Pflanzen langfristig auf die menschliche Gesundheit und auf die Umwelt auswirken. Es ist zwar richtig, dass gentechnisch veränderte Pflanzen eine lange Prüfung brauchen müssen, bevor sie in der Europäischen Union angebaut werden dürfen. Aber das ist aus meiner Sicht wenig vertrauenserweckend. Die Untersuchungen, die für die Zulassungsverfahren in der EU erstellt werden, sind nicht neutral, sondern stammen größtenteils von den Gentechnik Konzernen selbst. Diese führen aber keine Langzeitstudien durch und es ist auch schon an die Öffentlichkeit gekommen, dass brisante Ergebnisse zurückgehalten werden. Meiner Meinung nach darf die Zulassung. Erst erfolgen, wenn durch objektive Langzeitstudien eindeutig Belegt ist, dass weder die Menschen noch die Umwelt durch die neuen Pflanzen geschädigt werden. Es",
+        "sourceTranscriptPages": [
+          199
+        ],
+        "audio": "data/audio/hv1/teil-5-speaker-2.mp3"
       },
       {
         "number": 3,
@@ -737,7 +911,13 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           198
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Viele behaupten ja, dass die sogenannte Grüne Gentechnik oder Atom Gentechnik umweltschonend sei. Aber ich sehe das eher kritisch. Gentechnisch veränderte Pflanzen sind für eine Landwirtschaft gemacht, die sich an der industriellen Produktion orientiert, um große Flächen möglichst effizient bewirtschaften zu können. Wird dort jedes Jahr dasselbe Gemüse oder Getreide angebaut? Solche Monokulturen bedeuten zwangsläufig eine Einschränkung des Lebensraums für viele Tiere und Pflanzen. Monokulturen sind viel anfälliger für Schädlinge und Krankheiten, wodurch sich der Einsatz von Spritzmittel massiv erhöht. Die Spritzmittel wiederum zerstören zahlreiche Wildpflanzen und in der Folge gibt es weniger Insekten und Vögel in der Landschaft. Wir sind aber auf den Reichtum der Pflanzen und Tierwelt angewiesen und dürfen ihn keinesfalls aus rein wirtschaftlichem Interesse aufs Spiel setzen",
+        "sourceTranscriptPages": [
+          199,
+          200
+        ],
+        "audio": "data/audio/hv1/teil-5-speaker-3.mp3"
       },
       {
         "number": 4,
@@ -755,7 +935,12 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           198
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Hier in Deutschland leben viele Landwirte die grüne Gentechnik immer noch ab. Zu Unrecht, wie ich finde gerade die Landwirte, die durch die globale Erwärmung zunehmend vor extreme Herausforderungen gestellt werden, sollten für die Vorteile der Gentechnik offener sein und sie nicht von vornherein unter Generalverdacht stellen. Seit Generationen arbeiten sie mühsam daran, Pflanzen zu züchten, die den jeweiligen Umweltbedingungen in der Region wie Trockenheit oder Kälte angepasst sind. Mit Hilfe der Gentechnik können wir schneller und besser neue Sorten entwickeln, die zum Beispiel gegen Überschwemmung, Dürre oder neue Schädlinge widerstandsfähig sind und zudem höhere Erträge liefern. Dadurch könnten die Bauern viel effektiver auf veränderte Umwelt oder Klimabedingungen reagieren. Die Vorteile liegen auf der Hand",
+        "sourceTranscriptPages": [
+          200
+        ],
+        "audio": "data/audio/hv1/teil-5-speaker-4.mp3"
       },
       {
         "number": 5,
@@ -773,7 +958,12 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           198
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "die Nutzung gentechnisch veränderter Pflanzen in der Landwirtschaft und in der Nahrungsmittelproduktion spaltet Jahr die Gemüter. Ich kann das teilweise nachvollziehen, gehöre aber ganz klar zu den Befürwortern. Für mich ist die Gentechnik eine Zukunftstechnologie, die neue Impulse setzt und für Wirtschaftswachstum sorgt. Indem sie zum Beispiel dabei hilft, neue. Exportmärkte zu erschließen. Außerdem werden in der Forschung hochqualifizierte Arbeitsplätze geschaffen, die zur Verbesserung der Lage auf dem Arbeitsmarkt beitragen. Davon profitiert auch die Gesamtwirtschaft in Deutschland. Leider sorgt die derzeitige Gesetzgebung dafür, dass dieses Potenzial noch nicht hinreichend ausgeschöpft werden kann. Es dauert einfach zu lange, Gentechnik Pflanzen in der EU zuzulassen. Die Prüfverfahren müssten dringend beschleunigt und vereinfacht werden. Di",
+        "sourceTranscriptPages": [
+          200
+        ],
+        "audio": "data/audio/hv1/teil-5-speaker-5.mp3"
       },
       {
         "number": 6,
@@ -791,7 +981,13 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           198
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Neulich habe ich von einer gentechnisch veränderten Reis Sorte gehört, die durch ihren höheren Beta Karolinger Reis die Vitamin A Versorgung verbessern soll. Oder von einer Tomate, die zu Tomatenmark verarbeitet, angeblich das Krebsrisiko senken soll. Das klingt ja alles sehr positiv. Aber wenn es um das Thema Gentechnik in Lebensmitteln geht, bleibe ich ehrlich gesagt skeptisch. Im Supermarkt greife ich zu Bioprodukten oder Lebensmitteln mit einer speziellen ohne Gentechnik Kennzeichnung. Ich denke, es. Ist wichtig, dass man sich bewusst und ausgewogen ernährt und seine Mahlzeiten möglichst frisch zubereitet. So kommt es gar nicht erst zu Nährstoff Mangel, den man dann mit Nahrungsergänzungsmitteln oder genmanipulierten Lebensmitteln ausgleichen muss. Die vermeintlichen Vorteile gentechnisch veränderter Nahrungsmittel halte ich für fragwürdig. Das ist doch alles nur ein Versuch, die Verbraucher auf die Seite der Gentechnik Befürworter zu ziehen. Da mache ich nicht mit",
+        "sourceTranscriptPages": [
+          200,
+          201
+        ],
+        "audio": "data/audio/hv1/teil-5-speaker-6.mp3"
       },
       {
         "number": 7,
@@ -809,7 +1005,12 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           198
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Nie zuvor hat die Menschheit mehr Nahrungsmitteln produziert als heute. Über 1/3 davon wird bei uns weggeschmissen. Wenn Lebensmittel gerecht verteilt wären, müsste niemand hungern. Dennoch hungern heute mehr Menschen als je zuvor auf diesem Planeten. Insbesondere in Asien und Afrika. 70 % aller Tiere leben auf dem Land und den Menschen dort fehlt ist der Zugang zu ganz elementaren Dingen wie Wasser und Saatgut, aber auch zum praktischen blau und lokalen Märkten. Mit Gentechnik Pflanzen wird bisher ausschließlich Tierfutter, Baumwolle und Menschen produziert. Der Hunger wird dadurch nicht gelindert.Im Gegenteil Die Gentechnik schafft eher neue Probleme Patente auf Gentechnik Pflanzen bringen arme Bauern nämlich in neue Abhängigkeiten, da sie ihre Ernte nicht mehr zur Aussaat. Nutzen dürfen, ohne Lizenzen zu zahlen. Über 1000 Patente auf Gentechnik Pflanzen sind bereits erteilt worden",
+        "sourceTranscriptPages": [
+          201
+        ],
+        "audio": "data/audio/hv1/teil-5-speaker-7.mp3"
       },
       {
         "number": 8,
@@ -827,7 +1028,13 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           198
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Einmal freigesetzt, lassen sich gentechnisch veränderte Organismen nicht mehr zurückholen. Abstands Regelungen verhindern nicht, dass sich Gentechnik Pflanzen mit Wild oder herkömmlichen Pflanzen kreuzen. Denn Pollen fliegen über Grenzen hinweg und werden auch von Bienen kilometerweit getragen. In landwirtschaftlichen Fahrzeugen und Geräten. Sowie bei der Weiterverarbeitung lässt sich die strikte Trennung praktisch nicht durchsetzen. Und so kommt es immer wieder zu ungewollten Verunreinigungen. So fanden Umweltschützer vor einigen Jahren illegal den Reis aus China in deutschen Supermärkten. Im letzten Jahr mussten Getreide Produkte vom Markt genommen werden, weil sie mit gentechnisch veränderten Organismen verunreinigt waren. Sie hatten nirgends eine. Zulassung, sondern waren im Rahmen eines Versuchs Anbau in den USA neun Jahre zuvor freigesetzt worden",
+        "sourceTranscriptPages": [
+          201,
+          202
+        ],
+        "audio": "data/audio/hv1/teil-5-speaker-8.mp3"
       }
     ],
     "updatedIn": "2026.9"
@@ -863,7 +1070,12 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           202
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Ich achte schon darauf, Ressourcen zu schonen. Ich habe zum Beispiel kein Auto. Das könnte ich mir als Student ohnehin nicht leisten. Da ich sehr zentral wohne, kann ich Einkäufe mit dem Fahrrad erledigen. Zur Uni gehe ich meistens zu Fuß. Viel Energie und Wasser verbrauche ich sowieso nicht. Die Heizung zum Beispiel läuft bei mir nur im tiefsten Winterund Stromfresser wie Fön, Gefrierschrank und Backofen brauche ich erst gar nicht. So schone ich meinen Geldbeutel und tue gleichzeitig etwas für die Umwelt. Und im letzten Jahr habe ich meinen Stromanbieter gewechselt. Ich beziehe jetzt Ökostrom, der sogar vergleichsweise günstig ist. Einen Wechsel des Stromanbieters kann ich daher nur empfehlen.. U",
+        "sourceTranscriptPages": [
+          203
+        ],
+        "audio": "data/audio/hv1/teil-6-speaker-1.mp3"
       },
       {
         "number": 2,
@@ -881,7 +1093,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           202
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-6-speaker-2.mp3"
       },
       {
         "number": 3,
@@ -899,7 +1112,13 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           202
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Beim Thema Umweltschutz ist meiner Meinung nach die Politik gefragt. Denn nur durch Gesetze können wir unsere Umweltprobleme flächendeckend und wirkungsvoll in den Griff bekommen. Einzelpersonen, ja selbst einzelne Staaten können da nur wenig bewirken. Wir brauchen globale Lösungen, um unsere globalen Probleme zu bewältigen. Denn Umweltbelastungen wie Klima verändernde Gase oder giftige Abfälle in den Meeren haben länderübergreifende Auswirkungen. Daher müssen an der Lösung dieser Probleme alle Staaten mitwirken, auch die Entwicklungsländer. Diese verfügen allerdings häufig nicht über die nötigen wirtschaftlichen Mittel und staatlichen Kapazitäten. Deshalb muss die internationale Umweltpolitik gewährleisten, dass die Industriestaaten ausreichende finanzielle, technische und administrative Unterstützung für bedürftige Länder zur Verfügung stellen",
+        "sourceTranscriptPages": [
+          203,
+          204
+        ],
+        "audio": "data/audio/hv1/teil-6-speaker-3.mp3"
       },
       {
         "number": 4,
@@ -917,7 +1136,12 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           202
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Die meisten Kunden scheinen nicht darüber nachzudenken, unter welchen Bedingungen wohl ein T-Shirt produziert worden sein Mag das beim Discounter für 3,99 € angeboten wird. Vor allem der günstige Preis zählt. Qualität und Nachhaltigkeit sind eher zweitrangig. Wir Deutschen betrachten Klamotten meist als Wegwarf Ware. Müssen wir denn immer den neuesten Trends hinterherrennen? Müssen denn alle Teile neu sein? Können wir nicht zum Beispiel auch in Second Hand Läden einkaufen? Und wenn sie nun doch neu sein müssen, dann genügen doch auch wenige Teile, die ressourcenschonend und unter fairen Arbeitsbedingungen hergestellt worden sind. Solche Kleidungsstücke sind zwar teurer, aber man kann sie guten Gewissens tragen 。",
+        "sourceTranscriptPages": [
+          204
+        ],
+        "audio": "data/audio/hv1/teil-6-speaker-4.mp3"
       },
       {
         "number": 5,
@@ -935,7 +1159,12 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           202
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Umweltprobleme müssen, um gelöst werden zu können, zunächst einmal als solche von den Menschen wahrgenommen werden. Und in diesem Punkt sind wir meiner Meinung nach schon auf einem sehr guten Weg. In den letzten Jahrzehnten hat sich das allgemeine Bewusstsein in Deutschland doch stark gewandelt. Themen wie Mülltrennung, Naturschutz, Klimaschutz, fairer Handel, erneuerbare Energien und so weiter sind heutzutage in aller Munde. Und man könnte noch mehr aufzählen. Ich bin überzeugt davon, dass sich dieses Umweltbewusstsein auch langfristig auf das Verhalten der Menschen auswirken wird",
+        "sourceTranscriptPages": [
+          204
+        ],
+        "audio": "data/audio/hv1/teil-6-speaker-5.mp3"
       },
       {
         "number": 6,
@@ -953,7 +1182,13 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           202
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Ich studiere Licht und Wärme Umwelttechnik und befasse mich täglich mit dem Thema Nachhaltigkeit. Nachhaltig leben oder nicht? Diese Frage stellt sich mir nicht mehr. Was mich mehr beschäftigt, ist die Tatsache, dass viele Menschen einen Gegensatz zwischen Umweltschutz und wirtschaftlicher Entwicklung sehen. Das ist nicht richtig, denn ich habe erst gestern einen Artikel gelesen, in dem es hieß, dass in den kommenden zehn Jahren bis zu einer Million grüne Jobs entstehen könnten. Der wachsenden Bedeutung von Nachhaltigkeit kann sich schließlich kein Wirtschaftszweig verschließen. Und schon jetzt haben Umwelt Berufe großen Zulauf. Die Adjektive grün, nachhaltig und fair sind ja jetzt schon zu unverzichtbaren Gütesiegel für den Erfolg einer Firma geworden. Der U",
+        "sourceTranscriptPages": [
+          204,
+          205
+        ],
+        "audio": "data/audio/hv1/teil-6-speaker-6.mp3"
       },
       {
         "number": 7,
@@ -971,7 +1206,12 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           202
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Nachhaltig leben. Das ist eigentlich eher ein Thema für meine Eltern. Die sind absolute Ökos und versuchen seit meiner Kindheit, mir alles zu verbieten, was Spaß macht. Von Spielsachen aus Plastik über trendige Kleidung bis hin zu Süßigkeiten. Alles wurde vor dem Kauf auf seine Umweltverträglichkeit überprüft, mit dem Ergebnis, dass es dann meistens eben nicht gekauft wurde. Das hat mich ziemlich genervt. Seit ich daheim ausgezogen bin, kann ich endlich so leben, wie ich es will. Jetzt achte ich nicht mehr auf Nachhaltigkeit. Sie sehen, die Erziehung hat bei mir genau das Gegenteil bewirkt. Ich gönne mir zum Beispiel weite Flugreisen, ein schnelles Auto und teure Designer Anzüge. Ich möchte das Leben. Ein bisschen genießender ranzige. Ich möchte das Leben ein bisschen genießen. Umwe",
+        "sourceTranscriptPages": [
+          205
+        ],
+        "audio": "data/audio/hv1/teil-6-speaker-7.mp3"
       },
       {
         "number": 8,
@@ -989,7 +1229,12 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           202
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Umweltbewusst leben. Das ist ein komplexes und schwieriges Thema. Ich finde, klare Regeln für nachhaltigen Konsum gibt es nicht, weil jeder nachhaltig anders definiert. Was heißt nachhaltig? Jeder hat unterschiedliche Informationen und eine andere Meinung zu diesem Thema. Jeder setzt andere Prioritäten. Geht es um Wasserverbrauch und CO2 Emissionen, um das Tier wohl oder um Chemikalien in Lebensmitteln? Oder etwa um all das zusammen? Wenn Sie 100 Menschen befragen, wird jeder etwas anderes dazu sagen. Ich habe für mich persönlich einen Weg gefunden, mit dem Thema umzugehen. Ich esse zum Beispiel fast kein Fleisch und achte darauf, nur tierische Produkte aus artgerechter Tierhaltung zu konsumieren. Viele meiner Freunde dagegen essen täglich Fleisch, setzen aber dafür andere Schwerpunkte, indem sie zum Beispiel nur öffentliche Verkehrsmittel nutzen. Das ist für mich auch in Ordnung. Ich mische mich da nicht ein",
+        "sourceTranscriptPages": [
+          205
+        ],
+        "audio": "data/audio/hv1/teil-6-speaker-8.mp3"
       }
     ],
     "updatedIn": "2026.9"
@@ -1025,7 +1270,13 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           206
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Vor kurzem hatte ich was Interessantes mit einer technologischen Zeitschrift gelesen. Glück könne man trainieren, stand dort. Denn unsere Gedanken beeinflussen, wie wir uns Entscheidend ist die eigene Wahrnehmung, also die Art, wie wir äußere Umstände interpretieren. Ich denke, dass theoretisch jeder Mensch die Möglichkeit hat, glücklicher zu werden. Wer griesgrämig durchs Leben geht, kann sicher lernen, sein Gehirn auf Glück umzuprogrammieren. Wenn man gezielt Situationen und Erlebnisse. Sucht, die man als schön und positiv empfindet, macht das auf Dauer glücklich. Für die einen ist das Sport. Für die anderen Zusammensein mit Freunden, Kochen oder Reisen. Jeder Mensch hat seinen Eigenen Weg, um glücklich zu werden. U",
+        "sourceTranscriptPages": [
+          206,
+          207
+        ],
+        "audio": "data/audio/hv1/teil-7-speaker-1.mp3"
       },
       {
         "number": 2,
@@ -1043,7 +1294,12 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           206
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Ich studiere Psychologie und habe in einer Vorlesung von der sogenannten Glücksforschung gehört. Das ist ein interdisziplinäres Fachgebiet, in dem zum Beispiel Psychologen, Ökonomen und Mediziner zusammenarbeiten. Ich finde es jedenfalls sehr sinnvoll, wenn sich Wissenschaftler mit Glück beschäftigen. Vielleicht können sie ja einen Beitrag dazu leisten, dass die Menschen besser verstehen, was sie glücklich macht. Meiner Meinung nach setzen nämlich die meisten dabei falsche Prioritäten. Für viele Leute sind äußere Lebensereignisse ausschlaggebend, wie zum Beispiel ein guter Job oder eine erfüllende Partnerschaft. Aber das alles kann doch ganz schnell verloren gehen, wenn Entscheidend für dauerhafte Zufriedenheit ist, wie man mit Verlusten und schwierigen Situationen umgeht. Ich denke, man braucht vor allem Gelassenheit, Selbstvertrauen und die Fähigkeit, Krisen zu bewältigen und die Dinge selbst in die Hand zu nehmen. Also das, was in der Psychologie als Resilienz bezeichnet wird",
+        "sourceTranscriptPages": [
+          207
+        ],
+        "audio": "data/audio/hv1/teil-7-speaker-2.mp3"
       },
       {
         "number": 3,
@@ -1061,7 +1317,12 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           206
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "In unserer hoch individualisierten Gesellschaft definieren viele Menschen Glück als Wunscherfüllung. Wer alle Punkte auf seiner Wunschliste abarbeiten Kann, führt ein gelungenes Leben, auch wenn er nur auf sein eigenes Wohlergehen aus ist. So gesehen müsste man reich sein, um glücklich zu werden. Dann kann man sich alle materiellen Wünsche erfüllen. Aber ist das wirklich so? Kürzlich habe ich dazu einen interessanten Zeitungsartikel gelesen. Geld macht, und zwar glücklich, wurde dort gesagt. Aber nur, wenn man vorher zu wenig davon hatte. Sobald die Grundbedürfnisse befriedigt sind, flacht die Glücks Kurve ab, je mehr man verdient. Ich jedenfalls verspreche mir von materiellen Dingen keinen Zugewinn an Glück, denn das Bedürfnis nach Bindung und zwischenmenschlicher Nähe kann dadurch nicht befriedigt werden. Einsame Menschen stehen unter Stress, weil sie alleine mit ihren Schwierigkeiten im Leben klarkommen müssen. Was wirklich glücklich macht, sind Familie und Freunde",
+        "sourceTranscriptPages": [
+          207
+        ],
+        "audio": "data/audio/hv1/teil-7-speaker-3.mp3"
       },
       {
         "number": 4,
@@ -1079,7 +1340,13 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           206
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "was Glück ist. Ich denke, diese Frage haben sich die Menschen schon immer gestellt, in allen Zeiten und Kulturen. Die Antworten dürfen ganz unterschiedlich ausfallen. Ich kann mir auch nicht vorstellen, dass es da eine einheitliche wissenschaftliche Begriffsbestimmung gibt. Wie dem auch sei, wenn man mich fragt, braucht individuelles Glück vor allem gewisse Voraussetzungen, und zwar Freiheit und Selbstbestimmung. Glücklich werden kann man meiner Meinung nach nur, wenn man sein Leben selbst in die Hand nimmt. Doch dafür ist ein hohes Maß an Autonomie erforderlich. Ungleichheit, Fremdbestimmung , starre Hierarchien, vorgegebene Rollenmuster, fehlende Meinungsfreiheit das alles sind Einschränkungen, die dem persönlichen Glück hinderlich sein können",
+        "sourceTranscriptPages": [
+          207,
+          208
+        ],
+        "audio": "data/audio/hv1/teil-7-speaker-4.mp3"
       },
       {
         "number": 5,
@@ -1097,7 +1364,12 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           206
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Von manchen Leuten sagt man, sie hätten ein Talent zum Glücklich sein. In meinem Freundeskreis sind auch einige, die immer gut gelaunt durchs Leben gehen, als hätte man ihnen das Glück schon in die Wiege gelegt, während andere die Welt immer in den düstersten Farben sehen. Da frage ich mich doch, woher diese Unterschiede kommen. Heute versuchen Wissenschaftler ja mit modernen Methoden herauszufinden, was Glück ist. Da wird zum Beispiel untersucht, wie stark das Glücksempfinden von biochemischen Prozessen gesteuert wird. Einigen Studien zufolge wird die Veranlagung zum Glücklich sein zum Teil von unseren Genen bestimmt. Wie stark solche Einflüsse tatsächlich sind, muss die Wissenschaft wohl noch klären. Letztlich ist es wohl ein Zusammenspiel vieler verschiedener Faktoren. Für mich steht jedenfalls fest, wir haben es nicht ganz selbst in der Hand, wie glücklich wir sind",
+        "sourceTranscriptPages": [
+          208
+        ],
+        "audio": "data/audio/hv1/teil-7-speaker-5.mp3"
       },
       {
         "number": 6,
@@ -1115,7 +1387,13 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           206
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Früher war ich fest davon überzeugt, dass nur Selbstverwirklichung glücklich macht. Das bedeutet, dass man ganz nach seinen eigenen Vorstellungen lebt, einen gutbezahlten Beruf hat, seine Talente auslebt und möglichst keine lästigen Verpflichtungen hat. Nach dem Studium bin ich ein paar Monate durch Südamerika gereist und bei meinem ersten Gehalt hatte ich mir damals eine Luxus Handtasche gekauft. Beides lang gehegte Wünsche. Dennoch glücklich gemacht hat mich das nur für kurze Zeit. Heute sehe ich das auch alles anders. Ich meine, so viel Egoismus kann weder einer Gesellschaft noch dem Individuum gut tun. Wirklich glücklich macht es, anderen selbstlos zu helfen. Seit ich regelmäßig ehrenamtlich für einen sinnlosen Besuchsdienst arbeite, habe ich deutlich mehr Lebensfreude. S",
+        "sourceTranscriptPages": [
+          208,
+          209
+        ],
+        "audio": "data/audio/hv1/teil-7-speaker-6.mp3"
       },
       {
         "number": 7,
@@ -1133,7 +1411,12 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           206
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Sie bewiesen, dass man unabhängig von materiellen Dingen Glück finden könne. Ist ja eine gängige und selten hinterfragte Meinung. Doch das würde ich überhaupt nicht unterschreiben. Auch wenn die Höhe des Einkommens kein Maß für persönliches Glück ist, darf man doch die ökonomische Seite nicht ignorieren. Sicher tragen auch Gesundheit, Selbstverwirklichung, Ansehen in der Gesellschaft oder beruflicher Erfolg zur Zufriedenheit bei. Doch für all das gibt es Vorbedingungen. Zunächst müssen die Grundbedürfnisse und gewisse Sicherheitsbedürfnisse erfüllt sein. Also neben Ernährung und Unterkunft auch Arbeit, sichere Einkünfte und so weiter. Zwar führt ein steigendes Einkommen nicht unbedingt zu einem Zuwachs an Glück. Trotzdem braucht man gesicherte materielle Verhältnisse",
+        "sourceTranscriptPages": [
+          209
+        ],
+        "audio": "data/audio/hv1/teil-7-speaker-7.mp3"
       },
       {
         "number": 8,
@@ -1151,7 +1434,12 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           206
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Für mich bedeutet das im Moment vor allem Zufriedenheit im Beruf. Damit meine ich aber nicht, dass ich bestimmte Karriereziele erreichen und irgendwann im Unternehmen Führungsaufgaben übernehmen möchte., ob man Aufstiegschancen oder einen Chefposten hat, spielt für das Glück keine Rolle. Was wirklich zählt, ist, dass man eine erfüllte Aufgabe hat, diese gut erledigt und dafür genug Wertschätzung bekommt. Weil meine Kollegen in fachlichen Fragen meinen Rat suchen, weil ich mein Aufgabengebiet gut beherrsche. Dann fühle ich mich respektiert. Allerdings habe ich manchmal Angst, meinen Job zu verlieren. Für mich würde das eine Einbuße an Lebensqualität bedeuten. Aber nicht nur aus finanziellen Gründen. Denn dann würde auch mein Selbstwertgefühl leiden und die Bestätigung durch Kollegen würde wegfallen. Dass ich dann auch glücklich sein könnte, kann ich mir nicht vorstellen. U",
+        "sourceTranscriptPages": [
+          209
+        ],
+        "audio": "data/audio/hv1/teil-7-speaker-8.mp3"
       }
     ],
     "updatedIn": "2026.9"
@@ -1188,7 +1476,13 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           210
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Für die Wahl des Studios spielen viele Faktoren eine Rolle, zum Beispiel Interessen, finanzielle Motive, familiäre Gründe und Lebensaussichten. Die Frage nach den besonderen Talenten ist naheliegend. Der Blick zurück auf die Schulzeit oder auf frühere Lebensabschnitte soll Ihnen helfen. Was waren die Lieblingsfächer? Wo lagen die Interessen? Was hat besonders viel Spaß gemacht? Und vor allem Welche besonderen Fähigkeiten hatte man? In diesem Zusammenhang ist auch der Blick von außen wichtig. Worin sehen Freunde und Verwandte Stärken? Wo erkennen sie vielleicht gewisse Schwächen. So würden möglicherweise Seiten der eigenen Persönlichkeit kennen, die einem selbst gar nicht bewusst waren. Interesse allein reicht oft nicht aus, um den Erfolg im Studium und im Beruf zu sichern. Es gilt, die eigenen Begabungenzu berücksichtigen. Vo",
+        "sourceTranscriptPages": [
+          210,
+          211
+        ],
+        "audio": "data/audio/hv1/teil-8-speaker-1.mp3"
       },
       {
         "number": 2,
@@ -1206,7 +1500,12 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           210
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "An meiner Hochschule ist das Angebot an Studienfächer nicht so groß. Aber eine breite Auswahl habe ich auch nie gebraucht. Für mich steht bereits vor dem Abitur fest, dass ich Jura studieren würde. Meine Eltern haben eine gut gehende Anwaltskanzlei. Die Rechtswissenschaften würden mir sozusagen die Wiege gelegt. Meine Eltern hätten das nie von mir erwartet oder verlangt. Aber für mich war seit langem klar. Dass ich später einmal in die Kanzlei einsteigen würde. Nicht mal weil es naheliegend schien. Nein, ich bin wirklich sehr glücklich mit meiner Entscheidung. In der Zwischenzeit kann ich in meinem schon bestimmte Arbeiten übernehmen, zum Beispiel die Literaturrecherche. Und ich bin auch regelmäßig bei Gerichtsverhandlungen dabei. Das hilft mir im Studium und bereitet mich bestens auf meine berufliche Zukunft vor. Ma",
+        "sourceTranscriptPages": [
+          211
+        ],
+        "audio": "data/audio/hv1/teil-8-speaker-2.mp3"
       },
       {
         "number": 3,
@@ -1224,7 +1523,12 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           210
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Es nützt wenig, wenn man ein Studium nur nach seinen eigenen Interessen und Fähigkeiten wählt und dann hinterher keine Karriere machen kann . Man muss einfach realistisch sein. Bestimmte Fächer machen vielleicht Freude und sind intellektuell oder emotional nicht befriedigend. Aber irgendwann will man ja auch beruflich weiterkommen. Daher sollte man auch die beruflichen Perspektiven in seine Überlegungen zur Studienwahl mit einbeziehen. Natürlich sollte niemand etwas studieren, bloß weil eine gute Aufstiegsmöglichkeiten verbunden sind. Denn ganz ohne persönliche Neigungen mit beruflicher Erfolg kaum zu erzielen sein. Doch. Wer sich nur auf die eigenen Vorlieben und Interessen konzentriert, kann sich damit den Chefsessel nicht automatisch sichern Sprüche",
+        "sourceTranscriptPages": [
+          211
+        ],
+        "audio": "data/audio/hv1/teil-8-speaker-3.mp3"
       },
       {
         "number": 4,
@@ -1242,7 +1546,13 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           210
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Geld sollte keine entscheidende Rolle bei der Wahl des Studienfachs spielen. Allerdings können die Verdienstmöglichkeiten helfen, wenn man sich zwischen mehreren Fächern entscheiden muss. Interessiert man sich zum Beispiel für Architektur, Bauwesen und Maschinenbau, ist es ganz. Nützlich, sich auch die wirtschaftliche Seite anzusehen. In der Regel verdienen Architekten nicht so viel Geld wie Bauingenieure.Glaubt man der Statistik, so werden Architekten auch häufiger arbeitslos als Ingenieure. Wirtschaftlich besser gestellt als diese beiden sind aber die Maschinenbauer. Wenn sich also jemand gleich stark für diese drei Studiengänge begeistern kann, dann durch die Aussicht auf gutes Einkommen den Ausschlag geben. Traurig wäre es, wenn allein der Faktor Geld die Wahl des Studiums bestimmen würde",
+        "sourceTranscriptPages": [
+          211,
+          212
+        ],
+        "audio": "data/audio/hv1/teil-8-speaker-4.mp3"
       },
       {
         "number": 5,
@@ -1260,7 +1570,12 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           210
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Arbeitsmarkt Prognose sind alle Aspekte bei der Studienwahl? Keine Frage. Doch sollten sie entscheidend sein. Dieser Auffassung bin ich nicht. Es sollte wirklich jedem überlassen bleiben, das Studium nach den eigenen Interessen und Talenten zu wählen. Natürlich muss man dann auch mit den möglichen Konsequenzen leben. Wenn es in dem gelernten Bereich nicht genügend Arbeitsplätze gibt. Sollte man sich auf eine längere Arbeitssuche einstellen. Eventuell muss man auch bereit sein, auf einem ganz anderen Gebiet zu arbeiten. Diese Verantwortung trägt jeder für sich selbst. Wer das Abitur hat, sollte auch dazu in der Lage sein, seine Interessen zu verfolgen und bereit sein, die Folgen davon zu akzeptieren. Für mich jedenfalls gibt es kein Argument dafür, den beruflichen Perspektiven Priorität bei der Studienwahl einzuräumen",
+        "sourceTranscriptPages": [
+          212
+        ],
+        "audio": "data/audio/hv1/teil-8-speaker-5.mp3"
       },
       {
         "number": 6,
@@ -1278,7 +1593,13 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           210
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "schon als Kind war mein Traumberuf Ärztin. Meine Abiturnote war gut, doch nicht gut genug für einen direkten Zugang zum Medizinstudium. Die alternative Privatuniversität kann für mich leider nicht in Frage. Ich hatte die Möglichkeit gehabt, über die Wartesemester einen Studienplatz zu bekommen. Von meinem Notendurchschnitt her sind meine Ansichten gar nicht so schlecht gewesen und die Wartezeit sinnvoll zu überbrücken, hätte ich praktische Erfahrung und durchdachte Ausbildung im medizinischen Bereich sammeln können. Aber wenn man noch einmal von vorne beginnen möchte, das wollte ich dann doch nicht. So habe ich mich ein bisschen halbherzig für Biowissenschaften entschieden. Jetzt denke ich, dass mir nichts Besseres hätte passieren können. Ich kann nur jedem raten, sich nicht zu sehr auf ein bestimmtes Studium zu fokussieren. Häufig gibt es eine passende zweite Wahl…",
+        "sourceTranscriptPages": [
+          212,
+          213
+        ],
+        "audio": "data/audio/hv1/teil-8-speaker-6.mp3"
       },
       {
         "number": 7,
@@ -1296,7 +1617,12 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           210
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Möglicherweise lässt man sich bei der Entscheidung für ein Studienfach auch davon beeinflussen, was man in der Nähe des Heimatortes studieren kann. Diverse statistische Erhebungen haben nämlich ergeben, dass bestimmte Fächer eher gewählt werden ,Wenn sie an Hochschulen in der näheren Umgebung eingebunden werden. Inwiefern diese Ergebnisse verallgemeinert werden können, ist zwar fraglich. Tatsache ist aber, dass es je nach Gegend bedeutende Unterschiede im Studium gibt und gibt. Die statistischen Auswertungen jedenfalls lassen darauf schließen, dass die Wahl des Studiums auch durch das lokale Hochschulangebot beeinflusst wird",
+        "sourceTranscriptPages": [
+          213
+        ],
+        "audio": "data/audio/hv1/teil-8-speaker-7.mp3"
       },
       {
         "number": 8,
@@ -1314,7 +1640,12 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           210
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Schon vor meinem Abi habe ich vor Klagen über die Zustände an der Uni gehört. Vor allem in beliebten Fächern gibt es überfüllte Hörsäle, in denen manchmal kein Sitzplatz zu ergattern ist. Eine Warteschlange vor der Bibliothek, Personalmangel und schlechte Betreuung. Das möchte ich in meinem Studium auf gar keinen Fall. BWL oder Medizin? Nein danke. Ich suche ganz bewusst nach Fächern, bei denen der andere nicht so groß ist. Natürlich im Rahmen meiner Interessen, das ist klar. Wahrscheinlich werde ich mich für den Studiengang Nachwachsender Rohstoff entscheiden. Der ist in Richtung Bergbau und Rohstoffe zugeordnet und interdisziplinär angelegt. Hier in der Nähe kann ich das nicht studieren. Ich muss dazu noch Bilanz ziehen. Aber das ist in Ordnung für mich. Hauptsache, ich mache nicht das, was alle anderen auch studieren möchten",
+        "sourceTranscriptPages": [
+          213
+        ],
+        "audio": "data/audio/hv1/teil-8-speaker-8.mp3"
       }
     ],
     "updatedIn": "2026.9"
@@ -1352,7 +1683,13 @@ window.HV1_QUESTIONS = [
           213,
           214
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Mal nicht davon, ein eigenes Haus oder eine eigene Wohnung zu besitzen, in den eigenen vier Wänden anzukommen. Aber der Schutz und Wohneigentum muss gut überlegt werden. Entscheidend ist die eigene finanzielle Situation. Wie viel Eigenkapital ist vorhanden? Wie hoch ist das Einkommen in Zeiten günstiger Zinsen? Trauen sich viele Verbraucher, hohe Kredite für eine Immobilie aufzunehmen? Die Finanzierung scheint erschwinglich. Oft wird dabei allzu optimistisch kalkuliert, und nach dem Kauf des Anteils bleibt kaum noch finanzieller Spielraum. Wer mit den Raten an die Grenzen gegangen ist, hat dann kaum noch Möglichkeiten, finanzielle Engpässe aufzufangen. Natürlich gibt es auch finanzielle Argumente, die für den Kauf einer Immobilie sprechen. Wichtig ist, vor einer so wichtigen Entscheidung die eigene Situation genau zu analysieren und das Für und Wider gegeneinander abzuwägen",
+        "sourceTranscriptPages": [
+          214,
+          215
+        ],
+        "audio": "data/audio/hv1/teil-9-speaker-1.mp3"
       },
       {
         "number": 2,
@@ -1370,7 +1707,12 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           214
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Wenn ich mich in meinem Bekanntenkreis umsehe, habe ich auch den Eindruck, dass beim Thema Hauskauf vor allem Emotionen die Entscheidungen bestimmen. Bei Kapitalanleger mögen das anders sein. Da spielen nur finanzielle Gründe eine Rolle. Und bei Durchschnittsbürgern, die eine Wohnung oder ein Haus, die sich selbst erwerben, nie ganz anders. Da geht es dann plötzlich um Dinge wie Selbstverwirklichung, Identität, Geborgenheit. Das hat ja auch alles seine Berechtigung, keine Frage. Doch bei einer so wichtigen Entscheidung, die einen auch viele Jahre noch bindet, sind Emotionen nicht die richtigen Ratgeber. Lieber sollte man rational an die Frage herangehen",
+        "sourceTranscriptPages": [
+          215
+        ],
+        "audio": "data/audio/hv1/teil-9-speaker-2.mp3"
       },
       {
         "number": 3,
@@ -1388,7 +1730,12 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           214
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Ich weiß, es gibt durchaus unterschiedliche Meinungen darüber, ob Immobilien gute Investition sind oder nicht. Für mich sind sie das jedenfalls. Ich Magister es, in etwas zu investieren, was man sehen und anfassen kann. Und Wohnraum wird immer wertvoll sein. Hundertprozentig sicher ist man sich zum Beispiel bei Aktien nie. Sonst habe ich nämlich schon schlechte Erfahrungen gemacht. Und selbst Geld verliert mit der Zeit an Wert. Durch die Inflation? Nein, da sind mir persönlich Immobilien wesentlich lieber. Nicht umsonst spricht man im Zusammenhang mit Immobilien von Betongold. Auf lange Sicht sind Investitionen in Immobilien krisensicher. Davon bin ich überzeugt",
+        "sourceTranscriptPages": [
+          215
+        ],
+        "audio": "data/audio/hv1/teil-9-speaker-3.mp3"
       },
       {
         "number": 4,
@@ -1406,7 +1753,13 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           214
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Ich spreche viel. Mein Mann und ich haben als Jungverheiratete einen Kredit aufgenommen. Und wir haben das auch nie bereut. Zuerst wollte uns die Bank keinen Kredit geben. Meine Eltern mussten sogar für uns bürgen und manchmal war es finanziell ganz schön eng. Vor allem, als die Kinder anfingen, zur Schule zu gehen. Die Zinsen waren damals nicht so niedrig wie heute. Aber wir wollten nicht mehr in einer Mietwohnung leben. Es war uns wichtig, für später vorzusorgen. Der Kredit ist nun ganz zurückbezahlt. Wir sind beide in Rente und es ist ein wunderbares Gefühl, im eigenen Haus zu wohnen. Wir brauchen keine Miete zu bezahlen und deshalb können wir jetzt mit unserer Rente gut leben. Außerdem haben wir etwas, was wir unseren Kindern hinterlassen können",
+        "sourceTranscriptPages": [
+          215,
+          216
+        ],
+        "audio": "data/audio/hv1/teil-9-speaker-4.mp3"
       },
       {
         "number": 5,
@@ -1424,7 +1777,12 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           214
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Also ein eigenes Haus. Das hätte sicher Vorteile. Man hat seine Ruhe und eine gewisse Sicherheit im Alter. Doch wichtiger ist mir meine Freiheit. Ich kann mir nicht vorstellen, an einen Ort gebunden zu sein. Zumindest noch nicht. Die Arbeit wechseln, vielleicht sogar in ein anderes Land gehen. Ich möchte unbedingt flexibel bleiben. Ein Missverhältnis kann man kurzfristig kündigen. Der Verkauf einer Immobilie ist da schon wesentlich aufwendiger. Es dauert länger und es besteht auch immer das Risiko, dass man weniger Geld bekommt, als man selbst bezahlt hat. In ein eigenes Haus investiert man vermutlich mehr Gefühle als in einer Mietwohnung. Das beeinträchtigt die Flexibilität noch stärker. Weniger wohnen und weiterziehen, wenn es passt. Das ist für mich die richtige Wahl",
+        "sourceTranscriptPages": [
+          216
+        ],
+        "audio": "data/audio/hv1/teil-9-speaker-5.mp3"
       },
       {
         "number": 6,
@@ -1442,7 +1800,12 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           214
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Schlagwörter wie Der Traum vom Wohnen, Schöne Bilder von glücklichen Familien im Eigenheim in Grün ohne Werbung, Kreditinstitute für Wohnfinanzierung werden Konditionen angepriesen, die besonders günstig und auf die persönliche Situation jedes Einzelnen zugeschnitten sein sollen. Ich bin bei so vielen Vorteilenfür die Kunden eher skeptisch. Kreditinstitute wollen in erster Linie Geld verdienen und nicht unsere Träume erfüllen. Ich befürchte, dass sich vor allem junge Menschen allzu. Leicht von solchen wunderbaren Zukunftsentwürfe verführen lassen. Den Instituten kann nämlich viel passieren, wenn Kreditraten für eine Immobilie nicht bezahlt werden können. Junge Familien haben aber schnell richtige Probleme, wenn sie sich finanziell mit einem Haus oder Wohnungskauf übernehmen. Ich finde, dass teure Wohn kredite nicht offensiv beworben werden sollten",
+        "sourceTranscriptPages": [
+          216
+        ],
+        "audio": "data/audio/hv1/teil-9-speaker-6.mp3"
       },
       {
         "number": 7,
@@ -1460,7 +1823,13 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           214
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "Ein eigenes Haus hat gewisse Vorteile. Doch diese haben auch ihren Preis. Und damit ist nicht nur der Kaufpreis gemeint. Man muss immer auch die Folgekosten eines Haus Hauskauf einplanen und Bedenken beim Kauf einer Immobilie über die Grenze lassen. Steuer fällig. Dazu kommen Notar und Maklerkosten. Doch nicht nur mit dem Kauf, auch mit dem Besitz einer Immobilie sind laufende Kosten verbunden. Und das dauerhaft. Zum Beispiel die Energiekosten. Nicht zu unterschätzen ist auch der finanzielle Aufwand für die Instandhaltung. Und selbst wenn man seinen Besitz liebevoll pflegt nach 10 bis 15 Jahren muss man damit rechnen, dass die ersten Reparaturen fällig werden. Das heißt nicht, dass von einem Hauskauf abzuraten sei. Es sollte aber klar sein, dass auch nach einem Hauskauf noch etliche Ausgaben anfallen. W",
+        "sourceTranscriptPages": [
+          216,
+          217
+        ],
+        "audio": "data/audio/hv1/teil-9-speaker-7.mp3"
       },
       {
         "number": 8,
@@ -1478,7 +1847,12 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           214
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "sourceTranscript": "vor kurzem sind wir in unser Haus eingezogen. Ein älteres Haus, das wir gekauft und nach unseren Vorstellungen umgebaut haben. Sicher, das war schon eine große Investition und wir haben es uns auch reiflich überlegt. Doch wir wissen nun, dass es richtig war, den Schritt zu wagen. Hier fühlen wir uns endlich geborgen. Früher haben wir zur Miete gewohnt. Man weiß ja nie, ob der Vermieter nicht plötzlich Eigenbedarf. Anmeldet und den Mietvertrag kündigt. Hier kann uns das nicht passieren. Die Kinder haben ihr eigenes Zimmer und hinter dem Haus gibt es einen kleinen Garten, in dem sie spielen können. Sie können nun in einem richtigen Zuhause aufwachsen. Die Investition hat sich auf jeden Fall gelohnt. d- Ei",
+        "sourceTranscriptPages": [
+          217
+        ],
+        "audio": "data/audio/hv1/teil-9-speaker-8.mp3"
       }
     ],
     "updatedIn": "2026.9"
@@ -1512,7 +1886,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           217
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-10-speaker-1.mp3"
       },
       {
         "number": 2,
@@ -1530,7 +1905,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           217
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-10-speaker-2.mp3"
       },
       {
         "number": 3,
@@ -1548,7 +1924,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           217
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-10-speaker-3.mp3"
       },
       {
         "number": 4,
@@ -1566,7 +1943,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           218
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-10-speaker-4.mp3"
       },
       {
         "number": 5,
@@ -1584,7 +1962,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           218
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-10-speaker-5.mp3"
       },
       {
         "number": 6,
@@ -1602,7 +1981,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           218
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-10-speaker-6.mp3"
       },
       {
         "number": 7,
@@ -1620,7 +2000,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           218
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-10-speaker-7.mp3"
       },
       {
         "number": 8,
@@ -1638,7 +2019,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           218
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-10-speaker-8.mp3"
       }
     ],
     "updatedIn": "2026.9"
@@ -1672,7 +2054,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           218
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-11-speaker-1.mp3"
       },
       {
         "number": 2,
@@ -1690,7 +2073,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           218
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-11-speaker-2.mp3"
       },
       {
         "number": 3,
@@ -1708,7 +2092,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           218
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-11-speaker-3.mp3"
       },
       {
         "number": 4,
@@ -1726,7 +2111,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           218
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-11-speaker-4.mp3"
       },
       {
         "number": 5,
@@ -1744,7 +2130,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           218
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-11-speaker-5.mp3"
       },
       {
         "number": 6,
@@ -1762,7 +2149,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           218
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-11-speaker-6.mp3"
       },
       {
         "number": 7,
@@ -1781,7 +2169,8 @@ window.HV1_QUESTIONS = [
           218,
           219
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-11-speaker-7.mp3"
       },
       {
         "number": 8,
@@ -1799,7 +2188,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           219
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-11-speaker-8.mp3"
       }
     ],
     "updatedIn": "2026.9"
@@ -1832,7 +2222,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           219
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-12-speaker-1.mp3"
       },
       {
         "number": 2,
@@ -1850,7 +2241,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           219
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-12-speaker-2.mp3"
       },
       {
         "number": 3,
@@ -1868,7 +2260,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           219
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-12-speaker-3.mp3"
       },
       {
         "number": 4,
@@ -1886,7 +2279,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           219
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-12-speaker-4.mp3"
       },
       {
         "number": 5,
@@ -1904,7 +2298,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           219
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-12-speaker-5.mp3"
       },
       {
         "number": 6,
@@ -1922,7 +2317,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           219
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-12-speaker-6.mp3"
       },
       {
         "number": 7,
@@ -1940,7 +2336,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           219
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-12-speaker-7.mp3"
       },
       {
         "number": 8,
@@ -1958,7 +2355,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           219
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-12-speaker-8.mp3"
       }
     ],
     "updatedIn": "2026.9"
@@ -1992,7 +2390,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           220
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-12-2-speaker-1.mp3"
       },
       {
         "number": 2,
@@ -2010,7 +2409,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           220
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-12-2-speaker-2.mp3"
       },
       {
         "number": 3,
@@ -2028,7 +2428,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           220
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-12-2-speaker-3.mp3"
       },
       {
         "number": 4,
@@ -2046,7 +2447,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           220
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-12-2-speaker-4.mp3"
       },
       {
         "number": 5,
@@ -2064,7 +2466,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           220
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-12-2-speaker-5.mp3"
       },
       {
         "number": 6,
@@ -2082,7 +2485,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           220
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-12-2-speaker-6.mp3"
       },
       {
         "number": 7,
@@ -2100,7 +2504,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           220
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-12-2-speaker-7.mp3"
       },
       {
         "number": 8,
@@ -2118,7 +2523,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           220
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-12-2-speaker-8.mp3"
       }
     ],
     "addedIn": "2026.9"
@@ -2152,7 +2558,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           220
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-13-speaker-1.mp3"
       },
       {
         "number": 2,
@@ -2171,7 +2578,8 @@ window.HV1_QUESTIONS = [
           221
         ],
         "studyNote": "原文在“zu...”处截断，保留原样，未补写后文。",
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-13-speaker-2.mp3"
       },
       {
         "number": 3,
@@ -2189,7 +2597,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           221
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-13-speaker-3.mp3"
       },
       {
         "number": 4,
@@ -2207,7 +2616,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           221
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-13-speaker-4.mp3"
       },
       {
         "number": 5,
@@ -2225,7 +2635,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           221
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-13-speaker-5.mp3"
       },
       {
         "number": 6,
@@ -2243,7 +2654,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           221
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-13-speaker-6.mp3"
       },
       {
         "number": 7,
@@ -2261,28 +2673,29 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           221
         ],
-        "updatedIn": "2026.9"
+        "updatedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-13-speaker-7.mp3"
       },
       {
         "number": 8,
         "leitsatz": "Nebenjobs können sich positiv auf den lernerfolg auswirken.",
         "text": "Sprecher 8: Welcher Leitsatz passt?",
         "german": "Sprecher 8: Welcher Leitsatz passt?",
-        "chinese": "兼职可能对学习效果产生积极影响。",
+        "chinese": "如果学业由父母出资，可能会对学习动力产生负面影响。",
         "answer": "",
         "answerText": "A. Nebenjobs können sich positiv auf den lernerfolg auswirken.",
         "reviewGerman": "Nebenjobs können sich positiv auf den lernerfolg auswirken.",
         "sourceGerman": "a-Nebenjobs können sich positiv auf den lernerfolg auswirken.",
         "sourceAnswer": "A",
-        "sourceNote": "原文中文误重复上一项，中文已按本句德文校正。\n按 PDF 中 Sprecher 1–8 的顺序练习；只记录原文明示的答案字母。",
+        "sourceNote": "原文中文与上一项重复、与本句德文不符；保留来源内容，未沿用旧库的补译。\n按 PDF 中 Sprecher 1–8 的顺序练习；只记录原文明示的答案字母。",
         "source": "tencent-2026-09",
         "sourcePages": [
           221
         ],
-        "sourceChinese": "如果学业由父母出资，可能会对学习动力产生负面影响。",
-        "translationSource": "reviewed-from-source-german",
-        "studyNote": "原文中文误重复上一项，中文已按本句德文校正。",
-        "updatedIn": "2026.9"
+        "translationSource": "source-pdf",
+        "studyNote": "原文中文与上一项重复、与本句德文不符；保留来源内容，未沿用旧库的补译。",
+        "updatedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-13-speaker-8.mp3"
       }
     ],
     "updatedIn": "2026.9"
@@ -2316,7 +2729,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           221
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-13-2-speaker-1.mp3"
       },
       {
         "number": 2,
@@ -2334,7 +2748,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           221
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-13-2-speaker-2.mp3"
       },
       {
         "number": 3,
@@ -2352,7 +2767,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           221
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-13-2-speaker-3.mp3"
       },
       {
         "number": 4,
@@ -2370,7 +2786,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           222
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-13-2-speaker-4.mp3"
       },
       {
         "number": 5,
@@ -2388,7 +2805,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           222
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-13-2-speaker-5.mp3"
       },
       {
         "number": 6,
@@ -2406,7 +2824,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           222
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-13-2-speaker-6.mp3"
       },
       {
         "number": 7,
@@ -2424,7 +2843,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           222
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-13-2-speaker-7.mp3"
       },
       {
         "number": 8,
@@ -2442,7 +2862,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           222
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-13-2-speaker-8.mp3"
       }
     ],
     "addedIn": "2026.9"
@@ -2476,7 +2897,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           222
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-14-1-speaker-1.mp3"
       },
       {
         "number": 2,
@@ -2494,7 +2916,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           222
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-14-1-speaker-2.mp3"
       },
       {
         "number": 3,
@@ -2512,7 +2935,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           222
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-14-1-speaker-3.mp3"
       },
       {
         "number": 4,
@@ -2530,7 +2954,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           222
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-14-1-speaker-4.mp3"
       },
       {
         "number": 5,
@@ -2548,7 +2973,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           222
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-14-1-speaker-5.mp3"
       },
       {
         "number": 6,
@@ -2566,7 +2992,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           223
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-14-1-speaker-6.mp3"
       },
       {
         "number": 7,
@@ -2584,7 +3011,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           223
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-14-1-speaker-7.mp3"
       },
       {
         "number": 8,
@@ -2602,7 +3030,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           223
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-14-1-speaker-8.mp3"
       }
     ],
     "addedIn": "2026.9"
@@ -2636,7 +3065,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           223
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-14-2-speaker-1.mp3"
       },
       {
         "number": 2,
@@ -2654,7 +3084,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           223
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-14-2-speaker-2.mp3"
       },
       {
         "number": 3,
@@ -2672,7 +3103,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           223
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-14-2-speaker-3.mp3"
       },
       {
         "number": 4,
@@ -2690,7 +3122,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           223
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-14-2-speaker-4.mp3"
       },
       {
         "number": 5,
@@ -2708,7 +3141,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           223
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-14-2-speaker-5.mp3"
       },
       {
         "number": 6,
@@ -2726,7 +3160,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           223
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-14-2-speaker-6.mp3"
       },
       {
         "number": 7,
@@ -2744,7 +3179,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           223
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-14-2-speaker-7.mp3"
       },
       {
         "number": 8,
@@ -2762,7 +3198,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           224
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-14-2-speaker-8.mp3"
       }
     ],
     "addedIn": "2026.9"
@@ -2795,7 +3232,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           224
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-15-speaker-1.mp3"
       },
       {
         "number": 2,
@@ -2813,7 +3251,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           224
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-15-speaker-2.mp3"
       },
       {
         "number": 3,
@@ -2831,7 +3270,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           224
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-15-speaker-3.mp3"
       },
       {
         "number": 4,
@@ -2849,7 +3289,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           224
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-15-speaker-4.mp3"
       },
       {
         "number": 5,
@@ -2867,7 +3308,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           224
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-15-speaker-5.mp3"
       },
       {
         "number": 6,
@@ -2885,7 +3327,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           224
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-15-speaker-6.mp3"
       },
       {
         "number": 7,
@@ -2903,7 +3346,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           224
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-15-speaker-7.mp3"
       },
       {
         "number": 8,
@@ -2921,7 +3365,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           224
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-15-speaker-8.mp3"
       }
     ],
     "addedIn": "2026.9"
@@ -2955,7 +3400,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           225
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-16-speaker-1.mp3"
       },
       {
         "number": 2,
@@ -2973,7 +3419,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           225
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-16-speaker-2.mp3"
       },
       {
         "number": 3,
@@ -2991,7 +3438,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           225
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-16-speaker-3.mp3"
       },
       {
         "number": 4,
@@ -3009,7 +3457,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           225
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-16-speaker-4.mp3"
       },
       {
         "number": 5,
@@ -3027,7 +3476,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           225
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-16-speaker-5.mp3"
       },
       {
         "number": 6,
@@ -3045,7 +3495,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           225
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-16-speaker-6.mp3"
       },
       {
         "number": 7,
@@ -3063,7 +3514,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           225
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-16-speaker-7.mp3"
       },
       {
         "number": 8,
@@ -3081,7 +3533,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           225
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-16-speaker-8.mp3"
       }
     ],
     "addedIn": "2026.9"
@@ -3311,7 +3764,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           226
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-18-speaker-1.mp3"
       },
       {
         "number": 2,
@@ -3329,7 +3783,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           226
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-18-speaker-2.mp3"
       },
       {
         "number": 3,
@@ -3347,7 +3802,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           227
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-18-speaker-3.mp3"
       },
       {
         "number": 4,
@@ -3365,7 +3821,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           227
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-18-speaker-4.mp3"
       },
       {
         "number": 5,
@@ -3383,7 +3840,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           227
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-18-speaker-5.mp3"
       },
       {
         "number": 6,
@@ -3401,7 +3859,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           227
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-18-speaker-6.mp3"
       },
       {
         "number": 7,
@@ -3419,7 +3878,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           227
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-18-speaker-7.mp3"
       },
       {
         "number": 8,
@@ -3437,7 +3897,8 @@ window.HV1_QUESTIONS = [
         "sourcePages": [
           227
         ],
-        "addedIn": "2026.9"
+        "addedIn": "2026.9",
+        "audio": "data/audio/hv1/teil-18-speaker-8.mp3"
       }
     ],
     "addedIn": "2026.9"

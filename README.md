@@ -1,81 +1,43 @@
-# telc LV2/LV3/HV Trainer
+# telc C1 Hochschule Trainer
 
-A local PWA-style trainer for telc C1 Hochschule practice.
+本地静态练习应用，包含 LV2、LV3、HV1、HV2、Baustein、口语及写作七个模块。
 
-## Features
+全部语料以用户提供的 329 页《2026实时更新2026.9(腾讯文档实时更新）.pdf》为唯一来源重新提取覆盖，共 **1674 条练习记录**。每条题目记录来源页码。旧 Excel 精选、自编干扰选项、额外语法卡和 PDF 未收录的历史题组已移除。缺少答案、题干或中文时如实标明，不从其他材料补齐。
 
-- Choose LV2, LV3, HV1, or HV2 on entry
-- Practice by `Teil`
-- Sequential or random order between `Teil`
-- Sequential or random order inside each `Teil`
-- Mistake-only repeat rounds until every question is correct
-- Exam-like front side with German only
-- Review back side with answer, German, and Chinese
-- Offline support through a service worker after the local page has loaded
+详细范围、数量、照片转录、存疑项及重建方法见 [语料说明](docs/corpus-2026-09.md)。HV1 说明见 [来源核对](docs/hv1-source-2026-09.md)。PDF 本身不提交到仓库。
 
-## September 2026 Corpus
-
-The existing LV2, LV3, HV1, HV2, Baustein, speaking, and writing modules include the reviewed September PDF update. New exercises show a green **2026.9 新增** badge. Select **只练 2026.9 新增** to practice only those records, including additions inside existing sections. Sources with answers but missing options or audio use review cards, except HV1 sections with eight known speaker answers, which also support the order practice below.
-
-See [the update notes](docs/corpus-2026-09.md) for counts, source limitations, corrections, and reproducible import commands. LV2 version 2 and the grammar cards retain their existing curated content.
-
-## Local Commands
+## 使用
 
 ```bash
 npm run serve
 ```
 
-Open:
+打开 [本地应用](http://localhost:4173/index.html)。按题组、顺序或随机顺序练习，可启用错题轮回和只练 2026.9 新增。
 
-```text
-http://localhost:4173/index.html
-```
+- LV2：A–E 段落卡片、原文题项配对；存疑映射不评分。
+- LV3：Richtig / Falsch / Nicht im Text 及标题题；来源未标答案的题不判错。
+- HV1：记忆原文 Sprecher 顺序后逐题听音选择，也可逐句复习；Mode 无顺序答案，使用陈述复习卡。
+- HV2、Baustein：原文只给正确补全/填空词，采用复习卡；不生成干扰选项。
+- 口语、写作：完整原文任务及观点；原文没有中文时明确标注。
 
-Useful maintenance commands:
+HV1 合成音频与对应长稿均取自这份 PDF。音频工具在 `scripts/local/qwen3-tts/`，可用的压缩音频随构建复制；没有音频的题仍可阅读原文练习。
+
+## 重建与检查
 
 ```bash
-npm run check
+python -m pip install pypdf
+npm run extract -- "/path/to/2026实时更新2026.9(腾讯文档实时更新）.pdf" --dry-run
+npm run extract -- "/path/to/2026实时更新2026.9(腾讯文档实时更新）.pdf"
+npm run check:corpus
 npm run check:hv1
+npm run check
 npm run build
-npm run extract:hv2
-npm run extract:lv2 -- /path/to/LV2-cleaned.xlsx --output data/lv2_questions.js
-npm run extract
 ```
 
-`npm run build` outputs a local production copy to `dist/`.
+导入校验指纹、页数和完整题量后覆盖题库。`npm run build` 输出 `dist/`。PDF、来源绝对路径和本地模型不进入发布包。
 
-## GitHub Pages
+## 发布与手机使用
 
-Live app: [telc Trainer](https://dominik2077w.github.io/telc-LV3/)
+项目站点：[telc Trainer](https://dominik2077w.github.io/telc-LV3/)。推送到 main 会由 GitHub Actions 校验、构建并发布，此次本地修改不会自动上线。
 
-Pushing to `main` runs `.github/workflows/pages.yml`: it validates the corpus, builds `dist/`, and deploys that folder to GitHub Pages. The repository's Pages publishing source is GitHub Actions.
-
-The published build includes the question data and review cards. Local audio assets are excluded; HV1 falls back to the available text. Original PDFs and local source paths are not included in the published site.
-
-## iOS Local Use
-
-Open the GitHub Pages link in Safari to use the hosted app. For local testing from another device, run a local server on the machine that hosts this folder and open the machine's LAN address in Safari.
-
-## Phone Layout
-
-Screens up to 850 CSS pixels use a compact practice layout. Choose a module, select the desired sections in **题组 / 设置**, then use the always-visible **开始练习** button. Settings close during practice and can be reopened from the top bar. The module button opens the module chooser without discarding the current exercise until a module is selected.
-
-LV2 global matching and LV2 version 2 use native selection controls on phones; selected text and corrections wrap in the card. HV1 uses the drag handles described below. Baustein articles have a bottom option panel that can be collapsed for reading, and tapping a blank returns to its options. Review and matching actions stay near the bottom of the viewport while reading. The **2026.9 新增** badges and filter are available in the phone layout.
-
-Browser checks cover 320×568, 360×640, 390×844, landscape, and a 1280-pixel desktop viewport. See [the mobile validation notes](docs/mobile-validation.md).
-
-## HV1: Memorize, Reorder, Review
-
-The default HV1 mode first shows all eight statements in correct speaker order. Click **准备好了，开始排序** to hide the answer and shuffle all eight together. Drag the **⠿** handle to reorder them vertically; the list scrolls near screen edges. The sentence area remains scrollable on phones. Arrow buttons and the up/down keyboard keys on a focused handle offer precise movement.
-
-**提交排序** scores each position, retains your submitted order, and shows both individual feedback and the complete correct order below. A wrong Teil returns to the memory stage in mistake-repeat mode. Clicking **下一 Teil** starts the next section's memory stage. Settings also offer **逐句复习（按新 PDF）** using the same source statements and Chinese translations.
-
-Twenty sections have eight known answers and support this flow, including the September additions without audio. Correct order follows speaker numbers, never the letters attached to answer choices. Teil 17 (Mode und Trends / Modebranche) has ten statements but no speaker-answer mapping, so it remains a review-card section.
-
-HV1 is now replaced entirely from pages 182–227 of the September PDF. Its 21 groups contain 160 ordered statements and 10 unscored statements. Old transcripts, generated audio references, synthetic A–H mappings, and obsolete extraction fragments have been removed. Printed wording is retained, including incomplete sentences with visible source notes. Source pages, printed answer letters, and the exceptional translation correction are documented in [the HV1 source audit](docs/hv1-source-2026-09.md).
-
-```bash
-npm run update:hv1:2026-09 -- "/path/to/2026实时更新2026.9(腾讯文档实时更新）.pdf"
-```
-
-This import replaces all HV1 groups and refuses to write if the source fingerprint or complete group list differs. It leaves other modules untouched.
+手机在 Safari 或其他浏览器打开站点，使用“题组 / 设置”选择范围并开始练习。屏幕较窄时配对使用原生选择控件，卡片内容可换行滚动。所有资源引用已更新版本号，以便重新加载覆盖后的语料。

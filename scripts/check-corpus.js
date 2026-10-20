@@ -6,7 +6,13 @@ const vm = require("node:vm");
 const root = path.resolve(__dirname, "..");
 const manifest = JSON.parse(fs.readFileSync(path.join(root, "data/corpus-2026-09.json"), "utf8"));
 const datasets = {};
-const expectedNew = { lv2: 25, lv3: 49, hv1: 66, hv2: 20, baustein: 66, speaking: 90, writing: 5 };
+const expectedNew = { lv2: 25, lv3: 49, hv1: 66, hv2: 20, baustein: 66, speaking: 91, writing: 5 };
+assert.equal(manifest.importMode, "replace-from-pdf-only");
+assert.deepEqual(Object.keys(manifest.modules).sort(), ["baustein", "hv1", "hv2", "lv2", "lv3", "speaking", "writing"]);
+for (const obsolete of ["lv2_v2", "baustein_grammar"]) {
+  assert.ok(!fs.existsSync(path.join(root, `data/${obsolete}_questions.js`)), `Remove unsupported ${obsolete} corpus`);
+  assert.ok(!fs.readFileSync(path.join(root, "index.html"), "utf8").includes(`${obsolete}_questions.js`));
+}
 
 for (const [name, expected] of Object.entries(manifest.modules)) {
   const context = { window: {} };
@@ -20,8 +26,12 @@ for (const [name, expected] of Object.entries(manifest.modules)) {
   assert.equal(questions.length, expected.questions, `${name}: question count`);
   assert.equal(questions.filter((q) => q.addedIn === "2026.9").length, expectedNew[name], `${name}: new markers`);
   for (const section of sections) {
+    assert.equal(section.source, manifest.id, `${name}/${section.teil}: sole source`);
+    assert.ok(section.sourcePages?.length);
     for (const q of section.questions) {
       assert.ok(q.german || q.text || q.options?.length, `${name}/${section.teil}/${q.number}: empty prompt`);
+      assert.equal(q.source, manifest.id, `${name}/${section.teil}/${q.number}: no legacy content`);
+      assert.ok(!q.knowledgePoint && !q.acceptedAnswers && !q.sourceRow, "No worksheet annotations or invented alternatives");
       if (q.source === manifest.id) {
         assert.ok(q.sourcePages?.length, `${name}/${section.teil}/${q.number}: source pages`);
         assert.ok(q.sourcePages.every((p) => Number.isInteger(p) && p > 0 && p <= manifest.pages));
@@ -32,7 +42,8 @@ for (const [name, expected] of Object.entries(manifest.modules)) {
       if (section.mode === "corpus-card") {
         assert.equal(q.answer, "", "Incomplete source material must use self-assessment rather than invented choices");
         assert.ok(q.answerText);
-        assert.ok(!q.audio && !q.options);
+        assert.ok(!q.options);
+        if (q.audio) assert.ok(name === "hv1" && /^data\/audio\/hv1\/teil-[\d-]+-speaker-[1-8]\.mp3$/.test(q.audio));
       }
     }
   }
@@ -56,7 +67,8 @@ for (const section of hv1) {
     assert.ok(q.sourcePages.every(p => p >= 182 && p <= 227));
     assert.ok(q.leitsatz && q.sourceGerman && q.chinese);
     assert.equal(q.sourceAnswer, hv1Letters[section.teil]?.[i] || null, "Keep only source-printed letters, never synthetic A-H");
-    assert.ok(!q.audio && !q.options && !q.text.includes("\n"), "No old transcripts, audio, or invented distractors");
+    assert.ok(!q.options && !q.text.includes("\n"), "No invented distractors");
+    if (q.sourceTranscript) assert.ok(q.sourceTranscriptPages?.every(p => p >= 182 && p <= 227));
   }
 }
 assert.deepEqual(lv3.flatMap((s) => s.questions.filter((q) => !q.answer).map((q) => [s.teil, q.number])), [[8, 24], [18, 24]]);
@@ -65,11 +77,19 @@ assert.equal(lv3.find((s) => s.teil === 9).questions.find((q) => q.number === 15
 const nigeria = lv3.find((s) => s.teil === 19).questions.find((q) => q.number === 24);
 assert.equal(nigeria.answer, "C");
 assert.equal(nigeria.options.length, 3);
-const restaurant = datasets.baustein.find((s) => s.teil === 13).questions.find((q) => q.number === 21);
+const restaurant = datasets.baustein.find((s) => s.teil === 13).questions.find((q) => q.number === 45);
 assert.equal(restaurant.answerText, "als");
-assert.equal(restaurant.options.find((o) => o.value === restaurant.answer).rawLabel, "als");
+assert.ok(!datasets.baustein.some(s => s.teil === 19));
+assert.equal(datasets.baustein.find(s => s.teil === 18).questions.length, 22);
+assert.equal(datasets.baustein.find(s => s.teil === 16).questions.length, 22);
+assert.equal(datasets.baustein.find(s => s.teil === 20).questions[0].number, 25);
 assert.equal(datasets.baustein.find((s) => s.teil === 21).title, "„Bio“ giftiger als „Chemie“");
 const uncertain = datasets.lv2.find((s) => s.teil === 23).questions.flatMap((q) => q.items).filter((i) => i.unverified);
 assert.equal(uncertain.length, 1, "Keep the source's B? item visibly uncertain");
 assert.ok(datasets.writing.every((s) => s.questions.length === 2 && s.questions.every((q) => q.positions)));
-console.log("Corpus validation passed: 7 modules, synchronized JSON, source pages, new markers, and reviewed answers.");
+assert.deepEqual(datasets.lv2.map(s => s.teil), Array.from({ length: 26 }, (_, i) => i + 1));
+assert.ok(datasets.lv2.every(s => s.questions.map(q => q.paragraph).join("") === "ABCDE"));
+assert.equal(datasets.hv2.find(s => s.teil === "4").questions.length, 11, "Keep both source variants of #56");
+assert.ok(datasets.hv2.every(s => s.mode === "corpus-card" && s.questions.every(q => !q.options && !q.answer)));
+assert.ok(datasets.speaking.every(s => s.questions.every(q => q.chinese === "原文未提供中文释义")));
+console.log("Corpus validation passed: 7 PDF-only modules, 1674 records, source pages, synchronized JSON, and no legacy question banks.");

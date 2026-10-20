@@ -1,9 +1,12 @@
 dist/
 tmp/pdfs/
+.local-tools/qwen3-tts/
+.models/qwen3-tts/
 .DS_Store
 __pycache__/
 *.pyc
-data/audio/
+/data/audio/*
+!/data/audio/hv1/
 *.pdf
 MinerU_markdown_*.md
 data/lv3_raw.md

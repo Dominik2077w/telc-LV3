@@ -2,4803 +2,3458 @@ window.HV2_QUESTIONS = [
   {
     "teil": "1",
     "title": "Roboter",
-    "sourceText": "reviewed Excel: 听力第二部分_人工复核完整版.xlsx",
-    "mode": "hv2-choice",
+    "mode": "corpus-card",
+    "sourceText": "2026实时更新2026.9(腾讯文档实时更新）.pdf",
+    "source": "tencent-2026-09",
+    "sourcePages": [
+      228
+    ],
     "questions": [
       {
         "number": "55",
-        "text": "Tourbot ist ein Roboter, der ...",
-        "german": "Tourbot ist ein Roboter, der ...",
-        "chinese": "Tourbot 是一种能带领游客参观博物馆的机器人。",
-        "answer": "C",
-        "completion": "Touristen durch ein Museum führt.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. im Haushalt Fenster putzt.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. in Fabriken Autos montiert.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. Touristen durch ein Museum führt.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "sourceNumber": "55",
+        "text": "Tourbot ist ein Roboter, der..",
+        "german": "Tourbot ist ein Roboter, der..",
+        "chinese": "c Tourbot 是一种能带领游客参观博物馆的机器人。",
+        "answer": "",
+        "answerText": "C. Touristen durch ein Museum fuhrt.",
+        "completion": "Touristen durch ein Museum fuhrt.",
+        "reviewGerman": "Touristen durch ein Museum fuhrt.",
+        "sourceAnswer": "C",
+        "sourceGerman": "Tourbot ist ein Roboter, der.. c- Touristen durch ein Museum fuhrt.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          228
+        ]
       },
       {
         "number": "56",
-        "text": "Der Museumsroboter Rhino ...",
-        "german": "Der Museumsroboter Rhino ...",
+        "sourceNumber": "56",
+        "text": "Der Museumsroboter Rhino..",
+        "german": "Der Museumsroboter Rhino..",
         "chinese": "博物馆机器人 Rhino 不受参观人数多少的影响都会进行讲解导览。",
-        "answer": "C",
-        "completion": "hat unabhängig von der Besucherzahl Führungen gemacht.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. konnte nur einzelne Besucher begleiten.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. wurde ausschließlich als Wachroboter eingesetzt.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. hat unabhängig von der Besucherzahl Führungen gemacht.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "answer": "",
+        "answerText": "C. hat unabhängig von der Besucherzahl Führungen gemacht",
+        "completion": "hat unabhängig von der Besucherzahl Führungen gemacht",
+        "reviewGerman": "hat unabhängig von der Besucherzahl Führungen gemacht",
+        "sourceAnswer": "C",
+        "sourceGerman": "Der Museumsroboter Rhino.. c- hat unabhängig von der Besucherzahl Führungen gemacht",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          228
+        ]
       },
       {
         "number": "57",
-        "text": "Bei der Entwicklung von Robotern muss vor allem ...",
-        "german": "Bei der Entwicklung von Robotern muss vor allem ...",
+        "sourceNumber": "57",
+        "text": "Bei der Entwicklung von Robotern muss vor allem",
+        "german": "Bei der Entwicklung von Robotern muss vor allem",
         "chinese": "在开发机器人时，首要需要进一步改进的是其编程。",
-        "answer": "B",
-        "completion": "die Programmierung weiterentwickelt werden.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. das äußere Design verändert werden.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. die Programmierung weiterentwickelt werden.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. der Energieverbrauch ignoriert werden.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "answer": "",
+        "answerText": "B. die Programmierung weiter entwickelt werden.",
+        "completion": "die Programmierung weiter entwickelt werden.",
+        "reviewGerman": "die Programmierung weiter entwickelt werden.",
+        "sourceAnswer": "B",
+        "sourceGerman": "Bei der Entwicklung von Robotern muss vor allem b- die Programmierung weiter entwickelt werden.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          228
+        ]
       },
       {
         "number": "58a",
-        "text": "Schon in naher Zukunft ...",
-        "german": "Schon in naher Zukunft ...",
-        "chinese": "在不久的将来，清洁机器人能够自行充电。",
-        "answer": "B",
-        "completion": "können sich Reinigungsroboter selbst aufladen.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. werden Roboter nur noch ferngesteuert arbeiten.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. können sich Reinigungsroboter selbst aufladen.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. müssen Roboter ständig von Menschen getragen werden.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "sourceNumber": "58",
+        "text": "Schon in naher Zukunft",
+        "german": "Schon in naher Zukunft",
+        "chinese": "在不久的将来，清洁机器人就能自行充电。",
+        "answer": "",
+        "answerText": "B. können sich Reinigungsroboter selbst aufladen",
+        "completion": "können sich Reinigungsroboter selbst aufladen",
+        "reviewGerman": "können sich Reinigungsroboter selbst aufladen",
+        "sourceAnswer": "B",
+        "sourceGerman": "Schon in naher Zukunft b：können sich Reinigungsroboter selbst aufladen",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          228
+        ]
       },
       {
         "number": "58b",
-        "text": "Schon jetzt ...",
-        "german": "Schon jetzt ...",
-        "chinese": "如今，机器人已经能够自行充电。",
-        "answer": "C",
-        "completion": "sind Roboter in der Lage, sich selbst aufzuladen.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. können Roboter alle menschlichen Aufgaben übernehmen.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. dürfen Roboter nicht ohne Menschen arbeiten.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. sind Roboter in der Lage, sich selbst aufzuladen.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "sourceNumber": "58",
+        "text": "Schon jetzt",
+        "german": "Schon jetzt",
+        "chinese": "现在机器人已经能够自行充电。",
+        "answer": "",
+        "answerText": "C. sind Roboter in der Lage, sich selbst aufzuladen",
+        "completion": "sind Roboter in der Lage, sich selbst aufzuladen",
+        "reviewGerman": "sind Roboter in der Lage, sich selbst aufzuladen",
+        "sourceAnswer": "C",
+        "sourceGerman": "Schon jetzt C-sind Roboter in der Lage, sich selbst aufzuladen",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          228
+        ]
       },
       {
         "number": "59a",
-        "text": "Herr Burgard sagt, dass Roboter ...",
-        "german": "Herr Burgard sagt, dass Roboter ...",
-        "chinese": "布格瓦德先生说，机器人可以被用作看门犬。",
-        "answer": "A",
-        "completion": "als Wachhunde eingesetzt werden können.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. als Wachhunde eingesetzt werden können.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. keine privaten Aufgaben übernehmen können.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. nur in Museen eingesetzt werden.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "sourceNumber": "59",
+        "text": "Herr Burgard sagt, dass Roboter..",
+        "german": "Herr Burgard sagt, dass Roboter..",
+        "chinese": "据布尔加德所说，机器人可以用作看门犬。",
+        "answer": "",
+        "answerText": "A. als Wachhunde eingesetzt werden können .",
+        "completion": "als Wachhunde eingesetzt werden können .",
+        "reviewGerman": "als Wachhunde eingesetzt werden können .",
+        "sourceAnswer": "A",
+        "sourceGerman": "Herr Burgard sagt, dass Roboter.. a-als Wachhunde eingesetzt werden können .",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          228
+        ]
       },
       {
         "number": "59b",
-        "text": "Herr Burgard sagt, dass Roboter ...",
-        "german": "Herr Burgard sagt, dass Roboter ...",
-        "chinese": "布格瓦德先生说，机器人可以用来保护自己的住宅。",
-        "answer": "A",
-        "completion": "zum Schutz eigener Wohnung eingesetzt werden.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. zum Schutz eigener Wohnung eingesetzt werden.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. ausschließlich als Spielzeug dienen.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. nicht im Alltag verwendet werden können.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "sourceNumber": "59",
+        "text": "Herr Burgard sagt, dass Roboter..",
+        "german": "Herr Burgard sagt, dass Roboter..",
+        "chinese": "据布尔加德所说，机器人可用于保护自己的住宅。",
+        "answer": "",
+        "answerText": "A. Zum Schutz eigener Wohnung eingesetzt werden",
+        "completion": "Zum Schutz eigener Wohnung eingesetzt werden",
+        "reviewGerman": "Zum Schutz eigener Wohnung eingesetzt werden",
+        "sourceAnswer": "A",
+        "sourceGerman": "Herr Burgard sagt, dass Roboter.. a-Zum Schutz eigener Wohnung eingesetzt werden",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          228
+        ]
       },
       {
         "number": "60",
-        "text": "Laut Burgard werden Roboter in 50 Jahren ...",
-        "german": "Laut Burgard werden Roboter in 50 Jahren ...",
+        "sourceNumber": "60",
+        "text": "Laut Burgard werden Roboter in 50 Jahren",
+        "german": "Laut Burgard werden Roboter in 50 Jahren",
         "chinese": "布尔加德认为，50 年后机器人将能像人类一样移动。",
-        "answer": "C",
-        "completion": "sich so fortbewegen wie Menschen.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. keine Beine mehr besitzen.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. nur noch als Computerprogramme existieren.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. sich so fortbewegen wie Menschen.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "answer": "",
+        "answerText": "C. sich so fortbewegen wie Menschen",
+        "completion": "sich so fortbewegen wie Menschen",
+        "reviewGerman": "sich so fortbewegen wie Menschen",
+        "sourceAnswer": "C",
+        "sourceGerman": "Laut Burgard werden Roboter in 50 Jahren c：sich so fortbewegen wie Menschen",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          228
+        ]
       },
       {
         "number": "61",
-        "text": "Nach Moravec werden Roboterkinder ...",
-        "german": "Nach Moravec werden Roboterkinder ...",
+        "sourceNumber": "61",
+        "text": "Nach Moravec werden Roboterkinder",
+        "german": "Nach Moravec werden Roboterkinder",
         "chinese": "按照莫拉维克的看法，“机器人孩子”会比人类孩子更受欢迎。",
-        "answer": "B",
-        "completion": "beliebter sein als Menschenkinder.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. von allen Eltern abgelehnt werden.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. beliebter sein als Menschenkinder.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. nie mit Menschen verglichen werden.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "answer": "",
+        "answerText": "B. beliebter sein als Menschenkinder .",
+        "completion": "beliebter sein als Menschenkinder .",
+        "reviewGerman": "beliebter sein als Menschenkinder .",
+        "sourceAnswer": "B",
+        "sourceGerman": "Nach Moravec werden Roboterkinder b- beliebter sein als Menschenkinder .",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          228
+        ]
       },
       {
         "number": "62",
-        "text": "Herr Burgard hält Moravecs Prognose für ...",
-        "german": "Herr Burgard hält Moravecs Prognose für ...",
+        "sourceNumber": "62",
+        "text": "Herr Burgard hält Moravec Prognose tut",
+        "german": "Herr Burgard hält Moravec Prognose tut",
         "chinese": "布尔加德认为莫拉维克的预测言过其实。",
-        "answer": "B",
-        "completion": "übertrieben.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. völlig bewiesen.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. übertrieben.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. zu vorsichtig.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "answer": "",
+        "answerText": "B. übertreiben",
+        "completion": "übertreiben",
+        "reviewGerman": "übertreiben",
+        "sourceAnswer": "B",
+        "sourceGerman": "Herr Burgard hält Moravec Prognose tut b-übertreiben",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          228
+        ]
       },
       {
         "number": "63",
-        "text": "Herr Burgard sagt, dass Roboter ...",
-        "german": "Herr Burgard sagt, dass Roboter ...",
+        "sourceNumber": "63",
+        "text": "Burgard Herr",
+        "german": "Burgard Herr",
         "chinese": "布尔加德表示，机器人在某些方面有时会胜过人类。",
-        "answer": "C",
-        "completion": "Menschen manchmal überlegen sind.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. Menschen in allem ersetzen werden.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. nie selbstständig arbeiten können.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. Menschen manchmal überlegen sind.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "answer": "",
+        "answerText": "C. Er sagt, dass Roboter Menschen manchmal überlegen sind",
+        "completion": "Er sagt, dass Roboter Menschen manchmal überlegen sind",
+        "reviewGerman": "Er sagt, dass Roboter Menschen manchmal überlegen sind",
+        "sourceAnswer": "C",
+        "sourceGerman": "Burgard Herr c- Er sagt, dass Roboter Menschen manchmal überlegen sind",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          228
+        ]
       },
       {
         "number": "64",
-        "text": "Forscher und Gesellschaft ...",
-        "german": "Forscher und Gesellschaft ...",
+        "sourceNumber": "64",
+        "text": "Forscher und Gesellschaft",
+        "german": "Forscher und Gesellschaft",
         "chinese": "研究人员和社会必须时刻关注机器人技术的伦理问题。",
-        "answer": "C",
-        "completion": "müssen ethische Aspekte der Robotik im Auge behalten.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. sollten Robotertechnik sofort verbieten.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. brauchen keine Verantwortung zu übernehmen.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. müssen ethische Aspekte der Robotik im Auge behalten.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "answer": "",
+        "answerText": "C. müssen ethische Aspekte der Robotik im Auge behalten .",
+        "completion": "müssen ethische Aspekte der Robotik im Auge behalten .",
+        "reviewGerman": "müssen ethische Aspekte der Robotik im Auge behalten .",
+        "sourceAnswer": "C",
+        "sourceGerman": "Forscher und Gesellschaft c- müssen ethische Aspekte der Robotik im Auge behalten .",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          228
+        ]
       }
     ]
   },
   {
     "teil": "2",
     "title": "Raumfahrt, ESA",
-    "sourceText": "reviewed Excel: 听力第二部分_人工复核完整版.xlsx",
-    "mode": "hv2-choice",
+    "mode": "corpus-card",
+    "sourceText": "2026实时更新2026.9(腾讯文档实时更新）.pdf",
+    "source": "tencent-2026-09",
+    "sourcePages": [
+      228,
+      229
+    ],
     "questions": [
       {
         "number": "55",
-        "text": "Die junge Frau Azra ...",
-        "german": "Die junge Frau Azra ...",
+        "sourceNumber": "55",
+        "text": "Die junge Frau, Azra,",
+        "german": "Die junge Frau, Azra,",
         "chinese": "年轻女子 Azra 到工作地点的路程很短。",
-        "answer": "A",
-        "completion": "hat nur einen kurzen Weg zu ihrer Arbeitsstelle.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. hat nur einen kurzen Weg zu ihrer Arbeitsstelle.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. muss täglich mehrere Stunden pendeln.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. arbeitet ausschließlich im Homeoffice.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "answer": "",
+        "answerText": "A. hat nur einen kurzen Weg zu ihrer Arbeitsstelle",
+        "completion": "hat nur einen kurzen Weg zu ihrer Arbeitsstelle",
+        "reviewGerman": "hat nur einen kurzen Weg zu ihrer Arbeitsstelle",
+        "sourceAnswer": "A",
+        "sourceGerman": "Die junge Frau, Azra, a-hat nur einen kurzen Weg zu ihrer Arbeitsstelle",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          229
+        ]
       },
       {
         "number": "56",
-        "text": "Die ESA, die Europäische Weltraumagentur, ...",
-        "german": "Die ESA, die Europäische Weltraumagentur, ...",
-        "chinese": "欧洲航天局）不仅仅在欧洲设有机构。",
-        "answer": "B",
-        "completion": "ist nicht nur in Europa vertreten.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. arbeitet nur in einer deutschen Stadt.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. ist nicht nur in Europa vertreten.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. gehört zu einer amerikanischen Universität.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "sourceNumber": "56",
+        "text": "Die ESA. die Europäische Weltraum Agentur .",
+        "german": "Die ESA. die Europäische Weltraum Agentur .",
+        "chinese": "ESA（欧洲航天局）不仅仅在欧洲设有机构。",
+        "answer": "",
+        "answerText": "B. ist nicht nur in Europa vertreten",
+        "completion": "ist nicht nur in Europa vertreten",
+        "reviewGerman": "ist nicht nur in Europa vertreten",
+        "sourceAnswer": "B",
+        "sourceGerman": "Die ESA. die Europäische Weltraum Agentur . b-ist nicht nur in Europa vertreten",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          229
+        ]
       },
       {
         "number": "57",
-        "text": "Die Arbeit in dem Zentrum ...",
-        "german": "Die Arbeit in dem Zentrum ...",
-        "chinese": "喜欢在该中心工作，是因为那里的独特氛围。",
-        "answer": "A",
-        "completion": "gefällt Azra wegen der besonderen Stimmung dort.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. gefällt Azra wegen der besonderen Stimmung dort.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. gefällt Azra vor allem wegen langer Ferien.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. interessiert Azra kaum noch.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "sourceNumber": "57",
+        "text": "Die Arbeit in dem Zentrum,.",
+        "german": "Die Arbeit in dem Zentrum,.",
+        "chinese": "Azra 喜欢在该中心工作，是因为那里的独特氛围。",
+        "answer": "",
+        "answerText": "A. gefällt Azra wegen der besonderen Stimmung dort..",
+        "completion": "gefällt Azra wegen der besonderen Stimmung dort..",
+        "reviewGerman": "gefällt Azra wegen der besonderen Stimmung dort..",
+        "sourceAnswer": "A",
+        "sourceGerman": "Die Arbeit in dem Zentrum,. a-gefällt Azra wegen der besonderen Stimmung dort..",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          229
+        ]
       },
       {
         "number": "58",
-        "text": "In dem Zentrum ...",
-        "german": "In dem Zentrum ...",
+        "sourceNumber": "58",
+        "text": "in dem Zentrum.",
+        "german": "in dem Zentrum.",
         "chinese": "该中心还会组织共同的休闲活动。",
-        "answer": "B",
-        "completion": "werden auch gemeinsame Freizeitaktivitäten angeboten.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. sind private Kontakte streng verboten.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. werden auch gemeinsame Freizeitaktivitäten angeboten.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. gibt es nur Einzelarbeitsplätze.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "answer": "",
+        "answerText": "B. werden auch gemeinsame Freizeitaktivitäten angeboten",
+        "completion": "werden auch gemeinsame Freizeitaktivitäten angeboten",
+        "reviewGerman": "werden auch gemeinsame Freizeitaktivitäten angeboten",
+        "sourceAnswer": "B",
+        "sourceGerman": "in dem Zentrum. b-werden auch gemeinsame Freizeitaktivitäten angeboten",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          229
+        ]
       },
       {
         "number": "59",
-        "text": "Azra ...",
-        "german": "Azra ...",
-        "chinese": "直到上大学期间才听说在 ESA 的就业机会。",
-        "answer": "A",
+        "sourceNumber": "59",
+        "text": "Azra,",
+        "german": "Azra,",
+        "chinese": "Azra 直到上大学期间才听说在 ESA 的就业机会。",
+        "answer": "",
+        "answerText": "A. hörte erst während des Studiums von den Arbeitsmöglichkeiten bei der ESA.",
         "completion": "hörte erst während des Studiums von den Arbeitsmöglichkeiten bei der ESA.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. hörte erst während des Studiums von den Arbeitsmöglichkeiten bei der ESA.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. wollte schon als Kind unbedingt zur ESA.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. bekam die Stelle ohne Studium.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "hörte erst während des Studiums von den Arbeitsmöglichkeiten bei der ESA.",
+        "sourceAnswer": "A",
+        "sourceGerman": "Azra, a-hörte erst während des Studiums von den Arbeitsmöglichkeiten bei der ESA.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          229
+        ]
       },
       {
         "number": "60",
-        "text": "Vor ihrer Bewerbung ...",
-        "german": "Vor ihrer Bewerbung ...",
+        "sourceNumber": "60",
+        "text": "vor ihrer Bewerbung,",
+        "german": "vor ihrer Bewerbung,",
         "chinese": "在递交申请之前，Azra 有机会参观了她现在的工作岗位。",
-        "answer": "A",
+        "answer": "",
+        "answerText": "A. bekam Azra die Gelegenheit, ihren jetzigen Arbeitsplatz zu besuchen.",
         "completion": "bekam Azra die Gelegenheit, ihren jetzigen Arbeitsplatz zu besuchen.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. bekam Azra die Gelegenheit, ihren jetzigen Arbeitsplatz zu besuchen.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. musste Azra bereits mehrere Jahre dort arbeiten.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. kannte Azra die ESA nur aus Filmen.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "bekam Azra die Gelegenheit, ihren jetzigen Arbeitsplatz zu besuchen.",
+        "sourceAnswer": "A",
+        "sourceGerman": "vor ihrer Bewerbung, a-bekam Azra die Gelegenheit, ihren jetzigen Arbeitsplatz zu besuchen.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          229
+        ]
       },
       {
         "number": "61",
-        "text": "Über das Trainee-Programm ...",
-        "german": "Über das Trainee-Programm ...",
+        "sourceNumber": "61",
+        "text": "über das Trainee Programm,",
+        "german": "über das Trainee Programm,",
         "chinese": "通过培训生（Trainee）项目，ESA 会提供一定数量的岗位。",
-        "answer": "C",
+        "answer": "",
+        "answerText": "C. wird eine bestimmte Anzahl von Jobs bei der ESA angeboten.",
         "completion": "wird eine bestimmte Anzahl von Jobs bei der ESA angeboten.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. werden nur unbezahlte Ferienkurse angeboten.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. können sich ausschließlich Professoren bewerben.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. wird eine bestimmte Anzahl von Jobs bei der ESA angeboten.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "wird eine bestimmte Anzahl von Jobs bei der ESA angeboten.",
+        "sourceAnswer": "C",
+        "sourceGerman": "über das Trainee Programm, c-wird eine bestimmte Anzahl von Jobs bei der ESA angeboten.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          229
+        ]
       },
       {
         "number": "62",
-        "text": "Bewerberinnen und Bewerber ...",
-        "german": "Bewerberinnen und Bewerber ...",
+        "sourceNumber": "62",
+        "text": "Bewerberinnen und Bewerber,",
+        "german": "Bewerberinnen und Bewerber,",
         "chinese": "应聘者在临近毕业时就可以申请。",
-        "answer": "B",
+        "answer": "",
+        "answerText": "B. können sich schon kurz vor dem Studienabschluss bewerben.",
         "completion": "können sich schon kurz vor dem Studienabschluss bewerben.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. müssen das Studium lange abgeschlossen haben.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. können sich schon kurz vor dem Studienabschluss bewerben.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. dürfen sich nur nach einer Promotion bewerben.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "können sich schon kurz vor dem Studienabschluss bewerben.",
+        "sourceAnswer": "B",
+        "sourceGerman": "Bewerberinnen und Bewerber, b-können sich schon kurz vor dem Studienabschluss bewerben.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          229
+        ]
       },
       {
         "number": "63",
-        "text": "Die Vorstellungsgespräche ...",
-        "german": "Die Vorstellungsgespräche ...",
+        "sourceNumber": "63",
+        "text": "die Vorstellungsgespräche.",
+        "german": "die Vorstellungsgespräche.",
         "chinese": "面试由各自所属的部门负责进行。",
-        "answer": "C",
+        "answer": "",
+        "answerText": "C. werden von den jeweiligen Ressorts durchgeführt.",
         "completion": "werden von den jeweiligen Ressorts durchgeführt.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. finden immer in derselben Stadt statt.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. werden von externen Firmen geführt.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. werden von den jeweiligen Ressorts durchgeführt.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "werden von den jeweiligen Ressorts durchgeführt.",
+        "sourceAnswer": "C",
+        "sourceGerman": "die Vorstellungsgespräche. c-werden von den jeweiligen Ressorts durchgeführt.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          229
+        ]
       },
       {
         "number": "64",
-        "text": "In Zukunft möchte Azra ...",
-        "german": "In Zukunft möchte Azra ...",
+        "sourceNumber": "64",
+        "text": "in Zukunft möchte die junge Frau Azra.",
+        "german": "in Zukunft möchte die junge Frau Azra.",
         "chinese": "将来这位年轻女子 Azra 可能想要调往 ESA 的另一处分支机构。 或许会去 ESA 的另一处分支机构工作。",
-        "answer": "C",
-        "completion": "vielleicht an eine andere ESA-Niederlassung wechseln.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. die ESA endgültig verlassen.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. ein Unternehmen im Tourismus gründen.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. vielleicht an eine andere ESA-Niederlassung wechseln.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "answer": "",
+        "answerText": "C. schätzungsweise an einen anderen ESA Niederlassung wechseln. / C. Vielleicht an einen anderen ESA Niederlassung wechseln.",
+        "completion": "schätzungsweise an einen anderen ESA Niederlassung wechseln. / Vielleicht an einen anderen ESA Niederlassung wechseln.",
+        "reviewGerman": "schätzungsweise an einen anderen ESA Niederlassung wechseln. / Vielleicht an einen anderen ESA Niederlassung wechseln.",
+        "sourceAnswer": "C",
+        "sourceGerman": "in Zukunft möchte die junge Frau Azra. c-schätzungsweise an einen anderen ESA Niederlassung wechseln. c- Vielleicht an einen anderen ESA Niederlassung wechseln.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          229
+        ]
       }
     ]
   },
   {
     "teil": "3",
     "title": "Fischer Unternehmen",
-    "sourceText": "reviewed Excel: 听力第二部分_人工复核完整版.xlsx",
-    "mode": "hv2-choice",
+    "mode": "corpus-card",
+    "sourceText": "2026实时更新2026.9(腾讯文档实时更新）.pdf",
+    "source": "tencent-2026-09",
+    "sourcePages": [
+      229,
+      230
+    ],
     "questions": [
       {
         "number": "55",
-        "text": "Frau Fischer behauptet, dass Frauen ...",
-        "german": "Frau Fischer behauptet, dass Frauen ...",
+        "sourceNumber": "55",
+        "text": "Frau Fischer behauptet, dass Frauen",
+        "german": "Frau Fischer behauptet, dass Frauen",
         "chinese": "费舍尔女士声称：女性购物的目标性不如男性。",
-        "answer": "C",
+        "answer": "",
+        "answerText": "C. weniger gezielt einkaufen als Männer.",
         "completion": "weniger gezielt einkaufen als Männer.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. grundsätzlich weniger kaufen als Männer.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. nur technische Produkte kaufen.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. weniger gezielt einkaufen als Männer.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "weniger gezielt einkaufen als Männer.",
+        "sourceAnswer": "C",
+        "sourceGerman": "Frau Fischer behauptet, dass Frauen c-weniger gezielt einkaufen als Männer.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          229
+        ]
       },
       {
         "number": "56",
-        "text": "Die Unternehmerin ...",
-        "german": "Die Unternehmerin ...",
+        "sourceNumber": "56",
+        "text": "Die Unternehmerin",
+        "german": "Die Unternehmerin",
         "chinese": "这位女企业家今后仍将女性作为主要顾客群体。",
-        "answer": "A",
+        "answer": "",
+        "answerText": "A. konzentriert sich weiterhin auf Frauen als Kundinnen.",
         "completion": "konzentriert sich weiterhin auf Frauen als Kundinnen.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. konzentriert sich weiterhin auf Frauen als Kundinnen.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. möchte nur noch Männer ansprechen.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. will den Verkauf einstellen.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "konzentriert sich weiterhin auf Frauen als Kundinnen.",
+        "sourceAnswer": "A",
+        "sourceGerman": "Die Unternehmerin a-konzentriert sich weiterhin auf Frauen als Kundinnen.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          229
+        ]
       },
       {
         "number": "57",
-        "text": "Zukünftige Trends ...",
-        "german": "Zukünftige Trends ...",
+        "sourceNumber": "57",
+        "text": "Zukünftige Trends",
+        "german": "Zukünftige Trends",
         "chinese": "未来趋势由众多员工共同发掘。",
-        "answer": "C",
+        "answer": "",
+        "answerText": "C. werden durch zahlreiche Mitarbeiter aufgespürt.",
         "completion": "werden durch zahlreiche Mitarbeiter aufgespürt.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. werden ausschließlich vom Zufall bestimmt.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. werden nur in Deutschland gesucht.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. werden durch zahlreiche Mitarbeiter aufgespürt.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "werden durch zahlreiche Mitarbeiter aufgespürt.",
+        "sourceAnswer": "C",
+        "sourceGerman": "Zukünftige Trends c-werden durch zahlreiche Mitarbeiter aufgespürt.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          229,
+          230
+        ]
       },
       {
         "number": "58",
-        "text": "Frau Fischer ...",
-        "german": "Frau Fischer ...",
+        "sourceNumber": "58",
+        "text": "Frau Fischer,",
+        "german": "Frau Fischer,",
         "chinese": "费舍尔女士给予员工发挥创意的自由空间。",
-        "answer": "C",
+        "answer": "",
+        "answerText": "C. lässt ihren Mitarbeitern Freiräume zum Gestalten.",
         "completion": "lässt ihren Mitarbeitern Freiräume zum Gestalten.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. entscheidet jedes Detail allein.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. verhindert kreative Vorschläge.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. lässt ihren Mitarbeitern Freiräume zum Gestalten.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "lässt ihren Mitarbeitern Freiräume zum Gestalten.",
+        "sourceAnswer": "C",
+        "sourceGerman": "Frau Fischer, c-lässt ihren Mitarbeitern Freiräume zum Gestalten.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          230
+        ]
       },
       {
         "number": "59",
-        "text": "Das Unternehmen ...",
-        "german": "Das Unternehmen ...",
+        "sourceNumber": "59",
+        "text": "Das Unternehmen,",
+        "german": "Das Unternehmen,",
         "chinese": "该公司最大的营收来自装饰类产品。",
-        "answer": "B",
-        "completion": "erzielt den größten Umsatz mit Dekorativem.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. verdient am meisten mit Lebensmitteln.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. erzielt den größten Umsatz mit Dekorativem.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. verkauft hauptsächlich Maschinen.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "answer": "",
+        "answerText": "B. erzielt den größten Umsatz mit Dekorativen.",
+        "completion": "erzielt den größten Umsatz mit Dekorativen.",
+        "reviewGerman": "erzielt den größten Umsatz mit Dekorativen.",
+        "sourceAnswer": "B",
+        "sourceGerman": "Das Unternehmen, b-erzielt den größten Umsatz mit Dekorativen.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          230
+        ]
       },
       {
         "number": "60",
-        "text": "Das Clubmodell ...",
-        "german": "Das Clubmodell ...",
-        "chinese": "俱乐部模式”能节省仓储成本，从而提供更低价格。",
-        "answer": "C",
+        "sourceNumber": "60",
+        "text": "Das Clubmodell.",
+        "german": "Das Clubmodell.",
+        "chinese": "“俱乐部模式”能节省仓储成本，从而提供更低价格。",
+        "answer": "",
+        "answerText": "C. spart Lagerkosten und kann so günstigere Preise gewährleisten.",
         "completion": "spart Lagerkosten und kann so günstigere Preise gewährleisten.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. erhöht vor allem die Mietkosten.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. macht die Produkte teurer.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. spart Lagerkosten und kann so günstigere Preise gewährleisten.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "spart Lagerkosten und kann so günstigere Preise gewährleisten.",
+        "sourceAnswer": "C",
+        "sourceGerman": "Das Clubmodell. c-spart Lagerkosten und kann so günstigere Preise gewährleisten.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          230
+        ]
       },
       {
         "number": "61",
-        "text": "Frau Fischer ...",
-        "german": "Frau Fischer ...",
+        "sourceNumber": "61",
+        "text": "Frau Fischer.",
+        "german": "Frau Fischer.",
         "chinese": "费舍尔女士仍想把漂亮的产品卖给尽可能多的人。",
-        "answer": "C",
-        "completion": "will weiterhin schöne Produkte an möglichst viele Menschen verkaufen.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. möchte nur noch Einzelstücke anbieten.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. plant, alle Filialen zu schließen.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. will weiterhin schöne Produkte an möglichst viele Menschen verkaufen.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "answer": "",
+        "answerText": "C. will weiterhin schöne Produkte an möglichst viele Menschen verkaufen..",
+        "completion": "will weiterhin schöne Produkte an möglichst viele Menschen verkaufen..",
+        "reviewGerman": "will weiterhin schöne Produkte an möglichst viele Menschen verkaufen..",
+        "sourceAnswer": "C",
+        "sourceGerman": "Frau Fischer. c-will weiterhin schöne Produkte an möglichst viele Menschen verkaufen..",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          230
+        ]
       },
       {
         "number": "62",
-        "text": "Die Unternehmerin ...",
-        "german": "Die Unternehmerin ...",
+        "sourceNumber": "62",
+        "text": "Die Unternehmerin",
+        "german": "Die Unternehmerin",
         "chinese": "这位女企业家希望为顾客提供新颖的购物体验。",
-        "answer": "A",
+        "answer": "",
+        "answerText": "A. möchte den Kunden neuartige Einkaufserlebnisse bieten.",
         "completion": "möchte den Kunden neuartige Einkaufserlebnisse bieten.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. möchte den Kunden neuartige Einkaufserlebnisse bieten.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. will nur noch per Katalog verkaufen.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. lehnt neue Ladenkonzepte ab.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "möchte den Kunden neuartige Einkaufserlebnisse bieten.",
+        "sourceAnswer": "A",
+        "sourceGerman": "Die Unternehmerin a-möchte den Kunden neuartige Einkaufserlebnisse bieten.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          230
+        ]
       },
       {
         "number": "63",
-        "text": "Das Unternehmen ...",
-        "german": "Das Unternehmen ...",
+        "sourceNumber": "63",
+        "text": "Das Unternehmen",
+        "german": "Das Unternehmen",
         "chinese": "公司重视产品的稳定性与耐久性。",
-        "answer": "B",
+        "answer": "",
+        "answerText": "B. legt Wert auf die Beständigkeit der Produkte.",
         "completion": "legt Wert auf die Beständigkeit der Produkte.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. setzt nur auf kurzlebige Ware.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. legt Wert auf die Beständigkeit der Produkte.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. verzichtet auf Qualitätskontrollen.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "legt Wert auf die Beständigkeit der Produkte.",
+        "sourceAnswer": "B",
+        "sourceGerman": "Das Unternehmen b-legt Wert auf die Beständigkeit der Produkte.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          230
+        ]
       },
       {
         "number": "64",
-        "text": "In ihrer Jugend ...",
-        "german": "In ihrer Jugend ...",
+        "sourceNumber": "64",
+        "text": "in ihrer Jugend.",
+        "german": "in ihrer Jugend.",
         "chinese": "在年轻时，费舍尔女士形成了为赚钱而努力的进取心。",
-        "answer": "A",
+        "answer": "",
+        "answerText": "A. entwickelte Frau Fischer die Zielstrebigkeit, Geld zu verdienen.",
         "completion": "entwickelte Frau Fischer die Zielstrebigkeit, Geld zu verdienen.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. entwickelte Frau Fischer die Zielstrebigkeit, Geld zu verdienen.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. interessierte sich Frau Fischer nie für Geld.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. wollte Frau Fischer nur Künstlerin werden.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "entwickelte Frau Fischer die Zielstrebigkeit, Geld zu verdienen.",
+        "sourceAnswer": "A",
+        "sourceGerman": "in ihrer Jugend. a-entwickelte Frau Fischer die Zielstrebigkeit, Geld zu verdienen.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          230
+        ]
       }
     ]
   },
   {
     "teil": "4",
-    "title": "Pflanzen kommunizieren",
-    "sourceText": "reviewed Excel: 听力第二部分_人工复核完整版.xlsx",
-    "mode": "hv2-choice",
+    "title": "Pflanzen Kommunizieren",
+    "mode": "corpus-card",
+    "sourceText": "2026实时更新2026.9(腾讯文档实时更新）.pdf",
+    "source": "tencent-2026-09",
+    "sourcePages": [
+      230,
+      231
+    ],
     "questions": [
       {
         "number": "55",
-        "text": "John Milburn ...",
-        "german": "John Milburn ...",
+        "sourceNumber": "55",
+        "text": "John Milburn",
+        "german": "John Milburn",
         "chinese": "约翰·米尔本是第一位尝试听到植物发出的声音的人。",
-        "answer": "C",
-        "completion": "versuchte als erster, Pflanzengeräusche zu hören.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. erfand die erste künstliche Pflanze.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. untersuchte nur Tiere im Wald.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. versuchte als erster, Pflanzengeräusche zu hören.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "answer": "",
+        "answerText": "C. versuchte als erster, Pflanzengeräusche zu hören..",
+        "completion": "versuchte als erster, Pflanzengeräusche zu hören..",
+        "reviewGerman": "versuchte als erster, Pflanzengeräusche zu hören..",
+        "sourceAnswer": "C",
+        "sourceGerman": "John Milburn c-versuchte als erster, Pflanzengeräusche zu hören..",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          230
+        ]
       },
       {
-        "number": "56",
-        "text": "Frau Sellinger und ihr Team ...",
-        "german": "Frau Sellinger und ihr Team ...",
+        "number": "56a",
+        "sourceNumber": "56",
+        "text": "Frau Sellinger und ihr' Team",
+        "german": "Frau Sellinger und ihr' Team",
         "chinese": "塞林格女士及其团队研究植物体内的信号。",
-        "answer": "B",
+        "answer": "",
+        "answerText": "B. erforschen die Signale im Inneren von Pflanzen.",
         "completion": "erforschen die Signale im Inneren von Pflanzen.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. entwickeln neue Gartengeräte.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. erforschen die Signale im Inneren von Pflanzen.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. züchten ausschließlich Zimmerpflanzen.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "erforschen die Signale im Inneren von Pflanzen.",
+        "sourceAnswer": "B",
+        "sourceGerman": "Frau Sellinger und ihr' Team b-erforschen die Signale im Inneren von Pflanzen.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          230
+        ]
+      },
+      {
+        "number": "56b",
+        "sourceNumber": "56",
+        "text": "Frau Sellinger und ihr' Team",
+        "german": "Frau Sellinger und ihr' Team",
+        "chinese": "塞林格女士及其团队试图探明植物体内信号的机理。",
+        "answer": "",
+        "answerText": "B. Versuchen die Signale im Inneren von Pflanzen zu ergründen .",
+        "completion": "Versuchen die Signale im Inneren von Pflanzen zu ergründen .",
+        "reviewGerman": "Versuchen die Signale im Inneren von Pflanzen zu ergründen .",
+        "sourceAnswer": "B",
+        "sourceGerman": "Frau Sellinger und ihr' Team b-Versuchen die Signale im Inneren von Pflanzen zu ergründen .",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          230
+        ]
       },
       {
         "number": "57",
-        "text": "Als „Wasserfluss“ bezeichnet Frau Sellinger ...",
-        "german": "Als „Wasserfluss“ bezeichnet Frau Sellinger ...",
+        "sourceNumber": "57",
+        "text": "Als ..Wasser Fluss'' bezeichnet Frau Sellinger",
+        "german": "Als ..Wasser Fluss'' bezeichnet Frau Sellinger",
         "chinese": "塞林格女士把树中水向上输送称为“水流”。",
-        "answer": "A",
-        "completion": "das Aufsteigen des Wassers im Baum.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. das Aufsteigen des Wassers im Baum.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. das Abfließen von Regenwasser.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. die Bewässerung durch Menschen.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "answer": "",
+        "answerText": "A. Das Aufsteigen des Wassers im Baum. .",
+        "completion": "Das Aufsteigen des Wassers im Baum. .",
+        "reviewGerman": "Das Aufsteigen des Wassers im Baum. .",
+        "sourceAnswer": "A",
+        "sourceGerman": "Als ..Wasser Fluss'' bezeichnet Frau Sellinger a-Das Aufsteigen des Wassers im Baum. .",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          230
+        ]
       },
       {
         "number": "58",
-        "text": "Die Kommunikation der Pflanzen ...",
-        "german": "Die Kommunikation der Pflanzen ...",
+        "sourceNumber": "58",
+        "text": "Die Kommunikation der Pflanzen",
+        "german": "Die Kommunikation der Pflanzen",
         "chinese": "植物的交流主要以物种延续为目标。",
-        "answer": "B",
+        "answer": "",
+        "answerText": "B. verfolgt primär das Ziel der Arterhaltung.",
         "completion": "verfolgt primär das Ziel der Arterhaltung.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. dient nur der Farbveränderung.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. verfolgt primär das Ziel der Arterhaltung.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. ist für Pflanzen bedeutungslos.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "verfolgt primär das Ziel der Arterhaltung.",
+        "sourceAnswer": "B",
+        "sourceGerman": "Die Kommunikation der Pflanzen b-verfolgt primär das Ziel der Arterhaltung.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          230
+        ]
       },
       {
         "number": "59",
-        "text": "Die Tabakpflanze bekämpft Schädlinge, indem sie ...",
-        "german": "Die Tabakpflanze bekämpft Schädlinge, indem sie ...",
+        "sourceNumber": "59",
+        "text": "Die Tabakpflanze bekämpft Schädlinge, indem sie",
+        "german": "Die Tabakpflanze bekämpft Schädlinge, indem sie",
         "chinese": "烟草通过吸引捕食害虫的天敌来对付害虫。",
-        "answer": "B",
+        "answer": "",
+        "answerText": "B. schädlingsfressende Insekten anlockt.",
         "completion": "schädlingsfressende Insekten anlockt.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. ihre Wurzeln abstößt.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. schädlingsfressende Insekten anlockt.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. sofort vertrocknet.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "schädlingsfressende Insekten anlockt.",
+        "sourceAnswer": "B",
+        "sourceGerman": "Die Tabakpflanze bekämpft Schädlinge, indem sie b-schädlingsfressende Insekten anlockt.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          230,
+          231
+        ]
       },
       {
         "number": "60",
-        "text": "Pflanzen ...",
-        "german": "Pflanzen ...",
+        "sourceNumber": "60",
+        "text": "Pflanzen",
+        "german": "Pflanzen",
         "chinese": "植物能够提醒同类有害虫来袭。",
-        "answer": "A",
+        "answer": "",
+        "answerText": "A. können ihre Artgenossen vor Schädlingen warnen.",
         "completion": "können ihre Artgenossen vor Schädlingen warnen.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. können ihre Artgenossen vor Schädlingen warnen.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. reagieren nie auf Schädlinge.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. kommunizieren nur mit Menschen.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "können ihre Artgenossen vor Schädlingen warnen.",
+        "sourceAnswer": "A",
+        "sourceGerman": "Pflanzen a-können ihre Artgenossen vor Schädlingen warnen.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          231
+        ]
       },
       {
         "number": "61",
-        "text": "Von Menschen angebaute Pflanzen ...",
-        "german": "Von Menschen angebaute Pflanzen ...",
+        "sourceNumber": "61",
+        "text": "Von Menschen angebaute Pflanzen",
+        "german": "Von Menschen angebaute Pflanzen",
         "chinese": "人类栽培的植物几乎不再具备天然的通信能力。",
-        "answer": "A",
+        "answer": "",
+        "answerText": "A. besitzen kaum mehr natürliche kommunikative Fähigkeiten.",
         "completion": "besitzen kaum mehr natürliche kommunikative Fähigkeiten.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. besitzen kaum mehr natürliche kommunikative Fähigkeiten.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. sind kommunikativer als alle Wildpflanzen.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. haben keine Blätter mehr.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "besitzen kaum mehr natürliche kommunikative Fähigkeiten.",
+        "sourceAnswer": "A",
+        "sourceGerman": "Von Menschen angebaute Pflanzen a-besitzen kaum mehr natürliche kommunikative Fähigkeiten.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          231
+        ]
       },
       {
         "number": "62",
-        "text": "Pflanzen setzen Stoffe frei, die ...",
-        "german": "Pflanzen setzen Stoffe frei, die ...",
+        "sourceNumber": "62",
+        "text": "Pflanzen setzen Stoffe frei, die",
+        "german": "Pflanzen setzen Stoffe frei, die",
         "chinese": "植物会释放一些物质，这些物质很可能也能增强人的免疫系统。",
-        "answer": "A",
+        "answer": "",
+        "answerText": "A. das menschliche Immunsystem wahrscheinlich auch stärken.",
         "completion": "das menschliche Immunsystem wahrscheinlich auch stärken.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. das menschliche Immunsystem wahrscheinlich auch stärken.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. Menschen immer krank machen.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. nur für Maschinen messbar sind.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "das menschliche Immunsystem wahrscheinlich auch stärken.",
+        "sourceAnswer": "A",
+        "sourceGerman": "Pflanzen setzen Stoffe frei, die a-das menschliche Immunsystem wahrscheinlich auch stärken.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          231
+        ]
       },
       {
         "number": "63",
-        "text": "Die erwähnten japanischen Forscher ...",
-        "german": "Die erwähnten japanischen Forscher ...",
-        "chinese": "文中提到的日本研究人员正在寻找植物具有有益/有疗效作用的科学证据。",
-        "answer": "C",
-        "completion": "suchen nach wissenschaftlichen Belegen für die wohltuende Wirkung von Pflanzen.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. untersuchen ausschließlich Holzpreise.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. halten Wälder für gesundheitsschädlich.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. suchen nach wissenschaftlichen Belegen für die wohltuende Wirkung von Pflanzen.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "sourceNumber": "63",
+        "text": "Die erwähnten japanischen Forsche",
+        "german": "Die erwähnten japanischen Forsche",
+        "chinese": "文中提到的日本研究人员正在寻找植物具有有益/有疗效作用的科学证据。 63- Wohltuende→heilsam（注：“wohltuend(e)”≈“heilsam(e)”。）",
+        "answer": "",
+        "answerText": "C. suchen nach wissenschaftlichen Belegen für die wohltuende Wirkung von Pflanzen",
+        "completion": "suchen nach wissenschaftlichen Belegen für die wohltuende Wirkung von Pflanzen",
+        "reviewGerman": "suchen nach wissenschaftlichen Belegen für die wohltuende Wirkung von Pflanzen",
+        "sourceAnswer": "C",
+        "sourceGerman": "Die erwähnten japanischen Forsche c-suchen nach wissenschaftlichen Belegen für die wohltuende Wirkung von Pflanzen",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          231
+        ]
       },
       {
         "number": "64",
-        "text": "Die über Bäume gewonnenen Informationen ...",
-        "german": "Die über Bäume gewonnenen Informationen ...",
+        "sourceNumber": "64",
+        "text": "Die über Bäume gewonnenen Informationen",
+        "german": "Die über Bäume gewonnenen Informationen",
         "chinese": "通过树木获得的信息有助于了解/判断气候变化。",
-        "answer": "B",
+        "answer": "",
+        "answerText": "B. geben Aufschluss über den Klimawandel.",
         "completion": "geben Aufschluss über den Klimawandel.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. werden nur für Möbel genutzt.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. geben Aufschluss über den Klimawandel.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. zeigen nur das Alter von Tieren.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "geben Aufschluss über den Klimawandel.",
+        "sourceAnswer": "B",
+        "sourceGerman": "Die über Bäume gewonnenen Informationen b-geben Aufschluss über den Klimawandel.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          231
+        ]
       }
     ]
   },
   {
     "teil": "5",
     "title": "Schwiegermutter",
-    "sourceText": "reviewed Excel: 听力第二部分_人工复核完整版.xlsx",
-    "mode": "hv2-choice",
+    "mode": "corpus-card",
+    "sourceText": "2026实时更新2026.9(腾讯文档实时更新）.pdf",
+    "source": "tencent-2026-09",
+    "sourcePages": [
+      231,
+      232
+    ],
     "questions": [
       {
         "number": "55",
-        "text": "Das Image der Schwiegermutter ...",
-        "german": "Das Image der Schwiegermutter ...",
+        "sourceNumber": "55",
+        "text": "Das Image der Schwiegermutter",
+        "german": "Das Image der Schwiegermutter",
         "chinese": "婆婆的形象如今由一位女学者加以剖析。",
-        "answer": "B",
+        "answer": "",
+        "answerText": "B. wird nun von einer Wissenschaftlerin beleuchtet.",
         "completion": "wird nun von einer Wissenschaftlerin beleuchtet.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. wurde nie wissenschaftlich betrachtet.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. wird nun von einer Wissenschaftlerin beleuchtet.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. kommt nur in Märchen vor.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "wird nun von einer Wissenschaftlerin beleuchtet.",
+        "sourceAnswer": "B",
+        "sourceGerman": "Das Image der Schwiegermutter b-wird nun von einer Wissenschaftlerin beleuchtet.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          231
+        ]
       },
       {
         "number": "56",
-        "text": "Frau Kletterer hat ...",
-        "german": "Frau Kletterer hat ...",
+        "sourceNumber": "56",
+        "text": "Frau Kletterer hat",
+        "german": "Frau Kletterer hat",
         "chinese": "克莱特勒女士描述了不同的群体。",
-        "answer": "C",
+        "answer": "",
+        "answerText": "C. verschiedene Gruppen beschrieben.",
         "completion": "verschiedene Gruppen beschrieben.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. nur eine einzige Person befragt.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. ausschließlich Männer untersucht.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. verschiedene Gruppen beschrieben.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "verschiedene Gruppen beschrieben.",
+        "sourceAnswer": "C",
+        "sourceGerman": "Frau Kletterer hat c-verschiedene Gruppen beschrieben.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          231
+        ]
       },
       {
         "number": "57",
-        "text": "Frau Kletterer ...",
-        "german": "Frau Kletterer ...",
+        "sourceNumber": "57",
+        "text": "Frau Kletterer",
+        "german": "Frau Kletterer",
         "chinese": "她提出了彼此独立的三种类型。",
-        "answer": "C",
-        "completion": "stellt drei voneinander unabhängige Typen vor.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. stellt nur einen Typ vor.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. lehnt jede Typisierung ab.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. stellt drei voneinander unabhängige Typen vor.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "answer": "",
+        "answerText": "C. Stellt drei voneinander unabhängige Typen vor.",
+        "completion": "Stellt drei voneinander unabhängige Typen vor.",
+        "reviewGerman": "Stellt drei voneinander unabhängige Typen vor.",
+        "sourceAnswer": "C",
+        "sourceGerman": "Frau Kletterer C- Stellt drei voneinander unabhängige Typen vor.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          231
+        ]
       },
       {
         "number": "58",
-        "text": "Vor hundert Jahren ...",
-        "german": "Vor hundert Jahren ...",
+        "sourceNumber": "58",
+        "text": "Vor Jahren hundert",
+        "german": "Vor Jahren hundert",
         "chinese": "一百年前，家中的女性之间存在竞争。",
-        "answer": "A",
+        "answer": "",
+        "answerText": "A. gab es einen Wettbewerb zwischen den Frauen im Haus.",
         "completion": "gab es einen Wettbewerb zwischen den Frauen im Haus.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. gab es einen Wettbewerb zwischen den Frauen im Haus.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. lebten junge Paare immer allein.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. hatten Schwiegermütter keinen Einfluss.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "gab es einen Wettbewerb zwischen den Frauen im Haus.",
+        "sourceAnswer": "A",
+        "sourceGerman": "Vor Jahren hundert a-gab es einen Wettbewerb zwischen den Frauen im Haus.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          231
+        ]
       },
       {
         "number": "59",
-        "text": "Im 19. Jahrhundert ...",
-        "german": "Im 19. Jahrhundert ...",
+        "sourceNumber": "59",
+        "text": "Im 19.Jahrhundert",
+        "german": "Im 19.Jahrhundert",
         "chinese": "在19世纪，婆婆成为文学的题材。",
-        "answer": "C",
-        "completion": "wurden Schwiegermütter Gegenstand der Literatur.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. verschwanden Schwiegermütter aus Texten.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. wurden Schwiegermütter nur statistisch untersucht.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. wurden Schwiegermütter Gegenstand der Literatur.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "answer": "",
+        "answerText": "C. wurden Schwiegermutter Gegenstand der Literatur.",
+        "completion": "wurden Schwiegermutter Gegenstand der Literatur.",
+        "reviewGerman": "wurden Schwiegermutter Gegenstand der Literatur.",
+        "sourceAnswer": "C",
+        "sourceGerman": "Im 19.Jahrhundert c-wurden Schwiegermutter Gegenstand der Literatur.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          231
+        ]
       },
       {
         "number": "60",
-        "text": "Frau Heyne beschreibt Kaiser Franz Joseph als ...",
-        "german": "Frau Heyne beschreibt Kaiser Franz Joseph als ...",
+        "sourceNumber": "60",
+        "text": "Frau Heyne beschreibt Kaiser Franz Joseph als",
+        "german": "Frau Heyne beschreibt Kaiser Franz Joseph als",
         "chinese": "海内女士将弗朗茨·约瑟夫皇帝描述为一个意志薄弱的儿子。",
-        "answer": "C",
+        "answer": "",
+        "answerText": "C. willensschwachen Sohn.",
         "completion": "willensschwachen Sohn.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. selbstbewussten Vater.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. unabhängigen Ehemann.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. willensschwachen Sohn.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "willensschwachen Sohn.",
+        "sourceAnswer": "C",
+        "sourceGerman": "Frau Heyne beschreibt Kaiser Franz Joseph als c-willensschwachen Sohn.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          231
+        ]
       },
       {
         "number": "61",
-        "text": "Umfrageergebnisse zeigen, dass ...",
-        "german": "Umfrageergebnisse zeigen, dass ...",
+        "sourceNumber": "61",
+        "text": "Umfrageergebnisse zeigen, dass",
+        "german": "Umfrageergebnisse zeigen, dass",
         "chinese": "调查结果显示，近三分之一的妻子与婆婆存在问题。",
-        "answer": "B",
-        "completion": "knapp ein Drittel der Ehefrauen Probleme mit der Schwiegermutter hat.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. fast keine Frau Probleme hat.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. knapp ein Drittel der Ehefrauen Probleme mit der Schwiegermutter hat.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. alle Männer Konflikte haben.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "answer": "",
+        "answerText": "B. Knapp ein Drittel der Ehefrauen Probleme mit der Schwiegermutter hat.",
+        "completion": "Knapp ein Drittel der Ehefrauen Probleme mit der Schwiegermutter hat.",
+        "reviewGerman": "Knapp ein Drittel der Ehefrauen Probleme mit der Schwiegermutter hat.",
+        "sourceAnswer": "B",
+        "sourceGerman": "Umfrageergebnisse zeigen, dass b-Knapp ein Drittel der Ehefrauen Probleme mit der Schwiegermutter hat.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          231
+        ]
       },
       {
         "number": "62",
-        "text": "Männer verschärfen den Konflikt der Frauen, indem sie ...",
-        "german": "Männer verschärfen den Konflikt der Frauen, indem sie ...",
+        "sourceNumber": "62",
+        "text": "Männer verschärfen den Konflikt der Frauen. indem sie",
+        "german": "Männer verschärfen den Konflikt der Frauen. indem sie",
         "chinese": "男性因为不介入争执而加剧了女性之间的矛盾。",
-        "answer": "A",
-        "completion": "sich aus Streitereien heraushalten.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. sich aus Streitereien heraushalten.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. immer sofort vermitteln.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. den Kontakt zur Mutter abbrechen.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "answer": "",
+        "answerText": "A. Sich aus Streitereien heraushalten..",
+        "completion": "Sich aus Streitereien heraushalten..",
+        "reviewGerman": "Sich aus Streitereien heraushalten..",
+        "sourceAnswer": "A",
+        "sourceGerman": "Männer verschärfen den Konflikt der Frauen. indem sie a-Sich aus Streitereien heraushalten..",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          231,
+          232
+        ]
       },
       {
         "number": "63",
-        "text": "In der Beispielgeschichte ...",
-        "german": "In der Beispielgeschichte ...",
+        "sourceNumber": "63",
+        "text": "in der Beispielgeschichte",
+        "german": "in der Beispielgeschichte",
         "chinese": "在示例故事中，婆婆无视小两口的隐私。",
-        "answer": "C",
-        "completion": "missachtet die Schwiegermutter die Privatsphäre des jungen Paares.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. lebt die Schwiegermutter weit entfernt.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. hilft die Schwiegermutter nur finanziell.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. missachtet die Schwiegermutter die Privatsphäre des jungen Paares.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "answer": "",
+        "answerText": "C. missachtet die Schwiegermutter Privatsphäre des jungen Paares.",
+        "completion": "missachtet die Schwiegermutter Privatsphäre des jungen Paares.",
+        "reviewGerman": "missachtet die Schwiegermutter Privatsphäre des jungen Paares.",
+        "sourceAnswer": "C",
+        "sourceGerman": "in der Beispielgeschichte c-missachtet die Schwiegermutter Privatsphäre des jungen Paares.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          232
+        ]
       },
       {
         "number": "64",
-        "text": "Eheprobleme sind vorprogrammiert, wenn ...",
-        "german": "Eheprobleme sind vorprogrammiert, wenn ...",
+        "sourceNumber": "64",
+        "text": "Eheorobleme sind vorprogrammiert. wenn",
+        "german": "Eheorobleme sind vorprogrammiert. wenn",
         "chinese": "当男人将原生家庭置于新家庭之上时，婚姻问题几乎是注定的。",
-        "answer": "C",
+        "answer": "",
+        "answerText": "C. Männer ihre Herkunftsfamilie der neuen Familie vorziehen.",
         "completion": "Männer ihre Herkunftsfamilie der neuen Familie vorziehen.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. Paare keine Haustiere haben.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. die Schwiegermutter selten anruft.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. Männer ihre Herkunftsfamilie der neuen Familie vorziehen.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "Männer ihre Herkunftsfamilie der neuen Familie vorziehen.",
+        "sourceAnswer": "C",
+        "sourceGerman": "Eheorobleme sind vorprogrammiert. wenn c-Männer ihre Herkunftsfamilie der neuen Familie vorziehen.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          232
+        ]
       }
     ]
   },
   {
     "teil": "6-1",
-    "title": "Schlafstörung",
-    "sourceText": "manual Teil 6 patch from PDF review",
-    "mode": "hv2-choice",
+    "title": "（1） Schlafstörung",
+    "mode": "corpus-card",
+    "sourceText": "2026实时更新2026.9(腾讯文档实时更新）.pdf",
+    "source": "tencent-2026-09",
+    "sourcePages": [
+      232,
+      233
+    ],
     "questions": [
       {
         "number": "55",
-        "text": "In der Neurobiologie gilt als gesichert, dass ...",
-        "german": "In der Neurobiologie gilt als gesichert, dass ...",
-        "chinese": "在神经生物学领域已被证实：青少年在特定发育阶段会出现睡眠障碍。",
-        "answer": "A",
+        "sourceNumber": "55",
+        "text": "in der Neurobiolige gilt als gesichert. dass ....",
+        "german": "in der Neurobiolige gilt als gesichert. dass ....",
+        "chinese": "在神经生物学领域已被证实：青少年在特定的发育阶段会出现睡眠障碍。",
+        "answer": "",
+        "answerText": "A. haben in bestimmten Entwicklungsphasen Schlafstörungen.",
         "completion": "haben in bestimmten Entwicklungsphasen Schlafstörungen.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. haben in bestimmten Entwicklungsphasen Schlafstörungen.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. brauchen grundsätzlich weniger Schlaf als Erwachsene.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. schlafen nur wegen digitaler Medien schlecht.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-teil-6-pdf-review"
+        "reviewGerman": "haben in bestimmten Entwicklungsphasen Schlafstörungen.",
+        "sourceAnswer": "A",
+        "sourceGerman": "in der Neurobiolige gilt als gesichert. dass .... a-haben in bestimmten Entwicklungsphasen Schlafstörungen.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          232
+        ]
       },
       {
         "number": "56",
-        "text": "Jugendliche gehen abends später zu Bett, ...",
-        "german": "Jugendliche gehen abends später zu Bett, ...",
+        "sourceNumber": "56",
+        "text": "Jugendliche gehen abends später zu Bett.",
+        "german": "Jugendliche gehen abends später zu Bett.",
         "chinese": "青少年晚上更晚就寝，因为他们的生物节律发生了变化。",
-        "answer": "A",
+        "answer": "",
+        "answerText": "A. weil sich der Biorhythmus verändert.",
         "completion": "weil sich der Biorhythmus verändert.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. weil sich der Biorhythmus verändert.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. weil sie morgens besonders leistungsfähig sind.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. weil sie keinen Schlaf benötigen.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-teil-6-pdf-review"
+        "reviewGerman": "weil sich der Biorhythmus verändert.",
+        "sourceAnswer": "A",
+        "sourceGerman": "Jugendliche gehen abends später zu Bett. a-weil sich der Biorhythmus verändert.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          232
+        ]
       },
       {
         "number": "57",
-        "text": "Das Hormon Melatonin ...",
-        "german": "Das Hormon Melatonin ...",
-        "chinese": "褪黑素有助于入睡。",
-        "answer": "A",
+        "sourceNumber": "57",
+        "text": "Das Hormon Melatonin",
+        "german": "Das Hormon Melatonin",
+        "chinese": "激素褪黑素有助于入睡。",
+        "answer": "",
+        "answerText": "A. hilft beim Einschlafen.",
         "completion": "hilft beim Einschlafen.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. hilft beim Einschlafen.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. verhindert tiefen Schlaf.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. wird nur tagsüber produziert.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-teil-6-pdf-review"
+        "reviewGerman": "hilft beim Einschlafen.",
+        "sourceAnswer": "A",
+        "sourceGerman": "Das Hormon Melatonin a-hilft beim Einschlafen.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          232
+        ]
       },
       {
         "number": "58",
-        "text": "Jugendliche ...",
-        "german": "Jugendliche ...",
-        "chinese": "青少年过早起床会损害健康。",
-        "answer": "B",
-        "completion": "schaden durch zu frühes Aufstehen ihrer Gesundheit.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. profitieren von sehr frühem Aufstehen.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. schaden durch zu frühes Aufstehen ihrer Gesundheit.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. sollten grundsätzlich weniger schlafen.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-teil-6-pdf-review"
+        "sourceNumber": "58",
+        "text": "Jugendliche",
+        "german": "Jugendliche",
+        "chinese": "青少年过早起床会损害他们的健康。",
+        "answer": "",
+        "answerText": "B. schaden durch zu frühes Ausstehen ihrer Gesundheit .",
+        "completion": "schaden durch zu frühes Ausstehen ihrer Gesundheit .",
+        "reviewGerman": "schaden durch zu frühes Ausstehen ihrer Gesundheit .",
+        "sourceAnswer": "B",
+        "sourceGerman": "Jugendliche b-schaden durch zu frühes Ausstehen ihrer Gesundheit .",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          232
+        ]
       },
       {
         "number": "59",
-        "text": "Schlafmangel bei Kindern und Jugendlichen ...",
-        "german": "Schlafmangel bei Kindern und Jugendlichen ...",
-        "chinese": "儿童和青少年睡眠不足可能导致严重的发育问题。",
-        "answer": "B",
-        "completion": "kann zu starken Entwicklungsproblemen führen.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. hat kaum Folgen.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. kann zu starken Entwicklungsproblemen führen.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. verbessert langfristig die Konzentration.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-teil-6-pdf-review"
+        "sourceNumber": "59",
+        "text": "Schlafmangel bei Kindern und Jugendlichen",
+        "german": "Schlafmangel bei Kindern und Jugendlichen",
+        "chinese": "儿童和青少年的睡眠不足可能导致严重的发育问题。",
+        "answer": "",
+        "answerText": "B. kann zu starken Entwicklungsproblemen führen .",
+        "completion": "kann zu starken Entwicklungsproblemen führen .",
+        "reviewGerman": "kann zu starken Entwicklungsproblemen führen .",
+        "sourceAnswer": "B",
+        "sourceGerman": "Schlafmangel bei Kindern und Jugendlichen b-kann zu starken Entwicklungsproblemen führen .",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          232
+        ]
       },
       {
         "number": "60",
-        "text": "Frau Prof. Reinecke ...",
-        "german": "Frau Prof. Reinecke ...",
-        "chinese": "Reinecke 教授主张调整学校作息时间。",
-        "answer": "B",
+        "sourceNumber": "60",
+        "text": "Frau Prof Reinecke",
+        "german": "Frau Prof Reinecke",
+        "chinese": "Reinecke教授主张调整学校作息时间。",
+        "answer": "",
+        "answerText": "B. spricht sich für eine Änderung der Schulzeiten aus.",
         "completion": "spricht sich für eine Änderung der Schulzeiten aus.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. fordert längere Hausaufgabenzeiten.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. spricht sich für eine Änderung der Schulzeiten aus.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. lehnt spätere Schulanfangszeiten ab.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-teil-6-pdf-review"
+        "reviewGerman": "spricht sich für eine Änderung der Schulzeiten aus.",
+        "sourceAnswer": "B",
+        "sourceGerman": "Frau Prof Reinecke b-spricht sich für eine Änderung der Schulzeiten aus.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          232
+        ]
       },
       {
         "number": "61",
-        "text": "Schulen ...",
-        "german": "Schulen ...",
+        "sourceNumber": "61",
+        "text": "Schulen",
+        "german": "Schulen",
         "chinese": "学校实行的是固定而僵化的时间框架。",
-        "answer": "B",
+        "answer": "",
+        "answerText": "B. haben einen starren Zeitrahmen.",
         "completion": "haben einen starren Zeitrahmen.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. passen sich flexibel jedem Schüler an.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. haben einen starren Zeitrahmen.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. beginnen grundsätzlich am Nachmittag.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-teil-6-pdf-review"
+        "reviewGerman": "haben einen starren Zeitrahmen.",
+        "sourceAnswer": "B",
+        "sourceGerman": "Schulen b-haben einen starren Zeitrahmen.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          232
+        ]
       },
       {
         "number": "62a",
-        "text": "Schülerinnen und Schüler sollten in der idealen Schule ...",
-        "german": "Schülerinnen und Schüler sollten in der idealen Schule ...",
-        "chinese": "在理想学校里，学生应能发挥自己的学习/表现潜能。",
-        "answer": "A",
-        "completion": "ihr Leistungspotenzial nutzen können.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. ihr Leistungspotenzial nutzen können.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. immer zur gleichen Uhrzeit geprüft werden.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. möglichst wenig Unterricht haben.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-teil-6-pdf-review"
+        "sourceNumber": "62",
+        "text": "Schülerinnen und Schüler sollten in der idealen Schule",
+        "german": "Schülerinnen und Schüler sollten in der idealen Schule",
+        "chinese": "在理想的学校里，学生应当能够发挥自己的绩效潜能。",
+        "answer": "",
+        "answerText": "A. ihr Leistungspotenziale nutzen können..",
+        "completion": "ihr Leistungspotenziale nutzen können..",
+        "reviewGerman": "ihr Leistungspotenziale nutzen können..",
+        "sourceAnswer": "A",
+        "sourceGerman": "Schülerinnen und Schüler sollten in der idealen Schule a-ihr Leistungspotenziale nutzen können..",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          232
+        ]
       },
       {
         "number": "62b",
-        "text": "Schülerinnen und Schüler sollten optimalerweise ...",
-        "german": "Schülerinnen und Schüler sollten optimalerweise ...",
-        "chinese": "理想情况下，学生应在自己状态最佳的时段接受教学。",
-        "answer": "C",
+        "sourceNumber": "62",
+        "text": "Schülerinnen und Schüler sollten optimalerweise",
+        "german": "Schülerinnen und Schüler sollten optimalerweise",
+        "chinese": "理想情况下，学生应当在自己学习效率最高的时段接受教学。",
+        "answer": "",
+        "answerText": "C. zu Tageszeiten unterrichtet werden, an denen sie am leistungsfähigsten sind.",
         "completion": "zu Tageszeiten unterrichtet werden, an denen sie am leistungsfähigsten sind.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. immer zur gleichen Uhrzeit unterrichtet werden.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. nur am frühen Morgen lernen.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. zu Tageszeiten unterrichtet werden, an denen sie am leistungsfähigsten sind.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-teil-6-pdf-review"
+        "reviewGerman": "zu Tageszeiten unterrichtet werden, an denen sie am leistungsfähigsten sind.",
+        "sourceAnswer": "C",
+        "sourceGerman": "Schülerinnen und Schüler sollten optimalerweise c-zu Tageszeiten unterrichtet werden, an denen sie am leistungsfähigsten sind.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          232
+        ]
       },
       {
         "number": "63a",
-        "text": "Viele Lehrer meinen, dass frühes Aufstehen ...",
-        "german": "Viele Lehrer meinen, dass frühes Aufstehen ...",
-        "chinese": "很多老师认为，早起是走向成年的一部分。",
-        "answer": "B",
+        "sourceNumber": "63",
+        "text": "Viele Lehrer meinen. dass frühes Aufstehen",
+        "german": "Viele Lehrer meinen. dass frühes Aufstehen",
+        "chinese": "许多教师认为，早起是走向成年的一部分。",
+        "answer": "",
+        "answerText": "B. zum Erwachsenwerden gehört.",
         "completion": "zum Erwachsenwerden gehört.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. gesundheitlich gefährlich ist.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. zum Erwachsenwerden gehört.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. von Schülern vermieden werden sollte.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-teil-6-pdf-review"
+        "reviewGerman": "zum Erwachsenwerden gehört.",
+        "sourceAnswer": "B",
+        "sourceGerman": "Viele Lehrer meinen. dass frühes Aufstehen b-zum Erwachsenwerden gehört.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          232
+        ]
       },
       {
         "number": "63b",
-        "text": "Viele Lehrer meinen, dass frühes Aufstehen ...",
-        "german": "Viele Lehrer meinen, dass frühes Aufstehen ...",
-        "chinese": "很多老师认为，早起能够提升表现/效率。",
-        "answer": "B",
-        "completion": "die Leistungsfähigkeit steigert.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. jede Konzentration verhindert.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. die Leistungsfähigkeit steigert.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. nur kulturelle Tradition ist.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-teil-6-pdf-review"
+        "sourceNumber": "63",
+        "text": "viele Lehrer meinen ,dass frühes Aufstehen",
+        "german": "viele Lehrer meinen ,dass frühes Aufstehen",
+        "chinese": "许多教师认为，早起能够提升学习/工作效率。",
+        "answer": "",
+        "answerText": "B. die Leistungsfähigkeit steigert",
+        "completion": "die Leistungsfähigkeit steigert",
+        "reviewGerman": "die Leistungsfähigkeit steigert",
+        "sourceAnswer": "B",
+        "sourceGerman": "viele Lehrer meinen ,dass frühes Aufstehen b-die Leistungsfähigkeit steigert",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          232,
+          233
+        ]
       },
       {
         "number": "64",
-        "text": "Frau Prof. Reinecke denkt, dass ...",
-        "german": "Frau Prof. Reinecke denkt, dass ...",
-        "chinese": "Reinecke 教授认为，早起是由文化因素造成的。",
-        "answer": "B",
+        "sourceNumber": "64",
+        "text": "Frau Prof Reinecke denkt, dass",
+        "german": "Frau Prof Reinecke denkt, dass",
+        "chinese": "Reinecke教授认为，早起是由文化因素所造成的。",
+        "answer": "",
+        "answerText": "B. frühes Aufstehen kulturell bedingt ist.",
         "completion": "frühes Aufstehen kulturell bedingt ist.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. spätes Aufstehen grundsätzlich schädlich ist.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. frühes Aufstehen kulturell bedingt ist.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. frühes Aufstehen biologisch zwingend notwendig ist.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-teil-6-pdf-review"
+        "reviewGerman": "frühes Aufstehen kulturell bedingt ist.",
+        "sourceAnswer": "B",
+        "sourceGerman": "Frau Prof Reinecke denkt, dass b-frühes Aufstehen kulturell bedingt ist.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          233
+        ]
       }
     ]
   },
   {
     "teil": "6-2",
-    "title": "Schlafstörung für Kinder",
-    "sourceText": "manual Teil 6 patch from PDF review",
-    "mode": "hv2-choice",
+    "title": "（2） Schlafstörung für Kinder",
+    "mode": "corpus-card",
+    "sourceText": "2026实时更新2026.9(腾讯文档实时更新）.pdf",
+    "source": "tencent-2026-09",
+    "sourcePages": [
+      233,
+      234
+    ],
     "questions": [
       {
         "number": "55",
-        "text": "Kinder ...",
-        "german": "Kinder ...",
+        "sourceNumber": "55",
+        "text": "Kinder",
+        "german": "Kinder",
         "chinese": "儿童在某些发育阶段会出现睡眠障碍。",
-        "answer": "A",
+        "answer": "",
+        "answerText": "haben in bestimmten Entwicklungsphasen Schlafstörungen.",
         "completion": "haben in bestimmten Entwicklungsphasen Schlafstörungen.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. haben in bestimmten Entwicklungsphasen Schlafstörungen.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. schlafen in jeder Entwicklungsphase gleich gut.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. brauchen grundsätzlich keinen festen Schlafrhythmus.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-teil-6-pdf-review"
+        "reviewGerman": "haben in bestimmten Entwicklungsphasen Schlafstörungen.",
+        "sourceAnswer": null,
+        "sourceGerman": "Kinder haben in bestimmten Entwicklungsphasen Schlafstörungen.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          233
+        ]
       },
       {
         "number": "56",
-        "text": "Jugendliche ...",
-        "german": "Jugendliche ...",
+        "sourceNumber": "56",
+        "text": "Jugendliche",
+        "german": "Jugendliche",
         "chinese": "青少年晚上更晚入睡，因为他们的生物节律在调整。",
-        "answer": "B",
+        "answer": "",
+        "answerText": "gehen abends später zu Bett, weil sich ihr Biorhythmus umstellt.",
         "completion": "gehen abends später zu Bett, weil sich ihr Biorhythmus umstellt.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. gehen früher zu Bett, weil sie morgens wacher sind.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. gehen abends später zu Bett, weil sich ihr Biorhythmus umstellt.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. schlafen nur schlecht, wenn sie zu wenig Sport treiben.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-teil-6-pdf-review"
+        "reviewGerman": "gehen abends später zu Bett, weil sich ihr Biorhythmus umstellt.",
+        "sourceAnswer": null,
+        "sourceGerman": "Jugendliche gehen abends später zu Bett, weil sich ihr Biorhythmus umstellt.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          233
+        ]
       },
       {
         "number": "57",
-        "text": "Das Hormon Melatonin ...",
-        "german": "Das Hormon Melatonin ...",
-        "chinese": "褪黑素有助于入睡。",
-        "answer": "C",
+        "sourceNumber": "57",
+        "text": "Das Hormon Melatonin",
+        "german": "Das Hormon Melatonin",
+        "chinese": "激素褪黑素有助于入睡。",
+        "answer": "",
+        "answerText": "hilft beim Einschlafen.",
         "completion": "hilft beim Einschlafen.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. macht Kinder am Morgen sofort leistungsfähig.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. wird nur bei Erwachsenen gebildet.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. hilft beim Einschlafen.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-teil-6-pdf-review"
+        "reviewGerman": "hilft beim Einschlafen.",
+        "sourceAnswer": null,
+        "sourceGerman": "Das Hormon Melatonin hilft beim Einschlafen.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          233
+        ]
       },
       {
         "number": "58",
-        "text": "Jugendliche ...",
-        "german": "Jugendliche ...",
+        "sourceNumber": "58",
+        "text": "Jugendliche",
+        "german": "Jugendliche",
         "chinese": "过早起床会损害青少年的健康。",
-        "answer": "A",
+        "answer": "",
+        "answerText": "nehmen durch zu frühes Aufstehen Schaden.",
         "completion": "nehmen durch zu frühes Aufstehen Schaden.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. nehmen durch zu frühes Aufstehen Schaden.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. werden durch frühes Aufstehen gesünder.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. sollten ihre Schlafzeiten täglich wechseln.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-teil-6-pdf-review"
+        "reviewGerman": "nehmen durch zu frühes Aufstehen Schaden.",
+        "sourceAnswer": null,
+        "sourceGerman": "Jugendliche nehmen durch zu frühes Aufstehen Schaden.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          233
+        ]
       },
       {
         "number": "59",
-        "text": "Schlafmangel bei Kindern und Jugendlichen ...",
-        "german": "Schlafmangel bei Kindern und Jugendlichen ...",
-        "chinese": "儿童和青少年睡眠不足可能导致严重的发育问题。",
-        "answer": "B",
+        "sourceNumber": "59",
+        "text": "Schlafmangel bei Kindern und Jugendlichen",
+        "german": "Schlafmangel bei Kindern und Jugendlichen",
+        "chinese": "儿童和青少年的睡眠不足可能导致严重的发育问题。",
+        "answer": "",
+        "answerText": "kann zu starken Entwicklungsproblemen führen.",
         "completion": "kann zu starken Entwicklungsproblemen führen.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. hat kaum Auswirkungen auf die Entwicklung.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. kann zu starken Entwicklungsproblemen führen.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. steigert langfristig die schulische Leistung.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-teil-6-pdf-review"
+        "reviewGerman": "kann zu starken Entwicklungsproblemen führen.",
+        "sourceAnswer": null,
+        "sourceGerman": "Schlafmangel bei Kindern und Jugendlichen kann zu starken Entwicklungsproblemen führen.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          233
+        ]
       },
       {
         "number": "60",
-        "text": "Frau Prof. Reinecke ...",
-        "german": "Frau Prof. Reinecke ...",
-        "chinese": "Reinecke 教授主张调整学校作息时间。",
-        "answer": "C",
+        "sourceNumber": "60",
+        "text": "Frau Prof. Reinecke",
+        "german": "Frau Prof. Reinecke",
+        "chinese": "赖内克教授主张调整学校作息时间。",
+        "answer": "",
+        "answerText": "spricht sich für eine Änderung der Schulzeiten aus.",
         "completion": "spricht sich für eine Änderung der Schulzeiten aus.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. möchte die Schulzeiten unverändert lassen.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. fordert einen noch früheren Schulbeginn.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. spricht sich für eine Änderung der Schulzeiten aus.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-teil-6-pdf-review"
+        "reviewGerman": "spricht sich für eine Änderung der Schulzeiten aus.",
+        "sourceAnswer": null,
+        "sourceGerman": "Frau Prof. Reinecke spricht sich für eine Änderung der Schulzeiten aus.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          233
+        ]
       },
       {
         "number": "61",
-        "text": "Schulen ...",
-        "german": "Schulen ...",
+        "sourceNumber": "61",
+        "text": "Schulen",
+        "german": "Schulen",
         "chinese": "学校的时间安排框架很僵化。",
-        "answer": "A",
+        "answer": "",
+        "answerText": "haben einen starren Zeitrahmen.",
         "completion": "haben einen starren Zeitrahmen.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. haben einen starren Zeitrahmen.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. passen ihre Zeiten täglich an einzelne Schüler an.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. beginnen grundsätzlich erst am Nachmittag.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-teil-6-pdf-review"
+        "reviewGerman": "haben einen starren Zeitrahmen.",
+        "sourceAnswer": null,
+        "sourceGerman": "Schulen haben einen starren Zeitrahmen.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          233
+        ]
       },
       {
         "number": "62",
-        "text": "Schülerinnen und Schüler sollten optimalerweise ...",
-        "german": "Schülerinnen und Schüler sollten optimalerweise ...",
+        "sourceNumber": "62",
+        "text": "Schülerinnen und Schüler sollten optimalerweise",
+        "german": "Schülerinnen und Schüler sollten optimalerweise",
         "chinese": "理想情况下，应在学生状态最佳的时段进行授课。",
-        "answer": "B",
+        "answer": "",
+        "answerText": "zu Tageszeiten unterrichtet werden, an denen sie am leistungsfähigsten sind.",
         "completion": "zu Tageszeiten unterrichtet werden, an denen sie am leistungsfähigsten sind.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. nur in den frühen Morgenstunden lernen.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. zu Tageszeiten unterrichtet werden, an denen sie am leistungsfähigsten sind.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. immer nach demselben Stundenplan geprüft werden.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-teil-6-pdf-review"
+        "reviewGerman": "zu Tageszeiten unterrichtet werden, an denen sie am leistungsfähigsten sind.",
+        "sourceAnswer": null,
+        "sourceGerman": "Schülerinnen und Schüler sollten optimalerweise zu Tageszeiten unterrichtet werden, an denen sie am leistungsfähigsten sind.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          233
+        ]
       },
       {
         "number": "63",
-        "text": "Viele Lehrer meinen, dass frühes Aufstehen ...",
-        "german": "Viele Lehrer meinen, dass frühes Aufstehen ...",
+        "sourceNumber": "63",
+        "text": "Viele Lehrer meinen, dass frühes Aufstehen",
+        "german": "Viele Lehrer meinen, dass frühes Aufstehen",
         "chinese": "许多老师认为，早起能提升表现/效率。",
-        "answer": "C",
+        "answer": "",
+        "answerText": "die Leistungsfähigkeit steigert.",
         "completion": "die Leistungsfähigkeit steigert.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. für Jugendliche grundsätzlich schädlich ist.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. mit schulischer Leistung nichts zu tun hat.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. die Leistungsfähigkeit steigert.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-teil-6-pdf-review"
+        "reviewGerman": "die Leistungsfähigkeit steigert.",
+        "sourceAnswer": null,
+        "sourceGerman": "Viele Lehrer meinen, dass frühes Aufstehen die Leistungsfähigkeit steigert.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          233
+        ]
       },
       {
         "number": "64",
-        "text": "Frau Prof. Reinecke denkt, dass ...",
-        "german": "Frau Prof. Reinecke denkt, dass ...",
-        "chinese": "Reinecke 教授认为，早起是由社会因素造成的。",
-        "answer": "A",
+        "sourceNumber": "64",
+        "text": "Frau Prof. Reinecke denkt, dass",
+        "german": "Frau Prof. Reinecke denkt, dass",
+        "chinese": "赖内克教授认为，早起是由社会因素造成的。",
+        "answer": "",
+        "answerText": "frühes Aufstehen gesellschaftlich bedingt ist.",
         "completion": "frühes Aufstehen gesellschaftlich bedingt ist.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. frühes Aufstehen gesellschaftlich bedingt ist.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. frühes Aufstehen ausschließlich biologisch notwendig ist.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. spätes Aufstehen kulturell vorgeschrieben ist.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-teil-6-pdf-review"
+        "reviewGerman": "frühes Aufstehen gesellschaftlich bedingt ist.",
+        "sourceAnswer": null,
+        "sourceGerman": "Frau Prof. Reinecke denkt, dass frühes Aufstehen gesellschaftlich bedingt ist.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          233,
+          234
+        ]
       }
     ]
   },
   {
     "teil": "7",
-    "title": "Bürgerforschung",
-    "sourceText": "reviewed Excel: 听力第二部分_人工复核完整版.xlsx",
-    "mode": "hv2-choice",
+    "title": "Bürger Forschung",
+    "mode": "corpus-card",
+    "sourceText": "2026实时更新2026.9(腾讯文档实时更新）.pdf",
+    "source": "tencent-2026-09",
+    "sourcePages": [
+      234
+    ],
     "questions": [
       {
         "number": "55",
-        "text": "Es ist laut Professor Adler eine weit verbreitete Meinung, dass ...",
-        "german": "Es ist laut Professor Adler eine weit verbreitete Meinung, dass ...",
+        "sourceNumber": "55",
+        "text": "Es ist laut Professor Adler eine weite verbreitete Meinung, dass",
+        "german": "Es ist laut Professor Adler eine weite verbreitete Meinung, dass",
         "chinese": "据阿德勒教授所言，普遍认为科研只是专家的事情。",
-        "answer": "B",
+        "answer": "",
+        "answerText": "B. Forschung nur eine Sache für Spezialisten ist.",
         "completion": "Forschung nur eine Sache für Spezialisten ist.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. Forschung immer von Kindern betrieben wird.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. Forschung nur eine Sache für Spezialisten ist.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. Bürger Forschung grundsätzlich ablehnen.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "Forschung nur eine Sache für Spezialisten ist.",
+        "sourceAnswer": "B",
+        "sourceGerman": "Es ist laut Professor Adler eine weite verbreitete Meinung, dass b-Forschung nur eine Sache für Spezialisten ist.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          234
+        ]
       },
       {
         "number": "56",
-        "text": "Die Aufgaben der Bürgerforscher ...",
-        "german": "Die Aufgaben der Bürgerforscher ...",
+        "sourceNumber": "56",
+        "text": "Die Aufgaben der Bürgerforscher",
+        "german": "Die Aufgaben der Bürgerforscher",
         "chinese": "公民科学家的任务往往在于收集数据。",
-        "answer": "A",
+        "answer": "",
+        "answerText": "A. bestehen oft darin, Daten zu erheben.",
         "completion": "bestehen oft darin, Daten zu erheben.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. bestehen oft darin, Daten zu erheben.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. bestehen nur aus komplizierten Laborversuchen.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. werden ausschließlich bezahlt.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "bestehen oft darin, Daten zu erheben.",
+        "sourceAnswer": "A",
+        "sourceGerman": "Die Aufgaben der Bürgerforscher a-bestehen oft darin, Daten zu erheben.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          234
+        ]
       },
       {
         "number": "57",
-        "text": "Professor Adler begann sich für Bürgerforschung einzusetzen, weil ...",
-        "german": "Professor Adler begann sich für Bürgerforschung einzusetzen, weil ...",
+        "sourceNumber": "57",
+        "text": "Professor Adler begann sich für Bürgerforschung einzusetzen, weil",
+        "german": "Professor Adler begann sich für Bürgerforschung einzusetzen, weil",
         "chinese": "阿德勒教授之所以开始投入公民科学，是因为他从外行那里得到了宝贵的启发。",
-        "answer": "B",
+        "answer": "",
+        "answerText": "B. er von Laien wertvolle Anregungen bekam.",
         "completion": "er von Laien wertvolle Anregungen bekam.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. er keine Forschungsgelder mehr erhielt.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. er von Laien wertvolle Anregungen bekam.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. er die Universität verlassen musste.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "er von Laien wertvolle Anregungen bekam.",
+        "sourceAnswer": "B",
+        "sourceGerman": "Professor Adler begann sich für Bürgerforschung einzusetzen, weil b-er von Laien wertvolle Anregungen bekam.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          234
+        ]
       },
       {
         "number": "58",
-        "text": "Professor Adler hat sich schon als Kind ...",
-        "german": "Professor Adler hat sich schon als Kind ...",
+        "sourceNumber": "58",
+        "text": "Professor Adler hat sich schon als Kind",
+        "german": "Professor Adler hat sich schon als Kind",
         "chinese": "阿德勒教授自孩提时代起就对本学科的理论基础感兴趣。",
-        "answer": "A",
+        "answer": "",
+        "answerText": "A. für die theoretischen Grundlagen seines Fachs interessiert.",
         "completion": "für die theoretischen Grundlagen seines Fachs interessiert.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. für die theoretischen Grundlagen seines Fachs interessiert.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. nur für Sport interessiert.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. nicht für Wissenschaft interessiert.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "für die theoretischen Grundlagen seines Fachs interessiert.",
+        "sourceAnswer": "A",
+        "sourceGerman": "Professor Adler hat sich schon als Kind a-für die theoretischen Grundlagen seines Fachs interessiert.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          234
+        ]
       },
       {
         "number": "59",
-        "text": "Professor Adlers Kinder ...",
-        "german": "Professor Adlers Kinder ...",
+        "sourceNumber": "59",
+        "text": "Professor Adlers Kinder",
+        "german": "Professor Adlers Kinder",
         "chinese": "阿德勒教授的孩子们现在已经对自然科学表现出兴趣。",
-        "answer": "C",
-        "completion": "zeigen schon jetzt Interesse an den Naturwissenschaften.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. lehnen Naturwissenschaften völlig ab.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. arbeiten bereits an der Universität.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. zeigen schon jetzt Interesse an den Naturwissenschaften.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "answer": "",
+        "answerText": "C. zeigen schon jetzt Interesse an den Naturwissenschaften",
+        "completion": "zeigen schon jetzt Interesse an den Naturwissenschaften",
+        "reviewGerman": "zeigen schon jetzt Interesse an den Naturwissenschaften",
+        "sourceAnswer": "C",
+        "sourceGerman": "Professor Adlers Kinder c-zeigen schon jetzt Interesse an den Naturwissenschaften",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          234
+        ]
       },
       {
         "number": "60",
-        "text": "Bürgerforscher ...",
-        "german": "Bürgerforscher ...",
+        "sourceNumber": "60",
+        "text": "Bürgerforscher",
+        "german": "Bürgerforscher",
         "chinese": "公民科学家可以在一个网站上寻找感兴趣的研究项目。",
-        "answer": "A",
+        "answer": "",
+        "answerText": "A. können auf einer Internetseite nach interessanten Forschungsvorhaben suchen.",
         "completion": "können auf einer Internetseite nach interessanten Forschungsvorhaben suchen.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. können auf einer Internetseite nach interessanten Forschungsvorhaben suchen.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. müssen selbst Professoren sein.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. dürfen keine Daten sammeln.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "können auf einer Internetseite nach interessanten Forschungsvorhaben suchen.",
+        "sourceAnswer": "A",
+        "sourceGerman": "Bürgerforscher a-können auf einer Internetseite nach interessanten Forschungsvorhaben suchen.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          234
+        ]
       },
       {
         "number": "61",
-        "text": "Wissenschaftler ...",
-        "german": "Wissenschaftler ...",
+        "sourceNumber": "61",
+        "text": "Wissenschaftler",
+        "german": "Wissenschaftler",
         "chinese": "科学家并不总是能够不借助业余人士/外行的工作。",
-        "answer": "B",
-        "completion": "können auf die Arbeit von Laien nicht immer verzichten.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. arbeiten grundsätzlich ohne Unterstützung.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. können auf die Arbeit von Laien nicht immer verzichten.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. halten Bürgerforscher immer für störend.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "answer": "",
+        "answerText": "B. können auf die Arbeit von Leute nicht immer verzichten.",
+        "completion": "können auf die Arbeit von Leute nicht immer verzichten.",
+        "reviewGerman": "können auf die Arbeit von Leute nicht immer verzichten.",
+        "sourceAnswer": "B",
+        "sourceGerman": "Wissenschaftler b-können auf die Arbeit von Leute nicht immer verzichten.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          234
+        ]
       },
       {
         "number": "62",
-        "text": "Ausschließlich Wissenschaftler ...",
-        "german": "Ausschließlich Wissenschaftler ...",
+        "sourceNumber": "62",
+        "text": "Ausschließlich Wissenschaftler",
+        "german": "Ausschließlich Wissenschaftler",
         "chinese": "复杂的实验今后大概仍将只由专业科学家来完成。",
-        "answer": "C",
+        "answer": "",
+        "answerText": "C. werden wohl weiterhin komplexe Versuche durchführen.",
         "completion": "werden wohl weiterhin komplexe Versuche durchführen.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. werden künftig nur einfache Daten sammeln.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. dürfen bald nicht mehr forschen.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. werden wohl weiterhin komplexe Versuche durchführen.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "werden wohl weiterhin komplexe Versuche durchführen.",
+        "sourceAnswer": "C",
+        "sourceGerman": "Ausschließlich Wissenschaftler c-werden wohl weiterhin komplexe Versuche durchführen.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          234
+        ]
       },
       {
         "number": "63",
-        "text": "Die Ergebnisse von Laien ...",
-        "german": "Die Ergebnisse von Laien ...",
+        "sourceNumber": "63",
+        "text": "Die Ergebnisse von Laien",
+        "german": "Die Ergebnisse von Laien",
         "chinese": "外行的研究成果大多源于认真细致的工作。",
-        "answer": "A",
-        "completion": "gehen meist aus gewissenhafter Arbeit hervor.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. gehen meist aus gewissenhafter Arbeit hervor.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. sind grundsätzlich falsch.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. werden nie genutzt.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "answer": "",
+        "answerText": "A. gehen meist aus gewissenhafter Arbeit hervor",
+        "completion": "gehen meist aus gewissenhafter Arbeit hervor",
+        "reviewGerman": "gehen meist aus gewissenhafter Arbeit hervor",
+        "sourceAnswer": "A",
+        "sourceGerman": "Die Ergebnisse von Laien a-gehen meist aus gewissenhafter Arbeit hervor",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          234
+        ]
       },
       {
         "number": "64",
-        "text": "In der Vergangenheit ...",
-        "german": "In der Vergangenheit ...",
+        "sourceNumber": "64",
+        "text": "In der Vergangenheit",
+        "german": "In der Vergangenheit",
         "chinese": "过去，业余研究者曾经做出过一些重大发现。",
-        "answer": "A",
+        "answer": "",
+        "answerText": "A. haben Hobbyforscher einige große Entdeckungen gemacht.",
         "completion": "haben Hobbyforscher einige große Entdeckungen gemacht.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. haben Hobbyforscher einige große Entdeckungen gemacht.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. gab es keine Hobbyforscher.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. waren Laien aus allen Projekten ausgeschlossen.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "haben Hobbyforscher einige große Entdeckungen gemacht.",
+        "sourceAnswer": "A",
+        "sourceGerman": "In der Vergangenheit a-haben Hobbyforscher einige große Entdeckungen gemacht.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          234
+        ]
       }
     ]
   },
   {
     "teil": "8",
     "title": "Astronaut",
-    "sourceText": "reviewed Excel: 听力第二部分_人工复核完整版.xlsx",
-    "mode": "hv2-choice",
+    "mode": "corpus-card",
+    "sourceText": "2026实时更新2026.9(腾讯文档实时更新）.pdf",
+    "source": "tencent-2026-09",
+    "sourcePages": [
+      234,
+      235
+    ],
     "questions": [
       {
         "number": "55",
-        "text": "Thomas Reiter ...",
-        "german": "Thomas Reiter ...",
+        "sourceNumber": "55",
+        "text": "Thomas Reiter",
+        "german": "Thomas Reiter",
         "chinese": "托马斯·赖特知道在太空飞行时自己会有什么感受。",
-        "answer": "C",
+        "answer": "",
+        "answerText": "C. weiß, wie er sich beim Raumflug fühlen wird.",
         "completion": "weiß, wie er sich beim Raumflug fühlen wird.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. fliegt zum ersten Mal ins All.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. hat Angst vor jeder Mission.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. weiß, wie er sich beim Raumflug fühlen wird.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "weiß, wie er sich beim Raumflug fühlen wird.",
+        "sourceAnswer": "C",
+        "sourceGerman": "Thomas Reiter c-weiß, wie er sich beim Raumflug fühlen wird.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          234
+        ]
       },
       {
         "number": "56",
-        "text": "Bei seinem ersten Raumflug ...",
-        "german": "Bei seinem ersten Raumflug ...",
+        "sourceNumber": "56",
+        "text": "Bei seinem ersten Raumflug .",
+        "german": "Bei seinem ersten Raumflug .",
         "chinese": "在他的首次太空飞行中，托马斯·赖特与同事在性格/类型上彼此相似。",
-        "answer": "C",
+        "answer": "",
+        "answerText": "C. waren sich Thomas Reiter und seine Kollegen von der Art her ähnlich.",
         "completion": "waren sich Thomas Reiter und seine Kollegen von der Art her ähnlich.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. arbeitete Thomas Reiter völlig allein.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. kannte er seine Kollegen kaum.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. waren sich Thomas Reiter und seine Kollegen von der Art her ähnlich.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "waren sich Thomas Reiter und seine Kollegen von der Art her ähnlich.",
+        "sourceAnswer": "C",
+        "sourceGerman": "Bei seinem ersten Raumflug . c-waren sich Thomas Reiter und seine Kollegen von der Art her ähnlich.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          235
+        ]
       },
       {
         "number": "57",
-        "text": "Jeder Astronaut ...",
-        "german": "Jeder Astronaut ...",
+        "sourceNumber": "57",
+        "text": "Jeder Astronaut",
+        "german": "Jeder Astronaut",
         "chinese": "每位宇航员在晚上都会收到第二天工作的相关信息。",
-        "answer": "B",
+        "answer": "",
+        "answerText": "B. bekommt abends Informationen zu seiner Arbeit am nächsten Tag.",
         "completion": "bekommt abends Informationen zu seiner Arbeit am nächsten Tag.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. entscheidet morgens spontan über seine Aufgaben.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. bekommt abends Informationen zu seiner Arbeit am nächsten Tag.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. arbeitet ohne Tagesplan.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "bekommt abends Informationen zu seiner Arbeit am nächsten Tag.",
+        "sourceAnswer": "B",
+        "sourceGerman": "Jeder Astronaut b-bekommt abends Informationen zu seiner Arbeit am nächsten Tag.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          235
+        ]
       },
       {
         "number": "58",
-        "text": "Arbeitsbesprechungen ...",
-        "german": "Arbeitsbesprechungen ...",
+        "sourceNumber": "58",
+        "text": "Arbeitsbesprechungen",
+        "german": "Arbeitsbesprechungen",
         "chinese": "工作例会会讨论当天发生的事情。",
-        "answer": "A",
+        "answer": "",
+        "answerText": "A. behandeln die Geschehnisse des Tages.",
         "completion": "behandeln die Geschehnisse des Tages.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. behandeln die Geschehnisse des Tages.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. finden nur vor dem Start statt.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. ersetzen das Training.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "behandeln die Geschehnisse des Tages.",
+        "sourceAnswer": "A",
+        "sourceGerman": "Arbeitsbesprechungen a-behandeln die Geschehnisse des Tages.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          235
+        ]
       },
       {
         "number": "59a",
-        "text": "Wer Astronaut werden will, ...",
-        "german": "Wer Astronaut werden will, ...",
-        "chinese": "有志成为宇航员的人，必须做好接受多年训练的准备。",
-        "answer": "A",
+        "sourceNumber": "59",
+        "text": "wer Astronaut werden will",
+        "german": "wer Astronaut werden will",
+        "chinese": "想成为宇航员的人必须做好接受多年训练的准备。",
+        "answer": "",
+        "answerText": "A. muss sich auf mehrjährige Trainings einstellen.",
         "completion": "muss sich auf mehrjährige Trainings einstellen.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. muss sich auf mehrjährige Trainings einstellen.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. kann nach wenigen Wochen starten.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. braucht keine besondere Vorbereitung.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "muss sich auf mehrjährige Trainings einstellen.",
+        "sourceAnswer": "A",
+        "sourceGerman": "wer Astronaut werden will a-muss sich auf mehrjährige Trainings einstellen.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          235
+        ]
       },
       {
         "number": "59b",
-        "text": "Wer Astronaut werden will, ...",
-        "german": "Wer Astronaut werden will, ...",
-        "chinese": "想成为宇航员，需要有坚韧不拔的毅力。",
-        "answer": "A",
-        "completion": "braucht Durchhaltevermögen.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. braucht Durchhaltevermögen.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. muss vor allem berühmt sein.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. sollte körperliches Training vermeiden.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "sourceNumber": "59",
+        "text": "Wer Astronaut werden will:",
+        "german": "Wer Astronaut werden will:",
+        "chinese": "想成为宇航员的人需要有坚持不懈的毅力。",
+        "answer": "",
+        "answerText": "A. braucht Durchhaltevermögen",
+        "completion": "braucht Durchhaltevermögen",
+        "reviewGerman": "braucht Durchhaltevermögen",
+        "sourceAnswer": "A",
+        "sourceGerman": "Wer Astronaut werden will: a-braucht Durchhaltevermögen",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          235
+        ]
       },
       {
         "number": "60",
-        "text": "Die Raumfahrt ...",
-        "german": "Die Raumfahrt ...",
+        "sourceNumber": "60",
+        "text": "Die Raumfahrt",
+        "german": "Die Raumfahrt",
         "chinese": "航天和其他领域一样，属于人类文化的一部分。",
-        "answer": "B",
+        "answer": "",
+        "answerText": "B. gehört wie anderes auch zur menschlichen Kultur.",
         "completion": "gehört wie anderes auch zur menschlichen Kultur.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. ist nur ein militärisches Projekt.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. gehört wie anderes auch zur menschlichen Kultur.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. hat keinen kulturellen Wert.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "gehört wie anderes auch zur menschlichen Kultur.",
+        "sourceAnswer": "B",
+        "sourceGerman": "Die Raumfahrt b-gehört wie anderes auch zur menschlichen Kultur.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          235
+        ]
       },
       {
         "number": "61a",
-        "text": "Für Thomas Reiter ist Raumfahrt ...",
-        "german": "Für Thomas Reiter ist Raumfahrt ...",
-        "chinese": "对托马斯·赖特而言，航天事业是人类进步的基础。",
-        "answer": "A",
+        "sourceNumber": "61",
+        "text": "für Thomas Reiter ist Raumfahrt",
+        "german": "für Thomas Reiter ist Raumfahrt",
+        "chinese": "对托马斯·赖特而言，航天是人类进步的基础。",
+        "answer": "",
+        "answerText": "A. eine Grundlage für den Fortschritt der Menschheit.",
         "completion": "eine Grundlage für den Fortschritt der Menschheit.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. eine Grundlage für den Fortschritt der Menschheit.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. eine reine Freizeitbeschäftigung.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. nur für wenige Experten wichtig.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "eine Grundlage für den Fortschritt der Menschheit.",
+        "sourceAnswer": "A",
+        "sourceGerman": "für Thomas Reiter ist Raumfahrt a-eine Grundlage für den Fortschritt der Menschheit.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          235
+        ]
       },
       {
         "number": "61b",
-        "text": "Erkundungsreisen sind ...",
-        "german": "Erkundungsreisen sind ...",
-        "chinese": "探索之旅是建设高度发达社会的先决条件。",
-        "answer": "C",
+        "sourceNumber": "61",
+        "text": "Erkundungsreisen",
+        "german": "Erkundungsreisen",
+        "chinese": "探险旅行是高度发达社会的先决条件。",
+        "answer": "",
+        "answerText": "C. Vorbedingung für eine hochentwickelte Gesellschaft.",
         "completion": "Vorbedingung für eine hochentwickelte Gesellschaft.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. ein Zeichen kulturellen Niedergangs.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. nur wirtschaftlich interessant.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. Vorbedingung für eine hochentwickelte Gesellschaft.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "Vorbedingung für eine hochentwickelte Gesellschaft.",
+        "sourceAnswer": "C",
+        "sourceGerman": "Erkundungsreisen c-Vorbedingung für eine hochentwickelte Gesellschaft.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          235
+        ]
       },
       {
         "number": "62a",
-        "text": "Thomas Reiter ...",
-        "german": "Thomas Reiter ...",
-        "chinese": "托马斯·赖特预计，在可预见的未来，人类也会开展前往其他行星的太空飞行。",
-        "answer": "C",
-        "completion": "erwartet, dass es in absehbarer Zukunft auch Raumfahrt zu anderen Planeten geben wird.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. hält Reisen zu anderen Planeten für ausgeschlossen.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. glaubt, die Raumfahrt werde bald enden.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. erwartet, dass es in absehbarer Zukunft auch Raumfahrt zu anderen Planeten geben wird.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "sourceNumber": "62",
+        "text": "Thomas Reiter",
+        "german": "Thomas Reiter",
+        "chinese": "托马斯·赖特预期在可预见的将来也会有飞往其他行星的航天任务。",
+        "answer": "",
+        "answerText": "C. erwartet, dass es in absehbarer Zukunft auch Raumfährt zu anderen Planeten geben wird.",
+        "completion": "erwartet, dass es in absehbarer Zukunft auch Raumfährt zu anderen Planeten geben wird.",
+        "reviewGerman": "erwartet, dass es in absehbarer Zukunft auch Raumfährt zu anderen Planeten geben wird.",
+        "sourceAnswer": "C",
+        "sourceGerman": "Thomas Reiter c-erwartet, dass es in absehbarer Zukunft auch Raumfährt zu anderen Planeten geben wird.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          235
+        ]
       },
       {
         "number": "62b",
-        "text": "Expeditionen zum Mars ...",
-        "german": "Expeditionen zum Mars ...",
-        "chinese": "火星探险计划应在不久的将来于国际空间站上进行准备。",
-        "answer": "B",
-        "completion": "sollen in näherer Zukunft auf der Raumfahrt ISS vorbereitet werden.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. sind bereits vollständig abgeschlossen.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. sollen in näherer Zukunft auf der Raumfahrt ISS vorbereitet werden.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. werden nie mit der ISS verbunden.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "sourceNumber": "62",
+        "text": "Expeditionen zum Mars:",
+        "german": "Expeditionen zum Mars:",
+        "chinese": "前往火星的探险应在不久的将来通过国际空间站的航天活动加以准备。",
+        "answer": "",
+        "answerText": "B. sollen in näher Zukunft auf der Raumfahrt ISS vorbereitet werden",
+        "completion": "sollen in näher Zukunft auf der Raumfahrt ISS vorbereitet werden",
+        "reviewGerman": "sollen in näher Zukunft auf der Raumfahrt ISS vorbereitet werden",
+        "sourceAnswer": "B",
+        "sourceGerman": "Expeditionen zum Mars: b-sollen in näher Zukunft auf der Raumfahrt ISS vorbereitet werden",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          235
+        ]
       },
       {
         "number": "63a",
-        "text": "Raumfahrt ...",
-        "german": "Raumfahrt ...",
-        "chinese": "航天事业应该向每个人开放。",
-        "answer": "C",
+        "sourceNumber": "63",
+        "text": "Raumfahrt 63",
+        "german": "Raumfahrt 63",
+        "chinese": "航天应当对所有人都可及。",
+        "answer": "",
+        "answerText": "C. sollte für jeden zugänglich sein.",
         "completion": "sollte für jeden zugänglich sein.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. sollte nur Militärs offenstehen.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. sollte geheim gehalten werden.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. sollte für jeden zugänglich sein.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "sollte für jeden zugänglich sein.",
+        "sourceAnswer": "C",
+        "sourceGerman": "Raumfahrt 63 c-sollte für jeden zugänglich sein.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          235
+        ]
       },
       {
         "number": "63b",
-        "text": "Raumfahrt ...",
-        "german": "Raumfahrt ...",
-        "chinese": "航天事业应该向更广泛的人群开放。",
-        "answer": "C",
-        "completion": "sollte breiten Schichten zugänglich gemacht werden.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. sollte nur Astronauten erklärt werden.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. sollte nicht öffentlich diskutiert werden.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. sollte breiten Schichten zugänglich gemacht werden.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "sourceNumber": "63",
+        "text": "Raumfahrt",
+        "german": "Raumfahrt",
+        "chinese": "航天应让广大人群能够接触到。",
+        "answer": "",
+        "answerText": "C. sollte breiten Schichten zugänglich gemacht werden",
+        "completion": "sollte breiten Schichten zugänglich gemacht werden",
+        "reviewGerman": "sollte breiten Schichten zugänglich gemacht werden",
+        "sourceAnswer": "C",
+        "sourceGerman": "Raumfahrt c-sollte breiten Schichten zugänglich gemacht werden",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          235
+        ]
       },
       {
         "number": "64",
-        "text": "Wer das Astronauten-Training absolviert hat, ...",
-        "german": "Wer das Astronauten-Training absolviert hat, ...",
+        "sourceNumber": "64",
+        "text": "Wer das Astronauten-Training absolviert hat.",
+        "german": "Wer das Astronauten-Training absolviert hat.",
         "chinese": "完成宇航员训练的人还必须在竞争中胜过另一位候选人。",
-        "answer": "B",
+        "answer": "",
+        "answerText": "B. muss sich noch gegen einen anderen Kandidaten behaupten.",
         "completion": "muss sich noch gegen einen anderen Kandidaten behaupten.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. bekommt automatisch eine Mission.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. muss sich noch gegen einen anderen Kandidaten behaupten.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. darf sofort Kommandant werden.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "muss sich noch gegen einen anderen Kandidaten behaupten.",
+        "sourceAnswer": "B",
+        "sourceGerman": "Wer das Astronauten-Training absolviert hat. b-muss sich noch gegen einen anderen Kandidaten behaupten.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          235
+        ]
       }
     ]
   },
   {
     "teil": "9",
     "title": "Gärten",
-    "sourceText": "reviewed Excel: 听力第二部分_人工复核完整版.xlsx",
-    "mode": "hv2-choice",
+    "mode": "corpus-card",
+    "sourceText": "2026实时更新2026.9(腾讯文档实时更新）.pdf",
+    "source": "tencent-2026-09",
+    "sourcePages": [
+      235,
+      236
+    ],
     "questions": [
       {
         "number": "55",
-        "text": "Herr Martinek ...",
-        "german": "Herr Martinek ...",
+        "sourceNumber": "55",
+        "text": "Herr Martinek",
+        "german": "Herr Martinek",
         "chinese": "马蒂内克先生并不想要一座自己的花园。",
-        "answer": "C",
+        "answer": "",
+        "answerText": "C. wünscht sich keinen eigenen Garten.",
         "completion": "wünscht sich keinen eigenen Garten.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. besitzt mehrere Schlossgärten.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. arbeitet als Landschaftsgärtner.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. wünscht sich keinen eigenen Garten.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "wünscht sich keinen eigenen Garten.",
+        "sourceAnswer": "C",
+        "sourceGerman": "Herr Martinek c-wünscht sich keinen eigenen Garten.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          235
+        ]
       },
       {
         "number": "56",
-        "text": "Die österreichische Schlossanlage ...",
-        "german": "Die österreichische Schlossanlage ...",
+        "sourceNumber": "56",
+        "text": "Österreichische Schlossanlage",
+        "german": "Österreichische Schlossanlage",
         "chinese": "这座奥地利的宫殿园区如今对公众开放参观。",
-        "answer": "B",
-        "completion": "ist heute öffentlich für Besucher zugänglich.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. ist für Besucher geschlossen.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. ist heute öffentlich für Besucher zugänglich.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. wurde in ein Bürogebäude umgewandelt.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "answer": "",
+        "answerText": "B. ist heute öffentlich für Besucher zugänglich",
+        "completion": "ist heute öffentlich für Besucher zugänglich",
+        "reviewGerman": "ist heute öffentlich für Besucher zugänglich",
+        "sourceAnswer": "B",
+        "sourceGerman": "Österreichische Schlossanlage b-ist heute öffentlich für Besucher zugänglich",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          236
+        ]
       },
       {
         "number": "57",
-        "text": "Ella Martinek ...",
-        "german": "Ella Martinek ...",
+        "sourceNumber": "57",
+        "text": "Ella Martinek",
+        "german": "Ella Martinek",
         "chinese": "艾拉·马蒂内克与他人一起（/借助某些方式）设计了这处园林。",
-        "answer": "B",
-        "completion": "gestaltete die Gartenanlage mit.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. verkaufte die Gartenanlage.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. gestaltete die Gartenanlage mit.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. schrieb nur einen Roman darüber.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "answer": "",
+        "answerText": "B. gestaltete die Gartenanlage mit..",
+        "completion": "gestaltete die Gartenanlage mit..",
+        "reviewGerman": "gestaltete die Gartenanlage mit..",
+        "sourceAnswer": "B",
+        "sourceGerman": "Ella Martinek b-gestaltete die Gartenanlage mit..",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          236
+        ]
       },
       {
         "number": "58",
-        "text": "An Gärten begeistert Herrn Martinek ...",
-        "german": "An Gärten begeistert Herrn Martinek ...",
+        "sourceNumber": "58",
+        "text": "An Gärten begeistert Herr Martinek",
+        "german": "An Gärten begeistert Herr Martinek",
         "chinese": "让马蒂内克先生着迷的是花园的文化史背景。",
-        "answer": "A",
-        "completion": "der kulturgeschichtliche Hintergrund.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. der kulturgeschichtliche Hintergrund.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. vor allem die Gartenarbeit.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. nur der Verkauf von Pflanzen.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "answer": "",
+        "answerText": "A. des Kulturgeschichtlichen Hintergrund.",
+        "completion": "des Kulturgeschichtlichen Hintergrund.",
+        "reviewGerman": "des Kulturgeschichtlichen Hintergrund.",
+        "sourceAnswer": "A",
+        "sourceGerman": "An Gärten begeistert Herr Martinek a-des Kulturgeschichtlichen Hintergrund.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          236
+        ]
       },
       {
         "number": "59",
-        "text": "Im Laufe der Zeit ...",
-        "german": "Im Laufe der Zeit ...",
+        "sourceNumber": "59",
+        "text": "Im Laufe Zeit",
+        "german": "Im Laufe Zeit",
         "chinese": "随着时间推移，花园曾承担过不同的用途与意义。",
-        "answer": "A",
-        "completion": "dienten Gärten unterschiedlichen Zwecken.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. dienten Gärten unterschiedlichen Zwecken.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. hatten Gärten immer dieselbe Funktion.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. wurden Gärten nie verändert.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "answer": "",
+        "answerText": "A. dienten Gärten unterschiedlichen Zweck Bedeutung.",
+        "completion": "dienten Gärten unterschiedlichen Zweck Bedeutung.",
+        "reviewGerman": "dienten Gärten unterschiedlichen Zweck Bedeutung.",
+        "sourceAnswer": "A",
+        "sourceGerman": "Im Laufe Zeit a-dienten Gärten unterschiedlichen Zweck Bedeutung.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          236
+        ]
       },
       {
         "number": "60",
-        "text": "Kartoffeln ...",
-        "german": "Kartoffeln ...",
+        "sourceNumber": "60",
+        "text": "Kartoffeln",
+        "german": "Kartoffeln",
         "chinese": "马铃薯（马铃薯作物）最初是由科学家栽培的。",
-        "answer": "C",
-        "completion": "wurden zuerst von Wissenschaftlern angebaut.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. wurden zuerst als Zierpflanzen verboten.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. waren immer nur Tierfutter.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. wurden zuerst von Wissenschaftlern angebaut.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "answer": "",
+        "answerText": "C. wurden zuerst von Wissenschaftler angebaut..",
+        "completion": "wurden zuerst von Wissenschaftler angebaut..",
+        "reviewGerman": "wurden zuerst von Wissenschaftler angebaut..",
+        "sourceAnswer": "C",
+        "sourceGerman": "Kartoffeln c-wurden zuerst von Wissenschaftler angebaut..",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          236
+        ]
       },
       {
         "number": "61",
-        "text": "Von Tomaten weiß man, dass sie ...",
-        "german": "Von Tomaten weiß man, dass sie ...",
+        "sourceNumber": "61",
+        "text": "Von Tomaten weiß man. dass sie",
+        "german": "Von Tomaten weiß man. dass sie",
         "chinese": "据悉，西红柿（番茄）曾被用作药物。",
-        "answer": "A",
-        "completion": "als Heilmittel verwendet wurden.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. als Heilmittel verwendet wurden.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. nie in Europa bekannt waren.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. ausschließlich giftig galten.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "answer": "",
+        "answerText": "A. als Heilmittel verwende wurde.",
+        "completion": "als Heilmittel verwende wurde.",
+        "reviewGerman": "als Heilmittel verwende wurde.",
+        "sourceAnswer": "A",
+        "sourceGerman": "Von Tomaten weiß man. dass sie a-als Heilmittel verwende wurde.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          236
+        ]
       },
       {
         "number": "62",
-        "text": "Die Orangerie ...",
-        "german": "Die Orangerie ...",
-        "chinese": "桔园温室”（Orangerie）的作用是保护植物免受寒冷。",
-        "answer": "A",
+        "sourceNumber": "62",
+        "text": "Die Orangerie",
+        "german": "Die Orangerie",
+        "chinese": "“桔园温室”（Orangerie）的作用是保护植物免受寒冷。",
+        "answer": "",
+        "answerText": "A. diente dem Schutz der Pflanzen vor Kälte.",
         "completion": "diente dem Schutz der Pflanzen vor Kälte.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. diente dem Schutz der Pflanzen vor Kälte.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. war ein Raum für Konzerte.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. wurde nur für Bücher genutzt.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "diente dem Schutz der Pflanzen vor Kälte.",
+        "sourceAnswer": "A",
+        "sourceGerman": "Die Orangerie a- diente dem Schutz der Pflanzen vor Kälte.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          236
+        ]
       },
       {
         "number": "63",
-        "text": "Das neue Buch des Studiogastes ...",
-        "german": "Das neue Buch des Studiogastes ...",
+        "sourceNumber": "63",
+        "text": "das neue Buch des Studiogastes",
+        "german": "das neue Buch des Studiogastes",
         "chinese": "这位演播室嘉宾的新书也对重要术语作了说明。",
-        "answer": "B",
-        "completion": "erläutert auch wichtige Begriffe.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. enthält keine Erklärungen.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. erläutert auch wichtige Begriffe.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. ist nur ein Bildband.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "answer": "",
+        "answerText": "B. erläuterte auch wichtige begriffe --",
+        "completion": "erläuterte auch wichtige begriffe --",
+        "reviewGerman": "erläuterte auch wichtige begriffe --",
+        "sourceAnswer": "B",
+        "sourceGerman": "das neue Buch des Studiogastes b-erläuterte auch wichtige begriffe --",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          236
+        ]
       },
       {
         "number": "64",
+        "sourceNumber": "64",
         "text": "Was sollen die Anrufer machen?",
         "german": "Was sollen die Anrufer machen?",
         "chinese": "来电者需要说出（/认出）一个特定的词。",
-        "answer": "B",
-        "completion": "ein bestimmtes Wort wissen.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. einen Garten beschreiben.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. ein bestimmtes Wort wissen.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. eine Eintrittskarte kaufen.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "answer": "",
+        "answerText": "B. eine Bestimmte Wort wissen.",
+        "completion": "eine Bestimmte Wort wissen.",
+        "reviewGerman": "eine Bestimmte Wort wissen.",
+        "sourceAnswer": "B",
+        "sourceGerman": "Was sollen die Anrufer machen? b-eine Bestimmte Wort wissen.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          236
+        ]
       }
     ]
   },
   {
     "teil": "10",
     "title": "Finja",
-    "sourceText": "reviewed Excel: 听力第二部分_人工复核完整版.xlsx",
-    "mode": "hv2-choice",
+    "mode": "corpus-card",
+    "sourceText": "2026实时更新2026.9(腾讯文档实时更新）.pdf",
+    "source": "tencent-2026-09",
+    "sourcePages": [
+      236,
+      237
+    ],
     "questions": [
       {
         "number": "55",
-        "text": "Finja ...",
-        "german": "Finja ...",
+        "sourceNumber": "55",
+        "text": "Finja",
+        "german": "Finja",
         "chinese": "芬娅对大学以外的学生生活没有兴趣。",
-        "answer": "B",
+        "answer": "",
+        "answerText": "B. hat kein Interesse am Studentenleben außerhalb der Uni.",
         "completion": "hat kein Interesse am Studentenleben außerhalb der Uni.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. nimmt an vielen Studentenpartys teil.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. hat kein Interesse am Studentenleben außerhalb der Uni.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. studiert nur wegen ihrer Freunde.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "hat kein Interesse am Studentenleben außerhalb der Uni.",
+        "sourceAnswer": "B",
+        "sourceGerman": "Finja b- hat kein Interesse am Studentenleben außerhalb der Uni.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          236
+        ]
       },
       {
         "number": "56",
-        "text": "Finjas Eltern ...",
-        "german": "Finjas Eltern ...",
+        "sourceNumber": "56",
+        "text": "Finjas Eltern",
+        "german": "Finjas Eltern",
         "chinese": "芬娅的父母过了好几年才意识到她的特殊之处。",
-        "answer": "B",
+        "answer": "",
+        "answerText": "B. erkannten Finjas Besonderheit erst nach einigen Jahren.",
         "completion": "erkannten Finjas Besonderheit erst nach einigen Jahren.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. kannten Finjas Besonderheit sofort.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. erkannten Finjas Besonderheit erst nach einigen Jahren.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. wollten keine Beratung annehmen.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "erkannten Finjas Besonderheit erst nach einigen Jahren.",
+        "sourceAnswer": "B",
+        "sourceGerman": "Finjas Eltern b- erkannten Finjas Besonderheit erst nach einigen Jahren.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          236
+        ]
       },
       {
         "number": "57",
-        "text": "Finja ...",
-        "german": "Finja ...",
+        "sourceNumber": "57",
+        "text": "Finja",
+        "german": "Finja",
         "chinese": "芬娅最初对幼儿园里的活动感兴趣。",
-        "answer": "C",
+        "answer": "",
+        "answerText": "C. war zuerst an den Aktivitäten im Kindergarten interessiert.",
         "completion": "war zuerst an den Aktivitäten im Kindergarten interessiert.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. wollte nie in den Kindergarten gehen.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. interessierte sich nur für Musik.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. war zuerst an den Aktivitäten im Kindergarten interessiert.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "war zuerst an den Aktivitäten im Kindergarten interessiert.",
+        "sourceAnswer": "C",
+        "sourceGerman": "Finja C -war zuerst an den Aktivitäten im Kindergarten interessiert.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          236
+        ]
       },
       {
         "number": "58",
-        "text": "Die Familienberaterin meinte, Finja ...",
-        "german": "Die Familienberaterin meinte, Finja ...",
+        "sourceNumber": "58",
+        "text": "Die Familienberaterin meinte, Finja",
+        "german": "Die Familienberaterin meinte, Finja",
         "chinese": "家庭咨询师认为，芬娅可能是高智商儿童。",
-        "answer": "B",
+        "answer": "",
+        "answerText": "B. sei vermutlich hochbegabt.",
         "completion": "sei vermutlich hochbegabt.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. solle die Schule wechseln.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. sei vermutlich hochbegabt.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. brauche keine besondere Förderung.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "sei vermutlich hochbegabt.",
+        "sourceAnswer": "B",
+        "sourceGerman": "Die Familienberaterin meinte, Finja b-sei vermutlich hochbegabt.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          236
+        ]
       },
       {
         "number": "59",
-        "text": "Finjas Eltern ...",
-        "german": "Finjas Eltern ...",
+        "sourceNumber": "59",
+        "text": "Finjas Eltern",
+        "german": "Finjas Eltern",
         "chinese": "芬娅的父母起初对“高智商”这一话题持排斥态度。",
-        "answer": "B",
+        "answer": "",
+        "answerText": "B. reagierten zuerst ablehnend auf das Thema Hochbegabung.",
         "completion": "reagierten zuerst ablehnend auf das Thema Hochbegabung.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. waren sofort begeistert.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. reagierten zuerst ablehnend auf das Thema Hochbegabung.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. sprachen sofort mit Journalisten.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "reagierten zuerst ablehnend auf das Thema Hochbegabung.",
+        "sourceAnswer": "B",
+        "sourceGerman": "Finjas Eltern b- reagierten zuerst ablehnend auf das Thema Hochbegabung.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          236
+        ]
       },
       {
         "number": "60",
-        "text": "Finja konnte als Kind ...",
-        "german": "Finja konnte als Kind ...",
+        "sourceNumber": "60",
+        "text": "Finja konnte als Kind",
+        "german": "Finja konnte als Kind",
         "chinese": "芬娅在孩童时期特别擅长解答思维类（智力）游戏。",
-        "answer": "A",
+        "answer": "",
+        "answerText": "A. besonders gut Denkspiele lösen.",
         "completion": "besonders gut Denkspiele lösen.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. besonders gut Denkspiele lösen.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. besonders gut singen.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. außergewöhnlich schnell laufen.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "besonders gut Denkspiele lösen.",
+        "sourceAnswer": "A",
+        "sourceGerman": "Finja konnte als Kind a- besonders gut Denkspiele lösen.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          237
+        ]
       },
       {
         "number": "61",
-        "text": "Hochbegabte Kinder ...",
-        "german": "Hochbegabte Kinder ...",
+        "sourceNumber": "61",
+        "text": "Hochbegabte Kinder",
+        "german": "Hochbegabte Kinder",
         "chinese": "高智商儿童与同龄人相比往往有不同的兴趣。",
-        "answer": "C",
+        "answer": "",
+        "answerText": "C. haben andere Interessen als Gleichaltrige.",
         "completion": "haben andere Interessen als Gleichaltrige.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. haben immer dieselben Interessen.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. spielen nie mit anderen Kindern.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. haben andere Interessen als Gleichaltrige.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "haben andere Interessen als Gleichaltrige.",
+        "sourceAnswer": "C",
+        "sourceGerman": "Hochbegabte Kinder C- haben andere Interessen als Gleichaltrige.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          237
+        ]
       },
       {
         "number": "62",
-        "text": "Frühzeitiges Lesen ...",
-        "german": "Frühzeitiges Lesen ...",
+        "sourceNumber": "62",
+        "text": "Frühzeitiges Lesen",
+        "german": "Frühzeitiges Lesen",
         "chinese": "早会读书并不总是高智商的指征。",
-        "answer": "B",
+        "answer": "",
+        "answerText": "B. deutet nicht immer auf eine Hochbegabung hin.",
         "completion": "deutet nicht immer auf eine Hochbegabung hin.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. beweist immer Hochbegabung.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. deutet nicht immer auf eine Hochbegabung hin.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. verhindert Hochbegabung.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "deutet nicht immer auf eine Hochbegabung hin.",
+        "sourceAnswer": "B",
+        "sourceGerman": "Frühzeitiges Lesen b- deutet nicht immer auf eine Hochbegabung hin.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          237
+        ]
       },
       {
         "number": "63",
-        "text": "Experten ...",
-        "german": "Experten ...",
+        "sourceNumber": "63",
+        "text": "Experten",
+        "german": "Experten",
         "chinese": "专家建议把孩子彼此进行比较。",
-        "answer": "A",
+        "answer": "",
+        "answerText": "A. raten dazu, Kinder miteinander zu vergleichen.",
         "completion": "raten dazu, Kinder miteinander zu vergleichen.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. raten dazu, Kinder miteinander zu vergleichen.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. verbieten jeden Vergleich.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. empfehlen, Hochbegabung zu ignorieren.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "raten dazu, Kinder miteinander zu vergleichen.",
+        "sourceAnswer": "A",
+        "sourceGerman": "Experten a-raten dazu, Kinder miteinander zu vergleichen.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          237
+        ]
       },
       {
         "number": "64",
-        "text": "Als Finja sich für ihr Studienfach entschied, ...",
-        "german": "Als Finja sich für ihr Studienfach entschied, ...",
+        "sourceNumber": "64",
+        "text": "Als Finja sich für ihr Studienfach entschied,",
+        "german": "Als Finja sich für ihr Studienfach entschied,",
         "chinese": "当芬娅选择专业时，她的科学兴趣是首要考虑因素。",
-        "answer": "C",
-        "completion": "standen ihre wissenschaftlichen Interessen im Vordergrund.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. entschieden allein ihre Eltern.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. ging es vor allem um Freizeit.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. standen ihre wissenschaftlichen Interessen im Vordergrund.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "answer": "",
+        "answerText": "C. standen ihre wissenschaftlichen Interessen im Vordergrund",
+        "completion": "standen ihre wissenschaftlichen Interessen im Vordergrund",
+        "reviewGerman": "standen ihre wissenschaftlichen Interessen im Vordergrund",
+        "sourceAnswer": "C",
+        "sourceGerman": "Als Finja sich für ihr Studienfach entschied, C- standen ihre wissenschaftlichen Interessen im Vordergrund",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          237
+        ]
       }
     ]
   },
   {
     "teil": "11",
     "title": "Landflucht / Metropolen",
-    "sourceText": "reviewed Excel: 听力第二部分_人工复核完整版.xlsx",
-    "mode": "hv2-choice",
+    "mode": "corpus-card",
+    "sourceText": "2026实时更新2026.9(腾讯文档实时更新）.pdf",
+    "source": "tencent-2026-09",
+    "sourcePages": [
+      237,
+      238
+    ],
     "questions": [
       {
         "number": "55",
-        "text": "Frau Mentor ...",
-        "german": "Frau Mentor ...",
+        "sourceNumber": "55",
+        "text": "Frau Mentor",
+        "german": "Frau Mentor",
         "chinese": "女士关注城市作为生活环境的问题。",
-        "answer": "B",
-        "completion": "befasst sich mit der Stadt als Lebensumfeld.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. befasst sich ausschließlich mit Dörfern.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. befasst sich mit der Stadt als Lebensumfeld.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. arbeitet als Expertin für Landwirtschaft.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel",
-        "note": "PDF标绿行未显示a/b/c字母，未强行判断原选项位置。"
+        "answer": "",
+        "answerText": "befasst sich mit der Stadt als Lebensumfeld.Mentor",
+        "completion": "befasst sich mit der Stadt als Lebensumfeld.Mentor",
+        "reviewGerman": "befasst sich mit der Stadt als Lebensumfeld.Mentor",
+        "sourceAnswer": null,
+        "sourceGerman": "Frau Mentor - befasst sich mit der Stadt als Lebensumfeld.Mentor",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          237
+        ]
       },
       {
         "number": "56",
-        "text": "Für den Studiogast gehört zu einer Stadt ...",
-        "german": "Für den Studiogast gehört zu einer Stadt ...",
+        "sourceNumber": "56",
+        "text": "Für den Studiogast gehrt zu einer Stadt",
+        "german": "Für den Studiogast gehrt zu einer Stadt",
         "chinese": "对这位演播室嘉宾来说，城市应包含人们之间对某些工作的分工。",
-        "answer": "C",
+        "answer": "",
+        "answerText": "die Aufteilung bestimmter Arbeiten unter den Menschen.",
         "completion": "die Aufteilung bestimmter Arbeiten unter den Menschen.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. eine möglichst kleine Einwohnerzahl.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. das Fehlen jeder Verwaltung.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. die Aufteilung bestimmter Arbeiten unter den Menschen.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel",
-        "note": "PDF标绿行未显示a/b/c字母，未强行判断原选项位置。"
+        "reviewGerman": "die Aufteilung bestimmter Arbeiten unter den Menschen.",
+        "sourceAnswer": null,
+        "sourceGerman": "Für den Studiogast gehrt zu einer Stadt - die Aufteilung bestimmter Arbeiten unter den Menschen.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          237
+        ]
       },
       {
         "number": "57",
-        "text": "In Uruk, der Mutter aller Metropolen, ...",
-        "german": "In Uruk, der Mutter aller Metropolen, ...",
+        "sourceNumber": "57",
+        "text": "in Urukder, Mutter aller Metropolen,",
+        "german": "in Urukder, Mutter aller Metropolen,",
         "chinese": "在乌鲁克——“万城之母”——当时已经有行之有效的行政管理。",
-        "answer": "A",
+        "answer": "",
+        "answerText": "gab es bereits eine wirksame Verwaltung.",
         "completion": "gab es bereits eine wirksame Verwaltung.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. gab es bereits eine wirksame Verwaltung.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. gab es noch keine Organisation.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. lebten nur einzelne Familien.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel",
-        "note": "PDF标绿行未显示a/b/c字母，未强行判断原选项位置。"
+        "reviewGerman": "gab es bereits eine wirksame Verwaltung.",
+        "sourceAnswer": null,
+        "sourceGerman": "in Urukder, Mutter aller Metropolen, - gab es bereits eine wirksame Verwaltung.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          237
+        ]
       },
       {
         "number": "58",
-        "text": "In Zukunft wird Arbeit ...",
-        "german": "In Zukunft wird Arbeit ...",
+        "sourceNumber": "58",
+        "text": "in Zukunft wird Arbeit",
+        "german": "in Zukunft wird Arbeit",
         "chinese": "未来，工作将更侧重于服务业。",
-        "answer": "C",
-        "completion": "sich stärker auf Dienstleistungen konzentrieren.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. vollständig in die Landwirtschaft zurückkehren.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. nur noch in Fabriken stattfinden.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. sich stärker auf Dienstleistungen konzentrieren.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel",
-        "note": "PDF标绿行未显示a/b/c字母，未强行判断原选项位置。"
+        "answer": "",
+        "answerText": "sich starker auf Dienstleistungen konzentrieren.",
+        "completion": "sich starker auf Dienstleistungen konzentrieren.",
+        "reviewGerman": "sich starker auf Dienstleistungen konzentrieren.",
+        "sourceAnswer": null,
+        "sourceGerman": "in Zukunft wird Arbeit - sich starker auf Dienstleistungen konzentrieren.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          237
+        ]
       },
       {
         "number": "59",
-        "text": "Produktionsbetriebe werden in Zukunft vermutlich ...",
-        "german": "Produktionsbetriebe werden in Zukunft vermutlich ...",
+        "sourceNumber": "59",
+        "text": "Produktionsbetriebe werden in Zukunft vermutlich",
+        "german": "Produktionsbetriebe werden in Zukunft vermutlich",
         "chinese": "未来，生产企业在特定情况下很可能选择把地点设在城市。",
-        "answer": "A",
-        "completion": "unter bestimmten Umständen städtische Standorte wählen.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. unter bestimmten Umständen städtische Standorte wählen.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. Städte grundsätzlich meiden.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. nur noch im Ausland produzieren.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel",
-        "note": "PDF标绿行未显示a/b/c字母，未强行判断原选项位置。"
+        "answer": "",
+        "answerText": "unter bestimmten Umstanden stadtische Standorte wahlen.",
+        "completion": "unter bestimmten Umstanden stadtische Standorte wahlen.",
+        "reviewGerman": "unter bestimmten Umstanden stadtische Standorte wahlen.",
+        "sourceAnswer": null,
+        "sourceGerman": "Produktionsbetriebe werden in Zukunft vermutlich - unter bestimmten Umstanden stadtische Standorte wahlen.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          237
+        ]
       },
       {
         "number": "60",
-        "text": "Leicht verderbliche Lebensmittel ...",
-        "german": "Leicht verderbliche Lebensmittel ...",
+        "sourceNumber": "60",
+        "text": "Leicht verderbliche Lebensmittel",
+        "german": "Leicht verderbliche Lebensmittel",
         "chinese": "易腐食品在19世纪中叶之前主要是在城市里生产的。",
-        "answer": "B",
-        "completion": "wurden bis zur Mitte des 19. Jahrhunderts vorwiegend in den Städten produziert.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. wurden früher immer importiert.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. wurden bis zur Mitte des 19. Jahrhunderts vorwiegend in den Städten produziert.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. wurden nie in Städten hergestellt.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel",
-        "note": "PDF标绿行未显示a/b/c字母，未强行判断原选项位置。"
+        "answer": "",
+        "answerText": "wurden bis zur Mitte des 19 Jahrhunderts vorwiegend in den Stadten produziert.",
+        "completion": "wurden bis zur Mitte des 19 Jahrhunderts vorwiegend in den Stadten produziert.",
+        "reviewGerman": "wurden bis zur Mitte des 19 Jahrhunderts vorwiegend in den Stadten produziert.",
+        "sourceAnswer": null,
+        "sourceGerman": "Leicht verderbliche Lebensmittel - wurden bis zur Mitte des 19 Jahrhunderts vorwiegend in den Stadten produziert.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          238
+        ]
       },
       {
         "number": "61",
-        "text": "In Zukunft ...",
-        "german": "In Zukunft ...",
-        "chinese": "未来，城市中不以家 庭为单位生活的人数将会上升。",
-        "answer": "B",
-        "completion": "nimmt die Zahl der nicht im Familienverband Lebenden in den Städten zu.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. werden alle Menschen wieder in Großfamilien leben.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. nimmt die Zahl der nicht im Familienverband Lebenden in den Städten zu.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. verschwinden Einzelhaushalte aus Städten.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel",
-        "note": "PDF标绿行未显示a/b/c字母，未强行判断原选项位置。"
+        "sourceNumber": "61",
+        "text": "in Zukunft.",
+        "german": "in Zukunft.",
+        "chinese": "未来，城市中不以家庭为单位生活的人数将会上升。",
+        "answer": "",
+        "answerText": "nimmt die Zahl der nicht im Familienverband Lebenden in den Stadten.",
+        "completion": "nimmt die Zahl der nicht im Familienverband Lebenden in den Stadten.",
+        "reviewGerman": "nimmt die Zahl der nicht im Familienverband Lebenden in den Stadten.",
+        "sourceAnswer": null,
+        "sourceGerman": "in Zukunft. - nimmt die Zahl der nicht im Familienverband Lebenden in den Stadten.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          238
+        ]
       },
       {
         "number": "62",
-        "text": "Bei Großprojekten ...",
-        "german": "Bei Großprojekten ...",
-        "chinese": "在大型项目 中，市民也应当能够投入自有资金。",
-        "answer": "A",
-        "completion": "sollten Bürgerinnen und Bürger auch eigenes Geld einbringen können.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. sollten Bürgerinnen und Bürger auch eigenes Geld einbringen können.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. sollten Bürger nicht beteiligt werden.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. dürfen nur Unternehmen entscheiden.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel",
-        "note": "PDF标绿行未显示a/b/c字母，未强行判断原选项位置。"
+        "sourceNumber": "62",
+        "text": "Bei Großprojekten",
+        "german": "Bei Großprojekten",
+        "chinese": "在大型项目中，市民也应当能够投入自有资金。",
+        "answer": "",
+        "answerText": "sollten Burgerinnen und Burger auch eigenes Geld einbringen konnen.",
+        "completion": "sollten Burgerinnen und Burger auch eigenes Geld einbringen konnen.",
+        "reviewGerman": "sollten Burgerinnen und Burger auch eigenes Geld einbringen konnen.",
+        "sourceAnswer": null,
+        "sourceGerman": "Bei Großprojekten - sollten Burgerinnen und Burger auch eigenes Geld einbringen konnen.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          238
+        ]
       },
       {
         "number": "63",
-        "text": "In den Innenstädten ...",
-        "german": "In den Innenstädten ...",
-        "chinese": "在市中 心，公共交通的使用频率远高于私家车。",
-        "answer": "C",
-        "completion": "werden öffentliche Verkehrsmittel weit häufiger genutzt als private Pkw.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. werden private Pkw häufiger genutzt als Busse.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. gibt es kaum öffentliche Verkehrsmittel.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. werden öffentliche Verkehrsmittel weit häufiger genutzt als private Pkw.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel",
-        "note": "PDF标绿行未显示a/b/c字母，未强行判断原选项位置。"
+        "sourceNumber": "63",
+        "text": "in den lnnenstadten",
+        "german": "in den lnnenstadten",
+        "chinese": "在市中心，公共交通的使用频率远高于私家车。",
+        "answer": "",
+        "answerText": "werden öffentliche Verkehrsmittel weit haufiger genutzt als private Pkw.",
+        "completion": "werden öffentliche Verkehrsmittel weit haufiger genutzt als private Pkw.",
+        "reviewGerman": "werden öffentliche Verkehrsmittel weit haufiger genutzt als private Pkw.",
+        "sourceAnswer": null,
+        "sourceGerman": "in den lnnenstadten - werden öffentliche Verkehrsmittel weit haufiger genutzt als private Pkw.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          238
+        ]
       },
       {
         "number": "64",
-        "text": "Künftige Aufgabe der Stadtplanung wird sein, ...",
-        "german": "Künftige Aufgabe der Stadtplanung wird sein, ...",
-        "chinese": "在市中心，公共交通的使用频率远高于私家车。",
-        "answer": "C",
-        "completion": "die strukturellen Voraussetzungen für Gemeinschafts- und Verleihmodelle zu etablieren.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. den Autoverkehr stärker zu fördern.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. alle Verleihmodelle zu verbieten.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. die strukturellen Voraussetzungen für Gemeinschafts- und Verleihmodelle zu etablieren.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel",
-        "note": "PDF标绿行未显示a/b/c字母，未强行判断原选项位置。"
+        "sourceNumber": "64",
+        "text": "Kunftige Aufgabe der Stadtplanung wird sein",
+        "german": "Kunftige Aufgabe der Stadtplanung wird sein",
+        "chinese": "- 城市规划未来的一项任务将是——为共享和租赁模式建立结构性基础。",
+        "answer": "",
+        "answerText": "die strukturellen Voraussetzungenfür Gemeinschafts - und Verleihmodelle zu etablieren.",
+        "completion": "die strukturellen Voraussetzungenfür Gemeinschafts - und Verleihmodelle zu etablieren.",
+        "reviewGerman": "die strukturellen Voraussetzungenfür Gemeinschafts - und Verleihmodelle zu etablieren.",
+        "sourceAnswer": null,
+        "sourceGerman": "Kunftige Aufgabe der Stadtplanung wird sein - die strukturellen Voraussetzungenfür Gemeinschafts - und Verleihmodelle zu etablieren.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          238
+        ]
       }
     ]
   },
   {
     "teil": "12",
     "title": "Beruf wechseln",
-    "sourceText": "reviewed Excel: 听力第二部分_人工复核完整版.xlsx",
-    "mode": "hv2-choice",
+    "mode": "corpus-card",
+    "sourceText": "2026实时更新2026.9(腾讯文档实时更新）.pdf",
+    "source": "tencent-2026-09",
+    "sourcePages": [
+      238,
+      239
+    ],
     "questions": [
       {
         "number": "55",
-        "text": "Der Hauptgrund für Unzufriedenheit im Beruf ist laut Herrn Dr. Dahlbeck ...",
-        "german": "Der Hauptgrund für Unzufriedenheit im Beruf ist laut Herrn Dr. Dahlbeck ...",
+        "sourceNumber": "55",
+        "text": "Der Hauptgrund für Unzufriedenheit im Beruf ist laut Herrn Dr. Dahlbeck",
+        "german": "Der Hauptgrund für Unzufriedenheit im Beruf ist laut Herrn Dr. Dahlbeck",
         "chinese": "根据Dahlbeck博士的说法，职业不满意的首要原因是公司内部缺乏认可。",
-        "answer": "B",
+        "answer": "",
+        "answerText": "fehlende Anerkennung im Unternehmen.",
         "completion": "fehlende Anerkennung im Unternehmen.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. ein zu langer Arbeitsweg.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. fehlende Anerkennung im Unternehmen.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. zu viele Urlaubstage.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel",
-        "note": "PDF标绿行未显示a/b/c字母，未强行判断原选项位置。"
+        "reviewGerman": "fehlende Anerkennung im Unternehmen.",
+        "sourceAnswer": null,
+        "sourceGerman": "Der Hauptgrund für Unzufriedenheit im Beruf ist laut Herrn Dr. Dahlbeck fehlende Anerkennung im Unternehmen.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          238
+        ]
       },
       {
         "number": "56",
-        "text": "Berufsanfänger fürchten oft, dass ...",
-        "german": "Berufsanfänger fürchten oft, dass ...",
+        "sourceNumber": "56",
+        "text": "Berufsanfänger fürchten oft, dass",
+        "german": "Berufsanfänger fürchten oft, dass",
         "chinese": "初入职场者常常担心，换职业会引起雇主的质疑。",
-        "answer": "A",
+        "answer": "",
+        "answerText": "ein Berufswechsel bei Arbeitgebern Skepsis weckt.",
         "completion": "ein Berufswechsel bei Arbeitgebern Skepsis weckt.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. ein Berufswechsel bei Arbeitgebern Skepsis weckt.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. ein Wechsel immer Vorteile bringt.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. Arbeitgeber Wechsel nie bemerken.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel",
-        "note": "PDF标绿行未显示a/b/c字母，未强行判断原选项位置。"
+        "reviewGerman": "ein Berufswechsel bei Arbeitgebern Skepsis weckt.",
+        "sourceAnswer": null,
+        "sourceGerman": "Berufsanfänger fürchten oft, dass ein Berufswechsel bei Arbeitgebern Skepsis weckt.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          238
+        ]
       },
       {
         "number": "57",
-        "text": "Herr Dr. Dahlbeck rät, ...",
-        "german": "Herr Dr. Dahlbeck rät, ...",
-        "chinese": "博士建议，在重新开始一份职业之前要预留一段思考时间。",
-        "answer": "C",
-        "completion": "vor einem beruflichen Neuanfang Bedenkzeit einzuplanen.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. sofort ohne Plan zu kündigen.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. jede berufliche Veränderung zu vermeiden.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. vor einem beruflichen Neuanfang Bedenkzeit einzuplanen.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel",
-        "note": "PDF标绿行未显示a/b/c字母，未强行判断原选项位置。"
+        "sourceNumber": "57",
+        "text": "Herr Dr. Dahlbeck rät,",
+        "german": "Herr Dr. Dahlbeck rät,",
+        "chinese": "Dahlbeck博士建议，在重新开始一份职业之前要预留一段思考时间。",
+        "answer": "",
+        "answerText": "weil er vor einem beruflichen Neuanfang Bedenkzeit einzuplanen.",
+        "completion": "weil er vor einem beruflichen Neuanfang Bedenkzeit einzuplanen.",
+        "reviewGerman": "weil er vor einem beruflichen Neuanfang Bedenkzeit einzuplanen.",
+        "sourceAnswer": null,
+        "sourceGerman": "Herr Dr. Dahlbeck rät, weil er vor einem beruflichen Neuanfang Bedenkzeit einzuplanen.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          238
+        ]
       },
       {
         "number": "58",
-        "text": "Herr Dr. Dahlbeck hat sich zu einem Berufswechsel entschlossen, weil er ...",
-        "german": "Herr Dr. Dahlbeck hat sich zu einem Berufswechsel entschlossen, weil er ...",
-        "chinese": "博士之所以决定转行，是因为他随着时间推移出现了明显的压力症状。",
-        "answer": "A",
+        "sourceNumber": "58",
+        "text": "Herr Dr. Dahlbesk hat sich Zu einem Berufswechsel entschlossen,",
+        "german": "Herr Dr. Dahlbesk hat sich Zu einem Berufswechsel entschlossen,",
+        "chinese": "Dahlbeck博士之所以决定转行，是因为他随着时间推移出现了明显的压力症状。",
+        "answer": "",
+        "answerText": "mit der Zeit deutliche Stresssymptome entwickelte.",
         "completion": "mit der Zeit deutliche Stresssymptome entwickelte.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. mit der Zeit deutliche Stresssymptome entwickelte.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. von Anfang an selbstständig sein wollte.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. seine Ausbildung abbrach.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel",
-        "note": "PDF标绿行未显示a/b/c字母，未强行判断原选项位置。"
+        "reviewGerman": "mit der Zeit deutliche Stresssymptome entwickelte.",
+        "sourceAnswer": null,
+        "sourceGerman": "Herr Dr. Dahlbesk hat sich Zu einem Berufswechsel entschlossen, mit der Zeit deutliche Stresssymptome entwickelte.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          239
+        ]
       },
       {
         "number": "59",
-        "text": "Nachdem Herr Dr. Dahlbeck seine Stelle gekündigt hatte, ...",
-        "german": "Nachdem Herr Dr. Dahlbeck seine Stelle gekündigt hatte, ...",
+        "sourceNumber": "59",
+        "text": "Nachdem Herr Dr. Dahlbeck seine Stelle gekündigt hatte.",
+        "german": "Nachdem Herr Dr. Dahlbeck seine Stelle gekündigt hatte.",
         "chinese": "在辞去原职位之后，Dahlbeck博士着手启动自己的创业。",
-        "answer": "B",
+        "answer": "",
+        "answerText": "leitete er seine Existenzgründung in die Wege.",
         "completion": "leitete er seine Existenzgründung in die Wege.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. nahm er ein langes Sabbatjahr.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. leitete er seine Existenzgründung in die Wege.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. kehrte er sofort in dieselbe Firma zurück.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel",
-        "note": "PDF标绿行未显示a/b/c字母，未强行判断原选项位置。"
+        "reviewGerman": "leitete er seine Existenzgründung in die Wege.",
+        "sourceAnswer": null,
+        "sourceGerman": "Nachdem Herr Dr. Dahlbeck seine Stelle gekündigt hatte. leitete er seine Existenzgründung in die Wege.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          239
+        ]
       },
       {
         "number": "60",
-        "text": "Herrn Dr. Dahlbecks Kunden schätzen ihn wegen ...",
-        "german": "Herrn Dr. Dahlbecks Kunden schätzen ihn wegen ...",
-        "chinese": "博士的客户之所以欣赏他，是因为他的专业知识。",
-        "answer": "C",
-        "completion": "seiner Kenntnisse.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. seiner günstigen Werbung.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. seiner politischen Kontakte.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. seiner Kenntnisse.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel",
-        "note": "PDF标绿行未显示a/b/c字母，未强行判断原选项位置。"
+        "sourceNumber": "60",
+        "text": "Herrn Dr. Dahlbecks Kunden schätzen ihn",
+        "german": "Herrn Dr. Dahlbecks Kunden schätzen ihn",
+        "chinese": "Dahlbeck博士的客户之所以欣赏他，是因为他的专业知识。",
+        "answer": "",
+        "answerText": "wegen seiner Kenntnisse.",
+        "completion": "wegen seiner Kenntnisse.",
+        "reviewGerman": "wegen seiner Kenntnisse.",
+        "sourceAnswer": null,
+        "sourceGerman": "Herrn Dr. Dahlbecks Kunden schätzen ihn wegen seiner Kenntnisse.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          239
+        ]
       },
       {
         "number": "61",
-        "text": "Viele von Herrn Dr. Dahlbecks Kunden ...",
-        "german": "Viele von Herrn Dr. Dahlbecks Kunden ...",
-        "chinese": "博士的许多客户敢于进行彻底的职业重启。",
-        "answer": "C",
+        "sourceNumber": "61",
+        "text": "Viele von Herrn Dr. Dahlbecks Kunden",
+        "german": "Viele von Herrn Dr. Dahlbecks Kunden",
+        "chinese": "Dahlbeck博士的许多客户敢于进行彻底的职业重启。",
+        "answer": "",
+        "answerText": "wagen einen kompletten Neuanfang.",
         "completion": "wagen einen kompletten Neuanfang.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. wollen nur mehr Urlaub.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. lehnen Veränderungen ab.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. wagen einen kompletten Neuanfang.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel",
-        "note": "PDF标绿行未显示a/b/c字母，未强行判断原选项位置。"
+        "reviewGerman": "wagen einen kompletten Neuanfang.",
+        "sourceAnswer": null,
+        "sourceGerman": "Viele von Herrn Dr. Dahlbecks Kunden wagen einen kompletten Neuanfang.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          239
+        ]
       },
       {
         "number": "62",
-        "text": "Herr Dr. Dahlbeck weist darauf hin, dass in Pflegeberufen ...",
-        "german": "Herr Dr. Dahlbeck weist darauf hin, dass in Pflegeberufen ...",
-        "chinese": "博士指出，在护理类职业中，有经验的应聘者往往更受优待。",
-        "answer": "B",
-        "completion": "erfahrene Bewerber oft bevorzugt werden.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. nur Berufsanfänger eingestellt werden.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. erfahrene Bewerber oft bevorzugt werden.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. Erfahrung gar nicht zählt.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel",
-        "note": "PDF标绿行未显示a/b/c字母，未强行判断原选项位置。"
+        "sourceNumber": "62",
+        "text": "Herr Dr. Dahlbeck weist darauf hin, dass",
+        "german": "Herr Dr. Dahlbeck weist darauf hin, dass",
+        "chinese": "Dahlbeck博士指出，在护理类职业中，有经验的应聘者往往更受优待。",
+        "answer": "",
+        "answerText": "in Pflegeberufen erfahrene Bewerber oft bevorzugt werden.",
+        "completion": "in Pflegeberufen erfahrene Bewerber oft bevorzugt werden.",
+        "reviewGerman": "in Pflegeberufen erfahrene Bewerber oft bevorzugt werden.",
+        "sourceAnswer": null,
+        "sourceGerman": "Herr Dr. Dahlbeck weist darauf hin, dass in Pflegeberufen erfahrene Bewerber oft bevorzugt werden.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          239
+        ]
       },
       {
         "number": "63",
-        "text": "Unternehmen reagieren skeptisch auf Jobwechsler, weil diese ...",
-        "german": "Unternehmen reagieren skeptisch auf Jobwechsler, weil diese ...",
+        "sourceNumber": "63",
+        "text": "Unternehmen reagieren skeptisch auf Jobwechsler, weil",
+        "german": "Unternehmen reagieren skeptisch auf Jobwechsler, weil",
         "chinese": "企业对跳槽者持怀疑态度，因为这些人可能在不久后再次辞职。",
-        "answer": "A",
-        "completion": "nach kurzer Zeit wieder kündigen könnten.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. nach kurzer Zeit wieder kündigen könnten.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. immer schlechter ausgebildet sind.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. keine Bewerbungen schreiben.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel",
-        "note": "PDF标绿行未显示a/b/c字母，未强行判断原选项位置。"
+        "answer": "",
+        "answerText": "diese nach kurzer Zeit wieder kündigen könnten.",
+        "completion": "diese nach kurzer Zeit wieder kündigen könnten.",
+        "reviewGerman": "diese nach kurzer Zeit wieder kündigen könnten.",
+        "sourceAnswer": null,
+        "sourceGerman": "Unternehmen reagieren skeptisch auf Jobwechsler, weil diese nach kurzer Zeit wieder kündigen könnten.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          239
+        ]
       },
       {
         "number": "64",
-        "text": "Herr Dr. Dahlbeck rät Bewerbern, im Bewerbungsschreiben ...",
-        "german": "Herr Dr. Dahlbeck rät Bewerbern, im Bewerbungsschreiben ...",
-        "chinese": "博士建议应聘者在求职信中省略转行的具体理由。",
-        "answer": "A",
-        "completion": "die Gründe für die Neuorientierung wegzulassen.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. die Gründe für die Neuorientierung wegzulassen.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. private Konflikte ausführlich zu schildern.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. den früheren Arbeitgeber zu kritisieren.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel",
-        "note": "PDF标绿行未显示a/b/c字母，未强行判断原选项位置。"
+        "sourceNumber": "64",
+        "text": "Herr Dr. Dahlbeck rät Bewerbern,",
+        "german": "Herr Dr. Dahlbeck rät Bewerbern,",
+        "chinese": "Dahlbeck博士建议应聘者在求职信中省略转行的具体理由。",
+        "answer": "",
+        "answerText": "im Bewerbungsschreiben die Gründe für die Neuorientierung wegzulassen.",
+        "completion": "im Bewerbungsschreiben die Gründe für die Neuorientierung wegzulassen.",
+        "reviewGerman": "im Bewerbungsschreiben die Gründe für die Neuorientierung wegzulassen.",
+        "sourceAnswer": null,
+        "sourceGerman": "Herr Dr. Dahlbeck rät Bewerbern, im Bewerbungsschreiben die Gründe für die Neuorientierung wegzulassen.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          239
+        ]
       }
     ]
   },
   {
     "teil": "13",
     "title": "Mode",
-    "sourceText": "reviewed Excel: 听力第二部分_人工复核完整版.xlsx",
-    "mode": "hv2-choice",
+    "mode": "corpus-card",
+    "sourceText": "2026实时更新2026.9(腾讯文档实时更新）.pdf",
+    "source": "tencent-2026-09",
+    "sourcePages": [
+      239,
+      240
+    ],
     "questions": [
       {
         "number": "55",
-        "text": "Nadja Müller ...",
-        "german": "Nadja Müller ...",
+        "sourceNumber": "55",
+        "text": "Nadja Müller",
+        "german": "Nadja Müller",
         "chinese": "纳德娅·米勒负责挑选用于销售的服装款式。",
-        "answer": "C",
+        "answer": "",
+        "answerText": "wählt Mode für den Verkauf aus.",
         "completion": "wählt Mode für den Verkauf aus.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. entwirft Haute-Couture selbst.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. arbeitet als Modefotografin.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. wählt Mode für den Verkauf aus.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel",
-        "note": "PDF标绿行未显示a/b/c字母，未强行判断原选项位置。"
+        "reviewGerman": "wählt Mode für den Verkauf aus.",
+        "sourceAnswer": null,
+        "sourceGerman": "Nadja Müller wählt Mode für den Verkauf aus.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          239
+        ]
       },
       {
         "number": "56",
-        "text": "Die berühmten Modehäuser ...",
-        "german": "Die berühmten Modehäuser ...",
-        "chinese": "纳德娅·米勒负责挑选用于销售的服装款式。",
-        "answer": "B",
+        "sourceNumber": "56",
+        "text": "Die berühmten Modehäuser",
+        "german": "Die berühmten Modehäuser",
+        "chinese": "著名的时装公司只销售少量自己的高级定制服装款式",
+        "answer": "",
+        "answerText": "verkaufen nur wenige ihrer Haute-Couture-Modelle.",
         "completion": "verkaufen nur wenige ihrer Haute-Couture-Modelle.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. verkaufen ausschließlich im Internet.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. verkaufen nur wenige ihrer Haute-Couture-Modelle.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. produzieren keine Accessoires.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel",
-        "note": "PDF标绿行未显示a/b/c字母，未强行判断原选项位置。"
+        "reviewGerman": "verkaufen nur wenige ihrer Haute-Couture-Modelle.",
+        "sourceAnswer": null,
+        "sourceGerman": "Die berühmten Modehäuser verkaufen nur wenige ihrer Haute-Couture-Modelle.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          239
+        ]
       },
       {
         "number": "57",
-        "text": "Bekannte Modeschöpfer ...",
-        "german": "Bekannte Modeschöpfer ...",
+        "sourceNumber": "57",
+        "text": "Bekannte Modeschöpfer verdanken ihren finanziellen Erfolg dem Verkauf von Accessoires.",
+        "german": "Bekannte Modeschöpfer verdanken ihren finanziellen Erfolg dem Verkauf von Accessoires.",
         "chinese": "知名服装设计师的经济成功主要得益于配饰的销售。",
-        "answer": "A",
-        "completion": "verdanken ihren finanziellen Erfolg dem Verkauf von Accessoires.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. verdanken ihren finanziellen Erfolg dem Verkauf von Accessoires.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. verdienen vor allem mit Eintrittskarten.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. verkaufen nie Alltagsprodukte.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel",
-        "note": "PDF标绿行未显示a/b/c字母，未强行判断原选项位置。"
+        "answer": "",
+        "answerText": "Bekannte Modeschöpfer verdanken ihren finanziellen Erfolg dem Verkauf von Accessoires.",
+        "completion": "",
+        "reviewGerman": "Bekannte Modeschöpfer verdanken ihren finanziellen Erfolg dem Verkauf von Accessoires.",
+        "sourceAnswer": null,
+        "sourceGerman": "Bekannte Modeschöpfer verdanken ihren finanziellen Erfolg dem Verkauf von Accessoires.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          239
+        ]
       },
       {
         "number": "58",
-        "text": "In der Modebranche ...",
-        "german": "In der Modebranche ...",
+        "sourceNumber": "58",
+        "text": "In der Modebranche",
+        "german": "In der Modebranche",
         "chinese": "在时尚行业，经济效益是决定性因素。",
-        "answer": "B",
+        "answer": "",
+        "answerText": "ist Wirtschaftlichkeit der entscheidende Faktor.",
         "completion": "ist Wirtschaftlichkeit der entscheidende Faktor.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. spielt Geld keine Rolle.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. ist Wirtschaftlichkeit der entscheidende Faktor.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. zählt ausschließlich Kunst.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel",
-        "note": "PDF标绿行未显示a/b/c字母，未强行判断原选项位置。"
+        "reviewGerman": "ist Wirtschaftlichkeit der entscheidende Faktor.",
+        "sourceAnswer": null,
+        "sourceGerman": "In der Modebranche ist Wirtschaftlichkeit der entscheidende Faktor.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          239,
+          240
+        ]
       },
       {
         "number": "59",
-        "text": "Nadja Müller ...",
-        "german": "Nadja Müller ...",
+        "sourceNumber": "59",
+        "text": "Nadja Mutter",
+        "german": "Nadja Mutter",
         "chinese": "纳德娅·穆特从她在一家服装制造商的工作经验中获益。",
-        "answer": "C",
+        "answer": "",
+        "answerText": "profitiert von ihren Erfahrungen bei einem Modefabrikanten.",
         "completion": "profitiert von ihren Erfahrungen bei einem Modefabrikanten.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. hat nie in der Modebranche gearbeitet.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. entscheidet nur spontan.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. profitiert von ihren Erfahrungen bei einem Modefabrikanten.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel",
-        "note": "PDF标绿行未显示a/b/c字母，未强行判断原选项位置。"
+        "reviewGerman": "profitiert von ihren Erfahrungen bei einem Modefabrikanten.",
+        "sourceAnswer": null,
+        "sourceGerman": "Nadja Mutter profitiert von ihren Erfahrungen bei einem Modefabrikanten.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          240
+        ]
       },
       {
         "number": "60",
-        "text": "Nadja Müller ...",
-        "german": "Nadja Müller ...",
+        "sourceNumber": "60",
+        "text": "Nadja Miller",
+        "german": "Nadja Miller",
         "chinese": "纳德娅·米勒对畅销款有非常准确的直觉。",
-        "answer": "A",
-        "completion": "hat ein untrügliches Gespür für gut verkäufliche Modelle.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. hat ein untrügliches Gespür für gut verkäufliche Modelle.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. ignoriert verkäufliche Modelle.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. wählt nur persönliche Lieblingsstücke.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel",
-        "note": "PDF标绿行未显示a/b/c字母，未强行判断原选项位置。"
+        "answer": "",
+        "answerText": "hat ein untrügliches Gespür für gut verkäuflicheModelle.",
+        "completion": "hat ein untrügliches Gespür für gut verkäuflicheModelle.",
+        "reviewGerman": "hat ein untrügliches Gespür für gut verkäuflicheModelle.",
+        "sourceAnswer": null,
+        "sourceGerman": "Nadja Miller hat ein untrügliches Gespür für gut verkäuflicheModelle.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          240
+        ]
       },
       {
         "number": "61",
-        "text": "Sie trifft ihre Entscheidungen auch aufgrund ...",
-        "german": "Sie trifft ihre Entscheidungen auch aufgrund ...",
+        "sourceNumber": "61",
+        "text": "Sie trifft ihre Entscheidungen",
+        "german": "Sie trifft ihre Entscheidungen",
         "chinese": "她也会根据以往的销售数据来作出决定。",
-        "answer": "A",
-        "completion": "früherer Verkaufszahlen.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. früherer Verkaufszahlen.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. privater Freundschaften.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. politischer Empfehlungen.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel",
-        "note": "PDF标绿行未显示a/b/c字母，未强行判断原选项位置。"
+        "answer": "",
+        "answerText": "auch aufgrund früherer Verkaufszahlen.",
+        "completion": "auch aufgrund früherer Verkaufszahlen.",
+        "reviewGerman": "auch aufgrund früherer Verkaufszahlen.",
+        "sourceAnswer": null,
+        "sourceGerman": "Sie trifft ihre Entscheidungen auch aufgrund früherer Verkaufszahlen.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          240
+        ]
       },
       {
         "number": "62",
-        "text": "Die Lieferanten ...",
-        "german": "Die Lieferanten ...",
+        "sourceNumber": "62",
+        "text": "Die Lieferanten",
+        "german": "Die Lieferanten",
         "chinese": "这些供应商的公司总部设在欧洲。",
-        "answer": "C",
+        "answer": "",
+        "answerText": "haben ihren Firmensitz in Europa.",
         "completion": "haben ihren Firmensitz in Europa.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. sitzen ausschließlich in Asien.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. sind unbekannte Einzelpersonen.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. haben ihren Firmensitz in Europa.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel",
-        "note": "PDF标绿行未显示a/b/c字母，未强行判断原选项位置。"
+        "reviewGerman": "haben ihren Firmensitz in Europa.",
+        "sourceAnswer": null,
+        "sourceGerman": "Die Lieferanten - haben ihren Firmensitz in Europa.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          240
+        ]
       },
       {
         "number": "63",
-        "text": "Die deutsche Modeindustrie ...",
-        "german": "Die deutsche Modeindustrie ...",
+        "sourceNumber": "63",
+        "text": "Die deutsche Modeindustrie",
+        "german": "Die deutsche Modeindustrie",
         "chinese": "德国时装业正处于上升趋势。",
-        "answer": "B",
+        "answer": "",
+        "answerText": "befindet sich in einem Aufwärtstrend.",
         "completion": "befindet sich in einem Aufwärtstrend.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. steht kurz vor dem Ende.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. befindet sich in einem Aufwärtstrend.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. produziert nur Kinderkleidung.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel",
-        "note": "PDF标绿行未显示a/b/c字母，未强行判断原选项位置。"
+        "reviewGerman": "befindet sich in einem Aufwärtstrend.",
+        "sourceAnswer": null,
+        "sourceGerman": "Die deutsche Modeindustrie befindet sich in einem Aufwärtstrend.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          240
+        ]
       },
       {
         "number": "64",
-        "text": "Nadja Müller ...",
-        "german": "Nadja Müller ...",
+        "sourceNumber": "64",
+        "text": "Nadja Müller",
+        "german": "Nadja Müller",
         "chinese": "纳德娅·米勒借助社交媒体来把握流行趋势。",
-        "answer": "B",
-        "completion": "erfasst Trends mithilfe der sozialen Medien.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. nutzt keine sozialen Medien.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. erfasst Trends mithilfe der sozialen Medien.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. liest nur alte Kataloge.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel",
-        "note": "PDF标绿行未显示a/b/c字母，未强行判断原选项位置。"
+        "answer": "",
+        "answerText": "erfasst Trends mithilfe der Sozialen Medien",
+        "completion": "erfasst Trends mithilfe der Sozialen Medien",
+        "reviewGerman": "erfasst Trends mithilfe der Sozialen Medien",
+        "sourceAnswer": null,
+        "sourceGerman": "Nadja Müller erfasst Trends mithilfe der Sozialen Medien",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          240
+        ]
       }
     ]
   },
   {
     "teil": "14",
     "title": "Fahrrad",
-    "sourceText": "reviewed Excel: 听力第二部分_人工复核完整版.xlsx",
-    "mode": "hv2-choice",
+    "mode": "corpus-card",
+    "sourceText": "2026实时更新2026.9(腾讯文档实时更新）.pdf",
+    "source": "tencent-2026-09",
+    "sourcePages": [
+      240,
+      241
+    ],
     "questions": [
       {
         "number": "55",
-        "text": "Dr. Julia Henzel ...",
-        "german": "Dr. Julia Henzel ...",
+        "sourceNumber": "55",
+        "text": "Dr. Julia Henzel",
+        "german": "Dr. Julia Henzel",
         "chinese": "朱莉娅·亨策尔博士不常用自行车去上班。",
-        "answer": "A",
+        "answer": "",
+        "answerText": "A. nutzt das Fahrrad nicht oft für den Weg zur Arbeit.",
         "completion": "nutzt das Fahrrad nicht oft für den Weg zur Arbeit.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. nutzt das Fahrrad nicht oft für den Weg zur Arbeit.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. fährt immer mit dem Fahrrad zur Arbeit.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. besitzt kein Fahrrad.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "nutzt das Fahrrad nicht oft für den Weg zur Arbeit.",
+        "sourceAnswer": "A",
+        "sourceGerman": "Dr. Julia Henzel a nutzt das Fahrrad nicht oft für den Weg zur Arbeit.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          240
+        ]
       },
       {
         "number": "56",
-        "text": "Als Julia Henzel mit ihrer Doktorarbeit begann, ...",
-        "german": "Als Julia Henzel mit ihrer Doktorarbeit begann, ...",
+        "sourceNumber": "56",
+        "text": "Als Julia Henzel mit ihrer Doktorarbeit begann,",
+        "german": "Als Julia Henzel mit ihrer Doktorarbeit begann,",
         "chinese": "当朱莉娅·亨策尔开始撰写博士论文时，她心里还想着另一个研究重点。",
-        "answer": "B",
-        "completion": "schwebte ihr noch ein anderer Forschungsschwerpunkt vor.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. hatte sie das Fahrradthema schon abgeschlossen.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. schwebte ihr noch ein anderer Forschungsschwerpunkt vor.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. wollte sie nicht promovieren.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "answer": "",
+        "answerText": "B. schwebte ihr noch ein anderer Forschungsschwerpunkt",
+        "completion": "schwebte ihr noch ein anderer Forschungsschwerpunkt",
+        "reviewGerman": "schwebte ihr noch ein anderer Forschungsschwerpunkt",
+        "sourceAnswer": "B",
+        "sourceGerman": "Als Julia Henzel mit ihrer Doktorarbeit begann, b- schwebte ihr noch ein anderer Forschungsschwerpunkt",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          240
+        ]
       },
       {
         "number": "57",
-        "text": "Dr. Julia Henzel weist darauf hin, dass ...",
-        "german": "Dr. Julia Henzel weist darauf hin, dass ...",
+        "sourceNumber": "57",
+        "text": "Dr. Julia Hensel weist darauf hin, dass",
+        "german": "Dr. Julia Hensel weist darauf hin, dass",
         "chinese": "朱莉娅·亨策尔博士指出，自行车在社会层面的用途也值得讨论。",
-        "answer": "B",
+        "answer": "",
+        "answerText": "B. Fahrräder auch für gesellschaftliche Zwecke der Rede wert sind.",
         "completion": "Fahrräder auch für gesellschaftliche Zwecke der Rede wert sind.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. Fahrräder nur sportlich interessant sind.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. Fahrräder auch für gesellschaftliche Zwecke der Rede wert sind.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. Fahrräder keine Rolle im Alltag spielen.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "Fahrräder auch für gesellschaftliche Zwecke der Rede wert sind.",
+        "sourceAnswer": "B",
+        "sourceGerman": "Dr. Julia Hensel weist darauf hin, dass b) Fahrräder auch für gesellschaftliche Zwecke der Rede wert sind.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          240,
+          241
+        ]
       },
       {
         "number": "58",
-        "text": "Damit mehr Autofahrer auf das Fahrrad umsteigen, müssen ...",
-        "german": "Damit mehr Autofahrer auf das Fahrrad umsteigen, müssen ...",
+        "sourceNumber": "58",
+        "text": "Damit mehr Autofahrer auf das Fahrrad umsteigen, müssen",
+        "german": "Damit mehr Autofahrer auf das Fahrrad umsteigen, müssen",
         "chinese": "为了让更多开车的人改骑自行车，必须改善城市的自行车出行条件。",
-        "answer": "B",
+        "answer": "",
+        "answerText": "B. in Städten die Bedingungen für den Radverkehr verbessert werden.",
         "completion": "in Städten die Bedingungen für den Radverkehr verbessert werden.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. mehr Parkplätze für Autos gebaut werden.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. in Städten die Bedingungen für den Radverkehr verbessert werden.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. Radwege in Städten reduziert werden.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "in Städten die Bedingungen für den Radverkehr verbessert werden.",
+        "sourceAnswer": "B",
+        "sourceGerman": "Damit mehr Autofahrer auf das Fahrrad umsteigen, müssen b) in Städten die Bedingungen für den Radverkehr verbessert werden.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          241
+        ]
       },
       {
         "number": "59",
-        "text": "Damit sich die Verkehrssituation in Städten verbessert, sollte man ...",
-        "german": "Damit sich die Verkehrssituation in Städten verbessert, sollte man ...",
+        "sourceNumber": "59",
+        "text": "Damit sich die Verkehrssituation in Städten verbessert, sollte man",
+        "german": "Damit sich die Verkehrssituation in Städten verbessert, sollte man",
         "chinese": "为了改善城市交通状况，应当降低城市道路的最高限速。",
-        "answer": "A",
+        "answer": "",
+        "answerText": "A. die Höchstgeschwindigkeit in Städten senken.",
         "completion": "die Höchstgeschwindigkeit in Städten senken.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. die Höchstgeschwindigkeit in Städten senken.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. Autofahren in Städten beschleunigen.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. Radfahren in Innenstädten verbieten.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "die Höchstgeschwindigkeit in Städten senken.",
+        "sourceAnswer": "A",
+        "sourceGerman": "Damit sich die Verkehrssituation in Städten verbessert, sollte man a) die Höchstgeschwindigkeit in Städten senken.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          241
+        ]
       },
       {
         "number": "60",
-        "text": "Um Kinder zum Radfahren zu motivieren, ...",
-        "german": "Um Kinder zum Radfahren zu motivieren, ...",
+        "sourceNumber": "60",
+        "text": "Um Kinder zum Radfahren zu motivieren,",
+        "german": "Um Kinder zum Radfahren zu motivieren,",
         "chinese": "要激励孩子骑车，父母的榜样作用尤为重要。",
-        "answer": "C",
-        "completion": "ist das Vorbild der Eltern besonders wichtig.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. sind teure Fahrräder entscheidend.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. sollte man Fahrradunterricht abschaffen.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. ist das Vorbild der Eltern besonders wichtig.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "answer": "",
+        "answerText": "C. Ist das Vorbild der Eltern besonders wichtig.",
+        "completion": "Ist das Vorbild der Eltern besonders wichtig.",
+        "reviewGerman": "Ist das Vorbild der Eltern besonders wichtig.",
+        "sourceAnswer": "C",
+        "sourceGerman": "Um Kinder zum Radfahren zu motivieren, C)Ist das Vorbild der Eltern besonders wichtig.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          241
+        ]
       },
       {
         "number": "61",
-        "text": "Dr. Julia Henzel meint, dass der Fahrradunterricht ...",
-        "german": "Dr. Julia Henzel meint, dass der Fahrradunterricht ...",
+        "sourceNumber": "61",
+        "text": "Dr. Julia Henzel meint, das der Fahrradunterricht",
+        "german": "Dr. Julia Henzel meint, das der Fahrradunterricht",
         "chinese": "朱莉娅·亨策尔博士认为，自行车教学应当扩展到更多内容。",
-        "answer": "A",
-        "completion": "um verschiedene Inhalte erweitert werden sollte.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. um verschiedene Inhalte erweitert werden sollte.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. nur theoretisch bleiben sollte.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. nicht mehr notwendig ist.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "answer": "",
+        "answerText": "A. Um verschiedene Inhalte erweitert werden sollte",
+        "completion": "Um verschiedene Inhalte erweitert werden sollte",
+        "reviewGerman": "Um verschiedene Inhalte erweitert werden sollte",
+        "sourceAnswer": "A",
+        "sourceGerman": "Dr. Julia Henzel meint, das der Fahrradunterricht A-Um verschiedene Inhalte erweitert werden sollte",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          241
+        ]
       },
       {
         "number": "62",
-        "text": "Dr. Julia Henzel findet es ärgerlich, dass ...",
-        "german": "Dr. Julia Henzel findet es ärgerlich, dass ...",
+        "sourceNumber": "62",
+        "text": "Dr. Julia Henzel findet es ärgerlich, dass",
+        "german": "Dr. Julia Henzel findet es ärgerlich, dass",
         "chinese": "朱莉娅·亨策尔博士对乡村地区公共交通建设不完善感到不满。",
-        "answer": "C",
+        "answer": "",
+        "answerText": "C. der öffentliche Nahverkehr auf dem Land schlecht ausgebaut ist.",
         "completion": "der öffentliche Nahverkehr auf dem Land schlecht ausgebaut ist.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. es auf dem Land zu viele Bahnhöfe gibt.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. Kinder zu oft begleitet werden.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. der öffentliche Nahverkehr auf dem Land schlecht ausgebaut ist.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "der öffentliche Nahverkehr auf dem Land schlecht ausgebaut ist.",
+        "sourceAnswer": "C",
+        "sourceGerman": "Dr. Julia Henzel findet es ärgerlich, dass c-der öffentliche Nahverkehr auf dem Land schlecht ausgebaut ist.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          241
+        ]
       },
       {
         "number": "63",
-        "text": "Dr. Julia Henzel empfiehlt, dass ...",
-        "german": "Dr. Julia Henzel empfiehlt, dass ...",
+        "sourceNumber": "63",
+        "text": "Dr. Julia Henzel empfiehlt, dass",
+        "german": "Dr. Julia Henzel empfiehlt, dass",
         "chinese": "朱莉娅·亨策尔博士建议家长们组成拼车（共乘）小组。",
-        "answer": "A",
-        "completion": "die Eltern Fahrgemeinschaften bilden.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. die Eltern Fahrgemeinschaften bilden.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. Eltern ihre Kinder immer allein fahren lassen.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. Schulen den Schulweg nicht beachten.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "answer": "",
+        "answerText": "A. Die Eltern Fahrgemeinschaften bilden.",
+        "completion": "Die Eltern Fahrgemeinschaften bilden.",
+        "reviewGerman": "Die Eltern Fahrgemeinschaften bilden.",
+        "sourceAnswer": "A",
+        "sourceGerman": "Dr. Julia Henzel empfiehlt, dass A -Die Eltern Fahrgemeinschaften bilden.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          241
+        ]
       },
       {
         "number": "64",
-        "text": "Dr. Julia Henzel plant, ...",
-        "german": "Dr. Julia Henzel plant, ...",
+        "sourceNumber": "64",
+        "text": "Dr. Julia Henzel plant,",
+        "german": "Dr. Julia Henzel plant,",
         "chinese": "朱莉娅·亨策尔博士计划继续从事科研工作。",
-        "answer": "A",
+        "answer": "",
+        "answerText": "A. weiter in der Forschung zu arbeiten.",
         "completion": "weiter in der Forschung zu arbeiten.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. weiter in der Forschung zu arbeiten.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. eine Fahrradwerkstatt zu eröffnen.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. in die Tourismusbranche zu wechseln.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "weiter in der Forschung zu arbeiten.",
+        "sourceAnswer": "A",
+        "sourceGerman": "Dr. Julia Henzel plant, a -weiter in der Forschung zu arbeiten.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          241
+        ]
       }
     ]
   },
   {
     "teil": "15",
-    "title": "Das Start-up von Niklas",
-    "sourceText": "reviewed Excel: 听力第二部分_人工复核完整版.xlsx",
-    "mode": "hv2-choice",
+    "title": "Das Start-Up Von Niklas",
+    "mode": "corpus-card",
+    "sourceText": "2026实时更新2026.9(腾讯文档实时更新）.pdf",
+    "source": "tencent-2026-09",
+    "sourcePages": [
+      241,
+      242,
+      243
+    ],
     "questions": [
       {
         "number": "55",
-        "text": "Niklas Bosch hat ein Start-up-Unternehmen gegründet, ...",
-        "german": "Niklas Bosch hat ein Start-up-Unternehmen gegründet, ...",
+        "sourceNumber": "55",
+        "text": "Niklas Bosch hat ein Start-up-Unternehmen gegründet,",
+        "german": "Niklas Bosch hat ein Start-up-Unternehmen gegründet,",
         "chinese": "尼克拉斯·博施创办了一家初创公司，其提供的服务主要面向学生。",
-        "answer": "B",
+        "answer": "",
+        "answerText": "B. dessen Angebot sich in erster Linie an Studenten richtet.",
         "completion": "dessen Angebot sich in erster Linie an Studenten richtet.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. das nur Luxusreisen anbietet.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. dessen Angebot sich in erster Linie an Studenten richtet.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. das ausschließlich Unternehmen berät.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "dessen Angebot sich in erster Linie an Studenten richtet.",
+        "sourceAnswer": "B",
+        "sourceGerman": "Niklas Bosch hat ein Start-up-Unternehmen gegründet, B dessen Angebot sich in erster Linie an Studenten richtet.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          241,
+          242
+        ]
       },
       {
         "number": "56",
-        "text": "Auf der Website kann man ...",
-        "german": "Auf der Website kann man ...",
+        "sourceNumber": "56",
+        "text": "Auf der Website kann man",
+        "german": "Auf der Website kann man",
         "chinese": "在网站上可以只预订价格实惠的住宿。",
-        "answer": "B",
+        "answer": "",
+        "answerText": "B. nur Unterkünfte in günstigen Preiskategorien buchen.",
         "completion": "nur Unterkünfte in günstigen Preiskategorien buchen.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. ausschließlich teure Hotels buchen.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. nur Unterkünfte in günstigen Preiskategorien buchen.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. nur Flugtickets kaufen.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "nur Unterkünfte in günstigen Preiskategorien buchen.",
+        "sourceAnswer": "B",
+        "sourceGerman": "Auf der Website kann man B nur Unterkünfte in günstigen Preiskategorien buchen.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          242
+        ]
       },
       {
         "number": "57",
-        "text": "Wenn Niklas verreist, legt er besonders Wert auf ...",
-        "german": "Wenn Niklas verreist, legt er besonders Wert auf ...",
+        "sourceNumber": "57",
+        "text": "Wenn Niklas verreist, legt er besonders Wert auf",
+        "german": "Wenn Niklas verreist, legt er besonders Wert auf",
         "chinese": "当尼克拉斯旅行时，他特别看重中心位置。",
-        "answer": "C",
+        "answer": "",
+        "answerText": "C. eine zentrale Lage.",
         "completion": "eine zentrale Lage.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. ein großes Schwimmbad.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. möglichst viele Freizeitkurse.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. eine zentrale Lage.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "eine zentrale Lage.",
+        "sourceAnswer": "C",
+        "sourceGerman": "Wenn Niklas verreist, legt er besonders Wert auf C eine zentrale Lage.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          242
+        ]
       },
       {
         "number": "58",
-        "text": "Niklas plant als Nächstes, ...",
-        "german": "Niklas plant als Nächstes, ...",
+        "sourceNumber": "58",
+        "text": "Niklas plant als Nächstes,",
+        "german": "Niklas plant als Nächstes,",
         "chinese": "尼克拉斯接下来计划改进网站的一些功能。",
-        "answer": "C",
+        "answer": "",
+        "answerText": "C. einige Funktionen der Website zu verbessern.",
         "completion": "einige Funktionen der Website zu verbessern.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. seine Website sofort zu schließen.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. nur noch telefonisch zu vermitteln.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. einige Funktionen der Website zu verbessern.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "einige Funktionen der Website zu verbessern.",
+        "sourceAnswer": "C",
+        "sourceGerman": "Niklas plant als Nächstes, C einige Funktionen der Website zu verbessern.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          242
+        ]
       },
       {
         "number": "59",
-        "text": "Potenzielle Vermittler ...",
-        "german": "Potenzielle Vermittler ...",
+        "sourceNumber": "59",
+        "text": "Potenzielle Vermittler",
+        "german": "Potenzielle Vermittler",
         "chinese": "潜在的中介经常担心费用过高。",
-        "answer": "B",
+        "answer": "",
+        "answerText": "B. fürchten oft zu hohe Kosten.",
         "completion": "fürchten oft zu hohe Kosten.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. wollen immer kostenlos arbeiten.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. fürchten oft zu hohe Kosten.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. haben nie Fragen zum Angebot.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "fürchten oft zu hohe Kosten.",
+        "sourceAnswer": "B",
+        "sourceGerman": "Potenzielle Vermittler B fürchten oft zu hohe Kosten.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          242
+        ]
       },
       {
         "number": "60",
-        "text": "Die Telefongespräche hat Niklas ...",
-        "german": "Die Telefongespräche hat Niklas ...",
+        "sourceNumber": "60",
+        "text": "Die Telefongespräche hat Niklas",
+        "german": "Die Telefongespräche hat Niklas",
         "chinese": "电话交谈尼克拉斯委托给了另一家公司。",
-        "answer": "A",
+        "answer": "",
+        "answerText": "A. an ein anderes Unternehmen delegiert.",
         "completion": "an ein anderes Unternehmen delegiert.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. an ein anderes Unternehmen delegiert.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. alle selbst geführt.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. seinen Eltern überlassen.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "an ein anderes Unternehmen delegiert.",
+        "sourceAnswer": "A",
+        "sourceGerman": "Die Telefongespräche hat Niklas A an ein anderes Unternehmen delegiert.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          242
+        ]
       },
       {
         "number": "61",
-        "text": "In der Anfangszeit hat Niklas ...",
-        "german": "In der Anfangszeit hat Niklas ...",
+        "sourceNumber": "61",
+        "text": "In der Anfangszeit hat Niklas",
+        "german": "In der Anfangszeit hat Niklas",
         "chinese": "在最初阶段，尼克拉斯把自己的钱用在了公司上。",
-        "answer": "C",
+        "answer": "",
+        "answerText": "C. sein eigenes Geld für das Unternehmen verwendet.",
         "completion": "sein eigenes Geld für das Unternehmen verwendet.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. sofort Großinvestoren gefunden.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. ausschließlich staatliche Mittel genutzt.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. sein eigenes Geld für das Unternehmen verwendet.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "sein eigenes Geld für das Unternehmen verwendet.",
+        "sourceAnswer": "C",
+        "sourceGerman": "In der Anfangszeit hat Niklas C sein eigenes Geld für das Unternehmen verwendet.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          242
+        ]
       },
       {
         "number": "62",
-        "text": "Um genug Zeit für sein Unternehmen zu haben, ...",
-        "german": "Um genug Zeit für sein Unternehmen zu haben, ...",
+        "sourceNumber": "62",
+        "text": "Um genug Zeit für sein Unternehmen zu haben,",
+        "german": "Um genug Zeit für sein Unternehmen zu haben,",
         "chinese": "为了腾出时间给他的公司，尼克拉斯放弃了休闲活动。",
-        "answer": "C",
+        "answer": "",
+        "answerText": "C. verzichtet Niklas auf Freizeitaktivitäten.",
         "completion": "verzichtet Niklas auf Freizeitaktivitäten.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. beendet Niklas sofort sein Studium.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. arbeitet Niklas nur nachts.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. verzichtet Niklas auf Freizeitaktivitäten.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "verzichtet Niklas auf Freizeitaktivitäten.",
+        "sourceAnswer": "C",
+        "sourceGerman": "Um genug Zeit für sein Unternehmen zu haben, C verzichtet Niklas auf Freizeitaktivitäten.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          242
+        ]
       },
       {
         "number": "63",
-        "text": "Einige Freunde befürchteten, Niklas würde ...",
-        "german": "Einige Freunde befürchteten, Niklas würde ...",
+        "sourceNumber": "63",
+        "text": "Einige Freunde befürchteten, Niklas würde",
+        "german": "Einige Freunde befürchteten, Niklas würde",
         "chinese": "一些朋友担心尼克拉斯会高估自己的能力。",
-        "answer": "C",
+        "answer": "",
+        "answerText": "C. seine eigenen Kräfte überschätzen.",
         "completion": "seine eigenen Kräfte überschätzen.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. zu wenig Ehrgeiz haben.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. nicht reisen wollen.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. seine eigenen Kräfte überschätzen.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "seine eigenen Kräfte überschätzen.",
+        "sourceAnswer": "C",
+        "sourceGerman": "Einige Freunde befürchteten, Niklas würde C seine eigenen Kräfte überschätzen.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          242
+        ]
       },
       {
         "number": "64",
-        "text": "Niklas war enttäuscht, weil ...",
-        "german": "Niklas war enttäuscht, weil ...",
+        "sourceNumber": "64",
+        "text": "Niklas war enttäuscht, weil",
+        "german": "Niklas war enttäuscht, weil",
         "chinese": "尼克拉斯感到失望，因为他的网站一开始只有很少的访问者。",
-        "answer": "B",
+        "answer": "",
+        "answerText": "B. seine Website am Anfang nur wenige Besucher hatte.",
         "completion": "seine Website am Anfang nur wenige Besucher hatte.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. keine Unterkünfte existierten.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. seine Website am Anfang nur wenige Besucher hatte.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. sein Team sofort kündigte.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "seine Website am Anfang nur wenige Besucher hatte.",
+        "sourceAnswer": "B",
+        "sourceGerman": "Niklas war enttäuscht, weil B seine Website am Anfang nur wenige Besucher hatte.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          243
+        ]
       }
     ]
   },
   {
     "teil": "16",
     "title": "Drohnen",
-    "sourceText": "reviewed Excel: 听力第二部分_人工复核完整版.xlsx",
-    "mode": "hv2-choice",
+    "mode": "corpus-card",
+    "sourceText": "2026实时更新2026.9(腾讯文档实时更新）.pdf",
+    "source": "tencent-2026-09",
+    "sourcePages": [
+      243,
+      244
+    ],
     "questions": [
       {
         "number": "55",
-        "text": "Der Studiogast ...",
-        "german": "Der Studiogast ...",
-        "chinese": "这位节目嘉宾的职业是研究无人机领域的最新发展。",
-        "answer": "A",
-        "completion": "beschäftigt sich beruflich mit den neuesten Entwicklungen im Bereich Drohnen.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. beschäftigt sich beruflich mit den neuesten Entwicklungen im Bereich Drohnen.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. nutzt Drohnen nur als Hobby.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. lehnt Drohnen grundsätzlich ab.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "sourceNumber": "55",
+        "text": "Der Studiogast",
+        "german": "Der Studiogast",
+        "chinese": "这位演播室嘉宾从事与无人机最新发展相关的专业工作。",
+        "answer": "",
+        "answerText": "A. beschäftigt sich beruflich mit den neuesten Entwicklungen im Bereich Drohnen\".",
+        "completion": "beschäftigt sich beruflich mit den neuesten Entwicklungen im Bereich Drohnen\".",
+        "reviewGerman": "beschäftigt sich beruflich mit den neuesten Entwicklungen im Bereich Drohnen\".",
+        "sourceAnswer": "A",
+        "sourceGerman": "Der Studiogast a-beschäftigt sich beruflich mit den neuesten Entwicklungen im Bereich Drohnen\".",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          243
+        ]
       },
       {
         "number": "56",
-        "text": "Der Begriff „Drohnen“ ...",
-        "german": "Der Begriff „Drohnen“ ...",
-        "chinese": "“无人机”这一概念涵盖军事和非军事飞行器。",
-        "answer": "B",
+        "sourceNumber": "56",
+        "text": "Der Begriff \"Drohen.",
+        "german": "Der Begriff \"Drohen.",
+        "chinese": "“无人机”这一概念既包括军事飞行器，也包括非军事飞行器。",
+        "answer": "",
+        "answerText": "B. umfasst militärische und nicht-militärische Flugobjekte.",
         "completion": "umfasst militärische und nicht-militärische Flugobjekte.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. bezeichnet nur Spielzeugflugzeuge.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. umfasst militärische und nicht-militärische Flugobjekte.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. wird nur für Satelliten verwendet.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "umfasst militärische und nicht-militärische Flugobjekte.",
+        "sourceAnswer": "B",
+        "sourceGerman": "Der Begriff \"Drohen. b-umfasst militärische und nicht-militärische Flugobjekte.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          243
+        ]
       },
       {
         "number": "57",
-        "text": "Nikola Tesla ...",
-        "german": "Nikola Tesla ...",
-        "chinese": "尼古拉·特斯拉发明了一种与今天的无人机相似的装置。",
-        "answer": "A",
-        "completion": "entwickelte ein Gerät, das den heutigen Drohnen ähnelt.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. entwickelte ein Gerät, das den heutigen Drohnen ähnelt.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. baute die erste Raumstation.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. verbot ferngesteuerte Technik.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "sourceNumber": "57",
+        "text": "Nikola Tesla",
+        "german": "Nikola Tesla",
+        "chinese": "尼古拉·特斯拉研发了一种与现代无人机相似的设备。",
+        "answer": "",
+        "answerText": "A. entwickelte ein Gerät, das den heutigen Drohnen ähnelt;",
+        "completion": "entwickelte ein Gerät, das den heutigen Drohnen ähnelt;",
+        "reviewGerman": "entwickelte ein Gerät, das den heutigen Drohnen ähnelt;",
+        "sourceAnswer": "A",
+        "sourceGerman": "Nikola Tesla a-entwickelte ein Gerät, das den heutigen Drohnen ähnelt;",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          243
+        ]
       },
       {
         "number": "58",
-        "text": "Ein Quadrocopter ...",
-        "german": "Ein Quadrocopter ...",
-        "chinese": "四旋翼飞行器特别稳定，也很容易操控。",
-        "answer": "A",
+        "sourceNumber": "58",
+        "text": "Ein Quadrocopter .",
+        "german": "Ein Quadrocopter .",
+        "chinese": "四旋翼无人机特别稳定，而且容易操控。",
+        "answer": "",
+        "answerText": "A. ist besonders stabil und leicht zu dirigieren.",
         "completion": "ist besonders stabil und leicht zu dirigieren.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. ist besonders stabil und leicht zu dirigieren.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. ist besonders schwer zu steuern.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. kann nur im Wasser eingesetzt werden.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "ist besonders stabil und leicht zu dirigieren.",
+        "sourceAnswer": "A",
+        "sourceGerman": "Ein Quadrocopter . a-ist besonders stabil und leicht zu dirigieren.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          243
+        ]
       },
       {
         "number": "59",
-        "text": "Drohnen ...",
-        "german": "Drohnen ...",
-        "chinese": "无人机降低了救援人员面临的危险。",
-        "answer": "B",
-        "completion": "verringern das Gefahrenpotenzial für Rettungskräfte.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. erhöhen immer die Gefahr für Helfer.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. verringern das Gefahrenpotenzial für Rettungskräfte.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. werden nie bei Rettungen verwendet.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "sourceNumber": "59",
+        "text": "Drohnen",
+        "german": "Drohnen",
+        "chinese": "无人机能够降低救援人员面临的危险",
+        "answer": "",
+        "answerText": "B. verringern das Gefahrenpotenzial für Rettungskräfte…",
+        "completion": "verringern das Gefahrenpotenzial für Rettungskräfte…",
+        "reviewGerman": "verringern das Gefahrenpotenzial für Rettungskräfte…",
+        "sourceAnswer": "B",
+        "sourceGerman": "Drohnen b-verringern das Gefahrenpotenzial für Rettungskräfte…",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          243
+        ]
       },
       {
         "number": "60",
-        "text": "Mithilfe von Drohnen ...",
-        "german": "Mithilfe von Drohnen ...",
+        "sourceNumber": "60",
+        "text": "Mithilfe von Drohnen",
+        "german": "Mithilfe von Drohnen",
         "chinese": "借助无人机，可以更好地规划极端自然灾害后的救援行动。",
-        "answer": "A",
+        "answer": "",
+        "answerText": "A. können Einsätze nach extremen Naturereignissen besser geplant werden.",
         "completion": "können Einsätze nach extremen Naturereignissen besser geplant werden.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. können Einsätze nach extremen Naturereignissen besser geplant werden.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. können Naturkatastrophen verhindert werden.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. werden Rettungskräfte überflüssig.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "können Einsätze nach extremen Naturereignissen besser geplant werden.",
+        "sourceAnswer": "A",
+        "sourceGerman": "Mithilfe von Drohnen a-können Einsätze nach extremen Naturereignissen besser geplant werden.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          243
+        ]
       },
       {
         "number": "61",
-        "text": "Im Vergleich zu Satelliten ...",
-        "german": "Im Vergleich zu Satelliten ...",
-        "chinese": "与卫星影像相比，无人机拍摄的影像不会受到云层影响。",
-        "answer": "C",
-        "completion": "werden Drohnenaufnahmen nicht durch Wolken gestört.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. sind Drohnenaufnahmen immer ungenauer.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. können Drohnen keine Bilder liefern.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. werden Drohnenaufnahmen nicht durch Wolken gestört.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "sourceNumber": "61",
+        "text": "Im Vergleich zu Satelliten",
+        "german": "Im Vergleich zu Satelliten",
+        "chinese": "与卫星相比，无人机拍摄的图像不会受到云层的干扰。",
+        "answer": "",
+        "answerText": "C. werden Drohnenaufnahmen nicht durch Wolken gestört….",
+        "completion": "werden Drohnenaufnahmen nicht durch Wolken gestört….",
+        "reviewGerman": "werden Drohnenaufnahmen nicht durch Wolken gestört….",
+        "sourceAnswer": "C",
+        "sourceGerman": "Im Vergleich zu Satelliten c-werden Drohnenaufnahmen nicht durch Wolken gestört….",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          243
+        ]
       },
       {
         "number": "62",
-        "text": "Die Organisation Ärzte ohne Grenzen ...",
-        "german": "Die Organisation Ärzte ohne Grenzen ...",
-        "chinese": "无国界医生组织需要一种新的医疗物资运输工具。",
-        "answer": "A",
-        "completion": "brauchte ein neues Transportmittel für medizinische Produkte.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. brauchte ein neues Transportmittel für medizinische Produkte.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. wollte Drohnen nur für Werbung nutzen.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. setzte Drohnen nur für Filmaufnahmen ein.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "sourceNumber": "62",
+        "text": "Die Organisation Arzte ohne Grenzen .",
+        "german": "Die Organisation Arzte ohne Grenzen .",
+        "chinese": "无国界医生组织需要一种新的医疗用品运输方式。",
+        "answer": "",
+        "answerText": "A. brauchte ein neues Transportmittel für medizinische Produkte..",
+        "completion": "brauchte ein neues Transportmittel für medizinische Produkte..",
+        "reviewGerman": "brauchte ein neues Transportmittel für medizinische Produkte..",
+        "sourceAnswer": "A",
+        "sourceGerman": "Die Organisation Arzte ohne Grenzen . a-brauchte ein neues Transportmittel für medizinische Produkte..",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          243
+        ]
       },
       {
         "number": "63",
-        "text": "In den USA ...",
-        "german": "In den USA ...",
-        "chinese": "在美国，已经有人通过无人机配送药品。",
-        "answer": "C",
+        "sourceNumber": "63",
+        "text": "In den USA",
+        "german": "In den USA",
+        "chinese": "在美国，药品已经通过无人机进行配送。",
+        "answer": "",
+        "answerText": "C. werden schon Medikamente per Drohne zugestellt.",
         "completion": "werden schon Medikamente per Drohne zugestellt.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. sind Drohnen vollständig verboten.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. dürfen Drohnen nur vom Militär genutzt werden.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. werden schon Medikamente per Drohne zugestellt.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "reviewGerman": "werden schon Medikamente per Drohne zugestellt.",
+        "sourceAnswer": "C",
+        "sourceGerman": "In den USA c-werden schon Medikamente per Drohne zugestellt.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          243
+        ]
       },
       {
         "number": "64",
-        "text": "Die Nutzung von Drohnen ...",
-        "german": "Die Nutzung von Drohnen ...",
-        "chinese": "无人机的使用也必须符合数据保护法。",
-        "answer": "B",
-        "completion": "muss auch dem Datenschutzgesetz entsprechen.",
-        "options": [
-          {
-            "value": "A",
-            "label": "A. ist gesetzlich völlig ungeregelt.",
-            "shortcut": "1 / A"
-          },
-          {
-            "value": "B",
-            "label": "B. muss auch dem Datenschutzgesetz entsprechen.",
-            "shortcut": "2 / B"
-          },
-          {
-            "value": "C",
-            "label": "C. hat nichts mit Datenschutz zu tun.",
-            "shortcut": "3 / C"
-          }
-        ],
-        "source": "hv2-corrected-excel"
+        "sourceNumber": "64",
+        "text": "Die Nutzung von Drohnen",
+        "german": "Die Nutzung von Drohnen",
+        "chinese": "无人机的使用也必须符合数据保护法（隐私保护法规）的要求。",
+        "answer": "",
+        "answerText": "B. Muss auch dem Datenschutzgesetz entsprechen.",
+        "completion": "Muss auch dem Datenschutzgesetz entsprechen.",
+        "reviewGerman": "Muss auch dem Datenschutzgesetz entsprechen.",
+        "sourceAnswer": "B",
+        "sourceGerman": "Die Nutzung von Drohnen b-Muss auch dem Datenschutzgesetz entsprechen.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
+        "source": "tencent-2026-09",
+        "sourcePages": [
+          244
+        ]
       }
     ]
   },
   {
     "teil": "17",
-    "title": "Anna Palmers Blog",
+    "title": "Anna Palmers Bolg",
     "mode": "corpus-card",
     "sourceText": "2026实时更新2026.9(腾讯文档实时更新）.pdf",
-    "addedIn": "2026.9",
     "source": "tencent-2026-09",
     "sourcePages": [
       244
@@ -4806,173 +3461,193 @@ window.HV2_QUESTIONS = [
     "questions": [
       {
         "number": "55",
+        "sourceNumber": "55",
         "text": "Anna Palmer hat;",
         "german": "Anna Palmer hat;",
         "chinese": "安娜·帕尔默对获奖并没有抱太大希望。",
         "answer": "",
         "answerText": "A. hat sich keine große Hoffnung auf einen Preis gemacht.",
-        "addedIn": "2026.9",
+        "completion": "hat sich keine große Hoffnung auf einen Preis gemacht.",
+        "reviewGerman": "hat sich keine große Hoffnung auf einen Preis gemacht.",
+        "sourceAnswer": "A",
+        "sourceGerman": "Anna Palmer hat; A hat sich keine große Hoffnung auf einen Preis gemacht.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
         "source": "tencent-2026-09",
         "sourcePages": [
           244
         ],
-        "completion": "hat sich keine große Hoffnung auf einen Preis gemacht.",
-        "reviewGerman": "hat sich keine große Hoffnung auf einen Preis gemacht.",
-        "sourceAnswer": "A",
-        "sourceNote": "原文只提供正确补全，未提供其他选项。"
+        "addedIn": "2026.9"
       },
       {
         "number": "56",
+        "sourceNumber": "56",
         "text": "Für Anna Palmer ist es wichtig, dass",
         "german": "Für Anna Palmer ist es wichtig, dass",
         "chinese": "对安娜·帕尔默来说，重要的是她的博客能够在专业领域引起关注。",
         "answer": "",
         "answerText": "A. ihr Blog vor allem in der Fachwelt Interesse weckt.",
-        "addedIn": "2026.9",
+        "completion": "ihr Blog vor allem in der Fachwelt Interesse weckt.",
+        "reviewGerman": "ihr Blog vor allem in der Fachwelt Interesse weckt.",
+        "sourceAnswer": "A",
+        "sourceGerman": "Für Anna Palmer ist es wichtig, dass A ihr Blog vor allem in der Fachwelt Interesse weckt.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
         "source": "tencent-2026-09",
         "sourcePages": [
           244
         ],
-        "completion": "ihr Blog vor allem in der Fachwelt Interesse weckt.",
-        "reviewGerman": "ihr Blog vor allem in der Fachwelt Interesse weckt.",
-        "sourceAnswer": "A",
-        "sourceNote": "原文只提供正确补全，未提供其他选项。"
+        "addedIn": "2026.9"
       },
       {
         "number": "57",
+        "sourceNumber": "57",
         "text": "Um Schreiben zu lernen,",
         "german": "Um Schreiben zu lernen,",
         "chinese": "为了学习写作，安娜·帕尔默在网上寻找写作指导。",
         "answer": "",
         "answerText": "A. suchte Anna Palmer Anleitungen im Internet.",
-        "addedIn": "2026.9",
+        "completion": "suchte Anna Palmer Anleitungen im Internet.",
+        "reviewGerman": "suchte Anna Palmer Anleitungen im Internet.",
+        "sourceAnswer": "A",
+        "sourceGerman": "Um Schreiben zu lernen, A suchte Anna Palmer Anleitungen im Internet.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
         "source": "tencent-2026-09",
         "sourcePages": [
           244
         ],
-        "completion": "suchte Anna Palmer Anleitungen im Internet.",
-        "reviewGerman": "suchte Anna Palmer Anleitungen im Internet.",
-        "sourceAnswer": "A",
-        "sourceNote": "原文只提供正确补全，未提供其他选项。"
+        "addedIn": "2026.9"
       },
       {
         "number": "58",
+        "sourceNumber": "58",
         "text": "Anna Palmer plant,",
         "german": "Anna Palmer plant,",
         "chinese": "安娜·帕尔默计划撰写其他主题的博客文章。",
         "answer": "",
         "answerText": "B. Blogartikel zu anderen Themen zu schreiben.",
-        "addedIn": "2026.9",
+        "completion": "Blogartikel zu anderen Themen zu schreiben.",
+        "reviewGerman": "Blogartikel zu anderen Themen zu schreiben.",
+        "sourceAnswer": "B",
+        "sourceGerman": "Anna Palmer plant, B Blogartikel zu anderen Themen zu schreiben.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
         "source": "tencent-2026-09",
         "sourcePages": [
           244
         ],
-        "completion": "Blogartikel zu anderen Themen zu schreiben.",
-        "reviewGerman": "Blogartikel zu anderen Themen zu schreiben.",
-        "sourceAnswer": "B",
-        "sourceNote": "原文只提供正确补全，未提供其他选项。"
+        "addedIn": "2026.9"
       },
       {
         "number": "59",
+        "sourceNumber": "59",
         "text": "Anna Palmer",
         "german": "Anna Palmer",
         "chinese": "安娜·帕尔默会花很多时间进行写作。",
         "answer": "",
         "answerText": "C. nimmt sich für das Schreiben viel Zeit.",
-        "addedIn": "2026.9",
+        "completion": "nimmt sich für das Schreiben viel Zeit.",
+        "reviewGerman": "nimmt sich für das Schreiben viel Zeit.",
+        "sourceAnswer": "C",
+        "sourceGerman": "Anna Palmer C nimmt sich für das Schreiben viel Zeit.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
         "source": "tencent-2026-09",
         "sourcePages": [
           244
         ],
-        "completion": "nimmt sich für das Schreiben viel Zeit.",
-        "reviewGerman": "nimmt sich für das Schreiben viel Zeit.",
-        "sourceAnswer": "C",
-        "sourceNote": "原文只提供正确补全，未提供其他选项。"
+        "addedIn": "2026.9"
       },
       {
         "number": "60",
+        "sourceNumber": "60",
         "text": "Ihre Themen findet Anna Palmer vor allem",
         "german": "Ihre Themen findet Anna Palmer vor allem",
         "chinese": "安娜·帕尔默主要通过阅读科学出版物来寻找写作主题。",
         "answer": "",
         "answerText": "A. durch die Lektüre wissenschaftlicher Publikationen.",
-        "addedIn": "2026.9",
+        "completion": "durch die Lektüre wissenschaftlicher Publikationen.",
+        "reviewGerman": "durch die Lektüre wissenschaftlicher Publikationen.",
+        "sourceAnswer": "A",
+        "sourceGerman": "Ihre Themen findet Anna Palmer vor allem A durch die Lektüre wissenschaftlicher Publikationen.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
         "source": "tencent-2026-09",
         "sourcePages": [
           244
         ],
-        "completion": "durch die Lektüre wissenschaftlicher Publikationen.",
-        "reviewGerman": "durch die Lektüre wissenschaftlicher Publikationen.",
-        "sourceAnswer": "A",
-        "sourceNote": "原文只提供正确补全，未提供其他选项。"
+        "addedIn": "2026.9"
       },
       {
         "number": "61",
+        "sourceNumber": "61",
         "text": "Anna Palmer meint, dass sie durch das Bloggen",
         "german": "Anna Palmer meint, dass sie durch das Bloggen",
         "chinese": "安娜·帕尔默认为，通过写博客，她结识了许多其他科学家。",
         "answer": "",
         "answerText": "C. viele Kontakte zu anderen Wissenschaftlern knüpft.",
-        "addedIn": "2026.9",
+        "completion": "viele Kontakte zu anderen Wissenschaftlern knüpft.",
+        "reviewGerman": "viele Kontakte zu anderen Wissenschaftlern knüpft.",
+        "sourceAnswer": "C",
+        "sourceGerman": "Anna Palmer meint, dass sie durch das Bloggen C viele Kontakte zu anderen Wissenschaftlern knüpft.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
         "source": "tencent-2026-09",
         "sourcePages": [
           244
         ],
-        "completion": "viele Kontakte zu anderen Wissenschaftlern knüpft.",
-        "reviewGerman": "viele Kontakte zu anderen Wissenschaftlern knüpft.",
-        "sourceAnswer": "C",
-        "sourceNote": "原文只提供正确补全，未提供其他选项。"
+        "addedIn": "2026.9"
       },
       {
         "number": "62",
+        "sourceNumber": "62",
         "text": "Um genügend Zeit fürs Schreiben zu finden",
         "german": "Um genügend Zeit fürs Schreiben zu finden",
         "chinese": "为了找到足够的写作时间，安娜·帕尔默养成了早起的习惯。",
         "answer": "",
         "answerText": "B. hat sich Anna Palmer angewöhnt früh aufzustehen.",
-        "addedIn": "2026.9",
+        "completion": "hat sich Anna Palmer angewöhnt früh aufzustehen.",
+        "reviewGerman": "hat sich Anna Palmer angewöhnt früh aufzustehen.",
+        "sourceAnswer": "B",
+        "sourceGerman": "Um genügend Zeit fürs Schreiben zu finden B hat sich Anna Palmer angewöhnt früh aufzustehen.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
         "source": "tencent-2026-09",
         "sourcePages": [
           244
         ],
-        "completion": "hat sich Anna Palmer angewöhnt früh aufzustehen.",
-        "reviewGerman": "hat sich Anna Palmer angewöhnt früh aufzustehen.",
-        "sourceAnswer": "B",
-        "sourceNote": "原文只提供正确补全，未提供其他选项。"
+        "addedIn": "2026.9"
       },
       {
         "number": "63",
+        "sourceNumber": "63",
         "text": "Anna Palmer empfiehlt zukünftigen Bloggern,",
         "german": "Anna Palmer empfiehlt zukünftigen Bloggern,",
         "chinese": "安娜·帕尔默建议未来的博主首先制定一个主题计划。",
         "answer": "",
         "answerText": "A. zunächst einen Themenplan zu erstellen.",
-        "addedIn": "2026.9",
+        "completion": "zunächst einen Themenplan zu erstellen.",
+        "reviewGerman": "zunächst einen Themenplan zu erstellen.",
+        "sourceAnswer": "A",
+        "sourceGerman": "Anna Palmer empfiehlt zukünftigen Bloggern, A zunächst einen Themenplan zu erstellen.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
         "source": "tencent-2026-09",
         "sourcePages": [
           244
         ],
-        "completion": "zunächst einen Themenplan zu erstellen.",
-        "reviewGerman": "zunächst einen Themenplan zu erstellen.",
-        "sourceAnswer": "A",
-        "sourceNote": "原文只提供正确补全，未提供其他选项。"
+        "addedIn": "2026.9"
       },
       {
         "number": "64",
+        "sourceNumber": "64",
         "text": "Anna Palmer",
         "german": "Anna Palmer",
         "chinese": "安娜·帕尔默希望在大学从事学术事业。",
         "answer": "",
         "answerText": "C. strebt eine Karriere an der Uni an.",
-        "addedIn": "2026.9",
+        "completion": "strebt eine Karriere an der Uni an.",
+        "reviewGerman": "strebt eine Karriere an der Uni an.",
+        "sourceAnswer": "C",
+        "sourceGerman": "Anna Palmer C strebt eine Karriere an der Uni an.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
         "source": "tencent-2026-09",
         "sourcePages": [
           244
         ],
-        "completion": "strebt eine Karriere an der Uni an.",
-        "reviewGerman": "strebt eine Karriere an der Uni an.",
-        "sourceAnswer": "C",
-        "sourceNote": "原文只提供正确补全，未提供其他选项。"
+        "addedIn": "2026.9"
       }
     ]
   },
@@ -4981,7 +3656,6 @@ window.HV2_QUESTIONS = [
     "title": "Umweltfreundliche Städte",
     "mode": "corpus-card",
     "sourceText": "2026实时更新2026.9(腾讯文档实时更新）.pdf",
-    "addedIn": "2026.9",
     "source": "tencent-2026-09",
     "sourcePages": [
       245
@@ -4989,173 +3663,193 @@ window.HV2_QUESTIONS = [
     "questions": [
       {
         "number": "55",
+        "sourceNumber": "55",
         "text": "Herr Dr. Müller hat",
         "german": "Herr Dr. Müller hat",
         "chinese": "穆勒博士先生是在职业咨询中了解到自己后来所学的专业的。",
         "answer": "",
         "answerText": "B. in der Berufsberatung von seinem späteren Studienfach erfahren.",
-        "addedIn": "2026.9",
+        "completion": "in der Berufsberatung von seinem späteren Studienfach erfahren.",
+        "reviewGerman": "in der Berufsberatung von seinem späteren Studienfach erfahren.",
+        "sourceAnswer": "B",
+        "sourceGerman": "Herr Dr. Müller hat B in der Berufsberatung von seinem späteren Studienfach erfahren.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
         "source": "tencent-2026-09",
         "sourcePages": [
           245
         ],
-        "completion": "in der Berufsberatung von seinem späteren Studienfach erfahren.",
-        "reviewGerman": "in der Berufsberatung von seinem späteren Studienfach erfahren.",
-        "sourceAnswer": "B",
-        "sourceNote": "原文只提供正确补全，未提供其他选项。"
+        "addedIn": "2026.9"
       },
       {
         "number": "56",
+        "sourceNumber": "56",
         "text": "Herrn Dr. Müller gefällt es an seinem Beruf, dass er",
         "german": "Herrn Dr. Müller gefällt es an seinem Beruf, dass er",
         "chinese": "穆勒博士喜欢自己这份职业的一点是，他能够经常与市民接触。",
         "answer": "",
         "answerText": "B. regelmäßig Kontakt zu Bürgern hat",
-        "addedIn": "2026.9",
+        "completion": "regelmäßig Kontakt zu Bürgern hat",
+        "reviewGerman": "regelmäßig Kontakt zu Bürgern hat",
+        "sourceAnswer": "B",
+        "sourceGerman": "Herrn Dr. Müller gefällt es an seinem Beruf, dass er B regelmäßig Kontakt zu Bürgern hat",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
         "source": "tencent-2026-09",
         "sourcePages": [
           245
         ],
-        "completion": "regelmäßig Kontakt zu Bürgern hat",
-        "reviewGerman": "regelmäßig Kontakt zu Bürgern hat",
-        "sourceAnswer": "B",
-        "sourceNote": "原文只提供正确补全，未提供其他选项。"
+        "addedIn": "2026.9"
       },
       {
         "number": "57",
+        "sourceNumber": "57",
         "text": "Um den Autoverkehr in Innenstädten zu reduzieren, sollten",
         "german": "Um den Autoverkehr in Innenstädten zu reduzieren, sollten",
         "chinese": "为了减少市中心的汽车交通，应该让尽可能少的人购买私人汽车。",
         "answer": "",
         "answerText": "C. wenige Menschen eigene PKW erwerben.",
-        "addedIn": "2026.9",
+        "completion": "wenige Menschen eigene PKW erwerben.",
+        "reviewGerman": "wenige Menschen eigene PKW erwerben.",
+        "sourceAnswer": "C",
+        "sourceGerman": "Um den Autoverkehr in Innenstädten zu reduzieren, sollten C wenige Menschen eigene PKW erwerben.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
         "source": "tencent-2026-09",
         "sourcePages": [
           245
         ],
-        "completion": "wenige Menschen eigene PKW erwerben.",
-        "reviewGerman": "wenige Menschen eigene PKW erwerben.",
-        "sourceAnswer": "C",
-        "sourceNote": "原文只提供正确补全，未提供其他选项。"
+        "addedIn": "2026.9"
       },
       {
         "number": "58",
+        "sourceNumber": "58",
         "text": "Um die Innenstädte für Radfahrer attraktiver zu machen, empfiehlt Herr Dr. Müller",
         "german": "Um die Innenstädte für Radfahrer attraktiver zu machen, empfiehlt Herr Dr. Müller",
         "chinese": "为了让市中心对骑自行车的人更有吸引力，穆勒博士建议设置更多货运自行车停车位。",
         "answer": "",
         "answerText": "B. mehr Stellplätze für Lastenräder.",
-        "addedIn": "2026.9",
+        "completion": "mehr Stellplätze für Lastenräder.",
+        "reviewGerman": "mehr Stellplätze für Lastenräder.",
+        "sourceAnswer": "B",
+        "sourceGerman": "Um die Innenstädte für Radfahrer attraktiver zu machen, empfiehlt Herr Dr. Müller B mehr Stellplätze für Lastenräder.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
         "source": "tencent-2026-09",
         "sourcePages": [
           245
         ],
-        "completion": "mehr Stellplätze für Lastenräder.",
-        "reviewGerman": "mehr Stellplätze für Lastenräder.",
-        "sourceAnswer": "B",
-        "sourceNote": "原文只提供正确补全，未提供其他选项。"
+        "addedIn": "2026.9"
       },
       {
         "number": "59",
+        "sourceNumber": "59",
         "text": "In den Städten",
         "german": "In den Städten",
         "chinese": "在城市里，尤其是提供特色商品或服务的商店能够取得成功。",
         "answer": "",
         "answerText": "A. können vor allem Geschäfte mit besonderem Angebot erfolgreich sein.",
-        "addedIn": "2026.9",
+        "completion": "können vor allem Geschäfte mit besonderem Angebot erfolgreich sein.",
+        "reviewGerman": "können vor allem Geschäfte mit besonderem Angebot erfolgreich sein.",
+        "sourceAnswer": "A",
+        "sourceGerman": "In den Städten A können vor allem Geschäfte mit besonderem Angebot erfolgreich sein.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
         "source": "tencent-2026-09",
         "sourcePages": [
           245
         ],
-        "completion": "können vor allem Geschäfte mit besonderem Angebot erfolgreich sein.",
-        "reviewGerman": "können vor allem Geschäfte mit besonderem Angebot erfolgreich sein.",
-        "sourceAnswer": "A",
-        "sourceNote": "原文只提供正确补全，未提供其他选项。"
+        "addedIn": "2026.9"
       },
       {
         "number": "60",
+        "sourceNumber": "60",
         "text": "Herr Dr. Müller prognostiziert, dass in Zukunft",
         "german": "Herr Dr. Müller prognostiziert, dass in Zukunft",
         "chinese": "穆勒博士预测，未来的城市景观将更多地以绿地为特征。",
         "answer": "",
         "answerText": "B. das Stadtbild stärker von Grünflächen geprägt sein wird.",
-        "addedIn": "2026.9",
+        "completion": "das Stadtbild stärker von Grünflächen geprägt sein wird.",
+        "reviewGerman": "das Stadtbild stärker von Grünflächen geprägt sein wird.",
+        "sourceAnswer": "B",
+        "sourceGerman": "Herr Dr. Müller prognostiziert, dass in Zukunft B das Stadtbild stärker von Grünflächen geprägt sein wird.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
         "source": "tencent-2026-09",
         "sourcePages": [
           245
         ],
-        "completion": "das Stadtbild stärker von Grünflächen geprägt sein wird.",
-        "reviewGerman": "das Stadtbild stärker von Grünflächen geprägt sein wird.",
-        "sourceAnswer": "B",
-        "sourceNote": "原文只提供正确补全，未提供其他选项。"
+        "addedIn": "2026.9"
       },
       {
         "number": "61",
+        "sourceNumber": "61",
         "text": "Dr. Müller sagt, dass",
         "german": "Dr. Müller sagt, dass",
         "chinese": "穆勒博士表示，未来人们将不再像现在这样孤立地生活",
         "answer": "",
         "answerText": "A. die Menschen in Zukunft weniger isoliert wohnen werden",
-        "addedIn": "2026.9",
+        "completion": "die Menschen in Zukunft weniger isoliert wohnen werden",
+        "reviewGerman": "die Menschen in Zukunft weniger isoliert wohnen werden",
+        "sourceAnswer": "A",
+        "sourceGerman": "Dr. Müller sagt, dass A die Menschen in Zukunft weniger isoliert wohnen werden",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
         "source": "tencent-2026-09",
         "sourcePages": [
           245
         ],
-        "completion": "die Menschen in Zukunft weniger isoliert wohnen werden",
-        "reviewGerman": "die Menschen in Zukunft weniger isoliert wohnen werden",
-        "sourceAnswer": "A",
-        "sourceNote": "原文只提供正确补全，未提供其他选项。"
+        "addedIn": "2026.9"
       },
       {
         "number": "62",
+        "sourceNumber": "62",
         "text": "Städte sind als Wohnort attraktiv, weil",
         "german": "Städte sind als Wohnort attraktiv, weil",
         "chinese": "城市作为居住地之所以具有吸引力，是因为它们能为不同年龄段的人群提供诸多优势",
         "answer": "",
         "answerText": "B. sie Vorteile für verschiedene Altersgruppen bieten",
-        "addedIn": "2026.9",
+        "completion": "sie Vorteile für verschiedene Altersgruppen bieten",
+        "reviewGerman": "sie Vorteile für verschiedene Altersgruppen bieten",
+        "sourceAnswer": "B",
+        "sourceGerman": "Städte sind als Wohnort attraktiv, weil B sie Vorteile für verschiedene Altersgruppen bieten",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
         "source": "tencent-2026-09",
         "sourcePages": [
           245
         ],
-        "completion": "sie Vorteile für verschiedene Altersgruppen bieten",
-        "reviewGerman": "sie Vorteile für verschiedene Altersgruppen bieten",
-        "sourceAnswer": "B",
-        "sourceNote": "原文只提供正确补全，未提供其他选项。"
+        "addedIn": "2026.9"
       },
       {
         "number": "63",
+        "sourceNumber": "63",
         "text": "Eine besonders große Herausforderung ist für Herrn Dr. Müller",
         "german": "Eine besonders große Herausforderung ist für Herrn Dr. Müller",
         "chinese": "对穆勒博士而言，实现无障碍环境是一项特别大的挑战。",
         "answer": "",
         "answerText": "C. die Herstellung von Barrierefreiheit.",
-        "addedIn": "2026.9",
+        "completion": "die Herstellung von Barrierefreiheit.",
+        "reviewGerman": "die Herstellung von Barrierefreiheit.",
+        "sourceAnswer": "C",
+        "sourceGerman": "Eine besonders große Herausforderung ist für Herrn Dr. Müller C die Herstellung von Barrierefreiheit.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
         "source": "tencent-2026-09",
         "sourcePages": [
           245
         ],
-        "completion": "die Herstellung von Barrierefreiheit.",
-        "reviewGerman": "die Herstellung von Barrierefreiheit.",
-        "sourceAnswer": "C",
-        "sourceNote": "原文只提供正确补全，未提供其他选项。"
+        "addedIn": "2026.9"
       },
       {
         "number": "64",
+        "sourceNumber": "64",
         "text": "Laut Herrn Dr. Müller ist die Stadt Hamburg ein Vorreiter",
         "german": "Laut Herrn Dr. Müller ist die Stadt Hamburg ein Vorreiter",
         "chinese": "据穆勒博士称，汉堡市是数字化领域的先驱。",
         "answer": "",
         "answerText": "B. bei der Digitalisierung.",
-        "addedIn": "2026.9",
+        "completion": "bei der Digitalisierung.",
+        "reviewGerman": "bei der Digitalisierung.",
+        "sourceAnswer": "B",
+        "sourceGerman": "Laut Herrn Dr. Müller ist die Stadt Hamburg ein Vorreiter B bei der Digitalisierung.",
+        "sourceNote": "原文仅提供正确补全或完整句，未提供其他选项；保留原文用词。",
         "source": "tencent-2026-09",
         "sourcePages": [
           245
         ],
-        "completion": "bei der Digitalisierung.",
-        "reviewGerman": "bei der Digitalisierung.",
-        "sourceAnswer": "B",
-        "sourceNote": "原文只提供正确补全，未提供其他选项。"
+        "addedIn": "2026.9"
       }
     ]
   }
