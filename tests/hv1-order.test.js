@@ -37,6 +37,18 @@ test("Statements without a known speaker order stay out of scored sorting", () =
   assert.equal(order.canPractice(duplicate), false);
 });
 
+test("Source caveats stay attached to the same statement while sorting and reviewing", () => {
+  const section = source.find(s => s.teil === 13);
+  const session = order.createSession(section.questions);
+  const truncated = session.correct[1];
+  assert.match(truncated.text, /zu\.\.\.$/);
+  assert.match(truncated.note, /截断/);
+  order.begin(session);
+  assert.equal(session.order.find(q => q.id === truncated.id).note, truncated.note);
+  const result = order.submit(session);
+  assert.equal(result.rows.find(q => q.id === truncated.id).note, truncated.note);
+});
+
 test("Ready shuffles all eight without mutating the source, even if RNG yields the identity", () => {
   const questions = sample();
   const original = JSON.stringify(questions);

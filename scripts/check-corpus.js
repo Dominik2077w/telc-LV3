@@ -43,6 +43,22 @@ for (const [name, expected] of Object.entries(manifest.modules)) {
 }
 
 const lv3 = datasets.lv3;
+const hv1 = datasets.hv1;
+assert.deepEqual(hv1.map(s => s.teil), [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, "12-2", 13, "13-2", "14-1", "14-2", 15, 16, 17, 18]);
+const hv1Letters = { 11: "CDBJEAGH", 12: "AIDBEJGC", "12-2": "CIBDEJGA", 13: "GCFJBHIA",
+  "13-2": "GBACFDHI", "14-2": "HBEDAFCJ", 15: "GEBHAJFD", 16: "HIABFCJE", 18: "GIBHFCEJ" };
+for (const section of hv1) {
+  assert.equal(section.mode, "corpus-card");
+  assert.equal(section.orderKnown, section.teil !== 17);
+  assert.deepEqual(section.questions.map(q => q.number), section.orderKnown ? [1, 2, 3, 4, 5, 6, 7, 8] : Array.from("ABCDEFGHIJ"));
+  for (const [i, q] of section.questions.entries()) {
+    assert.equal(q.source, manifest.id, "HV1 must only contain this PDF's statements");
+    assert.ok(q.sourcePages.every(p => p >= 182 && p <= 227));
+    assert.ok(q.leitsatz && q.sourceGerman && q.chinese);
+    assert.equal(q.sourceAnswer, hv1Letters[section.teil]?.[i] || null, "Keep only source-printed letters, never synthetic A-H");
+    assert.ok(!q.audio && !q.options && !q.text.includes("\n"), "No old transcripts, audio, or invented distractors");
+  }
+}
 assert.deepEqual(lv3.flatMap((s) => s.questions.filter((q) => !q.answer).map((q) => [s.teil, q.number])), [[8, 24], [18, 24]]);
 assert.ok(lv3.every((s) => s.questions.every((q) => !/[\u3400-\u9fff]/.test(q.german))), "LV3 fronts must contain German only");
 assert.equal(lv3.find((s) => s.teil === 9).questions.find((q) => q.number === 15).answer, "R");

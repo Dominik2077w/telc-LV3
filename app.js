@@ -260,6 +260,7 @@ function normalizeSections(level, sections) {
           teil: section.teil,
           teilTitle: section.title,
           sectionMode: mode,
+          orderKnown: section.orderKnown,
           german,
           chinese,
         };
@@ -652,7 +653,8 @@ function showFront(question) {
   els.backFace.classList.add("hidden");
   const config = datasets[state.level];
   els.promptLabel.textContent = question.sectionMode === "corpus-card" ? "复习卡" : config.promptLabel;
-  els.correctAnswerLabel.textContent = question.sectionMode === "corpus-card" ? "原文答案" : config.answerLabel;
+  els.correctAnswerLabel.textContent = question.level === "hv1" && question.orderKnown === false
+    ? "原文陈述" : question.sectionMode === "corpus-card" ? "原文答案" : config.answerLabel;
   els.reviewGermanLabel.textContent = question.sectionMode === "corpus-card" ? "原文" : config.reviewGermanLabel;
   els.reviewChineseLabel.textContent = question.sectionMode === "corpus-card" ? "中文 / 说明" : config.reviewChineseLabel;
   els.sessionMode.textContent = `${datasets[state.level].label} · ${
@@ -2105,6 +2107,12 @@ function createHv1OrderList(items, options = {}) {
     text.lang = "de";
     text.textContent = item.text;
     body.append(text);
+    if (item.note) {
+      const note = document.createElement("p");
+      note.className = "hv1-source-note";
+      note.textContent = item.note;
+      body.append(note);
+    }
     if (options.feedback) {
       row.classList.add(item.correct ? "correct" : "incorrect");
       const feedback = document.createElement("p");

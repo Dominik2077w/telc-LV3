@@ -243,56 +243,132 @@ def card(number, german, chinese, answer_text, page_numbers, **extra):
             "answer": "", "answerText": answer_text, "addedIn": EDITION, **source(page_numbers), **extra}
 
 
-def add_hv1(pages, data):
-    for section in sections(clean_pages(pages, 219, 227)):
-        n, title = section["teil"], section["title"]
-        if n in (12, 13) and not ("Grünflächen" in title or "（2）" in title):
-            continue
-        key = {12: "12-2", 13: "13-2"}.get(n, n)
-        title = {12: "Grünflächen（第二版）", 13: "Nebenjob im Studium（第二版）",
-                 17: "Mode und Trends / Modebranche"}.get(n, title)
-        if n == 14:
-            key = "14-1" if "Online" in title else "14-2"
-        questions, blocks, block = [], [], None
+HV1_TEILS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, "12-2", 13, "13-2",
+             "14-1", "14-2", 15, 16, 17, 18]
+HV1_ADDED = {"12-2", "13-2", "14-1", "14-2", 15, 16, 17, 18}
+# Teil 1's overview has no individual Chinese lines. These are the translations
+# next to its repeated statements on pp. 182-185, except #5, translated directly.
+HV1_INTERNET_ZH = [
+    (182, "我多年来每天都会上网。"),
+    (183, "互联网比日报更及时。"),
+    (183, "我的朋友和亲戚生活在其他大洲。"),
+    (183, "当我度假回家时，我不会立刻打开电脑。"),
+    (182, "电子邮件比书信往来更有优势。"),
+    (184, "互联网显著地便利了学术检索。"),
+    (185, "对一家企业来说，互联网是生存所必需的。"),
+    (185, "我现在上网比以前少了。"),
+]
+
+
+def hv1_statement(raw, *, answer_markers=True):
+    """Remove printed question/answer markers, never infer answer letters."""
+    value = re.sub(r"^(?:4[7-9]|5[0-4])\s*[.：:–-]+\s*", "", space(raw))
+    value = re.sub(r"^[1-8]-\s*", "", value)
+    prefix = re.match(r"^([A-J])\s*[-.:：)]\s*", value, re.I) if answer_markers else None
+    suffix = re.search(r"\(\s*([A-J])\s*\)\.?$", value, re.I) if answer_markers else None
+    letter = (prefix[1] if prefix else suffix[1] if suffix else "").upper() or None
+    if prefix:
+        value = value[prefix.end():]
+    if suffix:
+        value = re.sub(r"\(\s*[A-J]\s*\)\.?$", "", value, flags=re.I)
+    value = re.sub(r"^\.+", "", value).strip()
+    value = re.sub(r"(?<=\w)- (?=\w)", "", value)  # PDF line-break hyphen
+    value = re.sub(r"\s+([.,;:!?，])", r"\1", value)
+    value = re.sub(r"([,;:])(?=[A-Za-zÄÖÜäöüß])", r"\1 ", value)
+    return value, letter
+
+
+def hv1(pages):
+    """Read only the first eight ordered summary statements of every PDF group.
+
+    Later Sprecher headings are full transcripts, not additional questions.
+    Replacement data is built without consulting any previous HV1 corpus.
+    """
+    result = []
+    speaker_re = re.compile(r"^(?:Sprecher|Spreche|Speaker)\s*([1-8])\s*[:.]?$", re.I)
+    for section in sections(clean_pages(pages, 182, 227)):
+        n, source_title = section["teil"], section["title"]
+        key = n
+        title = source_title
+        if n == 12 and "Grünflächen" in source_title:
+            key, title = "12-2", "Grünflächen（第二版）"
+        elif n == 13 and "（2）" in source_title:
+            key, title = "13-2", "Nebenjob im Studium（第二版）"
+        elif n == 14:
+            key = "14-1" if "Online" in source_title else "14-2"
+        elif n == 17:
+            title = "Mode und Trends / Modebranche"
+        blocks = []
         for page, line in section["lines"]:
-            speaker = re.match(r"Sp(?:r?echer|eaker)\s*(\d)\s*[:.]?$", line, re.I)
-            if n == 17:
-                speaker = re.match(r"([A-J])\.\s*(.*)", line)
-            if speaker:
-                if block:
-                    blocks.append(block)
-                block = {"number": speaker[1], "lines": []}
+            match = re.match(r"^([A-J])\.\s*(.*)", line) if n == 17 else speaker_re.match(line)
+            if match:
+                if n != 17 and len(blocks) == 8:
+                    break
+                blocks.append({"number": match[1] if n == 17 else int(match[1]), "lines": []})
                 if n == 17:
-                    block["lines"].append((page, speaker[2]))
-            elif block:
-                block["lines"].append((page, line))
-        if block:
-            blocks.append(block)
+                    blocks[-1]["lines"].append((page, match[2]))
+            elif blocks:
+                blocks[-1]["lines"].append((page, line))
+        expected_numbers = list("ABCDEFGHIJ") if n == 17 else list(range(1, 9))
+        assert [b["number"] for b in blocks] == expected_numbers, (key, "Missing or repeated summary speakers")
+        questions = []
         for block in blocks:
-            clean = [(p, re.sub(r"^(?:4[7-9]|5[0-4])\s*[:：]\s*[A-J]\s*[:：]\s*", "", l) if CJK.search(l) else l)
-                     for p, l in block["lines"]]
-            german, chinese = split_languages(clean)
-            # The PDF uses both original item letters and plain numbered statements.
-            german = re.sub(r"^(?:4[7-9]|5[0-4])\s*[.：:–-]+\s*", "", german)
-            prefix = re.match(r"^([A-J])\s*[-:：)]\s*", german, re.I)
-            suffix = re.search(r"\(\s*([A-J])\s*\)\.?$", german, re.I)
-            letter = (prefix[1] if prefix else suffix[1] if suffix else "").upper()
-            if prefix:
-                german = german[prefix.end():]
-            if suffix:
-                german = re.sub(r"\(\s*[A-J]\s*\)\.?$", "", german, flags=re.I)
-            german = re.sub(r"^\d-\s*|^\.+", "", german).strip()
-            answer_text = (letter + ". " if letter else "") + german
-            questions.append(card(
-                block["number"], german if n == 17 else f"Sprecher {block['number']}: Welcher Leitsatz passt?",
-                chinese, answer_text, [p for p, _ in block["lines"]], reviewGerman=german,
-                sourceAnswer=letter or None,
-                sourceNote="原文仅有陈述，未提供 Sprecher 对应答案。" if n == 17 else "原文未提供此组音频及完整听力稿，按复习卡学习。",
-            ))
-        assert len(questions) == (10 if n == 17 else 8), (key, len(questions))
-        data[:] = [s for s in data if s["teil"] != key]
-        data.append({"teil": key, "title": title, "mode": "corpus-card", "sourceText": SOURCE_NAME,
-                     "addedIn": EDITION, **source(p for p, _ in section["lines"]), "questions": questions})
+            de_lines, zh_lines = [], []
+            for page, line in block["lines"]:
+                (zh_lines if CJK.search(line) or zh_lines else de_lines).append((page, line))
+            # Summaries for 1-9 append a mnemonic paragraph after the last
+            # translation. It is not part of Sprecher 8's statement/translation.
+            if n <= 9 and block["number"] == 8:
+                zh_lines = zh_lines[:1]
+            raw_de = space(" ".join(line for _, line in de_lines))
+            german, letter = hv1_statement(raw_de, answer_markers=n >= 11 and n != 17)
+            chinese = "".join(line for _, line in zh_lines)
+            chinese = re.sub(r"^(?:4[7-9]|5[0-4])\s*[:：]\s*[A-J]\s*[:：]\s*|^[a-j]-\s*", "", chinese, flags=re.I)
+            page_numbers = [p for p, _ in de_lines + zh_lines]
+            extras = {}
+            if n == 1:
+                translation_page, chinese = HV1_INTERNET_ZH[block["number"] - 1]
+                page_numbers.append(translation_page)
+                extras["translationSource"] = "translated-from-source-german" if block["number"] == 5 else "source-pdf"
+            if n == 3 and block["number"] == 7:
+                # Both highlighted variants are printed under the same speaker.
+                variants = re.split(r" (?=Wer während des Studiums)", german)
+                assert len(variants) == 2, (key, block["number"], "Expected both source variants")
+                german = variants[-1]
+                extras.update(sourceVariants=variants,
+                              studyNote="原文同时列有 kaumer / weniger 两种表述，这里采用后一种。")
+            if key == 13 and block["number"] == 2:
+                extras["studyNote"] = "原文在“zu...”处截断，保留原样，未补写后文。"
+            if key == 13 and block["number"] == 8:
+                extras.update(sourceChinese=chinese, translationSource="reviewed-from-source-german",
+                              studyNote="原文中文误重复上一项，中文已按本句德文校正。")
+                chinese = "兼职可能对学习效果产生积极影响。"
+            assert german and chinese and not CJK.search(german), (key, block["number"], "Invalid bilingual statement")
+            note = ("原文标注“暂无答案”，仅复习陈述，不参与顺序评分。" if n == 17
+                    else "按 PDF 中 Sprecher 1–8 的顺序练习；只记录原文明示的答案字母。")
+            if extras.get("studyNote"):
+                note = extras["studyNote"] + "\n" + note
+            q = {"number": block["number"], "leitsatz": german,
+                 "text": german if n == 17 else f"Sprecher {block['number']}: Welcher Leitsatz passt?",
+                 "german": german if n == 17 else f"Sprecher {block['number']}: Welcher Leitsatz passt?",
+                 "chinese": chinese, "answer": "", "answerText": (letter + ". " if letter else "") + german,
+                 "reviewGerman": "\n\n".join(extras.get("sourceVariants", [german])),
+                 "sourceGerman": raw_de, "sourceAnswer": letter,
+                 "sourceNote": note, **source(page_numbers), **extras}
+            q["addedIn" if key in HV1_ADDED else "updatedIn"] = EDITION
+            questions.append(q)
+        record = {"teil": key, "title": title, "mode": "corpus-card", "orderKnown": n != 17,
+                  "sourceText": SOURCE_NAME, "sourceTitle": source_title,
+                  **source([section["page"]] + [p for p, _ in section["lines"]]), "questions": questions}
+        record["addedIn" if key in HV1_ADDED else "updatedIn"] = EDITION
+        result.append(record)
+    return result
+
+
+def add_hv1(pages, data):
+    replacement = hv1(pages)
+    assert [s["teil"] for s in replacement] == HV1_TEILS, "HV1 source groups differ from the reviewed PDF"
+    data[:] = replacement
 
 
 def add_hv2(pages, data):
@@ -512,6 +588,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("pdf", type=Path)
     parser.add_argument("--dry-run", action="store_true", help="Report changes without writing")
+    parser.add_argument("--only-hv1", action="store_true", help="Replace HV1 exclusively from PDF pages 182-227")
     args = parser.parse_args()
     from pypdf import PdfReader
     if hashlib.sha256(args.pdf.read_bytes()).hexdigest() != EXPECTED_SHA256:
@@ -519,18 +596,20 @@ def main():
     reader = PdfReader(args.pdf)
     if len(reader.pages) != 329:
         raise ValueError("This reviewed import expects the 329-page September 2026 edition.")
-    pages = [p.extract_text() or "" for p in reader.pages]
+    pages = [(p.extract_text() or "") if not args.only_hv1 or 181 <= i < 227 else ""
+             for i, p in enumerate(reader.pages)]
     translations = json.loads((ROOT / "scripts" / "corpus-2026-09-translations.json").read_text(encoding="utf-8"))
     names = ["lv2", "lv3", "hv1", "hv2", "baustein", "speaking", "writing"]
     datasets = {n: load_data(n) for n in names}
     before = copy.deepcopy(datasets)
-    datasets["lv3"] = (datasets["lv3"][0], lv3(pages))
-    add_lv2(pages, datasets["lv2"][1])
     add_hv1(pages, datasets["hv1"][1])
-    add_hv2(pages, datasets["hv2"][1])
-    update_baustein(pages, datasets["baustein"][1])
-    update_speaking(pages, datasets["speaking"][1], translations)
-    update_writing(pages, datasets["writing"][1], translations)
+    if not args.only_hv1:
+        datasets["lv3"] = (datasets["lv3"][0], lv3(pages))
+        add_lv2(pages, datasets["lv2"][1])
+        add_hv2(pages, datasets["hv2"][1])
+        update_baustein(pages, datasets["baustein"][1])
+        update_speaking(pages, datasets["speaking"][1], translations)
+        update_writing(pages, datasets["writing"][1], translations)
     validate(datasets)
     summary = {}
     for name, (variable, data) in datasets.items():
@@ -538,7 +617,7 @@ def main():
         summary[name] = {"sections": len(data), "questions": sum(len(s["questions"]) for s in data),
                          "previousQuestions": sum(len(s["questions"]) for s in previous),
                          "changed": previous != data}
-        if not args.dry_run:
+        if not args.dry_run and previous != data:
             text = json.dumps(data, ensure_ascii=False, indent=2)
             (ROOT / "data" / f"{name}_questions.js").write_text(f"window.{variable} = {text};\n", encoding="utf-8")
             if name in ("lv3", "hv1"):

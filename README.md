@@ -68,6 +68,14 @@ Browser checks cover 320×568, 360×640, 390×844, landscape, and a 1280-pixel d
 
 The default HV1 mode first shows all eight statements in correct speaker order. Click **准备好了，开始排序** to hide the answer and shuffle all eight together. Drag the **⠿** handle to reorder them vertically; the list scrolls near screen edges. The sentence area remains scrollable on phones. Arrow buttons and the up/down keyboard keys on a focused handle offer precise movement.
 
-**提交排序** scores each position, retains your submitted order, and shows both individual feedback and the complete correct order below. A wrong Teil returns to the memory stage in mistake-repeat mode. Clicking **下一 Teil** starts the next section's memory stage. The old individual matching mode remains available in settings.
+**提交排序** scores each position, retains your submitted order, and shows both individual feedback and the complete correct order below. A wrong Teil returns to the memory stage in mistake-repeat mode. Clicking **下一 Teil** starts the next section's memory stage. Settings also offer **逐句复习（按新 PDF）** using the same source statements and Chinese translations.
 
 Twenty sections have eight known answers and support this flow, including the September additions without audio. Correct order follows speaker numbers, never the letters attached to answer choices. Teil 17 (Mode und Trends / Modebranche) has ten statements but no speaker-answer mapping, so it remains a review-card section.
+
+HV1 is now replaced entirely from pages 182–227 of the September PDF. Its 21 groups contain 160 ordered statements and 10 unscored statements. Old transcripts, generated audio references, synthetic A–H mappings, and obsolete extraction fragments have been removed. Printed wording is retained, including incomplete sentences with visible source notes. Source pages, printed answer letters, and the exceptional translation correction are documented in [the HV1 source audit](docs/hv1-source-2026-09.md).
+
+```bash
+npm run update:hv1:2026-09 -- "/path/to/2026实时更新2026.9(腾讯文档实时更新）.pdf"
+```
+
+This import replaces all HV1 groups and refuses to write if the source fingerprint or complete group list differs. It leaves other modules untouched.

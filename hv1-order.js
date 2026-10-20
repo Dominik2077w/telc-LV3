@@ -17,7 +17,8 @@
   function createSession(questions) {
     if (!canPractice(questions)) throw new Error("HV1 requires a known speaker order and answer text.");
     const correct = [...questions].sort((a, b) => Number(a.number) - Number(b.number))
-      .map(q => ({ id: String(q.id || "hv1-item-" + q.number), text: sentence(q), number: Number(q.number) }));
+      .map(q => ({ id: String(q.id || "hv1-item-" + q.number), text: sentence(q), number: Number(q.number),
+        note: q.studyNote || "" }));
     if (new Set(correct.map(q => q.id)).size !== correct.length) throw new Error("Duplicate HV1 item IDs.");
     return { correct, phase: "memory", order: [], result: null, scored: false };
   }

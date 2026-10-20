@@ -1602,6 +1602,7 @@ select {
 .hv1-statement.incorrect { border-color: var(--red); background: #fff1ee; }
 .hv1-statement .hv1-position-feedback { margin-top: 9px; font-size: 14px; color: var(--green-dark); }
 .hv1-statement.incorrect .hv1-position-feedback { color: var(--red); }
+.hv1-statement .hv1-source-note { margin-top: 8px; font-size: 14px; color: var(--muted); }
 .hv1-order-mode .sort-bottom { position: sticky; bottom: 0; z-index: 3; background: white; padding: 12px 0 max(8px, env(safe-area-inset-bottom, 0px)); }
 .hv1-order-mode .sort-bottom button { min-height: 48px; }
 @media (max-width: 850px) {
