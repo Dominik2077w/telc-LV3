@@ -51,6 +51,57 @@ test("displayed choices shuffle, retain one correct completion, and score by its
   assert.deepEqual(question.distractors, originalDistractors);
 });
 
+test("review list joins each source stem to its PDF completion and cleans the Chinese translation", () => {
+  const section = Hv2Quiz.buildSections(sourceSections())[0];
+  const rows = Hv2Quiz.buildReviewRows(section);
+  const firstQuestion = section.questions[0];
+
+  assert.equal(rows.length, section.questions.length);
+  assert.equal(rows[0].sentence, "Tourbot ist ein Roboter, der Touristen durch ein Museum fuhrt.");
+  assert.equal(rows[0].chinese, "Tourbot 是一种能带领游客参观博物馆的机器人。");
+  assert.equal(rows[0].number, firstQuestion.number);
+  assert.match(rows.find(row => row.number === "59a").sentence, /Roboter als Wachhunde/);
+  assert.match(rows.find(row => row.number === "61").sentence, /Roboterkinder beliebter/);
+  assert.ok(rows.every(row => row.sentence && row.chinese));
+});
+
+test("each HV2 Teil starts with its ordered full-sentence memory list before practice", () => {
+  const sections = Hv2Quiz.buildSections(sourceSections().slice(0, 2));
+  const queue = Hv2Quiz.buildRoundQueue(sections);
+  let position = 0;
+
+  for (const section of sections) {
+    const memory = queue[position++];
+    assert.equal(memory.sectionMode, "hv2-memory");
+    assert.equal(String(memory.teil), String(section.teil));
+    assert.equal(memory.reviewRows.length, section.questions.length);
+    assert.ok(memory.reviewRows.every(row => row.sentence && row.chinese));
+    const practice = queue.slice(position, position + section.questions.length);
+    assert.ok(practice.every(question => question.sectionMode === "hv2-choice"));
+    assert.equal(practice.length, section.questions.length);
+    position += practice.length;
+  }
+  assert.equal(position, queue.length);
+});
+
+test("HV2 mistake rounds keep the article memory list and only queue missed questions", () => {
+  const sections = Hv2Quiz.buildSections(sourceSections().slice(0, 2)).map(section => ({
+    ...section,
+    questions: section.questions.map(question => ({ ...question, teil: section.teil })),
+  }));
+  const missed = [sections[0].questions[1], sections[1].questions[2]];
+  const retry = Hv2Quiz.buildRoundQueue(sections, missed);
+  const plainRetry = Array.from(retry);
+
+  assert.deepEqual(plainRetry.filter(question => question.sectionMode === "hv2-memory").map(question => String(question.teil)), [
+    String(sections[0].teil), String(sections[1].teil),
+  ]);
+  assert.deepEqual(plainRetry.filter(question => question.sectionMode === "hv2-choice").map(question => question.number),
+    missed.map(question => question.number));
+  assert.ok(plainRetry.filter(question => question.sectionMode === "hv2-memory")
+    .every((memory, index) => memory.reviewRows.length === sections[index].questions.length));
+});
+
 test("sections without three distinct PDF completions remain review cards", () => {
   const sections = [{
     teil: "x",
@@ -69,5 +120,7 @@ test("browser build loads the HV2 quiz engine while LV2 keeps its card entry", (
   assert.match(index, /hv2-quiz\.js/);
   assert.doesNotMatch(index, /lv2-quiz\.js|lv2_distractors/);
   assert.match(app, /state\.level === "hv2" \? Hv2Quiz\.buildSections/);
+  assert.match(app, /Hv2Quiz\.buildRoundQueue/);
+  assert.match(app, /sectionMode === "hv2-memory"/);
   assert.doesNotMatch(app, /Lv2Quiz|lv2-choice/);
 });

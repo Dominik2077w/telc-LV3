@@ -1405,10 +1405,31 @@ select {
   gap: 10px;
 }
 
+.hv2-memory-mode .sort-bottom {
+  position: sticky;
+  bottom: 0;
+  z-index: 3;
+  padding: 12px 0 max(8px, env(safe-area-inset-bottom, 0px));
+  background: var(--surface);
+}
+.hv2-memory-mode .sort-bottom button { width: 100%; min-height: 50px; }
+.hv2-review-list { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.hv2-review-row { display: grid; grid-template-columns: 46px minmax(0, 1fr); gap: 12px; align-items: start; padding: 14px; border: 1px solid var(--line); border-radius: 8px; background: #fbfaf6; }
+.hv2-review-number { display: grid; place-items: center; min-width: 42px; min-height: 36px; border-radius: 18px; background: #e9f2ec; color: var(--green-dark); font-size: 13px; font-weight: 850; }
+.hv2-review-body { min-width: 0; }
+.hv2-review-body p { margin: 0; overflow-wrap: anywhere; }
+.hv2-review-german { font-size: 17px; line-height: 1.55; }
+.hv2-review-chinese { margin-top: 6px !important; color: var(--muted); font-size: 15px; line-height: 1.5; }
+
 @media (max-width: 600px) {
   .sort-mode {
     padding: 20px;
   }
+
+  .hv2-review-row { grid-template-columns: 38px minmax(0, 1fr); gap: 9px; padding: 12px; }
+  .hv2-review-number { min-width: 34px; min-height: 30px; font-size: 12px; }
+  .hv2-review-german { font-size: 16px; }
+  .hv2-review-chinese { font-size: 14px; }
 
   .sort-connect-board {
     grid-template-columns: 1fr;

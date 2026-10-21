@@ -489,7 +489,13 @@ function startSession() {
 
   const teilOrdered = applyOrder(chosen, els.teilOrder.value);
 
-  if ((state.level === "lv2" && els.lv2Mode.value === "global-sort") || state.level === "lv2v2") {
+  if (state.level === "hv2") {
+    const orderedSections = teilOrdered.map((section) => ({
+      ...section,
+      questions: applyOrder(section.questions, els.questionOrder.value),
+    }));
+    state.sessionSource = Hv2Quiz.buildRoundQueue(orderedSections);
+  } else if ((state.level === "lv2" && els.lv2Mode.value === "global-sort") || state.level === "lv2v2") {
     state.sessionSource = teilOrdered.map(buildLv2GlobalSortBatch);
   } else if (state.level === "baustein") {
     state.sessionSource = teilOrdered.flatMap((section) => section.mode === "corpus-card"
@@ -539,6 +545,15 @@ function startRound(source) {
   nextQuestion();
 }
 
+function buildHv2MistakeQueue(mistakes) {
+  const memoryOrder = state.sessionSource
+    .filter((question) => question.sectionMode === "hv2-memory")
+    .map((question) => String(question.teil));
+  const sectionsByTeil = new Map(getPracticeSections().map((section) => [String(section.teil), section]));
+  const sections = memoryOrder.map((teil) => sectionsByTeil.get(teil)).filter(Boolean);
+  return Hv2Quiz.buildRoundQueue(sections, applyOrder(mistakes, els.questionOrder.value));
+}
+
 function nextQuestion() {
   if (state.complete) return;
 
@@ -558,7 +573,13 @@ function finishRound() {
   if (els.roundMode.value === "mistakes" && state.mistakes.length) {
     const count = countMistakeQuestions(state.mistakes);
     state.round += 1;
-    els.roundStrip.textContent = `本轮错 ${count} 题，下一轮只重复错题。`;
+    els.roundStrip.textContent = state.level === "hv2"
+      ? `本轮错 ${count} 题，下一轮先复习对应 Teil，再重复错题。`
+      : `本轮错 ${count} 题，下一轮只重复错题。`;
+    if (state.level === "hv2") {
+      startRound(buildHv2MistakeQueue(state.mistakes));
+      return;
+    }
     startRound(applyOrder(state.mistakes, els.questionOrder.value));
     return;
   }
@@ -599,6 +620,19 @@ function showFront(question) {
   els.corpusUpdateBadge.classList.toggle("hidden", !edition);
   if (question.sectionMode === "baustein-article") {
     renderBausteinArticle(question);
+    updateStats();
+    return;
+  }
+
+  if (question.sectionMode === "hv2-memory") {
+    els.sessionMode.textContent = "HV2 · 先看完整句与中文";
+    els.sessionTitle.textContent = "Teil " + question.teil + ": " + question.teilTitle;
+    els.teilBadge.textContent = "Teil " + question.teil;
+    els.questionBadge.textContent = "本篇预习";
+    els.questionCard.classList.add("hidden");
+    els.audioPanel.classList.add("hidden");
+    els.sortModeView.classList.remove("hidden");
+    renderHv2MemoryView(question);
     updateStats();
     return;
   }
@@ -1264,6 +1298,14 @@ function handleKeyboardNavigation(event) {
     return;
   }
 
+  if (state.current.sectionMode === "hv2-memory") {
+    if (event.key === "Enter" && !isNativeButtonKey(event)) {
+      event.preventDefault();
+      submitSort();
+    }
+    return;
+  }
+
   if (els.backFace.classList.contains("hidden")) {
     if (isFlashcard(state.current)) {
       if (!["ArrowRight", "Enter", " "].includes(event.key)) return;
@@ -1419,6 +1461,7 @@ function getHv2AnswerText(question) {
 function updateStats() {
   els.roundNumber.textContent = state.round;
   const totalQuestions = state.queue.reduce((total, question) => {
+    if (question.sectionMode === "hv2-memory") return total;
     if (question.sectionMode === "hv1-audio-quiz") {
       return total + (question.reviewQuestions || question.questions || []).length;
     }
@@ -1595,8 +1638,52 @@ function buildLv2GlobalSortBatch(section) {
   };
 }
 
+function renderHv2MemoryView(memory) {
+  els.sortModeView.classList.remove("hv1-order-mode", "hv1-audio-mode", "lv2-memory-mode");
+  els.sortModeView.classList.add("hv2-memory-mode");
+  els.sortShuffleButton.classList.add("hidden");
+  els.sortSubmitButton.textContent = "我看完了，开始本篇练习";
+  els.sortSubmitButton.disabled = false;
+  els.sortSubmitButton.onclick = null;
+  els.sortTeilBadge.textContent = "Teil " + memory.teil + " · " + memory.teilTitle;
+  els.sortInstruction.textContent = "下面按题号展示题干补全后的完整句子和中文翻译；看完后进入本篇三选一。";
+  els.sortInfo.textContent = "本篇 " + (memory.reviewRows || []).length + " 道题 · 按原题顺序";
+  els.sortList.classList.remove("hv1-order-list");
+  els.sortList.innerHTML = "";
+
+  const list = document.createElement("ol");
+  list.className = "hv2-review-list";
+  list.setAttribute("aria-label", "按题号排列的完整句子与中文翻译");
+  (memory.reviewRows || []).forEach(function (item) {
+    const row = document.createElement("li");
+    row.className = "hv2-review-row";
+
+    const number = document.createElement("span");
+    number.className = "hv2-review-number";
+    number.textContent = item.number || "—";
+
+    const body = document.createElement("div");
+    body.className = "hv2-review-body";
+
+    const german = document.createElement("p");
+    german.className = "hv2-review-german";
+    german.lang = "de";
+    german.textContent = item.sentence || "原文未提供完整句子";
+
+    const chinese = document.createElement("p");
+    chinese.className = "hv2-review-chinese";
+    chinese.textContent = item.chinese || "语料暂未提供中文翻译";
+
+    body.append(german, chinese);
+    row.append(number, body);
+    list.appendChild(row);
+  });
+  els.sortList.appendChild(list);
+  window.scrollTo({ top: 0, behavior: "instant" });
+}
+
 function renderLv2GlobalSortView(batch) {
-  els.sortModeView.classList.remove("hv1-order-mode", "hv1-audio-mode");
+  els.sortModeView.classList.remove("hv1-order-mode", "hv1-audio-mode", "hv2-memory-mode");
   els.sortShuffleButton.classList.remove("hidden");
   els.sortShuffleButton.textContent = "随机打乱";
   lv2GlobalSortState.batch = batch;
@@ -2131,7 +2218,7 @@ var hv1AudioState = { session: null };
 
 function renderHv1AudioQuiz(batch) {
   stopSortAudio();
-  els.sortModeView.classList.remove("hv1-order-mode");
+  els.sortModeView.classList.remove("hv1-order-mode", "hv2-memory-mode");
   els.sortModeView.classList.add("hv1-audio-mode");
   hv1AudioState.session = Hv1AudioQuiz.createSession(batch);
   renderHv1AudioQuizView();
@@ -2374,7 +2461,7 @@ var sortState = { session: null, drag: null };
 
 function renderSortView(batch) {
   stopSortAudio();
-  els.sortModeView.classList.remove("hv1-audio-mode");
+  els.sortModeView.classList.remove("hv1-audio-mode", "hv2-memory-mode");
   els.sortModeView.classList.add("hv1-order-mode");
   sortState.session = Hv1Order.createSession(batch.questions);
   els.sortTeilBadge.textContent = "Teil " + batch.teil + " · " + batch.teilTitle;
@@ -2580,6 +2667,7 @@ function finishHv1Drag(event) {
 }
 
 function submitSort() {
+  if (state.current?.sectionMode === "hv2-memory") return nextQuestion();
   if (state.current?.sectionMode === "lv2-global-sort") return submitLv2GlobalSort();
   if (state.current?.sectionMode === "hv1-audio-quiz") return submitHv1AudioStep();
   const session = sortState?.session;
