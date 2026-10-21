@@ -37,7 +37,7 @@ test("unrelated full-sentence distractors are independent of every correct compl
       assert.ok(question.distractors.every(text =>
         !text.toLocaleLowerCase("de").includes(question.correctText.toLocaleLowerCase("de"))
       ));
-      assert.equal(new Set([question.correctSentence, ...question.distractors]).size, 3);
+      assert.equal(new Set([question.correctText, ...question.distractors]).size, 3);
     }
   }
 });
@@ -61,8 +61,24 @@ test("displayed choices shuffle, retain one correct completion, and score by its
   assert.equal(question.options.length, 3);
   assert.equal(new Set(question.options.map(option => option.label.slice(3))).size, 3);
   assert.equal(question.options.filter(option => option.source === question.source).length, 1);
-  assert.equal(question.options.find(option => option.value === question.answer).label.slice(3), question.correctSentence);
+  assert.equal(question.options.find(option => option.value === question.answer).label.slice(3), question.correctText);
   assert.deepEqual(question.distractors, originalDistractors);
+});
+
+test("practice choices show only the PDF completion while memory rows retain the full sentence", () => {
+  const sections = Hv2Quiz.buildSections(sourceSections());
+  for (const section of sections) {
+    const rows = Hv2Quiz.buildReviewRows(section);
+    for (const [index, question] of section.questions.entries()) {
+      Hv2Quiz.prepareQuestion(question, () => 0.5);
+      const displayedAnswer = question.options.find(option => option.value === question.answer).label.slice(3);
+      assert.equal(displayedAnswer, Hv2Quiz.getCompletion(question));
+      assert.equal(rows[index].sentence, Hv2Quiz.completeSentence(question));
+      if (question.german && rows[index].sentence !== displayedAnswer) {
+        assert.notEqual(displayedAnswer, Hv2Quiz.completeSentence(question));
+      }
+    }
+  }
 });
 
 test("review list joins each source stem to its PDF completion and cleans the Chinese translation", () => {

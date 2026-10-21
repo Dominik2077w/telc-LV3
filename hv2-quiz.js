@@ -222,7 +222,6 @@
           ...entry.question,
           sectionMode: "hv2-choice",
           correctText: entry.completion,
-          correctSentence: completeSentence(entry.question),
           distractors,
           distractorSource: "independent-unrelated-statement",
         };
@@ -239,7 +238,7 @@
       throw new Error("HV2 three-choice questions require one PDF answer and two unrelated statements.");
     }
     const choices = [
-      { text: question.correctSentence, correct: true },
+      { text: question.correctText, correct: true },
       ...question.distractors.map(text => ({ text, correct: false })),
     ];
     for (let index = choices.length - 1; index > 0; index -= 1) {
