@@ -726,7 +726,7 @@ function showFront(question) {
   els.answerGrid.classList.toggle("hv2-choices", question.sectionMode === "hv2-choice");
   if (question.sectionMode === "hv2-choice") {
     els.sessionMode.textContent += " · 三选一";
-    els.roundStrip.textContent += " · 另两个选项是无关主题的独立陈述";
+    els.roundStrip.textContent += " · 三个选项均以省略开头的片段呈现";
   }
 
   renderParagraphPanel(question);
@@ -781,7 +781,7 @@ function renderParagraphPanel(question) {
     els.paragraphPanel.classList.remove("hidden");
     const note = document.createElement("p");
     note.className = "hv2-source-note";
-    note.textContent = "请选择本题的正确补全。干扰项为独立编写的无关陈述，也不是 PDF 原题选项。";
+    note.textContent = "请选择本题的正确补全。三个选项均省略句子开头；干扰项为另行编写的无关片段，并非 PDF 原题选项。";
     els.paragraphPanel.append(note);
     return;
   }
@@ -1444,7 +1444,7 @@ function getReviewGerman(question) {
 function getReviewChinese(question) {
   if (question.sectionMode === "hv2-choice") {
     return [question.chinese, question.sourceNote,
-      "正确补全来自 PDF；另外两个选项是独立编写的无关主题陈述，不由正确答案改写或否定，也不是 PDF 原题选项。",
+      "正确补全来自 PDF；另外两个选项是独立编写的无关片段，不由正确答案改写或否定，也不是 PDF 原题选项。",
     ].filter(Boolean).join("\n\n");
   }
   if (question.sectionMode === "paragraph-match") {

@@ -65,133 +65,133 @@
     });
   }
 
-  // These claims are complete statements about subjects unrelated to the article.
-  // They are authored independently and never derived from the correct completion.
-  const unrelatedStatementsByTeil = {
+  // Subjectless fragments about topics unrelated to the article. Like the PDF
+  // completions, they omit the sentence head; no fragment rewrites a PDF answer.
+  const unrelatedCompletionsByTeil = {
     "1": [
-      "Für das neue Kochbuch wurden Rezepte aus zwölf Regionen gesammelt.",
-      "Das Orchester probt jeden Mittwoch in der Aula.",
-      "Die mittelalterliche Stadtmauer wurde im vergangenen Jahr restauriert.",
-      "Auf dem Wochenmarkt gibt es jeden Freitag frisches Brot aus der Region.",
+      "hat Rezepte aus zwölf Regionen gesammelt",
+      "probt jeden Mittwoch in der Aula",
+      "wurde im vergangenen Jahr restauriert",
+      "bietet jeden Freitag frisches Brot aus der Region an",
     ],
     "2": [
-      "In der alten Bibliothek werden historische Landkarten aufbewahrt.",
-      "Der Chor führt im Frühjahr eine Operette auf.",
-      "Die Köchin bereitet die Soße ausschließlich mit regionalen Kräutern zu.",
-      "Das Schlossmuseum zeigt Möbel aus dem 18. Jahrhundert.",
+      "bewahrt historische Landkarten auf",
+      "führt im Frühjahr eine Operette auf",
+      "bereitet die Soße mit regionalen Kräutern zu",
+      "zeigt Möbel aus dem 18. Jahrhundert",
     ],
     "3": [
-      "Der Leuchtturm am Kap weist Schiffen seit über hundert Jahren den Weg.",
-      "Die Philharmonie veranstaltet jeden Sommer ein Konzert unter freiem Himmel.",
-      "In der Höhle wurden Spuren aus der Steinzeit entdeckt.",
-      "Die Fähre verbindet die beiden Inseln zweimal täglich.",
+      "weist Schiffen seit über hundert Jahren den Weg",
+      "veranstaltet jeden Sommer ein Konzert unter freiem Himmel",
+      "hat in einer Höhle Spuren aus der Steinzeit entdeckt",
+      "verbindet die beiden Inseln zweimal täglich",
     ],
     "4": [
-      "Die Geigerin spielt seit ihrer Kindheit in einem Kammerorchester.",
-      "Das Theater zeigt im Herbst eine Komödie aus dem 19. Jahrhundert.",
-      "Die alte Brücke wurde aus hellem Sandstein gebaut.",
-      "Der Keramikkurs findet jeden Donnerstag im Gemeindehaus statt.",
+      "spielt seit vielen Jahren in einem Kammerorchester",
+      "zeigt im Herbst eine Komödie aus dem 19. Jahrhundert",
+      "wurde aus hellem Sandstein gebaut",
+      "findet jeden Donnerstag im Gemeindehaus statt",
     ],
     "5": [
-      "Der Bodensee entstand während der letzten Eiszeit.",
-      "Die Oper wurde zum ersten Mal im Jahr 1923 aufgeführt.",
-      "Das Segelschiff überquerte den Atlantik in knapp sechs Wochen.",
-      "Im Museum ist eine Sammlung antiker Münzen zu sehen.",
+      "entstand während der letzten Eiszeit",
+      "wurde zum ersten Mal im Jahr 1923 aufgeführt",
+      "überquerte den Atlantik in knapp sechs Wochen",
+      "zeigt eine Sammlung antiker Münzen",
     ],
     "6-1": [
-      "Die Burg besitzt einen dreieckigen Innenhof.",
-      "Die Töpferwerkstatt verkauft handbemalte Schalen.",
-      "Ein Segelboot gewann die Regatta vor der Küste.",
-      "Die Ausstellung zeigt Porträts aus dem frühen 20. Jahrhundert.",
+      "besitzt einen dreieckigen Innenhof",
+      "verkauft handbemalte Schalen",
+      "gewann die Regatta vor der Küste",
+      "zeigt Porträts aus dem frühen 20. Jahrhundert",
     ],
     "6-2": [
-      "Die Burg besitzt einen dreieckigen Innenhof.",
-      "Die Töpferwerkstatt verkauft handbemalte Schalen.",
-      "Ein Segelboot gewann die Regatta vor der Küste.",
-      "Die Ausstellung zeigt Porträts aus dem frühen 20. Jahrhundert.",
+      "besitzt einen dreieckigen Innenhof",
+      "verkauft handbemalte Schalen",
+      "gewann die Regatta vor der Küste",
+      "zeigt Porträts aus dem frühen 20. Jahrhundert",
     ],
     "7": [
-      "Die Bäckerei öffnet am Wochenende bereits um sechs Uhr.",
-      "Der Fußballverein trägt seine Heimspiele auf einem Kunstrasenplatz aus.",
-      "Die Küche des Schlosses serviert ein Menü nach historischen Rezepten.",
-      "Ein alter Dampfer liegt heute als Museumsschiff im Hafen.",
+      "öffnet am Wochenende bereits um sechs Uhr",
+      "trägt die Heimspiele auf einem Kunstrasenplatz aus",
+      "serviert ein Menü nach historischen Rezepten",
+      "liegt heute als Museumsschiff im Hafen",
     ],
     "8": [
-      "Das Rezept für die Suppe stammt aus einem Kochbuch von 1850.",
-      "Der Bildhauer fertigt seine Figuren aus schwarzem Marmor.",
-      "Die Theatergruppe probt ein Stück von Bertolt Brecht.",
-      "Im Archiv lagern Briefe aus der Zeit der Hanse.",
+      "stammt aus einem Kochbuch von 1850",
+      "fertigt Figuren aus schwarzem Marmor",
+      "probt ein Stück von Bertolt Brecht",
+      "bewahrt Briefe aus der Zeit der Hanse auf",
     ],
     "9": [
-      "Die Werft baute früher Segelschiffe für den Handel mit Norwegen.",
-      "Die Opernsängerin gab ihr Debüt an der Mailänder Scala.",
-      "Das erste Foto des Ortes entstand im Jahr 1864.",
-      "Die Töpferei stellt Geschirr nach einer jahrhundertealten Technik her.",
+      "baute früher Segelschiffe für den Handel mit Norwegen",
+      "gab ein Debüt an der Mailänder Scala",
+      "entstand im Jahr 1864",
+      "stellt Geschirr nach einer jahrhundertealten Technik her",
     ],
     "10": [
-      "Im Steinbruch wurden mehrere seltene Fossilien gefunden.",
-      "Die regionale Küche ist für ihre würzigen Käsesorten bekannt.",
-      "Das Theatergebäude wurde nach einem Brand vollständig wiederaufgebaut.",
-      "Die Münzsammlung umfasst Prägungen aus sieben Ländern.",
+      "hat im Steinbruch mehrere seltene Fossilien gefunden",
+      "ist für würzige Käsesorten bekannt",
+      "wurde nach einem Brand vollständig wiederaufgebaut",
+      "umfasst Prägungen aus sieben Ländern",
     ],
     "11": [
-      "Das Streichquartett spielt Werke aus der Wiener Klassik.",
-      "Die Handschrift wurde im 14. Jahrhundert auf Pergament geschrieben.",
-      "Die Käserei reift ihren Bergkäse in einem alten Gewölbekeller.",
-      "Das Segelrennen beginnt traditionell am ersten Sonntag im Mai.",
+      "spielt Werke aus der Wiener Klassik",
+      "wurde im 14. Jahrhundert auf Pergament geschrieben",
+      "lässt Bergkäse in einem alten Gewölbekeller reifen",
+      "beginnt traditionell am ersten Sonntag im Mai",
     ],
     "12": [
-      "Der Maler fertigte die Landschaftsbilder ausschließlich mit Aquarellfarben an.",
-      "Im Steinbruch wird seit Jahrzehnten kein Marmor mehr abgebaut.",
-      "Das Gericht wird mit Safran und gerösteten Mandeln serviert.",
-      "Die Ausgrabung brachte eine römische Mosaikfläche ans Licht.",
+      "fertigte Landschaftsbilder mit Aquarellfarben an",
+      "hat früher Marmor in einem Steinbruch abgebaut",
+      "wird mit Safran und gerösteten Mandeln serviert",
+      "brachte eine römische Mosaikfläche ans Licht",
     ],
     "13": [
-      "Das Jazztrio veröffentlichte sein erstes Album im vergangenen Frühjahr.",
-      "Bei der Ausgrabung kamen Keramikgefäße aus der Bronzezeit zum Vorschein.",
-      "Der Komet war mehrere Wochen lang mit bloßem Auge zu sehen.",
-      "Die Oper endet mit einem Chor auf der großen Freitreppe.",
+      "veröffentlichte das erste Album im vergangenen Frühjahr",
+      "hat Keramikgefäße aus der Bronzezeit freigelegt",
+      "war mehrere Wochen lang mit bloßem Auge zu sehen",
+      "endet mit einem Chor auf der großen Freitreppe",
     ],
     "14": [
-      "Das Schauspielhaus zeigt eine neue Inszenierung von Faust.",
-      "Die Werft ist auf den Bau kleiner Segelschiffe spezialisiert.",
-      "Die Keramikerin brennt ihre Schalen bei besonders hoher Temperatur.",
-      "Das Filmfestival widmet sich in diesem Jahr dem Stummfilm.",
+      "zeigt eine neue Inszenierung von Faust",
+      "ist auf den Bau kleiner Segelschiffe spezialisiert",
+      "brennt Schalen bei besonders hoher Temperatur",
+      "widmet sich in diesem Jahr dem Stummfilm",
     ],
     "15": [
-      "Die Töpferin verkauft ihre Schalen auf einem Kunsthandwerkermarkt.",
-      "Das Jazzfestival findet jedes Jahr in der zweiten Augustwoche statt.",
-      "Die Schriftrolle enthält eine Abschrift eines antiken Gedichts.",
-      "Der Geologe bestimmte das Alter des Gesteins anhand seiner Minerale.",
+      "verkauft Schalen auf einem Kunsthandwerkermarkt",
+      "findet jedes Jahr in der zweiten Augustwoche statt",
+      "enthält eine Abschrift eines antiken Gedichts",
+      "bestimmte das Alter des Gesteins anhand seiner Minerale",
     ],
     "16": [
-      "Das Kochbuch enthält Rezepte für traditionelle Gerichte aus Böhmen.",
-      "Die Theatergruppe führt das Stück in einem historischen Ballsaal auf.",
-      "Der Roman erzählt von einer Seereise im 18. Jahrhundert.",
-      "Die Ausstellung zeigt Porzellan aus der Meißner Manufaktur.",
+      "enthält Rezepte für traditionelle Gerichte aus Böhmen",
+      "führt das Stück in einem historischen Ballsaal auf",
+      "erzählt von einer Seereise im 18. Jahrhundert",
+      "zeigt Porzellan aus der Meißner Manufaktur",
     ],
     "17": [
-      "Die Glasbläserin formt ihre Vasen noch immer von Hand.",
-      "Der Segelclub veranstaltet im Juni eine Regatta auf dem Bodensee.",
-      "Die Oper wurde nach einer Vorlage aus der griechischen Mythologie komponiert.",
-      "Im Heimatmuseum ist eine historische Schmiede eingerichtet.",
+      "formt Vasen noch immer von Hand",
+      "veranstaltet im Juni eine Regatta auf dem Bodensee",
+      "wurde nach einer Vorlage aus der griechischen Mythologie komponiert",
+      "zeigt eine historische Schmiede im Heimatmuseum",
     ],
     "18": [
-      "Das Kammerorchester spielt jeden Winter ein Konzert in der Dorfkirche.",
-      "Die Ausgrabungen legten die Fundamente eines römischen Tempels frei.",
-      "Das Kochbuch widmet sich ausschließlich der Küche Südfrankreichs.",
-      "Die Glasmalerei im Chorraum stammt aus dem späten Mittelalter.",
+      "spielt jeden Winter ein Konzert in der Dorfkirche",
+      "hat die Fundamente eines römischen Tempels freigelegt",
+      "widmet sich der Küche Südfrankreichs",
+      "stammt aus dem späten Mittelalter",
     ],
     "generic": [
-      "Das Kammerorchester probt zweimal in der Woche.",
-      "Die Ausstellung zeigt Gemälde aus dem 18. Jahrhundert.",
-      "Das Kochbuch enthält Rezepte aus verschiedenen Regionen.",
-      "Die alte Brücke wurde aus rotem Sandstein errichtet.",
+      "probt zweimal in der Woche",
+      "zeigt Gemälde aus dem 18. Jahrhundert",
+      "enthält Rezepte aus verschiedenen Regionen",
+      "wurde aus rotem Sandstein errichtet",
     ],
   };
 
-  function createUnrelatedStatements(question, teil = question.teil) {
-    const statements = unrelatedStatementsByTeil[String(teil)] || unrelatedStatementsByTeil.generic;
+  function createUnrelatedCompletions(question, teil = question.teil) {
+    const statements = unrelatedCompletionsByTeil[String(teil)] || unrelatedCompletionsByTeil.generic;
     const seed = `${teil}:${question.number || question.sourceNumber || ""}:${question.german || question.text || ""}`;
     let hash = 0;
     for (const character of seed) hash = (hash * 31 + character.codePointAt(0)) >>> 0;
@@ -215,7 +215,7 @@
       }));
       const prepared = entries.map(entry => {
         if (!entry.completion) return null;
-        const distractors = createUnrelatedStatements(entry.question, section.teil)
+        const distractors = createUnrelatedCompletions(entry.question, section.teil)
           .filter((text, index, all) => text && !allSourceAnswers.has(text) && all.indexOf(text) === index);
         if (distractors.length !== 2) return null;
         return {
@@ -223,7 +223,7 @@
           sectionMode: "hv2-choice",
           correctText: entry.completion,
           distractors,
-          distractorSource: "independent-unrelated-statement",
+          distractorSource: "independent-unrelated-completion",
         };
       });
 
@@ -235,7 +235,7 @@
 
   function prepareQuestion(question, random = Math.random) {
     if (!question || question.sectionMode !== "hv2-choice" || question.distractors?.length !== 2) {
-      throw new Error("HV2 three-choice questions require one PDF answer and two unrelated statements.");
+      throw new Error("HV2 three-choice questions require one PDF answer and two unrelated completion fragments.");
     }
     const choices = [
       { text: question.correctText, correct: true },
@@ -247,7 +247,7 @@
     }
     question.options = choices.map((choice, index) => ({
       value: "ABC"[index],
-      label: `${"ABC"[index]}. ${choice.text}`,
+      label: `${"ABC"[index]}. ${choice.text.trim().replace(/[.!?…\s]+$/u, "")}`,
       shortcut: `${index + 1} / ${"ABC"[index]}`,
       source: choice.correct ? question.source : question.distractorSource,
     }));
@@ -261,7 +261,7 @@
     buildRoundQueue,
     cleanCompletion,
     completeSentence,
-    createUnrelatedStatements,
+    createUnrelatedCompletions,
     getCompletion,
     prepareQuestion,
   };
