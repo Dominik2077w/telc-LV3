@@ -198,9 +198,6 @@ syncMobileLayout();
 
 function selectLevel(level, options = {}) {
   stopSortAudio();
-  // Browsers can restore select values from an earlier visit. Entering LV2
-  // always starts with the advertised default; review modes remain selectable.
-  if (level === "lv2") els.lv2Mode.value = "choice";
   state.level = level;
   data = normalizeSections(level, datasets[level].source);
   state.selectedTeils = new Set(getPracticeSections().filter((section) => section.questions.length).map((section) => section.teil));
