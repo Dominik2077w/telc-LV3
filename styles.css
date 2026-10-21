@@ -529,6 +529,40 @@ select {
   gap: 12px;
 }
 
+.answer-grid.lv2-choices {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.answer-grid.lv2-choices .answer-button {
+  min-height: 58px;
+  padding: 14px 18px;
+  text-align: left;
+  font-size: 17px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+  background: #eef3f8;
+  color: var(--blue);
+}
+
+.lv2-passage summary {
+  cursor: pointer;
+  color: var(--blue);
+  padding: 10px 0;
+}
+
+.lv2-passage p {
+  font-size: 17px;
+  line-height: 1.65;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.lv2-source-note, #lv2ModeLabel small {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
 .answer-grid[data-count="4"],
 .answer-grid[data-count="5"] {
   grid-template-columns: repeat(5, minmax(0, 1fr));

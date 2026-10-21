@@ -27,7 +27,7 @@ jobs:
           node-version: 20
 
       - name: Build static site
-        run: npm run check:corpus && npm run check:hv1 && npm run build
+        run: npm run check:corpus && npm run check:hv1 && npm run check:lv2 && npm run build
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
