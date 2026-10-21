@@ -24,27 +24,33 @@ test("all supported HV2 sections become three-choice practice without changing s
   assert.equal(JSON.stringify(source), before);
 });
 
-test("synthetic false distractors never reuse a correct completion from any question", () => {
+test("unrelated full-sentence distractors are independent of every correct completion", () => {
   const source = sourceSections();
   const sections = Hv2Quiz.buildSections(source);
   const allSourceAnswers = new Set(source.flatMap(section => section.questions.map(Hv2Quiz.getCompletion)));
   for (const section of sections) {
     for (const question of section.questions) {
-      assert.equal(question.distractorSource, "synthetic-false-completion");
+      assert.equal(question.distractorSource, "independent-unrelated-statement");
       assert.equal(question.distractors.length, 2);
       assert.equal(question.distractors.some(text => allSourceAnswers.has(text)), false);
-      assert.equal(new Set([question.correctText, ...question.distractors]).size, 3);
+      assert.ok(question.distractors.every(text => /^[A-ZÄÖÜ].+[.!?]$/u.test(text)));
+      assert.ok(question.distractors.every(text =>
+        !text.toLocaleLowerCase("de").includes(question.correctText.toLocaleLowerCase("de"))
+      ));
+      assert.equal(new Set([question.correctSentence, ...question.distractors]).size, 3);
     }
   }
 });
 
-test("negative options are synthesized as contradictions of the current question", () => {
+test("distractors are complete unrelated statements, not negations or edits of the answer", () => {
   const sections = Hv2Quiz.buildSections(sourceSections());
   const question = sections[0].questions.find(item => item.number === "59b");
   assert.deepEqual(question.distractors, [
-    "nicht zum Schutz eigener Wohnungen eingesetzt werden",
-    "keinesfalls zum Schutz von Wohnungen eingesetzt werden",
+    "Die mittelalterliche Stadtmauer wurde im vergangenen Jahr restauriert.",
+    "Für das neue Kochbuch wurden Rezepte aus zwölf Regionen gesammelt.",
   ]);
+  assert.equal(question.distractors.some(text => /nicht|niemals|keinesfalls/u.test(text)), false);
+  assert.equal(question.distractors.some(text => text.includes(question.correctText)), false);
 });
 
 test("displayed choices shuffle, retain one correct completion, and score by its displayed letter", () => {
@@ -55,7 +61,7 @@ test("displayed choices shuffle, retain one correct completion, and score by its
   assert.equal(question.options.length, 3);
   assert.equal(new Set(question.options.map(option => option.label.slice(3))).size, 3);
   assert.equal(question.options.filter(option => option.source === question.source).length, 1);
-  assert.equal(question.options.find(option => option.value === question.answer).label.slice(3), question.correctText);
+  assert.equal(question.options.find(option => option.value === question.answer).label.slice(3), question.correctSentence);
   assert.deepEqual(question.distractors, originalDistractors);
 });
 
@@ -110,7 +116,7 @@ test("HV2 mistake rounds keep the article memory list and only queue missed ques
     .every((memory, index) => memory.reviewRows.length === sections[index].questions.length));
 });
 
-test("synthetic false distractors work even when a Teil has fewer than three correct completions", () => {
+test("unrelated statements work even when a Teil has fewer than three source answers", () => {
   const sections = [{
     teil: "x",
     mode: "corpus-card",

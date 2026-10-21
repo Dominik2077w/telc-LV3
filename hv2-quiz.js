@@ -65,197 +65,140 @@
     });
   }
 
-  const explicitFalseCompletions = {
-    "2:55": [
-      "hat einen langen Weg zu ihrer Arbeitsstelle",
-      "hat keinen kurzen Weg zu ihrer Arbeitsstelle",
+  // These claims are complete statements about subjects unrelated to the article.
+  // They are authored independently and never derived from the correct completion.
+  const unrelatedStatementsByTeil = {
+    "1": [
+      "Für das neue Kochbuch wurden Rezepte aus zwölf Regionen gesammelt.",
+      "Das Orchester probt jeden Mittwoch in der Aula.",
+      "Die mittelalterliche Stadtmauer wurde im vergangenen Jahr restauriert.",
+      "Auf dem Wochenmarkt gibt es jeden Freitag frisches Brot aus der Region.",
     ],
-    "2:56": [
-      "ist ausschließlich in Europa vertreten",
-      "ist überhaupt nicht in Europa vertreten",
+    "2": [
+      "In der alten Bibliothek werden historische Landkarten aufbewahrt.",
+      "Der Chor führt im Frühjahr eine Operette auf.",
+      "Die Köchin bereitet die Soße ausschließlich mit regionalen Kräutern zu.",
+      "Das Schlossmuseum zeigt Möbel aus dem 18. Jahrhundert.",
     ],
-    "2:59": [
-      "hörte schon vor dem Studium von den Arbeitsmöglichkeiten bei der ESA",
-      "hörte erst nach dem Studium von den Arbeitsmöglichkeiten bei der ESA",
+    "3": [
+      "Der Leuchtturm am Kap weist Schiffen seit über hundert Jahren den Weg.",
+      "Die Philharmonie veranstaltet jeden Sommer ein Konzert unter freiem Himmel.",
+      "In der Höhle wurden Spuren aus der Steinzeit entdeckt.",
+      "Die Fähre verbindet die beiden Inseln zweimal täglich.",
     ],
-    "1:55": ["keine Touristen durch ein Museum führt", "Touristen in einem Stadion statt in einem Museum begleitet"],
-    "1:57": ["die Roboterentwicklung vollständig eingestellt werden", "die Programmierung nicht weiterentwickelt werden"],
-    "1:58a": ["werden sich Reinigungsroboter nicht selbst aufladen können", "bleiben Reinigungsroboter auf externe Stromversorgung angewiesen"],
-    "1:58b": ["sind Roboter derzeit nicht in der Lage, sich selbst aufzuladen", "brauchen Roboter immer Menschen zum Aufladen"],
-    "1:59b": ["nicht zum Schutz eigener Wohnungen eingesetzt werden", "keinesfalls zum Schutz von Wohnungen eingesetzt werden"],
-    "1:63": ["Er sagt, dass Roboter Menschen niemals überlegen sind", "Er sagt, dass Roboter den Menschen immer unterlegen sind"],
-    "1:64": ["müssen ethische Aspekte der Robotik nicht beachten", "sollen ethische Aspekte der Robotik vollständig ignorieren"],
-    "2:57": ["gefällt Azra dort überhaupt nicht", "missfällt Azra wegen der Stimmung dort"],
-    "2:58": ["werden keine gemeinsamen Freizeitaktivitäten angeboten", "werden ausschließlich berufliche Aktivitäten angeboten"],
-    "2:61": ["wird keine feste Anzahl von Jobs bei der ESA angeboten", "gibt es unbegrenzt viele Stellen bei der ESA"],
-    "2:62": ["können sich erst nach dem Studienabschluss bewerben", "dürfen sich erst nach dem Studienabschluss bewerben"],
-    "2:63": ["werden nicht von den jeweiligen Ressorts durchgeführt", "werden zentral von einer einzigen Stelle durchgeführt"],
-    "2:64": ["schätzungsweise an derselben ESA-Niederlassung bleiben", "keine andere ESA-Niederlassung suchen"],
-    "4:61": [
-      "besitzen zahlreiche natürliche kommunikative Fähigkeiten",
-      "verfügen weiterhin über ausgeprägte natürliche Kommunikationsfähigkeiten",
+    "4": [
+      "Die Geigerin spielt seit ihrer Kindheit in einem Kammerorchester.",
+      "Das Theater zeigt im Herbst eine Komödie aus dem 19. Jahrhundert.",
+      "Die alte Brücke wurde aus hellem Sandstein gebaut.",
+      "Der Keramikkurs findet jeden Donnerstag im Gemeindehaus statt.",
     ],
-    "3:55": ["kaufen gezielter ein als Männer", "kaufen planvoller ein als Männer"],
-    "3:58": ["lässt ihren Mitarbeitern keine Freiräume zum Gestalten", "kontrolliert jeden Gestaltungsschritt ihrer Mitarbeiter"],
-    "3:60": ["verursacht hohe Lagerkosten und kann deshalb keine günstigen Preise gewährleisten", "führt zu höheren Lagerkosten und deutlich teureren Preisen"],
-    "3:63": ["legt keinen Wert auf die Beständigkeit der Produkte", "setzt vor allem auf kurzlebige Produkte"],
-    "3:64": ["fehlte Frau Fischer in ihrer Jugend die Zielstrebigkeit, Geld zu verdienen", "entwickelte Frau Fischer erst später den Wunsch, Geld zu verdienen"],
-    "4:55": ["versuchte nicht als erster, Pflanzengeräusche zu hören", "konnte keine Pflanzengeräusche hören"],
-    "4:56a": ["ignorieren die Signale im Inneren von Pflanzen", "untersuchen ausschließlich äußere Einflüsse auf Pflanzen"],
-    "4:56b": ["ignorieren die Signale im Inneren von Pflanzen", "untersuchen ausschließlich äußere Einflüsse auf Pflanzen"],
-    "4:57": ["das Absinken des Wassers im Baum", "die Bewegung von Luft in der Pflanze"],
-    "4:58": ["verfolgt primär das Ziel, Schädlinge anzulocken", "dient allein der individuellen Selbstverteidigung"],
-    "4:59": ["schädlingsfressende Insekten vertreibt", "Schädlinge mit giftigen Stoffen abtötet"],
-    "4:60": ["können ihre Artgenossen nicht vor Schädlingen warnen", "können Artgenossen vor Schädlingen nicht erreichen"],
-    "4:62": ["das menschliche Immunsystem schwächen", "keinen positiven Einfluss auf das menschliche Immunsystem haben"],
-    "4:63": ["suchen nach Belegen für gesundheitliche Risiken durch Pflanzen", "haben die wohltuende Wirkung von Pflanzen bereits abschließend widerlegt"],
-    "4:64": ["geben keinen Aufschluss über den Klimawandel", "sagen nichts über frühere Klimaveränderungen aus"],
-    "7:55": [
-      "Forschung eine Sache ausschließlich für Laien ist",
-      "Forschung ohne Fachwissen betrieben werden kann",
+    "5": [
+      "Der Bodensee entstand während der letzten Eiszeit.",
+      "Die Oper wurde zum ersten Mal im Jahr 1923 aufgeführt.",
+      "Das Segelschiff überquerte den Atlantik in knapp sechs Wochen.",
+      "Im Museum ist eine Sammlung antiker Münzen zu sehen.",
     ],
-    "7:61": [
-      "können jederzeit auf die Arbeit von Laien verzichten",
-      "kommen vollständig ohne die Arbeit von Laien aus",
+    "6-1": [
+      "Die Burg besitzt einen dreieckigen Innenhof.",
+      "Die Töpferwerkstatt verkauft handbemalte Schalen.",
+      "Ein Segelboot gewann die Regatta vor der Küste.",
+      "Die Ausstellung zeigt Porträts aus dem frühen 20. Jahrhundert.",
     ],
-    "9:55": [
-      "wünscht sich ausdrücklich einen eigenen Garten",
-      "träumt von einem eigenen Garten",
+    "6-2": [
+      "Die Burg besitzt einen dreieckigen Innenhof.",
+      "Die Töpferwerkstatt verkauft handbemalte Schalen.",
+      "Ein Segelboot gewann die Regatta vor der Küste.",
+      "Die Ausstellung zeigt Porträts aus dem frühen 20. Jahrhundert.",
     ],
-    "5:55": ["wird nun von keiner Wissenschaftlerin untersucht", "bleibt wissenschaftlich völlig unbeachtet"],
-    "5:56": ["hat nur eine Gruppe beschrieben", "hat keine Gruppen beschrieben"],
-    "5:58": ["gab es keinen Wettbewerb zwischen den Frauen im Haus", "lebten Frauen und Schwiegermütter stets konfliktfrei zusammen"],
-    "5:59": ["wurden Schwiegermütter nie Gegenstand der Literatur", "waren Schwiegermütter kein Thema in der Literatur"],
-    "5:60": ["einen starken Sohn", "einen selbstbewussten Sohn"],
-    "5:61": ["nur sehr wenige Ehefrauen Probleme mit der Schwiegermutter haben", "die Mehrheit der Ehefrauen Probleme mit der Schwiegermutter hat"],
-    "5:62": ["sich in die Streitereien einmischen", "den Konflikt offen verschärfen"],
-    "5:63": ["respektiert die Privatsphäre des jungen Paares", "hält sich konsequent aus dem Leben des jungen Paares heraus"],
-    "5:64": ["Männer ihre neue Familie der Herkunftsfamilie vorziehen", "Männer beide Familien gleich behandeln"],
-    "10:55": [
-      "hat großes Interesse am Studentenleben außerhalb der Uni",
-      "engagiert sich stark im Studentenleben außerhalb der Uni",
+    "7": [
+      "Die Bäckerei öffnet am Wochenende bereits um sechs Uhr.",
+      "Der Fußballverein trägt seine Heimspiele auf einem Kunstrasenplatz aus.",
+      "Die Küche des Schlosses serviert ein Menü nach historischen Rezepten.",
+      "Ein alter Dampfer liegt heute als Museumsschiff im Hafen.",
     ],
-    "10:56": [
-      "erkannten Finjas Besonderheit schon kurz nach ihrer Geburt",
-      "erkannten Finjas Besonderheit sofort im Säuglingsalter",
+    "8": [
+      "Das Rezept für die Suppe stammt aus einem Kochbuch von 1850.",
+      "Der Bildhauer fertigt seine Figuren aus schwarzem Marmor.",
+      "Die Theatergruppe probt ein Stück von Bertolt Brecht.",
+      "Im Archiv lagern Briefe aus der Zeit der Hanse.",
     ],
-    "10:62": [
-      "deutet immer auf eine Hochbegabung hin",
-      "beweist in jedem Fall eine Hochbegabung",
+    "9": [
+      "Die Werft baute früher Segelschiffe für den Handel mit Norwegen.",
+      "Die Opernsängerin gab ihr Debüt an der Mailänder Scala.",
+      "Das erste Foto des Ortes entstand im Jahr 1864.",
+      "Die Töpferei stellt Geschirr nach einer jahrhundertealten Technik her.",
     ],
-    "11:61": [
-      "nimmt die Zahl der nicht im Familienverband Lebenden in den Städten ab",
-      "geht die Zahl der nicht im Familienverband Lebenden in den Städten zurück",
+    "10": [
+      "Im Steinbruch wurden mehrere seltene Fossilien gefunden.",
+      "Die regionale Küche ist für ihre würzigen Käsesorten bekannt.",
+      "Das Theatergebäude wurde nach einem Brand vollständig wiederaufgebaut.",
+      "Die Münzsammlung umfasst Prägungen aus sieben Ländern.",
     ],
-    "13:56": [
-      "verkaufen die meisten ihrer Haute-Couture-Modelle",
-      "verkaufen nahezu alle ihrer Haute-Couture-Modelle",
+    "11": [
+      "Das Streichquartett spielt Werke aus der Wiener Klassik.",
+      "Die Handschrift wurde im 14. Jahrhundert auf Pergament geschrieben.",
+      "Die Käserei reift ihren Bergkäse in einem alten Gewölbekeller.",
+      "Das Segelrennen beginnt traditionell am ersten Sonntag im Mai.",
     ],
-    "14:55": [
-      "nutzt das Fahrrad regelmäßig für den Weg zur Arbeit",
-      "fährt fast täglich mit dem Fahrrad zur Arbeit",
+    "12": [
+      "Der Maler fertigte die Landschaftsbilder ausschließlich mit Aquarellfarben an.",
+      "Im Steinbruch wird seit Jahrzehnten kein Marmor mehr abgebaut.",
+      "Das Gericht wird mit Safran und gerösteten Mandeln serviert.",
+      "Die Ausgrabung brachte eine römische Mosaikfläche ans Licht.",
     ],
-    "15:56": [
-      "kann man Unterkünfte in allen Preiskategorien buchen",
-      "kann man ausschließlich Luxusunterkünfte buchen",
+    "13": [
+      "Das Jazztrio veröffentlichte sein erstes Album im vergangenen Frühjahr.",
+      "Bei der Ausgrabung kamen Keramikgefäße aus der Bronzezeit zum Vorschein.",
+      "Der Komet war mehrere Wochen lang mit bloßem Auge zu sehen.",
+      "Die Oper endet mit einem Chor auf der großen Freitreppe.",
     ],
-    "15:64": [
-      "seine Website hatte von Anfang an sehr viele Besucher",
-      "seine Website war schon zum Start stark besucht",
+    "14": [
+      "Das Schauspielhaus zeigt eine neue Inszenierung von Faust.",
+      "Die Werft ist auf den Bau kleiner Segelschiffe spezialisiert.",
+      "Die Keramikerin brennt ihre Schalen bei besonders hoher Temperatur.",
+      "Das Filmfestival widmet sich in diesem Jahr dem Stummfilm.",
     ],
-    "16:61": [
-      "werden durch Wolken gestört",
-      "werden häufig von Wolken blockiert",
+    "15": [
+      "Die Töpferin verkauft ihre Schalen auf einem Kunsthandwerkermarkt.",
+      "Das Jazzfestival findet jedes Jahr in der zweiten Augustwoche statt.",
+      "Die Schriftrolle enthält eine Abschrift eines antiken Gedichts.",
+      "Der Geologe bestimmte das Alter des Gesteins anhand seiner Minerale.",
     ],
-    "17:55": [
-      "hat sich große Hoffnung auf einen Preis gemacht",
-      "rechnete fest mit einem Preis",
+    "16": [
+      "Das Kochbuch enthält Rezepte für traditionelle Gerichte aus Böhmen.",
+      "Die Theatergruppe führt das Stück in einem historischen Ballsaal auf.",
+      "Der Roman erzählt von einer Seereise im 18. Jahrhundert.",
+      "Die Ausstellung zeigt Porzellan aus der Meißner Manufaktur.",
+    ],
+    "17": [
+      "Die Glasbläserin formt ihre Vasen noch immer von Hand.",
+      "Der Segelclub veranstaltet im Juni eine Regatta auf dem Bodensee.",
+      "Die Oper wurde nach einer Vorlage aus der griechischen Mythologie komponiert.",
+      "Im Heimatmuseum ist eine historische Schmiede eingerichtet.",
+    ],
+    "18": [
+      "Das Kammerorchester spielt jeden Winter ein Konzert in der Dorfkirche.",
+      "Die Ausgrabungen legten die Fundamente eines römischen Tempels frei.",
+      "Das Kochbuch widmet sich ausschließlich der Küche Südfrankreichs.",
+      "Die Glasmalerei im Chorraum stammt aus dem späten Mittelalter.",
+    ],
+    "generic": [
+      "Das Kammerorchester probt zweimal in der Woche.",
+      "Die Ausstellung zeigt Gemälde aus dem 18. Jahrhundert.",
+      "Das Kochbuch enthält Rezepte aus verschiedenen Regionen.",
+      "Die alte Brücke wurde aus rotem Sandstein errichtet.",
     ],
   };
 
-  const finiteVerbs = new Set((
-    "hat haben hatte hatten ist sind war waren wird werden wurde wurden kann können konnte " +
-    "muss müssen musste soll sollen sollte sollten will wollen möchte möchten darf dürfen " +
-    "gefällt gefällt gefallen lässt lasst ließ sagt sagt sagt hält hält denkt meint spricht " +
-    "hörte bekommt bekam erkannten erkennt reagierten reagiert zeigt zeigen beginnt begann " +
-    "bleibt bleiben steht standen verkauft verkaufen verkauft verfolgt suchen sucht nutzt " +
-    "wünscht wünschen spart spart bietet bieten kann können besitzt bestehen besteht " +
-    "entwickelt entwickelte benötigt braucht braucht befasst befindet behandelt behandeln " +
-    "umfasst umfasst diente dienten erzielt erzielt liegt liegen nimmt nehmen schadet " +
-    "schaden führte fuhrt führen arbeitet arbeiten vermittelt konzentriert konzentrieren " +
-    "erwähnt erwartet plant meint würde gelten gilt beschreibt beschreiben ermöglichen " +
-    "hilft helfen gehört gehören informiert informiert vergleicht vergleiche erfasst " +
-    "erhält erwies erwies sich fuhrt führt aufladen aufzuladen erheben erforschen ergründen " +
-    "bezeichnet bezeichnete anlockt stärken stärken warnen aufspüren aufgespürt entwickeln " +
-    "einkaufen einkaufen verzichten verzichten bewerben besuchen verbessern verkaufen schreiben " +
-    "arbeiten lösen beraten anbieten angeboten"
-  ).split(/\s+/));
-
-  function insertFalseMarker(completion, marker) {
-    const words = String(completion || "").trim().split(/\s+/).filter(Boolean);
-    if (!words.length) return "";
-    const normalize = (word) => word.replace(/^[^\p{L}]+|[^\p{L}-]+$/gu, "").toLocaleLowerCase("de");
-    const first = normalize(words[0]);
-    let index = -1;
-
-    if (finiteVerbs.has(first)) {
-      index = 1;
-      if (["sich", "es"].includes(normalize(words[index]))) {
-        index += 1;
-        if (words[index] && /^[A-ZÄÖÜ]/u.test(words[index])) index += 1;
-      } else if (words[index] && /^[A-ZÄÖÜ]/u.test(words[index])) {
-        index += 1;
-      }
-    } else if (["er", "sie", "es", "man"].includes(first) && finiteVerbs.has(normalize(words[1]))) {
-      index = 2;
-    } else {
-      const articles = new Set(["der", "die", "das", "ein", "eine", "einen", "einem", "einer", "den", "dem"]);
-      if (articles.has(first)) {
-        index = words.findIndex((word, wordIndex) => wordIndex > 0 && /^[A-ZÄÖÜ]/u.test(word)) + 1;
-        if (index === 0) index = 2;
-      } else if (words[0] && /^[A-ZÄÖÜ]/u.test(words[0])) {
-        index = 1;
-      } else if (words[1] && /^[A-ZÄÖÜ]/u.test(words[1])) {
-        index = 2;
-      }
-
-      if (index < 0) {
-        const predicateIndex = words.findLastIndex(word => finiteVerbs.has(normalize(word)));
-        if (predicateIndex >= 0) index = predicateIndex;
-        else if (words.some(word => normalize(word) === "zu")) index = words.findIndex(word => normalize(word) === "zu");
-      }
-    }
-
-    if (index < 0) index = 0;
-    words.splice(index, 0, marker);
-    return words.join(" ");
-  }
-
-  function createFalseCompletions(question, correct, teil = question.teil) {
-    const key = `${teil}:${question.number}`;
-    if (explicitFalseCompletions[key]) return [...explicitFalseCompletions[key]];
-
-    const normalized = correct.toLocaleLowerCase("de");
-    if (/\bnicht nur\b/.test(normalized)) {
-      const withoutNot = correct.replace(/\bnicht nur\b/i, "nur");
-      return [withoutNot, correct.replace(/\bnicht nur\b/i, "überhaupt nicht")];
-    }
-    if (/\bnicht immer\b/.test(normalized)) {
-      return [correct.replace(/\bnicht immer\b/i, "immer"), correct.replace(/\bnicht immer\b/i, "ausnahmslos immer")];
-    }
-    if (/\bnicht oft\b/.test(normalized)) {
-      return [correct.replace(/\bnicht oft\b/i, "oft"), correct.replace(/\bnicht oft\b/i, "regelmäßig")];
-    }
-    if (/\bkaum mehr\b/.test(normalized)) {
-      return [correct.replace(/\bkaum mehr\b/i, "zahlreiche"), correct.replace(/\bkaum mehr\b/i, "ausgeprägte")];
-    }
-    if (/\bkein(e|en|er|es|em)?\b/i.test(normalized)) {
-      return [
-        correct.replace(/\bkein(e|en|er|es|em)?\b/i, "ein"),
-        correct.replace(/\bkein(e|en|er|es|em)?\b/i, "einen"),
-      ];
-    }
-    return [insertFalseMarker(correct, "nicht"), insertFalseMarker(correct, "niemals")];
+  function createUnrelatedStatements(question, teil = question.teil) {
+    const statements = unrelatedStatementsByTeil[String(teil)] || unrelatedStatementsByTeil.generic;
+    const seed = `${teil}:${question.number || question.sourceNumber || ""}:${question.german || question.text || ""}`;
+    let hash = 0;
+    for (const character of seed) hash = (hash * 31 + character.codePointAt(0)) >>> 0;
+    const first = hash % statements.length;
+    const offset = 1 + ((hash >>> 4) % (statements.length - 1));
+    const second = (first + offset) % statements.length;
+    return [statements[first], statements[second]];
   }
 
   function buildSections(sections) {
@@ -272,16 +215,16 @@
       }));
       const prepared = entries.map(entry => {
         if (!entry.completion) return null;
-        const distractors = createFalseCompletions(entry.question, entry.completion, section.teil)
-          .map(cleanCompletion)
+        const distractors = createUnrelatedStatements(entry.question, section.teil)
           .filter((text, index, all) => text && !allSourceAnswers.has(text) && all.indexOf(text) === index);
         if (distractors.length !== 2) return null;
         return {
           ...entry.question,
           sectionMode: "hv2-choice",
           correctText: entry.completion,
+          correctSentence: completeSentence(entry.question),
           distractors,
-          distractorSource: "synthetic-false-completion",
+          distractorSource: "independent-unrelated-statement",
         };
       });
 
@@ -293,10 +236,10 @@
 
   function prepareQuestion(question, random = Math.random) {
     if (!question || question.sectionMode !== "hv2-choice" || question.distractors?.length !== 2) {
-      throw new Error("HV2 three-choice questions require one PDF answer and two synthetic false distractors.");
+      throw new Error("HV2 three-choice questions require one PDF answer and two unrelated statements.");
     }
     const choices = [
-      { text: question.correctText, correct: true },
+      { text: question.correctSentence, correct: true },
       ...question.distractors.map(text => ({ text, correct: false })),
     ];
     for (let index = choices.length - 1; index > 0; index -= 1) {
@@ -319,7 +262,7 @@
     buildRoundQueue,
     cleanCompletion,
     completeSentence,
-    createFalseCompletions,
+    createUnrelatedStatements,
     getCompletion,
     prepareQuestion,
   };

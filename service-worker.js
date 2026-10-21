@@ -1,4 +1,4 @@
-const CACHE_VERSION = "telc-trainer-20261021-hv2-false-distractors";
+const CACHE_VERSION = "telc-trainer-20261021-hv2-unrelated-statements";
 const CACHE_NAME = `telc-trainer-${CACHE_VERSION}`;
 const APP_SHELL = [
   "./",

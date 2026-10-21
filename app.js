@@ -726,7 +726,7 @@ function showFront(question) {
   els.answerGrid.classList.toggle("hv2-choices", question.sectionMode === "hv2-choice");
   if (question.sectionMode === "hv2-choice") {
     els.sessionMode.textContent += " · 三选一";
-    els.roundStrip.textContent += " · 两个干扰项是根据本题合成的错误说法";
+    els.roundStrip.textContent += " · 另两个选项是无关主题的独立陈述";
   }
 
   renderParagraphPanel(question);
@@ -781,7 +781,7 @@ function renderParagraphPanel(question) {
     els.paragraphPanel.classList.remove("hidden");
     const note = document.createElement("p");
     note.className = "hv2-source-note";
-    note.textContent = "两个干扰项是根据本题正确补全合成的错误说法，不引用同篇文章的其他正确答案，也不是 PDF 原题选项。";
+    note.textContent = "正确项显示完整句；另外两项是独立编写的无关主题陈述，不是否定、改写正确答案，也不借用其他题的正确答案。";
     els.paragraphPanel.append(note);
     return;
   }
@@ -1444,7 +1444,7 @@ function getReviewGerman(question) {
 function getReviewChinese(question) {
   if (question.sectionMode === "hv2-choice") {
     return [question.chinese, question.sourceNote,
-      "正确补全来自 PDF；另外两个错误选项由本题正确补全生成，不引用同篇文章的其他正确答案，也不是 PDF 原题选项。",
+      "正确句来自 PDF；另外两个选项是独立编写的无关主题陈述，不由正确句改写或否定，也不是 PDF 原题选项。",
     ].filter(Boolean).join("\n\n");
   }
   if (question.sectionMode === "paragraph-match") {
