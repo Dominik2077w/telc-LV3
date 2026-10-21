@@ -1639,6 +1639,9 @@ select {
 .hv1-answer-feedback.is-correct { border-color: var(--green); background: #eff8f1; color: var(--green-dark); }
 .hv1-answer-feedback.is-wrong { border-color: var(--red); background: #fff1ee; color: var(--red); }
 .hv1-answer-feedback p { margin: 8px 0 0; color: var(--ink); font-size: 16px; line-height: 1.5; overflow-wrap: anywhere; }
+.answer-grid.hv2-choices { display: grid; grid-template-columns: minmax(0, 1fr); gap: 9px; }
+.answer-grid.hv2-choices .answer-button { min-height: 56px; padding: 12px; text-align: left; line-height: 1.5; overflow-wrap: anywhere; }
+.hv2-source-note { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.5; }
 @media (max-width: 850px) {
   .hv1-audio-mode { padding: 14px; }
   .hv1-audio-mode .sort-bottom { gap: 8px; }
@@ -1647,5 +1650,6 @@ select {
   .hv1-transcript p { font-size: 16px; }
   .hv1-quiz-option { min-height: 54px; padding: 11px; }
   .hv1-option-text { font-size: 15px; }
+  .answer-grid.hv2-choices .answer-button { min-height: 54px; padding: 11px; }
 }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; } }

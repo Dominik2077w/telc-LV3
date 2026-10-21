@@ -31,13 +31,13 @@ const datasets = {
   },
   hv2: {
     label: "HV2",
-    title: "HV2 Hörverstehen Trainer",
+    title: "HV2 三选一 Trainer",
     source: window.HV2_QUESTIONS || [],
     promptLabel: "题面",
     answerLabel: "正确选项",
     reviewGermanLabel: "正确补全",
     reviewChineseLabel: "中文",
-    idleText: "选择 HV2 后，按 PDF 原文复习句干与正确补全。",
+    idleText: "选择 HV2 后，从三个补全选项中选择与题干匹配的一项。",
   },
   writing: {
     label: "作文专题",
@@ -432,8 +432,9 @@ function renderLevelChrome() {
 }
 
 function getPracticeSections() {
-  if (!els.newOnly.checked) return data;
-  return data.map((section) => ({ ...section, questions: section.questions.filter((question) => question.addedIn === "2026.9") }))
+  const sections = state.level === "hv2" ? Hv2Quiz.buildSections(data) : data;
+  if (!els.newOnly.checked) return sections;
+  return sections.map((section) => ({ ...section, questions: section.questions.filter((question) => question.addedIn === "2026.9") }))
     .filter((section) => section.questions.length);
 }
 
@@ -592,6 +593,7 @@ function finishRound() {
 }
 
 function showFront(question) {
+  if (question.sectionMode === "hv2-choice") Hv2Quiz.prepareQuestion(question);
   const edition = question.addedIn || question.updatedIn;
   els.corpusUpdateBadge.textContent = edition ? `${edition} ${question.addedIn ? "新增" : "修订"}` : "";
   els.corpusUpdateBadge.classList.toggle("hidden", !edition);
@@ -645,9 +647,10 @@ function showFront(question) {
   els.frontFace.classList.remove("hidden");
   els.backFace.classList.add("hidden");
   const config = datasets[state.level];
-  els.promptLabel.textContent = question.sectionMode === "corpus-card" ? "复习卡" : config.promptLabel;
+  els.promptLabel.textContent = question.sectionMode === "hv2-choice"
+    ? "选择正确补全" : question.sectionMode === "corpus-card" ? "复习卡" : config.promptLabel;
   els.correctAnswerLabel.textContent = question.level === "hv1" && question.orderKnown === false
-    ? "原文陈述" : question.sectionMode === "corpus-card" ? "原文答案" : config.answerLabel;
+    ? "原文陈述" : question.sectionMode === "hv2-choice" ? "正确补全" : question.sectionMode === "corpus-card" ? "原文答案" : config.answerLabel;
   els.reviewGermanLabel.textContent = question.sectionMode === "corpus-card" ? "原文" : config.reviewGermanLabel;
   els.reviewChineseLabel.textContent = question.sectionMode === "corpus-card" ? "中文 / 说明" : config.reviewChineseLabel;
   els.sessionMode.textContent = `${datasets[state.level].label} · ${
@@ -686,6 +689,11 @@ function showFront(question) {
   els.answerGrid.innerHTML = "";
   els.answerGrid.classList.remove("is-short");
   els.roundStrip.textContent = `Runde ${state.round}`;
+  els.answerGrid.classList.toggle("hv2-choices", question.sectionMode === "hv2-choice");
+  if (question.sectionMode === "hv2-choice") {
+    els.sessionMode.textContent += " · 三选一";
+    els.roundStrip.textContent += " · 两个干扰项来自本 Teil 其他 PDF 补全，仅作为练习选项";
+  }
 
   renderParagraphPanel(question);
   renderAudioPlayer(question);
@@ -734,6 +742,15 @@ function renderParagraphPanel(question) {
   els.paragraphPanel.innerHTML = "";
   els.paragraphPanel.classList.remove("is-reviewed");
   els.paragraphPanel.classList.remove("baustein-panel");
+
+  if (question.sectionMode === "hv2-choice") {
+    els.paragraphPanel.classList.remove("hidden");
+    const note = document.createElement("p");
+    note.className = "hv2-source-note";
+    note.textContent = "两个干扰项取自本 Teil 其他题目的 PDF 补全，不是原题印出的选项。";
+    els.paragraphPanel.append(note);
+    return;
+  }
 
   if (question.sectionMode !== "paragraph-match") {
     els.paragraphPanel.classList.add("hidden");
@@ -1383,6 +1400,11 @@ function getReviewGerman(question) {
 }
 
 function getReviewChinese(question) {
+  if (question.sectionMode === "hv2-choice") {
+    return [question.chinese, question.sourceNote,
+      "正确补全来自 PDF；另外两个干扰项取自本 Teil 其他题目的 PDF 补全，仅用于练习。",
+    ].filter(Boolean).join("\n\n");
+  }
   if (question.sectionMode === "paragraph-match") {
     return question.summary || question.chinese;
   }
@@ -1431,6 +1453,7 @@ function renderIdle() {
   els.paragraphPanel.classList.remove("baustein-panel");
   els.paragraphPanel.classList.add("hidden");
   els.answerGrid.innerHTML = "";
+  els.answerGrid.classList.remove("hv2-choices");
   els.missButton.classList.add("hidden");
   resetBackReviewLayout();
   els.nextButton.textContent = "下一题";
