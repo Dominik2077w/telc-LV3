@@ -11,7 +11,7 @@
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="apple-touch-icon" href="./icons/icon-192.png" />
     <link rel="icon" href="./icons/icon-192.svg" />
-    <link rel="stylesheet" href="./styles.css?v=20261021-lv2-choice" />
+    <link rel="stylesheet" href="./styles.css?v=20261020-pdf-only" />
   </head>
   <body>
     <div class="level-gate" id="levelGate" role="dialog" aria-modal="true" aria-labelledby="levelGateTitle">
@@ -22,7 +22,7 @@
         <div class="level-choice-grid">
           <button class="level-choice" type="button" data-level-choice="lv2">
             <strong>LV2</strong>
-            <span>段落表达意图 · 三选一练习</span>
+            <span>段落 A-E 正反面卡片</span>
           </button>
           <button class="level-choice" type="button" data-level-choice="lv3">
             <strong>LV3</strong>
@@ -117,11 +117,9 @@
             <label id="lv2ModeLabel" class="hidden">
               <span>LV2 模式</span>
               <select id="lv2Mode">
-                <option value="choice">三选一练习</option>
                 <option value="card">段落卡片</option>
                 <option value="global-sort">全局排序</option>
               </select>
-              <small>三选一使用原文已确认的题项；无可靠配对的段落可用卡片复习。</small>
             </label>
             <label id="lv2GlobalDisplayLabel" class="hidden">
               <span>全局排序显示</span>
@@ -218,8 +216,6 @@
     </main>
 
     <script src="./data/lv2_questions.js?v=20261020-pdf-only"></script>
-    <script src="./data/lv2_distractors.js?v=20261021-lv2-choice"></script>
-    <script src="./lv2-quiz.js?v=20261021-lv2-choice"></script>
     <script src="./data/lv3_questions.js?v=20261020-pdf-only"></script>
     <script src="./data/hv1_questions.js?v=20261020-hv1-audio"></script>
     <script src="./data/hv2_questions.js?v=20261020-pdf-only"></script>
@@ -228,6 +224,6 @@
     <script src="./data/speaking_questions.js?v=20261020-pdf-only"></script>
     <script src="./hv1-order.js?v=20261020-pdf-only"></script>
     <script src="./hv1-quiz.js?v=20261020-hv1-audio"></script>
-    <script src="./app.js?v=20261021-lv2-choice"></script>
+    <script src="./app.js?v=20261020-hv1-audio"></script>
   </body>
 </html>
