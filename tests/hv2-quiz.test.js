@@ -24,19 +24,27 @@ test("all supported HV2 sections become three-choice practice without changing s
   assert.equal(JSON.stringify(source), before);
 });
 
-test("practice distractors come from other questions in the same Teil and avoid duplicate question numbers", () => {
+test("synthetic false distractors never reuse a correct completion from any question", () => {
   const source = sourceSections();
   const sections = Hv2Quiz.buildSections(source);
-  const section = sections[0];
-  const question = section.questions[0];
-  const ownNumber = String(question.sourceNumber || question.number);
-  const otherCompletions = new Set(section.questions
-    .filter(item => String(item.sourceNumber || item.number) !== ownNumber)
-    .map(Hv2Quiz.getCompletion));
+  const allSourceAnswers = new Set(source.flatMap(section => section.questions.map(Hv2Quiz.getCompletion)));
+  for (const section of sections) {
+    for (const question of section.questions) {
+      assert.equal(question.distractorSource, "synthetic-false-completion");
+      assert.equal(question.distractors.length, 2);
+      assert.equal(question.distractors.some(text => allSourceAnswers.has(text)), false);
+      assert.equal(new Set([question.correctText, ...question.distractors]).size, 3);
+    }
+  }
+});
 
-  assert.equal(question.distractors.every(text => otherCompletions.has(text)), true);
-  assert.equal(question.distractors.includes(question.correctText), false);
-  assert.equal(new Set([question.correctText, ...question.distractors]).size, 3);
+test("negative options are synthesized as contradictions of the current question", () => {
+  const sections = Hv2Quiz.buildSections(sourceSections());
+  const question = sections[0].questions.find(item => item.number === "59b");
+  assert.deepEqual(question.distractors, [
+    "nicht zum Schutz eigener Wohnungen eingesetzt werden",
+    "keinesfalls zum Schutz von Wohnungen eingesetzt werden",
+  ]);
 });
 
 test("displayed choices shuffle, retain one correct completion, and score by its displayed letter", () => {
@@ -102,7 +110,7 @@ test("HV2 mistake rounds keep the article memory list and only queue missed ques
     .every((memory, index) => memory.reviewRows.length === sections[index].questions.length));
 });
 
-test("sections without three distinct PDF completions remain review cards", () => {
+test("synthetic false distractors work even when a Teil has fewer than three correct completions", () => {
   const sections = [{
     teil: "x",
     mode: "corpus-card",
@@ -111,7 +119,12 @@ test("sections without three distinct PDF completions remain review cards", () =
       { number: 2, sourceNumber: 2, completion: "Two" },
     ],
   }];
-  assert.equal(Hv2Quiz.buildSections(sections)[0].mode, "corpus-card");
+  const result = Hv2Quiz.buildSections(sections)[0];
+  assert.equal(result.mode, "hv2-choice");
+  assert.ok(result.questions.every(question => question.distractors.length === 2));
+  assert.ok(result.questions.every(question => question.distractors.every(text =>
+    !result.questions.some(item => Hv2Quiz.getCompletion(item) === text)
+  )));
 });
 
 test("browser build loads the HV2 quiz engine while LV2 keeps its card entry", () => {
