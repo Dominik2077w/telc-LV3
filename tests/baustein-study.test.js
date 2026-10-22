@@ -101,3 +101,34 @@ test("mistake rounds preview all answers for involved articles, then practice on
   assert.equal(queue[1].number, missed[0].number);
   assert.equal(queue[3].number, missed[1].number);
 });
+
+test("practice cards use the preview sentence and complete translation, masking only the current answer", () => {
+  const source = sections();
+  const before = JSON.stringify(source);
+  const queue = Study.buildRoundQueue(source);
+  let sentenceCards = 0;
+  for (const card of queue.filter(question => question.sectionMode === "corpus-card")) {
+    const row = card.bausteinStudy;
+    assert.equal(card.answerText, row.answer);
+    if (row.sourceMissing) {
+      assert.equal(card.reviewGerman, "原文未提供填空句子。");
+      assert.match(card.chinese, /未提供填空句子和中文翻译/);
+      continue;
+    }
+    sentenceCards += 1;
+    assert.equal(card.reviewGerman, row.sentence);
+    assert.equal(card.chinese, row.chinese);
+    assert.equal(card.german.replace(`[${card.number}]____`, row.answer), row.sentence);
+    assert.equal((card.german.match(/\[\d+\]____/g) || []).length, 1);
+  }
+  assert.equal(sentenceCards, 434);
+  assert.equal(JSON.stringify(source), before);
+  const first = queue[1];
+  assert.equal(first.german, "In den neuen Bildungsplänen für die Grundschule wurden bereits erste Konsequenzen [1]____.");
+  assert.equal(first.chinese, "在新的小学教学计划中，已经采取了初步的相应措施。");
+  assert.doesNotMatch(first.german, /Benotete/);
+  const card10 = queue.find(card => card.teil === 1 && card.number === 10);
+  const card11 = queue.find(card => card.teil === 1 && card.number === 11);
+  assert.match(card10.german, /\[10\]____, die Kinder könnten während eines Diktats/);
+  assert.match(card11.german, /argumentieren, die Kinder könnten während \[11\]____/);
+});

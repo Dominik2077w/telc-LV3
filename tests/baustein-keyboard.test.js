@@ -9,11 +9,18 @@ class ElementStub {
     this.editable = editable;
     this.textContent = "";
     this.value = "";
+    this.dataset = {};
+    this.children = [];
     const classes = new Set();
     this.classList = {
       add: name => classes.add(name),
       remove: name => classes.delete(name),
       contains: name => classes.has(name),
+      toggle(name, force) {
+        const add = force === undefined ? !classes.has(name) : force;
+        if (add) classes.add(name);
+        else classes.delete(name);
+      },
     };
   }
   closest(selector) {
@@ -21,6 +28,8 @@ class ElementStub {
   }
   querySelectorAll() { return []; }
   setAttribute() {}
+  addEventListener() {}
+  append(...children) { this.children.push(...children); }
 }
 
 function loadApp() {
@@ -35,6 +44,8 @@ function loadApp() {
         return elements.get(selector);
       },
       querySelectorAll: () => [],
+      createElement: () => new ElementStub(),
+      getElementById: () => null,
     },
     advances: 0,
   });
@@ -183,4 +194,26 @@ test("Baustein mistake loop reinserts the full preview and excludes it from prog
   assert.equal(app.read("state.queue[0].reviewRows.length"), 2);
   assert.equal(app.read("state.queue[1].number"), 2);
   assert.equal(app.read("els.progressText.textContent"), "0/1");
+});
+
+test("Baustein front renders the gapped sentence with full Chinese and the back fills the same sentence", () => {
+  const app = loadApp();
+  app.context.exampleSections = [{
+    teil: 1, title: "Test", mode: "corpus-card", article: "Er [1]____. Danach geht er.",
+    questions: [{ number: 1, answerText: "liest", chinese: "他（1）读书。然后他离开。" }],
+  }];
+  app.read(`
+    state.current = BausteinStudy.buildRoundQueue(normalizeSections("baustein", exampleSections))[1];
+    showFront(state.current);
+  `);
+  assert.equal(app.read("els.germanQuestion.textContent"), "Er [1]____.");
+  assert.equal(app.read("els.paragraphPanel.classList.contains('hidden')"), false);
+  assert.equal(app.read("els.paragraphPanel.children[0].textContent"), "他读书。");
+  app.press("1");
+  assert.equal(app.read("els.correctAnswer.textContent"), "liest");
+  assert.equal(app.read("els.reviewGerman.textContent"), "Er liest.");
+  assert.equal(app.read("els.reviewChinese.textContent"), "他读书。");
+  app.press("2");
+  assert.equal(app.read("state.mistakes[0].german"), "Er [1]____.");
+  assert.equal(app.read("state.mistakes[0].reviewGerman"), "Er liest.");
 });

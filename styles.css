@@ -1421,7 +1421,8 @@ select {
 .hv2-review-german { font-size: 17px; line-height: 1.55; }
 .hv2-review-chinese { margin-top: 6px !important; color: var(--muted); font-size: 15px; line-height: 1.5; }
 .baustein-review-answer { padding: 1px 4px; border-radius: 4px; background: #dcefe1; color: var(--green-dark); font-weight: 800; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
-.baustein-review-note { margin-top: 6px !important; color: var(--muted); font-size: 13px; line-height: 1.5; }
+.baustein-review-note { grid-column: 1 / -1; margin-top: 6px !important; color: var(--muted); font-size: 13px; line-height: 1.5; }
+.baustein-card-chinese { grid-column: 1 / -1; margin: 0; padding: 14px 16px; border: 1px solid var(--line); border-radius: 8px; background: #fbfaf6; font-size: 18px; line-height: 1.65; overflow-wrap: anywhere; }
 
 @media (max-width: 600px) {
   .sort-mode {

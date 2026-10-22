@@ -702,6 +702,12 @@ function showFront(question) {
     ? "原文陈述" : question.sectionMode === "hv2-choice" ? "正确补全" : question.sectionMode === "corpus-card" ? "原文答案" : config.answerLabel;
   els.reviewGermanLabel.textContent = question.sectionMode === "corpus-card" ? "原文" : config.reviewGermanLabel;
   els.reviewChineseLabel.textContent = question.sectionMode === "corpus-card" ? "中文 / 说明" : config.reviewChineseLabel;
+  if (question.bausteinStudy) {
+    els.promptLabel.textContent = "德语填空句";
+    els.correctAnswerLabel.textContent = "本空答案";
+    els.reviewGermanLabel.textContent = "完整句";
+    els.reviewChineseLabel.textContent = "中文译句";
+  }
   els.sessionMode.textContent = `${datasets[state.level].label} · ${
     els.teilOrder.value === "random" ? "Teil 随机" : "Teil 顺序"
   } · ${els.questionOrder.value === "random" ? "题目随机" : "题目顺序"}`;
@@ -795,6 +801,23 @@ function renderParagraphPanel(question) {
   els.paragraphPanel.innerHTML = "";
   els.paragraphPanel.classList.remove("is-reviewed");
   els.paragraphPanel.classList.remove("baustein-panel");
+
+  if (question.bausteinStudy) {
+    els.paragraphPanel.classList.remove("hidden");
+    const translation = document.createElement("p");
+    translation.className = "baustein-card-chinese";
+    translation.lang = "zh-CN";
+    translation.setAttribute("aria-label", "完整中文翻译");
+    translation.textContent = question.chinese;
+    els.paragraphPanel.append(translation);
+    if (question.sourceNote) {
+      const note = document.createElement("p");
+      note.className = "baustein-review-note";
+      note.textContent = question.sourceNote;
+      els.paragraphPanel.append(note);
+    }
+    return;
+  }
 
   if (question.sectionMode === "hv2-choice") {
     els.paragraphPanel.classList.remove("hidden");

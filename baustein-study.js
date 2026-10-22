@@ -156,16 +156,37 @@
           ? section.questions || []
           : (section.questions || []).length ? [{ ...section, sectionMode: "baustein-article" }] : [];
       if (!practice.length) return [];
+      const reviewRows = buildReviewRows(section);
+      const rowsByNumber = new Map(reviewRows.map(row => [row.number, row]));
       return [{
         id: `baustein-memory-${section.teil}`,
         level: "baustein",
         teil: section.teil,
         teilTitle: section.title,
         sectionMode: "baustein-memory",
-        reviewRows: buildReviewRows(section),
+        reviewRows,
         addedIn: section.addedIn,
         updatedIn: section.updatedIn,
-      }, ...practice.map(question => ({ ...question }))];
+      }, ...practice.map(question => {
+        const row = rowsByNumber.get(String(question.number));
+        if (!row || question.sectionMode === "baustein-article") return { ...question };
+        const german = row.sourceMissing ? question.german || question.text || "原文未提供填空句子。"
+          : tidyGerman([row.before, `[${row.number}]____`, row.after].filter(Boolean).join(" "));
+        return {
+          ...question,
+          level: "baustein",
+          teil: section.teil,
+          teilTitle: section.title,
+          sectionMode: "corpus-card",
+          german,
+          text: german,
+          answerText: row.answer,
+          reviewGerman: row.sentence || "原文未提供填空句子。",
+          chinese: row.sourceMissing ? "原文只有答案字母，未提供填空句子和中文翻译。" : row.chinese,
+          sourceNote: row.sourceNote,
+          bausteinStudy: row,
+        };
+      })];
     });
   }
 
