@@ -9,6 +9,7 @@
     "check:corpus": "node scripts/check-corpus.js && python -m unittest discover -s tests -p test_corpus_import.py",
     "check:hv1": "node --check app.js && node --check hv1-order.js && node --check hv1-quiz.js && node --test tests/hv1-order.test.js tests/hv1-quiz.test.js",
     "check:hv2": "node --check app.js && node --check hv2-quiz.js && node --test tests/hv2-quiz.test.js",
+    "check:baustein": "node --check app.js && node --check baustein-study.js && node --test tests/baustein-study.test.js tests/baustein-keyboard.test.js",
     "icons": "node scripts/generate-icons.js",
     "build": "node scripts/generate-icons.js && node scripts/build.js",
     "serve": "python3 -m http.server 4173",

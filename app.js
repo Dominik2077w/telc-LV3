@@ -67,7 +67,7 @@ const datasets = {
     answerLabel: "答案",
     reviewGermanLabel: "解析",
     reviewChineseLabel: "说明",
-    idleText: "选择 Baustein 后，按 PDF 标出的词语逐空复习并核对答案。",
+    idleText: "选择 Baustein 后，每篇先看全部答案句与中文，再逐空复习并核对答案。",
   },
 };
 
@@ -498,9 +498,10 @@ function startSession() {
   } else if ((state.level === "lv2" && els.lv2Mode.value === "global-sort") || state.level === "lv2v2") {
     state.sessionSource = teilOrdered.map(buildLv2GlobalSortBatch);
   } else if (state.level === "baustein") {
-    state.sessionSource = teilOrdered.flatMap((section) => section.mode === "corpus-card"
-      ? applyOrder(section.questions, els.questionOrder.value).map((question) => ({ ...question }))
-      : [{ ...section, sectionMode: "baustein-article" }]);
+    state.sessionSource = BausteinStudy.buildRoundQueue(teilOrdered.map(section => ({
+      ...section,
+      questions: applyOrder(section.questions, els.questionOrder.value),
+    })));
   } else if (state.level === "hv1" && els.hv1Mode.value === "listen") {
     state.sessionSource = teilOrdered.flatMap(function (section) {
       if (!Hv1Order.canPractice(section.questions)) {
@@ -554,6 +555,15 @@ function buildHv2MistakeQueue(mistakes) {
   return Hv2Quiz.buildRoundQueue(sections, applyOrder(mistakes, els.questionOrder.value));
 }
 
+function buildBausteinMistakeQueue(mistakes) {
+  const sectionsByTeil = new Map(getPracticeSections().map(section => [String(section.teil), section]));
+  const sections = state.sessionSource
+    .filter(question => question.sectionMode === "baustein-memory")
+    .map(question => sectionsByTeil.get(String(question.teil)))
+    .filter(Boolean);
+  return BausteinStudy.buildRoundQueue(sections, applyOrder(mistakes, els.questionOrder.value));
+}
+
 function nextQuestion() {
   if (state.complete) return;
 
@@ -573,11 +583,15 @@ function finishRound() {
   if (els.roundMode.value === "mistakes" && state.mistakes.length) {
     const count = countMistakeQuestions(state.mistakes);
     state.round += 1;
-    els.roundStrip.textContent = state.level === "hv2"
+    els.roundStrip.textContent = ["hv2", "baustein"].includes(state.level)
       ? `本轮错 ${count} 题，下一轮先复习对应 Teil，再重复错题。`
       : `本轮错 ${count} 题，下一轮只重复错题。`;
     if (state.level === "hv2") {
       startRound(buildHv2MistakeQueue(state.mistakes));
+      return;
+    }
+    if (state.level === "baustein") {
+      startRound(buildBausteinMistakeQueue(state.mistakes));
       return;
     }
     startRound(applyOrder(state.mistakes, els.questionOrder.value));
@@ -624,8 +638,9 @@ function showFront(question) {
     return;
   }
 
-  if (question.sectionMode === "hv2-memory") {
-    els.sessionMode.textContent = "HV2 · 先看完整句与中文";
+  if (["hv2-memory", "baustein-memory"].includes(question.sectionMode)) {
+    els.sessionMode.textContent = question.sectionMode === "baustein-memory"
+      ? "Baustein · 先看答案句与中文" : "HV2 · 先看完整句与中文";
     els.sessionTitle.textContent = "Teil " + question.teil + ": " + question.teilTitle;
     els.teilBadge.textContent = "Teil " + question.teil;
     els.questionBadge.textContent = "本篇预习";
@@ -1331,8 +1346,10 @@ function handleKeyboardNavigation(event) {
     return;
   }
 
-  if (state.current.sectionMode === "hv2-memory") {
-    if (event.key === "Enter" && !isNativeButtonKey(event)) {
+  if (["hv2-memory", "baustein-memory"].includes(state.current.sectionMode)) {
+    if (state.current.sectionMode === "baustein-memory"
+      ? ["1", "Enter"].includes(event.key)
+      : event.key === "Enter" && !isNativeButtonKey(event)) {
       event.preventDefault();
       submitSort();
     }
@@ -1494,7 +1511,7 @@ function getHv2AnswerText(question) {
 function updateStats() {
   els.roundNumber.textContent = state.round;
   const totalQuestions = state.queue.reduce((total, question) => {
-    if (question.sectionMode === "hv2-memory") return total;
+    if (["hv2-memory", "baustein-memory"].includes(question.sectionMode)) return total;
     if (question.sectionMode === "hv1-audio-quiz") {
       return total + (question.reviewQuestions || question.questions || []).length;
     }
@@ -1672,6 +1689,7 @@ function buildLv2GlobalSortBatch(section) {
 }
 
 function renderHv2MemoryView(memory) {
+  const isBaustein = memory.sectionMode === "baustein-memory";
   els.sortModeView.classList.remove("hv1-order-mode", "hv1-audio-mode", "lv2-memory-mode");
   els.sortModeView.classList.add("hv2-memory-mode");
   els.sortShuffleButton.classList.add("hidden");
@@ -1679,8 +1697,11 @@ function renderHv2MemoryView(memory) {
   els.sortSubmitButton.disabled = false;
   els.sortSubmitButton.onclick = null;
   els.sortTeilBadge.textContent = "Teil " + memory.teil + " · " + memory.teilTitle;
-  els.sortInstruction.textContent = "下面按题号展示题干补全后的完整句子和中文翻译；看完后进入本篇三选一。";
-  els.sortInfo.textContent = "本篇 " + (memory.reviewRows || []).length + " 道题 · 按原题顺序";
+  els.sortInstruction.textContent = isBaustein
+    ? "按空格顺序查看填好答案的那一句和对应中文；高亮部分是本空答案。看完后开始本篇练习。"
+    : "下面按题号展示题干补全后的完整句子和中文翻译；看完后进入本篇三选一。";
+  els.sortInfo.textContent = "本篇 " + (memory.reviewRows || []).length + " 道题 · 按原题顺序" +
+    (isBaustein ? " · 按 1 / Enter 开始练习" : "");
   els.sortList.classList.remove("hv1-order-list");
   els.sortList.innerHTML = "";
 
@@ -1701,13 +1722,28 @@ function renderHv2MemoryView(memory) {
     const german = document.createElement("p");
     german.className = "hv2-review-german";
     german.lang = "de";
-    german.textContent = item.sentence || "原文未提供完整句子";
+    if (isBaustein) {
+      const answer = document.createElement("mark");
+      answer.className = "baustein-review-answer";
+      answer.textContent = item.answer;
+      german.append(document.createTextNode(item.before ? item.before + " " : item.sourceMissing ? "答案：" : ""), answer);
+      if (item.after) german.append(document.createTextNode((/^[,.;:!?]/.test(item.after) ? "" : " ") + item.after));
+    } else {
+      german.textContent = item.sentence || "原文未提供完整句子";
+    }
 
     const chinese = document.createElement("p");
     chinese.className = "hv2-review-chinese";
-    chinese.textContent = item.chinese || "语料暂未提供中文翻译";
+    chinese.textContent = item.sourceMissing
+      ? "原文只有答案字母，未提供填空句子和中文翻译。" : item.chinese || "语料暂未提供中文翻译";
 
     body.append(german, chinese);
+    if (item.sourceNote) {
+      const note = document.createElement("p");
+      note.className = "baustein-review-note";
+      note.textContent = item.sourceNote;
+      body.append(note);
+    }
     row.append(number, body);
     list.appendChild(row);
   });
@@ -2700,7 +2736,7 @@ function finishHv1Drag(event) {
 }
 
 function submitSort() {
-  if (state.current?.sectionMode === "hv2-memory") return nextQuestion();
+  if (["hv2-memory", "baustein-memory"].includes(state.current?.sectionMode)) return nextQuestion();
   if (state.current?.sectionMode === "lv2-global-sort") return submitLv2GlobalSort();
   if (state.current?.sectionMode === "hv1-audio-quiz") return submitHv1AudioStep();
   const session = sortState?.session;

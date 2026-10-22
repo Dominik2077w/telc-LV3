@@ -26,6 +26,7 @@ class ElementStub {
 function loadApp() {
   const elements = new Map();
   const context = vm.createContext({
+    BausteinStudy: require("../baustein-study.js"),
     Element: ElementStub,
     window: { matchMedia: () => ({ matches: false }) },
     document: {
@@ -54,6 +55,7 @@ function loadApp() {
     els.levelGate.classList.add("hidden");
     els.backFace.classList.add("hidden");
     els.roundMode.value = "mistakes";
+    globalThis.realUpdateStats = updateStats;
     updateStats = () => {};
     scrollMobilePracticeTop = () => {};
     nextQuestion = () => {
@@ -142,4 +144,43 @@ test("Baustein article mode retains 1–4 option selection", () => {
   `);
   assert.equal(app.press("3"), true);
   assert.equal(app.context.selected, "c");
+});
+
+test("Baustein preview starts on 1 or Enter without counting as an answered card", () => {
+  for (const key of ["1", "Enter"]) {
+    const app = loadApp();
+    app.read('state.current.sectionMode = "baustein-memory"');
+    const buttonTarget = new ElementStub();
+    buttonTarget.closest = selector => selector === "button" ? buttonTarget : null;
+    assert.equal(app.press(key, { target: buttonTarget }), true);
+    assert.equal(app.context.advances, 1);
+    assert.equal(app.read("state.answeredInRound"), 0);
+    assert.equal(app.read("state.roundMistakes"), 0);
+  }
+});
+
+test("Baustein mistake loop reinserts the full preview and excludes it from progress", () => {
+  const app = loadApp();
+  app.context.testSections = [{
+    teil: 1, title: "Test", mode: "corpus-card", article: "Er [1]____. Sie [2]____.",
+    questions: [
+      { number: 1, answerText: "liest", chinese: "他（1）读书。" },
+      { number: 2, answerText: "schreibt", chinese: "她（2）写字。" },
+    ],
+  }];
+  app.read(`
+    data = normalizeSections("baustein", testSections);
+    state.sessionSource = BausteinStudy.buildRoundQueue(data);
+    state.mistakes = [data[0].questions[1]];
+    state.round = 1;
+    nextQuestion = () => {};
+    finishRound();
+    realUpdateStats();
+  `);
+  assert.equal(app.read("state.round"), 2);
+  assert.equal(app.read("state.queue.length"), 2);
+  assert.equal(app.read("state.queue[0].sectionMode"), "baustein-memory");
+  assert.equal(app.read("state.queue[0].reviewRows.length"), 2);
+  assert.equal(app.read("state.queue[1].number"), 2);
+  assert.equal(app.read("els.progressText.textContent"), "0/1");
 });
