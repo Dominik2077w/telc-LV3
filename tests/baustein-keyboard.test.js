@@ -40,6 +40,14 @@ function loadApp() {
   const source = fs.readFileSync(path.join(__dirname, "..", "app.js"), "utf8");
   // Load the actual keyboard and card actions without starting the browser UI.
   vm.runInContext(source.replace(/^bindEvents\(\);[\s\S]*?^syncMobileLayout\(\);/m, ""), context);
+  const backActions = {
+    children: [elements.get("#missButton"), elements.get("#nextButton")],
+    insertBefore(button, reference) {
+      this.children.splice(this.children.indexOf(button), 1);
+      this.children.splice(this.children.indexOf(reference), 0, button);
+    },
+  };
+  for (const button of backActions.children) button.parentElement = backActions;
   vm.runInContext(`
     state.level = "baustein";
     state.current = { number: 1, sectionMode: "corpus-card", answerText: "gezogen" };
@@ -66,24 +74,27 @@ function loadApp() {
   return { context, press, read: expression => vm.runInContext(expression, context) };
 }
 
-test("Baustein 1 reveals, then 1 records a miss and advances exactly once", () => {
+test("Baustein 1 reveals, then 2 records a miss and advances exactly once", () => {
   const app = loadApp();
   assert.equal(app.press("1"), true);
   assert.equal(app.read("state.answeredInRound"), 1);
   assert.equal(app.read("state.roundMistakes"), 0);
   assert.equal(app.context.advances, 0);
-  assert.equal(app.press("1"), true);
+  assert.equal(app.press("2"), true);
   assert.equal(app.read("state.roundMistakes"), 1);
   assert.equal(app.read("state.mistakes[0].number"), 1);
   assert.equal(app.context.advances, 1);
 });
 
-test("Baustein 2 rates only a revealed card; number-pad keys work too", () => {
+test("Baustein 1 remembers a revealed card; number-pad keys work too", () => {
   const app = loadApp();
   assert.equal(app.press("2"), false);
   assert.equal(app.context.advances, 0);
   assert.equal(app.press("1", { code: "Numpad1" }), true);
-  assert.equal(app.press("2", { code: "Numpad2" }), true);
+  assert.equal(app.read("els.nextButton.parentElement.children[0] === els.nextButton"), true);
+  assert.equal(app.read("els.nextButton.textContent"), "1 · 记得，下一张");
+  assert.equal(app.read("els.missButton.textContent"), "2 · 不记得，下一张");
+  assert.equal(app.press("1", { code: "Numpad1" }), true);
   assert.equal(app.read("state.roundMistakes"), 0);
   assert.equal(app.read("state.mistakes.length"), 0);
   assert.equal(app.context.advances, 1);
@@ -115,6 +126,8 @@ test("existing arrow shortcuts still work and Baustein number keys stay scoped t
   app.read('state.level = "lv2"');
   assert.equal(app.press("1"), false);
   assert.equal(app.read("state.answeredInRound"), 1);
+  app.press("ArrowRight");
+  assert.equal(app.read("els.nextButton.parentElement.children[0] === els.missButton"), true);
 });
 
 test("Baustein article mode retains 1–4 option selection", () => {

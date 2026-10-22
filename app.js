@@ -1015,7 +1015,7 @@ function handleBausteinKeyboard(event) {
     }
     if (!showingFront && ["1", "2"].includes(event.key)) {
       event.preventDefault();
-      if (event.key === "1") markFlashcardMissed({ advance: true });
+      if (event.key === "2") markFlashcardMissed({ advance: true });
       else nextQuestion();
       return true;
     }
@@ -1264,11 +1264,14 @@ function revealFlashcard() {
   els.missButton.textContent = "不记得，下一张";
   els.nextButton.textContent = "记得，下一张";
   if (state.level === "baustein") {
-    els.missButton.textContent = "1 · 不记得，下一张";
-    els.nextButton.textContent = "2 · 记得，下一张";
+    els.missButton.textContent = "2 · 不记得，下一张";
+    els.nextButton.textContent = "1 · 记得，下一张";
   }
-  els.missButton.setAttribute("aria-keyshortcuts", state.level === "baustein" ? "1 ArrowLeft" : "ArrowLeft");
-  els.nextButton.setAttribute("aria-keyshortcuts", state.level === "baustein" ? "2 ArrowRight" : "ArrowRight");
+  const backActions = els.nextButton.parentElement;
+  if (state.level === "baustein") backActions.insertBefore(els.nextButton, els.missButton);
+  else backActions.insertBefore(els.missButton, els.nextButton);
+  els.missButton.setAttribute("aria-keyshortcuts", state.level === "baustein" ? "2 ArrowLeft" : "ArrowLeft");
+  els.nextButton.setAttribute("aria-keyshortcuts", state.level === "baustein" ? "1 ArrowRight" : "ArrowRight");
   els.roundStrip.textContent =
     els.roundMode.value === "mistakes"
       ? question.sectionMode === "baustein-grammar-card"
@@ -1278,7 +1281,7 @@ function revealFlashcard() {
         : "快捷键：← 不记得，→ 记得。不熟的段落会进入下一轮。"
       : "快捷键：← 不记得，→ 记得。";
   if (state.level === "baustein") {
-    els.roundStrip.textContent = "数字键：1 不记得，2 记得；也可用 ← / →。" +
+    els.roundStrip.textContent = "数字键：1 记得，2 不记得；也可用 ← / →。" +
       (els.roundMode.value === "mistakes" ? "不熟的卡片会进入下一轮。" : "");
   }
   updateStats();
