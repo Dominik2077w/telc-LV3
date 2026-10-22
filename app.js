@@ -747,7 +747,11 @@ function showFront(question) {
     const button = document.createElement("button");
     button.type = "button";
     button.className = "answer-button";
-    button.textContent = "看背面";
+    button.textContent = state.level === "baustein" ? "1 · 看背面" : "看背面";
+    if (state.level === "baustein") {
+      button.setAttribute("aria-keyshortcuts", "1");
+      els.roundStrip.textContent += " · 数字键 1 看答案";
+    }
     button.addEventListener("click", revealFlashcard);
     els.answerGrid.append(button);
     return;
@@ -1001,7 +1005,23 @@ function renderBausteinFloatingPanel(row, index, total) {
 }
 
 function handleBausteinKeyboard(event) {
-  if (!state.current || state.current.sectionMode !== "baustein-article") return false;
+  if (!state.current) return false;
+  if (state.level === "baustein" && isFlashcard(state.current)) {
+    const showingFront = els.backFace.classList.contains("hidden");
+    if (showingFront && event.key === "1") {
+      event.preventDefault();
+      revealFlashcard();
+      return true;
+    }
+    if (!showingFront && ["1", "2"].includes(event.key)) {
+      event.preventDefault();
+      if (event.key === "1") markFlashcardMissed({ advance: true });
+      else nextQuestion();
+      return true;
+    }
+    return false;
+  }
+  if (state.current.sectionMode !== "baustein-article") return false;
   if (els.paragraphPanel.classList.contains("is-reviewed") || isNativeButtonKey(event)) return false;
   if (!els.backFace.classList.contains("hidden")) return false;
 
@@ -1243,6 +1263,12 @@ function revealFlashcard() {
   els.missButton.classList.remove("hidden");
   els.missButton.textContent = "不记得，下一张";
   els.nextButton.textContent = "记得，下一张";
+  if (state.level === "baustein") {
+    els.missButton.textContent = "1 · 不记得，下一张";
+    els.nextButton.textContent = "2 · 记得，下一张";
+  }
+  els.missButton.setAttribute("aria-keyshortcuts", state.level === "baustein" ? "1 ArrowLeft" : "ArrowLeft");
+  els.nextButton.setAttribute("aria-keyshortcuts", state.level === "baustein" ? "2 ArrowRight" : "ArrowRight");
   els.roundStrip.textContent =
     els.roundMode.value === "mistakes"
       ? question.sectionMode === "baustein-grammar-card"
@@ -1251,13 +1277,17 @@ function revealFlashcard() {
         ? "快捷键：← 不记得，→ 记得。不熟的复习卡会进入下一轮。"
         : "快捷键：← 不记得，→ 记得。不熟的段落会进入下一轮。"
       : "快捷键：← 不记得，→ 记得。";
+  if (state.level === "baustein") {
+    els.roundStrip.textContent = "数字键：1 不记得，2 记得；也可用 ← / →。" +
+      (els.roundMode.value === "mistakes" ? "不熟的卡片会进入下一轮。" : "");
+  }
   updateStats();
   scrollMobilePracticeTop();
 }
 
 function handleKeyboardNavigation(event) {
   if (mobileMenuOpen || !els.levelGate.classList.contains("hidden")) return;
-  if (event.repeat || state.complete) return;
+  if (event.repeat || event.isComposing || event.ctrlKey || event.metaKey || event.altKey || state.complete) return;
   if (isEditableTarget(event.target)) return;
   if (!state.current || state.complete) return;
 
