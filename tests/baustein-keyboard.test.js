@@ -26,10 +26,14 @@ class ElementStub {
   closest(selector) {
     return this.editable && selector.includes("input") ? this : null;
   }
+  set textContent(value) { this.text = value; this.children = []; }
+  get textContent() { return this.text + this.children.map(child => child.textContent).join(""); }
+  set innerHTML(value) { this.textContent = value; }
   querySelectorAll() { return []; }
   setAttribute() {}
   addEventListener() {}
   append(...children) { this.children.push(...children); }
+  appendChild(child) { this.append(child); }
 }
 
 function loadApp() {
@@ -37,7 +41,7 @@ function loadApp() {
   const context = vm.createContext({
     BausteinStudy: require("../baustein-study.js"),
     Element: ElementStub,
-    window: { matchMedia: () => ({ matches: false }) },
+    window: { matchMedia: () => ({ matches: false }), scrollTo() {} },
     document: {
       querySelector(selector) {
         if (!elements.has(selector)) elements.set(selector, new ElementStub());
@@ -45,6 +49,7 @@ function loadApp() {
       },
       querySelectorAll: () => [],
       createElement: () => new ElementStub(),
+      createTextNode: textContent => ({ textContent }),
       getElementById: () => null,
     },
     advances: 0,
@@ -216,4 +221,32 @@ test("Baustein front renders the gapped sentence with full Chinese and the back 
   app.press("2");
   assert.equal(app.read("state.mistakes[0].german"), "Er [1]____.");
   assert.equal(app.read("state.mistakes[0].reviewGerman"), "Er liest.");
+});
+
+test("Baustein preview and both card faces highlight the same Chinese phrase and current German answer", () => {
+  const app = loadApp();
+  const corpus = { window: {} };
+  vm.runInNewContext(fs.readFileSync(path.join(__dirname, "..", "data", "baustein_questions.js"), "utf8"), corpus);
+  app.context.highlightSection = JSON.parse(JSON.stringify(corpus.window.BAUSTEIN_QUESTIONS[0]));
+  app.read(`
+    globalThis.marked = element => element.children
+      .flatMap(child => child.className === "baustein-review-answer" ? [child.textContent] : child.children ? marked(child) : []);
+    globalThis.highlightQueue = BausteinStudy.buildRoundQueue(normalizeSections("baustein", [highlightSection]));
+    renderHv2MemoryView(highlightQueue[0]);
+  `);
+  assert.equal(app.read("marked(els.sortList.children[0].children[0]).join('|')"), "gezogen|采取了");
+  app.read("state.current = highlightQueue[1]; showFront(state.current)");
+  assert.equal(app.read("marked(els.germanQuestion).join('|')"), "[1]____");
+  assert.equal(app.read("marked(els.paragraphPanel).join('|')"), "采取了");
+  const frontChinese = app.read("els.paragraphPanel.textContent");
+  app.press("1");
+  assert.equal(app.read("marked(els.reviewGerman).join('|')"), "gezogen");
+  assert.equal(app.read("marked(els.reviewChinese).join('|')"), "采取了");
+  assert.equal(app.read("els.reviewChinese.textContent"), frontChinese);
+  // Re-rendering another card must remove the previous card's marks.
+  app.read("state.current = highlightQueue[2]; showFront(state.current)");
+  assert.equal(app.read("marked(els.paragraphPanel).join('|')"), "列入教学安排");
+  app.press("1");
+  assert.equal(app.read("marked(els.reviewGerman).join('|')"), "vorgesehen");
+  assert.equal(app.read("marked(els.reviewChinese).join('|')"), "列入教学安排");
 });

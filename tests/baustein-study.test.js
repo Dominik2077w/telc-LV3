@@ -132,3 +132,33 @@ test("practice cards use the preview sentence and complete translation, masking 
   assert.match(card10.german, /\[10\]____, die Kinder könnten während eines Diktats/);
   assert.match(card11.german, /argumentieren, die Kinder könnten während \[11\]____/);
 });
+
+test("Chinese highlight anchors cover every aligned sentence without changing its translation", () => {
+  let highlighted = 0;
+  for (const section of sections()) {
+    for (const row of Study.buildReviewRows(section)) {
+      const parts = Study.highlightParts(row.chinese, row.chineseAnswerRanges);
+      assert.equal(parts.map(part => part.text).join(""), row.chinese);
+      if (row.sourceMissing || (section.teil === 21 && row.number === "38")) {
+        assert.equal(row.chineseAnswerRanges.length, 0);
+      } else {
+        assert.equal(row.chineseAnswerRanges.length, 1, `Teil ${section.teil}, question ${row.number}`);
+        assert.ok(parts.some(part => part.highlight && part.text.length < row.chinese.length));
+        highlighted += 1;
+      }
+    }
+  }
+  assert.equal(highlighted, 433);
+  const rows = Study.buildReviewRows(sections()[0]);
+  assert.equal(Study.highlightParts(rows[0].chinese, rows[0].chineseAnswerRanges).find(part => part.highlight).text, "采取了");
+  assert.notDeepEqual(rows[9].chineseAnswerRanges, rows[10].chineseAnswerRanges);
+  assert.equal(rows[9].chinese, rows[10].chinese);
+});
+
+test("highlight fragments keep repeated words outside the selected range and treat markup as plain text", () => {
+  const parts = Study.highlightParts("储存在哪里：储存在<x>中。", [{ start: 0, end: 2 }]);
+  assert.deepEqual(parts, [
+    { text: "储存", highlight: true },
+    { text: "在哪里：储存在<x>中。", highlight: false },
+  ]);
+});

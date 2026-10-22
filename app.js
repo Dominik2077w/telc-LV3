@@ -739,6 +739,9 @@ function showFront(question) {
       : question.sectionMode === "paragraph-card"
       ? `${question.paragraph || question.number}. ${question.firstSentence || question.german}`
       : question.german;
+  if (question.bausteinStudy && !question.bausteinStudy.sourceMissing) {
+    renderBausteinSentence(els.germanQuestion, question.bausteinStudy, true);
+  }
   els.germanQuestion.classList.remove("baustein-title");
   els.germanQuestion.classList.toggle("field-question", Boolean(question.frontFields));
   els.answerGrid.innerHTML = "";
@@ -808,7 +811,7 @@ function renderParagraphPanel(question) {
     translation.className = "baustein-card-chinese";
     translation.lang = "zh-CN";
     translation.setAttribute("aria-label", "完整中文翻译");
-    translation.textContent = question.chinese;
+    renderHighlightedText(translation, question.chinese, question.bausteinStudy.chineseAnswerRanges);
     els.paragraphPanel.append(translation);
     if (question.sourceNote) {
       const note = document.createElement("p");
@@ -1281,6 +1284,10 @@ function revealFlashcard() {
     els.correctAnswer.textContent = question.answerText || "原文未标注答案";
     els.reviewGerman.textContent = question.reviewGerman || question.german;
     els.reviewChinese.textContent = [question.chinese, question.sourceNote].filter(Boolean).join("\n\n");
+    if (question.bausteinStudy) {
+      if (!question.bausteinStudy.sourceMissing) renderBausteinSentence(els.reviewGerman, question.bausteinStudy);
+      renderHighlightedText(els.reviewChinese, els.reviewChinese.textContent, question.bausteinStudy.chineseAnswerRanges);
+    }
   } else if (question.sectionMode === "speaking-card") {
     els.reviewGerman.textContent = question.german || "-";
     els.reviewChinese.textContent = question.chinese || "暂无中文理解";
@@ -1711,6 +1718,32 @@ function buildLv2GlobalSortBatch(section) {
   };
 }
 
+function renderHighlightedText(element, text, ranges) {
+  element.textContent = "";
+  BausteinStudy.highlightParts(text, ranges).forEach(part => {
+    if (!part.highlight) {
+      element.append(document.createTextNode(part.text));
+      return;
+    }
+    const highlight = document.createElement("mark");
+    highlight.className = "baustein-review-answer";
+    highlight.textContent = part.text;
+    element.append(highlight);
+  });
+}
+
+function renderBausteinSentence(element, row, masked = false) {
+  const before = row.before ? row.before + " " : row.sourceMissing ? "答案：" : "";
+  const answer = masked ? `[${row.number}]____` : row.answer;
+  const after = row.after ? (/^[,.;:!?]/.test(row.after) ? "" : " ") + row.after : "";
+  // Keep sentence text in one inline formatting context, including in the
+  // flex-aligned front prompt, so the marked blank stays inside the sentence.
+  const sentence = document.createElement("span");
+  renderHighlightedText(sentence, before + answer + after, [{ start: before.length, end: before.length + answer.length }]);
+  element.textContent = "";
+  element.append(sentence);
+}
+
 function renderHv2MemoryView(memory) {
   const isBaustein = memory.sectionMode === "baustein-memory";
   els.sortModeView.classList.remove("hv1-order-mode", "hv1-audio-mode", "lv2-memory-mode");
@@ -1721,7 +1754,7 @@ function renderHv2MemoryView(memory) {
   els.sortSubmitButton.onclick = null;
   els.sortTeilBadge.textContent = "Teil " + memory.teil + " · " + memory.teilTitle;
   els.sortInstruction.textContent = isBaustein
-    ? "按空格顺序查看填好答案的那一句和对应中文；高亮部分是本空答案。看完后开始本篇练习。"
+    ? "按空格顺序查看填好答案的那一句和对应中文；德语答案及其对应的中文词语或短语已高亮。看完后开始本篇练习。"
     : "下面按题号展示题干补全后的完整句子和中文翻译；看完后进入本篇三选一。";
   els.sortInfo.textContent = "本篇 " + (memory.reviewRows || []).length + " 道题 · 按原题顺序" +
     (isBaustein ? " · 按 1 / Enter 开始练习" : "");
@@ -1746,11 +1779,7 @@ function renderHv2MemoryView(memory) {
     german.className = "hv2-review-german";
     german.lang = "de";
     if (isBaustein) {
-      const answer = document.createElement("mark");
-      answer.className = "baustein-review-answer";
-      answer.textContent = item.answer;
-      german.append(document.createTextNode(item.before ? item.before + " " : item.sourceMissing ? "答案：" : ""), answer);
-      if (item.after) german.append(document.createTextNode((/^[,.;:!?]/.test(item.after) ? "" : " ") + item.after));
+      renderBausteinSentence(german, item);
     } else {
       german.textContent = item.sentence || "原文未提供完整句子";
     }
@@ -1759,6 +1788,7 @@ function renderHv2MemoryView(memory) {
     chinese.className = "hv2-review-chinese";
     chinese.textContent = item.sourceMissing
       ? "原文只有答案字母，未提供填空句子和中文翻译。" : item.chinese || "语料暂未提供中文翻译";
+    if (isBaustein) renderHighlightedText(chinese, chinese.textContent, item.chineseAnswerRanges);
 
     body.append(german, chinese);
     if (item.sourceNote) {
