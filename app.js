@@ -27,7 +27,7 @@ const datasets = {
     answerLabel: "Leitsatz",
     reviewGermanLabel: "Transkript",
     reviewChineseLabel: "中文",
-    idleText: "选择 HV1 后，先记住 8 项正确顺序，准备好后逐题听音选择。",
+    idleText: "选择 HV1 后，先记住 8 项正确顺序，再听各卡片录音并拖动排序，最后统一提交。",
   },
   hv2: {
     label: "HV2",
@@ -131,6 +131,9 @@ const els = {
   questionCard: document.querySelector("#questionCard"),
   paragraphPanel: document.querySelector("#paragraphPanel"),
   audioPanel: document.querySelector("#audioPanel"),
+  hv1AudioDock: document.querySelector("#hv1AudioDock"),
+  hv1AudioLabel: document.querySelector("#hv1AudioLabel"),
+  hv1SharedAudio: document.querySelector("#hv1SharedAudio"),
   answerGrid: document.querySelector("#answerGrid"),
   frontFace: document.querySelector("#frontFace"),
   backFace: document.querySelector("#backFace"),
@@ -260,6 +263,13 @@ function splitLanguages(text) {
 }
 
 function bindEvents() {
+  for (const name of ["play", "pause", "ended", "emptied"]) {
+    els.hv1SharedAudio.addEventListener(name, updateHv1PlaybackButtons);
+  }
+  els.hv1SharedAudio.addEventListener("error", () => {
+    if (hv1AudioState.activeKey) els.hv1AudioLabel.textContent = "这段录音暂时无法播放，请重试。";
+    updateHv1PlaybackButtons();
+  });
   els.mobileSettings.addEventListener("click", () => setMobileMenuOpen(true));
   els.mobileCloseSettings.addEventListener("click", () => setMobileMenuOpen(false));
   els.mobileBackdrop.addEventListener("click", () => setMobileMenuOpen(false));
@@ -631,6 +641,7 @@ function finishRound() {
 }
 
 function showFront(question) {
+  if (question.sectionMode !== "hv1-audio-quiz" && hv1AudioState.session) stopSortAudio();
   if (question.sectionMode === "hv2-choice") Hv2Quiz.prepareQuestion(question);
   if (question.sectionMode === "baustein-choice") BausteinQuiz.prepareQuestion(question);
   const edition = question.addedIn || question.updatedIn;
@@ -670,7 +681,7 @@ function showFront(question) {
   }
 
   if (question.sectionMode === "hv1-audio-quiz") {
-    els.sessionMode.textContent = "HV1 · 先记忆，再听音选择";
+    els.sessionMode.textContent = "HV1 · 先记忆，再听音排序";
     els.sessionTitle.textContent = "Teil " + question.teil + ": " + question.teilTitle;
     els.teilBadge.textContent = "Teil " + question.teil;
     els.questionBadge.textContent = "听力训练";
@@ -1352,16 +1363,17 @@ function handleKeyboardNavigation(event) {
   if (handleBausteinKeyboard(event)) return;
 
   if (state.current.sectionMode === "hv1-audio-quiz") {
+    if (event.target instanceof Element && event.target.closest("#hv1AudioDock")) return;
     const session = hv1AudioState.session;
-    if (session?.phase === "practice" && !session.answered && /^[1-8]$/.test(event.key)) {
-      const button = els.sortList.querySelectorAll(".hv1-quiz-option")[Number(event.key) - 1];
+    if (session?.phase === "practice" && /^[1-8]$/.test(event.key)) {
+      const button = els.sortList.querySelectorAll(".hv1-card-play")[Number(event.key) - 1];
       if (button) {
         event.preventDefault();
         button.click();
       }
       return;
     }
-    if (["memory", "result"].includes(session?.phase) || session?.answered) {
+    if (session) {
       if (event.key === "Enter" && !isNativeButtonKey(event)) {
         event.preventDefault();
         submitHv1AudioStep();
@@ -1577,7 +1589,7 @@ function updateStats() {
   const totalQuestions = state.queue.reduce((total, question) => {
     if (["hv2-memory", "baustein-memory"].includes(question.sectionMode)) return total;
     if (question.sectionMode === "hv1-audio-quiz") {
-      return total + (question.reviewQuestions || question.questions || []).length;
+      return total + question.questions.length;
     }
     return total + 1;
   }, 0);
@@ -1590,7 +1602,7 @@ function updateStats() {
 function countMistakeQuestions(mistakes) {
   return mistakes.reduce((total, question) => {
     if (question.sectionMode === "hv1-audio-quiz") {
-      return total + (question.reviewQuestions || []).length;
+      return total + (question.missedCount || question.questions.length);
     }
     return total + 1;
   }, 0);
@@ -2370,15 +2382,88 @@ function isLv2GlobalOptionOrderOriginal(shuffled, original) {
   return shuffled.length > 0;
 }
 
-// ---- HV1: memorize the answer order, then listen and choose each statement. ----
+// ---- HV1: memorize, listen to each card, then submit all eight positions. ----
+var hv1AudioState = { session: null, drag: null, activeKey: null, playRequest: 0 };
 
-var hv1AudioState = { session: null };
+function hv1AudioKey(question) {
+  return String(question.id || question.number);
+}
+
+function clearHv1SharedPlayer() {
+  hv1AudioState.playRequest += 1;
+  hv1AudioState.activeKey = null;
+  els.hv1SharedAudio.pause();
+  els.hv1SharedAudio.removeAttribute("src");
+  els.hv1SharedAudio.load();
+  els.hv1AudioLabel.textContent = "点任一卡片播放录音";
+}
+
+function updateHv1PlaybackButtons() {
+  const player = els.hv1SharedAudio;
+  els.sortList.querySelectorAll("[data-hv1-audio-key]").forEach(button => {
+    const playing = button.dataset.hv1AudioKey === hv1AudioState.activeKey && !player.paused && !player.ended;
+    button.classList.toggle("is-playing", playing);
+    button.setAttribute("aria-pressed", String(playing));
+    button.textContent = (playing ? "Ⅱ " : "▶ ") + button.dataset.audioLabel.replace(/^录音 /, "");
+  });
+}
+
+function playHv1Card(question, label) {
+  if (!question.audio) return;
+  const player = els.hv1SharedAudio;
+  const key = hv1AudioKey(question);
+  if (hv1AudioState.activeKey === key && !player.paused && !player.ended) {
+    player.pause();
+    return;
+  }
+  const request = ++hv1AudioState.playRequest;
+  if (hv1AudioState.activeKey !== key) {
+    player.pause();
+    hv1AudioState.activeKey = key;
+    player.src = question.audio;
+    player.load();
+  }
+  els.hv1AudioLabel.textContent = label + " · 可拖动上方进度条重听";
+  player.play().catch(() => {
+    if (request !== hv1AudioState.playRequest) return;
+    els.hv1AudioLabel.textContent = "未能播放这段录音，请再点一次播放。";
+    updateHv1PlaybackButtons();
+  });
+}
+
+function createHv1PlayButton(question, label) {
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className = "hv1-card-play";
+  button.dataset.hv1AudioKey = hv1AudioKey(question);
+  button.dataset.audioLabel = label;
+  button.textContent = "▶ " + label.replace(/^录音 /, "");
+  button.setAttribute("aria-label", "播放或暂停" + label);
+  button.setAttribute("aria-pressed", "false");
+  button.disabled = !question.audio;
+  if (!question.audio) button.textContent = "暂无录音";
+  button.addEventListener("click", () => playHv1Card(question, label));
+  return button;
+}
+
+function createHv1AudioReferenceList(session) {
+  const ordered = session.questions.map(question => ({
+    id: "hv1-reference-" + question.number,
+    text: Hv1Order.sentence(question), chinese: question.chinese, note: question.studyNote,
+  }));
+  const list = createHv1OrderList(ordered, { translation: true });
+  [...list.children].forEach((row, index) => row.append(createHv1PlayButton(session.questions[index], "第 " + (index + 1) + " 项录音")));
+  return list;
+}
 
 function renderHv1AudioQuiz(batch) {
   stopSortAudio();
   els.sortModeView.classList.remove("hv1-order-mode", "hv2-memory-mode");
   els.sortModeView.classList.add("hv1-audio-mode");
+  els.practice.classList.add("hv1-audio-active");
+  els.hv1AudioDock.classList.remove("hidden");
   hv1AudioState.session = Hv1AudioQuiz.createSession(batch);
+  els.sortTeilBadge.textContent = "Teil " + batch.teil + " · " + batch.teilTitle;
   renderHv1AudioQuizView();
 }
 
@@ -2387,6 +2472,7 @@ function renderHv1AudioQuizView() {
   if (!session) return;
   els.sortList.innerHTML = "";
   els.sortList.classList.remove("hv1-order-list");
+  els.practice.classList.toggle("hv1-board-practice", session.phase === "practice");
   els.sortSubmitButton.onclick = null;
   els.sortSubmitButton.disabled = false;
   els.sortShuffleButton.classList.add("hidden");
@@ -2395,222 +2481,188 @@ function renderHv1AudioQuizView() {
   if (session.phase === "memory") {
     els.sessionMode.textContent = "HV1 · 先记忆";
     els.questionBadge.textContent = "正确顺序";
-    els.sortInstruction.textContent = "先按 Sprecher 1 到 8 的顺序记住这八条陈述。准备好后，逐题听音选择。";
-    els.sortInfo.textContent = "PDF 正确顺序 · " + session.questions.length + " 项";
-    const ordered = session.questions.map(function (question) {
-      return {
-        id: "hv1-memory-" + question.number,
-        text: question.leitsatz || question.answerText || question.sourceGerman,
-        chinese: question.chinese,
-        note: question.studyNote,
-      };
-    });
-    els.sortList.append(createHv1OrderList(ordered, { translation: true }));
-    els.sortSubmitButton.textContent = "准备好了，开始听力练习";
-    els.roundStrip.textContent = session.activeQuestions.length < session.questions.length
-      ? "记忆阶段不会计分。本轮会重做 " + session.activeQuestions.length + " 道错题。"
-      : "记忆阶段不会计分。开始后按 Sprecher 1–8 逐题播放音频，点选后立即显示正误。";
-    return;
+    els.sortInstruction.textContent = "先记住从 1 到 8 的正确顺序。每项右侧可听录音，准备好后再打乱排序。";
+    els.sortInfo.textContent = "正确顺序 · 共 8 项";
+    els.sortList.append(createHv1AudioReferenceList(session));
+    els.sortSubmitButton.textContent = "准备好了，开始听音排序";
+    els.roundStrip.textContent = session.batch.missedCount
+      ? "上一轮错 " + session.batch.missedCount + " 个位置；本轮重新排列整组 8 项。"
+      : "预习不计分。练习中保留选项短句，不显示听力原文。";
+  } else {
+    renderHv1AudioBoard(session);
   }
-
-  if (session.phase === "practice") {
-    renderHv1AudioQuestion(session);
-    return;
-  }
-
-  const total = session.activeQuestions.length;
-  const correct = total - session.missed.length;
-  els.sessionMode.textContent = "HV1 · Teil 结果";
-  els.questionBadge.textContent = "本 Teil 完成";
-  els.sortInstruction.textContent = "本轮 " + total + " 道听力题已完成。你可以再对照 PDF 给出的完整正确顺序。";
-  els.sortInfo.textContent = "本轮 " + correct + " / " + total + " 题答对";
-  const heading = document.createElement("h3");
-  heading.textContent = "Sprecher 1–8 正确顺序";
-  const ordered = session.questions.map(function (question) {
-    return {
-      id: "hv1-result-" + question.number,
-      text: question.leitsatz || question.answerText || question.sourceGerman,
-      chinese: question.chinese,
-      note: question.studyNote,
-    };
-  });
-  els.sortList.append(heading, createHv1OrderList(ordered, { translation: true }));
-  const review = Hv1AudioQuiz.reviewBatch(session);
-  if (review) state.mistakes.push(review);
-  els.sortSubmitButton.textContent = state.currentIndex >= state.queue.length ? "完成本轮" : "下一 Teil";
-  els.roundStrip.textContent = session.missed.length
-    ? "答错的 Sprecher 会在错题轮回中再次播放。"
-    : "这一 Teil 全部答对。继续下一 Teil。";
+  updateHv1PlaybackButtons();
 }
 
-function renderHv1AudioQuestion(session) {
-  const question = Hv1AudioQuiz.currentQuestion(session);
-  if (!question) {
-    session.phase = "result";
-    renderHv1AudioQuizView();
-    return;
-  }
-
-  els.sessionMode.textContent = "HV1 · 听音选陈述";
-  els.questionBadge.textContent = "Sprecher " + question.number;
-  els.sortInstruction.textContent = "听完这段音频，从八条陈述中选择与这位 Sprecher 对应的一条。点选后立即反馈；已选过的陈述会在后续题目中禁用。";
-  els.sortInfo.textContent = "第 " + (session.questionIndex + 1) + " / " + session.activeQuestions.length + " 题";
-
-  const card = document.createElement("section");
-  card.className = "hv1-listen-question";
-  const title = document.createElement("h3");
-  title.textContent = "Sprecher " + question.number;
-  card.append(title);
-
-  if (question.sourceTranscript) {
-    const transcript = document.createElement("details");
-    transcript.className = "hv1-transcript";
-    transcript.open = true;
-    const summary = document.createElement("summary");
-    summary.textContent = "PDF 中的听力原文";
+function renderHv1AudioBoard(session) {
+  const result = session.phase === "result";
+  els.sessionMode.textContent = result ? "HV1 · 排序结果" : "HV1 · 八卡听音排序";
+  els.questionBadge.textContent = result ? "已提交" : "拖动排序";
+  els.sortInstruction.textContent = result
+    ? "绿色位置正确；红色卡片注明应在的位置，以及当前位置应放的正确项。"
+    : "逐卡听音，拖动右下角手柄排序；按从左到右、从上到下的 1–8 顺序，一次提交。";
+  els.sortInfo.textContent = result ? session.result.correct + " / 8 项位置正确" : "8 项已打乱 · 排好后一次提交";
+  const board = document.createElement("ol");
+  board.className = "hv1-audio-board" + (result ? " is-result" : "");
+  board.setAttribute("aria-label", result ? "你的排序与逐项核对结果" : "八张可拖动排序的录音卡片");
+  const items = result ? session.result.rows : session.order;
+  items.forEach((item, index) => {
+    const card = document.createElement("li");
+    card.className = "hv1-audio-sort-card";
+    card.dataset.cardId = item.cardId;
+    if (result) card.classList.add(item.correct ? "is-correct" : "is-wrong");
+    const content = document.createElement("div");
+    content.className = "hv1-audio-card-content";
+    const rank = document.createElement("span");
+    rank.className = "hv1-position";
+    rank.textContent = String(index + 1);
     const text = document.createElement("p");
+    text.className = "hv1-audio-card-text";
     text.lang = "de";
-    text.textContent = question.sourceTranscript;
-    transcript.append(summary, text);
-    card.append(transcript);
-  } else {
-    const note = document.createElement("p");
-    note.className = "hv1-no-transcript";
-    note.textContent = "PDF 未附这位 Sprecher 的完整听力原文；音频朗读本题对应的 PDF 陈述。";
-    card.append(note);
-  }
-
-  if (question.audio) {
-    const player = document.createElement("audio");
-    player.controls = true;
-    player.preload = "metadata";
-    player.src = question.audio;
-    player.setAttribute("aria-label", "Sprecher " + question.number + " 合成音频和播放进度");
-    card.append(player);
-    if (session.autoPlay) {
-      session.autoPlay = false;
-      player.play().catch(() => {
-        const hint = document.createElement("p");
-        hint.className = "hv1-play-hint";
-        hint.textContent = "浏览器未自动播放，请点播放按钮。";
-        card.append(hint);
+    text.tabIndex = 0;
+    text.textContent = Hv1Order.sentence(item);
+    content.append(rank, text);
+    card.append(content);
+    const actions = document.createElement("div");
+    actions.className = "hv1-audio-card-actions";
+    actions.append(createHv1PlayButton(item, item.audioLabel));
+    if (!result) {
+      const handle = document.createElement("button");
+      handle.type = "button";
+      handle.className = "hv1-audio-drag-handle";
+      handle.textContent = "⠿";
+      handle.setAttribute("aria-label", "拖动第 " + (index + 1) + " 项排序");
+      handle.title = "拖动排序，也可以用上下键调整位置";
+      handle.addEventListener("pointerdown", beginHv1AudioDrag);
+      handle.addEventListener("keydown", event => {
+        if (!["ArrowUp", "ArrowDown"].includes(event.key)) return;
+        event.preventDefault();
+        event.stopPropagation();
+        const from = session.order.findIndex(question => question.cardId === item.cardId);
+        if (Hv1AudioQuiz.move(session, from, from + (event.key === "ArrowUp" ? -1 : 1))) {
+          renderHv1AudioQuizView();
+          els.sortList.querySelector('[data-card-id="' + cssEscape(item.cardId) + '"] .hv1-audio-drag-handle')?.focus({ preventScroll: true });
+        }
       });
+      actions.append(handle);
     }
-  } else {
-    const note = document.createElement("p");
-    note.className = "no-audio-notice";
-    note.textContent = "这项暂时没有合成音频。";
-    card.append(note);
-  }
-
-  const choiceTitle = document.createElement("h3");
-  choiceTitle.className = "hv1-choice-heading";
-  choiceTitle.textContent = "选择对应的 Leitsatz";
-  const choices = document.createElement("div");
-  choices.className = "hv1-quiz-choices";
-  choices.setAttribute("aria-label", "八条待选陈述");
-  const options = shuffledHv1AudioOptions(session.questions);
-  const correctNumber = String(question.number);
-
-  options.forEach(function (option, index) {
-    const button = document.createElement("button");
-    button.type = "button";
-    button.className = "hv1-quiz-option";
-    button.dataset.optionNumber = String(option.number);
-    const alreadyUsed = Hv1AudioQuiz.isOptionUsed(session, option.number);
-    button.disabled = session.answered || alreadyUsed;
-    if (alreadyUsed && !session.answered) {
-      button.classList.add("is-used");
-      button.title = "这条陈述已经选过，不能再次选择";
-    }
-    const position = document.createElement("span");
-    position.className = "hv1-option-position";
-    position.textContent = String(index + 1);
-    const text = document.createElement("span");
-    text.className = "hv1-option-text";
-    text.lang = "de";
-    text.textContent = option.leitsatz || option.answerText || option.sourceGerman;
-    button.append(position, text);
-    if (session.answered) {
-      if (String(option.number) === correctNumber) button.classList.add("is-correct");
-      if (String(option.number) === String(session.selected)) button.classList.add("is-selected");
-      if (String(option.number) === String(session.selected) && String(option.number) !== correctNumber) {
-        button.classList.add("is-wrong");
+    card.append(actions);
+    if (result) {
+      const feedback = document.createElement("p");
+      feedback.className = "hv1-audio-position-feedback";
+      feedback.textContent = item.correct ? "✓ 第 " + item.position + " 位正确"
+        : "✗ 本项应在第 " + item.expectedPosition + " 位";
+      card.append(feedback);
+      if (!item.correct) {
+        const expected = document.createElement("div");
+        expected.className = "hv1-audio-expected";
+        const label = document.createElement("strong");
+        label.textContent = "第 " + item.position + " 位应为：";
+        const sentence = document.createElement("p");
+        sentence.lang = "de";
+        sentence.textContent = Hv1Order.sentence(item.expectedQuestion);
+        expected.append(label, sentence, createHv1PlayButton(item.expectedQuestion, "本位正确项录音"));
+        card.append(expected);
       }
-    } else if (!alreadyUsed) {
-      button.addEventListener("click", () => chooseHv1AudioOption(option));
     }
-    choices.append(button);
+    board.append(card);
   });
-  card.append(choiceTitle, choices);
-
-  if (session.answered) {
-    const feedback = document.createElement("div");
-    const wasCorrect = String(session.selected) === correctNumber;
-    feedback.className = "hv1-answer-feedback " + (wasCorrect ? "is-correct" : "is-wrong");
-    feedback.setAttribute("role", "status");
-    const line = document.createElement("strong");
-    line.textContent = wasCorrect ? "✓ 回答正确" : "✗ 回答错误";
-    const answer = document.createElement("p");
-    answer.lang = "de";
-    answer.textContent = "正确答案：" + (question.leitsatz || question.answerText || question.sourceGerman);
-    feedback.append(line, answer);
-    if (question.chinese) {
-      const translation = document.createElement("p");
-      translation.textContent = question.chinese;
-      feedback.append(translation);
-    }
-    card.append(feedback);
-  }
-
-  els.sortList.append(card);
-  if (session.answered) {
-    els.sortSubmitButton.textContent = session.questionIndex + 1 >= session.activeQuestions.length
-      ? "完成本 Teil"
-      : "下一位 Sprecher";
-    els.roundStrip.textContent = "已显示正误和正确答案；本次选择的陈述会在后续题目中禁用。继续后播放下一位 Sprecher。";
+  els.sortList.append(board);
+  if (result) {
+    const details = document.createElement("details");
+    details.className = "hv1-correct-order";
+    const summary = document.createElement("summary");
+    summary.textContent = "查看完整正确顺序（含录音）";
+    details.append(summary, createHv1AudioReferenceList(session));
+    els.sortList.append(details);
+    els.sortSubmitButton.textContent = state.currentIndex >= state.queue.length ? "完成本轮" : "下一 Teil";
+    els.roundStrip.textContent = session.result.correct < 8 ? "本组会在错题轮回中重新预习并排列全部 8 项。" : "本组全部排对。";
   } else {
-    els.sortSubmitButton.textContent = "先选择一条陈述";
-    els.sortSubmitButton.disabled = true;
-    els.roundStrip.textContent = "音频可拖动进度条反复收听；选项按题目随机排列。";
+    els.sortSubmitButton.textContent = "提交全部 8 项排序";
+    els.roundStrip.textContent = "点 ▶ 听录音；拖 ⠿ 排序。数字键 1–8 播放当前位置，Enter 提交。";
   }
 }
 
-function shuffledHv1AudioOptions(questions) {
-  return Hv1AudioQuiz.shuffledOptions(questions);
+function beginHv1AudioDrag(event) {
+  if (hv1AudioState.session?.phase !== "practice" || !event.isPrimary || event.button !== 0) return;
+  event.preventDefault();
+  const handle = event.currentTarget;
+  const card = handle.closest(".hv1-audio-sort-card");
+  hv1AudioState.drag = { card, handle, id: card.dataset.cardId, pointerId: event.pointerId };
+  card.classList.add("is-dragging");
+  handle.setPointerCapture(event.pointerId);
+  document.body.classList.add("hv1-is-dragging");
+  window.addEventListener("pointermove", moveHv1AudioDrag, { passive: false });
+  window.addEventListener("pointerup", finishHv1AudioDrag);
+  window.addEventListener("pointercancel", finishHv1AudioDrag);
+  window.addEventListener("blur", finishHv1AudioDrag);
 }
 
-function chooseHv1AudioOption(option) {
+function moveHv1AudioDrag(event) {
+  const drag = hv1AudioState.drag;
+  if (!drag || event.pointerId !== drag.pointerId) return;
+  event.preventDefault();
+  const board = drag.card.parentElement;
+  const cards = [...board.children];
+  let nearest = 0;
+  let distance = Infinity;
+  cards.forEach((card, index) => {
+    const rect = card.getBoundingClientRect();
+    const candidate = Math.hypot(event.clientX - (rect.left + rect.width / 2), event.clientY - (rect.top + rect.height / 2));
+    if (candidate < distance) { nearest = index; distance = candidate; }
+  });
   const session = hv1AudioState.session;
-  if (!session || session.phase !== "practice" || session.answered) return;
-  const result = Hv1AudioQuiz.choose(session, option.number);
-  if (!result) return;
-  state.answeredInRound += 1;
-  if (!result.correct) {
-    state.roundMistakes += 1;
+  const from = session.order.findIndex(question => question.cardId === drag.id);
+  if (!Hv1AudioQuiz.move(session, from, nearest)) return;
+  const others = cards.filter(card => card !== drag.card);
+  board.insertBefore(drag.card, others[nearest] || null);
+  try { drag.handle.setPointerCapture(drag.pointerId); } catch (_) { /* Pointer may have ended. */ }
+  [...board.children].forEach((card, index) => {
+    card.querySelector(".hv1-position").textContent = String(index + 1);
+    card.querySelector(".hv1-audio-drag-handle").setAttribute("aria-label", "拖动第 " + (index + 1) + " 项排序");
+  });
+}
+
+function finishHv1AudioDrag(event) {
+  const drag = hv1AudioState.drag;
+  if (!drag || (event?.pointerId !== undefined && event.pointerId !== drag.pointerId)) return;
+  drag.card.classList.remove("is-dragging");
+  document.body.classList.remove("hv1-is-dragging");
+  window.removeEventListener("pointermove", moveHv1AudioDrag);
+  window.removeEventListener("pointerup", finishHv1AudioDrag);
+  window.removeEventListener("pointercancel", finishHv1AudioDrag);
+  window.removeEventListener("blur", finishHv1AudioDrag);
+  try { drag.handle.releasePointerCapture(drag.pointerId); } catch (_) { /* Capture may have ended. */ }
+  hv1AudioState.drag = null;
+  if (hv1AudioState.session?.phase === "practice") {
+    els.sortInfo.textContent = "已移到第 " + (hv1AudioState.session.order.findIndex(item => item.cardId === drag.id) + 1) + " 位 · 排好后一次提交";
   }
-  els.sortList.querySelector("audio")?.pause();
-  renderHv1AudioQuizView();
-  updateStats();
 }
 
 function submitHv1AudioStep() {
   const session = hv1AudioState.session;
   if (!session) return;
+  finishHv1AudioDrag();
   if (session.phase === "memory") {
+    clearHv1SharedPlayer();
     Hv1AudioQuiz.begin(session);
-    renderHv1AudioQuizView();
-    window.scrollTo({ top: 0, behavior: "instant" });
+  } else if (session.phase === "practice") {
+    const result = Hv1AudioQuiz.submit(session);
+    if (!result || session.scored) return;
+    session.scored = true;
+    state.answeredInRound += result.total;
+    state.roundMistakes += result.total - result.correct;
+    const review = Hv1AudioQuiz.reviewBatch(session);
+    if (review) state.mistakes.push(review);
+  } else {
+    stopSortAudio();
+    nextQuestion();
     return;
   }
-  if (session.phase === "practice" && session.answered) {
-    Hv1AudioQuiz.advance(session);
-    renderHv1AudioQuizView();
-    updateStats();
-    window.scrollTo({ top: 0, behavior: "instant" });
-    return;
-  }
-  if (session.phase === "result") nextQuestion();
+  renderHv1AudioQuizView();
+  updateStats();
+  els.sortSubmitButton.focus({ preventScroll: true });
+  window.scrollTo({ top: 0, behavior: "instant" });
 }
 
 // Legacy order model stays available for existing corpus utilities.
@@ -2851,6 +2903,13 @@ function submitSort() {
 }
 
 function stopSortAudio() {
+  if (hv1AudioState?.session) {
+    finishHv1AudioDrag();
+    clearHv1SharedPlayer();
+    hv1AudioState.session = null;
+    els.hv1AudioDock.classList.add("hidden");
+    els.practice.classList.remove("hv1-audio-active", "hv1-board-practice");
+  }
   finishHv1Drag();
   els.audioPanel.querySelector("audio")?.pause();
   els.sortList.querySelector("audio")?.pause();

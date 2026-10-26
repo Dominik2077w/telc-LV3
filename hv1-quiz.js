@@ -6,72 +6,9 @@
   function createSession(batch) {
     const questions = [...batch.questions].sort((a, b) => Number(a.number) - Number(b.number));
     if (questions.length !== 8 || questions.some((question, index) => Number(question.number) !== index + 1)) {
-      throw new Error("HV1 audio quiz requires the eight PDF statements in speaker order.");
+      throw new Error("HV1 audio sorting requires the eight PDF statements in speaker order.");
     }
-    return {
-      batch,
-      questions,
-      activeQuestions: batch.reviewQuestions?.length ? [...batch.reviewQuestions] : questions,
-      phase: "memory",
-      questionIndex: 0,
-      answered: false,
-      selected: null,
-      usedOptions: [],
-      missed: [],
-      mistakesRecorded: false,
-      autoPlay: false,
-    };
-  }
-
-  function begin(session) {
-    if (!session || session.phase !== "memory") return false;
-    session.phase = "practice";
-    session.autoPlay = true;
-    return true;
-  }
-
-  function currentQuestion(session) {
-    return session?.phase === "practice" ? session.activeQuestions[session.questionIndex] || null : null;
-  }
-
-  function choose(session, optionNumber) {
-    if (!session || session.phase !== "practice" || session.answered) return null;
-    if (isOptionUsed(session, optionNumber)) return null;
-    const question = currentQuestion(session);
-    if (!question) return null;
-    session.selected = String(optionNumber);
-    session.usedOptions.push(session.selected);
-    session.answered = true;
-    const correct = session.selected === String(question.number);
-    if (!correct) session.missed.push(question);
-    return { question, correct, selected: session.selected };
-  }
-
-  function advance(session) {
-    if (!session || session.phase !== "practice" || !session.answered) return false;
-    session.questionIndex += 1;
-    session.answered = false;
-    session.selected = null;
-    if (session.questionIndex >= session.activeQuestions.length) {
-      session.phase = "result";
-      session.autoPlay = false;
-    } else {
-      session.autoPlay = true;
-    }
-    return true;
-  }
-
-  function reviewBatch(session) {
-    if (!session || session.mistakesRecorded || !session.missed.length) return null;
-    session.mistakesRecorded = true;
-    return {
-      ...session.batch,
-      reviewQuestions: session.missed.map(question => ({ ...question })),
-    };
-  }
-
-  function isOptionUsed(session, optionNumber) {
-    return Boolean(session?.usedOptions?.includes(String(optionNumber)));
+    return { batch, questions, phase: "memory", order: [], result: null, scored: false, mistakesRecorded: false };
   }
 
   function shuffledOptions(questions, random = Math.random) {
@@ -86,5 +23,45 @@
     return options;
   }
 
-  return { createSession, begin, currentQuestion, choose, advance, reviewBatch, isOptionUsed, shuffledOptions };
+  function begin(session, random) {
+    if (!session || session.phase !== "memory") return false;
+    session.order = shuffledOptions(session.questions, random).map((question, index) => ({
+      ...question,
+      cardId: String(question.id || `hv1-audio-${question.number}`),
+      audioLabel: `录音 ${"ABCDEFGH"[index]}`,
+    }));
+    session.phase = "practice";
+    return true;
+  }
+
+  function move(session, from, to) {
+    if (!session || session.phase !== "practice" || !Number.isInteger(from) || !Number.isInteger(to) ||
+      from < 0 || to < 0 || from >= session.order.length || to >= session.order.length || from === to) return false;
+    session.order.splice(to, 0, session.order.splice(from, 1)[0]);
+    return true;
+  }
+
+  function submit(session) {
+    if (!session || session.phase !== "practice") return null;
+    const rows = session.order.map((question, index) => ({
+      ...question,
+      position: index + 1,
+      expectedPosition: Number(question.number),
+      expectedQuestion: session.questions[index],
+      correct: Number(question.number) === index + 1,
+    }));
+    session.result = { rows, correct: rows.filter(row => row.correct).length, total: rows.length };
+    session.phase = "result";
+    return session.result;
+  }
+
+  function reviewBatch(session) {
+    if (!session?.result || session.mistakesRecorded || session.result.correct === session.result.total) return null;
+    session.mistakesRecorded = true;
+    // The positions are relative to the whole Teil; retries must keep all eight.
+    const { reviewQuestions, ...batch } = session.batch;
+    return { ...batch, questions: [...session.questions], missedCount: session.result.total - session.result.correct };
+  }
+
+  return { createSession, begin, move, submit, reviewBatch, shuffledOptions };
 });
