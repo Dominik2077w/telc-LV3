@@ -6,9 +6,9 @@
   function createSession(batch) {
     const questions = [...batch.questions].sort((a, b) => Number(a.number) - Number(b.number));
     if (questions.length !== 8 || questions.some((question, index) => Number(question.number) !== index + 1)) {
-      throw new Error("HV1 audio sorting requires the eight PDF statements in speaker order.");
+      throw new Error("HV1 audio matching requires the eight PDF statements in speaker order.");
     }
-    return { batch, questions, phase: "memory", order: [], result: null, scored: false, mistakesRecorded: false };
+    return { batch, questions, phase: "memory", order: [], matches: {}, result: null, scored: false, mistakesRecorded: false };
   }
 
   function shuffledOptions(questions, random = Math.random) {
@@ -34,22 +34,40 @@
     return true;
   }
 
-  function move(session, from, to) {
-    if (!session || session.phase !== "practice" || !Number.isInteger(from) || !Number.isInteger(to) ||
-      from < 0 || to < 0 || from >= session.order.length || to >= session.order.length || from === to) return false;
-    session.order.splice(to, 0, session.order.splice(from, 1)[0]);
+  function connect(session, cardId, position) {
+    if (!session || session.phase !== "practice" || !Number.isInteger(position) || position < 1 || position > 8 ||
+      !session.order.some(question => question.cardId === cardId)) return false;
+    // A sentence and a position each have at most one connection. Reconnecting
+    // releases both the previous position and any previous occupant of the new one.
+    Object.keys(session.matches).forEach(id => {
+      if (session.matches[id] === position) delete session.matches[id];
+    });
+    session.matches[cardId] = position;
     return true;
   }
 
+  function disconnect(session, cardId) {
+    if (!session || session.phase !== "practice" || !Object.hasOwn(session.matches, cardId)) return false;
+    delete session.matches[cardId];
+    return true;
+  }
+
+  function isComplete(session) {
+    return Boolean(session && session.order.length === 8 && Object.keys(session.matches).length === 8);
+  }
+
   function submit(session) {
-    if (!session || session.phase !== "practice") return null;
-    const rows = session.order.map((question, index) => ({
-      ...question,
-      position: index + 1,
-      expectedPosition: Number(question.number),
-      expectedQuestion: session.questions[index],
-      correct: Number(question.number) === index + 1,
-    }));
+    if (!session || session.phase !== "practice" || !isComplete(session)) return null;
+    const rows = session.questions.map((expectedQuestion, index) => {
+      const question = session.order.find(item => session.matches[item.cardId] === index + 1);
+      return {
+        ...question,
+        position: index + 1,
+        expectedPosition: Number(question.number),
+        expectedQuestion,
+        correct: Number(question.number) === index + 1,
+      };
+    });
     session.result = { rows, correct: rows.filter(row => row.correct).length, total: rows.length };
     session.phase = "result";
     return session.result;
@@ -63,5 +81,5 @@
     return { ...batch, questions: [...session.questions], missedCount: session.result.total - session.result.correct };
   }
 
-  return { createSession, begin, move, submit, reviewBatch, shuffledOptions };
+  return { createSession, begin, connect, disconnect, isComplete, submit, reviewBatch, shuffledOptions };
 });

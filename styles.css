@@ -1644,25 +1644,34 @@ select {
 .hv1-shared-player { position: sticky; top: 0; z-index: 5; display: grid; gap: 3px; padding: 8px 18px; border-bottom: 1px solid var(--line); background: var(--surface); }
 .hv1-shared-player > span { font-size: 13px; color: var(--muted); }
 .hv1-shared-player audio { display: block; width: 100%; height: 40px; }
-.hv1-audio-board { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 0; padding: 0; list-style: none; }
-.hv1-audio-sort-card { display: flex; flex-direction: column; gap: 8px; min-width: 0; min-height: 0; border: 1px solid var(--line); border-radius: 8px; padding: 10px; background: #fbfaf6; }
-.hv1-audio-card-content { display: grid; grid-template-columns: 27px minmax(0, 1fr); gap: 8px; flex: 1; min-height: 0; }
-.hv1-audio-card-content .hv1-position { min-width: 26px; min-height: 26px; align-self: start; }
-.hv1-audio-card-text { min-height: 0; margin: 0; overflow: auto; font-size: 16px; line-height: 1.4; overflow-wrap: anywhere; overscroll-behavior: contain; }
-.hv1-audio-card-actions { display: flex; align-items: center; gap: 8px; }
+.hv1-match-board { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) 110px; gap: 80px; }
+.hv1-match-sources, .hv1-match-slots { position: relative; z-index: 1; display: grid; grid-template-rows: repeat(8, minmax(0, 1fr)); gap: 6px; min-height: 0; }
+.hv1-match-source { display: grid; grid-template-columns: minmax(0, 1fr) 44px; align-items: stretch; gap: 6px; min-height: 0; min-width: 0; padding: 3px 6px; border: 1px solid var(--line); border-radius: 7px; background: #fbfaf6; }
+.hv1-connect-choice { display: grid; grid-template-columns: 30px minmax(0, 1fr); gap: 8px; min-width: 0; min-height: 0; border: 0; padding: 0; background: transparent; color: var(--ink); text-align: left; cursor: pointer; }
+.hv1-connect-choice:disabled { opacity: 1; cursor: default; }
+.hv1-connect-choice .hv1-position { align-self: start; min-width: 28px; min-height: 26px; font-size: 12px; }
+.hv1-match-sentence-body { display: flex; flex-direction: column; min-width: 0; min-height: 0; }
+.hv1-audio-card-text { display: block; flex: 1; min-height: 0; margin: 0; overflow: auto; font-size: 16px; line-height: 1.4; overflow-wrap: anywhere; overscroll-behavior: contain; }
+.hv1-match-assignment { flex: none; margin-top: 3px; font-size: 13px; font-weight: 750; }
+.hv1-match-source.is-selected { border-color: var(--blue); box-shadow: 0 0 0 2px var(--blue); background: #edf5fc; }
+.hv1-match-source.is-linked { border-color: #84a8c8; }
+.hv1-match-slot { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; min-width: 0; min-height: 0; padding: 4px; border: 2px dashed #a5b4c3; border-radius: 7px; background: #f4f7fa; color: var(--blue); cursor: pointer; font-size: 14px; }
+.hv1-match-slot.is-linked { border-style: solid; }
+.hv1-match-slot:disabled { opacity: 1; cursor: default; }
+.hv1-match-slot > span { font-size: 12px; }
+.hv1-match-source.is-correct, .hv1-match-slot.is-correct { border: 2px solid var(--green); background: #eff8f1; }
+.hv1-match-source.is-wrong, .hv1-match-slot.is-wrong { border: 2px solid var(--red); background: #fff1ee; }
+.hv1-match-source.is-correct .hv1-match-assignment { color: var(--green-dark); }
+.hv1-match-source.is-wrong .hv1-match-assignment { color: var(--red); }
+.hv1-match-board .hv1-match-lines { display: block; }
+.hv1-match-lines .sort-line { stroke: var(--blue); stroke-width: 2; }
+.hv1-match-lines .sort-line.correct { stroke: var(--green); }
+.hv1-match-lines .sort-line.incorrect { stroke: var(--red); }
+.hv1-match-board.is-result { min-height: 660px; }
 .hv1-card-play { min-height: 40px; border: 1px solid var(--line); border-radius: 6px; padding: 6px 10px; background: #eef3f8; color: var(--blue); cursor: pointer; font-size: 14px; }
+.hv1-match-source > .hv1-card-play { align-self: center; min-height: 36px; padding: 3px 2px; white-space: nowrap; }
 .hv1-card-play:disabled { opacity: .5; cursor: default; }
 .hv1-card-play.is-playing { background: var(--blue); color: white; }
-.hv1-audio-card-actions .hv1-card-play { flex: 1; text-align: left; }
-.hv1-audio-drag-handle { min-width: 44px; min-height: 40px; border: 1px solid var(--line); border-radius: 6px; background: #e9f2ec; color: var(--green-dark); font-size: 24px; cursor: grab; touch-action: none; }
-.hv1-audio-sort-card.is-dragging { outline: 3px solid var(--blue); background: #eaf2fa; position: relative; z-index: 2; }
-.hv1-audio-sort-card.is-correct { border: 2px solid var(--green); background: #eff8f1; }
-.hv1-audio-sort-card.is-wrong { border: 2px solid var(--red); background: #fff1ee; }
-.hv1-audio-position-feedback { margin: 0; color: var(--green-dark); font-size: 14px; font-weight: 750; }
-.is-wrong > .hv1-audio-position-feedback { color: var(--red); }
-.hv1-audio-expected { border-top: 1px solid var(--line); padding-top: 8px; font-size: 14px; }
-.hv1-audio-expected p { margin: 6px 0; line-height: 1.45; }
-.hv1-audio-board.is-result .hv1-audio-card-text { overflow: visible; }
 .hv1-correct-order { margin-top: 20px; }
 .hv1-correct-order summary { padding: 12px 0; font-weight: 800; cursor: pointer; }
 .practice.hv1-board-practice { height: 100svh; min-height: 620px; }
@@ -1672,12 +1681,12 @@ select {
 .hv1-board-practice .sort-header { margin-bottom: 6px; }
 .hv1-board-practice .sort-header > span { display: none; }
 .hv1-board-practice .sort-header p { margin: 0; font-size: 13px; }
-.hv1-board-practice .sort-info { font-size: 13px; margin: 0 0 8px; }
+.hv1-board-practice .sort-info { position: absolute; width: 1px; height: 1px; clip-path: inset(50%); overflow: hidden; }
 .hv1-board-practice .sort-list { flex: 1; min-height: 0; }
-.hv1-board-practice .hv1-audio-board { height: 100%; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-template-rows: repeat(2, minmax(0, 1fr)); }
+.hv1-board-practice .hv1-match-board { height: 100%; }
 .practice.hv1-board-practice .sort-bottom { position: static; margin: 8px 0 0; padding: 0; }
 .practice.hv1-board-practice .sort-bottom button { min-height: 44px; }
-.hv1-board-practice .round-strip { padding: 7px 18px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.hv1-board-practice .round-strip { display: none; }
 @media (max-width: 850px) {
   .hv1-shared-player { top: 56px; padding: 5px 12px; }
   .practice.hv1-board-practice { display: grid; height: calc(100svh - 56px); min-height: 560px; }
@@ -1689,25 +1698,17 @@ select {
   .hv1-board-practice .topbar .eyebrow { display: none; }
   .hv1-board-practice .card-stage { padding: 6px; }
   .hv1-board-practice .hv1-audio-mode { padding: 8px; }
-  .hv1-audio-board { gap: 6px; }
-  .hv1-board-practice .hv1-audio-board { grid-template-columns: minmax(0, 1fr); grid-template-rows: repeat(8, minmax(0, 1fr)); gap: 4px; }
-  .hv1-audio-sort-card { padding: 7px; gap: 4px; }
-  .hv1-board-practice .hv1-audio-sort-card { display: grid; grid-template-columns: minmax(0, 1fr) 76px; align-items: stretch; padding: 1px 5px; }
-  .hv1-board-practice .hv1-audio-card-actions { justify-content: center; }
-  .hv1-board-practice .hv1-audio-card-actions > button { width: 36px; min-width: 36px; min-height: 36px; flex: 0; }
-  .hv1-board-practice .hv1-card-play { white-space: nowrap; padding: 3px 2px; }
-  .hv1-board-practice .hv1-audio-card-text { font-size: 13.5px; line-height: 1.35; }
-  .hv1-audio-card-content { grid-template-columns: 22px minmax(0, 1fr); gap: 4px; }
-  .hv1-audio-card-content .hv1-position { min-width: 22px; min-height: 22px; font-size: 12px; }
-  .hv1-audio-card-text { font-size: 14px; line-height: 1.4; }
-  .hv1-card-play, .hv1-audio-drag-handle { min-height: 40px; }
-  .hv1-card-play { padding: 5px; font-size: 12px; }
-  .hv1-audio-card-actions { gap: 4px; }
+  .hv1-match-board { grid-template-columns: minmax(0, 1fr) 56px; gap: 32px; }
+  .hv1-match-sources, .hv1-match-slots { gap: 4px; }
+  .hv1-match-source { grid-template-columns: minmax(0, 1fr) 34px; gap: 3px; padding: 1px 3px; }
+  .hv1-connect-choice { grid-template-columns: 26px minmax(0, 1fr); gap: 3px; }
+  .hv1-connect-choice .hv1-position { min-width: 26px; min-height: 22px; font-size: 10px; }
+  .hv1-audio-card-text { font-size: 13.5px; line-height: 1.35; }
+  .hv1-match-slot { padding: 2px; font-size: 12px; }
+  .hv1-match-slot > span { font-size: 11px; }
+  .hv1-card-play { padding: 3px 2px; font-size: 12px; }
+  .hv1-match-assignment { font-size: 11px; }
   .hv1-audio-mode .hv1-statement > .hv1-card-play { grid-column: 2; justify-self: start; }
-  .hv1-board-practice .round-strip { padding: 6px 10px; font-size: 11px; }
-  .hv1-board-practice .round-strip { display: none; }
-  .hv1-board-practice .sort-info { position: absolute; width: 1px; height: 1px; clip-path: inset(50%); overflow: hidden; }
-  .hv1-audio-board.is-result { grid-template-columns: minmax(0, 1fr); }
 }
 .hv1-audio-mode .sort-bottom { position: sticky; bottom: 0; z-index: 3; background: var(--surface); padding: 12px 0 max(8px, env(safe-area-inset-bottom, 0px)); }
 .hv1-audio-mode .sort-bottom button { width: 100%; min-height: 50px; }

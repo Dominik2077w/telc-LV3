@@ -11,7 +11,7 @@ const batch = () => ({ teil: 1, sectionMode: "hv1-audio-quiz", questions: Array.
   audio: "speaker-" + (index + 1) + ".mp3", sourceTranscript: "Transcript " + (index + 1),
 })) });
 
-test("all 20 supported Teils start in unscored memory and then sort all eight audio cards", () => {
+test("all 20 supported Teils start in unscored memory and then match all eight audio cards", () => {
   const sections = source.filter(section => Order.canPractice(section.questions));
   assert.equal(sections.length, 20);
   for (const section of sections) {
@@ -32,24 +32,36 @@ test("all 20 supported Teils start in unscored memory and then sort all eight au
   }
 });
 
-test("moving cards keeps their clip, text and neutral audio label attached, without scoring", () => {
+test("connections are one-to-one and can be changed or removed without moving source cards", () => {
   const session = Quiz.createSession(batch());
   Quiz.begin(session, () => 0.999);
-  const first = { ...session.order[0] };
-  assert.equal(Quiz.move(session, 0, 7), true);
-  assert.deepEqual(session.order[7], first);
+  const original = JSON.stringify(session.order);
+  const [first, second] = session.order;
+  assert.equal(Quiz.connect(session, first.cardId, 1), true);
+  assert.equal(Quiz.connect(session, second.cardId, 2), true);
+  assert.equal(Quiz.connect(session, first.cardId, 2), true);
+  assert.deepEqual(session.matches, { [first.cardId]: 2 });
+  assert.equal(Quiz.disconnect(session, first.cardId), true);
+  assert.deepEqual(session.matches, {});
+  assert.equal(Quiz.disconnect(session, first.cardId), false);
   assert.equal(session.result, null);
   assert.equal(session.scored, false);
-  assert.equal(Quiz.move(session, 7, 0), true);
-  assert.deepEqual(session.order[0], first);
-  for (const [from, to] of [[-1, 0], [0, 8], [1, 1], [0, 1.5]]) assert.equal(Quiz.move(session, from, to), false);
+  assert.equal(JSON.stringify(session.order), original);
+  for (const position of [0, 9, 1.5, "2"]) assert.equal(Quiz.connect(session, first.cardId, position), false);
+  assert.equal(Quiz.connect(session, "missing-card", 1), false);
+  assert.equal(Quiz.submit(session), null);
+  assert.equal(Quiz.isComplete(session), false);
 });
+
+function connectAll(session, swapped = false) {
+  session.order.forEach(question => Quiz.connect(session, question.cardId,
+    swapped && question.number === 1 ? 2 : swapped && question.number === 2 ? 1 : question.number));
+}
 
 test("one submission reports each item's true position and the correct item for each wrong slot", () => {
   const session = Quiz.createSession(batch());
   Quiz.begin(session);
-  session.order.sort((a, b) => a.number - b.number);
-  Quiz.move(session, 0, 1);
+  connectAll(session, true);
   const result = Quiz.submit(session);
   assert.equal(result.correct, 6);
   assert.equal(result.total, 8);
@@ -62,15 +74,14 @@ test("one submission reports each item's true position and the correct item for 
   assert.ok(result.rows.slice(2).every(row => row.correct));
   assert.equal(session.phase, "result");
   assert.equal(Quiz.submit(session), null);
-  assert.equal(Quiz.move(session, 0, 1), false);
+  assert.equal(Quiz.connect(session, session.order[0].cardId, 1), false);
 });
 
 test("mistake rounds repeat all eight positions and preserve the previous error count", () => {
   const session = Quiz.createSession({ ...batch(), reviewQuestions: [batch().questions[1]] });
   Quiz.begin(session);
   assert.equal(session.order.length, 8);
-  session.order.sort((a, b) => a.number - b.number);
-  Quiz.move(session, 0, 1);
+  connectAll(session, true);
   Quiz.submit(session);
   const review = Quiz.reviewBatch(session);
   assert.equal(review.questions.length, 8);
@@ -85,7 +96,7 @@ test("mistake rounds repeat all eight positions and preserve the previous error 
 test("perfect ordering has no retry; duplicate and incomplete speaker orders are rejected", () => {
   const session = Quiz.createSession(batch());
   Quiz.begin(session);
-  session.order.sort((a, b) => a.number - b.number);
+  connectAll(session);
   assert.equal(Quiz.submit(session).correct, 8);
   assert.equal(Quiz.reviewBatch(session), null);
   const invalid = batch();
@@ -108,7 +119,6 @@ test("app scores eight positions together and retains the whole Teil for retries
   vm.runInContext(app.replace(/^bindEvents\(\);[\s\S]*?^syncMobileLayout\(\);/m, ""), context);
   context.testBatch = batch();
   vm.runInContext(`
-    finishHv1AudioDrag = () => {};
     clearHv1SharedPlayer = () => {};
     renderHv1AudioQuizView = () => {};
     hv1AudioState.session = Hv1AudioQuiz.createSession(testBatch);
@@ -117,7 +127,10 @@ test("app scores eight positions together and retains the whole Teil for retries
     submitHv1AudioStep();
   `, context);
   assert.equal(vm.runInContext("state.answeredInRound", context), 0);
-  vm.runInContext("hv1AudioState.session.order.sort((a,b) => a.number-b.number); Hv1AudioQuiz.move(hv1AudioState.session,0,1); submitHv1AudioStep()", context);
+  vm.runInContext("submitHv1AudioStep()", context);
+  assert.equal(vm.runInContext("hv1AudioState.session.phase", context), "practice");
+  assert.equal(vm.runInContext("state.answeredInRound", context), 0);
+  vm.runInContext("hv1AudioState.session.order.forEach(q => Hv1AudioQuiz.connect(hv1AudioState.session,q.cardId,q.number === 1 ? 2 : q.number === 2 ? 1 : q.number)); submitHv1AudioStep()", context);
   assert.equal(vm.runInContext("state.answeredInRound", context), 8);
   assert.equal(vm.runInContext("state.roundMistakes", context), 2);
   assert.equal(vm.runInContext("state.mistakes.length", context), 1);

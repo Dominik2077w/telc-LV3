@@ -11,7 +11,7 @@
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="apple-touch-icon" href="./icons/icon-192.png" />
     <link rel="icon" href="./icons/icon-192.svg" />
-    <link rel="stylesheet" href="./styles.css?v=20261026-hv1-audio-sort" />
+    <link rel="stylesheet" href="./styles.css?v=20261026-hv1-audio-links" />
   </head>
   <body>
     <div class="level-gate" id="levelGate" role="dialog" aria-modal="true" aria-labelledby="levelGateTitle">
@@ -30,7 +30,7 @@
           </button>
           <button class="level-choice" type="button" data-level-choice="hv1">
             <strong>HV1</strong>
-            <span>先记忆正确顺序，再听音排序</span>
+            <span>先记忆正确顺序，再听音连线</span>
           </button>
           <button class="level-choice" type="button" data-level-choice="hv2">
             <strong>HV2</strong>
@@ -131,7 +131,7 @@
             <label id="hv1ModeLabel" class="hidden">
               <span>HV1 模式</span>
               <select id="hv1Mode">
-                <option value="listen">先记顺序 → 八卡听音排序</option>
+                <option value="listen">先记顺序 → 听音连线配对</option>
                 <option value="cards">逐句复习（按新 PDF）</option>
               </select>
             </label>
@@ -228,9 +228,9 @@
     <script src="./data/baustein_questions.js?v=20261020-pdf-only"></script>
     <script src="./data/speaking_questions.js?v=20261020-pdf-only"></script>
     <script src="./hv1-order.js?v=20261020-pdf-only"></script>
-    <script src="./hv1-quiz.js?v=20261026-hv1-audio-sort"></script>
-    <script src="./baustein-quiz.js?v=20261026-hv1-audio-sort"></script>
-    <script src="./baustein-study.js?v=20261026-hv1-audio-sort"></script>
-    <script src="./app.js?v=20261026-hv1-audio-sort"></script>
+    <script src="./hv1-quiz.js?v=20261026-hv1-audio-links"></script>
+    <script src="./baustein-quiz.js?v=20261026-hv1-audio-links"></script>
+    <script src="./baustein-study.js?v=20261026-hv1-audio-links"></script>
+    <script src="./app.js?v=20261026-hv1-audio-links"></script>
   </body>
 </html>
