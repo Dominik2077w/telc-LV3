@@ -1674,6 +1674,27 @@ select {
 .hv1-card-play.is-playing { background: var(--blue); color: white; }
 .hv1-correct-order { margin-top: 20px; }
 .hv1-correct-order summary { padding: 12px 0; font-weight: 800; cursor: pointer; }
+.hv1-position-question { display: grid; gap: 16px; }
+.hv1-position-question h3 { margin: 0; font-size: 17px; color: var(--muted); }
+.hv1-position-statement { margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: 27px; line-height: 1.5; overflow-wrap: anywhere; }
+.hv1-position-question > .hv1-card-play { justify-self: start; min-width: 130px; }
+.hv1-position-choices { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+.hv1-position-choices button { min-height: 56px; border: 1px solid var(--line); border-radius: 8px; background: #eef3f8; color: var(--blue); font-size: 18px; cursor: pointer; }
+.hv1-position-choices button:disabled { opacity: 1; cursor: default; }
+.hv1-position-choices button.is-correct, .hv1-position-feedback.is-correct { border: 2px solid var(--green); background: #eff8f1; color: var(--green-dark); }
+.hv1-position-choices button.is-wrong, .hv1-position-feedback.is-wrong { border: 2px solid var(--red); background: #fff1ee; color: var(--red); }
+.hv1-position-feedback { padding: 14px; border-radius: 8px; font-size: 18px; line-height: 1.5; }
+.hv1-position-results { margin: 0; padding: 0 0 0 28px; }
+.hv1-position-result { margin-bottom: 12px; padding: 12px; border: 1px solid var(--line); border-radius: 8px; }
+.hv1-position-result.is-correct { border-color: var(--green); background: #eff8f1; }
+.hv1-position-result.is-wrong { border-color: var(--red); background: #fff1ee; }
+.hv1-position-result p { margin: 0 0 8px; line-height: 1.5; }
+@media (max-width: 850px) {
+  .hv1-position-statement { font-size: 22px; }
+  .hv1-position-choices { gap: 7px; }
+  .hv1-position-choices button { min-height: 50px; font-size: 15px; }
+  .hv1-position-feedback { padding: 12px; font-size: 16px; }
+}
 .practice.hv1-board-practice { height: 100svh; min-height: 620px; }
 .hv1-board-practice .topbar { padding: 10px 18px; }
 .hv1-board-practice .card-stage { display: flex; align-items: stretch; min-height: 0; padding: 10px 18px; }

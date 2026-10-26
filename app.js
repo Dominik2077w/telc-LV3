@@ -438,7 +438,7 @@ function renderLevelChrome() {
     state.level !== "lv2" || els.lv2Mode.value !== "global-sort"
   );
   els.hv1ModeLabel.classList.toggle("hidden", state.level !== "hv1");
-  document.querySelector("#questionOrderLabel").classList.toggle("hidden", state.level === "hv1" && els.hv1Mode.value === "listen");
+  document.querySelector("#questionOrderLabel").classList.toggle("hidden", state.level === "hv1" && ["listen", "position"].includes(els.hv1Mode.value));
 }
 
 function getPracticeSections() {
@@ -469,7 +469,7 @@ function renderTeilList() {
     name.className = "teil-name";
     const choiceCount = state.level === "baustein"
       ? BausteinStudy.buildReviewRows(section).filter(BausteinQuiz.isSupported).length : null;
-    const reviewOnly = section.mode === "corpus-card" && state.level !== "baustein" && !(state.level === "hv1" && els.hv1Mode.value === "listen" && Hv1Order.canPractice(section.questions));
+    const reviewOnly = section.mode === "corpus-card" && state.level !== "baustein" && !(state.level === "hv1" && ["listen", "position"].includes(els.hv1Mode.value) && Hv1Order.canPractice(section.questions));
     const modeLabel = state.level === "baustein" && section.questions.length ? choiceCount ? " · 四选一" : " · 仅预览" : reviewOnly ? " · 复习卡" : "";
     name.innerHTML = `<strong>Teil ${section.teil}</strong><span>${escapeHtml(section.title)}${modeLabel}</span>`;
     const added = section.questions.filter((question) => question.addedIn === "2026.9").length;
@@ -515,7 +515,7 @@ function startSession() {
       ...section,
       questions: applyOrder(section.questions, els.questionOrder.value),
     })));
-  } else if (state.level === "hv1" && els.hv1Mode.value === "listen") {
+  } else if (state.level === "hv1" && ["listen", "position"].includes(els.hv1Mode.value)) {
     state.sessionSource = teilOrdered.flatMap(function (section) {
       if (!Hv1Order.canPractice(section.questions)) {
         return applyOrder(section.questions, els.questionOrder.value).map((question) => ({ ...question }));
@@ -529,6 +529,7 @@ function startSession() {
         teil: section.teil,
         teilTitle: section.title,
         sectionMode: "hv1-audio-quiz",
+        practiceMode: els.hv1Mode.value === "position" ? "position" : "matching",
         addedIn: section.addedIn,
         updatedIn: section.updatedIn,
         questions: questions,
@@ -1365,6 +1366,13 @@ function handleKeyboardNavigation(event) {
   if (state.current.sectionMode === "hv1-audio-quiz") {
     if (event.target instanceof Element && event.target.closest("#hv1AudioDock")) return;
     const session = hv1AudioState.session;
+    if (session?.phase === "practice" && session.mode === "position" && /^[1-8]$/.test(event.key)) {
+      if (!Hv1AudioQuiz.positionAnswered(session)) {
+        event.preventDefault();
+        chooseHv1Position(Number(event.key));
+      }
+      return;
+    }
     if (session?.phase === "practice" && /^[1-8]$/.test(event.key)) {
       const button = els.sortList.querySelectorAll(".hv1-card-play")[Number(event.key) - 1];
       if (button) {
@@ -2474,7 +2482,8 @@ function renderHv1AudioQuizView() {
   hv1AudioState.lineObserver?.disconnect();
   els.sortList.innerHTML = "";
   els.sortList.classList.remove("hv1-order-list");
-  els.practice.classList.toggle("hv1-board-practice", session.phase === "practice");
+  els.practice.classList.toggle("hv1-board-practice", session.phase === "practice" && session.mode === "matching");
+  els.sortModeView.classList.toggle("hv1-position-mode", session.mode === "position");
   els.sortSubmitButton.onclick = null;
   els.sortSubmitButton.disabled = false;
   els.sortShuffleButton.classList.add("hidden");
@@ -2483,17 +2492,107 @@ function renderHv1AudioQuizView() {
   if (session.phase === "memory") {
     els.sessionMode.textContent = "HV1 · 先记忆";
     els.questionBadge.textContent = "正确顺序";
-    els.sortInstruction.textContent = "先记住从 1 到 8 的正确顺序。每项右侧可听录音，准备好后再打乱选项连线。";
+    els.sortInstruction.textContent = session.mode === "position"
+      ? "先记住这八句话原本从 1 到 8 的正确顺序。准备好后打乱出题，逐句选择原来的位置。"
+      : "先记住从 1 到 8 的正确顺序。每项右侧可听录音，准备好后再打乱选项连线。";
     els.sortInfo.textContent = "正确顺序 · 共 8 项";
     els.sortList.append(createHv1AudioReferenceList(session));
-    els.sortSubmitButton.textContent = "准备好了，开始听音连线";
+    els.sortSubmitButton.textContent = session.mode === "position" ? "准备好了，开始随机选位置" : "准备好了，开始听音连线";
     els.roundStrip.textContent = session.batch.missedCount
-      ? "上一轮错 " + session.batch.missedCount + " 个位置；本轮重新连接整组 8 项。"
+      ? "上一轮错 " + session.batch.missedCount + " 个位置；本轮重新练整组 8 项。"
       : "预习不计分。练习中保留选项短句，不显示听力原文。";
+  } else if (session.mode === "position") {
+    renderHv1PositionQuiz(session);
   } else {
     renderHv1AudioBoard(session);
   }
   updateHv1PlaybackButtons();
+}
+
+function renderHv1PositionQuiz(session) {
+  els.sessionMode.textContent = "HV1 · 随机逐题选位置";
+  els.questionBadge.textContent = session.phase === "result" ? "本篇完成" : "随机题序";
+  if (session.phase === "result") {
+    els.sortInstruction.textContent = "本篇八句话已全部核对。下面保留随机出题顺序、你的选择和正确位置。";
+    els.sortInfo.textContent = session.result.correct + " / 8 题答对";
+    const list = document.createElement("ol");
+    list.className = "hv1-position-results";
+    session.result.rows.forEach((answer, index) => {
+      const row = document.createElement("li");
+      row.className = "hv1-position-result " + (answer.correct ? "is-correct" : "is-wrong");
+      const sentence = document.createElement("p");
+      sentence.lang = "de";
+      sentence.textContent = Hv1Order.sentence(answer);
+      const feedback = document.createElement("p");
+      feedback.textContent = (answer.correct ? "✓ " : "✗ ") + "你选第 " + answer.position + " 句；正确是第 " + answer.expectedPosition + " 句。";
+      row.append(sentence, feedback, createHv1PlayButton(answer, "第 " + (index + 1) + " 题录音"));
+      list.append(row);
+    });
+    const details = document.createElement("details");
+    details.className = "hv1-correct-order";
+    const summary = document.createElement("summary");
+    summary.textContent = "查看完整正确顺序（含录音）";
+    details.append(summary, createHv1AudioReferenceList(session));
+    els.sortList.append(list, details);
+    els.sortSubmitButton.textContent = state.currentIndex >= state.queue.length ? "完成本轮" : "下一 Teil";
+    els.roundStrip.textContent = session.result.correct < 8 ? "本组会在错题轮回中重新预习，再随机逐题练习。" : "本篇全部答对。";
+    return;
+  }
+
+  const question = Hv1AudioQuiz.currentPositionQuestion(session);
+  const answered = Hv1AudioQuiz.positionAnswered(session);
+  const answer = answered ? session.answers[session.itemIndex] : null;
+  els.sortInstruction.textContent = "八句话已打乱。看这句话、听它的录音，选择它在原文中是第几句。";
+  els.sortInfo.textContent = "随机第 " + (session.itemIndex + 1) + " / 8 题" + (answered ? " · 已核对" : "");
+  const card = document.createElement("section");
+  card.className = "hv1-position-question";
+  const prompt = document.createElement("h3");
+  prompt.textContent = "这句话原来是第几句？";
+  const sentence = document.createElement("p");
+  sentence.className = "hv1-position-statement";
+  sentence.lang = "de";
+  sentence.textContent = Hv1Order.sentence(question);
+  card.append(prompt, sentence, createHv1PlayButton(question, "本题录音"));
+  const choices = document.createElement("div");
+  choices.className = "hv1-position-choices";
+  choices.setAttribute("role", "group");
+  choices.setAttribute("aria-label", "选择原文第 1 到第 8 句");
+  for (let position = 1; position <= 8; position += 1) {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.textContent = "第 " + position + " 句";
+    button.disabled = answered;
+    button.setAttribute("aria-keyshortcuts", String(position));
+    button.addEventListener("click", () => chooseHv1Position(position));
+    if (answered) {
+      if (position === answer.expectedPosition) button.classList.add("is-correct");
+      if (position === answer.position && !answer.correct) button.classList.add("is-wrong");
+    }
+    choices.append(button);
+  }
+  card.append(choices);
+  if (answered) {
+    const feedback = document.createElement("div");
+    feedback.className = "hv1-position-feedback " + (answer.correct ? "is-correct" : "is-wrong");
+    feedback.setAttribute("role", "status");
+    feedback.textContent = answer.correct ? "✓ 选对了！这句话原来是第 " + answer.expectedPosition + " 句。"
+      : "✗ 选错了。你选第 " + answer.position + " 句；正确是第 " + answer.expectedPosition + " 句。";
+    card.append(feedback);
+  }
+  els.sortList.append(card);
+  els.sortSubmitButton.disabled = !answered;
+  els.sortSubmitButton.textContent = answered ? session.itemIndex === 7 ? "查看本篇结果" : "下一题 · Enter" : "先选择这句话的位置";
+  els.roundStrip.textContent = answered ? "已显示正误和正确位置，按 Enter 继续。" : "数字键 1–8 选择原来的位置；每题选择后立即核对。";
+}
+
+function chooseHv1Position(position) {
+  const answer = Hv1AudioQuiz.choosePosition(hv1AudioState.session, position);
+  if (!answer) return;
+  state.answeredInRound += 1;
+  if (!answer.correct) state.roundMistakes += 1;
+  renderHv1AudioQuizView();
+  updateStats();
+  els.sortSubmitButton.focus({ preventScroll: true });
 }
 
 function renderHv1AudioBoard(session) {
@@ -2664,6 +2763,16 @@ function submitHv1AudioStep() {
   if (session.phase === "memory") {
     clearHv1SharedPlayer();
     Hv1AudioQuiz.begin(session);
+  } else if (session.phase === "practice" && session.mode === "position") {
+    if (!Hv1AudioQuiz.advancePosition(session)) {
+      els.sortInfo.textContent = "请先选择这句话原来的位置。";
+      return;
+    }
+    clearHv1SharedPlayer();
+    if (session.phase === "result") {
+      const review = Hv1AudioQuiz.reviewBatch(session);
+      if (review) state.mistakes.push(review);
+    }
   } else if (session.phase === "practice") {
     const result = Hv1AudioQuiz.submit(session);
     if (!result || session.scored) {
@@ -2932,6 +3041,7 @@ function stopSortAudio() {
     hv1AudioState.session = null;
     els.hv1AudioDock.classList.add("hidden");
     els.practice.classList.remove("hv1-audio-active", "hv1-board-practice");
+    els.sortModeView.classList.remove("hv1-position-mode");
   }
   finishHv1Drag();
   els.audioPanel.querySelector("audio")?.pause();

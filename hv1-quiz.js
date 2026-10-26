@@ -8,7 +8,8 @@
     if (questions.length !== 8 || questions.some((question, index) => Number(question.number) !== index + 1)) {
       throw new Error("HV1 audio matching requires the eight PDF statements in speaker order.");
     }
-    return { batch, questions, phase: "memory", order: [], matches: {}, result: null, scored: false, mistakesRecorded: false };
+    return { batch, questions, mode: batch.practiceMode === "position" ? "position" : "matching",
+      phase: "memory", order: [], matches: {}, itemIndex: 0, answers: [], result: null, scored: false, mistakesRecorded: false };
   }
 
   function shuffledOptions(questions, random = Math.random) {
@@ -35,7 +36,7 @@
   }
 
   function connect(session, cardId, position) {
-    if (!session || session.phase !== "practice" || !Number.isInteger(position) || position < 1 || position > 8 ||
+    if (!session || session.mode !== "matching" || session.phase !== "practice" || !Number.isInteger(position) || position < 1 || position > 8 ||
       !session.order.some(question => question.cardId === cardId)) return false;
     // A sentence and a position each have at most one connection. Reconnecting
     // releases both the previous position and any previous occupant of the new one.
@@ -47,7 +48,7 @@
   }
 
   function disconnect(session, cardId) {
-    if (!session || session.phase !== "practice" || !Object.hasOwn(session.matches, cardId)) return false;
+    if (!session || session.mode !== "matching" || session.phase !== "practice" || !Object.hasOwn(session.matches, cardId)) return false;
     delete session.matches[cardId];
     return true;
   }
@@ -57,7 +58,7 @@
   }
 
   function submit(session) {
-    if (!session || session.phase !== "practice" || !isComplete(session)) return null;
+    if (!session || session.mode !== "matching" || session.phase !== "practice" || !isComplete(session)) return null;
     const rows = session.questions.map((expectedQuestion, index) => {
       const question = session.order.find(item => session.matches[item.cardId] === index + 1);
       return {
@@ -73,6 +74,33 @@
     return session.result;
   }
 
+  function currentPositionQuestion(session) {
+    return session?.mode === "position" && session.phase === "practice" ? session.order[session.itemIndex] || null : null;
+  }
+
+  function positionAnswered(session) {
+    return Boolean(currentPositionQuestion(session) && session.answers.length > session.itemIndex);
+  }
+
+  function choosePosition(session, position) {
+    const question = currentPositionQuestion(session);
+    if (!question || positionAnswered(session) || !Number.isInteger(position) || position < 1 || position > 8) return null;
+    const answer = { ...question, position, expectedPosition: Number(question.number),
+      correct: position === Number(question.number) };
+    session.answers.push(answer);
+    return answer;
+  }
+
+  function advancePosition(session) {
+    if (!positionAnswered(session)) return false;
+    session.itemIndex += 1;
+    if (session.itemIndex === session.order.length) {
+      session.result = { rows: [...session.answers], correct: session.answers.filter(answer => answer.correct).length, total: session.answers.length };
+      session.phase = "result";
+    }
+    return true;
+  }
+
   function reviewBatch(session) {
     if (!session?.result || session.mistakesRecorded || session.result.correct === session.result.total) return null;
     session.mistakesRecorded = true;
@@ -81,5 +109,6 @@
     return { ...batch, questions: [...session.questions], missedCount: session.result.total - session.result.correct };
   }
 
-  return { createSession, begin, connect, disconnect, isComplete, submit, reviewBatch, shuffledOptions };
+  return { createSession, begin, connect, disconnect, isComplete, submit, reviewBatch, shuffledOptions,
+    currentPositionQuestion, positionAnswered, choosePosition, advancePosition };
 });

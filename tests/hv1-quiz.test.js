@@ -137,3 +137,94 @@ test("app scores eight positions together and retains the whole Teil for retries
   assert.equal(nodes.get("#progressText").textContent, "8/8");
   assert.equal(vm.runInContext("countMistakeQuestions(state.mistakes)", context), 2);
 });
+
+test("position mode shuffles all eight questions in every supported Teil and scores source positions immediately", () => {
+  for (const section of source.filter(section => Order.canPractice(section.questions))) {
+    const before = JSON.stringify(section);
+    const session = Quiz.createSession({ ...section, practiceMode: "position" });
+    assert.equal(Quiz.currentPositionQuestion(session), null);
+    Quiz.begin(session, () => 0.999);
+    const presented = [];
+    for (let index = 0; index < 8; index += 1) {
+      const question = Quiz.currentPositionQuestion(session);
+      presented.push(question.number);
+      assert.equal(Quiz.advancePosition(session), false);
+      const answer = Quiz.choosePosition(session, Number(question.number));
+      assert.equal(answer.correct, true);
+      assert.equal(answer.expectedPosition, Number(question.number));
+      assert.equal(Quiz.positionAnswered(session), true);
+      assert.equal(Quiz.choosePosition(session, 1), null);
+      assert.equal(Quiz.advancePosition(session), true);
+    }
+    assert.notDeepEqual(presented, [1, 2, 3, 4, 5, 6, 7, 8]);
+    assert.deepEqual([...presented].sort((a, b) => a - b), [1, 2, 3, 4, 5, 6, 7, 8]);
+    assert.equal(session.phase, "result");
+    assert.equal(session.result.correct, 8);
+    assert.equal(Quiz.reviewBatch(session), null);
+    assert.equal(JSON.stringify(section), before);
+  }
+});
+
+test("position choices report wrong answers, allow the same position in later questions, and keep mode on retry", () => {
+  const session = Quiz.createSession({ ...batch(), practiceMode: "position" });
+  Quiz.begin(session, () => 0.999);
+  for (const invalid of [0, 9, 1.5, "2", undefined]) assert.equal(Quiz.choosePosition(session, invalid), null);
+  assert.equal(Quiz.connect(session, session.order[0].cardId, 1), false);
+  assert.equal(Quiz.submit(session), null);
+  const first = Quiz.choosePosition(session, 1);
+  assert.equal(first.correct, false);
+  assert.equal(first.position, 1);
+  assert.equal(first.expectedPosition, 2);
+  Quiz.advancePosition(session);
+  assert.ok(Quiz.choosePosition(session, 1));
+  Quiz.advancePosition(session);
+  while (session.phase === "practice") {
+    Quiz.choosePosition(session, Number(Quiz.currentPositionQuestion(session).number));
+    Quiz.advancePosition(session);
+  }
+  const retry = Quiz.reviewBatch(session);
+  assert.equal(retry.practiceMode, "position");
+  assert.equal(retry.questions.length, 8);
+  assert.equal(retry.missedCount, 2);
+  assert.equal(Quiz.createSession(retry).mode, "position");
+  assert.equal(Quiz.reviewBatch(session), null);
+  const matching = Quiz.createSession(batch());
+  Quiz.begin(matching);
+  assert.equal(Quiz.choosePosition(matching, 1), null);
+});
+
+test("position app flow counts each answer once, advances only after an answer, and queues its mode for retry", () => {
+  const nodes = new Map();
+  const document = {
+    querySelector(selector) {
+      if (!nodes.has(selector)) nodes.set(selector, { textContent: "", classList: { contains: () => true }, focus() {} });
+      return nodes.get(selector);
+    }, querySelectorAll: () => [],
+  };
+  const context = vm.createContext({ document, window: { matchMedia: () => ({ matches: false }), scrollTo() {} }, Hv1AudioQuiz: Quiz });
+  vm.runInContext(fs.readFileSync(path.join(__dirname, "../app.js"), "utf8")
+    .replace(/^bindEvents\(\);[\s\S]*?^syncMobileLayout\(\);/m, ""), context);
+  context.testBatch = { ...batch(), practiceMode: "position" };
+  vm.runInContext(`
+    clearHv1SharedPlayer = () => {};
+    renderHv1AudioQuizView = () => {};
+    hv1AudioState.session = Hv1AudioQuiz.createSession(testBatch);
+    state.queue = [testBatch];
+    submitHv1AudioStep();
+    submitHv1AudioStep();
+  `, context);
+  assert.equal(vm.runInContext("state.answeredInRound", context), 0);
+  for (let index = 0; index < 8; index += 1) {
+    vm.runInContext(`
+      globalThis.correctPosition = Number(Hv1AudioQuiz.currentPositionQuestion(hv1AudioState.session).number);
+      chooseHv1Position(${index === 0 ? "correctPosition % 8 + 1" : "correctPosition"});
+      chooseHv1Position(correctPosition);
+    `, context);
+    assert.equal(vm.runInContext("state.answeredInRound", context), index + 1);
+    vm.runInContext("submitHv1AudioStep()", context);
+  }
+  assert.equal(vm.runInContext("state.roundMistakes", context), 1);
+  assert.equal(vm.runInContext("hv1AudioState.session.result.correct", context), 7);
+  assert.equal(vm.runInContext("state.mistakes[0].practiceMode", context), "position");
+  assert.equal(nodes.get("#progressText").textContent, "8/8");
+});
