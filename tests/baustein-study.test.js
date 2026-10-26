@@ -75,7 +75,7 @@ test("each article has an ordered full preview before practice and empty article
   }));
   const queue = Study.buildRoundQueue(source);
   assert.equal(queue.filter(question => question.sectionMode === "baustein-memory").length, 20);
-  assert.equal(queue.filter(question => question.sectionMode !== "baustein-memory").length, 456);
+  assert.equal(queue.filter(question => question.sectionMode === "baustein-choice").length, 433);
   let offset = 0;
   for (const section of source.filter(section => section.questions.length)) {
     const memory = queue[offset++];
@@ -83,8 +83,8 @@ test("each article has an ordered full preview before practice and empty article
     assert.equal(memory.reviewRows.length, section.questions.length);
     assert.deepEqual(memory.reviewRows.map(row => row.number), [...memory.reviewRows.map(row => row.number)]
       .sort((a, b) => a.localeCompare(b, "en", { numeric: true })));
-    assert.ok(queue.slice(offset, offset + section.questions.length).every(question => question.teil === section.teil));
-    offset += section.questions.length;
+    assert.ok(queue.slice(offset, offset + memory.practiceCount).every(question => question.teil === section.teil && question.sectionMode === "baustein-choice"));
+    offset += memory.practiceCount;
   }
 });
 
@@ -95,33 +95,29 @@ test("mistake rounds preview all answers for involved articles, then practice on
   }));
   const missed = [source[0].questions[2], source[2].questions[0]];
   const queue = Study.buildRoundQueue(source, missed);
-  assert.deepEqual(queue.map(question => question.sectionMode), ["baustein-memory", "corpus-card", "baustein-memory", "corpus-card"]);
+  assert.deepEqual(queue.map(question => question.sectionMode), ["baustein-memory", "baustein-choice", "baustein-memory", "baustein-choice"]);
   assert.equal(queue[0].reviewRows.length, source[0].questions.length);
   assert.equal(queue[2].reviewRows.length, source[2].questions.length);
   assert.equal(queue[1].number, missed[0].number);
   assert.equal(queue[3].number, missed[1].number);
 });
 
-test("practice cards use the preview sentence and complete translation, masking only the current answer", () => {
+test("choice questions use the preview sentence and translation, masking only the current answer", () => {
   const source = sections();
   const before = JSON.stringify(source);
   const queue = Study.buildRoundQueue(source);
   let sentenceCards = 0;
-  for (const card of queue.filter(question => question.sectionMode === "corpus-card")) {
+  for (const card of queue.filter(question => question.sectionMode === "baustein-choice")) {
     const row = card.bausteinStudy;
-    assert.equal(card.answerText, row.answer);
-    if (row.sourceMissing) {
-      assert.equal(card.reviewGerman, "原文未提供填空句子。");
-      assert.match(card.chinese, /未提供填空句子和中文翻译/);
-      continue;
-    }
+    assert.equal(card.sourceAnswerText, row.answer);
+    assert.equal(card.answerText, card.correctText);
     sentenceCards += 1;
-    assert.equal(card.reviewGerman, row.sentence);
+    assert.equal(card.reviewGerman, card.german.replace(`[${card.number}]____`, card.correctText));
     assert.equal(card.chinese, row.chinese);
     assert.equal(card.german.replace(`[${card.number}]____`, row.answer), row.sentence);
     assert.equal((card.german.match(/\[\d+\]____/g) || []).length, 1);
   }
-  assert.equal(sentenceCards, 434);
+  assert.equal(sentenceCards, 433);
   assert.equal(JSON.stringify(source), before);
   const first = queue[1];
   assert.equal(first.german, "In den neuen Bildungsplänen für die Grundschule wurden bereits erste Konsequenzen [1]____.");
@@ -131,6 +127,20 @@ test("practice cards use the preview sentence and complete translation, masking 
   const card11 = queue.find(card => card.teil === 1 && card.number === 11);
   assert.match(card10.german, /\[10\]____, die Kinder könnten während eines Diktats/);
   assert.match(card11.german, /argumentieren, die Kinder könnten während \[11\]____/);
+});
+
+test("source-only letters and the truncated gap stay in preview without scored guesses", () => {
+  const queue = Study.buildRoundQueue(sections());
+  const letters = queue.find(item => item.sectionMode === "baustein-memory" && item.teil === 18);
+  assert.equal(letters.reviewRows.length, 22);
+  assert.equal(letters.practiceCount, 0);
+  assert.ok(letters.reviewRows.every(row => row.practiceNote));
+  const truncated = queue.find(item => item.sectionMode === "baustein-memory" && item.teil === 21);
+  assert.equal(truncated.reviewRows.length, 22);
+  assert.equal(truncated.practiceCount, 21);
+  assert.ok(truncated.reviewRows.find(row => row.number === "38").practiceNote);
+  assert.equal(queue.some(item => item.sectionMode === "baustein-choice" && item.teil === 21 && item.number === 38), false);
+  assert.equal(queue.some(item => item.sectionMode === "corpus-card"), false);
 });
 
 test("Chinese highlight anchors cover every aligned sentence without changing its translation", () => {

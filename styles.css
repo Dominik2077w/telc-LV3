@@ -1664,6 +1664,12 @@ select {
 .hv1-answer-feedback.is-wrong { border-color: var(--red); background: #fff1ee; color: var(--red); }
 .hv1-answer-feedback p { margin: 8px 0 0; color: var(--ink); font-size: 16px; line-height: 1.5; overflow-wrap: anywhere; }
 .answer-grid.hv2-choices { display: grid; grid-template-columns: minmax(0, 1fr); gap: 9px; }
+.answer-grid.baustein-choices { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.answer-grid.baustein-choices .answer-button { min-height: 58px; padding: 12px 16px; text-align: left; font-size: 18px; line-height: 1.45; overflow-wrap: anywhere; }
+@media (max-width: 850px) {
+  .answer-grid.baustein-choices { grid-template-columns: minmax(0, 1fr); }
+  .answer-grid.baustein-choices .answer-button { min-height: 50px; padding: 12px; font-size: 17px; }
+}
 .answer-grid.hv2-choices .answer-button { min-height: 56px; padding: 12px; text-align: left; line-height: 1.5; overflow-wrap: anywhere; }
 .hv2-source-note { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.5; }
 @media (max-width: 850px) {

@@ -67,7 +67,7 @@ const datasets = {
     answerLabel: "答案",
     reviewGermanLabel: "解析",
     reviewChineseLabel: "说明",
-    idleText: "选择 Baustein 后，每篇先看全部答案句与中文，再逐空复习并核对答案。",
+    idleText: "选择 Baustein 后，每篇先看答案句与中文，再逐空四选一，选择后立即核对。",
   },
 };
 
@@ -457,8 +457,11 @@ function renderTeilList() {
 
     const name = document.createElement("span");
     name.className = "teil-name";
-    const reviewOnly = section.mode === "corpus-card" && !(state.level === "hv1" && els.hv1Mode.value === "listen" && Hv1Order.canPractice(section.questions));
-    name.innerHTML = `<strong>Teil ${section.teil}</strong><span>${escapeHtml(section.title)}${reviewOnly ? " · 复习卡" : ""}</span>`;
+    const choiceCount = state.level === "baustein"
+      ? BausteinStudy.buildReviewRows(section).filter(BausteinQuiz.isSupported).length : null;
+    const reviewOnly = section.mode === "corpus-card" && state.level !== "baustein" && !(state.level === "hv1" && els.hv1Mode.value === "listen" && Hv1Order.canPractice(section.questions));
+    const modeLabel = state.level === "baustein" && section.questions.length ? choiceCount ? " · 四选一" : " · 仅预览" : reviewOnly ? " · 复习卡" : "";
+    name.innerHTML = `<strong>Teil ${section.teil}</strong><span>${escapeHtml(section.title)}${modeLabel}</span>`;
     const added = section.questions.filter((question) => question.addedIn === "2026.9").length;
     if (added) {
       const badge = document.createElement("span");
@@ -469,7 +472,7 @@ function renderTeilList() {
 
     const count = document.createElement("span");
     count.className = "count-pill";
-    count.textContent = section.questions.length || "待定";
+    count.textContent = (choiceCount === 0 ? section.questions.length : choiceCount ?? section.questions.length) || "待定";
 
     label.append(input, name, count);
     els.teilList.append(label);
@@ -629,6 +632,7 @@ function finishRound() {
 
 function showFront(question) {
   if (question.sectionMode === "hv2-choice") Hv2Quiz.prepareQuestion(question);
+  if (question.sectionMode === "baustein-choice") BausteinQuiz.prepareQuestion(question);
   const edition = question.addedIn || question.updatedIn;
   els.corpusUpdateBadge.textContent = edition ? `${edition} ${question.addedIn ? "新增" : "修订"}` : "";
   els.corpusUpdateBadge.classList.toggle("hidden", !edition);
@@ -703,7 +707,7 @@ function showFront(question) {
   els.reviewGermanLabel.textContent = question.sectionMode === "corpus-card" ? "原文" : config.reviewGermanLabel;
   els.reviewChineseLabel.textContent = question.sectionMode === "corpus-card" ? "中文 / 说明" : config.reviewChineseLabel;
   if (question.bausteinStudy) {
-    els.promptLabel.textContent = "德语填空句";
+    els.promptLabel.textContent = question.sectionMode === "baustein-choice" ? "选择本空的正确填法" : "德语填空句";
     els.correctAnswerLabel.textContent = "本空答案";
     els.reviewGermanLabel.textContent = "完整句";
     els.reviewChineseLabel.textContent = "中文译句";
@@ -748,9 +752,14 @@ function showFront(question) {
   els.answerGrid.classList.remove("is-short");
   els.roundStrip.textContent = `Runde ${state.round}`;
   els.answerGrid.classList.toggle("hv2-choices", question.sectionMode === "hv2-choice");
+  els.answerGrid.classList.toggle("baustein-choices", question.sectionMode === "baustein-choice");
   if (question.sectionMode === "hv2-choice") {
     els.sessionMode.textContent += " · 三选一";
     els.roundStrip.textContent += " · 三个选项均以省略开头的片段呈现";
+  }
+  if (question.sectionMode === "baustein-choice") {
+    els.sessionMode.textContent += " · 四选一";
+    els.roundStrip.textContent += " · 数字键 1–4 / A–D 选择，核对后按 Enter 继续";
   }
 
   renderParagraphPanel(question);
@@ -791,6 +800,7 @@ function showFront(question) {
     button.dataset.choice = choice.value;
     button.title = choice.shortcut;
     button.textContent = choice.label;
+    if (question.sectionMode === "baustein-choice") button.setAttribute("aria-keyshortcuts", choice.shortcut.split(" / ")[0]);
     if (choice.disabled) {
       button.disabled = true;
       button.title = "已使用";
@@ -1410,6 +1420,8 @@ function handleKeyboardNavigation(event) {
     return;
   }
 
+  if (state.current.sectionMode === "baustein-choice" && !["Enter", "ArrowRight"].includes(event.key)) return;
+
   if (!isContinueKey(event)) return;
   if (isNativeButtonKey(event)) return;
   event.preventDefault();
@@ -1444,6 +1456,10 @@ function isNativeButtonKey(event) {
 
 function answerQuestion(choice) {
   const question = state.current;
+  if (question.sectionMode === "baustein-choice") {
+    if (question.quizAnswered || !question.options?.some(option => option.value === choice)) return;
+    question.quizAnswered = true;
+  }
   const correct = question.answer || null;
   const isKnown = Boolean(correct);
   const isCorrect = isKnown && choice === correct;
@@ -1482,12 +1498,23 @@ function answerQuestion(choice) {
   els.reviewGerman.textContent =
     question.sectionMode === "hv1-match" ? (question.text || question.german) : getReviewGerman(question);
   els.reviewChinese.textContent = getReviewChinese(question);
+  if (question.sectionMode === "baustein-choice") {
+    const selected = question.options.find(option => option.value === choice);
+    els.resultLine.textContent = isCorrect ? "Richtig · 选择正确" : `Falsch · 你选：${selected.text}`;
+    els.correctAnswer.textContent = question.correctText;
+    renderBausteinSentence(els.reviewGerman, { ...question.bausteinStudy, answer: question.correctText });
+    renderHighlightedText(els.reviewChinese, els.reviewChinese.textContent, question.bausteinStudy.chineseAnswerRanges);
+  }
   els.missButton.classList.add("hidden");
   els.nextButton.textContent = "下一题";
+  if (question.sectionMode === "baustein-choice") els.nextButton.textContent = "下一题 · Enter";
+  els.nextButton.setAttribute("aria-keyshortcuts", "Enter");
   els.roundStrip.textContent =
     els.roundMode.value === "mistakes" ? "答错的题会进入下一轮。" : "当前是单轮练习。";
+  if (question.sectionMode === "baustein-choice") els.roundStrip.textContent += " · 按 Enter 或 → 继续";
   updateStats();
   scrollMobilePracticeTop();
+  if (question.sectionMode === "baustein-choice") els.nextButton.focus({ preventScroll: true });
 }
 
 function markFlashcardMissed(options = {}) {
@@ -1522,6 +1549,13 @@ function getReviewGerman(question) {
 }
 
 function getReviewChinese(question) {
+  if (question.sectionMode === "baustein-choice") {
+    const alternatives = question.acceptedTexts.filter(text => text.toLocaleLowerCase("de") !== question.correctText.toLocaleLowerCase("de"));
+    return [question.chinese, question.sourceNote, `本空练习：${question.quizFocus}`,
+      alternatives.length ? `语料还列出：${alternatives.join(" / ")}` : "",
+      "正确填法依据现有语料；干扰项为练习编写。",
+    ].filter(Boolean).join("\n\n");
+  }
   if (question.sectionMode === "hv2-choice") {
     return [question.chinese, question.sourceNote,
       "正确补全来自 PDF；另外两个选项是独立编写的无关片段，不由正确答案改写或否定，也不是 PDF 原题选项。",
@@ -1577,6 +1611,7 @@ function renderIdle() {
   els.paragraphPanel.classList.add("hidden");
   els.answerGrid.innerHTML = "";
   els.answerGrid.classList.remove("hv2-choices");
+  els.answerGrid.classList.remove("baustein-choices");
   els.missButton.classList.add("hidden");
   resetBackReviewLayout();
   els.nextButton.textContent = "下一题";
@@ -1749,14 +1784,15 @@ function renderHv2MemoryView(memory) {
   els.sortModeView.classList.remove("hv1-order-mode", "hv1-audio-mode", "lv2-memory-mode");
   els.sortModeView.classList.add("hv2-memory-mode");
   els.sortShuffleButton.classList.add("hidden");
-  els.sortSubmitButton.textContent = "我看完了，开始本篇练习";
+  els.sortSubmitButton.textContent = isBaustein && memory.practiceCount === 0 ? "我看完了，继续" : "我看完了，开始本篇练习";
   els.sortSubmitButton.disabled = false;
   els.sortSubmitButton.onclick = null;
   els.sortTeilBadge.textContent = "Teil " + memory.teil + " · " + memory.teilTitle;
   els.sortInstruction.textContent = isBaustein
     ? "按空格顺序查看填好答案的那一句和对应中文；德语答案及其对应的中文词语或短语已高亮。看完后开始本篇练习。"
     : "下面按题号展示题干补全后的完整句子和中文翻译；看完后进入本篇三选一。";
-  els.sortInfo.textContent = "本篇 " + (memory.reviewRows || []).length + " 道题 · 按原题顺序" +
+  els.sortInfo.textContent = "本篇 " + (memory.reviewRows || []).length + (isBaustein ? " 项预习" : " 道题") +
+    (isBaustein ? " · " + memory.practiceCount + " 道四选一" : "") + " · 按原题顺序" +
     (isBaustein ? " · 按 1 / Enter 开始练习" : "");
   els.sortList.classList.remove("hv1-order-list");
   els.sortList.innerHTML = "";
@@ -1791,10 +1827,10 @@ function renderHv2MemoryView(memory) {
     if (isBaustein) renderHighlightedText(chinese, chinese.textContent, item.chineseAnswerRanges);
 
     body.append(german, chinese);
-    if (item.sourceNote) {
+    if (item.sourceNote || item.practiceNote) {
       const note = document.createElement("p");
       note.className = "baustein-review-note";
-      note.textContent = item.sourceNote;
+      note.textContent = [item.sourceNote, item.practiceNote].filter(Boolean).join(" ");
       body.append(note);
     }
     row.append(number, body);

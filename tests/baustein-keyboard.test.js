@@ -11,6 +11,7 @@ class ElementStub {
     this.value = "";
     this.dataset = {};
     this.children = [];
+    this.listeners = {};
     const classes = new Set();
     this.classList = {
       add: name => classes.add(name),
@@ -29,9 +30,16 @@ class ElementStub {
   set textContent(value) { this.text = value; this.children = []; }
   get textContent() { return this.text + this.children.map(child => child.textContent).join(""); }
   set innerHTML(value) { this.textContent = value; }
-  querySelectorAll() { return []; }
+  querySelectorAll(selector) {
+    return this.children.flatMap(child => [
+      ...(selector === ".answer-button" && child.className === "answer-button" ? [child] : []),
+      ...(child.querySelectorAll ? child.querySelectorAll(selector) : []),
+    ]);
+  }
   setAttribute() {}
-  addEventListener() {}
+  addEventListener(name, callback) { this.listeners[name] = callback; }
+  click() { if (!this.disabled) this.listeners.click?.(); }
+  focus() {}
   append(...children) { this.children.push(...children); }
   appendChild(child) { this.append(child); }
 }
@@ -40,6 +48,7 @@ function loadApp() {
   const elements = new Map();
   const context = vm.createContext({
     BausteinStudy: require("../baustein-study.js"),
+    BausteinQuiz: require("../baustein-quiz.js"),
     Element: ElementStub,
     window: { matchMedia: () => ({ matches: false }), scrollTo() {} },
     document: {
@@ -201,7 +210,7 @@ test("Baustein mistake loop reinserts the full preview and excludes it from prog
   assert.equal(app.read("els.progressText.textContent"), "0/1");
 });
 
-test("Baustein front renders the gapped sentence with full Chinese and the back fills the same sentence", () => {
+test("Baustein choice shows the gap and Chinese, then fills the sentence and records a wrong selection", () => {
   const app = loadApp();
   app.context.exampleSections = [{
     teil: 1, title: "Test", mode: "corpus-card", article: "Er [1]____. Danach geht er.",
@@ -214,11 +223,12 @@ test("Baustein front renders the gapped sentence with full Chinese and the back 
   assert.equal(app.read("els.germanQuestion.textContent"), "Er [1]____.");
   assert.equal(app.read("els.paragraphPanel.classList.contains('hidden')"), false);
   assert.equal(app.read("els.paragraphPanel.children[0].textContent"), "他读书。");
-  app.press("1");
+  assert.equal(app.read("els.answerGrid.children.length"), 4);
+  app.read("answerQuestion(state.current.options.find(option => option.value !== state.current.answer).value)");
   assert.equal(app.read("els.correctAnswer.textContent"), "liest");
   assert.equal(app.read("els.reviewGerman.textContent"), "Er liest.");
-  assert.equal(app.read("els.reviewChinese.textContent"), "他读书。");
-  app.press("2");
+  assert.ok(app.read("els.reviewChinese.textContent").startsWith("他读书。"));
+  assert.equal(app.read("state.roundMistakes"), 1);
   assert.equal(app.read("state.mistakes[0].german"), "Er [1]____.");
   assert.equal(app.read("state.mistakes[0].reviewGerman"), "Er liest.");
 });
@@ -239,14 +249,55 @@ test("Baustein preview and both card faces highlight the same Chinese phrase and
   assert.equal(app.read("marked(els.germanQuestion).join('|')"), "[1]____");
   assert.equal(app.read("marked(els.paragraphPanel).join('|')"), "采取了");
   const frontChinese = app.read("els.paragraphPanel.textContent");
-  app.press("1");
+  app.read("answerQuestion(state.current.answer)");
   assert.equal(app.read("marked(els.reviewGerman).join('|')"), "gezogen");
   assert.equal(app.read("marked(els.reviewChinese).join('|')"), "采取了");
-  assert.equal(app.read("els.reviewChinese.textContent"), frontChinese);
+  assert.ok(app.read("els.reviewChinese.textContent").startsWith(frontChinese));
   // Re-rendering another card must remove the previous card's marks.
   app.read("state.current = highlightQueue[2]; showFront(state.current)");
   assert.equal(app.read("marked(els.paragraphPanel).join('|')"), "列入教学安排");
-  app.press("1");
+  app.read("answerQuestion(state.current.answer)");
   assert.equal(app.read("marked(els.reviewGerman).join('|')"), "vorgesehen");
   assert.equal(app.read("marked(els.reviewChinese).join('|')"), "列入教学安排");
+});
+
+test("Baustein 1–4 and numpad keys select the displayed option, score once, and Enter advances", () => {
+  const source = { window: {} };
+  vm.runInNewContext(fs.readFileSync(path.join(__dirname, "..", "data", "baustein_questions.js"), "utf8"), source);
+  for (const index of [0, 1, 2, 3]) {
+    const app = loadApp();
+    app.context.choiceSource = JSON.parse(JSON.stringify(source.window.BAUSTEIN_QUESTIONS[0]));
+    app.read("state.current = BausteinStudy.buildRoundQueue(normalizeSections('baustein', [choiceSource]))[1]; showFront(state.current)");
+    assert.equal(app.read("isFlashcard(state.current)"), false);
+    const isCorrect = app.read(`state.current.options[${index}].value === state.current.answer`);
+    assert.equal(app.press(String(index + 1), { code: `Numpad${index + 1}` }), true);
+    assert.equal(app.read("state.answeredInRound"), 1);
+    assert.equal(app.read("state.roundMistakes"), isCorrect ? 0 : 1);
+    assert.equal(app.read("els.backFace.classList.contains('hidden')"), false);
+    assert.equal(app.read("els.correctAnswer.textContent"), "gezogen");
+    assert.equal(app.read("els.missButton.classList.contains('hidden')"), true);
+    assert.match(app.read("els.reviewChinese.textContent"), /动词搭配/);
+    app.press("2");
+    assert.equal(app.context.advances, 0);
+    app.read("answerQuestion(state.current.answer)");
+    assert.equal(app.read("state.answeredInRound"), 1);
+    assert.equal(app.read("state.roundMistakes"), isCorrect ? 0 : 1);
+    assert.equal(app.press("Enter"), true);
+    assert.equal(app.context.advances, 1);
+  }
+});
+
+test("Baustein choices ignore repeated keys, composition, editing and unknown choices", () => {
+  const app = loadApp();
+  app.context.choiceSource = {
+    teil: 1, mode: "corpus-card", article: "Er [1]____.",
+    questions: [{ number: 1, answerText: "liest", chinese: "他（1）读书。" }],
+  };
+  app.read("state.current = BausteinStudy.buildRoundQueue(normalizeSections('baustein', [choiceSource]))[1]; showFront(state.current)");
+  for (const overrides of [{ repeat: true }, { isComposing: true }, { target: new ElementStub(true) }, { ctrlKey: true }]) {
+    assert.equal(app.press("1", overrides), false);
+  }
+  assert.equal(app.press("5"), false);
+  app.read("answerQuestion('X')");
+  assert.equal(app.read("state.answeredInRound"), 0);
 });

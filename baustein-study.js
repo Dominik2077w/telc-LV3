@@ -1,4 +1,5 @@
 (function (root) {
+  const Quiz = typeof module === "object" && module.exports ? require("./baustein-quiz.js") : root.BausteinQuiz;
   function tidyGerman(value) {
     return String(value || "").replace(/\s+/g, " ").replace(/\s+([,.;:!?])/g, "$1")
       .replace(/([,;:])(?=\p{L})/gu, "$1 ").trim();
@@ -193,6 +194,8 @@
         chinese,
         chineseAnswerRanges: sentence ? chineseAnswerRanges(section, question, chinese) : [],
         sourceMissing: !sentence,
+        practiceNote: !sentence || (String(section.teil) === "21" && Number(question.number) === 38)
+          ? "仅供预览：原文没有可完整核对的填空句，不计入选择练习。" : "",
         sourceNote: String(section.teil) === "21" && Number(question.number) === 38
           ? "当前语料此处原句有缺文，保留现有片段与原文译句。" : "",
       };
@@ -209,6 +212,28 @@
       if (!practice.length) return [];
       const reviewRows = buildReviewRows(section);
       const rowsByNumber = new Map(reviewRows.map(row => [row.number, row]));
+      const cards = practice.map(question => {
+        const row = rowsByNumber.get(String(question.number));
+        if (!Quiz.isSupported(row)) return null;
+        const german = tidyGerman([row.before, `[${row.number}]____`, row.after].filter(Boolean).join(" "));
+        const card = Quiz.buildQuestion({
+          ...question,
+          level: "baustein",
+          teil: section.teil,
+          teilTitle: section.title,
+          german,
+          text: german,
+          answerText: row.answer,
+          reviewGerman: row.sentence || "原文未提供填空句子。",
+          chinese: row.chinese,
+          sourceNote: row.sourceNote,
+          bausteinStudy: row,
+        }, row);
+        card.sourceAnswerText = row.answer;
+        card.answerText = card.correctText;
+        card.reviewGerman = tidyGerman([row.before, card.correctText, row.after].filter(Boolean).join(" "));
+        return card;
+      }).filter(Boolean);
       return [{
         id: `baustein-memory-${section.teil}`,
         level: "baustein",
@@ -216,28 +241,10 @@
         teilTitle: section.title,
         sectionMode: "baustein-memory",
         reviewRows,
+        practiceCount: cards.length,
         addedIn: section.addedIn,
         updatedIn: section.updatedIn,
-      }, ...practice.map(question => {
-        const row = rowsByNumber.get(String(question.number));
-        if (!row || question.sectionMode === "baustein-article") return { ...question };
-        const german = row.sourceMissing ? question.german || question.text || "原文未提供填空句子。"
-          : tidyGerman([row.before, `[${row.number}]____`, row.after].filter(Boolean).join(" "));
-        return {
-          ...question,
-          level: "baustein",
-          teil: section.teil,
-          teilTitle: section.title,
-          sectionMode: "corpus-card",
-          german,
-          text: german,
-          answerText: row.answer,
-          reviewGerman: row.sentence || "原文未提供填空句子。",
-          chinese: row.sourceMissing ? "原文只有答案字母，未提供填空句子和中文翻译。" : row.chinese,
-          sourceNote: row.sourceNote,
-          bausteinStudy: row,
-        };
-      })];
+      }, ...cards];
     });
   }
 
