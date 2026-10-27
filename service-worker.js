@@ -1,4 +1,4 @@
-const CACHE_VERSION = "telc-trainer-20261027-lv3-table";
+const CACHE_VERSION = "telc-trainer-20261027-hv2-per-question";
 const CACHE_NAME = `telc-trainer-${CACHE_VERSION}`;
 const APP_SHELL = [
   "./",
@@ -14,6 +14,7 @@ const APP_SHELL = [
   "./baustein-explanations.js",
   "./baustein-grammar.js",
   "./hv2-quiz.js",
+  "./hv2-distractors.js",
   "./hv1-order.js",
   "./hv1-quiz.js",
   "./manifest.webmanifest",
@@ -65,6 +66,8 @@ self.addEventListener("fetch", (event) => {
     url.pathname.endsWith("/app.js") ||
     url.pathname.endsWith("/lv1-translations.js") ||
     url.pathname.endsWith("/lv3-table.js") ||
+    url.pathname.endsWith("/hv2-quiz.js") ||
+    url.pathname.endsWith("/hv2-distractors.js") ||
     url.pathname.endsWith("/hv1-quiz.js") ||
     url.pathname.endsWith("/baustein-quiz.js") ||
     url.pathname.endsWith("/baustein-study.js") ||

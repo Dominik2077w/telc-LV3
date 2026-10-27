@@ -16,6 +16,7 @@ const files = [
   "baustein-explanations.js",
   "baustein-grammar.js",
   "hv2-quiz.js",
+  "hv2-distractors.js",
   "hv1-order.js",
   "hv1-quiz.js",
   "service-worker.js",

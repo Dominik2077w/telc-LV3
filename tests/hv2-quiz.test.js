@@ -4,6 +4,7 @@ const fs = require("node:fs");
 const path = require("node:path");
 const vm = require("node:vm");
 const Hv2Quiz = require("../hv2-quiz.js");
+const Authored = require("../hv2-distractors.js");
 
 function sourceSections() {
   const context = { window: {} };
@@ -46,8 +47,8 @@ test("distractors omit their sentence heads instead of displaying complete unrel
   const sections = Hv2Quiz.buildSections(sourceSections());
   const question = sections[0].questions.find(item => item.number === "59b");
   assert.deepEqual(question.distractors, [
-    "wurde im vergangenen Jahr restauriert",
-    "hat Rezepte aus zwölf Regionen gesammelt",
+    "auf alten Handelswegen durch die Alpen wandern",
+    "in einer Werkstatt farbige Glasperlen herstellen",
   ]);
   assert.equal(question.distractors.some(text => /nicht|niemals|keinesfalls/u.test(text)), false);
   assert.equal(question.distractors.some(text => text.includes(question.correctText)), false);
@@ -134,7 +135,16 @@ test("HV2 mistake rounds keep the article memory list and only queue missed ques
     .every((memory, index) => memory.reviewRows.length === sections[index].questions.length));
 });
 
-test("unrelated fragments work even when a Teil has fewer than three source answers", () => {
+test("a source item retains its dedicated pair even when practiced on its own", () => {
+  const source = sourceSections()[0];
+  const question = source.questions.find(q => q.number === "59b");
+  const all = Hv2Quiz.buildSections([source])[0].questions.find(q => q.number === "59b");
+  const single = Hv2Quiz.buildSections([{ ...source, questions: [question] }])[0].questions[0];
+  assert.deepEqual(single.distractors, all.distractors);
+  assert.deepEqual(Hv2Quiz.createUnrelatedCompletions(question, source.teil), all.distractors);
+});
+
+test("unknown or changed source items use review cards instead of borrowing a pair", () => {
   const sections = [{
     teil: "x",
     mode: "corpus-card",
@@ -144,17 +154,46 @@ test("unrelated fragments work even when a Teil has fewer than three source answ
     ],
   }];
   const result = Hv2Quiz.buildSections(sections)[0];
-  assert.equal(result.mode, "hv2-choice");
-  assert.ok(result.questions.every(question => question.distractors.length === 2));
-  assert.ok(result.questions.every(question => question.distractors.every(text =>
-    !result.questions.some(item => Hv2Quiz.getCompletion(item) === text)
-  )));
+  assert.equal(result, sections[0]);
+  const source = sourceSections()[0];
+  const changed = { ...source, questions: [{ ...source.questions[0], completion: "changed wording" }] };
+  assert.equal(Hv2Quiz.buildSections([changed])[0], changed);
+  assert.deepEqual(Hv2Quiz.createUnrelatedCompletions(changed.questions[0], source.teil), []);
+});
+
+test("all 199 source items own two distinct fragments with no reuse within or across articles", () => {
+  const key = text => text.toLocaleLowerCase("de").replace(/[.!?…\s]+$/u, "").replace(/\s+/g, " ");
+  const source = sourceSections();
+  const expectedKeys = Array.from(source.flatMap(s => s.questions.map(q => `${s.teil}:${q.number}`)));
+  assert.deepEqual(Object.keys(Authored.pairs).sort(), expectedKeys.sort());
+  assert.deepEqual(Object.keys(Authored.signatures).sort(), expectedKeys.sort());
+  const all = [];
+  for (const section of Hv2Quiz.buildSections(source)) {
+    const fragments = section.questions.flatMap(q => q.distractors);
+    assert.equal(new Set(fragments.map(key)).size, section.questions.length * 2, `Duplicate in Teil ${section.teil}`);
+    all.push(...fragments);
+    for (const question of section.questions) {
+      const first = Hv2Quiz.createUnrelatedCompletions(question, section.teil);
+      first[0] = "mutated copy";
+      assert.notEqual(Hv2Quiz.createUnrelatedCompletions(question, section.teil)[0], "mutated copy");
+      for (let round = 0; round < 4; round++) {
+        Hv2Quiz.prepareQuestion(question);
+        assert.deepEqual(question.options.filter(option => option.source === question.distractorSource).map(option => key(option.label.slice(3))).sort(), question.distractors.map(key).sort());
+      }
+    }
+  }
+  assert.equal(all.length, 398);
+  assert.equal(new Set(all.map(key)).size, 398);
 });
 
 test("browser build loads the HV2 quiz engine while LV2 keeps its card entry", () => {
   const index = fs.readFileSync(path.join(__dirname, "..", "index.html"), "utf8");
   const app = fs.readFileSync(path.join(__dirname, "..", "app.js"), "utf8");
   assert.match(index, /hv2-quiz\.js/);
+  assert.ok(index.indexOf('src="./hv2-distractors.js') < index.indexOf('src="./hv2-quiz.js'));
+  for (const file of ["service-worker.js", "scripts/build.js"]) {
+    assert.ok(fs.readFileSync(path.join(__dirname, "..", file), "utf8").includes('"' + (file === "service-worker.js" ? "./" : "") + 'hv2-distractors.js"'));
+  }
   assert.doesNotMatch(index, /lv2-quiz\.js|lv2_distractors/);
   assert.match(app, /state\.level === "hv2" \? Hv2Quiz\.buildSections/);
   assert.match(app, /Hv2Quiz\.buildRoundQueue/);
