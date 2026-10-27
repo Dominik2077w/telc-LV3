@@ -10,6 +10,23 @@ spec.loader.exec_module(corpus)
 
 
 class CorpusImportTests(unittest.TestCase):
+    def test_lv1_retains_source_letters_and_assigns_gap_order_not_alphabetical_order(self):
+        pages = [""] * 329
+        pages[19] = "Teil 1 Test\n" + "\n".join(f"{letter}- Satz (({number})).\n中文段落。" for number, letter in enumerate("HFE CBA".replace(" ", ""), 1))
+        section = corpus.lv1(pages)[0]
+        self.assertEqual([q["sourceAnswer"] for q in section["questions"]], list("HFECBA"))
+        self.assertEqual([q["position"] for q in section["questions"]], list(range(1, 7)))
+        self.assertEqual(section["questions"][0]["german"], "Satz 1.")
+        self.assertTrue(all(q["sourcePages"] == [20] for q in section["questions"]))
+
+    def test_lv1_keeps_pending_group_empty_and_rejects_missing_insertions(self):
+        pages = [""] * 329
+        pages[46] = "Teil17 Thema (待定)"
+        self.assertEqual(corpus.lv1(pages)[0]["questions"], [])
+        pages[19] = "Teil1 Test\nH- Nur eine Antwort."
+        with self.assertRaises(AssertionError):
+            corpus.lv1(pages)
+
     def test_plain_answer_before_translated_name_does_not_leak(self):
         pages = [""] * 329
         pages[129] = "Teil 11 Test\n13.Die Kindheit von Erika Fuchs war schwierig. F Erika Fuchs 的童年很艰难。"

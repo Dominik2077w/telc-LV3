@@ -1683,6 +1683,8 @@ select {
 .hv1-position-choices button:disabled { opacity: 1; cursor: default; }
 .hv1-position-choices button.is-correct, .hv1-position-feedback.is-correct { border: 2px solid var(--green); background: #eff8f1; color: var(--green-dark); }
 .hv1-position-choices button.is-wrong, .hv1-position-feedback.is-wrong { border: 2px solid var(--red); background: #fff1ee; color: var(--red); }
+.lv1-position-choices { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.lv1-position-choices .lv1-none-choice { grid-column: 1 / -1; }
 .hv1-position-feedback { padding: 14px; border-radius: 8px; font-size: 18px; line-height: 1.5; }
 .hv1-position-results { margin: 0; padding: 0 0 0 28px; }
 .hv1-position-result { margin-bottom: 12px; padding: 12px; border: 1px solid var(--line); border-radius: 8px; }
@@ -1737,7 +1739,7 @@ select {
 .answer-grid.baustein-choices { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
 .answer-grid.baustein-choices .answer-button { min-height: 58px; padding: 12px 16px; text-align: left; font-size: 18px; line-height: 1.45; overflow-wrap: anywhere; }
 @media (max-width: 850px) {
-  .answer-grid.baustein-choices { grid-template-columns: minmax(0, 1fr); }
+  .answer-grid.baustein-choices { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .answer-grid.baustein-choices .answer-button { min-height: 50px; padding: 12px; font-size: 17px; }
 }
 .answer-grid.hv2-choices .answer-button { min-height: 56px; padding: 12px; text-align: left; line-height: 1.5; overflow-wrap: anywhere; }

@@ -448,8 +448,8 @@ In der Annahme /in der Annahme|in die Annahme|an der Annahme|auf der Annahme
     }
     question.options = choices.map((text, index) => ({
       value: "ABCD"[index], text,
-      label: `${index + 1}. ${text}`,
-      shortcut: `${index + 1} / ${"ABCD"[index]}`,
+      label: `${[4, 5, 1, 2][index]} · ${text}`,
+      shortcut: `${[4, 5, 1, 2][index]} / ${"ABCD"[index]}`,
     }));
     question.answer = "ABCD"[choices.indexOf(question.correctText)];
     return question;

@@ -36,6 +36,10 @@
     "writing": {
       "sections": 64,
       "questions": 128
+    },
+    "lv1": {
+      "sections": 22,
+      "questions": 126
     }
   }
 }

@@ -7,6 +7,8 @@ const files = [
   "index.html",
   "styles.css",
   "app.js",
+  "lv1-quiz.js",
+  "data/lv1_questions.js",
   "baustein-study.js",
   "baustein-quiz.js",
   "hv2-quiz.js",

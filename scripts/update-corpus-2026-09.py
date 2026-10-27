@@ -71,6 +71,134 @@ def split_languages(lines):
     return space(" ".join(german)), space(" ".join(chinese))
 
 
+def lv1_pdf_pages(pdf):
+    """Preserve word spaces and exclude footers even when they overlap a line."""
+    import pymupdf
+    pages = [""] * 329
+    with pymupdf.open(pdf) as document:
+        for index in range(19, 54):
+            rows = []
+            for block in document[index].get_text("dict")["blocks"]:
+                for line in block.get("lines", []):
+                    for span in line["spans"]:
+                        if (span["text"].strip() == str(index + 1) and span["bbox"][1] > 700
+                            and span["size"] < 10 and abs((span["bbox"][0] + span["bbox"][2]) / 2 - document[index].rect.width / 2) < 15):
+                            continue
+                        baseline = span["origin"][1]
+                        row = next((r for r in rows if abs(r[0] - baseline) < 2), None)
+                        if row is None:
+                            row = [baseline, []]
+                            rows.append(row)
+                        row[1].append(span)
+            text = []
+            for _, spans in sorted(rows):
+                value, right = "", None
+                for span in sorted(spans, key=lambda s: s["bbox"][0]):
+                    if right is not None and span["bbox"][0] - right > 1.2 and not value.endswith(" "):
+                        value += " "
+                    value += span["text"]
+                    right = span["bbox"][2]
+                text.append(value)
+            pages[index] = "\n".join(text)
+    return pages
+
+
+def lv1(pages):
+    """Import the six supplied insertions, never infer unused A-H choices.
+
+    Most answers are printed on separate lines. Three articles instead have
+    green, unlettered answers; their exact sentence boundaries were visually
+    checked on pages 30-31 and 52-54. The two Box versions remain separate.
+    """
+    result = []
+    marker = re.compile(r"^(?:-\s*)?([A-Ha-h])\s*[-–]\s*(.*)$|^([1-6])\s*[-–.,]\s*(.*)$")
+    inline = {
+        7: [r"Für die Hafenarbeiter war.*?lebensgefährlich\)\)",
+            r"\(\(Doch\)\).*?gescheitert\.",
+            r"\(\(Die Größe\)\).*?Standard\.",
+            r"Es sollte genau dieser Umstand.*?würden\.",
+            r"Gesteuert und auf ihrer.*?Logistiksystemen\.",
+            r"In den 1960er Jahren.*?Wirtschaftsleistung\s*\."],
+        21: [r"\(1\)\s*(Für die Hafenarbeiter.*?lebensgefährlich\.)",
+             r"\(2\)\s*(Doch sie waren.*?gescheitert\.)",
+             r"\(3\)\s*(Die Größe.*?Standard\.)",
+             r"\(4\)\s*(Dieses erhoffte sich.*?Nachschubs\.)",
+             r"\(5\)\s*(Gesteuert und auf ihrer.*?Logistiksystemen\.)",
+             r"\(6\)\s*(In den 1960er Jahren.*?Wirtschaftsleistung\.)"],
+        22: [r"\(1\)\s*(Dagegen war.*?Simulationen\.)",
+             r"\(2\)\s*(Für einfache Routinetätigkeiten.*?Domäne\.)",
+             r"\(3\)\s*(Die erste ethische Instanz.*?Group“\.)",
+             r"\(4\)\s*(Parallel dazu.*?Energiebilanz\.)",
+             r"\(5\)\s*(Um diesen Mangel.*?Hochschulen\.)",
+             r"\(6\)\s*(Letztlich entscheiden.*?Standorts\.)"],
+    }
+    for section in sections(clean_pages(pages, 20, 54)):
+        lines = section["lines"]
+        continuation = {15: "Gesichtserkennung", 17: "Kinder", 20: "不知道"}.get(section["teil"])
+        if continuation and lines and lines[0][1].startswith(continuation):
+            section["title"] += " " + lines.pop(0)[1]
+        # Remove the repeating header, without discarding text at page breaks.
+        lines = [(p, l) for p, l in lines if "chicken butts" not in l and "xhs:" not in l]
+        blocks = []
+        if section["teil"] in inline:
+            de = [(p, l) for p, l in lines if not CJK.search(l)]
+            text = space(" ".join(l for _, l in de))
+            offsets, offset = [], 0
+            for p, line in de:
+                line = space(line)
+                offsets.append((offset, offset + len(line), p))
+                offset += len(line) + 1
+            for number, pattern in enumerate(inline[section["teil"]], 1):
+                match = re.search(pattern, text)
+                assert match, ("LV1 missing highlighted sentence", section["teil"], number)
+                value = match[1] if match.lastindex else match[0]
+                block_pages = [p for a, b, p in offsets if a < match.end() and b > match.start()]
+                blocks.append({"number": number, "letter": None, "value": value, "pages": block_pages})
+        else:
+            active = None
+            for page, line in lines:
+                if CJK.search(line):
+                    active = None
+                    continue
+                match = marker.match(line)
+                # Teil 20 uses a bare answer letter; 3/4 also print the gap number.
+                if section["teil"] == 20:
+                    special = re.match(r"^(?:([1-6])\s*-\s*)?([A-H])\s+(.+)$", line)
+                    if special:
+                        number = int(special[1]) if special[1] else len(blocks) + 1
+                        active = {"number": number, "letter": special[2], "value": special[3], "pages": [page]}
+                        blocks.append(active)
+                        continue
+                if match:
+                    active = {"number": int(match[3]) if match[3] else len(blocks) + 1,
+                              "letter": match[1].upper() if match[1] else None,
+                              "value": match[2] if match[1] else match[4], "pages": [page]}
+                    blocks.append(active)
+                elif active:
+                    active["value"] += " " + line
+                    active["pages"].append(page)
+        assert [b["number"] for b in blocks] == ([] if section["teil"] == 17 else list(range(1, 7))), (section["teil"], blocks)
+        questions = []
+        for block in blocks:
+            german = space(re.sub(r"[()]", "", re.sub(r"\)\)(?=\w)", " ", block["value"])))
+            q = {"number": block["number"], "position": block["number"], "text": german,
+                 "german": german, "sourceAnswer": block["letter"],
+                 "sourceGerman": space(block["value"]), **source(block["pages"])}
+            if section["teil"] >= 18:
+                q["addedIn"] = EDITION
+            questions.append(q)
+        record = {"teil": section["teil"], "title": space(section["title"]), "mode": "lv1-position",
+                  "positionCount": len(questions), "questions": questions,
+                  "sourceNote": "本篇只提供六个正确填入句，未列出未使用选项；不补造多余项。" if questions else "原文标注待定，未提供题目。",
+                  **source([section["page"]] + [p for p, _ in lines])}
+        if section["teil"] >= 18:
+            record["addedIn"] = EDITION
+        if section["teil"] in (6, 11, 15):
+            record["sourceNote"] += " 原文选项字母存在重复，按文章空格顺序判分，不据字母猜顺序。"
+        result.append(record)
+    return result
+
+
 def lv3(pages):
     result = []
     start_re = re.compile(r"^(1[3-9]|2[0-4])\s*[-.,，·–]?\s*(.*)$")
@@ -745,9 +873,9 @@ def writing(pages):
 
 
 def validate(datasets):
-    expected = {"lv2": (26, 130), "lv3": (23, 280), "hv1": (21, 170), "hv2": (19, 199),
+    expected = {"lv1": (22, 126), "lv2": (26, 130), "lv3": (23, 280), "hv1": (21, 170), "hv2": (19, 199),
                 "baustein": (21, 456), "speaking": (4, 311), "writing": (64, 128)}
-    ranges = {"lv2": (55, 129), "lv3": (130, 149), "baustein": (150, 181), "hv1": (182, 227),
+    ranges = {"lv1": (20, 54), "lv2": (55, 129), "lv3": (130, 149), "baustein": (150, 181), "hv1": (182, 227),
               "hv2": (228, 245), "speaking": (282, 305), "writing": (306, 329)}
     for name, data in datasets.items():
         assert (len(data), sum(len(s["questions"]) for s in data)) == expected[name], name
@@ -767,6 +895,9 @@ def validate(datasets):
                     assert not q.get("options") and not q.get("answer"), (name, "invented choices")
         if name == "hv1":
             assert [s["teil"] for s in data] == HV1_TEILS
+        elif name == "lv1":
+            assert [s["teil"] for s in data] == list(range(1, 23))
+            assert all([q["position"] for q in s["questions"]] == ([] if s["teil"] == 17 else list(range(1, 7))) for s in data)
         elif name == "lv2":
             assert all([q["paragraph"] for q in s["questions"]] == list("ABCDE") for s in data)
         elif name == "baustein":
@@ -801,22 +932,27 @@ def main():
     parser.add_argument("pdf", type=Path)
     parser.add_argument("--dry-run", action="store_true", help="Report changes without writing")
     parser.add_argument("--only-hv1", action="store_true", help="Replace HV1 exclusively from PDF pages 182-227")
+    parser.add_argument("--only-lv1", action="store_true", help="Import LV1 exclusively from PDF pages 20-54 (requires PyMuPDF)")
     args = parser.parse_args()
+    if args.only_hv1 and args.only_lv1:
+        parser.error("Choose only one module filter")
     from pypdf import PdfReader
     if hashlib.sha256(args.pdf.read_bytes()).hexdigest() != EXPECTED_SHA256:
         raise ValueError("This PDF differs from the reviewed edition. Review its changes before importing.")
     reader = PdfReader(args.pdf)
     if len(reader.pages) != 329:
         raise ValueError("This reviewed import expects the 329-page September 2026 edition.")
-    pages = [(p.extract_text() or "") if not args.only_hv1 or 181 <= i < 227 else ""
+    pages = [(p.extract_text() or "") if not args.only_lv1 and (not args.only_hv1 or 181 <= i < 227) else ""
              for i, p in enumerate(reader.pages)]
     # No existing question file is read to construct the replacement.
-    parsers = {"lv2": lv2, "lv3": lv3, "hv1": hv1, "hv2": hv2,
+    parsers = {"lv1": lv1, "lv2": lv2, "lv3": lv3, "hv1": hv1, "hv2": hv2,
                "baustein": baustein, "speaking": speaking, "writing": writing}
-    names = ["hv1"] if args.only_hv1 else list(parsers)
-    datasets = {name: parsers[name](pages) for name in names}
+    names = ["hv1"] if args.only_hv1 else ["lv1"] if args.only_lv1 else list(parsers)
+    lv1_pages = lv1_pdf_pages(args.pdf) if "lv1" in names else None
+    datasets = {name: parsers[name](lv1_pages if name == "lv1" else pages) for name in names}
     validate(datasets)
-    preserve_matching_audio(datasets["hv1"])
+    if "hv1" in datasets:
+        preserve_matching_audio(datasets["hv1"])
     summary = {}
     for name, data in datasets.items():
         variable = f"{name.upper()}_QUESTIONS"
@@ -832,7 +968,7 @@ def main():
     print(json.dumps(summary, ensure_ascii=False, indent=2))
     if not args.dry_run:
         manifest_path = ROOT / "data" / "corpus-2026-09.json"
-        modules = json.loads(manifest_path.read_text(encoding="utf-8"))["modules"] if args.only_hv1 else {}
+        modules = json.loads(manifest_path.read_text(encoding="utf-8"))["modules"] if args.only_hv1 or args.only_lv1 else {}
         modules.update({n: {k: v for k, v in s.items() if k in ("sections", "questions")} for n, s in summary.items()})
         manifest = {"id": SOURCE_ID, "filename": SOURCE_NAME, "pages": len(pages),
                     "sha256": EXPECTED_SHA256, "importMode": "replace-from-pdf-only",

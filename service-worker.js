@@ -1,10 +1,12 @@
-const CACHE_VERSION = "telc-trainer-20261026-hv1-position-quiz";
+const CACHE_VERSION = "telc-trainer-20261027-lv1-numpad";
 const CACHE_NAME = `telc-trainer-${CACHE_VERSION}`;
 const APP_SHELL = [
   "./",
   "./index.html",
   "./styles.css",
   "./app.js",
+  "./lv1-quiz.js",
+  "./data/lv1_questions.js",
   "./baustein-study.js",
   "./baustein-quiz.js",
   "./hv2-quiz.js",

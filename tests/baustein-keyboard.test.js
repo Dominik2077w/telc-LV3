@@ -157,7 +157,7 @@ test("existing arrow shortcuts still work and Baustein number keys stay scoped t
   assert.equal(app.read("els.nextButton.parentElement.children[0] === els.missButton"), true);
 });
 
-test("Baustein article mode retains 1–4 option selection", () => {
+test("Baustein article mode uses the 4/5/1/2 keypad layout", () => {
   const app = loadApp();
   app.read(`
     state.current.sectionMode = "baustein-article";
@@ -167,7 +167,7 @@ test("Baustein article mode retains 1–4 option selection", () => {
     });
     selectBausteinOption = (row, option) => { globalThis.selected = option; };
   `);
-  assert.equal(app.press("3"), true);
+  assert.equal(app.press("1"), true);
   assert.equal(app.context.selected, "c");
 });
 
@@ -261,7 +261,7 @@ test("Baustein preview and both card faces highlight the same Chinese phrase and
   assert.equal(app.read("marked(els.reviewChinese).join('|')"), "列入教学安排");
 });
 
-test("Baustein 1–4 and numpad keys select the displayed option, score once, and Enter advances", () => {
+test("Baustein 4/5/1/2 and numpad keys select the matching grid option, score once, and Enter advances", () => {
   const source = { window: {} };
   vm.runInNewContext(fs.readFileSync(path.join(__dirname, "..", "data", "baustein_questions.js"), "utf8"), source);
   for (const index of [0, 1, 2, 3]) {
@@ -270,7 +270,11 @@ test("Baustein 1–4 and numpad keys select the displayed option, score once, an
     app.read("state.current = BausteinStudy.buildRoundQueue(normalizeSections('baustein', [choiceSource]))[1]; showFront(state.current)");
     assert.equal(app.read("isFlashcard(state.current)"), false);
     const isCorrect = app.read(`state.current.options[${index}].value === state.current.answer`);
-    assert.equal(app.press(String(index + 1), { code: `Numpad${index + 1}` }), true);
+    const key = ["4", "5", "1", "2"][index];
+    assert.ok(app.read(`state.current.options[${index}].label`).startsWith(key + " · "));
+    app.read("globalThis.originalAnswerQuestion = answerQuestion; answerQuestion = choice => { globalThis.selectedChoice = choice; originalAnswerQuestion(choice); }");
+    assert.equal(app.press(key, { code: `Numpad${key}` }), true);
+    assert.equal(app.context.selectedChoice, "ABCD"[index]);
     assert.equal(app.read("state.answeredInRound"), 1);
     assert.equal(app.read("state.roundMistakes"), isCorrect ? 0 : 1);
     assert.equal(app.read("els.backFace.classList.contains('hidden')"), false);
@@ -297,7 +301,8 @@ test("Baustein choices ignore repeated keys, composition, editing and unknown ch
   for (const overrides of [{ repeat: true }, { isComposing: true }, { target: new ElementStub(true) }, { ctrlKey: true }]) {
     assert.equal(app.press("1", overrides), false);
   }
-  assert.equal(app.press("5"), false);
+  assert.equal(app.press("3"), false);
+  assert.equal(app.press("6"), false);
   app.read("answerQuestion('X')");
   assert.equal(app.read("state.answeredInRound"), 0);
 });

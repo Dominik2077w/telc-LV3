@@ -6,9 +6,9 @@ const vm = require("node:vm");
 const root = path.resolve(__dirname, "..");
 const manifest = JSON.parse(fs.readFileSync(path.join(root, "data/corpus-2026-09.json"), "utf8"));
 const datasets = {};
-const expectedNew = { lv2: 25, lv3: 49, hv1: 66, hv2: 20, baustein: 66, speaking: 91, writing: 5 };
+const expectedNew = { lv1: 30, lv2: 25, lv3: 49, hv1: 66, hv2: 20, baustein: 66, speaking: 91, writing: 5 };
 assert.equal(manifest.importMode, "replace-from-pdf-only");
-assert.deepEqual(Object.keys(manifest.modules).sort(), ["baustein", "hv1", "hv2", "lv2", "lv3", "speaking", "writing"]);
+assert.deepEqual(Object.keys(manifest.modules).sort(), ["baustein", "hv1", "hv2", "lv1", "lv2", "lv3", "speaking", "writing"]);
 for (const obsolete of ["lv2_v2", "baustein_grammar"]) {
   assert.ok(!fs.existsSync(path.join(root, `data/${obsolete}_questions.js`)), `Remove unsupported ${obsolete} corpus`);
   assert.ok(!fs.readFileSync(path.join(root, "index.html"), "utf8").includes(`${obsolete}_questions.js`));
@@ -54,6 +54,13 @@ for (const [name, expected] of Object.entries(manifest.modules)) {
 }
 
 const lv3 = datasets.lv3;
+assert.deepEqual(datasets.lv1.map(s => s.teil), Array.from({ length: 22 }, (_, i) => i + 1));
+for (const section of datasets.lv1) {
+  assert.equal(section.mode, "lv1-position");
+  assert.deepEqual(section.questions.map(q => q.position), section.teil === 17 ? [] : [1, 2, 3, 4, 5, 6]);
+  assert.ok(section.questions.every(q => q.sourcePages.every(p => p >= 20 && p <= 54)));
+  assert.ok(section.questions.every(q => !/[\u3400-\u9fff]/.test(q.german) && !/[()]/.test(q.german)));
+}
 const hv1 = datasets.hv1;
 assert.deepEqual(hv1.map(s => s.teil), [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, "12-2", 13, "13-2", "14-1", "14-2", 15, 16, 17, 18]);
 const hv1Letters = { 11: "CDBJEAGH", 12: "AIDBEJGC", "12-2": "CIBDEJGA", 13: "GCFJBHIA",
@@ -92,4 +99,4 @@ assert.ok(datasets.lv2.every(s => s.questions.map(q => q.paragraph).join("") ===
 assert.equal(datasets.hv2.find(s => s.teil === "4").questions.length, 11, "Keep both source variants of #56");
 assert.ok(datasets.hv2.every(s => s.mode === "corpus-card" && s.questions.every(q => !q.options && !q.answer)));
 assert.ok(datasets.speaking.every(s => s.questions.every(q => q.chinese === "原文未提供中文释义")));
-console.log("Corpus validation passed: 7 PDF-only modules, 1674 records, source pages, synchronized JSON, and no legacy question banks.");
+console.log("Corpus validation passed: 8 PDF-only modules, 1800 records, source pages, synchronized JSON, and no legacy question banks.");

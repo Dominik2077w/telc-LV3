@@ -1,4 +1,14 @@
 const datasets = {
+  lv1: {
+    label: "LV1",
+    title: "LV1 句子位置 Trainer",
+    source: window.LV1_QUESTIONS || [],
+    promptLabel: "填入句",
+    answerLabel: "正确位置",
+    reviewGermanLabel: "原文句子",
+    reviewChineseLabel: "来源说明",
+    idleText: "每篇先记住正确填入句的顺序，再随机逐句选择第几空；不使用的句子选“没有”。",
+  },
   lv2: {
     label: "LV2",
     title: "LV2 段落卡片 Trainer",
@@ -92,6 +102,7 @@ const state = {
   complete: false,
   usedAnswers: {},
 };
+let lv1PositionSession = null;
 
 const els = {
   appShell: document.querySelector("#appShell"),
@@ -201,6 +212,7 @@ syncMobileLayout();
 
 function selectLevel(level, options = {}) {
   stopSortAudio();
+  lv1PositionSession = null;
   state.level = level;
   data = normalizeSections(level, datasets[level].source);
   state.selectedTeils = new Set(getPracticeSections().filter((section) => section.questions.length).map((section) => section.teil));
@@ -438,7 +450,7 @@ function renderLevelChrome() {
     state.level !== "lv2" || els.lv2Mode.value !== "global-sort"
   );
   els.hv1ModeLabel.classList.toggle("hidden", state.level !== "hv1");
-  document.querySelector("#questionOrderLabel").classList.toggle("hidden", state.level === "hv1" && ["listen", "position"].includes(els.hv1Mode.value));
+  document.querySelector("#questionOrderLabel").classList.toggle("hidden", state.level === "lv1" || state.level === "hv1" && ["listen", "position"].includes(els.hv1Mode.value));
 }
 
 function getPracticeSections() {
@@ -502,7 +514,9 @@ function startSession() {
 
   const teilOrdered = applyOrder(chosen, els.teilOrder.value);
 
-  if (state.level === "hv2") {
+  if (state.level === "lv1") {
+    state.sessionSource = teilOrdered.map(Lv1Quiz.buildBatch);
+  } else if (state.level === "hv2") {
     const orderedSections = teilOrdered.map((section) => ({
       ...section,
       questions: applyOrder(section.questions, els.questionOrder.value),
@@ -597,7 +611,9 @@ function finishRound() {
   if (els.roundMode.value === "mistakes" && state.mistakes.length) {
     const count = countMistakeQuestions(state.mistakes);
     state.round += 1;
-    els.roundStrip.textContent = ["hv2", "baustein"].includes(state.level)
+    els.roundStrip.textContent = state.level === "lv1"
+      ? `本轮错 ${count} 题，下一轮先预习对应文章，再重新练习本篇所有句子。`
+      : ["hv2", "baustein"].includes(state.level)
       ? `本轮错 ${count} 题，下一轮先复习对应 Teil，再重复错题。`
       : `本轮错 ${count} 题，下一轮只重复错题。`;
     if (state.level === "hv2") {
@@ -648,6 +664,16 @@ function showFront(question) {
   const edition = question.addedIn || question.updatedIn;
   els.corpusUpdateBadge.textContent = edition ? `${edition} ${question.addedIn ? "新增" : "修订"}` : "";
   els.corpusUpdateBadge.classList.toggle("hidden", !edition);
+  if (question.sectionMode === "lv1-position-quiz") {
+    lv1PositionSession = Lv1Quiz.createSession(question);
+    els.sessionTitle.textContent = "Teil " + question.teil + ": " + question.teilTitle;
+    els.teilBadge.textContent = "Teil " + question.teil;
+    els.questionCard.classList.add("hidden");
+    els.audioPanel.classList.add("hidden");
+    els.sortModeView.classList.remove("hidden");
+    renderLv1PositionQuiz();
+    return;
+  }
   if (question.sectionMode === "baustein-article") {
     renderBausteinArticle(question);
     updateStats();
@@ -771,7 +797,7 @@ function showFront(question) {
   }
   if (question.sectionMode === "baustein-choice") {
     els.sessionMode.textContent += " · 四选一";
-    els.roundStrip.textContent += " · 数字键 1–4 / A–D 选择，核对后按 Enter 继续";
+    els.roundStrip.textContent += " · 小键盘：4 左上、5 右上、1 左下、2 右下；A–D 也可选择，Enter 继续";
   }
 
   renderParagraphPanel(question);
@@ -1088,10 +1114,10 @@ function handleBausteinKeyboard(event) {
   if (els.paragraphPanel.classList.contains("is-reviewed") || isNativeButtonKey(event)) return false;
   if (!els.backFace.classList.contains("hidden")) return false;
 
-  if (["1", "2", "3", "4"].includes(event.key)) {
+  if (["4", "5", "1", "2"].includes(event.key)) {
     const row = getCurrentBausteinRow();
     if (!row || row.classList.contains("checked")) return true;
-    const option = row.querySelectorAll(".baustein-option")[Number(event.key) - 1];
+    const option = row.querySelectorAll(".baustein-option")[["4", "5", "1", "2"].indexOf(event.key)];
     if (option) {
       event.preventDefault();
       selectBausteinOption(row, option);
@@ -1363,6 +1389,19 @@ function handleKeyboardNavigation(event) {
 
   if (handleBausteinKeyboard(event)) return;
 
+  if (state.current.sectionMode === "lv1-position-quiz") {
+    if (lv1PositionSession?.phase === "practice" && /^[0-9]$/.test(event.key)) {
+      if (!Lv1Quiz.answered(lv1PositionSession) && Number(event.key) <= lv1PositionSession.count) {
+        event.preventDefault();
+        chooseLv1Position(Number(event.key));
+      }
+    } else if (event.key === "Enter" && !isNativeButtonKey(event)) {
+      event.preventDefault();
+      submitLv1PositionStep();
+    }
+    return;
+  }
+
   if (state.current.sectionMode === "hv1-audio-quiz") {
     if (event.target instanceof Element && event.target.closest("#hv1AudioDock")) return;
     const session = hv1AudioState.session;
@@ -1452,7 +1491,9 @@ function handleAnswerShortcut(event) {
   if (!(event.key in answerShortcutKeys)) return;
 
   const buttons = [...els.answerGrid.querySelectorAll(".answer-button")];
-  const button = buttons[answerShortcutKeys[event.key]];
+  const index = state.current?.sectionMode === "baustein-choice" && /^\d$/.test(event.key)
+    ? ["4", "5", "1", "2"].indexOf(event.key) : answerShortcutKeys[event.key];
+  const button = buttons[index];
   if (!button || button.disabled) return;
 
   event.preventDefault();
@@ -1596,7 +1637,7 @@ function updateStats() {
   els.roundNumber.textContent = state.round;
   const totalQuestions = state.queue.reduce((total, question) => {
     if (["hv2-memory", "baustein-memory"].includes(question.sectionMode)) return total;
-    if (question.sectionMode === "hv1-audio-quiz") {
+    if (["hv1-audio-quiz", "lv1-position-quiz"].includes(question.sectionMode)) {
       return total + question.questions.length;
     }
     return total + 1;
@@ -1609,7 +1650,7 @@ function updateStats() {
 
 function countMistakeQuestions(mistakes) {
   return mistakes.reduce((total, question) => {
-    if (question.sectionMode === "hv1-audio-quiz") {
+    if (["hv1-audio-quiz", "lv1-position-quiz"].includes(question.sectionMode)) {
       return total + (question.missedCount || question.questions.length);
     }
     return total + 1;
@@ -1618,6 +1659,8 @@ function countMistakeQuestions(mistakes) {
 
 function renderIdle() {
   const config = datasets[state.level];
+  els.questionCard.classList.remove("hidden");
+  els.sortModeView.classList.add("hidden");
   els.corpusUpdateBadge.classList.add("hidden");
   els.sessionMode.textContent = "未开始";
   els.sessionTitle.textContent = "选择 Teil 后开始练习";
@@ -1797,6 +1840,157 @@ function renderBausteinSentence(element, row, masked = false) {
   renderHighlightedText(sentence, before + answer + after, [{ start: before.length, end: before.length + answer.length }]);
   element.textContent = "";
   element.append(sentence);
+}
+
+function renderLv1ReferenceList(session) {
+  const list = document.createElement("ol");
+  list.className = "hv2-review-list";
+  list.setAttribute("aria-label", "LV1 正确填入顺序");
+  for (const question of [...session.correct, ...session.questions.filter(q => q.position === null)]) {
+    const row = document.createElement("li");
+    row.className = "hv2-review-row";
+    const number = document.createElement("span");
+    number.className = "hv2-review-number";
+    number.textContent = question.position === null ? "没有" : String(question.position);
+    const body = document.createElement("div");
+    body.className = "hv2-review-body";
+    const sentence = document.createElement("p");
+    sentence.className = "hv2-review-german";
+    sentence.lang = "de";
+    sentence.textContent = question.german;
+    body.append(sentence);
+    if (question.sourceAnswer) {
+      const letter = document.createElement("p");
+      letter.className = "baustein-review-note";
+      letter.textContent = "PDF 选项字母：" + question.sourceAnswer;
+      body.append(letter);
+    }
+    row.append(number, body);
+    list.append(row);
+  }
+  return list;
+}
+
+function renderLv1PositionQuiz() {
+  const session = lv1PositionSession;
+  if (!session) return;
+  els.sortModeView.classList.remove("hv1-order-mode", "hv1-audio-mode", "hv1-position-mode", "lv2-memory-mode");
+  els.sortModeView.classList.add("hv2-memory-mode");
+  els.sortShuffleButton.classList.add("hidden");
+  els.sortSubmitButton.disabled = false;
+  els.sortSubmitButton.onclick = null;
+  els.sortTeilBadge.textContent = "Teil " + session.batch.teil + " · " + session.batch.teilTitle;
+  els.sortList.classList.remove("hv1-order-list");
+  els.sortList.innerHTML = "";
+  els.sessionMode.textContent = "LV1 · 先记顺序，再随机选位置";
+  els.sortInstruction.textContent = "选择这句话原本填在第几空；不填入本文的选项请选择“没有”。";
+  els.roundStrip.textContent = "数字键 1–" + session.count + " 选择位置，0 选“没有”；Enter 开始 / 下一题。";
+  if (session.phase === "memory") {
+    els.questionBadge.textContent = "本篇预习";
+    els.sortInfo.textContent = session.count + " 个空 · " + session.questions.length + " 个句子 · 预习不计分";
+    els.sortInstruction.textContent = "先记住下面正确填入句的顺序，看完后再开始随机逐句练习。";
+    els.sortList.append(renderLv1ReferenceList(session));
+    const note = document.createElement("p");
+    note.className = "baustein-review-note";
+    note.textContent = session.batch.sourceNote || "";
+    els.sortList.append(note);
+    els.sortSubmitButton.textContent = "我看完了，开始随机练习";
+  } else if (session.phase === "practice") {
+    const question = Lv1Quiz.current(session);
+    const answered = Lv1Quiz.answered(session);
+    const answer = session.answers[session.index];
+    els.questionBadge.textContent = "随机逐题";
+    els.sortInfo.textContent = "随机第 " + (session.index + 1) + " / " + session.questions.length + " 题";
+    const card = document.createElement("div");
+    card.className = "hv1-position-question lv1-position-question";
+    const prompt = document.createElement("h3");
+    prompt.textContent = "这句话原本填在第几空？";
+    const sentence = document.createElement("p");
+    sentence.className = "hv1-position-statement";
+    sentence.lang = "de";
+    sentence.textContent = question.german;
+    const choices = document.createElement("div");
+    choices.className = "hv1-position-choices lv1-position-choices";
+    choices.setAttribute("role", "group");
+    choices.setAttribute("aria-label", "选择句子位置");
+    for (const position of [...Array.from({ length: session.count }, (_, i) => i + 1), 0]) {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.textContent = Lv1Quiz.positionLabel(position || null);
+      button.setAttribute("aria-keyshortcuts", String(position));
+      button.disabled = answered;
+      if (position === 0) button.classList.add("lv1-none-choice");
+      if (answered) {
+        if ((position || null) === answer.expectedPosition) button.classList.add("is-correct");
+        if ((position || null) === answer.position && !answer.correct) button.classList.add("is-wrong");
+      }
+      button.addEventListener("click", () => chooseLv1Position(position));
+      choices.append(button);
+    }
+    card.append(prompt, sentence, choices);
+    if (answered) {
+      const feedback = document.createElement("p");
+      feedback.className = "hv1-position-feedback " + (answer.correct ? "is-correct" : "is-wrong");
+      feedback.setAttribute("role", "status");
+      feedback.textContent = answer.correct ? "✓ 选对了！正确位置：" + Lv1Quiz.positionLabel(answer.expectedPosition)
+        : "✗ 选错了。你选：" + Lv1Quiz.positionLabel(answer.position) + "；正确：" + Lv1Quiz.positionLabel(answer.expectedPosition);
+      card.append(feedback);
+    }
+    els.sortList.append(card);
+    els.sortSubmitButton.disabled = !answered;
+    els.sortSubmitButton.textContent = !answered ? "先选择句子的位置" : session.index + 1 === session.order.length ? "查看本篇结果 · Enter" : "下一题 · Enter";
+  } else {
+    els.questionBadge.textContent = "本篇结果";
+    els.sortInfo.textContent = "答对 " + session.result.correct + " / " + session.result.total;
+    els.sortInstruction.textContent = "核对每句的位置，再继续下一篇。";
+    const list = document.createElement("ol");
+    list.className = "hv1-position-results";
+    for (const answer of session.result.rows) {
+      const row = document.createElement("li");
+      row.className = "hv1-position-result " + (answer.correct ? "is-correct" : "is-wrong");
+      const sentence = document.createElement("p");
+      sentence.lang = "de";
+      sentence.textContent = answer.question.german;
+      const feedback = document.createElement("p");
+      feedback.textContent = (answer.correct ? "✓ " : "✗ ") + "你选：" + Lv1Quiz.positionLabel(answer.position) + "；正确：" + Lv1Quiz.positionLabel(answer.expectedPosition);
+      row.append(sentence, feedback);
+      list.append(row);
+    }
+    const details = document.createElement("details");
+    const summary = document.createElement("summary");
+    summary.textContent = "查看完整正确顺序";
+    details.append(summary, renderLv1ReferenceList(session));
+    els.sortList.append(list, details);
+    els.sortSubmitButton.textContent = state.currentIndex < state.queue.length ? "下一篇 · Enter" : "完成本轮 · Enter";
+  }
+}
+
+function chooseLv1Position(position) {
+  const answer = Lv1Quiz.choose(lv1PositionSession, position);
+  if (!answer) return;
+  state.answeredInRound += 1;
+  if (!answer.correct) state.roundMistakes += 1;
+  renderLv1PositionQuiz();
+  updateStats();
+  els.sortSubmitButton.focus({ preventScroll: true });
+}
+
+function submitLv1PositionStep() {
+  const session = lv1PositionSession;
+  if (!session) return;
+  if (session.phase === "memory") Lv1Quiz.begin(session);
+  else if (session.phase === "practice") {
+    if (!Lv1Quiz.advance(session)) return;
+    const retry = Lv1Quiz.reviewBatch(session);
+    if (retry) state.mistakes.push(retry);
+  } else {
+    lv1PositionSession = null;
+    nextQuestion();
+    return;
+  }
+  renderLv1PositionQuiz();
+  updateStats();
+  scrollMobilePracticeTop();
 }
 
 function renderHv2MemoryView(memory) {
@@ -3008,6 +3202,7 @@ function finishHv1Drag(event) {
 }
 
 function submitSort() {
+  if (state.current?.sectionMode === "lv1-position-quiz") return submitLv1PositionStep();
   if (["hv2-memory", "baustein-memory"].includes(state.current?.sectionMode)) return nextQuestion();
   if (state.current?.sectionMode === "lv2-global-sort") return submitLv2GlobalSort();
   if (state.current?.sectionMode === "hv1-audio-quiz") return submitHv1AudioStep();

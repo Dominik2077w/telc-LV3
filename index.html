@@ -11,7 +11,7 @@
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="apple-touch-icon" href="./icons/icon-192.png" />
     <link rel="icon" href="./icons/icon-192.svg" />
-    <link rel="stylesheet" href="./styles.css?v=20261026-hv1-position-quiz" />
+    <link rel="stylesheet" href="./styles.css?v=20261027-lv1-numpad" />
   </head>
   <body>
     <div class="level-gate" id="levelGate" role="dialog" aria-modal="true" aria-labelledby="levelGateTitle">
@@ -20,6 +20,10 @@
         <div class="gate-heading"><h1 id="levelGateTitle">选择训练级别</h1><button class="ghost-button hidden" id="closeLevelGate" type="button">返回练习</button></div>
         <p class="corpus-edition">全部训练语料已按 2026.9 PDF 重新提取覆盖。</p>
         <div class="level-choice-grid">
+          <button class="level-choice" type="button" data-level-choice="lv1">
+            <strong>LV1 <span class="new-badge">新增模块</span></strong>
+            <span>先记顺序 → 随机逐句选位置 / 没有</span>
+          </button>
           <button class="level-choice" type="button" data-level-choice="lv2">
             <strong>LV2</strong>
             <span>段落 A-E 正反面卡片</span>
@@ -80,6 +84,7 @@
         <div class="sidebar-body" id="sidebarBody">
           <section class="panel">
             <div class="level-switch" aria-label="训练级别">
+              <button class="level-switch-button" type="button" data-level-switch="lv1">LV1 · 新增</button>
               <button class="level-switch-button" type="button" data-level-switch="lv2">LV2</button>
               <button class="level-switch-button" type="button" data-level-switch="lv3">LV3</button>
               <button class="level-switch-button" type="button" data-level-switch="hv1">HV1</button>
@@ -220,6 +225,8 @@
       </section>
     </main>
 
+    <script src="./data/lv1_questions.js?v=20261027-lv1-numpad"></script>
+    <script src="./lv1-quiz.js?v=20261027-lv1-numpad"></script>
     <script src="./data/lv2_questions.js?v=20261020-pdf-only"></script>
     <script src="./data/lv3_questions.js?v=20261020-pdf-only"></script>
     <script src="./data/hv1_questions.js?v=20261020-hv1-audio"></script>
@@ -229,9 +236,9 @@
     <script src="./data/baustein_questions.js?v=20261020-pdf-only"></script>
     <script src="./data/speaking_questions.js?v=20261020-pdf-only"></script>
     <script src="./hv1-order.js?v=20261020-pdf-only"></script>
-    <script src="./hv1-quiz.js?v=20261026-hv1-position-quiz"></script>
-    <script src="./baustein-quiz.js?v=20261026-hv1-position-quiz"></script>
-    <script src="./baustein-study.js?v=20261026-hv1-position-quiz"></script>
-    <script src="./app.js?v=20261026-hv1-position-quiz"></script>
+    <script src="./hv1-quiz.js?v=20261027-lv1-numpad"></script>
+    <script src="./baustein-quiz.js?v=20261027-lv1-numpad"></script>
+    <script src="./baustein-study.js?v=20261027-lv1-numpad"></script>
+    <script src="./app.js?v=20261027-lv1-numpad"></script>
   </body>
 </html>
