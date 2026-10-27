@@ -11,7 +11,7 @@
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="apple-touch-icon" href="./icons/icon-192.png" />
     <link rel="icon" href="./icons/icon-192.svg" />
-    <link rel="stylesheet" href="./styles.css?v=20261027-lv1-numpad" />
+    <link rel="stylesheet" href="./styles.css?v=20261027-baustein-grammar" />
   </head>
   <body>
     <div class="level-gate" id="levelGate" role="dialog" aria-modal="true" aria-labelledby="levelGateTitle">
@@ -213,6 +213,7 @@
                   <dd id="reviewChinese">-</dd>
                 </div>
               </dl>
+              <section class="baustein-explanation hidden" id="bausteinExplanation" aria-label="本空解析与语法表格"></section>
               <div class="back-actions">
                 <button class="ghost-button miss-button hidden" id="missButton" type="button">不记得</button>
                 <button class="primary-button next-button" id="nextButton" type="button">下一题</button>
@@ -225,8 +226,8 @@
       </section>
     </main>
 
-    <script src="./data/lv1_questions.js?v=20261027-lv1-numpad"></script>
-    <script src="./lv1-quiz.js?v=20261027-lv1-numpad"></script>
+    <script src="./data/lv1_questions.js?v=20261027-baustein-grammar"></script>
+    <script src="./lv1-quiz.js?v=20261027-baustein-grammar"></script>
     <script src="./data/lv2_questions.js?v=20261020-pdf-only"></script>
     <script src="./data/lv3_questions.js?v=20261020-pdf-only"></script>
     <script src="./data/hv1_questions.js?v=20261020-hv1-audio"></script>
@@ -236,9 +237,11 @@
     <script src="./data/baustein_questions.js?v=20261020-pdf-only"></script>
     <script src="./data/speaking_questions.js?v=20261020-pdf-only"></script>
     <script src="./hv1-order.js?v=20261020-pdf-only"></script>
-    <script src="./hv1-quiz.js?v=20261027-lv1-numpad"></script>
-    <script src="./baustein-quiz.js?v=20261027-lv1-numpad"></script>
-    <script src="./baustein-study.js?v=20261027-lv1-numpad"></script>
-    <script src="./app.js?v=20261027-lv1-numpad"></script>
+    <script src="./hv1-quiz.js?v=20261027-baustein-grammar"></script>
+    <script src="./baustein-explanations.js?v=20261027-baustein-grammar"></script>
+    <script src="./baustein-grammar.js?v=20261027-baustein-grammar"></script>
+    <script src="./baustein-quiz.js?v=20261027-baustein-grammar"></script>
+    <script src="./baustein-study.js?v=20261027-baustein-grammar"></script>
+    <script src="./app.js?v=20261027-baustein-grammar"></script>
   </body>
 </html>

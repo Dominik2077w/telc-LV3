@@ -1737,6 +1737,29 @@ select {
 .hv1-audio-mode .sort-bottom button { width: 100%; min-height: 50px; }
 .answer-grid.hv2-choices { display: grid; grid-template-columns: minmax(0, 1fr); gap: 9px; }
 .answer-grid.baustein-choices { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.baustein-explanation { display: grid; gap: 14px; margin-top: 22px; padding-top: 20px; border-top: 1px solid var(--line); min-width: 0; }
+.baustein-explanation h3 { margin: 0; font-size: 21px; }
+.baustein-explanation p, .baustein-explanation ul { margin: 0; font-size: 16px; line-height: 1.75; overflow-wrap: anywhere; }
+.baustein-explanation ul { padding-left: 22px; color: var(--muted); }
+.baustein-explanation li + li { margin-top: 8px; }
+.baustein-source-issue { padding: 12px; border-left: 4px solid #ad721c; background: #fff6e7; }
+.baustein-grammar-details { min-width: 0; border: 1px solid var(--line); border-radius: 8px; }
+.baustein-explanation summary { padding: 12px; cursor: pointer; font-weight: 700; line-height: 1.5; }
+.baustein-table-scroll { max-width: 100%; overflow-x: auto; overscroll-behavior-x: contain; margin: 0 10px 10px; }
+.baustein-table-scroll table { width: 100%; border-collapse: collapse; font-size: 14px; text-align: left; }
+.baustein-table-scroll th, .baustein-table-scroll td { min-width: 90px; padding: 9px 12px; border: 1px solid var(--line); vertical-align: top; }
+.baustein-table-scroll thead th { background: #eaf1ec; white-space: nowrap; }
+.baustein-table-scroll tbody th { background: #f7f8f3; }
+.baustein-verb-table td, .baustein-verb-table tbody th { white-space: nowrap; }
+.baustein-grammar-details > ul { margin: 0 12px 14px; }
+.baustein-explanation > details:last-child a { display: block; margin: 8px 12px; }
+.lv1-memory-switch { display: flex; gap: 8px; margin-bottom: 16px; }
+.lv1-memory-switch button, .lv1-memory-positions button { min-height: 46px; border: 1px solid var(--line); border-radius: 8px; background: white; color: var(--blue); cursor: pointer; font-size: 16px; padding: 9px 12px; }
+.lv1-memory-switch button[aria-pressed="true"], .lv1-memory-positions button[aria-pressed="true"] { background: var(--green); color: white; border-color: var(--green); }
+.lv1-memory-answer { padding: 18px; min-height: 190px; border: 1px solid var(--line); border-radius: 10px; background: #fbfaf6; }
+.lv1-memory-answer h3 { margin: 0 0 14px; font-size: 16px; color: var(--muted); }
+.lv1-memory-answer p { margin: 0; }
+.lv1-memory-positions { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 8px; margin: 16px 0; }
 .answer-grid.baustein-choices .answer-button { min-height: 58px; padding: 12px 16px; text-align: left; font-size: 18px; line-height: 1.45; overflow-wrap: anywhere; }
 @media (max-width: 850px) {
   .answer-grid.baustein-choices { grid-template-columns: repeat(2, minmax(0, 1fr)); }

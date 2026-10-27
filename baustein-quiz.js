@@ -439,13 +439,21 @@ In der Annahme /in der Annahme|in die Annahme|an der Annahme|auf der Annahme
     };
   }
 
+  const lastCorrectPositions = new Map();
+
   function prepareQuestion(question, random = Math.random) {
     question.quizAnswered = false;
-    const choices = [question.correctText, ...question.distractors];
+    const key = `${question.teil}:${question.number}:${question.correctText}`;
+    const previousPosition = lastCorrectPositions.get(key);
+    const positions = [0, 1, 2, 3].filter(position => position !== previousPosition);
+    const correctPosition = positions[Math.floor(random() * positions.length)];
+    const choices = [...question.distractors];
     for (let index = choices.length - 1; index > 0; index -= 1) {
       const swap = Math.floor(random() * (index + 1));
       [choices[index], choices[swap]] = [choices[swap], choices[index]];
     }
+    choices.splice(correctPosition, 0, question.correctText);
+    lastCorrectPositions.set(key, correctPosition);
     question.options = choices.map((text, index) => ({
       value: "ABCD"[index], text,
       label: `${[4, 5, 1, 2][index]} · ${text}`,

@@ -49,6 +49,8 @@ function loadApp() {
   const context = vm.createContext({
     BausteinStudy: require("../baustein-study.js"),
     BausteinQuiz: require("../baustein-quiz.js"),
+    BausteinGrammar: require("../baustein-grammar.js"),
+    Lv1Quiz: require("../lv1-quiz.js"),
     Element: ElementStub,
     window: { matchMedia: () => ({ matches: false }), scrollTo() {} },
     document: {
@@ -224,7 +226,9 @@ test("Baustein choice shows the gap and Chinese, then fills the sentence and rec
   assert.equal(app.read("els.paragraphPanel.classList.contains('hidden')"), false);
   assert.equal(app.read("els.paragraphPanel.children[0].textContent"), "他读书。");
   assert.equal(app.read("els.answerGrid.children.length"), 4);
-  app.read("answerQuestion(state.current.options.find(option => option.value !== state.current.answer).value)");
+  // This fixture deliberately substitutes a non-corpus sentence; grammar is
+  // checked with real source gaps in the feedback integration test below.
+  app.read("renderBausteinExplanation = () => {}; answerQuestion(state.current.options.find(option => option.value !== state.current.answer).value)");
   assert.equal(app.read("els.correctAnswer.textContent"), "liest");
   assert.equal(app.read("els.reviewGerman.textContent"), "Er liest.");
   assert.ok(app.read("els.reviewChinese.textContent").startsWith("他读书。"));
@@ -304,5 +308,54 @@ test("Baustein choices ignore repeated keys, composition, editing and unknown ch
   assert.equal(app.press("3"), false);
   assert.equal(app.press("6"), false);
   app.read("answerQuestion('X')");
+  assert.equal(app.read("state.answeredInRound"), 0);
+});
+
+test("Baustein feedback adds the gap rationale and expandable tables, clears them on the next card, and leaves table keyboard controls alone", () => {
+  const app = loadApp();
+  const source = { window: {} };
+  vm.runInNewContext(fs.readFileSync(path.join(__dirname, "..", "data", "baustein_questions.js"), "utf8"), source);
+  app.context.grammarSource = JSON.parse(JSON.stringify(source.window.BAUSTEIN_QUESTIONS[0]));
+  app.read("globalThis.cards = BausteinStudy.buildRoundQueue(normalizeSections('baustein', [grammarSource])); state.current = cards[1]; showFront(state.current)");
+  assert.equal(app.read("els.bausteinExplanation.classList.contains('hidden')"), true);
+  app.read("answerQuestion(state.current.answer)");
+  assert.equal(app.read("els.bausteinExplanation.classList.contains('hidden')"), false);
+  assert.match(app.read("els.bausteinExplanation.textContent"), /Konsequenzen ziehen/);
+  assert.match(app.read("els.bausteinExplanation.textContent"), /六时态/);
+  assert.match(app.read("els.bausteinExplanation.textContent"), /ist gezogen worden/);
+  const target = new ElementStub();
+  target.closest = selector => selector === "#bausteinExplanation" ? target : null;
+  assert.equal(app.press("Enter", { target }), false);
+  assert.equal(app.context.advances, 0);
+  app.read("state.current = cards[2]; showFront(state.current)");
+  assert.equal(app.read("els.bausteinExplanation.classList.contains('hidden')"), true);
+  assert.equal(app.read("els.bausteinExplanation.textContent"), "");
+});
+
+test("LV1 numbered preview changes only the displayed correct sentence, supports list switching, and never scores memory clicks", () => {
+  const app = loadApp();
+  app.context.previewSource = { teil: 1, title: "Test", positionCount: 6,
+    questions: Array.from({ length: 6 }, (_, i) => ({ position: i + 1, number: i + 1, german: `Richtiger Satz ${i + 1}` })) };
+  app.read(`
+    state.level = 'lv1';
+    state.current = Lv1Quiz.buildBatch(previewSource);
+    state.queue = [state.current];
+    els.sortList.querySelector = () => null;
+    showFront(state.current);
+    lv1MemoryDisplay = 'buttons';
+    renderLv1PositionQuiz();
+  `);
+  assert.equal(app.read("els.sortList.children[2].children.length"), 6);
+  assert.match(app.read("els.sortList.children[1].textContent"), /Richtiger Satz 1/);
+  app.read("els.sortList.children[2].children[4].click()");
+  assert.match(app.read("els.sortList.children[1].textContent"), /第 5 空.*Richtiger Satz 5/);
+  assert.ok(!app.read("els.sortList.children[1].textContent").includes("Richtiger Satz 1"));
+  assert.equal(app.read("state.answeredInRound"), 0);
+  assert.equal(app.read("state.roundMistakes"), 0);
+  app.read("els.sortList.children[0].children[0].click()");
+  assert.equal(app.read("lv1MemoryDisplay"), "list");
+  assert.match(app.read("els.sortList.children[1].textContent"), /Richtiger Satz 1.*Richtiger Satz 6/);
+  app.read("submitLv1PositionStep()");
+  assert.equal(app.read("lv1PositionSession.phase"), "practice");
   assert.equal(app.read("state.answeredInRound"), 0);
 });

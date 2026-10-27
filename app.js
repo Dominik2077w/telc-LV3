@@ -103,6 +103,7 @@ const state = {
   usedAnswers: {},
 };
 let lv1PositionSession = null;
+let lv1MemoryDisplay = "list";
 
 const els = {
   appShell: document.querySelector("#appShell"),
@@ -148,6 +149,7 @@ const els = {
   answerGrid: document.querySelector("#answerGrid"),
   frontFace: document.querySelector("#frontFace"),
   backFace: document.querySelector("#backFace"),
+  bausteinExplanation: document.querySelector("#bausteinExplanation"),
   resultLine: document.querySelector("#resultLine"),
   correctAnswerLabel: document.querySelector("#correctAnswerLabel"),
   correctAnswer: document.querySelector("#correctAnswer"),
@@ -658,6 +660,8 @@ function finishRound() {
 }
 
 function showFront(question) {
+  els.bausteinExplanation.innerHTML = "";
+  els.bausteinExplanation.classList.add("hidden");
   if (question.sectionMode !== "hv1-audio-quiz" && hv1AudioState.session) stopSortAudio();
   if (question.sectionMode === "hv2-choice") Hv2Quiz.prepareQuestion(question);
   if (question.sectionMode === "baustein-choice") BausteinQuiz.prepareQuestion(question);
@@ -1385,11 +1389,17 @@ function handleKeyboardNavigation(event) {
   if (mobileMenuOpen || !els.levelGate.classList.contains("hidden")) return;
   if (event.repeat || event.isComposing || event.ctrlKey || event.metaKey || event.altKey || state.complete) return;
   if (isEditableTarget(event.target)) return;
+  if (event.target instanceof Element && event.target.closest("#bausteinExplanation")) return;
   if (!state.current || state.complete) return;
 
   if (handleBausteinKeyboard(event)) return;
 
   if (state.current.sectionMode === "lv1-position-quiz") {
+    if (lv1PositionSession?.phase === "memory" && lv1MemoryDisplay === "buttons" && /^[1-9]$/.test(event.key) && Number(event.key) <= lv1PositionSession.count) {
+      event.preventDefault();
+      selectLv1MemoryPosition(Number(event.key));
+      return;
+    }
     if (lv1PositionSession?.phase === "practice" && /^[0-9]$/.test(event.key)) {
       if (!Lv1Quiz.answered(lv1PositionSession) && Number(event.key) <= lv1PositionSession.count) {
         event.preventDefault();
@@ -1565,6 +1575,7 @@ function answerQuestion(choice) {
     els.correctAnswer.textContent = question.correctText;
     renderBausteinSentence(els.reviewGerman, { ...question.bausteinStudy, answer: question.correctText });
     renderHighlightedText(els.reviewChinese, els.reviewChinese.textContent, question.bausteinStudy.chineseAnswerRanges);
+    renderBausteinExplanation(question);
   }
   els.missButton.classList.add("hidden");
   els.nextButton.textContent = "下一题";
@@ -1661,6 +1672,8 @@ function renderIdle() {
   const config = datasets[state.level];
   els.questionCard.classList.remove("hidden");
   els.sortModeView.classList.add("hidden");
+  els.bausteinExplanation.innerHTML = "";
+  els.bausteinExplanation.classList.add("hidden");
   els.corpusUpdateBadge.classList.add("hidden");
   els.sessionMode.textContent = "未开始";
   els.sessionTitle.textContent = "选择 Teil 后开始练习";
@@ -1842,6 +1855,158 @@ function renderBausteinSentence(element, row, masked = false) {
   element.append(sentence);
 }
 
+function renderBausteinExplanation(question) {
+  const explanation = BausteinGrammar.explain(question);
+  const panel = els.bausteinExplanation;
+  panel.innerHTML = "";
+  panel.classList.remove("hidden");
+  const heading = document.createElement("h3");
+  heading.textContent = "为什么选 “" + question.correctText + "”？";
+  const why = document.createElement("p");
+  why.className = "baustein-explanation-why";
+  why.textContent = explanation.why;
+  panel.append(heading, why);
+  if (explanation.sourceIssue) {
+    const issue = document.createElement("p");
+    issue.className = "baustein-source-issue";
+    issue.textContent = "题库原文提示：" + explanation.sourceIssue;
+    panel.append(issue);
+  }
+  const rules = document.createElement("ul");
+  for (const text of explanation.rules) {
+    const rule = document.createElement("li");
+    rule.textContent = text;
+    rules.append(rule);
+  }
+  if (explanation.rules.length) {
+    const ruleDetails = document.createElement("details");
+    ruleDetails.className = "baustein-grammar-details";
+    const ruleSummary = document.createElement("summary");
+    ruleSummary.textContent = "相关规则与读表方法";
+    ruleDetails.append(ruleSummary, rules);
+    panel.append(ruleDetails);
+  }
+  for (const item of explanation.tables) {
+    const details = document.createElement("details");
+    details.className = "baustein-grammar-details";
+    const summary = document.createElement("summary");
+    summary.textContent = item.title;
+    const scroll = document.createElement("div");
+    scroll.className = "baustein-table-scroll";
+    scroll.tabIndex = 0;
+    scroll.setAttribute("role", "region");
+    scroll.setAttribute("aria-label", item.title + "，可横向滚动");
+    const table = document.createElement("table");
+    if (item.headers[0] === "人称") table.className = "baustein-verb-table";
+    const caption = document.createElement("caption");
+    caption.textContent = item.title;
+    caption.className = "sr-only";
+    table.append(caption);
+    const head = document.createElement("thead");
+    const headRow = document.createElement("tr");
+    for (const label of item.headers) {
+      const cell = document.createElement("th");
+      cell.setAttribute("scope", "col");
+      cell.textContent = label;
+      headRow.append(cell);
+    }
+    head.append(headRow);
+    const body = document.createElement("tbody");
+    for (const row of item.rows) {
+      const tr = document.createElement("tr");
+      row.forEach((value, index) => {
+        const cell = document.createElement(index ? "td" : "th");
+        if (!index) cell.setAttribute("scope", "row");
+        cell.textContent = value;
+        tr.append(cell);
+      });
+      body.append(tr);
+    }
+    table.append(head, body);
+    scroll.append(table);
+    details.append(summary, scroll);
+    panel.append(details);
+  }
+  const sources = document.createElement("details");
+  const summary = document.createElement("summary");
+  summary.textContent = "语法参考";
+  sources.append(summary);
+  for (const reference of explanation.references) {
+    const link = document.createElement("a");
+    link.href = reference.url;
+    link.textContent = reference.label;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    sources.append(link);
+  }
+  panel.append(sources);
+}
+
+function renderLv1MemoryDisplay(session) {
+  const switcher = document.createElement("div");
+  switcher.className = "lv1-memory-switch";
+  switcher.setAttribute("role", "group");
+  switcher.setAttribute("aria-label", "正确答案展示方式");
+  for (const [value, label] of [["list", "完整列表"], ["buttons", "点序号看答案"]]) {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.textContent = label;
+    button.setAttribute("aria-pressed", String(lv1MemoryDisplay === value));
+    button.addEventListener("click", () => { lv1MemoryDisplay = value; renderLv1PositionQuiz(); });
+    switcher.append(button);
+  }
+  els.sortList.append(switcher);
+  if (lv1MemoryDisplay === "list") {
+    els.sortList.append(renderLv1ReferenceList(session));
+    return;
+  }
+  const position = session.memoryPosition ?? 1;
+  const answer = document.createElement("div");
+  answer.className = "lv1-memory-answer";
+  answer.setAttribute("role", "status");
+  answer.setAttribute("aria-live", "polite");
+  const label = document.createElement("h3");
+  label.textContent = position ? "第 " + position + " 空的正确选项" : "没有使用的选项";
+  answer.append(label);
+  for (const question of session.questions.filter(q => (q.position || 0) === position)) {
+    const sentence = document.createElement("p");
+    sentence.className = "hv2-review-german";
+    sentence.lang = "de";
+    sentence.textContent = question.german;
+    answer.append(sentence);
+    if (question.sourceAnswer) {
+      const letter = document.createElement("p");
+      letter.className = "baustein-review-note";
+      letter.textContent = "PDF 选项字母：" + question.sourceAnswer;
+      answer.append(letter);
+    }
+  }
+  const buttons = document.createElement("div");
+  buttons.className = "lv1-memory-positions";
+  buttons.setAttribute("role", "group");
+  buttons.setAttribute("aria-label", "选择要预览的正确位置");
+  const positions = Array.from({ length: session.count }, (_, i) => i + 1);
+  if (session.questions.some(q => q.position === null)) positions.push(0);
+  for (const number of positions) {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.textContent = number ? String(number) : "没有";
+    button.setAttribute("aria-label", number ? "查看第 " + number + " 空的正确选项" : "查看未使用的选项");
+    button.setAttribute("aria-pressed", String(position === number));
+    button.dataset.lv1MemoryPosition = number;
+    button.addEventListener("click", () => selectLv1MemoryPosition(number));
+    buttons.append(button);
+  }
+  els.sortList.append(answer, buttons);
+}
+
+function selectLv1MemoryPosition(position) {
+  if (lv1PositionSession?.phase !== "memory") return;
+  lv1PositionSession.memoryPosition = position;
+  renderLv1PositionQuiz();
+  els.sortList.querySelector('[data-lv1-memory-position="' + position + '"]')?.focus({ preventScroll: true });
+}
+
 function renderLv1ReferenceList(session) {
   const list = document.createElement("ol");
   list.className = "hv2-review-list";
@@ -1889,7 +2054,7 @@ function renderLv1PositionQuiz() {
     els.questionBadge.textContent = "本篇预习";
     els.sortInfo.textContent = session.count + " 个空 · " + session.questions.length + " 个句子 · 预习不计分";
     els.sortInstruction.textContent = "先记住下面正确填入句的顺序，看完后再开始随机逐句练习。";
-    els.sortList.append(renderLv1ReferenceList(session));
+    renderLv1MemoryDisplay(session);
     const note = document.createElement("p");
     note.className = "baustein-review-note";
     note.textContent = session.batch.sourceNote || "";

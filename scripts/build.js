@@ -11,6 +11,8 @@ const files = [
   "data/lv1_questions.js",
   "baustein-study.js",
   "baustein-quiz.js",
+  "baustein-explanations.js",
+  "baustein-grammar.js",
   "hv2-quiz.js",
   "hv1-order.js",
   "hv1-quiz.js",
