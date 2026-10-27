@@ -11,7 +11,7 @@
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="apple-touch-icon" href="./icons/icon-192.png" />
     <link rel="icon" href="./icons/icon-192.svg" />
-    <link rel="stylesheet" href="./styles.css?v=20261027-lv3-table" />
+    <link rel="stylesheet" href="./styles.css?v=20261027-lv3-modes" />
   </head>
   <body>
     <div class="level-gate" id="levelGate" role="dialog" aria-modal="true" aria-labelledby="levelGateTitle">
@@ -30,7 +30,7 @@
           </button>
           <button class="level-choice" type="button" data-level-choice="lv3">
             <strong>LV3</strong>
-            <span>整篇答案表预习 → 三列选择并统一提交</span>
+            <span>整篇表格 / 逐题选择并即时核对</span>
           </button>
           <button class="level-choice" type="button" data-level-choice="hv1">
             <strong>HV1</strong>
@@ -117,6 +117,13 @@
               <select id="questionOrder">
                 <option value="sequential">顺序</option>
                 <option value="random">随机</option>
+              </select>
+            </label>
+            <label id="lv3ModeLabel" class="hidden">
+              <span>LV3 练习方式</span>
+              <select id="lv3Mode">
+                <option value="table">整篇表格 · 先预览后统一提交</option>
+                <option value="cards">逐题练习 · 选择后立即核对</option>
               </select>
             </label>
             <label id="lv2ModeLabel" class="hidden">
@@ -226,12 +233,12 @@
       </section>
     </main>
 
-    <script src="./data/lv1_questions.js?v=20261027-lv3-table"></script>
-    <script src="./lv1-translations.js?v=20261027-lv3-table"></script>
-    <script src="./lv1-quiz.js?v=20261027-lv3-table"></script>
+    <script src="./data/lv1_questions.js?v=20261027-lv3-modes"></script>
+    <script src="./lv1-translations.js?v=20261027-lv3-modes"></script>
+    <script src="./lv1-quiz.js?v=20261027-lv3-modes"></script>
     <script src="./data/lv2_questions.js?v=20261020-pdf-only"></script>
     <script src="./data/lv3_questions.js?v=20261020-pdf-only"></script>
-    <script src="./lv3-table.js?v=20261027-lv3-table"></script>
+    <script src="./lv3-table.js?v=20261027-lv3-modes"></script>
     <script src="./data/hv1_questions.js?v=20261020-hv1-audio"></script>
     <script src="./data/hv2_questions.js?v=20261021-hv2-choice"></script>
     <script src="./hv2-distractors.js?v=20261027-hv2-per-question"></script>
@@ -240,11 +247,11 @@
     <script src="./data/baustein_questions.js?v=20261020-pdf-only"></script>
     <script src="./data/speaking_questions.js?v=20261020-pdf-only"></script>
     <script src="./hv1-order.js?v=20261020-pdf-only"></script>
-    <script src="./hv1-quiz.js?v=20261027-lv3-table"></script>
-    <script src="./baustein-explanations.js?v=20261027-lv3-table"></script>
-    <script src="./baustein-grammar.js?v=20261027-lv3-table"></script>
-    <script src="./baustein-quiz.js?v=20261027-lv3-table"></script>
-    <script src="./baustein-study.js?v=20261027-lv3-table"></script>
-    <script src="./app.js?v=20261027-lv3-table"></script>
+    <script src="./hv1-quiz.js?v=20261027-lv3-modes"></script>
+    <script src="./baustein-explanations.js?v=20261027-lv3-modes"></script>
+    <script src="./baustein-grammar.js?v=20261027-lv3-modes"></script>
+    <script src="./baustein-quiz.js?v=20261027-lv3-modes"></script>
+    <script src="./baustein-study.js?v=20261027-lv3-modes"></script>
+    <script src="./app.js?v=20261027-lv3-modes"></script>
   </body>
 </html>

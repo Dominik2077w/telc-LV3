@@ -428,3 +428,61 @@ test("LV3 renders an ordered R/F/X table, hides translations and grading while c
   assert.ok(app.read("els.sortList.textContent").includes("你选："));
   assert.equal(app.read("state.roundMistakes"), 0);
 });
+
+test("LV3 settings offer table and original single-question modes with question order only for single questions", () => {
+  const app = loadApp();
+  app.read("state.level = 'lv3'; els.lv3Mode.value = 'table'; renderLevelChrome()");
+  assert.equal(app.read("els.lv3ModeLabel.classList.contains('hidden')"), false);
+  assert.equal(app.read("document.querySelector('#questionOrderLabel').classList.contains('hidden')"), true);
+  app.read("els.lv3Mode.value = 'cards'; renderLevelChrome(); renderIdle()");
+  assert.equal(app.read("document.querySelector('#questionOrderLabel').classList.contains('hidden')"), false);
+  assert.match(app.read("els.germanQuestion.textContent"), /逐题选择.*立即查看/);
+  app.read("state.level = 'lv2'; renderLevelChrome()");
+  assert.equal(app.read("els.lv3ModeLabel.classList.contains('hidden')"), true);
+});
+
+test("LV3 can start either mode, restore immediate per-question feedback, and switch without retaining the table layout", () => {
+  const app = loadApp();
+  const source = { window: {} };
+  vm.runInNewContext(fs.readFileSync(path.join(__dirname, '..', 'data/lv3_questions.js'), 'utf8'), source);
+  app.context.lv3Source = JSON.parse(JSON.stringify(source.window.LV3_QUESTIONS[0]));
+  app.read(`
+    state.level = 'lv3';
+    data = normalizeSections('lv3', [lv3Source]);
+    state.selectedTeils = new Set([data[0].teil]);
+    stopSortAudio = () => {};
+    startRound = source => { state.queue = source; };
+    els.lv3Mode.value = 'table';
+    startSession();
+    showFront(state.sessionSource[0]);
+  `);
+  assert.equal(app.read('state.sessionSource.length'), 1);
+  assert.equal(app.read('state.sessionSource[0].sectionMode'), 'lv3-table-quiz');
+  assert.equal(app.read("els.sortModeView.classList.contains('lv3-table-mode')"), true);
+  app.read(`
+    els.lv3Mode.value = 'cards';
+    startSession();
+    state.current = state.sessionSource[0];
+    showFront(state.current);
+  `);
+  assert.equal(app.read('state.sessionSource.length'), source.window.LV3_QUESTIONS[0].questions.length);
+  assert.equal(app.read('state.current.sectionMode'), 'judgement');
+  assert.equal(app.read("els.sortModeView.classList.contains('hidden')"), true);
+  assert.equal(app.read("els.sortModeView.classList.contains('lv3-table-mode')"), false);
+  assert.deepEqual(Array.from(app.read('getChoices(state.current).map(c => c.value)')), ['R', 'F', 'X']);
+  assert.equal(app.press('1'), true);
+  assert.equal(app.read('state.answeredInRound'), 1);
+  assert.equal(app.read('state.roundMistakes'), 1);
+  assert.match(app.read('els.resultLine.textContent'), /Falsch/);
+  assert.equal(app.read('els.correctAnswer.textContent'), 'F');
+  assert.equal(app.read('els.reviewChinese.textContent'), source.window.LV3_QUESTIONS[0].questions[0].chinese);
+  // A setting change takes effect on the next session; current mistakes retain
+  // single-question practice, even when the selector has changed to table.
+  app.read("els.lv3Mode.value = 'table'; finishRound()");
+  assert.equal(app.read('state.queue.length'), 1);
+  assert.equal(app.read('state.queue[0].sectionMode'), 'judgement');
+  assert.match(app.read('els.roundStrip.textContent'), /只重复错题/);
+  app.read('startSession(); state.current = state.sessionSource[0]; showFront(state.current)');
+  assert.equal(app.read('lv3TableSession.phase'), 'memory');
+  assert.equal(app.read("els.sortModeView.classList.contains('lv3-table-mode')"), true);
+});

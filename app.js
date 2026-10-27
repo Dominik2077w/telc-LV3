@@ -163,6 +163,8 @@ const els = {
   roundStrip: document.querySelector("#roundStrip"),
   lv2Mode: document.querySelector("#lv2Mode"),
   lv2ModeLabel: document.querySelector("#lv2ModeLabel"),
+  lv3Mode: document.querySelector("#lv3Mode"),
+  lv3ModeLabel: document.querySelector("#lv3ModeLabel"),
   lv2GlobalDisplay: document.querySelector("#lv2GlobalDisplay"),
   lv2GlobalDisplayLabel: document.querySelector("#lv2GlobalDisplayLabel"),
   hv1Mode: document.querySelector("#hv1Mode"),
@@ -324,6 +326,10 @@ function bindEvents() {
   els.nextButton.addEventListener("click", nextQuestion);
   els.missButton.addEventListener("click", () => markFlashcardMissed({ advance: true }));
   els.lv2Mode.addEventListener("change", renderLevelChrome);
+  els.lv3Mode.addEventListener("change", () => {
+    renderLevelChrome();
+    if (!state.current) renderIdle();
+  });
   els.hv1Mode.addEventListener("change", () => { renderLevelChrome(); renderTeilList(); });
   els.lv2GlobalDisplay.addEventListener("change", () => {
     if (state.current?.sectionMode === "lv2-global-sort" && !state.complete) {
@@ -451,12 +457,13 @@ function renderLevelChrome() {
   }
 
   els.lv2ModeLabel.classList.toggle("hidden", state.level !== "lv2");
+  els.lv3ModeLabel.classList.toggle("hidden", state.level !== "lv3");
   els.lv2GlobalDisplayLabel.classList.toggle(
     "hidden",
     state.level !== "lv2" || els.lv2Mode.value !== "global-sort"
   );
   els.hv1ModeLabel.classList.toggle("hidden", state.level !== "hv1");
-  document.querySelector("#questionOrderLabel").classList.toggle("hidden", ["lv1", "lv3"].includes(state.level) || state.level === "hv1" && ["listen", "position"].includes(els.hv1Mode.value));
+  document.querySelector("#questionOrderLabel").classList.toggle("hidden", state.level === "lv1" || state.level === "lv3" && els.lv3Mode.value !== "cards" || state.level === "hv1" && ["listen", "position"].includes(els.hv1Mode.value));
 }
 
 function getPracticeSections() {
@@ -522,7 +529,7 @@ function startSession() {
 
   if (state.level === "lv1") {
     state.sessionSource = teilOrdered.map(Lv1Quiz.buildBatch);
-  } else if (state.level === "lv3") {
+  } else if (state.level === "lv3" && els.lv3Mode.value !== "cards") {
     state.sessionSource = teilOrdered.map(Lv3TableQuiz.buildBatch);
   } else if (state.level === "hv2") {
     const orderedSections = teilOrdered.map((section) => ({
@@ -619,7 +626,7 @@ function finishRound() {
   if (els.roundMode.value === "mistakes" && state.mistakes.length) {
     const count = countMistakeQuestions(state.mistakes);
     state.round += 1;
-    els.roundStrip.textContent = ["lv1", "lv3"].includes(state.level)
+    els.roundStrip.textContent = state.level === "lv1" || state.current?.sectionMode === "lv3-table-quiz"
       ? `本轮错 ${count} 题，下一轮先预习对应文章，再重新练习本篇所有题项。`
       : ["hv2", "baustein"].includes(state.level)
       ? `本轮错 ${count} 题，下一轮先复习对应 Teil，再重复错题。`
@@ -1706,7 +1713,8 @@ function renderIdle() {
   els.sessionTitle.textContent = "选择 Teil 后开始练习";
   els.teilBadge.textContent = config.label;
   els.questionBadge.textContent = "Frage";
-  els.germanQuestion.textContent = config.idleText;
+  els.germanQuestion.textContent = state.level === "lv3" && els.lv3Mode.value === "cards"
+    ? "逐题选择 Richtig / Falsch / Nicht im Text，选择后立即查看答案和中文；标题题选择 A/B/C。" : config.idleText;
   els.germanQuestion.classList.remove("field-question");
   els.germanQuestion.classList.remove("baustein-title");
   els.paragraphPanel.innerHTML = "";
