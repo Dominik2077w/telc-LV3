@@ -13,8 +13,8 @@
     "icons": "node scripts/generate-icons.js",
     "build": "node scripts/generate-icons.js && node scripts/build.js",
     "serve": "python3 -m http.server 4173",
-    "check": "node --check app.js && node --check baustein-explanations.js && node --check baustein-grammar.js && node --check lv1-quiz.js && node --check hv1-order.js && node --check hv1-quiz.js && node --check service-worker.js && node --check scripts/check-corpus.js && node --check scripts/generate-icons.js && node --check scripts/build.js && python -m py_compile scripts/update-corpus-2026-09.py",
-    "check:lv1": "node --check lv1-quiz.js && node --test tests/lv1-quiz.test.js",
+    "check": "node --check app.js && node --check baustein-explanations.js && node --check baustein-grammar.js && node --check lv1-quiz.js && node --check lv1-translations.js && node --check hv1-order.js && node --check hv1-quiz.js && node --check service-worker.js && node --check scripts/check-corpus.js && node --check scripts/generate-icons.js && node --check scripts/build.js && python -m py_compile scripts/update-corpus-2026-09.py",
+    "check:lv1": "node --check lv1-quiz.js && node --check lv1-translations.js && node --test tests/lv1-quiz.test.js tests/lv1-translations.test.js",
     "update:lv1:2026-09": "python scripts/update-corpus-2026-09.py --only-lv1"
   }
 }

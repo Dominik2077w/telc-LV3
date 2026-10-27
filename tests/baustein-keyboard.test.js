@@ -51,6 +51,7 @@ function loadApp() {
     BausteinQuiz: require("../baustein-quiz.js"),
     BausteinGrammar: require("../baustein-grammar.js"),
     Lv1Quiz: require("../lv1-quiz.js"),
+    Lv1Translations: require("../lv1-translations.js"),
     Element: ElementStub,
     window: { matchMedia: () => ({ matches: false }), scrollTo() {} },
     document: {
@@ -358,4 +359,39 @@ test("LV1 numbered preview changes only the displayed correct sentence, supports
   app.read("submitLv1PositionStep()");
   assert.equal(app.read("lv1PositionSession.phase"), "practice");
   assert.equal(app.read("state.answeredInRound"), 0);
+});
+
+test("LV1 shows the matched Chinese in list preview, numbered preview, practice, immediate feedback and final review", () => {
+  const app = loadApp();
+  const source = { window: {} };
+  vm.runInNewContext(fs.readFileSync(path.join(__dirname, "..", "data", "lv1_questions.js"), "utf8"), source);
+  app.context.lv1Source = JSON.parse(JSON.stringify(source.window.LV1_QUESTIONS[0]));
+  app.read(`
+    state.level = 'lv1';
+    globalThis.lv1Sections = normalizeSections('lv1', [lv1Source]);
+    state.current = Lv1Quiz.buildBatch(lv1Sections[0]);
+    state.queue = [state.current];
+    els.sortList.querySelector = () => null;
+    showFront(state.current);
+  `);
+  const firstChinese = app.read("lv1Sections[0].questions[0].chinese");
+  assert.ok(firstChinese.startsWith("考古学家"));
+  assert.ok(app.read("els.sortList.textContent").includes(firstChinese));
+  app.read("lv1MemoryDisplay = 'buttons'; renderLv1PositionQuiz(); selectLv1MemoryPosition(2)");
+  assert.ok(app.read("els.sortList.children[1].textContent").includes(app.read("lv1Sections[0].questions[1].chinese")));
+  app.read("submitLv1PositionStep()");
+  const currentChinese = app.read("Lv1Quiz.current(lv1PositionSession).chinese");
+  assert.ok(app.read("els.sortList.textContent").includes(currentChinese));
+  app.read("chooseLv1Position(0)");
+  assert.ok(app.read("els.sortList.textContent").includes(currentChinese));
+  app.read(`
+    submitLv1PositionStep();
+    while (lv1PositionSession.phase === 'practice') {
+      chooseLv1Position(Lv1Quiz.current(lv1PositionSession).position);
+      submitLv1PositionStep();
+    }
+  `);
+  assert.ok(app.read("els.sortList.textContent").includes(firstChinese));
+  assert.ok(app.read("els.sortList.textContent").includes(currentChinese));
+  assert.equal(app.read("state.roundMistakes"), 1);
 });

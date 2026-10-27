@@ -1759,6 +1759,9 @@ select {
 .lv1-memory-answer { padding: 18px; min-height: 190px; border: 1px solid var(--line); border-radius: 10px; background: #fbfaf6; }
 .lv1-memory-answer h3 { margin: 0 0 14px; font-size: 16px; color: var(--muted); }
 .lv1-memory-answer p { margin: 0; }
+.lv1-chinese { margin: 10px 0 0 !important; color: #52645a; font-family: system-ui, sans-serif; font-size: 17px; font-weight: 400; line-height: 1.65; overflow-wrap: anywhere; }
+.lv1-translation-note { margin: 8px 0 0 !important; color: var(--muted); font-size: 12px; line-height: 1.55; overflow-wrap: anywhere; }
+.lv1-position-question > .lv1-chinese { margin-top: 0 !important; }
 .lv1-memory-positions { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 8px; margin: 16px 0; }
 .answer-grid.baustein-choices .answer-button { min-height: 58px; padding: 12px 16px; text-align: left; font-size: 18px; line-height: 1.45; overflow-wrap: anywhere; }
 @media (max-width: 850px) {

@@ -248,10 +248,12 @@ function normalizeSections(level, sections) {
       questions: section.questions.map((question, index) => {
         const split = splitLanguages(question.text || question.raw || "");
         const german = question.german || split.german || question.text || question.raw || "";
-        const chinese = question.chinese || split.chinese || "暂无中文释义";
+        const studyTranslation = level === "lv1" ? Lv1Translations.get({ ...question, teil: section.teil, german }) : null;
+        const chinese = studyTranslation?.chinese || question.chinese || split.chinese || "暂无中文释义";
         const mode = section.mode || (level === "hv1" ? "hv1-match" : "judgement");
         return {
           ...question,
+          ...studyTranslation,
           id: `${level}-${section.teil}-${question.number}-${index}`,
           level,
           teil: section.teil,
@@ -1974,6 +1976,7 @@ function renderLv1MemoryDisplay(session) {
     sentence.lang = "de";
     sentence.textContent = question.german;
     answer.append(sentence);
+    appendLv1Translation(answer, question);
     if (question.sourceAnswer) {
       const letter = document.createElement("p");
       letter.className = "baustein-review-note";
@@ -2007,6 +2010,21 @@ function selectLv1MemoryPosition(position) {
   els.sortList.querySelector('[data-lv1-memory-position="' + position + '"]')?.focus({ preventScroll: true });
 }
 
+function appendLv1Translation(container, question) {
+  if (!question.chinese || question.chinese === "暂无中文释义") return;
+  const chinese = document.createElement("p");
+  chinese.className = "lv1-chinese";
+  chinese.lang = "zh-CN";
+  chinese.textContent = question.chinese;
+  container.append(chinese);
+  if (question.translationNote) {
+    const note = document.createElement("p");
+    note.className = "lv1-translation-note";
+    note.textContent = "译文说明：" + question.translationNote;
+    container.append(note);
+  }
+}
+
 function renderLv1ReferenceList(session) {
   const list = document.createElement("ol");
   list.className = "hv2-review-list";
@@ -2024,6 +2042,7 @@ function renderLv1ReferenceList(session) {
     sentence.lang = "de";
     sentence.textContent = question.german;
     body.append(sentence);
+    appendLv1Translation(body, question);
     if (question.sourceAnswer) {
       const letter = document.createElement("p");
       letter.className = "baustein-review-note";
@@ -2092,7 +2111,9 @@ function renderLv1PositionQuiz() {
       button.addEventListener("click", () => chooseLv1Position(position));
       choices.append(button);
     }
-    card.append(prompt, sentence, choices);
+    card.append(prompt, sentence);
+    appendLv1Translation(card, question);
+    card.append(choices);
     if (answered) {
       const feedback = document.createElement("p");
       feedback.className = "hv1-position-feedback " + (answer.correct ? "is-correct" : "is-wrong");
@@ -2118,7 +2139,9 @@ function renderLv1PositionQuiz() {
       sentence.textContent = answer.question.german;
       const feedback = document.createElement("p");
       feedback.textContent = (answer.correct ? "✓ " : "✗ ") + "你选：" + Lv1Quiz.positionLabel(answer.position) + "；正确：" + Lv1Quiz.positionLabel(answer.expectedPosition);
-      row.append(sentence, feedback);
+      row.append(sentence);
+      appendLv1Translation(row, answer.question);
+      row.append(feedback);
       list.append(row);
     }
     const details = document.createElement("details");
