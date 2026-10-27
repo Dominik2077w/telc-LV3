@@ -27,7 +27,7 @@ const datasets = {
     answerLabel: "Antwort",
     reviewGermanLabel: "Deutsch",
     reviewChineseLabel: "中文",
-    idleText: "选择 LV3 后，按 Richtig / Falsch / Nicht im Text 练习。",
+    idleText: "每篇先按题号预览答案表，再在“对 / 错 / 没有”三列逐行选择，全部选完后统一提交。",
   },
   hv1: {
     label: "HV1",
@@ -104,6 +104,7 @@ const state = {
 };
 let lv1PositionSession = null;
 let lv1MemoryDisplay = "list";
+let lv3TableSession = null;
 
 const els = {
   appShell: document.querySelector("#appShell"),
@@ -215,6 +216,7 @@ syncMobileLayout();
 function selectLevel(level, options = {}) {
   stopSortAudio();
   lv1PositionSession = null;
+  lv3TableSession = null;
   state.level = level;
   data = normalizeSections(level, datasets[level].source);
   state.selectedTeils = new Set(getPracticeSections().filter((section) => section.questions.length).map((section) => section.teil));
@@ -454,7 +456,7 @@ function renderLevelChrome() {
     state.level !== "lv2" || els.lv2Mode.value !== "global-sort"
   );
   els.hv1ModeLabel.classList.toggle("hidden", state.level !== "hv1");
-  document.querySelector("#questionOrderLabel").classList.toggle("hidden", state.level === "lv1" || state.level === "hv1" && ["listen", "position"].includes(els.hv1Mode.value));
+  document.querySelector("#questionOrderLabel").classList.toggle("hidden", ["lv1", "lv3"].includes(state.level) || state.level === "hv1" && ["listen", "position"].includes(els.hv1Mode.value));
 }
 
 function getPracticeSections() {
@@ -520,6 +522,8 @@ function startSession() {
 
   if (state.level === "lv1") {
     state.sessionSource = teilOrdered.map(Lv1Quiz.buildBatch);
+  } else if (state.level === "lv3") {
+    state.sessionSource = teilOrdered.map(Lv3TableQuiz.buildBatch);
   } else if (state.level === "hv2") {
     const orderedSections = teilOrdered.map((section) => ({
       ...section,
@@ -615,8 +619,8 @@ function finishRound() {
   if (els.roundMode.value === "mistakes" && state.mistakes.length) {
     const count = countMistakeQuestions(state.mistakes);
     state.round += 1;
-    els.roundStrip.textContent = state.level === "lv1"
-      ? `本轮错 ${count} 题，下一轮先预习对应文章，再重新练习本篇所有句子。`
+    els.roundStrip.textContent = ["lv1", "lv3"].includes(state.level)
+      ? `本轮错 ${count} 题，下一轮先预习对应文章，再重新练习本篇所有题项。`
       : ["hv2", "baustein"].includes(state.level)
       ? `本轮错 ${count} 题，下一轮先复习对应 Teil，再重复错题。`
       : `本轮错 ${count} 题，下一轮只重复错题。`;
@@ -662,6 +666,7 @@ function finishRound() {
 }
 
 function showFront(question) {
+  els.sortModeView.classList.toggle("lv3-table-mode", question.sectionMode === "lv3-table-quiz");
   els.bausteinExplanation.innerHTML = "";
   els.bausteinExplanation.classList.add("hidden");
   if (question.sectionMode !== "hv1-audio-quiz" && hv1AudioState.session) stopSortAudio();
@@ -670,6 +675,16 @@ function showFront(question) {
   const edition = question.addedIn || question.updatedIn;
   els.corpusUpdateBadge.textContent = edition ? `${edition} ${question.addedIn ? "新增" : "修订"}` : "";
   els.corpusUpdateBadge.classList.toggle("hidden", !edition);
+  if (question.sectionMode === "lv3-table-quiz") {
+    lv3TableSession = Lv3TableQuiz.createSession(question);
+    els.sessionTitle.textContent = "Teil " + question.teil + ": " + question.teilTitle;
+    els.teilBadge.textContent = "Teil " + question.teil;
+    els.questionCard.classList.add("hidden");
+    els.audioPanel.classList.add("hidden");
+    els.sortModeView.classList.remove("hidden");
+    renderLv3TableQuiz();
+    return;
+  }
   if (question.sectionMode === "lv1-position-quiz") {
     lv1PositionSession = Lv1Quiz.createSession(question);
     els.sessionTitle.textContent = "Teil " + question.teil + ": " + question.teilTitle;
@@ -1396,6 +1411,14 @@ function handleKeyboardNavigation(event) {
 
   if (handleBausteinKeyboard(event)) return;
 
+  if (state.current.sectionMode === "lv3-table-quiz") {
+    if (event.key === "Enter" && !isNativeButtonKey(event)) {
+      event.preventDefault();
+      submitLv3TableStep();
+    }
+    return;
+  }
+
   if (state.current.sectionMode === "lv1-position-quiz") {
     if (lv1PositionSession?.phase === "memory" && lv1MemoryDisplay === "buttons" && /^[1-9]$/.test(event.key) && Number(event.key) <= lv1PositionSession.count) {
       event.preventDefault();
@@ -1650,6 +1673,7 @@ function updateStats() {
   els.roundNumber.textContent = state.round;
   const totalQuestions = state.queue.reduce((total, question) => {
     if (["hv2-memory", "baustein-memory"].includes(question.sectionMode)) return total;
+    if (question.sectionMode === "lv3-table-quiz") return total + Lv3TableQuiz.scoredCount(question.questions);
     if (["hv1-audio-quiz", "lv1-position-quiz"].includes(question.sectionMode)) {
       return total + question.questions.length;
     }
@@ -1663,6 +1687,7 @@ function updateStats() {
 
 function countMistakeQuestions(mistakes) {
   return mistakes.reduce((total, question) => {
+    if (question.sectionMode === "lv3-table-quiz") return total + (question.missedCount || Lv3TableQuiz.scoredCount(question.questions));
     if (["hv1-audio-quiz", "lv1-position-quiz"].includes(question.sectionMode)) {
       return total + (question.missedCount || question.questions.length);
     }
@@ -1855,6 +1880,180 @@ function renderBausteinSentence(element, row, masked = false) {
   renderHighlightedText(sentence, before + answer + after, [{ start: before.length, end: before.length + answer.length }]);
   element.textContent = "";
   element.append(sentence);
+}
+
+function makeLv3Choice(question, choice) {
+  const label = document.createElement("label");
+  label.className = "lv3-choice";
+  const input = document.createElement("input");
+  input.type = "radio";
+  input.name = "lv3-" + question.id;
+  input.value = choice.value;
+  input.checked = lv3TableSession.answers[question.id] === choice.value;
+  const text = question.kind === "title" ? choice.label : choice.symbol;
+  input.setAttribute("aria-label", "题 " + question.displayNumber + "：" + (question.kind === "title" ? choice.label : choice.label + " " + choice.symbol));
+  input.addEventListener("change", () => { if (input.checked) chooseLv3Answer(question.id, choice.value); });
+  const caption = document.createElement("span");
+  caption.textContent = text;
+  label.append(input, caption);
+  return label;
+}
+
+function renderLv3TableQuiz() {
+  const session = lv3TableSession;
+  if (!session) return;
+  const practice = session.phase === "practice", result = session.phase === "result";
+  els.sortModeView.classList.remove("hv1-order-mode", "hv1-audio-mode", "hv1-position-mode", "hv2-memory-mode", "lv2-memory-mode");
+  els.sortModeView.classList.add("lv3-table-mode");
+  els.sortList.classList.remove("hv1-order-list");
+  els.sortList.innerHTML = "";
+  els.sortShuffleButton.classList.add("hidden");
+  els.sortSubmitButton.onclick = null;
+  els.sortSubmitButton.disabled = false;
+  els.sessionMode.textContent = "LV3 · 整篇表格";
+  els.questionBadge.textContent = practice ? "整篇作答" : result ? "整篇结果" : "整篇预览";
+  els.sortTeilBadge.textContent = "Teil " + session.batch.teil + " · " + session.batch.teilTitle;
+  const known = Lv3TableQuiz.scoredCount(session.questions), missing = session.rows.length - known;
+  els.sortInstruction.textContent = practice
+    ? "逐行在右侧选择对、错或没有，全部选完后统一提交；提交前可随时修改。标题题单独选 A/B/C。"
+    : result ? "绿色标出正确答案，红色标出选错的项；每行可核对你的选择与正确答案。"
+      : "先按原题顺序查看本篇全部题项，右侧三列标出正确答案。看完后开始整篇练习。";
+  els.sortInfo.textContent = result ? "答对 " + session.result.correct + " / " + session.result.total
+    : session.rows.length + " 个题项 · " + known + " 项计分 · 预习不计分";
+  if (missing) els.sortInfo.textContent += " · " + missing + " 项原文未标答案，不计分（不等于“没有”）";
+  const table = document.createElement("table");
+  table.className = "lv3-answer-table";
+  table.setAttribute("aria-label", "LV3 本篇全部题项与对错没有三列表格");
+  const head = document.createElement("thead");
+  const headingRow = document.createElement("tr");
+  for (const caption of ["题项（原题顺序）", ...Lv3TableQuiz.columns.map(column => column.label + " " + column.symbol)]) {
+    const th = document.createElement("th");
+    th.setAttribute("scope", "col");
+    th.textContent = caption;
+    headingRow.append(th);
+  }
+  head.append(headingRow);
+  const body = document.createElement("tbody");
+  session.rows.forEach((question, index) => {
+    const answer = result ? session.result.rows[index] : null;
+    const tr = document.createElement("tr");
+    if (answer) tr.className = answer.correct === null ? "is-ungraded" : answer.correct ? "is-correct" : "is-wrong";
+    const prompt = document.createElement("th");
+    prompt.setAttribute("scope", "row");
+    const number = document.createElement("strong");
+    number.className = "lv3-row-number";
+    number.textContent = question.displayNumber + (question.kind === "title" ? " · 标题题" : "");
+    const sentence = document.createElement("p");
+    sentence.className = "lv3-row-german";
+    sentence.lang = "de";
+    sentence.textContent = question.german;
+    prompt.append(number, sentence);
+    if (!practice && question.chinese && question.chinese !== "暂无中文释义") {
+      const chinese = document.createElement("p");
+      chinese.className = "lv3-row-chinese";
+      chinese.lang = "zh-CN";
+      chinese.textContent = question.chinese;
+      prompt.append(chinese);
+    }
+    if (answer && question.gradable) {
+      const feedback = document.createElement("p");
+      feedback.className = "lv3-row-feedback";
+      feedback.textContent = (answer.correct ? "✓ " : "✗ ") + "你选：" + Lv3TableQuiz.answerLabel(question, answer.selected) +
+        "；正确：" + Lv3TableQuiz.answerLabel(question, question.answer);
+      prompt.append(feedback);
+    }
+    tr.append(prompt);
+    if (!question.gradable) {
+      const td = document.createElement("td");
+      td.colSpan = 3;
+      td.className = "lv3-ungraded";
+      td.textContent = "原文未标答案 · 不计分";
+      tr.append(td);
+    } else if (question.kind === "title") {
+      const td = document.createElement("td");
+      td.colSpan = 3;
+      const title = document.createElement("p");
+      title.className = "lv3-title-label";
+      title.textContent = "标题题 · A / B / C";
+      td.append(title);
+      if (practice) {
+        const choices = document.createElement("div");
+        choices.className = "lv3-title-choices";
+        choices.setAttribute("role", "group");
+        choices.setAttribute("aria-label", "题 " + question.displayNumber + " 的标题选择");
+        for (const choice of question.choices) choices.append(makeLv3Choice(question, choice));
+        td.append(choices);
+      } else {
+        const correct = document.createElement("p");
+        correct.className = "lv3-correct-title";
+        correct.textContent = "✓ " + question.choices.find(choice => choice.value === question.answer).label;
+        td.append(correct);
+      }
+      if (!question.options?.length) {
+        const note = document.createElement("p");
+        note.className = "lv3-title-note";
+        note.textContent = "原文只提供正确标题，练习记忆其对应字母。";
+        td.append(note);
+      }
+      tr.append(td);
+    } else {
+      for (const column of Lv3TableQuiz.columns) {
+        const td = document.createElement("td");
+        td.className = "lv3-answer-cell";
+        if (practice) td.append(makeLv3Choice(question, column));
+        else {
+          const expected = question.answer === column.value;
+          const wrong = result && !answer.correct && answer.selected === column.value;
+          td.classList.add(expected ? "is-correct-answer" : wrong ? "is-wrong-answer" : "is-empty");
+          td.textContent = expected ? "✓ " + column.symbol : wrong ? "✗ " + column.symbol : "—";
+          td.setAttribute("aria-label", expected ? "正确答案：" + column.label : wrong ? "选错：" + column.label : "未选");
+        }
+        tr.append(td);
+      }
+    }
+    body.append(tr);
+  });
+  table.append(head, body);
+  els.sortList.append(table);
+  els.sortSubmitButton.textContent = result ? (state.currentIndex < state.queue.length ? "下一篇" : "完成本轮") : "我看完了，开始整篇练习";
+  if (practice) updateLv3TableCompletion();
+  els.roundStrip.textContent = result ? "本篇统一提交完成。错题轮回会先预习，再重练涉及的整篇。"
+    : practice ? "提交前不显示正误；每行只选一项，可随时更改。" : "R = 对，F = 错，× = 文中没有提及。预习不计分。";
+  window.scrollTo({ top: 0, behavior: "instant" });
+}
+
+function updateLv3TableCompletion() {
+  const session = lv3TableSession;
+  if (session?.phase !== "practice") return;
+  const total = Lv3TableQuiz.scoredCount(session.questions), answered = Lv3TableQuiz.answeredCount(session);
+  els.sortInfo.textContent = "已选 " + answered + " / " + total + " 项 · 本篇共 " + session.rows.length + " 个题项";
+  els.sortSubmitButton.disabled = !Lv3TableQuiz.isComplete(session);
+  els.sortSubmitButton.textContent = answered === total ? "整篇提交" : "整篇提交（还剩 " + (total - answered) + " 项）";
+}
+
+function chooseLv3Answer(id, value) {
+  if (Lv3TableQuiz.choose(lv3TableSession, id, value)) updateLv3TableCompletion();
+}
+
+function submitLv3TableStep() {
+  const session = lv3TableSession;
+  if (!session) return;
+  if (session.phase === "memory") Lv3TableQuiz.begin(session);
+  else if (session.phase === "practice") {
+    const result = Lv3TableQuiz.submit(session);
+    if (!result) return;
+    state.answeredInRound += result.total;
+    state.roundMistakes += result.total - result.correct;
+    const retry = Lv3TableQuiz.reviewBatch(session);
+    if (retry) state.mistakes.push(retry);
+  } else {
+    lv3TableSession = null;
+    nextQuestion();
+    return;
+  }
+  renderLv3TableQuiz();
+  updateStats();
+  scrollMobilePracticeTop();
 }
 
 function renderBausteinExplanation(question) {
@@ -3388,6 +3587,7 @@ function finishHv1Drag(event) {
 }
 
 function submitSort() {
+  if (state.current?.sectionMode === "lv3-table-quiz") return submitLv3TableStep();
   if (state.current?.sectionMode === "lv1-position-quiz") return submitLv1PositionStep();
   if (["hv2-memory", "baustein-memory"].includes(state.current?.sectionMode)) return nextQuestion();
   if (state.current?.sectionMode === "lv2-global-sort") return submitLv2GlobalSort();

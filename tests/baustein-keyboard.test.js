@@ -52,6 +52,7 @@ function loadApp() {
     BausteinGrammar: require("../baustein-grammar.js"),
     Lv1Quiz: require("../lv1-quiz.js"),
     Lv1Translations: require("../lv1-translations.js"),
+    Lv3TableQuiz: require("../lv3-table.js"),
     Element: ElementStub,
     window: { matchMedia: () => ({ matches: false }), scrollTo() {} },
     document: {
@@ -396,4 +397,34 @@ test("LV1 shows Chinese only in both memory previews, hiding translations and th
   assert.ok(!app.read("els.sortList.textContent").includes(currentChinese));
   assert.ok(!app.read("els.sortList.textContent").includes("译文说明："));
   assert.equal(app.read("state.roundMistakes"), 1);
+});
+
+test("LV3 renders an ordered R/F/X table, hides translations and grading while choosing, and submits once after every graded row", () => {
+  const app = loadApp();
+  const source = { window: {} };
+  vm.runInNewContext(fs.readFileSync(path.join(__dirname, "..", "data", "lv3_questions.js"), "utf8"), source);
+  app.context.lv3Source = JSON.parse(JSON.stringify(source.window.LV3_QUESTIONS[0]));
+  app.read(`
+    state.level = 'lv3';
+    globalThis.lv3Sections = normalizeSections('lv3', [lv3Source]);
+    state.current = Lv3TableQuiz.buildBatch(lv3Sections[0]);
+    state.queue = [state.current];
+    showFront(state.current);
+  `);
+  const chinese = app.read("lv3Sections[0].questions[0].chinese");
+  assert.ok(app.read("els.sortList.textContent").includes(chinese));
+  assert.ok(app.read("els.sortList.textContent").includes("题项（原题顺序）对 R错 F没有 ×"));
+  assert.ok(app.read("els.sortList.textContent").includes("17 · 版本 2"));
+  app.read("submitLv3TableStep()");
+  assert.ok(!app.read("els.sortList.textContent").includes(chinese));
+  assert.ok(!app.read("els.sortList.textContent").includes("正确答案"));
+  assert.equal(app.read("els.sortSubmitButton.disabled"), true);
+  app.read("lv3TableSession.rows.filter(q => q.gradable).forEach(q => chooseLv3Answer(q.id, q.answer))");
+  assert.equal(app.read("state.answeredInRound"), 0);
+  assert.equal(app.read("els.sortSubmitButton.disabled"), false);
+  assert.equal(app.read("els.sortSubmitButton.textContent"), "整篇提交");
+  app.read("submitLv3TableStep()");
+  assert.ok(app.read("els.sortList.textContent").includes(chinese));
+  assert.ok(app.read("els.sortList.textContent").includes("你选："));
+  assert.equal(app.read("state.roundMistakes"), 0);
 });
