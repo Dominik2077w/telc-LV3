@@ -1,4 +1,4 @@
-const CACHE_VERSION = "telc-trainer-20261027-lv1-chinese";
+const CACHE_VERSION = "telc-trainer-20261027-lv1-preview-chinese";
 const CACHE_NAME = `telc-trainer-${CACHE_VERSION}`;
 const APP_SHELL = [
   "./",

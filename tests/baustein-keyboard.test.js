@@ -361,7 +361,7 @@ test("LV1 numbered preview changes only the displayed correct sentence, supports
   assert.equal(app.read("state.answeredInRound"), 0);
 });
 
-test("LV1 shows the matched Chinese in list preview, numbered preview, practice, immediate feedback and final review", () => {
+test("LV1 shows Chinese only in both memory previews, hiding translations and their notes throughout practice and results", () => {
   const app = loadApp();
   const source = { window: {} };
   vm.runInNewContext(fs.readFileSync(path.join(__dirname, "..", "data", "lv1_questions.js"), "utf8"), source);
@@ -381,9 +381,10 @@ test("LV1 shows the matched Chinese in list preview, numbered preview, practice,
   assert.ok(app.read("els.sortList.children[1].textContent").includes(app.read("lv1Sections[0].questions[1].chinese")));
   app.read("submitLv1PositionStep()");
   const currentChinese = app.read("Lv1Quiz.current(lv1PositionSession).chinese");
-  assert.ok(app.read("els.sortList.textContent").includes(currentChinese));
+  assert.ok(!app.read("els.sortList.textContent").includes(currentChinese));
+  assert.ok(!app.read("els.sortList.textContent").includes("译文说明："));
   app.read("chooseLv1Position(0)");
-  assert.ok(app.read("els.sortList.textContent").includes(currentChinese));
+  assert.ok(!app.read("els.sortList.textContent").includes(currentChinese));
   app.read(`
     submitLv1PositionStep();
     while (lv1PositionSession.phase === 'practice') {
@@ -391,7 +392,8 @@ test("LV1 shows the matched Chinese in list preview, numbered preview, practice,
       submitLv1PositionStep();
     }
   `);
-  assert.ok(app.read("els.sortList.textContent").includes(firstChinese));
-  assert.ok(app.read("els.sortList.textContent").includes(currentChinese));
+  assert.ok(!app.read("els.sortList.textContent").includes(firstChinese));
+  assert.ok(!app.read("els.sortList.textContent").includes(currentChinese));
+  assert.ok(!app.read("els.sortList.textContent").includes("译文说明："));
   assert.equal(app.read("state.roundMistakes"), 1);
 });

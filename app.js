@@ -2042,7 +2042,7 @@ function renderLv1ReferenceList(session) {
     sentence.lang = "de";
     sentence.textContent = question.german;
     body.append(sentence);
-    appendLv1Translation(body, question);
+    if (session.phase === "memory") appendLv1Translation(body, question);
     if (question.sourceAnswer) {
       const letter = document.createElement("p");
       letter.className = "baustein-review-note";
@@ -2112,7 +2112,6 @@ function renderLv1PositionQuiz() {
       choices.append(button);
     }
     card.append(prompt, sentence);
-    appendLv1Translation(card, question);
     card.append(choices);
     if (answered) {
       const feedback = document.createElement("p");
@@ -2140,7 +2139,6 @@ function renderLv1PositionQuiz() {
       const feedback = document.createElement("p");
       feedback.textContent = (answer.correct ? "✓ " : "✗ ") + "你选：" + Lv1Quiz.positionLabel(answer.position) + "；正确：" + Lv1Quiz.positionLabel(answer.expectedPosition);
       row.append(sentence);
-      appendLv1Translation(row, answer.question);
       row.append(feedback);
       list.append(row);
     }
