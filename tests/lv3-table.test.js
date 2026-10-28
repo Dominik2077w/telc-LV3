@@ -27,7 +27,7 @@ test("every nonempty LV3 article becomes one ordered table, retaining all 280 ro
     scored += Quiz.scoredCount(session.questions);
   }
   assert.equal(rows, 280);
-  assert.equal(scored, 278);
+  assert.equal(scored, 255);
   const first = Quiz.createSession(Quiz.buildBatch(corpus[0]));
   assert.deepEqual(first.rows.filter(q => q.number === 17).map(q => q.displayNumber), ["17 · 版本 1", "17 · 版本 2"]);
   assert.deepEqual(first.rows.filter(q => q.number === 24).map(q => q.kind), ["judgement", "judgement", "title"]);
@@ -72,11 +72,11 @@ test("source-unmarked items are distinct from X and title questions retain A/B/C
     const session = Quiz.createSession(Quiz.buildBatch(section));
     Quiz.begin(session);
     for (const q of session.rows) {
-      if (!q.gradable) {
+      if (!Quiz.isKnown(q)) {
         missing.push([section.teil, q.number]);
         assert.equal(Quiz.choose(session, q.id, "X"), false);
         assert.equal(Quiz.choose(session, q.id, "A"), false);
-      } else Quiz.choose(session, q.id, q.answer);
+      } else if (q.gradable) Quiz.choose(session, q.id, q.answer);
     }
     const result = Quiz.submit(session);
     assert.equal(result.ungraded, session.rows.filter(q => !q.gradable).length);
@@ -87,6 +87,33 @@ test("source-unmarked items are distinct from X and title questions retain A/B/C
   const title = Quiz.createSession(Quiz.buildBatch(section)).rows.find(q => q.number === 24);
   assert.deepEqual(title.choices.map(q => q.value), ["A", "B", "C"]);
   assert.ok(title.choices[2].label.includes("Kooperation auf Augenhöhe"));
+});
+
+test("every final #24 variant is optional: wrong or omitted answers never affect score, completion, progress, or retries", () => {
+  let references = 0;
+  for (const section of corpus.filter(s => s.questions.length)) {
+    const session = Quiz.createSession(Quiz.buildBatch(section));
+    Quiz.begin(session);
+    for (const row of session.rows) {
+      if (Number(row.number) === 24) {
+        references++;
+        assert.equal(row.gradable, false);
+        if (Quiz.isKnown(row)) Quiz.choose(session, row.id, row.choices.find(c => c.value !== row.answer).value);
+        assert.equal(Quiz.answeredCount(session), session.rows.filter(q => q.gradable && session.answers[q.id]).length);
+      } else Quiz.choose(session, row.id, row.answer);
+    }
+    assert.equal(Quiz.isComplete(session), true);
+    const result = Quiz.submit(session);
+    assert.equal(result.correct, result.total);
+    assert.ok(result.rows.filter(r => Number(r.question.number) === 24).every(r => r.correct === null));
+    assert.equal(Quiz.reviewBatch(session), null);
+    const blank = Quiz.createSession(Quiz.buildBatch(section));
+    Quiz.begin(blank);
+    blank.rows.filter(r => r.gradable).forEach(r => Quiz.choose(blank, r.id, r.answer));
+    assert.equal(Quiz.isComplete(blank), true);
+    assert.equal(Quiz.submit(blank).total, result.total);
+  }
+  assert.equal(references, 25);
 });
 
 test("wrong results retain chosen and correct values and retry the entire article after an unscored preview", () => {

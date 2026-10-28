@@ -442,6 +442,31 @@ test("LV3 settings offer table and original single-question modes with question 
   assert.equal(app.read("els.lv3ModeLabel.classList.contains('hidden')"), true);
 });
 
+test("LV3 single-question mode labels every #24 variant as unscored, allows skip, and keeps their choices out of progress and mistakes", () => {
+  const app = loadApp();
+  app.context.lv3All = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data/lv3_questions.json'), 'utf8'));
+  app.read(`
+    state.level = 'lv3';
+    data = normalizeSections('lv3', lv3All);
+    state.queue = data.flatMap(s => s.questions);
+    globalThis.lastRows = state.queue.filter(q => Number(q.number) === 24);
+    for (const q of lastRows) {
+      state.current = q; showFront(q);
+      if (!els.answerGrid.textContent.includes('跳过本题（不计分）')) throw new Error('Missing skip');
+      answerQuestion(getChoices(q).find(c => c.value !== q.answer).value);
+      if (!els.resultLine.textContent.includes('不计分') || /Richtig|Falsch/.test(els.resultLine.textContent)) throw new Error('Reference graded');
+      showFront(q); answerQuestion('__skip');
+    }
+    realUpdateStats();
+  `);
+  assert.equal(app.read('state.answeredInRound'), 0);
+  assert.equal(app.read('state.roundMistakes'), 0);
+  assert.equal(app.read('state.mistakes.length'), 0);
+  assert.equal(app.read('els.progressText.textContent'), '0/255');
+  app.read("state.current = state.queue[0]; showFront(state.current); answerQuestion(state.current.answer); realUpdateStats()");
+  assert.equal(app.read('els.progressText.textContent'), '1/255');
+});
+
 test("HV3 recall and writing score only once at the right stages and preserve per-item retries", () => {
   const app = loadApp();
   const source = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data/hv3_questions.json'), 'utf8'));

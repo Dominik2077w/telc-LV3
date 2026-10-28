@@ -22,8 +22,11 @@
   function isKnown(question) {
     return choices(question).some(choice => choice.value === question.answer);
   }
+  function isScored(question) {
+    return Number(question.number) !== 24 && isKnown(question);
+  }
   function scoredCount(questions) {
-    return questions.filter(isKnown).length;
+    return questions.filter(isScored).length;
   }
   function buildBatch(section) {
     const questions = section.questions.map((question, index) => ({ ...question,
@@ -41,7 +44,7 @@
     const rows = questions.map(q => {
       const number = String(q.number), version = (seen.get(number) || 0) + 1;
       seen.set(number, version);
-      return { ...q, kind: kind(q), gradable: isKnown(q), choices: choices(q),
+      return { ...q, kind: kind(q), gradable: isScored(q), choices: choices(q),
         displayNumber: number + (counts.get(number) > 1 ? ` · 版本 ${version}` : "") };
     });
     return { batch, questions, rows, phase: "memory", answers: {}, result: null, reviewed: false };
@@ -54,12 +57,12 @@
   function choose(session, id, value) {
     if (!session || session.phase !== "practice") return false;
     const row = session.rows.find(q => q.id === id);
-    if (!row?.gradable || !row.choices.some(choice => choice.value === value) || session.answers[id] === value) return false;
+    if (!row || !isKnown(row) || !row.choices.some(choice => choice.value === value) || session.answers[id] === value) return false;
     session.answers[id] = value;
     return true;
   }
   function answeredCount(session) {
-    return Object.keys(session.answers).length;
+    return session.rows.filter(row => row.gradable && session.answers[row.id]).length;
   }
   function isComplete(session) {
     return Boolean(session && session.phase === "practice" && session.rows.every(row => !row.gradable || session.answers[row.id]));
@@ -84,5 +87,5 @@
     if (!value) return "未标答案";
     return kind(question) === "title" ? value : columns.find(column => column.value === value)?.label + " " + (value === "X" ? "×" : value);
   }
-  return { columns, choices, isKnown, scoredCount, buildBatch, createSession, begin, choose, answeredCount, isComplete, submit, reviewBatch, answerLabel };
+  return { columns, choices, isKnown, isScored, scoredCount, buildBatch, createSession, begin, choose, answeredCount, isComplete, submit, reviewBatch, answerLabel };
 });

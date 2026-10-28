@@ -906,6 +906,17 @@ function showFront(question) {
     button.addEventListener("click", () => answerQuestion(choice.value));
     els.answerGrid.append(button);
   }
+  if (state.level === "lv3" && !Lv3TableQuiz.isScored(question)) {
+    els.promptLabel.textContent = "参考题（不计分）";
+    els.correctAnswerLabel.textContent = "原文参考（不计分）";
+    els.roundStrip.textContent += " · 第 24 题不计对错，可选答或跳过";
+    const skip = document.createElement("button");
+    skip.type = "button";
+    skip.className = "ghost-button";
+    skip.textContent = "跳过本题（不计分）";
+    skip.addEventListener("click", () => answerQuestion("__skip"));
+    els.answerGrid.append(skip);
+  }
 }
 
 function renderParagraphPanel(question) {
@@ -1605,15 +1616,16 @@ function answerQuestion(choice) {
     question.quizAnswered = true;
   }
   const correct = question.answer || null;
+  const unscoredLv3 = state.level === "lv3" && !Lv3TableQuiz.isScored(question);
   const isKnown = Boolean(correct);
   const isCorrect = isKnown && choice === correct;
 
-  state.answeredInRound += 1;
+  if (!unscoredLv3) state.answeredInRound += 1;
   if (isKnown && question.sectionMode === "hv1-match") {
     if (!state.usedAnswers[question.teil]) state.usedAnswers[question.teil] = new Set();
     state.usedAnswers[question.teil].add(correct);
   }
-  if (isKnown && !isCorrect) {
+  if (isKnown && !isCorrect && !unscoredLv3) {
     state.roundMistakes += 1;
     state.mistakes.push(question);
   }
@@ -1623,7 +1635,10 @@ function answerQuestion(choice) {
   setBackReviewLayout(question);
   els.resultLine.className = "result-line";
 
-  if (!isKnown) {
+  if (unscoredLv3) {
+    els.resultLine.classList.add("neutral");
+    els.resultLine.textContent = choice === "__skip" ? "本题不计分 · 已跳过" : `本题不计分 · 你选 ${choice}`;
+  } else if (!isKnown) {
     els.resultLine.classList.add("neutral");
     els.resultLine.textContent = `已选择 ${choice}，本题答案未标注`;
   } else if (isCorrect) {
@@ -1655,7 +1670,8 @@ function answerQuestion(choice) {
   if (question.sectionMode === "baustein-choice") els.nextButton.textContent = "下一题 · Enter";
   els.nextButton.setAttribute("aria-keyshortcuts", "Enter");
   els.roundStrip.textContent =
-    els.roundMode.value === "mistakes" ? "答错的题会进入下一轮。" : "当前是单轮练习。";
+    unscoredLv3 ? "本题不计分，不进入错题轮回。"
+      : els.roundMode.value === "mistakes" ? "答错的题会进入下一轮。" : "当前是单轮练习。";
   if (question.sectionMode === "baustein-choice") els.roundStrip.textContent += " · 按 Enter 或 → 继续";
   updateStats();
   scrollMobilePracticeTop();
@@ -1723,6 +1739,7 @@ function updateStats() {
     if (["hv2-memory", "baustein-memory"].includes(question.sectionMode)) return total;
     if (question.sectionMode === "hv3-outline-quiz") return total + Hv3Quiz.practiceRows(question).length;
     if (question.sectionMode === "lv3-table-quiz") return total + Lv3TableQuiz.scoredCount(question.questions);
+    if (question.level === "lv3" && !Lv3TableQuiz.isScored(question)) return total;
     if (["hv1-audio-quiz", "lv1-position-quiz"].includes(question.sectionMode)) {
       return total + question.questions.length;
     }
@@ -1738,6 +1755,7 @@ function countMistakeQuestions(mistakes) {
   return mistakes.reduce((total, question) => {
     if (question.sectionMode === "hv3-outline-quiz") return total + Hv3Quiz.practiceRows(question).length;
     if (question.sectionMode === "lv3-table-quiz") return total + (question.missedCount || Lv3TableQuiz.scoredCount(question.questions));
+    if (question.level === "lv3" && !Lv3TableQuiz.isScored(question)) return total;
     if (["hv1-audio-quiz", "lv1-position-quiz"].includes(question.sectionMode)) {
       return total + (question.missedCount || question.questions.length);
     }
@@ -2036,14 +2054,15 @@ function renderLv3TableQuiz() {
   els.sessionMode.textContent = "LV3 · 整篇表格";
   els.questionBadge.textContent = practice ? "整篇作答" : result ? "整篇结果" : "整篇预览";
   els.sortTeilBadge.textContent = "Teil " + session.batch.teil + " · " + session.batch.teilTitle;
-  const known = Lv3TableQuiz.scoredCount(session.questions), missing = session.rows.length - known;
+  const known = Lv3TableQuiz.scoredCount(session.questions), missing = session.rows.filter(q => !Lv3TableQuiz.isKnown(q)).length;
   els.sortInstruction.textContent = practice
-    ? "逐行在右侧选择对、错或没有，全部选完后统一提交；提交前可随时修改。标题题单独选 A/B/C。"
-    : result ? "绿色标出正确答案，红色标出选错的项；每行可核对你的选择与正确答案。"
+    ? "选完计分项后统一提交；提交前可修改。第 24 题可不作答，不计入对错。"
+    : result ? "计分项用绿色标出正确答案，红色标出选错的项。第 24 题只展示原文参考，不计对错。"
       : "先按原题顺序查看本篇全部题项，右侧三列标出正确答案。看完后开始整篇练习。";
   els.sortInfo.textContent = result ? "答对 " + session.result.correct + " / " + session.result.total
     : session.rows.length + " 个题项 · " + known + " 项计分 · 预习不计分";
   if (missing) els.sortInfo.textContent += " · " + missing + " 项原文未标答案，不计分（不等于“没有”）";
+  els.sortInfo.textContent += " · 第 24 题不计分";
   const table = document.createElement("table");
   table.className = "lv3-answer-table";
   table.setAttribute("aria-label", "LV3 本篇全部题项与对错没有三列表格");
@@ -2090,7 +2109,20 @@ function renderLv3TableQuiz() {
       const td = document.createElement("td");
       td.colSpan = 3;
       td.className = "lv3-ungraded";
-      td.textContent = "原文未标答案 · 不计分";
+      td.append(Object.assign(document.createElement("p"), { textContent: "第 24 题 · 不计分，可不作答" }));
+      if (!Lv3TableQuiz.isKnown(question)) {
+        td.append(Object.assign(document.createElement("p"), { textContent: "原文未标答案 · 不计分" }));
+      } else if (practice) {
+        const choices = document.createElement("div");
+        choices.className = "lv3-title-choices";
+        choices.setAttribute("role", "group");
+        choices.setAttribute("aria-label", "题 " + question.displayNumber + " 的选答（不计分）");
+        for (const choice of question.choices) choices.append(makeLv3Choice(question, choice));
+        td.append(choices);
+      } else {
+        if (answer?.selected) td.append(Object.assign(document.createElement("p"), { textContent: "你选：" + Lv3TableQuiz.answerLabel(question, answer.selected) + "（不计分）" }));
+        td.append(Object.assign(document.createElement("p"), { textContent: "原文参考：" + Lv3TableQuiz.answerLabel(question, question.answer) }));
+      }
       tr.append(td);
     } else if (question.kind === "title") {
       const td = document.createElement("td");
@@ -2149,7 +2181,7 @@ function updateLv3TableCompletion() {
   const session = lv3TableSession;
   if (session?.phase !== "practice") return;
   const total = Lv3TableQuiz.scoredCount(session.questions), answered = Lv3TableQuiz.answeredCount(session);
-  els.sortInfo.textContent = "已选 " + answered + " / " + total + " 项 · 本篇共 " + session.rows.length + " 个题项";
+  els.sortInfo.textContent = "已选 " + answered + " / " + total + " 项 · 本篇共 " + session.rows.length + " 个题项 · 第 24 题不计分";
   els.sortSubmitButton.disabled = !Lv3TableQuiz.isComplete(session);
   els.sortSubmitButton.textContent = answered === total ? "整篇提交" : "整篇提交（还剩 " + (total - answered) + " 项）";
 }
