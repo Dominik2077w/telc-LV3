@@ -1,0 +1,516 @@
+# Reviewed PDF transcription. @ = unique section ID/title/pages; > = outline heading/before/after.
+# Rows: source number | PDF answer | study translation | PDF pages | optional source caveat.
+# A leading ? marks material retained for reference but excluded from scored practice.
+@1|Wer interessiert sich für Übersetzung|246
+>Wer interessiert sich für den Beruf?||
+65|von Studenten|来自大学生|246
+66|von jüngeren Autoren|来自年轻作家|246
+>Merkmale des Berufs||
+67|ein freier Beruf|一种自由职业|246
+68|der Berufseinstieg für Anfänger schwierig|初学者入行困难|246
+69|die Bezahlung ist so gering|报酬很低|246
+>Notwindige Wörterbücher||
+70|Gute zweisprachige Wörterbücher|优质双语词典|246
+71|einsprachig Wörterbücher mit genauen Bedeutung Angaben|带有精确释义的单语词典|246
+72|Wörterbücher, die Synonyme in allen Bedeutung Varianten enthalten|覆盖各个义项及同义词的词典|246
+>Warum gibt es weniger Übersetzungen aus „Kleinen" Sprachen?||
+73|In den Verlagen gibt es praktisch keine Lektoren, die diese Sprachen mächtig sind|出版社几乎没有精通这些语言的编辑|246
+74|die fehlenden oder hoffnungslos veralteten Wörterbücher|词典缺乏或严重过时|246
+@2|Hochbegabte / Intelligenz|247,248
+>Präsentation|Vermutung: Hochbegabte sind|
+65|besonders erfolgreich|特别成功|247
+>Präsentation|Tatsächlich haben Hochbegabte|
+66|häufig auffallend wenig Erfolg|往往明显成就不多|247
+>Kanadische Neurobiologen|Drei entscheidende Komponenten für Testergebnis:|
+67|Das Kurzzeitgedächtnis|短时记忆|247
+68|logisches Denken|逻辑思维|247
+69|die verbalen Fähigkeiten|语言能力|247
+>Weltweite Fragestellung von Intelligenzforschern|Einfluss der:|
+70|ob die Bildung der Eltern Einfluss auf die Intelligenz ihrer Kinder hat|父母受教育程度是否影响子女智力|247
+>Zusammenhang zwischen Intelligenz und Bildungsniveau|Außerdem an der Entwicklung von Intelligenz beteiligt:|
+71|Umweltfaktoren|环境因素|247
+72|die Gene, also die Vererbung|基因，也就是遗传|247
+>Muttermilch und Intelligenz|Intellektueller Vorsprung gestillter Kinder durch|
+73|intensive Zuwendung|密切的关注与投入|247,248|原文还印有两段重复解释；此处保留明确标出的核心填法。
+>Wahre Intelligenz zeigt sich||
+74|nicht in Tests, sie tut es in unserem Verhalten|不在测试中，而在实际行为中|248
+@3|Begabtenförderung / Heterogenität|248,249
+>Bildungsdebatte|Heterogenität bedeutet, dass Kinder und Jugendliche unterschiedliche|mitbringen.
+65|Voraussetzungen und Potenziale|前提条件与潜能|248
+>Optimale Unterstützung||
+66|verbesserte individuelle Förderung|改进的个别化培养|248
+>Pädagogische Diagnostik|Es geht nicht nur darum,|zu erkennen
+67|Defizite|缺陷|248
+>Pädagogische Diagnostik|sondern auch|
+68|Begabungen und Talente|天赋与才华|248
+>Empfehlung von Wissenschaftlern|Neben individueller Förderung auch|
+69|Netzwerke zu bilden|建立网络|248
+>Schlüssel Kompetenz: selbstreguliertes Lernen|Selbstreguliert lernende sind in der Lage,|
+70|ihre eigenen Stärken und Schwächen realistisch einzuschätzen|切实评估自己的优势与劣势|248
+>Terman Studie|Langzeitstudie zum:|
+71|Lebensweg von Hochbegabten|高智商者的人生轨迹|249
+>Neben Begabung|noch andere Einflussgröße / Faktoren benötigt:|und Sozialisation
+72|Kreativität Motivation|创造力、动机|249
+>Negative Auswirkung auf Begabtenförderung|Druck ist in diesem Zusammenhang niemals|
+73|Förderlich|有益的|249
+>Negative Auswirkung auf Begabtenförderung|Sondern|
+74|schädlich|有害的|249
+@4|Legasthenie|249,250,251
+>Definition von Legasthenie|Störung|
+65|des Erwerbs der Schriftsprache|书写语言习得方面的障碍|249
+>Legasthenie und Intelligenz|kein Zusammenhang, sondern Ursachen der Probleme sind|
+66|lediglich in Teilen anders ausgeprägten Sinneswahrnehmungen|感觉知觉在某些方面存在不同|250
+>Ursachen der Legasthenie||
+67|genetisch bedingt|遗传因素导致|250
+>Symptome: Schwächen im Vorschulalter||
+68|kein Interesse an Symbolen|对符号缺乏兴趣|250
+69|Orientirung Probleme|定向或方位方面的困难|250
+>Symptome: Stärken im Vorschulalter||
+70|in Alltagssituationen auffallend wach und interessiert|日常情境中格外机敏、感兴趣|250
+71|eine hohe Kreativität|很强的创造力|250
+>Diagnose im Schulalter / Fördermaßnahmen||
+?72|wenn es viele Buchstaben und Zahlen in Berührung durchgeführt werden|接触大量字母与数字时|250,251|72、73 的题干与答案重复交错，无法可靠确定对应关系。
+?73|Verbesserung der Aufmerksamkeit|提高注意力|250,251|另印有“Buchstaben und Wörtern oder Zahlen beobachtet werden”；保留存疑，不自动判分。
+>Umgang mit Legasthenikern|Stärken und Begabungen vor Augen führen; Zeit für Tätigkeiten im Symbolbereich geben|
+74|und ihn auf die geringen Fortschritte lobt|肯定和表扬哪怕很小的进步|251
+@5|Mathematische Begabung|251,252
+>Mathematische Begabung|Eine kulturelle Errungenschaft oder|
+65|eine biologische Veranlagung|生物学上的先天禀赋|251
+>Forschungsfrage|Zusammenhang zwischen:|
+66|dem angeborenen Sinn für Zahlen|先天数感|251
+67|der Begabung für Mathematik|数学天赋|251,252
+>Mathematische Begabung nur teilweise angeboren|drei weitere Faktoren:|
+68|Erfahrung|经验|252
+69|Motivation|动机|252
+70|Bildung|教育|252
+>Dyskalkulie bzw. Rechenschwache|ist eine|
+71|Teilleistungsstörung|部分能力障碍|252
+>Kritik am Mathematikunterricht|Kein Bezug zum wirklichen leben. Forderung:|
+72|Mathematik erlebbar machen|让数学可以被真实体验|252
+>Herausforderung|Notwendige theoretische Kenntnisse vermitteln und|
+73|dabei auf die Anwendung fokussieren|同时把重心放在应用上|252
+>Lernprozesse nicht auf Vermittlung von Wissen beschränken|Anspruch:|
+74|selbständiges Denken fördern|促进独立思考|252
+@6|Smalltalk|252,253
+>Präsentation|Durch Smalltalk signalisieren Sie|
+65|ihre grundsätzliche Offenheit|基本的开放态度|252
+66|die Bereitschaft zu kommunizieren|沟通的意愿|252
+>Small Talk wirkt als||
+67|Einstieg ins Gespräch|进入正式交谈的切入点|253
+>Ein notwendig es Merkmal||
+68|eine angemessene Distanz|恰当的社交距离|253
+>Das Wort Konversation|Bedeutung von|
+69|Umgang pflegen und dem gepflegten Umgang miteinander|维系往来、讲求得体相处|253
+>Transportieren über||
+70|Mimik und Gestik|面部表情与肢体动作|253
+71|der Tonfall, Ebenso wichtig ist der Blickkontakt|语调；目光接触同样重要|253
+>Empfehlungen||
+72|Bleiben Sie authentisch|保持真实|253
+73|Stellen Sie Fragen|多提问|253
+74|Urteilen Sie nicht zu schnell|不要过早下判断|253
+@7|Neugier|253,254
+>Wesentliche Bedeutung|Neugier ist:|
+65|Der Motor aller Neuerungen|一切创新的引擎|253
+>Wissbegierde und Neugier|in beiden Begriffen steckt|
+?66|Vorstellung von Gier|贪欲或渴求的观念|253|原文题号 66 标注“待求证”，填法行误印为 65，不作为确定答案。
+>Wissbegierde und Neugier|heißt das|
+67|wie maßloses Verlangen|近乎无节制的渴望|253
+>ursprüngliches Ziel von Neugier||
+68|den Gewinn von Kenntnisse|获取知识|254
+>Sekundäre Neugier|Neugier wird zum|
+69|reinen Selbstzweck|纯粹的自我目的|254
+>Flut an überflüssigen Informationen|Gefahr:|
+70|liegt in der Permanenten Überforderung|持续性的过度负荷|254
+>Burn-out durch Überflutung mit Informationen|mit anderen Worten:|
+71|unkanalisierte Neugier|未被疏导的好奇心|254
+>Schattenseite der Neugier|Sensationslust: Flucht von der|
+72|Banalität des Alltags|日常生活的平庸性|254
+>Experimente mit Tieren|man fand heraus:|
+?73|deutlich mehr Nervenzellen in ihren Programmen|明显更多的神经细胞|254|原德文残句含“in ihren Programmen”，上下文不足，需核对。
+>Konzept „Neurobiologie“|Dabei ist Neugier:|
+?74|die Basis des Lernplans|学习计划的基础|254|原德文 Lernplans 与中文“学习的基础”不完全对应，需核对。
+@8|Benimmregeln|254,255
+>Aufgabe von Regeln||
+65|Dinge zu ordnen und überschaubar zu machen|整理事物，使其清晰可把握|254
+>Vorteile von Benimmregeln|bieten Anhaltspunkte|
+66|Sicherheit|安全感与确定性|254
+67|identitätsstiftend wirken|建立群体认同|255
+>Verschiedene Kulturen haben unterschiedliche Verhaltensregeln|Eine grundlegende Regel:|
+68|Respekt vor dem Gegenüber|尊重对方|255
+>Argument gegen genaue Benimmregeln||
+69|Mangel an Ehrlichkeit|缺乏真诚|255
+>Weiterer Aspekt von Benimmregeln||
+70|Unterliegen zeitlichen Veränderungen|随时间发生变化|255
+>Warum brauchen Kinder ein Mindestmaß an Benimmregeln?|Weil|
+71|sie ihnen das Leben leichter machen|它们能使孩子的生活更轻松|255
+>Erziehung zu gutem Benehmen in der Familie|Die Aufnahmefähigkeit für bestimmte Regeln hängt ab vom|
+72|Entwicklungsniveau des Kindes|孩子的发展水平|255
+>Die Ursache für schlechtes Benehmen ist oft, dass Eltern||
+73|Zu spät mit der Erziehung beginnen|太晚开始进行礼仪教育|255
+>Erziehung zu gutem Benehmen|Entscheidender Faktor:|
+74|Vorbildwirkung|以身作则的作用|255
+@9|Work-Life-Balance|255,256
+>Work-Life-Balance – Begriff|Zustand, in dem|
+65|Arbeit und Privatleben|工作与私人生活|255
+>Industrialisierung – neue Entwicklung|zunehmende Trennung zwischen|
+?66|Industrialisierung, neue Entwicklung|工业化，新的发展|255|原文把标题印在答案位置，题干与填法不完整。
+?67|neue Familie und Beruf|新的家庭与职业|255|原文断裂，不能可靠拼成题干与答案。
+>Maßnahmen für eine gute Work-Life-Balance||
+68|Homeoffice|居家办公|256
+69|betriebsinterne Kinderbetreuung|企业内部儿童托管|256
+>Fehlende Work-Life-Balance – Folgen|Für Arbeitnehmer: Abnahme von|
+70|Leistungsfähigkeiten und Motivation|工作能力与积极性|256
+>Für Arbeitgeber|nachlassende Effizienz von Mitarbeitern|
+?71|rechnen|计算或预料|256|题库仅印 rechnen，缺乏可明确填写的完整题面。
+>Wichtiger Wunsch|Viele Erwerbstätige möchten|
+72|Zeit mit ihren Kindern|与孩子共度时间|256
+>4 Tipps|Arbeiten Sie nicht zu viel. Überdenken Sie Ihre Prioritäten.|
+73|Sprechen Sie offen über Ihre Probleme|坦诚谈论问题|256
+74|Sagen Sie noch mal nein|再说一次“不”|256
+@10|Introversion|256,257
+>Anteil der Introvertierten an der Bevölkerung|Wissenschaftler schätzen, dass|
+65|30 bis 50 Prozent aller Menschen|全部人口的 30%–50%|256
+>Eigenschaft, die Introvertierten zugeschrieben wird||
+66|Zurückhaltung|内敛|256
+67|analytisches Denken und Organisation|分析性思维与条理性|256,257
+>Eigenschaften, die Introvertierte unterscheiden||
+68|Sie brauchen vor dem Reden Zeit zum Nachdenken|说话前需要时间思考|257
+>Außerdem brauchen sie||
+69|Sicherheit, Planung und Berechenbarkeit|安全感、计划与可预测性|257
+>Definition von Carl Gustav Jung||
+70|richten ihre psychische Energie nach innen|把心理能量向内投射|257
+>Hirnregionen||
+?71|Eine stärkere Aktivität in Hirnregionen für Reflexion und Aufmerksamkeit verbunden sind|与反思和注意力相关的脑区活动更活跃|257|原句结构残缺，未给出清楚的填空题面。
+>Introvertierte haben ein stärkeres Bedürfnis||
+72|nach Ruhe und Alleinsein, um Energie zu tanken|需要安静和独处来补充能量|257
+>Hirnregion des Mandelkerns ist zuständig für||
+73|die Verarbeitung von Angst und emotionalen Reizen|处理恐惧和情绪刺激|257
+>Extrovertierte brauchen … wie etwa||
+74|soziale Interaktionen, Aktivitäten, neue Erfahrungen|社交互动、活动与新体验|257
+@11-1|Wie Natur gegen Stress hilft · 版本 1|257,258,259
+>Sehnsucht nach Natur – Ursache|Forscher: Gegentrend zu|
+65|Technisierung und Urbanisierung|技术化与城市化|257
+>Forschungsergebnisse der Psychologie|Aufenthalt in der Natur hält uns gesund, und zwar|
+66|körperlich, psychisch und geistig|身体、心理与精神方面|258
+>Japanische Wissenschaftler|Stresshormone werden abgebaut,|
+67|der Blutdruck sinkt und das Immunsystem wird gestärkt|血压下降，免疫系统增强|258
+>Positive Wirkung auf die Psyche|steigern die Frustrationstoleranz und|
+68|Konzentration, Kreativität und Leistungsfähigkeit|专注力、创造力与工作能力|258
+>Stressmindernde Wirkung einer Umgebung · Alltags-Ferne|Wir erholen uns, wenn wir uns|
+69|von der Routine und den Pflichten losgelöst fühlen|感觉摆脱了惯例与义务|258
+>Faszination|Wenn uns eine Umgebung fasziniert, können wir|und uns leichter erholen
+70|ins Weite schauen|眺望远方|258|该短语在原页 70 后单独一行，按原排版对应保留。
+>Welche Landschaften empfinden wir als schön?|Vorliebe für Landschaften mit|und Wasser und Weite
+?71||原文未给出明确填法|259|71 处仅有省略号；不能从另一版本借用答案。
+>Erklärung Evolutionsbiologen|Eine ausreichende Flüssigkeitsversorgung ist wichtig für|
+72|unser Überleben|我们的生存|259
+>Erholung im Alltag|Um Stresshormone zu senken, genügen bereits|
+73|20 Minuten in der Natur|在大自然中待 20 分钟|259
+>Zwei Tipps|Während wir uns in der Natur aufhalten, sollten wir|
+74|die Natur bewusst wahrnehmen|有意识地感受大自然|259
+@11-2|Wie die Natur gegen Stress hilft · 版本 2|259,260,261
+>Sehnsucht nach Natur – Ursache|Forscher: Gegentrend zu|
+65|Technisierung und Urbanisierung|技术化与城市化|259
+>Forschungsergebnisse der Psychologie|Aufenthalt in der Natur hält uns gesund, und zwar|
+66|körperlich und psychisch|身体与心理方面|259
+>Japanische Wissenschaftler|Stresshormone werden abgebaut,|
+67|Blutdruck und Puls sinken|血压和脉搏下降|260
+>Positive Wirkung auf die Psyche|steigern die Frustrationstoleranz und|
+68|Konzentration, Aufmerksamkeit und Leistungsfähigkeit|专注力、注意力与工作能力|260
+>Stressmindernde Wirkung einer Umgebung · Alltags-Ferne|Wir erholen uns, wenn wir uns|
+69|vom Alltag entfernen|远离日常生活|260
+>Faszination|Wenn uns eine Umgebung fasziniert, können wir|und uns leichter erholen
+70|ins Weite schauen|眺望远方|260|原文把填法印在 70 后的独立一行。
+>Welche Landschaften empfinden wir als schön?|Vorliebe für Landschaften mit|
+71|Wasser und offenen Flächen|水与开阔空间|260
+>Erklärung Evolutionsbiologen|Eine ausreichende Flüssigkeitsversorgung ist wichtig für|
+72|Überleben des Menschen|人类的生存|260
+>Erholung im Alltag|Um Stresshormone zu senken, genügen bereits|
+73|20 Minuten Aufenthalt in der Natur|在大自然中停留 20 分钟|261
+>Zwei Tipps|Während wir uns in der Natur aufhalten, sollten wir|
+74|auf das Smartphone verzichten|不使用智能手机|261
+@12|Kreativität|261,262
+>Was ist Kreativität?|abgeleitet vom lateinischen creare. Kreativität wird in einem weiteren Sinne verstanden als:|oder Schöpferische Kraft oder Einfallsreichtum
+?65||原文该空没有明确填写词|261|65 后只有 oder 与后续同义解释，不能推造空内词。
+>Weit verbreitete Definition|Kreativität ist die Fähigkeit, Neues zu erschaffen, was|
+66|Nutzen hat oder Freude bereitet|有用或带来愉悦|261
+>Kreativität als Fähigkeit · Missverständnis|Kreativität nur verbunden mit|
+67|künstlerischen Tätigkeiten oder in innovativen Prozessen|艺术活动或创新过程|261
+>Drei Beispiele für alltägliche Kreativität|Man ist kreativ, wenn man beim Kochen improvisiert oder|
+68|Pullover strickt oder die Wohnung dekoriert|织毛衣或布置住所|261
+>Kreativitätshindernisse||
+69|Angst und Leistungsdruck|恐惧与绩效压力|261
+70|hemmen vorgefasste Urteile und gedankliche Blockaden die Kreativität|先入为主的判断和思维阻滞会抑制创造力|262
+>Hilfreich bei kreativen Prozessen|Ideen ungefiltert zu produzieren und nicht|
+?71|ohne sie abzublocken oder zu bewerten|不加否定或评判地产出点子|262|nicht 与 ohne 在原文重复否定，题面与填法拼接不清。
+>Persönlichkeitsmerkmale kreativer Menschen|Studie: Kreative Menschen sind u. a.|
+72|autonom, introvertiert und ehrgeizig|自主、内向且有抱负|262|原文此项中文重复了上一题；此处中文为练习补译。
+>Weitere Merkmale · Beharrlichkeit bedeutet|Man ist fähig,|
+73|Ziele ausdauernd zu verfolgen|坚持不懈地追求目标|262
+>Kreativität trainieren: Tipps||
+74|probieren täglich etwas Neues aus|每天尝试新事物|262|原文此项中文重复了“坚韧”解释；此处中文为练习补译。
+@13|Gesund durchs Jahr|262,263
+>Hauptproblem: Licht Mangel macht müde|Tipps:|
+65|Tageslichtlampen mit mindestens 3000 Lux|至少 3000 勒克斯的日光灯|262
+66|In der frischen Luft einen kurzen Spazierengang machen|到户外呼吸新鲜空气，短暂散步|262
+>Weitere Symptome des Winterblues|Verstärker Appetit:|
+67|Kuchen, Schokolade, eine doppeltes Pommes mit extra (Mayo=Mayonnaise) plötzlich gibt es kein Halten mehr|蛋糕、巧克力、加倍薯条配蛋黄酱，食欲难以控制|263
+>Die richtige Ernährung · 题面没有 Ziel||
+68a|durch eine Ernährung, die viele Kohlenhydrate und wenig Eiweiß enthält|通过高碳水、低蛋白的饮食|263|原文明确：没有 Ziel 时使用此填法；与 68b 分别练习。
+>Die richtige Ernährung · 题面有 Ziel|Ziel:|
+68b|Die Konzentration des Glückshormons im Gehirn zu erhöhen|提高大脑中“幸福激素”的浓度|263|原文明确：有 Ziel 时使用此填法；与 68a 分别练习。
+>Ideale Nahrungsmittels|Z. B. Vollkornbrot, Nudeln, Gemüse; Milch mit Honig|
+69|An Omega-3 reiche Fische, Trockenobst|富含 Omega-3 的鱼类、干果|263
+>Die richtige Atmung|Übung:|
+70|Dehnen, räkeln und strecken|伸展、舒展身体并拉伸|263
+>Zeichen für bessere Sauerstoff Versorgen||
+71|Das Gähnen|打哈欠|263
+>Düfte, macht glücklich und beruhige||
+72|frische Minze oder Orangenschalen schnuppern, Vanille|闻清新薄荷、橘皮或香草|263
+>Übung||
+73|10 Mal bewusst ausatmen und einatmen|做 10 次有意识的呼吸|263
+>Evolution|warum war der Witerblues sinnvoll?|
+74|Bei knappen Ressourcen in der kalten Jahreszeit konnte man durch Energiesparmodus die karge Zeit besser übersetzen|寒冷季节资源匮乏时，以省能模式熬过困难时期|263|原文为 übersetzen，疑似笔误，展示保留原词；填写模式可自行核对，不推造标准替换。
+@14|Methoden zur Stressbewältigung · 待定|264
+@15|Märchen und andere fantastische Geschichten|264,265
+>Definition|Märchenerzählen ist|
+65|Teil der Volksliteratar und enthalten magische Element (Hexen,sprechfeude Tiere)|民间文学的一部分，包含魔法元素|264
+>Grimms Märchen|Zielgruppe:|
+66|Ursprünglich für Erwachsene gedacht später für Kinder adaptiert|最初面向成人，后来为儿童改编|264
+>Charakteristika von Volksmärchen|Beginn:|Ende: Und wenn sie nicht gestorben sind.
+67|Es war einmal|从前有个……|264
+>Seit den 1950er Jahren zunehmende Kritik an Märchen|Kritikpunkte:|
+68|Stereotype geschlecherrollen|刻板的性别角色|264
+69|gewaltdarstellungen|暴力描写|264
+>Bruno Bettelheim · Gegenargumente|Märchen für Kinder wertvoll, weil|
+70|Märchen helfen Kindern, Ängste zu bewärtigen und moranische Werbe zu lernen|帮助儿童克服恐惧并学习道德价值|265
+>Märchen vermitteln||
+71|Konflikte lassen sich durch Mut und Klugheit lösen|冲突可以通过勇气和智慧解决|265
+>Textgattung der Fabel|Ziele:|
+72|Lehren vermitteln, unterhaltung bieten und Kritik äußern|传授教训、提供娱乐并表达批评|265
+>Textgattung der Sage|Verbindung von fantastische Motiven mit|
+73|Historisches orten oder Ereignissen|历史地点或事件|265
+>Modernes Literaturgenre Fantasy|orientiert an historischen Epochen, besonders beliebt:|
+74|an europäischem Mitterater|欧洲中世纪|265|中文为练习补译；原德文笔误保留。
+@16|Selbstdisziplin|265,266,267
+>Selbstdisziplin-Definition|Fähigkeit, den eigenen Willen, Emotionen und Impulse zu kontrollieren, um|
+65|Ziele zu erreichen|实现目标|265
+>Andere Bezeichnungen|Selbstdisziplin kann man unter anderem auch bezeichnen als|
+66|Selbstbeherrschung oder Selbstkontrolle|自我克制或自我控制|265,266
+>Marschmallow-Test|Kinder müssen entscheiden, ob sie Marschmallow sofort essen oder zusätzlich später|
+67|ein zweites zu bekommen|之后获得第二块棉花糖|266
+>Das Experiment belegt, dass Menschen mit viel Selbstkontrolle||
+68|langfristig erfolgreicher sind|从长远来看更加成功|266
+>Weitere Studie von US-Psychologen|Schüler mit Selbstdisziplin hatten|
+69|bessere Noten ... und ... bessere Sozialkompetenz|更好的成绩与社交能力|266
+>Selbstdisziplin: in welchen Situationen erforderlich?|Man braucht Selbstdisziplin, wenn man|
+70|gesünder leben möchte ... und ... Abschlussarbeiten schreiben|希望生活更健康、完成毕业论文|266
+>Selbstdisziplin: in welchen Situationen erforderlich?||
+71|regelmäßiges Training|规律训练|266
+>Wichtiger Tipp|Selbstdisziplin lässt sich steigern, indem man|
+72|neue Gewohnheiten einüben|培养新的习惯|267
+>Neue Gewohnheiten einüben – wie?|neue Gewohnheit|
+73|drei Wochen lang durchzuhalten|持续坚持三周|267
+>mit anderen||
+74|miteinander sprechen (oder Unterstützung bekommen)|相互交流或获得支持|267
+@17-1|Resilienz · 版本 1|267,268
+>Resilienz beschreibt||
+65|Fähigkeit Stress und Krisen zu bewältigen|应对压力与危机的能力|267
+>Resiliente Personen|können sich besonders gut|
+66|gut anpassen|很好地适应|267
+67|neu Wege finden|寻找新的解决办法|267
+>Resilienz ist nicht angeboren, sondern||
+68|erlernt|后天习得的|267
+>Resilienz in verschiedenen Situationen|Prüfungen in|
+69|Schule und Universität|学校与大学|268
+>Resilienz in verschiedenen Situationen||
+70|Stress am Arbeitsplatz|工作中的压力|268
+>Eigenschaften resilienter Menschen|Optimismus|
+71|Akzeptanz und Anpassungsfähigkeit|接纳能力和适应能力|268
+72|Selbstreflektion und Lernbereitschaft|自我反思能力与学习意愿|268
+>Praktische Tipps|Übernehmen Sie|
+73|Verantwortung für Wohlbefinden|为自身幸福与健康承担责任|268
+>Selbstfürsorge – Möglichkeiten|Hobbys; Entspannungstechniken wie|
+74|Meditition und Atemübungen|冥想与呼吸练习|268
+@17-2|Resilienz · 版本 2 · 对应存疑|268,269
+>原文题面与填法对应存疑||
+?65|Widerstandsfähigkeit|抵抗能力|268|本版本多处把完整陈述与不对应的填法并置，仅保留原文参考，不进入练习。
+?66|Krisen und Rückschläge|危机与挫折|268|前方题面讲研究起源，无法与此填法对应。
+?67|psychische Gesundheit|心理健康|269|前方题面讲困难环境，无法确认此填法的空位。
+?68|lebenslanger Prozess|终身的过程|269|前方题面讲童年依靠对象，与此填法不对应。
+?69|Schule und Universität|学校与大学|269|前方题面讲忽视问题，与此填法不对应。
+?70|Stress am Arbeitsplatz|工作中的压力|269|前方题面讲遗传因素，与此填法不对应。
+?71|Akzeptanz und Anpassungsfähigkeit|接纳能力与适应能力|269|前方题面讲成年后训练，与此填法不对应。
+?72|Selbstreflexion und Lernbereitschaft|自我反思与学习意愿|269|前方题面讲正念练习，与此填法不对应。
+?73|Verantwortung für Wohlbefinden|为自身幸福与健康负责|269|前方题面讲社交网络，与此填法不对应。
+?74|Meditation und Atemübungen|冥想与呼吸练习|269|前方题面讲身体疾病，与此填法不对应。
+@18-spielen|Bedeutung von Spielen · 原文 Teil 18|269,270
+>Bedeutung von Spielen|Spielen ist ein|
+?65|Natürliches Verhalten|自然行为|269|同题还印有“äußerst Komplexes und vielschichtiges Phänomen”，参考填法冲突。
+>Der Spieltrieb|Das Spiel im ursprünglichen Sinne ist:|
+66|Zweckfrei|无功利目的的|270
+>Der Spieltrieb|Aber|
+67|ganz eindeutig sinnvoll|无疑有意义|270
+>Erfahrung des Miteinanders|Besondere Spielart:|
+68|Rollenspiele|角色扮演|270
+>Kinder lernen, wie Gesellschaft funktioniert|darüber hinaus erarbeiten|
+69|Unterschiedliche Bewältigungsstrategien|不同的应对策略|270
+>Gesellschaftsspiele, Würfel oder Glücksspiele|setzen|voraus
+70|Frustrationstoleranz|挫折容忍度|270
+>Denkspiel|Verlangen taktisches Geschick, Strategie und|
+71|strategisches Denken|战略性思考|270
+>Der Aspekt Wettbewerb tritt zutage||
+72|Im sportlichen Wettkampf|在体育竞赛中|270
+>Primär motivierte Spiele|Erwachsen aus dem|
+73a|angeborenen Spieltrieb|与生俱来的游戏本能|270|原文两个不同填法均编号 73，分别保留为 73a、73b。
+>Sekundär motivierte Spiele|Z. B.|
+73b|didaktische Spieltrieb|教学性游戏|270|与 73a 不同的原文项；原词 Spieltrieb 保留，不静默改写。
+74|therapeutische Spiele|治疗性游戏|270
+@18-schlaf|Schlaf · 原文 Teil 18|270,271,272
+>Schlafverhalten|Vor der industriellen Revolution schlief man nicht acht Stunden am Stück, sondern in:|
+65|zwei Phasen|两个阶段|271
+>Änderung des Schlafrhythmus|Grund: die zunehmende|
+66|künstliche Beleuchtung|人工照明|271
+>Funktion des Schlafes|Theorie: Wir schlafen, um uns zu|
+67|erholen|恢复|271
+>Funktion des Schlafes|Theorie: Wir schlafen, um|
+68|Erinnerungen zu festigen|巩固记忆|271
+>Funktion des Schlafes|Theorie: Schlaf stärkt|
+69|Gedächtnis und Immunsystem|记忆力与免疫系统|271
+>Als wissenschaftlich gesichert gilt, dass Schlafen hilft||
+70|beim Lernen|学习|271
+>Wichtige Informationen werden||
+71|im Gehirn gespeichert|储存在大脑中|271
+>Schlafmangel|gravierende Folgen:|und Aufmerksamkeitsdefizite
+72|Gedächtnisprobleme, Reizbarkeit|记忆问题、易怒|271,272
+>Tipps für besseren Schlaf|Regelmäßige Zeiten einhalten; hilfreich:|
+73|am Abend kein Koffein mehr zu sich nehmen|晚上不再摄入咖啡因|271,272
+>Tipps für besseren Schlaf|außerdem:|
+74|Bildschirme vor dem Schlafengehen vermeiden|睡前避免使用电子屏幕|271,272
+@19-1|Gewohnheiten · 版本 1|272,273
+>Definition Gewohnheiten|Gewohnheiten sind:|
+65|regelmäßige Verhaltensweisen|有规律的行为方式|272
+>Psychologen meinen|Gewohnheiten gehen zurück auf|
+66|assoziative Lernprozesse|联想学习过程|272
+>Entstehung von Gewohnheiten|Viele Gewohnheiten beginnen mit|
+67|bewussten Entscheidungen|有意识的决定|272
+68|absichtlichen Verhalten|有意的行为|272
+>Gewohnheiten werden geändert durch||
+69|Reihe von Wiederholungen|一系列重复|272
+>Positive Auswirkungen von Gewohnheiten|Gewohnheiten helfen bei der Bewältigung|
+70|komplexer Aufgaben helfen|帮助应对复杂任务|273
+>Positive Auswirkungen von Gewohnheiten|vermitteln Gefühl von Sicherheit|
+71|Sie ermöglichen Erfolg bei langfristigen Zielen|帮助实现长期目标|273
+>Nachteile von Gewohnheiten||
+72|sie kosten erstens Zeit|首先会耗费时间|273
+73|Sie erschweren Verhaltensänderungen|使行为改变更加困难|273
+>Gewohnheiten ändern|Wie kann man die Gewohnheiten noch ändern?|
+74|den Kontext zu ändern|改变情境或环境条件|273
+@19-2|Gewohnheiten · 版本 2 · 仅答案|273,274
+>本版本只列填法，未给出对应题面||
+?65|vom Bewusstsein nicht kontrolliert werden|不受意识控制|273|只有答案列表，不能套用 19.1 的不同题号题面。
+?66|assoziative Lernprozesse|联想学习过程|273|原文未提供本版本完整题面，仅作参考。
+?67|bewussten Entscheidungen|有意识的决定|273|原文未提供本版本完整题面，仅作参考。
+?68|absichtlichen Verhalten|有意的行为|273|原文未提供本版本完整题面，仅作参考。
+?69|komplexer Aufgaben helfen|帮助应对复杂任务|273|与 19.1 的编号不同，不混用题面。
+?70|langfristigen Zielen|长期目标|273|与 19.1 的编号不同，不混用题面。
+?71|Sie kosten erstens Zeit|首先会耗费时间|273|原文未提供本版本完整题面，仅作参考。
+?72|Sie erschweren Verhaltensänderungen|使行为改变更加困难|273|原文未提供本版本完整题面，仅作参考。
+?73|den Kontext zu ändern|改变情境或环境条件|273|原文未提供本版本完整题面，仅作参考。
+?74|Man kann auch eine neue Routine schaffen|也可以建立新的日常习惯|273|原文未提供本版本完整题面，仅作参考。
+@20|Staatliche und Private Hochschulen|274,275
+>Grundung von Privaten Hochschulen|Ziel:|
+65|attraktive Alternative zur staatlichen Hochschuledurch kleinere, feinere Variante Schaffung|以更小、更精细的形式提供公立高校的替代选择|274
+>Nachteile von staatlichen Hochschulen|Zu groBe Zahl von Studierenden. Folgen:|
+66|oft abgebrochen oder erst spät abgeschlossen|经常退学或很晚才完成学业|274
+>Unterschiede zwischen privaten und staatlichen Hochschulen|Die Bewerbung um den Studienplatz und|
+67|erhebliche Studiengebuhren|高额学费|274
+>Bewerbungsverfahren an privaten Hochschulen||
+68|durch Gespräche und Tests|通过面试和测试|274
+>Vorteil fur Schuler mit schlechten Noten||
+69|ohne Wartezeit ein Studium zu beginnen|无需等待即可开始大学学习|274
+>Kosten pro Jahr 3000–30000 €|Kritik:|
+70|fur reiche und privilegierte Studierende|面向富裕和享有特权的学生|274
+>Studienfächer|Staatliche Hochschulen:|
+71|Moglichkeit, sich zu spezialisieren (im Lieblingsfach)|能在喜欢的专业领域深化学习|274,275
+>Verschulte Studiengange an privaten Hochschulen||
+72|Studenten haben wenige Freiheit|学生拥有较少自由|275
+>Ausstattung an privaten Hochschulen|gut ausgestattete Raumlichkeiten|
+73|keine langen Wartezeiten auf einen Laborplatz|无需长时间等待实验室位置|275
+>Schneller Berufseinstieg nach Studium an privaten Hochschulen|Grunde:|
+74|Private Hochschulen haben enge Anbindung vonUnternehmen|私立高校与企业联系紧密|275
+@21|Die Funktion von Vorbildern|275,276
+>Vorbild – Definition|Vorbilder: Menschen, an denen man sich orientiert. Außerdem möchte man ihre|
+65|Eigenschaften übernehmen / nachahmen|接受或模仿他们的特征|275
+>Babys und Kleinkinder|wichtigstes Vorbild:|
+66|die Eltern oder andere Bezugspersonen|父母或其他重要的照顾者|275
+>Menschliches Lernverhalten|In den ersten Lebensjahren besonders wichtig:|
+67|Beobachtung und Nachahmung|观察与模仿|275
+>Vorbilder in der Schulzeit und Pubertät|Kinder und Jugendliche orientieren sich eher an|
+68|Gleichaltrigen und Freunden|同龄人与朋友|276
+>In der Pubertät versucht man, sich selbst zu definieren und von||
+69|den Eltern abzugrenzen|与父母划清界限|276
+>Jugendliche: Auswahl von Vorbildern|Wichtige Merkmale: soziales Engagement,|
+70|Verantwortungsbewusstsein und Zuverlässigkeit|责任意识与可靠性|276
+>Wer eignet sich als Vorbild?|Reale Menschen, aber auch|
+?71|Leistungsbereitschaft|积极进取、愿意付出努力|276|此填法不对应“真实的人，但也……”的题面，需核对。
+>Funktionen von Vorbildern|Vorbilder helfen bei der|
+72|Identitätsfindung und Orientierung|形成身份认同并找到方向|276
+>Funktionen von Vorbildern|Vorbilder|
+73|geben Halt und Sicherheit|提供支持和安全感|276
+>Gefahr|Schädlich ist zum Beispiel eine|
+74|unkritische Idealisierung|不加批判的理想化|276
+@22-1|Schokolade · 版本 1|277,278
+>Schokolade: Konsum|Jeder Deutsche konsumiert durchschnittlich:|
+65|rund 9 kg im Jahr|每年大约 9 公斤|277
+>Falsche Annahme||
+66|Schokolade grundsätzlich ungesund sei|巧克力原则上不健康|277
+>Gesundheitsfördernde Effekte|Wer geringe Mengen Schokolade isst,|
+67|hat möglicherweise ein geringeres Risiko für Herz-Kreislauf-Erkrankungen|患心血管疾病的风险可能更低|277
+>Schokolade und Psyche|Gerücht: Wir glauben, dass|
+68|sie direkt antidepressiv wirkt / Schokolade bei schlechter Stimmung hilft|直接抗抑郁，或在心情不好时有帮助|277|原文明确两种填法均可，分别作为可接受的原文填法。
+>Grund: Tryptophan = Vorstufe für Serotonin|Lebensmittel, die viel Tryptophan enthalten: einige Früchte wie|
+69|Bananen|香蕉|277
+>Glücksgefühle beim Naschen|Schokolade weckt bei den meisten|
+70|positive Kindheitserinnerungen und angenehme Gefühle|积极的童年回忆与愉快感受|277,278
+>Als besonders angenehm empfunden werden||
+71|Geruch, Geschmack und das zarte Schmelzen im Mund|气味、味道与在口中柔滑融化的感觉|278
+>Wichtiger negativer Aspekt||
+72|der hohe Zuckergehalt vieler Produkte|许多产品含糖量高|278
+>Probleme der Kleinbauern|Kleinbauern können nur|
+73|ihre Produkte oft nur zu sehr niedrigen Preisen verkaufen|只能以很低的价格出售产品|278
+>Was ist ein Fair-Trade-Siegel?|Waren mit Fair-Trade-Siegel stammen|
+74|aus fairem Handel|来自公平贸易|278
+@22-2|Schokolade · 版本 2|278,279,280
+>Schokolade: Konsum|Jeder Deutsche konsumiert durchschnittlich|
+65|9,5 Kilo (или: fast 10 Kilogramm)|每年 9.5 公斤或将近 10 公斤|278
+>Falsche Annahme|Zusammenhang zwischen Schokolade und|
+66|Übergewicht|超重|278
+>Gesundheitsfördernde Effekte|Wer geringe Mengen Schokolade isst,|
+67|ein geringeres Risiko für Schlaganfälle und Herzinfarkte|患中风与心肌梗死的风险较低|278,279
+>Schokolade und Psyche|Gerücht: Wir glauben, dass Schokolade|
+68|hebt die Stimmung|改善情绪|279
+>Grund: Tryptophan = Vorstufe für Serotonin|Lebensmittel, die viel Tryptophan enthalten: einige Früchte wie|
+69|Bananen, Ananas, Pflaumen|香蕉、菠萝、李子|279
+>Glücksgefühle beim Naschen|Schokolade weckt bei den meisten|
+70|Belohnung in der Kindheit|童年得到奖励的经历|279
+>Als besonders angenehm empfunden werden||
+71|das Gefühl, wenn die Schokolade im Mund schmilzt|巧克力在口中融化时的感觉|279
+>Wichtiger negativer Aspekt||
+72|ausbeuterische Kinderarbeit|剥削性童工劳动|279
+>Probleme der Kleinbauern|Kleinbauern können nur etwa|
+73|6 % vom Preis bekommen|获得商品价格的大约 6%|280
+>Was ist ein Fair-Trade-Siegel?|Waren mit Fair-Trade-Siegel stammen|
+?74|garantierte Mindestpreise für Bauern|为农民保障最低价格|280|参考短语与“stammen”题面无法拼接；只作参考，需核对。
+@23|Vorbild · 原文残缺|280,281
+>本篇题面与填法多处错位，原文参考||
+?65|Babys und Kleinkinder|婴儿与幼儿|280|填法位置出现下一小标题，无法可靠确定对应。
+?66|Eltern und Menschliches Lernverhalten|父母与人类学习行为|280|答案与下一小标题粘连，需核对。
+?67|Helden und... Idolen|英雄与偶像|280|上下文和编号错位，全篇暂作原文参考。
+?68|zu definieren|定义自己|280|本篇题面残缺，未确认完整对应。
+?69|soziales Engagement|社会参与|280|与前后条目编号错位，暂不进入练习。
+?70|und zu entgegen|与……相反|280|原文残句，不自动判分。
+?71|Funktionen von Vorbildern|榜样的功能|281|填法实际为下一小标题，不能作为确定答案。
+?72|Gefahr: schädlich|危险：有害的……|281|原文残缺，不能确定空内内容。
+?73|ist zum Beispiel eine nicht vorhandene oder|例如一种不存在的或……|281|原文残缺，不能确定空内内容。
+?74|falsche Vorbild|错误的榜样|281|前后空位断裂，暂作参考。

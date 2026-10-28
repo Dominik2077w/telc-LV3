@@ -1762,6 +1762,53 @@ select {
 .lv1-chinese { margin: 10px 0 0 !important; color: #52645a; font-family: system-ui, sans-serif; font-size: 17px; font-weight: 400; line-height: 1.65; overflow-wrap: anywhere; }
 .lv1-translation-note { margin: 8px 0 0 !important; color: var(--muted); font-size: 12px; line-height: 1.55; overflow-wrap: anywhere; }
 .lv1-position-question > .lv1-chinese { margin-top: 0 !important; }
+.sort-mode.hv3-mode { width: min(1160px, 100%); min-width: 0; }
+.hv3-heading { margin: 24px 0 12px; font-size: 18px; line-height: 1.5; overflow-wrap: anywhere; }
+.hv3-prompt { font-family: Georgia, "Times New Roman", serif; font-size: 20px; line-height: 1.65; overflow-wrap: anywhere; }
+.hv3-answer { background: #fff0a8; color: #382f13; padding: 1px 4px; border-radius: 3px; overflow-wrap: anywhere; }
+.hv3-blank { color: var(--blue); white-space: normal; }
+.hv3-chinese { color: #52645a; font-size: 16px; line-height: 1.65; overflow-wrap: anywhere; }
+.hv3-preview-table { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 15px; }
+.hv3-preview-table th, .hv3-preview-table td { border: 1px solid var(--line); padding: 12px; text-align: left; vertical-align: top; overflow-wrap: anywhere; }
+.hv3-preview-table thead { background: #edf2ee; }
+.hv3-preview-table th:first-child { width: 54px; }
+.hv3-preview-table .hv3-prompt { font-size: 17px; }
+.hv3-preview-table .is-reference { background: #f5f3ef; }
+.hv3-warning { color: #875f24; font-weight: 700; }
+.hv3-notes { margin-top: 12px; color: var(--muted); font-size: 13px; line-height: 1.6; overflow-wrap: anywhere; }
+.hv3-notes p { margin: 6px 0; }
+.hv3-rating { display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0; }
+.hv3-rating button { min-height: 48px; flex: 1 1 150px; }
+.hv3-rating .is-selected { background: #e7f2ea; border-color: var(--green); color: var(--green-dark); }
+.hv3-counter, .hv3-explanation { color: var(--muted); font-size: 14px; line-height: 1.65; }
+.hv3-writing-row { padding: 18px; margin: 14px 0; border: 1px solid var(--line); border-radius: 10px; background: white; min-width: 0; }
+.hv3-writing-row.is-correct { border-left: 4px solid var(--green); }
+.hv3-writing-row.is-wrong { border-left: 4px solid var(--red); }
+.hv3-input-label { display: block; margin-top: 16px; color: var(--muted); font-size: 13px; }
+.hv3-input { display: block; width: 100%; max-width: 100%; box-sizing: border-box; margin-top: 6px; padding: 12px; border: 1px solid #a6b6ac; border-radius: 8px; font: 17px/1.5 system-ui, sans-serif; resize: vertical; }
+.hv3-input:focus { outline: 2px solid var(--green); outline-offset: 2px; }
+.hv3-feedback { font-weight: 700; color: var(--green-dark); }
+.hv3-your-answer { white-space: pre-wrap; overflow-wrap: anywhere; }
+.hv3-source { margin: 24px 0; color: var(--muted); font-size: 14px; }
+.hv3-source summary { cursor: pointer; min-height: 44px; padding: 10px 0; }
+.hv3-source pre { white-space: pre-wrap; overflow-wrap: anywhere; font: 14px/1.6 system-ui, sans-serif; }
+.hv3-mode .sort-bottom { position: sticky; bottom: 0; z-index: 3; background: white; padding: 12px 0 4px; }
+.hv3-mode #sortSubmitButton { width: 100%; }
+.hv3-mode #sortSubmitButton:disabled { background: #dbe2dd; color: #5f6b63; cursor: not-allowed; opacity: 1; }
+.hv3-score { font-size: 22px; font-weight: 700; color: var(--green-dark); }
+@media (max-width: 850px) {
+  .sort-mode.hv3-mode { padding: 12px; }
+  .hv3-preview-table, .hv3-preview-table tbody { display: block; }
+  .hv3-preview-table thead { display: none; }
+  .hv3-preview-table tr { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); border: 1px solid var(--line); border-radius: 8px; margin: 12px 0; overflow: hidden; }
+  .hv3-preview-table th, .hv3-preview-table td { border: 0; padding: 10px; min-width: 0; font-size: 14px; }
+  .hv3-preview-table th:first-child { width: auto; grid-column: 1 / -1; background: #edf2ee; }
+  .hv3-preview-table td:nth-child(2) { grid-column: 1 / -1; }
+  .hv3-preview-table td:nth-child(3)::before { content: "参考填法"; display: block; color: var(--muted); font-size: 12px; margin-bottom: 6px; }
+  .hv3-preview-table td:nth-child(4)::before { content: "中文"; display: block; font-size: 12px; margin-bottom: 6px; }
+  .hv3-prompt, .hv3-preview-table .hv3-prompt { font-size: 17px; }
+  .hv3-writing-row { padding: 14px; }
+}
 .sort-mode.lv3-table-mode { width: min(1160px, 100%); min-width: 0; }
 .lv3-answer-table { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 17px; }
 .lv3-answer-table th, .lv3-answer-table td { border: 1px solid var(--line); padding: 10px 6px; }

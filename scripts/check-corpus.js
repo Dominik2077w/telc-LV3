@@ -6,9 +6,9 @@ const vm = require("node:vm");
 const root = path.resolve(__dirname, "..");
 const manifest = JSON.parse(fs.readFileSync(path.join(root, "data/corpus-2026-09.json"), "utf8"));
 const datasets = {};
-const expectedNew = { lv1: 30, lv2: 25, lv3: 49, hv1: 66, hv2: 20, baustein: 66, speaking: 91, writing: 5 };
+const expectedNew = { lv1: 30, lv2: 25, lv3: 49, hv1: 66, hv2: 20, hv3: 0, baustein: 66, speaking: 91, writing: 5 };
 assert.equal(manifest.importMode, "replace-from-pdf-only");
-assert.deepEqual(Object.keys(manifest.modules).sort(), ["baustein", "hv1", "hv2", "lv1", "lv2", "lv3", "speaking", "writing"]);
+assert.deepEqual(Object.keys(manifest.modules).sort(), ["baustein", "hv1", "hv2", "hv3", "lv1", "lv2", "lv3", "speaking", "writing"]);
 for (const obsolete of ["lv2_v2", "baustein_grammar"]) {
   assert.ok(!fs.existsSync(path.join(root, `data/${obsolete}_questions.js`)), `Remove unsupported ${obsolete} corpus`);
   assert.ok(!fs.readFileSync(path.join(root, "index.html"), "utf8").includes(`${obsolete}_questions.js`));
@@ -47,7 +47,7 @@ for (const [name, expected] of Object.entries(manifest.modules)) {
       }
     }
   }
-  if (["lv3", "hv1"].includes(name)) {
+  if (["lv3", "hv1", "hv3"].includes(name)) {
     const json = JSON.parse(fs.readFileSync(path.join(root, `data/${name}_questions.json`), "utf8"));
     assert.deepEqual(sections, json, `${name}: browser and JSON copies must agree`);
   }
@@ -99,4 +99,7 @@ assert.ok(datasets.lv2.every(s => s.questions.map(q => q.paragraph).join("") ===
 assert.equal(datasets.hv2.find(s => s.teil === "4").questions.length, 11, "Keep both source variants of #56");
 assert.ok(datasets.hv2.every(s => s.mode === "corpus-card" && s.questions.every(q => !q.options && !q.answer)));
 assert.ok(datasets.speaking.every(s => s.questions.every(q => q.chinese === "原文未提供中文释义")));
-console.log("Corpus validation passed: 8 PDF-only modules, 1800 records, source pages, synchronized JSON, and no legacy question banks.");
+assert.equal(datasets.hv3.flatMap(s => s.questions).length, 272);
+assert.equal(datasets.hv3.flatMap(s => s.questions).filter(q => q.practiceEligible).length, 227);
+assert.ok(datasets.hv3.every(s => s.questions.every(q => q.sourcePages.every(p => p >= 246 && p <= 281))));
+console.log("Corpus validation passed: 9 modules, 2072 source records, source pages, synchronized JSON, and no legacy question banks.");

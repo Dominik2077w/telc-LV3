@@ -11,7 +11,7 @@
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="apple-touch-icon" href="./icons/icon-192.png" />
     <link rel="icon" href="./icons/icon-192.svg" />
-    <link rel="stylesheet" href="./styles.css?v=20261027-lv3-modes" />
+    <link rel="stylesheet" href="./styles.css?v=20261028-hv3" />
   </head>
   <body>
     <div class="level-gate" id="levelGate" role="dialog" aria-modal="true" aria-labelledby="levelGateTitle">
@@ -39,6 +39,10 @@
           <button class="level-choice" type="button" data-level-choice="hv2">
             <strong>HV2</strong>
             <span>听力题干 → 三选一补全</span>
+          </button>
+          <button class="level-choice" type="button" data-level-choice="hv3">
+            <strong>HV3 <span class="new-badge">新增模块</span></strong>
+            <span>整篇预习 → 回忆卡 / 整篇填写</span>
           </button>
           <button class="level-choice" type="button" data-level-choice="writing">
             <strong>作文专题</strong>
@@ -89,6 +93,7 @@
               <button class="level-switch-button" type="button" data-level-switch="lv3">LV3</button>
               <button class="level-switch-button" type="button" data-level-switch="hv1">HV1</button>
               <button class="level-switch-button" type="button" data-level-switch="hv2">HV2</button>
+              <button class="level-switch-button" type="button" data-level-switch="hv3">HV3 · 新增</button>
               <button class="level-switch-button" type="button" data-level-switch="writing">作文专题</button>
               <button class="level-switch-button" type="button" data-level-switch="speaking">口语</button>
               <button class="level-switch-button" type="button" data-level-switch="baustein">Baustein</button>
@@ -146,6 +151,13 @@
                 <option value="listen">先记顺序 → 听音连线配对</option>
                 <option value="position">先记顺序 → 随机逐题选位置</option>
                 <option value="cards">逐句复习（按新 PDF）</option>
+              </select>
+            </label>
+            <label id="hv3ModeLabel" class="hidden">
+              <span>HV3 练习方式</span>
+              <select id="hv3Mode">
+                <option value="cards">逐题回忆 · 翻面后确认记得与否</option>
+                <option value="writing">整篇填写 · 提交后逐项核对</option>
               </select>
             </label>
             <label>
@@ -252,6 +264,9 @@
     <script src="./baustein-grammar.js?v=20261027-lv3-modes"></script>
     <script src="./baustein-quiz.js?v=20261027-lv3-modes"></script>
     <script src="./baustein-study.js?v=20261027-lv3-modes"></script>
-    <script src="./app.js?v=20261027-lv3-modes"></script>
+    <script src="./data/hv3_questions.js?v=20261028-hv3"></script>
+    <script src="./hv3-quiz.js?v=20261028-hv3"></script>
+    <script src="./hv3-view.js?v=20261028-hv3"></script>
+    <script src="./app.js?v=20261028-hv3"></script>
   </body>
 </html>

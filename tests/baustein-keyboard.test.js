@@ -53,6 +53,7 @@ function loadApp() {
     Lv1Quiz: require("../lv1-quiz.js"),
     Lv1Translations: require("../lv1-translations.js"),
     Lv3TableQuiz: require("../lv3-table.js"),
+    Hv3Quiz: require("../hv3-quiz.js"),
     Element: ElementStub,
     window: { matchMedia: () => ({ matches: false }), scrollTo() {} },
     document: {
@@ -439,6 +440,47 @@ test("LV3 settings offer table and original single-question modes with question 
   assert.match(app.read("els.germanQuestion.textContent"), /逐题选择.*立即查看/);
   app.read("state.level = 'lv2'; renderLevelChrome()");
   assert.equal(app.read("els.lv3ModeLabel.classList.contains('hidden')"), true);
+});
+
+test("HV3 recall and writing score only once at the right stages and preserve per-item retries", () => {
+  const app = loadApp();
+  const source = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data/hv3_questions.json'), 'utf8'));
+  app.context.hv3Source = source.find(s => s.teil === '16');
+  app.read(`
+    renderHv3Quiz = () => {};
+    state.level = 'hv3';
+    data = normalizeSections('hv3', [hv3Source]);
+    els.newOnly.checked = true;
+    state.queue = [Hv3Quiz.buildBatch(data[0])];
+    state.current = state.queue[0];
+    hv3Session = Hv3Quiz.createSession(state.current);
+  `);
+  assert.equal(app.read('getPracticeSections().length'), 1);
+  app.read('rateHv3(true)');
+  assert.equal(app.read('state.answeredInRound'), 0);
+  app.read('submitHv3Step(); submitHv3Step(); rateHv3(false); rateHv3(true)');
+  assert.equal(app.read('state.answeredInRound'), 1);
+  assert.equal(app.read('state.roundMistakes'), 1);
+  app.read(`
+    submitHv3Step();
+    for (let i = 1; i < 10; i++) { submitHv3Step(); rateHv3(true); submitHv3Step(); }
+    settleHv3Result();
+  `);
+  assert.equal(app.read('state.answeredInRound'), 10);
+  assert.equal(app.read('state.mistakes.length'), 1);
+  assert.equal(app.read('countMistakeQuestions(state.mistakes)'), 1);
+  app.read(`
+    state.answeredInRound = 0; state.roundMistakes = 0; state.mistakes = [];
+    hv3Session = Hv3Quiz.createSession(Hv3Quiz.buildBatch(data[0], 'writing'));
+    submitHv3Step();
+    hv3Session.questions.forEach((q, i) => Hv3Quiz.saveDraft(hv3Session, q.id, i ? q.answerText : 'meine Ziele verwirklichen'));
+    submitHv3Step(); submitHv3Step();
+  `);
+  assert.equal(app.read('state.answeredInRound'), 0);
+  app.read('Hv3Quiz.decide(hv3Session, hv3Session.questions[0].id, true); submitHv3Step(); settleHv3Result()');
+  assert.equal(app.read('state.answeredInRound'), 10);
+  assert.equal(app.read('state.roundMistakes'), 0);
+  assert.equal(app.read('state.mistakes.length'), 0);
 });
 
 test("LV3 can start either mode, restore immediate per-question feedback, and switch without retaining the table layout", () => {

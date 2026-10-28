@@ -872,11 +872,22 @@ def writing(pages):
     return result
 
 
+def hv3(pages):
+    from hv3_corpus import build
+    return build(pages)
+
+
+def hv3_pdf_pages(pdf):
+    import fitz
+    with fitz.open(pdf) as document:
+        return [document[i].get_text(sort=True) if 245 <= i < 281 else "" for i in range(329)]
+
+
 def validate(datasets):
     expected = {"lv1": (22, 126), "lv2": (26, 130), "lv3": (23, 280), "hv1": (21, 170), "hv2": (19, 199),
-                "baustein": (21, 456), "speaking": (4, 311), "writing": (64, 128)}
+                "hv3": (28, 272), "baustein": (21, 456), "speaking": (4, 311), "writing": (64, 128)}
     ranges = {"lv1": (20, 54), "lv2": (55, 129), "lv3": (130, 149), "baustein": (150, 181), "hv1": (182, 227),
-              "hv2": (228, 245), "speaking": (282, 305), "writing": (306, 329)}
+              "hv2": (228, 245), "hv3": (246, 281), "speaking": (282, 305), "writing": (306, 329)}
     for name, data in datasets.items():
         assert (len(data), sum(len(s["questions"]) for s in data)) == expected[name], name
         keys = [str(s["teil"]) for s in data]
@@ -933,8 +944,9 @@ def main():
     parser.add_argument("--dry-run", action="store_true", help="Report changes without writing")
     parser.add_argument("--only-hv1", action="store_true", help="Replace HV1 exclusively from PDF pages 182-227")
     parser.add_argument("--only-lv1", action="store_true", help="Import LV1 exclusively from PDF pages 20-54 (requires PyMuPDF)")
+    parser.add_argument("--only-hv3", action="store_true", help="Import reviewed HV3 outlines exclusively from PDF pages 246-281")
     args = parser.parse_args()
-    if args.only_hv1 and args.only_lv1:
+    if sum([args.only_hv1, args.only_lv1, args.only_hv3]) > 1:
         parser.error("Choose only one module filter")
     from pypdf import PdfReader
     if hashlib.sha256(args.pdf.read_bytes()).hexdigest() != EXPECTED_SHA256:
@@ -942,14 +954,15 @@ def main():
     reader = PdfReader(args.pdf)
     if len(reader.pages) != 329:
         raise ValueError("This reviewed import expects the 329-page September 2026 edition.")
-    pages = [(p.extract_text() or "") if not args.only_lv1 and (not args.only_hv1 or 181 <= i < 227) else ""
+    pages = [(p.extract_text() or "") if not args.only_lv1 and not args.only_hv3 and (not args.only_hv1 or 181 <= i < 227) else ""
              for i, p in enumerate(reader.pages)]
     # No existing question file is read to construct the replacement.
-    parsers = {"lv1": lv1, "lv2": lv2, "lv3": lv3, "hv1": hv1, "hv2": hv2,
+    parsers = {"lv1": lv1, "lv2": lv2, "lv3": lv3, "hv1": hv1, "hv2": hv2, "hv3": hv3,
                "baustein": baustein, "speaking": speaking, "writing": writing}
-    names = ["hv1"] if args.only_hv1 else ["lv1"] if args.only_lv1 else list(parsers)
+    names = ["hv1"] if args.only_hv1 else ["lv1"] if args.only_lv1 else ["hv3"] if args.only_hv3 else list(parsers)
     lv1_pages = lv1_pdf_pages(args.pdf) if "lv1" in names else None
-    datasets = {name: parsers[name](lv1_pages if name == "lv1" else pages) for name in names}
+    hv3_pages = hv3_pdf_pages(args.pdf) if "hv3" in names else None
+    datasets = {name: parsers[name](lv1_pages if name == "lv1" else hv3_pages if name == "hv3" else pages) for name in names}
     validate(datasets)
     if "hv1" in datasets:
         preserve_matching_audio(datasets["hv1"])
@@ -963,12 +976,12 @@ def main():
                          "changed": not output.exists() or output.read_text(encoding="utf-8") != script}
         if not args.dry_run:
             output.write_text(script, encoding="utf-8")
-            if name in ("lv3", "hv1"):
+            if name in ("lv3", "hv1", "hv3"):
                 (ROOT / "data" / f"{name}_questions.json").write_text(text + "\n", encoding="utf-8")
     print(json.dumps(summary, ensure_ascii=False, indent=2))
     if not args.dry_run:
         manifest_path = ROOT / "data" / "corpus-2026-09.json"
-        modules = json.loads(manifest_path.read_text(encoding="utf-8"))["modules"] if args.only_hv1 or args.only_lv1 else {}
+        modules = json.loads(manifest_path.read_text(encoding="utf-8"))["modules"] if args.only_hv1 or args.only_lv1 or args.only_hv3 else {}
         modules.update({n: {k: v for k, v in s.items() if k in ("sections", "questions")} for n, s in summary.items()})
         manifest = {"id": SOURCE_ID, "filename": SOURCE_NAME, "pages": len(pages),
                     "sha256": EXPECTED_SHA256, "importMode": "replace-from-pdf-only",

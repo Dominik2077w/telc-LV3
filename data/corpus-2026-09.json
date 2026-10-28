@@ -40,6 +40,10 @@
     "lv1": {
       "sections": 22,
       "questions": 126
+    },
+    "hv3": {
+      "sections": 28,
+      "questions": 272
     }
   }
 }

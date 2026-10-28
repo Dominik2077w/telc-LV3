@@ -49,6 +49,16 @@ const datasets = {
     reviewChineseLabel: "中文",
     idleText: "选择 HV2 后，从三个补全选项中选择与题干匹配的一项。",
   },
+  hv3: {
+    label: "HV3",
+    title: "HV3 提纲填空 Trainer",
+    source: window.HV3_QUESTIONS || [],
+    promptLabel: "讲座提纲",
+    answerLabel: "参考填法",
+    reviewGermanLabel: "原文填法",
+    reviewChineseLabel: "中文",
+    idleText: "每篇先看提纲、填法与中文，再逐题回忆；也可在左下角选择整篇填写。存疑项保留原文参考，不进入练习。",
+  },
   writing: {
     label: "作文专题",
     title: "作文专题 Trainer",
@@ -105,6 +115,7 @@ const state = {
 let lv1PositionSession = null;
 let lv1MemoryDisplay = "list";
 let lv3TableSession = null;
+let hv3Session = null;
 
 const els = {
   appShell: document.querySelector("#appShell"),
@@ -169,6 +180,8 @@ const els = {
   lv2GlobalDisplayLabel: document.querySelector("#lv2GlobalDisplayLabel"),
   hv1Mode: document.querySelector("#hv1Mode"),
   hv1ModeLabel: document.querySelector("#hv1ModeLabel"),
+  hv3Mode: document.querySelector("#hv3Mode"),
+  hv3ModeLabel: document.querySelector("#hv3ModeLabel"),
   sortModeView: document.querySelector("#sortModeView"),
   sortList: document.querySelector("#sortList"),
   sortTeilBadge: document.querySelector("#sortTeilBadge"),
@@ -219,6 +232,7 @@ function selectLevel(level, options = {}) {
   stopSortAudio();
   lv1PositionSession = null;
   lv3TableSession = null;
+  hv3Session = null;
   state.level = level;
   data = normalizeSections(level, datasets[level].source);
   state.selectedTeils = new Set(getPracticeSections().filter((section) => section.questions.length).map((section) => section.teil));
@@ -331,6 +345,7 @@ function bindEvents() {
     if (!state.current) renderIdle();
   });
   els.hv1Mode.addEventListener("change", () => { renderLevelChrome(); renderTeilList(); });
+  els.hv3Mode.addEventListener("change", renderLevelChrome);
   els.lv2GlobalDisplay.addEventListener("change", () => {
     if (state.current?.sectionMode === "lv2-global-sort" && !state.complete) {
       els.sortInfo.textContent = getLv2GlobalInstruction();
@@ -463,12 +478,14 @@ function renderLevelChrome() {
     state.level !== "lv2" || els.lv2Mode.value !== "global-sort"
   );
   els.hv1ModeLabel.classList.toggle("hidden", state.level !== "hv1");
-  document.querySelector("#questionOrderLabel").classList.toggle("hidden", state.level === "lv1" || state.level === "lv3" && els.lv3Mode.value !== "cards" || state.level === "hv1" && ["listen", "position"].includes(els.hv1Mode.value));
+  els.hv3ModeLabel.classList.toggle("hidden", state.level !== "hv3");
+  document.querySelector(".new-only").classList.toggle("hidden", state.level === "hv3");
+  document.querySelector("#questionOrderLabel").classList.toggle("hidden", ["lv1", "hv3"].includes(state.level) || state.level === "lv3" && els.lv3Mode.value !== "cards" || state.level === "hv1" && ["listen", "position"].includes(els.hv1Mode.value));
 }
 
 function getPracticeSections() {
   const sections = state.level === "hv2" ? Hv2Quiz.buildSections(data) : data;
-  if (!els.newOnly.checked) return sections;
+  if (state.level === "hv3" || !els.newOnly.checked) return sections;
   return sections.map((section) => ({ ...section, questions: section.questions.filter((question) => question.addedIn === "2026.9") }))
     .filter((section) => section.questions.length);
 }
@@ -495,7 +512,9 @@ function renderTeilList() {
     const choiceCount = state.level === "baustein"
       ? BausteinStudy.buildReviewRows(section).filter(BausteinQuiz.isSupported).length : null;
     const reviewOnly = section.mode === "corpus-card" && state.level !== "baustein" && !(state.level === "hv1" && ["listen", "position"].includes(els.hv1Mode.value) && Hv1Order.canPractice(section.questions));
-    const modeLabel = state.level === "baustein" && section.questions.length ? choiceCount ? " · 四选一" : " · 仅预览" : reviewOnly ? " · 复习卡" : "";
+    const hv3Count = state.level === "hv3" ? section.questions.filter(Hv3Quiz.supported).length : null;
+    const modeLabel = hv3Count !== null && section.questions.length ? ` · 可练 ${hv3Count} / 参考 ${section.questions.length - hv3Count}`
+      : state.level === "baustein" && section.questions.length ? choiceCount ? " · 四选一" : " · 仅预览" : reviewOnly ? " · 复习卡" : "";
     name.innerHTML = `<strong>Teil ${section.teil}</strong><span>${escapeHtml(section.title)}${modeLabel}</span>`;
     const added = section.questions.filter((question) => question.addedIn === "2026.9").length;
     if (added) {
@@ -529,6 +548,8 @@ function startSession() {
 
   if (state.level === "lv1") {
     state.sessionSource = teilOrdered.map(Lv1Quiz.buildBatch);
+  } else if (state.level === "hv3") {
+    state.sessionSource = teilOrdered.map(section => Hv3Quiz.buildBatch(section, els.hv3Mode.value));
   } else if (state.level === "lv3" && els.lv3Mode.value !== "cards") {
     state.sessionSource = teilOrdered.map(Lv3TableQuiz.buildBatch);
   } else if (state.level === "hv2") {
@@ -626,7 +647,9 @@ function finishRound() {
   if (els.roundMode.value === "mistakes" && state.mistakes.length) {
     const count = countMistakeQuestions(state.mistakes);
     state.round += 1;
-    els.roundStrip.textContent = state.level === "lv1" || state.current?.sectionMode === "lv3-table-quiz"
+    els.roundStrip.textContent = state.level === "hv3"
+      ? `本轮 ${count} 项未掌握，下一轮先预习涉及文章，再练未掌握的题项。`
+      : state.level === "lv1" || state.current?.sectionMode === "lv3-table-quiz"
       ? `本轮错 ${count} 题，下一轮先预习对应文章，再重新练习本篇所有题项。`
       : ["hv2", "baustein"].includes(state.level)
       ? `本轮错 ${count} 题，下一轮先复习对应 Teil，再重复错题。`
@@ -673,6 +696,7 @@ function finishRound() {
 }
 
 function showFront(question) {
+  els.sortModeView.classList.toggle("hv3-mode", question.sectionMode === "hv3-outline-quiz");
   els.sortModeView.classList.toggle("lv3-table-mode", question.sectionMode === "lv3-table-quiz");
   els.bausteinExplanation.innerHTML = "";
   els.bausteinExplanation.classList.add("hidden");
@@ -682,6 +706,14 @@ function showFront(question) {
   const edition = question.addedIn || question.updatedIn;
   els.corpusUpdateBadge.textContent = edition ? `${edition} ${question.addedIn ? "新增" : "修订"}` : "";
   els.corpusUpdateBadge.classList.toggle("hidden", !edition);
+  if (question.sectionMode === "hv3-outline-quiz") {
+    hv3Session = Hv3Quiz.createSession(question);
+    els.questionCard.classList.add("hidden");
+    els.audioPanel.classList.add("hidden");
+    els.sortModeView.classList.remove("hidden");
+    renderHv3Quiz(true);
+    return;
+  }
   if (question.sectionMode === "lv3-table-quiz") {
     lv3TableSession = Lv3TableQuiz.createSession(question);
     els.sessionTitle.textContent = "Teil " + question.teil + ": " + question.teilTitle;
@@ -1418,6 +1450,15 @@ function handleKeyboardNavigation(event) {
 
   if (handleBausteinKeyboard(event)) return;
 
+  if (state.current.sectionMode === "hv3-outline-quiz") {
+    if (hv3Session.mode === "cards" && hv3Session.phase === "revealed" && ["1", "2"].includes(event.key)) {
+      event.preventDefault(); rateHv3(event.key === "1");
+    } else if (["Enter", " "].includes(event.key) && !isNativeButtonKey(event)) {
+      event.preventDefault(); submitHv3Step();
+    }
+    return;
+  }
+
   if (state.current.sectionMode === "lv3-table-quiz") {
     if (event.key === "Enter" && !isNativeButtonKey(event)) {
       event.preventDefault();
@@ -1680,6 +1721,7 @@ function updateStats() {
   els.roundNumber.textContent = state.round;
   const totalQuestions = state.queue.reduce((total, question) => {
     if (["hv2-memory", "baustein-memory"].includes(question.sectionMode)) return total;
+    if (question.sectionMode === "hv3-outline-quiz") return total + Hv3Quiz.practiceRows(question).length;
     if (question.sectionMode === "lv3-table-quiz") return total + Lv3TableQuiz.scoredCount(question.questions);
     if (["hv1-audio-quiz", "lv1-position-quiz"].includes(question.sectionMode)) {
       return total + question.questions.length;
@@ -1694,6 +1736,7 @@ function updateStats() {
 
 function countMistakeQuestions(mistakes) {
   return mistakes.reduce((total, question) => {
+    if (question.sectionMode === "hv3-outline-quiz") return total + Hv3Quiz.practiceRows(question).length;
     if (question.sectionMode === "lv3-table-quiz") return total + (question.missedCount || Lv3TableQuiz.scoredCount(question.questions));
     if (["hv1-audio-quiz", "lv1-position-quiz"].includes(question.sectionMode)) {
       return total + (question.missedCount || question.questions.length);
@@ -1888,6 +1931,78 @@ function renderBausteinSentence(element, row, masked = false) {
   renderHighlightedText(sentence, before + answer + after, [{ start: before.length, end: before.length + answer.length }]);
   element.textContent = "";
   element.append(sentence);
+}
+
+function renderHv3Quiz(scroll = false) {
+  const session = hv3Session;
+  if (!session) return;
+  const position = window.scrollY;
+  els.sortModeView.classList.remove("hv1-order-mode", "hv1-audio-mode", "hv1-position-mode", "hv2-memory-mode", "lv2-memory-mode", "lv3-table-mode");
+  els.sortList.classList.remove("hv1-order-list");
+  els.sortSubmitButton.onclick = null;
+  els.sortShuffleButton.classList.add("hidden");
+  els.sortSubmitButton.disabled = false;
+  const mode = session.mode === "writing" ? "整篇填写" : "逐题回忆";
+  els.sessionMode.textContent = "HV3 · " + mode;
+  els.sessionTitle.textContent = `Teil ${session.batch.teil}: ${session.batch.teilTitle}`;
+  els.sortTeilBadge.textContent = `Teil ${session.batch.teil} · ${session.batch.teilTitle}`;
+  els.questionBadge.textContent = session.phase === "memory" ? "整篇预习" : mode;
+  els.sortInstruction.textContent = session.phase === "memory" ? "先按顺序记住本篇提纲与参考填法，再开始练习。"
+    : session.mode === "writing" ? "保留提纲结构，填写后整篇核对；不同表达由你确认。" : "先回忆，再翻面，自行确认是否记得。";
+  const count = session.questions.length;
+  els.sortInfo.textContent = `本篇 ${session.rows.length} 个原文项 · 本轮练 ${count} 项 · ${session.rows.filter(q => !Hv3Quiz.supported(q)).length} 项仅参考`;
+  Hv3View.render(session, els.sortList, { rate: rateHv3,
+    draft: (id, text) => Hv3Quiz.saveDraft(session, id, text),
+    decide: (id, correct) => { if (Hv3Quiz.decide(session, id, correct)) renderHv3Quiz(); } });
+  if (session.phase === "memory") els.sortSubmitButton.textContent = count ? "我看完了，开始本篇练习" : "下一篇（本篇仅参考）";
+  else if (session.phase === "result") els.sortSubmitButton.textContent = state.currentIndex < state.queue.length ? "下一篇" : "完成本轮";
+  else if (session.phase === "checking") {
+    const pending = Hv3Quiz.pending(session);
+    els.sortSubmitButton.disabled = pending > 0;
+    els.sortSubmitButton.textContent = pending ? `还有 ${pending} 项需你确认` : "确认结果，完成本篇";
+  } else if (session.mode === "writing") els.sortSubmitButton.textContent = "整篇提交";
+  else {
+    els.sortSubmitButton.disabled = session.phase === "revealed";
+    els.sortSubmitButton.textContent = session.phase === "practice" ? "看答案 · Enter" : session.phase === "revealed" ? "请先选择记得 / 不记得"
+      : session.index + 1 < count ? "下一题 · Enter" : "查看本篇结果 · Enter";
+  }
+  els.roundStrip.textContent = session.phase === "memory" ? "预习不计分 · 存疑与残缺内容仅作参考"
+    : session.mode === "cards" ? "看答案后：1 记得 / 2 不记得；Enter 继续" : "只自动确认原文填法；其他表达逐项自行核对后再计入结果";
+  window.scrollTo({ top: scroll ? 0 : position, behavior: "instant" });
+}
+
+function settleHv3Result() {
+  const session = hv3Session;
+  if (!session.result || session.scored) return;
+  session.scored = true;
+  if (session.mode === "writing") {
+    state.answeredInRound += session.result.total;
+    state.roundMistakes += session.result.total - session.result.correct;
+  }
+  const retry = Hv3Quiz.reviewBatch(session);
+  if (retry) state.mistakes.push(retry);
+}
+
+function rateHv3(remembered) {
+  if (!Hv3Quiz.rate(hv3Session, remembered)) return;
+  state.answeredInRound++;
+  if (!remembered) state.roundMistakes++;
+  renderHv3Quiz(); updateStats();
+}
+
+function submitHv3Step() {
+  const session = hv3Session;
+  if (!session) return;
+  if (session.phase === "memory") {
+    if (!session.questions.length) { hv3Session = null; nextQuestion(); return; }
+    Hv3Quiz.begin(session);
+  } else if (session.phase === "result") { hv3Session = null; nextQuestion(); return; }
+  else if (session.phase === "checking") { if (!Hv3Quiz.finish(session)) return; }
+  else if (session.mode === "writing") Hv3Quiz.submitWriting(session);
+  else if (session.phase === "practice") Hv3Quiz.reveal(session);
+  else if (session.phase === "feedback") Hv3Quiz.next(session);
+  else return;
+  settleHv3Result(); renderHv3Quiz(true); updateStats();
 }
 
 function makeLv3Choice(question, choice) {
@@ -3595,6 +3710,7 @@ function finishHv1Drag(event) {
 }
 
 function submitSort() {
+  if (state.current?.sectionMode === "hv3-outline-quiz") return submitHv3Step();
   if (state.current?.sectionMode === "lv3-table-quiz") return submitLv3TableStep();
   if (state.current?.sectionMode === "lv1-position-quiz") return submitLv1PositionStep();
   if (["hv2-memory", "baustein-memory"].includes(state.current?.sectionMode)) return nextQuestion();
