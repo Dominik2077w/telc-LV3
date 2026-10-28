@@ -516,6 +516,13 @@ function renderTeilList() {
     const modeLabel = hv3Count !== null && section.questions.length ? ` · 可练 ${hv3Count} / 参考 ${section.questions.length - hv3Count}`
       : state.level === "baustein" && section.questions.length ? choiceCount ? " · 四选一" : " · 仅预览" : reviewOnly ? " · 复习卡" : "";
     name.innerHTML = `<strong>Teil ${section.teil}</strong><span>${escapeHtml(section.title)}${modeLabel}</span>`;
+    if (state.level === "hv3" && section.titleChinese) {
+      const chineseTitle = document.createElement("span");
+      chineseTitle.className = "hv3-heading-chinese";
+      chineseTitle.lang = "zh-CN";
+      chineseTitle.textContent = section.titleChinese;
+      name.append(chineseTitle);
+    }
     const added = section.questions.filter((question) => question.addedIn === "2026.9").length;
     if (added) {
       const badge = document.createElement("span");
@@ -1963,6 +1970,13 @@ function renderHv3Quiz(scroll = false) {
   const mode = session.mode === "writing" ? "整篇填写" : "逐题回忆";
   els.sessionMode.textContent = "HV3 · " + mode;
   els.sessionTitle.textContent = `Teil ${session.batch.teil}: ${session.batch.teilTitle}`;
+  if (session.phase !== "practice" && session.batch.titleChinese) {
+    const translation = document.createElement("span");
+    translation.className = "hv3-article-chinese";
+    translation.lang = "zh-CN";
+    translation.textContent = session.batch.titleChinese;
+    els.sessionTitle.append(translation);
+  }
   els.sortTeilBadge.textContent = `Teil ${session.batch.teil} · ${session.batch.teilTitle}`;
   els.questionBadge.textContent = session.phase === "memory" ? "整篇预习" : mode;
   els.sortInstruction.textContent = session.phase === "memory" ? "先按顺序记住本篇提纲与参考填法，再开始练习。"

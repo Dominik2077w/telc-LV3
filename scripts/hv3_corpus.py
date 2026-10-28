@@ -16,6 +16,13 @@ def normalized(text):
 
 
 def build(pages):
+    translations = json.loads((ROOT / "scripts/hv3-heading-translations.json").read_text(encoding="utf-8"))
+    def heading_translation(text):
+        if not re.search(r"[A-Za-zÄÖÜäöüß]", text):
+            return ""
+        assert translations.get(text), ("Missing HV3 heading translation", text)
+        return translations[text]
+
     sections, section, group = [], None, None
     for line in (ROOT / "scripts/hv3-reviewed.txt").read_text(encoding="utf-8").splitlines():
         if not line or line.startswith("#"):
@@ -23,6 +30,7 @@ def build(pages):
         if line.startswith("@"):
             key, title, refs = line[1:].split("|")
             section = {"teil": key, "title": title, "mode": "hv3-outline", "source": SOURCE,
+                       "titleChinese": heading_translation(title),
                        "sourcePages": [int(p) for p in refs.split(",")], "questions": []}
             sections.append(section)
         elif line.startswith(">"):
@@ -52,7 +60,7 @@ def build(pages):
                 assert normalized(alternate) in text
             section["questions"].append({
                 "number": number, "sourceNumber": int(re.match(r"\d+", number)[0]),
-                "heading": heading, "before": before, "after": after,
+                "heading": heading, "headingChinese": heading_translation(heading), "before": before, "after": after,
                 "german": "\n".join(filter(None, [heading, before, f"[{number}] ____", after])),
                 "answer": "", "answerText": answer, "sourceAnswerText": answer,
                 "sourceAlternatives": alternatives, "chinese": chinese,

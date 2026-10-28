@@ -1764,6 +1764,8 @@ select {
 .lv1-position-question > .lv1-chinese { margin-top: 0 !important; }
 .sort-mode.hv3-mode { width: min(1160px, 100%); min-width: 0; }
 .hv3-heading { margin: 24px 0 12px; font-size: 18px; line-height: 1.5; overflow-wrap: anywhere; }
+.hv3-heading-chinese, .hv3-article-chinese { display: block; margin-top: 5px; font: 400 14px/1.6 system-ui, sans-serif; color: #52645a; overflow-wrap: anywhere; }
+.teil-name .hv3-heading-chinese { font-size: 12px; }
 .hv3-prompt { font-family: Georgia, "Times New Roman", serif; font-size: 20px; line-height: 1.65; overflow-wrap: anywhere; }
 .hv3-answer { background: #fff0a8; color: #382f13; padding: 1px 4px; border-radius: 3px; overflow-wrap: anywhere; }
 .hv3-blank { color: var(--blue); white-space: normal; }

@@ -26,6 +26,44 @@ test("HV3 preserves all 28 PDF entries and 272 rows, with 227 practice items and
   assert.ok(find("18-schlaf", "65"));
   assert.notEqual(find("13", "68a").heading, find("13", "68b").heading);
   assert.notEqual(find("22-1", "72").answerText, find("22-2", "72").answerText);
+  for (const section of corpus) {
+    assert.match(section.titleChinese, /[\u3400-\u9fff]/);
+    for (const q of section.questions.filter(q => /[A-Za-zÄÖÜäöüß]/.test(q.heading))) {
+      assert.match(q.headingChinese, /[\u3400-\u9fff]/, q.heading);
+    }
+  }
+  assert.equal(find("1", "70").headingChinese, "必需的词典");
+});
+
+test("HV3 preview, revealed cards, writing review and results translate headings while practice keeps them hidden", () => {
+  class Element {
+    constructor() { this.children = []; this.textContent = ""; }
+    append(...children) { this.children.push(...children); }
+    replaceChildren() { this.children = []; this.textContent = ""; }
+    get lastElementChild() { return this.children.at(-1); }
+    addEventListener() {}
+    get text() { return this.textContent + this.children.map(child => child.text).join(""); }
+  }
+  const context = { window: {}, document: { createElement: () => new Element() }, Hv3Quiz: Quiz };
+  vm.runInNewContext(read("hv3-view.js"), context);
+  const section = corpus.find(s => s.teil === "1");
+  const host = new Element(), actions = {};
+  for (const mode of ["cards", "writing"]) {
+    const session = Quiz.createSession(Quiz.buildBatch(section, mode));
+    context.window.Hv3View.render(session, host, actions);
+    assert.ok(host.text.includes("必需的词典"));
+    Quiz.begin(session);
+    context.window.Hv3View.render(session, host, actions);
+    assert.ok(!host.text.includes("谁对这一职业感兴趣？"));
+    if (mode === "cards") Quiz.reveal(session);
+    else Quiz.submitWriting(session);
+    context.window.Hv3View.render(session, host, actions);
+    assert.ok(host.text.includes("谁对这一职业感兴趣？"));
+    session.phase = "result";
+    session.result = { correct: 0, total: 1, rows: [{ question: session.questions[0], selected: "", correct: false }] };
+    context.window.Hv3View.render(session, host, actions);
+    assert.ok(host.text.includes("谁对这一职业感兴趣？"));
+  }
 });
 
 test("every article starts with its full unscored outline in both modes and does not mutate source", () => {
