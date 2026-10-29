@@ -17,6 +17,7 @@ def normalized(text):
 
 def build(pages):
     translations = json.loads((ROOT / "scripts/hv3-heading-translations.json").read_text(encoding="utf-8"))
+    prompt_translations = json.loads((ROOT / "scripts/hv3-prompt-translations.json").read_text(encoding="utf-8"))
     def heading_translation(text):
         if not re.search(r"[A-Za-zÄÖÜäöüß]", text):
             return ""
@@ -44,6 +45,10 @@ def build(pages):
             refs = [int(p) for p in refs.split(",")]
             note = fields[4] if len(fields) > 4 else ""
             heading, before, after = group
+            prompt_chinese = ""
+            if before or after:
+                prompt_chinese = prompt_translations.get(before + "|" + after, "")
+                assert re.search(r"[\u3400-\u9fff]", prompt_chinese) and prompt_chinese.count("{blank}") == 1, ("Missing HV3 prompt translation", before, after)
             # Verify printed answers against the actual PDF, not another bank.
             text = normalized(" ".join(pages[p - 1] for p in refs))
             assert not answer or normalized(answer) in text, (section["teil"], number, answer)
@@ -61,6 +66,7 @@ def build(pages):
             section["questions"].append({
                 "number": number, "sourceNumber": int(re.match(r"\d+", number)[0]),
                 "heading": heading, "headingChinese": heading_translation(heading), "before": before, "after": after,
+                "promptChinese": prompt_chinese,
                 "german": "\n".join(filter(None, [heading, before, f"[{number}] ____", after])),
                 "answer": "", "answerText": answer, "sourceAnswerText": answer,
                 "sourceAlternatives": alternatives, "chinese": chinese,

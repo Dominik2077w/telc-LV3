@@ -33,9 +33,17 @@ test("HV3 preserves all 28 PDF entries and 272 rows, with 227 practice items and
     }
   }
   assert.equal(find("1", "70").headingChinese, "必需的词典");
+  const translations = JSON.parse(read("scripts/hv3-prompt-translations.json"));
+  for (const section of corpus) for (const q of section.questions) {
+    if (q.before || q.after) {
+      assert.equal(q.promptChinese, translations[q.before + "|" + q.after]);
+      assert.match(q.promptChinese, /[\u3400-\u9fff]/);
+      assert.equal(q.promptChinese.split("{blank}").length, 2);
+    } else assert.equal(q.promptChinese, "");
+  }
 });
 
-test("HV3 preview, revealed cards, writing review and results translate headings while practice keeps them hidden", () => {
+test("HV3 preview, revealed cards, writing review and results translate headings and prompts while practice keeps them hidden", () => {
   class Element {
     constructor() { this.children = []; this.textContent = ""; }
     append(...children) { this.children.push(...children); }
@@ -46,23 +54,29 @@ test("HV3 preview, revealed cards, writing review and results translate headings
   }
   const context = { window: {}, document: { createElement: () => new Element() }, Hv3Quiz: Quiz };
   vm.runInNewContext(read("hv3-view.js"), context);
-  const section = corpus.find(s => s.teil === "1");
+  const section = corpus.find(s => s.teil === "3");
   const host = new Element(), actions = {};
   for (const mode of ["cards", "writing"]) {
     const session = Quiz.createSession(Quiz.buildBatch(section, mode));
     context.window.Hv3View.render(session, host, actions);
-    assert.ok(host.text.includes("必需的词典"));
+    assert.ok(host.text.includes("教育讨论"));
+    assert.ok(host.text.includes("异质性意味着儿童和青少年具备不同的[65] ______。"));
+    assert.ok(!host.text.includes("异质性意味着儿童和青少年具备不同的前提条件与潜能。"));
     Quiz.begin(session);
     context.window.Hv3View.render(session, host, actions);
-    assert.ok(!host.text.includes("谁对这一职业感兴趣？"));
+    assert.ok(!host.text.includes("教育讨论"));
+    assert.ok(!host.text.includes("异质性意味着"));
+    assert.ok(!host.text.includes("前提条件与潜能"));
     if (mode === "cards") Quiz.reveal(session);
     else Quiz.submitWriting(session);
     context.window.Hv3View.render(session, host, actions);
-    assert.ok(host.text.includes("谁对这一职业感兴趣？"));
+    assert.ok(host.text.includes("教育讨论"));
+    assert.ok(host.text.includes("异质性意味着儿童和青少年具备不同的[65] ______。填法：前提条件与潜能"));
     session.phase = "result";
     session.result = { correct: 0, total: 1, rows: [{ question: session.questions[0], selected: "", correct: false }] };
     context.window.Hv3View.render(session, host, actions);
-    assert.ok(host.text.includes("谁对这一职业感兴趣？"));
+    assert.ok(host.text.includes("教育讨论"));
+    assert.ok(host.text.includes("异质性意味着儿童和青少年具备不同的[65] ______。填法：前提条件与潜能"));
   }
 });
 

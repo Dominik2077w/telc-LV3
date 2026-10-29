@@ -31,6 +31,24 @@
     element.lang = "de";
     return element;
   }
+  function chinesePrompt(q, filled = true) {
+    const element = node("div", "hv3-chinese hv3-prompt-chinese");
+    element.lang = "zh-CN";
+    if (!q.promptChinese) {
+      element.textContent = q.chinese;
+      return element;
+    }
+    const [before, after] = q.promptChinese.split("{blank}");
+    element.append(node("span", "", before));
+    element.append(node("strong", "hv3-blank", `[${q.number}] ______`));
+    element.append(node("span", "", after));
+    if (filled) {
+      const answer = node("div", "", "填法：");
+      answer.append(node("mark", "hv3-answer", q.chinese));
+      element.append(answer);
+    }
+    return element;
+  }
   function note(q) {
     const element = node("div", "hv3-notes");
     if (!q.practiceEligible) element.append(node("p", "hv3-warning", "仅原文参考 · 不进入练习、不计分"));
@@ -44,6 +62,7 @@
     label.scope = "row";
     const context = node("td");
     context.append(prompt(q));
+    if (q.promptChinese) context.append(chinesePrompt(q, false));
     const answer = node("td");
     answer.append(node("mark", "hv3-answer", q.answerText || "原文未提供明确填法"));
     const chinese = node("td", "hv3-chinese", q.chinese);
@@ -78,7 +97,7 @@
     host.append(heading(q.heading, q.headingChinese, revealed), prompt(q, revealed));
     if (!revealed) host.append(node("p", "hv3-explanation", "先回忆这个位置应填的关键词或短语，再查看答案。"));
     else {
-      host.append(node("p", "hv3-chinese", q.chinese), note(q));
+      host.append(chinesePrompt(q), note(q));
       const controls = node("div", "hv3-rating");
       const remember = button("1 · 记得", () => actions.rate(true)), miss = button("2 · 不记得", () => actions.rate(false));
       remember.disabled = miss.disabled = session.phase === "feedback";
@@ -104,7 +123,7 @@
         input.addEventListener("input", () => actions.draft(q.id, input.value));
         label.append(input); row.append(label);
       } else {
-        row.append(node("p", "hv3-your-answer", "你的填写：" + (session.drafts[q.id] || "（未填写）")), prompt(q, true), node("p", "hv3-chinese", q.chinese));
+        row.append(node("p", "hv3-your-answer", "你的填写：" + (session.drafts[q.id] || "（未填写）")), prompt(q, true), chinesePrompt(q));
         const decision = session.judgements[q.id];
         row.append(node("p", "hv3-feedback", decision === null ? "待你确认" : decision ? "✓ 已确认正确" : "需复习"));
         const controls = node("div", "hv3-rating");
@@ -120,7 +139,7 @@
     host.append(node("p", "hv3-score", `本篇 ${session.result.correct} / ${session.result.total} 项已掌握`));
     for (const { question: q, correct, selected } of session.result.rows) {
       const row = node("section", "hv3-writing-row " + (correct ? "is-correct" : "is-wrong"));
-      row.append(heading(`题 ${q.number} · ${q.heading}`, q.headingChinese), node("p", "hv3-feedback", (correct ? "✓ " : "✗ ") + selected), prompt(q, true), node("p", "hv3-chinese", q.chinese), note(q));
+      row.append(heading(`题 ${q.number} · ${q.heading}`, q.headingChinese), node("p", "hv3-feedback", (correct ? "✓ " : "✗ ") + selected), prompt(q, true), chinesePrompt(q), note(q));
       host.append(row);
     }
   }
